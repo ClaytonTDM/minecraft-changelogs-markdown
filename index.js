@@ -40,6 +40,10 @@ function htmlToMarkdown(html) {
 	}
 }
 
+function convertToFancyMenu(markdown) {
+	return markdown.replace(/\\(.)/g, (match, char) => `;;${char};;`);
+}
+
 async function createVersionFolder(version, type, imageUrl, body) {
 	const folderName = path.join("build", `${version}`);
 
@@ -57,6 +61,9 @@ async function createVersionFolder(version, type, imageUrl, body) {
 	markdown = `# ${version}\n\n${markdown}`;
 
 	await fs.writeFile(path.join(folderName, "index.md"), markdown);
+
+	const fancyMenuContent = convertToFancyMenu(markdown);
+	await fs.writeFile(path.join(folderName, "fancymenu.md"), fancyMenuContent);
 
 	const htmlPath = path.join(folderName, "index.html");
 	const mdPath = path.join(folderName, "index.md");
@@ -135,6 +142,9 @@ async function createFromVersionFolder(
 	}
 
 	await fs.writeFile(path.join(folderName, "index.md"), markdown);
+
+	const fancyMenuContent = convertToFancyMenu(markdown);
+	await fs.writeFile(path.join(folderName, "fancymenu.md"), fancyMenuContent);
 
 	const htmlPath = path.join(folderName, "index.html");
 	try {
@@ -244,6 +254,9 @@ async function main() {
 			const indexContent = await fs.readFile(fromLatestPath, "utf-8");
 			await fs.writeFile(path.join("build", "index.md"), indexContent);
 			console.log(`Created index.md from from-${latestRelease}`);
+
+			const fancyMenuContent = convertToFancyMenu(indexContent);
+			await fs.writeFile(path.join("build", "fancymenu.md"), fancyMenuContent);
 
 			const buildHtmlPath = path.join("build", "index.html");
 			try {

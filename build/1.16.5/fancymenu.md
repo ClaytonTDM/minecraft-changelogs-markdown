@@ -1,0 +1,7 @@
+# 1.16.5
+
+Happy Friday! We're now releasing 1.16.5, which fixes two critical stability issues. We are not releasing more information about these issues at this time to protect servers that have not yet updated.
+
+This release is network compatible with 1.16.4 - this means you do not need to upgrade your game right away to play on an upgraded server. However, we highly encourage all server owners to update as soon as possible to apply the stability fixes.
+
+Next week, we aim to release the next snapshot of Caves & Cliffs. Stay tuned!
