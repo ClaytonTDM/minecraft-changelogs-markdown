@@ -1,10 +1,12 @@
+# 23w16a
+
 In this weeks Snapshot we're bringing you tweaks to the Trail Ruins, new command functionality, a new advancement trigger, and more!
 
 Happy mining!
 
 Edit: We have published a fix for a crash issue in this Snapshot. If you are experiencing crashes, please try closing all instances of the game and restarting the Launcher.
 
-# Changes
+## Changes
 
 -   All Pottery Shards has been renamed to Pottery Sherds
 -   If a vibration is scheduled to be received by a Sculk Sensor or Sculk Shrieker, they will stay queued until all adjacent chunks are loaded and ticking
@@ -14,11 +16,11 @@ Edit: We have published a fix for a crash issue in this Snapshot. If you are exp
 -   Added native support for ARM64 machine architecture on Windows
     -   To try this out, you need to manually specify a native Java Executable in the launcher
 
-## Sniffer
+### Sniffer
 
 -   Sniffers can now be tempted by Torchflower seeds
 
-## Trail Ruins
+### Trail Ruins
 
 -   Reworked structures based on community feedback
 -   Added more structure variants
@@ -28,15 +30,15 @@ Edit: We have published a fix for a crash issue in this Snapshot. If you are exp
 -   Split the loot tables for the Suspicious Gravel within the structure. There is now a dedicated loot table for Rare loot items (e.g. Pottery Sherds, Smithing Templates), and a dedicated loot table for more common loot drops (e.g. Stained Glass Pane, Tools, Candles, etc.)
 -   Due to these changes you might see errors like `Failed to get element ResourceKey[minecraft:worldgen/processor_list / minecraft:trail_ruins_suspicious_sand]` in an old snapshot world. These are harmless, but existing Trail Ruin structures that was not previously fully loaded might be missing parts of the structure.
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 14, accounting for item display orientation changes
 -   Added a `return` command
 -   Added `recipe_crafted` advancement trigger
 
-## Commands
+### Commands
 
-### `return`
+#### `return`
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -52,11 +54,11 @@ Parameters:
 
 -   `value`: An integer return value
 
-## Advancements
+### Advancements
 
-### New triggers
+#### New triggers
 
-#### `recipe_crafted`
+##### `recipe_crafted`
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -66,19 +68,19 @@ Parameters:
         -   Each predicate needs to be fulfilled to trigger the advancement. This allows for seperation between recipes that have same identifier but use different ingredients.
         -   This field is optional. When not provided, or left empty, only the `recipe_id` will dictate the success of the trigger
 
-## Tags
+### Tags
 
 -   Added `villager_plantable_seeds` to represent which kind of seeds Villagers can farm
 -   Added `maintains_farmland` to represent which blocks will not cause farmland to be converted into dirt when placed on top of it
 
-## Display entity
+### Display entity
 
-### Rendering changes
+#### Rendering changes
 
 -   `item_display` items have been rotated 180 degrees around Y axis to better match transformation applied when rendering items on armor stand head and in item frames
     -   For reference, order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)
 
-# Fixed bugs in 23w16a
+## Fixed bugs in 23w16a
 
 -   [MC-162253](https://bugs.mojang.com/browse/MC-162253) Lag spike when crossing certain chunk borders
 -   [MC-169498](https://bugs.mojang.com/browse/MC-169498) Empty top subchunks don't update skylight in some cases

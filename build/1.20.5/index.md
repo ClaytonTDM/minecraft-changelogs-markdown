@@ -1,3 +1,5 @@
+# 1.20.5
+
 Do you smell that? Ah yes, it's the magical, tell-tale scent of release day Tuesday - and what a release day it is!
 
 Today we are shipping Minecraft: Java Edition 1.20.5, also known as the Armored Paws drop! Travel to the Savanna and Badlands biomes and say hello to the endearing Armadillos. Find and befriend eight new Wolf variants and equip your canine companions with dyable armor made from Armadillo Scutes and go adventuring together!
@@ -8,7 +10,7 @@ So what are you waiting for? Stock up on food and water and start reading throug
 
 Happy scute brushing!
 
-# New Features
+## New Features
 
 -   Added Armadillo and Armadillo Scutes
 -   Added Wolf Armor
@@ -16,7 +18,7 @@ Happy scute brushing!
 
 ![A family of Armadillos walking on the Red Sand of the Badlands amidst Dead Bushes with a green Jungle in the background.](https://launchercontent.mojang.com/v2/images/1.20.51thumbnail.jpg)
 
-## Armadillo
+### Armadillo
 
 -   The Armadillo is a new passive mob
 -   Armadillos drop Armadillo Scutes periodically, and when brushed
@@ -40,7 +42,7 @@ Happy scute brushing!
 
 ![A rolled-up Armadillo is peeking to check if a Zombie is gone, but the Zombie is still close. It happens in Savanna during twilight.](https://launchercontent.mojang.com/v2/images/1.20.52thumbnail.jpg)
 
-### Armadillo Scutes
+#### Armadillo Scutes
 
 -   Armadillo Scutes are dropped by Armadillos periodically or when an Armadillo is brushed
 -   Armadillo Scutes can be used to craft Wolf Armor
@@ -48,7 +50,7 @@ Happy scute brushing!
 
 ![Ari is fighting two Skeletons and a Creeper in a partially lit cave with their Tamed Wolves who are wearing colorful Wolf Armor sets.](https://launchercontent.mojang.com/v2/images/1.20.53thumbnail.jpg)
 
-## Wolf Armor
+### Wolf Armor
 
 -   Wolf Armor can be crafted with Armadillo Scutes and can be dyed in a similar fashion to Leather Armor
 -   The Wolf Armor will protect the Wolf from most damage sources until the armor loses all durability and breaks
@@ -61,7 +63,7 @@ Happy scute brushing!
 
 ![Efe is trying to tame a striped Wolf on a Savanna Plateau. In the background a river is flowing through a Badlands Canyon.](https://launchercontent.mojang.com/v2/images/1.20.54thumbnail.jpg)
 
-## Wolf Variants
+### Wolf Variants
 
 New Wolf variants have been added. The variant is determined by the biome they spawn in. Wolves spawn in packs, with a default pack size of 4.
 
@@ -83,7 +85,7 @@ When summoned in other ways (e.g. using the Spawn Egg or using the `summon` comm
 
 ![Ari is jumping over a ravine in a Savanna on a brown Horse with white spots. A big pack Tamed Wolves of different variants is following them.](https://launchercontent.mojang.com/v2/images/1.20.55thumbnail.jpg)
 
-## Advancements
+### Advancements
 
 -   Added the following advancements:
     -   `Isn't It Scute?` - Get Armadillo Scutes from an Armadillo using a Brush
@@ -91,7 +93,7 @@ When summoned in other ways (e.g. using the Spawn Egg or using the `summon` comm
     -   `Good as New` - Repair a damaged Wolf Armor using Armadillo Scutes
     -   `The Whole Pack` - Tame one of each Wolf variant
 
-# Changes
+## Changes
 
 -   The UI has been updated with a fresher look
 -   Decreased the default size of the spawn chunks and made the value configurable
@@ -106,7 +108,7 @@ When summoned in other ways (e.g. using the Spawn Egg or using the `summon` comm
 -   Improvements to the Game's Performance
 -   Improved handling of errors during saving and loading
 
-## UI Updates
+### UI Updates
 
 The UI has been updated to sport a fresher look and to be more consistent when it comes to the layout of different UI elements, all while retaining the essence and feel of the old screens.
 
@@ -127,7 +129,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   The animated Nether Portal texture is displayed when changing dimension to or from The Nether
 -   The animated End Portal effect is displayed when changing dimension to or from The End
 
-## Spawn Chunk Changes
+### Spawn Chunk Changes
 
 -   The size of the spawn chunks changed from a radius of 10 (19x19 entity-ticking chunks) to a radius of 2 (3x3 entity-ticking chunks)
     -   This was done to reduce loading times, as well as memory and CPU usage
@@ -137,7 +139,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
     -   Default value is 2, equivalent to 3x3 entity ticking chunks
     -   Note that setting this to a high value might require allocating more memory for the game in the Launcher
 
-## Tamed Wolves Health and Damage
+### Tamed Wolves Health and Damage
 
 -   Tamed Wolves now have 40 health points (20 hearts) instead of 20 health points (10 hearts)
 -   They no longer take half of the damage from most environmental sources like they used to do
@@ -146,7 +148,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 
 ![Steve is experimenting with different potion effects in a Savanna Village hut. Potion effect particles of different colors are visible around them.](https://launchercontent.mojang.com/v2/images/1.20.56thumbnail.jpg)
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Renamed scutes that drop from Turtles to Turtle Scutes
 -   Added unique sounds for Cobwebs
@@ -158,12 +160,12 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Ctrl+Picking a renamed block (such as a Chest) in Creative Mode will now give a renamed item
 -   Ctrl+Picking a block no longer lists "(+NBT)" in the item tooltip
 
-## Accessibility
+### Accessibility
 
 -   The default focus is now always set when entering or exiting any menu while navigating using tab or arrow keys
 -   Added a new accessibility option to control the strength of the background blur when a menu is open
 
-## Japanese Font Variants
+### Japanese Font Variants
 
 -   A new option has been added to select Japanese variants for some CJK characters
 -   Replacement glyphs come from the Japanese version of the Unifont font
@@ -171,7 +173,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   The default value of this option is based on the system locale language setting
 -   The "Force Unicode" button has been moved to "Font Settings"
 
-## Performance Improvements
+### Performance Improvements
 
 -   Improved Hopper performance
 -   Hoppers will no longer try to pick up item entities if there is a full block placed above it
@@ -179,13 +181,13 @@ The UI has been updated to sport a fresher look and to be more consistent when i
     -   This does not affect Minecarts with Hoppers
 -   Reduced time needed to generate Explorer Maps to Buried Treasures
 
-## Saving and Loading Improvements
+### Saving and Loading Improvements
 
 -   In Singleplayer, when errors occur during loading or saving of chunks, a warning will be shown in a toast
 -   Trying to join a Singleplayer world with less than 64 MB free disk space will show a warning screen
     -   Additionally, a warning toast will be shown periodically while in game
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 41
 -   The Resource Pack version is now 32
@@ -200,7 +202,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Allowed server operators to view dedicated server TPS debug chart
 -   Added JFR (Java Flight Recorder) events for individual chunk reads (`minecraft.ChunkRegionRead`) and writes (`minecraft.ChunkRegionWrite`)
 
-## Network Protocol
+### Network Protocol
 
 -   Reduced amount of data sent by the server during login by reusing parts of the vanilla data pack
 -   Client chat state is now preserved by default when entering configuration phase
@@ -210,7 +212,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   The `chat_command_signed` packet has been split from `chat_command`
     -   Commands that do not accept any signed arguments will use the unsigned packet, and will not pass any 'last seen' chat updates
 
-### Transfer Packets
+#### Transfer Packets
 
 -   Custom servers can now request that clients connect to another server with a new packet
 -   When a client is transferred, it will connect to the target server with a new transfer intent (id 3)
@@ -219,7 +221,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Resource packs are maintained across transfers
 -   In the case of a transfer, custom servers can skip authenticating again with a new flag in the clientbound `hello` packet
 
-### Cookie Packets
+#### Cookie Packets
 
 -   Cookie packets allow custom servers to request and store data on a client
     -   Each cookie may be up to 5 KiB in size
@@ -227,7 +229,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Cookies persist across server transfers but are not persisted when the player disconnects
     -   This allows servers to pass along information such as authentication or custom game data to the new server
 
-## Region File Compression Algorithm
+### Region File Compression Algorithm
 
 -   Added a dedicated server configuration property `region-file-compression` with 3 possible values:
     -   `deflate`, the default option. Uses the old algorithm
@@ -238,12 +240,12 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Changing the compression algorithm will not automatically recompress the world
     -   New or updated chunks will use the newly configured algorithm, but the old ones will stay in the previous format
 
-## Reserved Compression Id for Third-party Servers
+### Reserved Compression Id for Third-party Servers
 
 -   Compression id `127` can now be used for custom implementations of region file compression
 -   When used, the version id must be followed by a namespaced string representing the custom algorithm used
 
-## World Optimizing Changes
+### World Optimizing Changes
 
 -   Optimizing singleplayer worlds and running a dedicated server with the `forceUpgrade` option now also upgrades contents of `entities` and `poi` directories of the world
 -   Added a new `recreateRegionFiles` dedicated server startup parameter
@@ -253,7 +255,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 
 ![A screenshot of the updated ticks-per-second graph.](https://launchercontent.mojang.com/v2/images/1.20.5perfgraph.jpg)
 
-## Improved The Server TPS Debug Chart
+### Improved The Server TPS Debug Chart
 
 -   As before, it is accessible by pressing `F3 + 2`
 -   The bottom dark red section of the chart displays the time spent during the main logic of the server tick
@@ -264,14 +266,14 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   The `min`, `avg`, `max` aggregate values are based on the sum of the first 3 sections
 -   Server operators can now view the TPS debug chart while connected to their dedicated server
 
-## Chat
+### Chat
 
 -   Client chat state (on-screen messages and chat input history) is now preserved by client when entering and exiting configuration phase
 -   Message signature chain handling remains unchanged - going into configuration phase starts a new session
 -   If the client has a message delay configured, any pending messages will be delivered immediately before leaving the world
 -   The server can clear chat state by sending a `reset_chat` packet in configuration phase
 
-# Data Pack Versions 27 through 41
+## Data Pack Versions 27 through 41
 
 The Data Pack version used by the game is now 41. These are the changes compared to version 26, used in 1.20.4.
 
@@ -287,7 +289,7 @@ The Data Pack version used by the game is now 41. These are the changes compared
 
 ![In the Crafting interface, a custom "Stiiiiiick" has been crafted with 3 Sticks in the grid. The item tooltip shows the text "Like a stick, but stickier".](https://launchercontent.mojang.com/v2/images/1.20.5tech1thumbnail.jpg)
 
-## Item Data Format
+### Item Data Format
 
 We have made some large changes to how Item Stack-specific properties are stored and represented in this release, replacing the current NBT 'tag' with structured 'components'.
 
@@ -314,11 +316,11 @@ The current NBT 'tag' has existed for quite some time, and we are aware that a l
 -   Default component values for items are now listed in `items.json` generated in `reports` directory
 -   Block definitions are now added to `blocks.json` report (note: those definitions are not used yet and present only for informational purposes)
 
-### Migrated Item Stack Components
+#### Migrated Item Stack Components
 
 These are item stack components that replace existing functionality that was formerly specified in item NBT. All commands and data definitions will need to be upgraded to use these formats. Items in-world will however be automatically upgraded.
 
-#### `minecraft:custom_data`
+##### `minecraft:custom_data`
 
 -   Can be used for custom data storage on an item
 -   When upgrading a world, any non-game data in the item `tag` will be moved into here
@@ -326,7 +328,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_data={some:'data'}`
 -   Can be modified with the `set_custom_data` and `copy_custom_data` loot functions
 
-#### `minecraft:damage`
+##### `minecraft:damage`
 
 -   The amount of durability removed from an item
 -   If removed, the item will not be damageable
@@ -336,7 +338,7 @@ These are item stack components that replace existing functionality that was for
 -   For damageable items (with the `max_damage` component), has an implicit default value of: `0`
 -   Can be modified with the `set_damage` loot function
 
-#### `minecraft:repair_cost`
+##### `minecraft:repair_cost`
 
 -   The additional experience cost required to modify an item in an Anvil
 -   Replaces `RepairCost` tag
@@ -344,7 +346,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `repair_cost=12`
 -   If not set, has an implicit default value of: `0`
 
-#### `minecraft:unbreakable`
+##### `minecraft:unbreakable`
 
 -   If set, the item will not lose any durability when used
 -   Replaces `Unbreakable` boolean tag
@@ -354,7 +356,7 @@ These are item stack components that replace existing functionality that was for
         -   Replaces 3rd bit of `HideFlags` tag
     -   e.g. `unbreakable={}`, `unbreakable={show_in_tooltip:false}`
 
-#### `minecraft:enchantments`
+##### `minecraft:enchantments`
 
 -   Stores a list of enchantments and their levels on an item
 -   Replaces `Enchantments` tag
@@ -369,7 +371,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value of: `{levels:{}}`
 -   Can be modified with the `set_enchantments`, `enchant_randomly`, and `enchant_with_levels` loot functions
 
-#### `minecraft:stored_enchantments`
+##### `minecraft:stored_enchantments`
 
 -   Stores list of enchantments and their levels for an Enchanted Book
 -   Unlike `minecraft:enchantments`, the effects provided by enchantments do not apply from this component
@@ -378,7 +380,7 @@ These are item stack components that replace existing functionality that was for
     -   `show_in_tooltip` value replaces 6th bit of `HideFlags` tag
 -   On Enchanted Books, has an implicit default value of: `{levels:{}}`
 
-#### `minecraft:custom_name`
+##### `minecraft:custom_name`
 
 -   Custom name override for an item (as set by renaming with an Anvil)
 -   Replaces `display.Name` tag
@@ -386,7 +388,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_name='{"text": "This item is renamed!", "color": "red"}'`
 -   Can be modified with the `set_name` loot function
 
-#### `minecraft:lore`
+##### `minecraft:lore`
 
 -   Additional lines to include in an item's tooltip
 -   Replaces `display.Lore` tag
@@ -395,7 +397,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value of: `[]`
 -   Can be modified with the `set_lore` loot function
 
-#### `minecraft:can_break`
+##### `minecraft:can_break`
 
 -   Controls which blocks a player in Adventure mode can break with this item
 -   Replaces `CanDestroy` tag
@@ -411,7 +413,7 @@ These are item stack components that replace existing functionality that was for
     -   Alternatively, can be defined as a single block predicate
         -   e.g. `can_break={blocks:'minecraft:stone'}`
 
-#### `minecraft:can_place_on`
+##### `minecraft:can_place_on`
 
 -   Controls which blocks a player in Adventure mode can place on with this item
 -   Replaces `CanPlaceOn` tag
@@ -424,7 +426,7 @@ These are item stack components that replace existing functionality that was for
     -   Alternatively, can be defined as a single block predicate
         -   e.g. `can_place_on={blocks:'minecraft:stone'}`
 
-#### `minecraft:dyed_color`
+##### `minecraft:dyed_color`
 
 -   Represents a color applied to a dyeable item (in the `#minecraft:dyeable` item tag)
 -   Replaces `display.color` tag
@@ -438,7 +440,7 @@ These are item stack components that replace existing functionality that was for
 
 ![A very large Sunny is walking up 3-block-tall steps in a Cherry Grove biome, making use of the step height and scale attributes.](https://launchercontent.mojang.com/v2/images/1.20.5tech6thumbnail.jpg)
 
-#### `minecraft:attribute_modifiers`
+##### `minecraft:attribute_modifiers`
 
 -   Holds attribute modifiers applied to any item
 -   Replaces `AttributeModifiers` tag
@@ -479,7 +481,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value based on the item type's default attributes (e.g. attack damage for weapons)
 -   Can be modified with the `set_attributes` loot function
 
-#### `minecraft:charged_projectiles`
+##### `minecraft:charged_projectiles`
 
 -   Holds all projectiles that have been loaded into a Crossbow
 -   If not present, the Crossbow is not charged
@@ -490,14 +492,14 @@ These are item stack components that replace existing functionality that was for
     -   No longer restricted to 3 entries
 -   Can be modified with the `modify_contents` and `set_contents` loot functions
 
-#### `minecraft:intangible_projectile`
+##### `minecraft:intangible_projectile`
 
 -   Marks that a projectile item would be intangible when fired (i.e. can only be picked up by a creative mode player)
 -   Only set when items are inside a Crossbow's `charged_projectiles` component
 -   Format: empty object
     -   e.g. `intangible_projectile={}`
 
-#### `minecraft:bundle_contents`
+##### `minecraft:bundle_contents`
 
 -   Holds all items stored inside of a Bundle
 -   If removed, items cannot be added to the Bundle
@@ -508,7 +510,7 @@ These are item stack components that replace existing functionality that was for
 -   On Bundles, has an implicit default value of: `[]`
 -   Can be modified with the `modify_contents` and `set_contents` loot functions
 
-#### `minecraft:map_color`
+##### `minecraft:map_color`
 
 -   Represents the tint of the decorations on the Filled Map item
 -   Replaces `display.MapColor` tag
@@ -516,7 +518,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `map_color=16711680`
 -   On Filled Maps, has an implicit default value of: `4603950`
 
-#### `minecraft:map_decorations`
+##### `minecraft:map_decorations`
 
 -   Holds a list of markers to be placed on a Filled Map (used for Explorer Maps)
 -   Replaces `Decorations` tag
@@ -565,14 +567,14 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `map_decorations={'Some marker':{type:'target_x',x:123.0,z:-45.0,rotation:0.0f}}`
 -   On Filled Maps, has an implicit default value of: `{}`
 
-#### `minecraft:map_id`
+##### `minecraft:map_id`
 
 -   References the shared map state holding map contents and markers for a Filled Map
 -   Replaces `map` tag
 -   Format: integer id
     -   e.g. `map_id=1`
 
-#### `minecraft:custom_model_data`
+##### `minecraft:custom_model_data`
 
 -   Can be used to replace the models of items by selecting for the `minecraft:custom_model_data` property in the item model
 -   Replaces `CustomModelData` tag
@@ -580,7 +582,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_model_data=43`
 -   Can be modified with the `set_custom_model_data` loot function
 
-#### `minecraft:potion_contents`
+##### `minecraft:potion_contents`
 
 -   Holds the contents of a potion (Potion, Splash Potion, Lingering Potion), or potion applied to an item (Tipped Arrow)
 -   Replaces `Potion`, `CustomPotionColor`, and `custom_potion_effects` tags
@@ -597,7 +599,7 @@ These are item stack components that replace existing functionality that was for
 -   On Potion or Tipped Arrow items, has an implicit default value of: `{}`
 -   Can be modified with the `set_potion` loot function
 
-#### `minecraft:writable_book_content`
+##### `minecraft:writable_book_content`
 
 -   Holds the contents in a Book and Quill
 -   Replaces `pages` and `filtered_pages` tags
@@ -614,7 +616,7 @@ These are item stack components that replace existing functionality that was for
 -   On Book and Quill, has an implicit default value of: `{pages:[]}`
 -   Can be modified with the `set_writable_book_pages` loot function
 
-#### `minecraft:written_book_content`
+##### `minecraft:written_book_content`
 
 -   Holds the contents and metadata of a Written Book
 -   Replaces `pages`, `filtered_pages`, `title`, `filtered_title`, `author`, `generation`, and `resolved` tags
@@ -631,7 +633,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `written_book_content={pages:['"Hello world!"'],title:{raw:'"A delightful read"'},author:'Herobrine',generation:1,resolved:true}`
 -   Can be modified with the `set_written_book_pages` and `set_book_cover` loot functions
 
-#### `minecraft:trim`
+##### `minecraft:trim`
 
 -   Holds the trims applied to an item
     -   Presence of the component is no longer restricted by the `#minecraft:trimmable_armor` item tag (although, this tag is still used for recipes)
@@ -643,7 +645,7 @@ These are item stack components that replace existing functionality that was for
         -   Replaces 8th bit of `HideFlags` tag
     -   e.g. `trim={pattern:'minecraft:silence',material:'minecraft:redstone'}`
 
-#### `minecraft:suspicious_stew`
+##### `minecraft:suspicious_stew`
 
 -   Holds the effects that will be applied when consuming Suspicious Stew
 -   Replaces `effects` tag of the same format
@@ -654,14 +656,14 @@ These are item stack components that replace existing functionality that was for
 -   On Suspicious Stew, has an implicit default value of: `[]`
 -   Can be modified with the `set_stew_effect` loot function
 
-#### `minecraft:hide_additional_tooltip`
+##### `minecraft:hide_additional_tooltip`
 
 -   If present, disables 'additional' tooltip part which comes from the item type
 -   Replaces 6th bit of `HideFlags` tag
 -   Format: empty object
     -   e.g. `hide_additional_tooltip={}`
 
-#### `minecraft:debug_stick_state`
+##### `minecraft:debug_stick_state`
 
 -   Stores the selected block state properties used by a Debug Stick
 -   Replaces `DebugProperty` tag
@@ -669,7 +671,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `debug_stick_state={'minecraft:turtle_egg':'eggs','minecraft:furnace':'facing'}`
 -   On Debug Stick, has an implicit default value of: `{}`
 
-#### `minecraft:entity_data`
+##### `minecraft:entity_data`
 
 -   Stores unstructured NBT data to apply to an entity when using an item that spawns an entity, such as a Spawn Egg or Armor Stand
 -   Replaces previous `EntityTag` tag, with same behavior
@@ -678,7 +680,7 @@ These are item stack components that replace existing functionality that was for
     -   Any additional fields will be merged into the entity when spawned
     -   e.g. `entity_data={id:'minecraft:pig',Health:1.0f}`
 
-#### `minecraft:bucket_entity_data`
+##### `minecraft:bucket_entity_data`
 
 -   Stores unstructured NBT data to apply to an entity when placed from a bucket
 -   Replaces `NoAI`, `Silent`, `NoGravity`, `Glowing`, `Invulnerable`, `Health`, `Age`, `Variant`, `HuntingCooldown`, and `BucketVariantTag` tags
@@ -687,7 +689,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `bucket_entity_data={NoAI:1,Age:43}`
 -   On bucketed mob items, has an implicit default value of: `{}`
 
-#### `minecraft:instrument`
+##### `minecraft:instrument`
 
 -   Holds the instrument type used by a Goat Horn
 -   Replaces `instrument` tag of same format
@@ -695,7 +697,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `instrument='minecraft:ponder_goat_horn'`
 -   Can be modified with the `set_instrument` loot function
 
-#### `minecraft:recipes`
+##### `minecraft:recipes`
 
 -   List of recipes that should be unlocked when using the Knowledge Book item
 -   Replaces `Recipes` tag of same format
@@ -703,7 +705,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `recipes=['minecraft:acacia_boat','minecraft:anvil']`
 -   On Knowledge Book, has an implicit default value of: `[]`
 
-#### `minecraft:lodestone_tracker`
+##### `minecraft:lodestone_tracker`
 
 -   If present, specifies that the Compass is a Lodestone Compass
 -   Replaces `LodestonePos`, `LodestoneDimension`, and `LodestoneTracked` tags
@@ -716,7 +718,7 @@ These are item stack components that replace existing functionality that was for
         -   If `true`, when the Lodestone at the target position is removed, the `target` field will be removed
     -   e.g. `lodestone_tracker={target:{pos:[13,64,-43],dimension:'minecraft:the_nether'}}`
 
-#### `minecraft:firework_explosion`
+##### `minecraft:firework_explosion`
 
 -   Stores the explosion crafted in a Firework Star
 -   Replaces `Explosion.Type`, `Explosion.Colors`, `Explosion.FadeColors`, `Explosion.Trail`, and `Explosion.Flicker` tags
@@ -738,7 +740,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `firework_explosion={shape:'large_ball',colors:[16711680],has_trail:true}`
 -   Can be modified with the `set_firework_explosion` loot function
 
-#### `minecraft:fireworks`
+##### `minecraft:fireworks`
 
 -   Stores all explosions crafted into a Firework Rocket, as well as flight duration
 -   Replaces `Fireworks.Explosions` and `Fireworks.Flight` tags
@@ -750,7 +752,7 @@ These are item stack components that replace existing functionality that was for
 -   On Firework Rocket, has an implicit default value of: `{explosions:[],flight_duration:1}`
 -   Can be modified with the `set_fireworks` loot function
 
-#### `minecraft:profile`
+##### `minecraft:profile`
 
 -   Controls the skin displayed on a Player Head
 -   Copied to Player Head block when placed
@@ -771,7 +773,7 @@ These are item stack components that replace existing functionality that was for
         -   e.g. `profile='MHF_Sheep'`
 -   Can be modified with the `fill_player_head` loot function
 
-#### `minecraft:note_block_sound`
+##### `minecraft:note_block_sound`
 
 -   Controls the sound played by a Player Head when placed on a Note Block
 -   Copied to Player Head block when placed
@@ -779,7 +781,7 @@ These are item stack components that replace existing functionality that was for
 -   Format: sound event id
     -   e.g. `note_block_sound='minecraft:ambient.cave'`
 
-#### `minecraft:base_color`
+##### `minecraft:base_color`
 
 -   Stores the base color for a Shield
 -   Replaces `BlockEntityTag.Base` tag
@@ -802,7 +804,7 @@ These are item stack components that replace existing functionality that was for
     -   `black` (was `15`)
     -   e.g. `base_color='magenta'`
 
-#### `minecraft:banner_patterns`
+##### `minecraft:banner_patterns`
 
 -   Stores the additional patterns applied to a Banner or Shield
 -   Copied to Banner block when placed
@@ -816,7 +818,7 @@ These are item stack components that replace existing functionality that was for
 -   On Banners and Shields, has an implicit default value of: `[]`
 -   Can be modified with the `set_banner_pattern` loot function
 
-#### `minecraft:pot_decorations`
+##### `minecraft:pot_decorations`
 
 -   Stores the Sherds applied to each side of a Decorated Pot
 -   Copied to Decorated Pot block when placed
@@ -825,7 +827,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `['arms_up_pottery_sherd','angler_pottery_sherd','danger_pottery_sherd','shelter_pottery_sherd']`
 -   On Decorated Pots, has an implicit default value of: `['minecraft:brick','minecraft:brick','minecraft:brick','minecraft:brick']`
 
-#### `minecraft:container`
+##### `minecraft:container`
 
 -   Holds the contents of container blocks (Chests, Shulker Boxes) in item form
 -   Copied into container block when placed
@@ -837,7 +839,7 @@ These are item stack components that replace existing functionality that was for
 -   On container blocks, has an implicit default value of: `[]`
 -   Can be modified with the `modify_contents` and `set_contents` loot functions
 
-#### `minecraft:bees`
+##### `minecraft:bees`
 
 -   Holds the bees inside a Beehive or Bee Nest
 -   Copied to Beehive or Bee Nest block when placed
@@ -851,7 +853,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g: `bees=[{entity_data:{id='minecraft:bee'},ticks_in_hive:3,min_ticks_in_hive:10}]`
 -   On Beehive and Bee Nest, has an implicit default value of: `[]`
 
-#### `minecraft:lock`
+##### `minecraft:lock`
 
 -   Holds the lock state of a container-like block
     -   An item with a custom name of the same value must be used to open this container
@@ -860,7 +862,7 @@ These are item stack components that replace existing functionality that was for
 -   Format: string value, representing the key
     -   e.g: `lock='hunter2'`
 
-#### `minecraft:container_loot`
+##### `minecraft:container_loot`
 
 -   Holds the unresolved loot table and seed of a container-like block
 -   Copied to container block when placed
@@ -872,7 +874,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `container_loot={loot_table:'minecraft:chests/buried_treasure',seed:123}`
 -   Can be modified with the `set_loot_table` loot function
 
-#### `minecraft:block_entity_data`
+##### `minecraft:block_entity_data`
 
 -   Stores unstructured NBT data to apply to a block entity when placing a block such as a Chest or Furnace
 -   Replaces previous `BlockEntityTag` tag, with same behavior
@@ -883,7 +885,7 @@ These are item stack components that replace existing functionality that was for
     -   Any additional fields will be merged into the block entity when placed
     -   e.g. `block_entity_data={id:'minecraft:chest',Items:[{Slot:1,item:'minecraft:diamond'}]}`
 
-#### `minecraft:block_state`
+##### `minecraft:block_state`
 
 -   Holds block state properties to apply when placing a block
 -   Replaces `BlockStateTag` tag
@@ -891,11 +893,11 @@ These are item stack components that replace existing functionality that was for
     -   All property values, including integer and boolean types, must be represented as strings
     -   e.g: `block_state={eggs:'10'}`
 
-## New Item Stack Components
+### New Item Stack Components
 
 These are new components that did not exist in the previous item tag, and support new features and use-cases.
 
-#### `minecraft:enchantment_glint_override`
+##### `minecraft:enchantment_glint_override`
 
 -   Overrides the enchantment glint effect on an item
 -   Can be used in the same way that an invalid `Enchantments` tag would previously behave to add a glint
@@ -906,7 +908,7 @@ These are new components that did not exist in the previous item tag, and suppor
 
 ![A player is eating a Stick by using an attached food component.](https://launchercontent.mojang.com/v2/images/1.20.5tech3thumbnail.jpg)
 
-#### `minecraft:food`
+##### `minecraft:food`
 
 -   When present, this item will behave as if a food (can be eaten)
 -   Format: object with fields
@@ -922,7 +924,7 @@ These are new components that did not exist in the previous item tag, and suppor
     -   e.g: `food={nutrition:4,saturation:0.1}`
 -   On food items, has an implicit default value for that food type
 
-#### `minecraft:max_stack_size`
+##### `minecraft:max_stack_size`
 
 -   Controls the maximum stacking size of this item
 -   Values greater than 1 are mutually exclusive with the `max_damage` component
@@ -930,7 +932,7 @@ These are new components that did not exist in the previous item tag, and suppor
     -   e.g. `max_stack_size=4`
 -   Has an implicit default value according to the item type (usually `64`)
 
-#### `minecraft:max_damage`
+##### `minecraft:max_damage`
 
 -   Controls the maximum amount of damage than an item can take
 -   Mutually exclusive with the `max_stack_size` component greater than 1
@@ -940,7 +942,7 @@ These are new components that did not exist in the previous item tag, and suppor
     -   e.g. `max_damage=123`
 -   Has an implicit default value for damageable items
 
-#### `minecraft:tool`
+##### `minecraft:tool`
 
 -   Controls the behavior of the item as a tool
 -   Format: object with fields
@@ -954,13 +956,13 @@ These are new components that did not exist in the previous item tag, and suppor
     -   e.g. `tool={rules:[{blocks:"#mineable/pickaxe",speed:4.0,correct_for_drops:true}]}`
 -   Vanilla tool items will have an implicit default value based on their tier and tool type
 
-#### `minecraft:hide_tooltip`
+##### `minecraft:hide_tooltip`
 
 -   If present, it will completely hide whole item tooltip (that includes item name)
 -   Tooltip will still be visible and searchable in creative mode
 -   Format: empty object
 
-#### `minecraft:item_name`
+##### `minecraft:item_name`
 
 -   When present, replaces default item name with contained chat component
 -   Differences from `custom_name`:
@@ -969,14 +971,14 @@ These are new components that did not exist in the previous item tag, and suppor
     -   `item_name` does not show labels where applicable (for example: banner markers, names in item frames)
 -   Can be modified with the `set_name` loot function
 
-#### `minecraft:fire_resistant`
+##### `minecraft:fire_resistant`
 
 -   If present, this item will not burn in fire
 -   Format: empty object
     -   e.g. `fire_resistant={}`
 -   Has an implicit default value for fire-resistant items such as Netherite
 
-#### `minecraft:rarity`
+##### `minecraft:rarity`
 
 -   Controls the color of the item name
 -   Format: enumerated value, one of:
@@ -987,14 +989,14 @@ These are new components that did not exist in the previous item tag, and suppor
     -   e.g. `rarity=rare`
 -   Special items such as Golden Apples have an implicit default value
 
-#### `minecraft:ominous_bottle_amplifier`
+##### `minecraft:ominous_bottle_amplifier`
 
 -   Controls the amplifier amount for an Ominous Bottle's Bad Omen effect
 -   Format: integer between 0 and 4
     -   e.g. `ominous_bottle_amplifier=3`
 -   Can be modified with the `set_ominous_bottle_amplifier` loot function
 
-### Saved Item Stack Format
+#### Saved Item Stack Format
 
 -   Along with format changes due to components, the structures of item stacks on disk and in data packs have been updated for consistency
 -   Previous `id` (string) and `Count` (byte) fields have been replaced with `id` (namespaced string) and `count` (integer) fields
@@ -1011,7 +1013,7 @@ These are new components that did not exist in the previous item tag, and suppor
     -   Instead, in places that support it, the field should be omitted
     -   In some cases, such as lists of stacks (e.g. `HandItems` in living entities), an empty map (`{}`) is used to represent empty stacks
 
-## Entity & Block Entity Data Formats
+### Entity & Block Entity Data Formats
 
 -   Non-default components on item stacks are now stored when a block entity is placed from that item stack
 -   The storage format of block positions in entities and block entities has been updated
@@ -1049,7 +1051,7 @@ These are new components that did not exist in the previous item tag, and suppor
             -   Can also be a single value instead of a list to apply to all slots: e.g. `slot_drop_chances: 0.0f` will apply a chance of 0% to all slots
     -   e.g. `equipment: {loot_table: "minecraft:equipment/trial_chamber", slot_drop_chances: {"head": 0.0f, "chest": 0.25f, "legs": 1.0f, "feet": 0.25f}}`
 
-### Components on Block Entities
+#### Components on Block Entities
 
 Non-default components on item stacks containing block items are now stored on block entities when placed.
 
@@ -1060,7 +1062,7 @@ Non-default components on item stacks containing block items are now stored on b
     -   Some components (like `custom_name`) are still handled by legacy serialization, which means they might not be present in there
     -   Contains map of component id to component value
 
-### Block Positions
+#### Block Positions
 
 -   All block positions are now stored as an array of 3 integers instead of a map of `X`, `Y`, and `Z` for consistency
 -   `FlowerPos` and `HivePos` in Bees have been renamed to `flower_pos` and `hive_pos`
@@ -1071,7 +1073,7 @@ Non-default components on item stacks containing block items are now stored on b
 -   `ExitPortal` in End Gateways has been renamed to `exit_portal`
 -   `WanderTarget` in Wandering Traders has been renamed to `wander_target`
 
-### Vault Block Entity
+#### Vault Block Entity
 
 -   Added Vault block (experimental) with a variety of NBT elements which can be configured for custom content:
 -   Fields:
@@ -1091,7 +1093,7 @@ Non-default components on item stacks containing block items are now stored on b
         -   `connected_particles_range` - The range players who have not unlocked the Vault must be within before particles will flow from them
             -   Default value: `4.5`
 
-## Commands
+### Commands
 
 -   Updated syntax of items and item predicates in commands
 -   Added slot names for ranges, like `container.*`
@@ -1103,7 +1105,7 @@ Non-default components on item stacks containing block items are now stored on b
 -   Added the `transfer` command
 -   The maximum length of a command in a function (including macro expansions) can no longer exceed 2,000,000 characters
 
-### Item Syntax
+#### Item Syntax
 
 -   Commands such as `/give`, `/item`, `/loot` use an updated item syntax
 -   Components can now be specified after the item name in square brackets
@@ -1119,7 +1121,7 @@ Non-default components on item stacks containing block items are now stored on b
     -   `multiply_base` -> `add_multiplied_base`
     -   `multiply` -> `add_multiplied_total`
 
-### Added `execute if|unless items`
+#### Added `execute if|unless items`
 
 -   `execute if|unless items <source> <slots> <item_predicate>` command can be used to count items
     -   `<source>` is the same as one used in `item` command, i.e.
@@ -1129,7 +1131,7 @@ Non-default components on item stacks containing block items are now stored on b
     -   `<item_predicate>` is the same as item predicate in `clear` command
 -   If used alone, it will return the total number of items in stacks that match predicates
 
-### Item Predicate Argument
+#### Item Predicate Argument
 
 The item predicate syntax (used in `execute if|unless items` and `clear` commands) has been significantly expanded.
 
@@ -1165,7 +1167,7 @@ The item predicate syntax (used in `execute if|unless items` and `clear` command
         -   This requires that all tags specified in the predicate are present on the target item, but additional ones may be ignored
         -   Lists in the target must contain all items specified in the predicate, but additional may be present and order is ignored
 
-### Slot names
+#### Slot names
 
 -   Slot names (used in `item` commands and `slots` entity predicates) now include slot ranges
 -   Unless specified, existing commands can still only work on single slots
@@ -1186,7 +1188,7 @@ The item predicate syntax (used in `execute if|unless items` and `clear` command
     -   `contents` - for single-slot entities like item frames, item displays, or dropped item entities
 -   Replaced `horse.armor` slot name with `armor.body`, which is applicable to all mobs
 
-### Inline loot values
+#### Inline loot values
 
 Arguments in the following commands that previously accepted namespaced ids of loot tables, modifiers and predicates can now also accept inline definitions:
 
@@ -1198,7 +1200,7 @@ Values have the same structure as matching JSON files, though they are encoded a
 
 `execute if predicate {condition:weather_check, raining:true}`
 
-### `transfer` Command
+#### `transfer` Command
 
 New command that triggers a transfer of a player to another server. Only exists on dedicated servers.
 
@@ -1212,7 +1214,7 @@ Parameters:
 -   `port`: Integer denoting the port number of the server to connect to - if omitted, 25565 is used
 -   `players`: The players to transfer - if omitted, `@s` is used
 
-## Predicate Formats in Loot Tables & Advancements
+### Predicate Formats in Loot Tables & Advancements
 
 -   Block predicate format has been updated:
     -   `tag` field has been removed
@@ -1225,7 +1227,7 @@ Parameters:
     -   `structure` -> `structures`, and supports a single entry, hash-prefixed structure tag, or list of structures
 -   Major changes to Entity and Item predicates
 
-### Entity Predicates
+#### Entity Predicates
 
 -   Entity predicate format has been updated:
     -   `type` field now supports a single entry, hash-prefixed entity type tag, or list of entity types
@@ -1234,7 +1236,7 @@ Parameters:
     -   Added a new `body` field to match the item in the body armor slot of an entity
 -   Removed `any` entity type-specific predicate (which had no effect)
 
-#### `slots` entity predicate field
+##### `slots` entity predicate field
 
 -   The new entity field `slots` allows checking a single or multiple slots on any entity
 -   The field contains a map of slot names (same as those used in `item` commands) to item predicates
@@ -1255,24 +1257,24 @@ Example:
     }
     
 
-#### `wolf` type-specific entity predicate
+##### `wolf` type-specific entity predicate
 
 -   New `wolf` sub-predicate has been added to match Wolf variants
 -   Fields:
     -   `variant` - Wolf variant to match (single entry, list of entries or tag)
 
-#### `raider` type-specific entity predicate
+##### `raider` type-specific entity predicate
 
 -   New `raider` sub-predicate has been added to match raiders
 -   Fields:
     -   `has_raid` - Match whether the raider is in an active raid
     -   `is_captain` - Match whether the raider is a captain
 
-#### `cat`, `frog`, `painting` type-specific entity predicate
+##### `cat`, `frog`, `painting` type-specific entity predicate
 
 -   The `variant` field now accepts single entries, list of entries or tags
 
-### Item Predicates
+#### Item Predicates
 
 Item predicate format has been updated:
 
@@ -1285,7 +1287,7 @@ Item predicate format has been updated:
         -   e.g. `"components": { "minecraft:damage": 0 }` will match only undamaged items
 -   Component-specific item predicate properties have been moved to a separate field called `predicates`
 
-### Item Sub-predicates
+#### Item Sub-predicates
 
 -   Some fields from item predicate have been moved to a map in an optional field `predicates`
 -   The new field is similar to the `components` field on item stacks
@@ -1312,7 +1314,7 @@ Item predicate format has been updated:
     -   Flattened string format has been kept since NBT type information can't be expressed in JSON
 -   Many new sub-predicates have been introduced
 
-#### Example:
+##### Example:
 
 Before:
 
@@ -1344,7 +1346,7 @@ After:
     }
     
 
-#### General Rules of Component Predicates
+##### General Rules of Component Predicates
 
 -   Unless otherwise specified, a field in predicate with the same name as a field in component that matches (i.e. has the same name as predicate) will match that field value
 -   Those fields will usually have the same type as in the components, but will be optional
@@ -1353,7 +1355,7 @@ After:
     -   Integer and float fields will be replaced with ranges
     -   Registry ids will be replaced with a type that accepts id, list of ids or a tag
 
-#### Collection Matcher
+##### Collection Matcher
 
 -   A collection matcher is a shared part of predicates that is used for matching collections
 -   Every instance of this matcher will have the same fields with the same functionality, with the only difference being the type of matched element
@@ -1374,20 +1376,20 @@ After:
         -   Examples (when matching item stacks):
             -   `{count:[{count:3,test:{items:diamond}}]}}` will match only when there are exactly 3 stacks of diamonds (no matter the stack size)
 
-##### `container`
+###### `container`
 
 -   Matcher for `container` component (like Shulker Box)
 -   Fields:
     -   `items` - optional collection matcher
         -   Note: empty items are ignored. That means `container~{items:{size:3}}` will only pass if there are exactly 3 non-empty stacks in container
 
-##### `bundle_contents`
+###### `bundle_contents`
 
 -   Matcher for `bundle_contents` component
 -   Fields:
     -   `items` - optional collection matcher
 
-##### `firework_explosion`
+###### `firework_explosion`
 
 -   Matcher for `firework_explosion` component
 -   Fields
@@ -1395,7 +1397,7 @@ After:
     -   `has_trail` - optional boolean
     -   `has_twinkle` - optional boolean
 
-##### `fireworks`
+###### `fireworks`
 
 -   Matcher for `fireworks` component
 -   Fields:
@@ -1403,13 +1405,13 @@ After:
     -   `flight_duration` - optional integer range check for flight duration
 -   Example: `minecraft:fireworks~{explosions:{contains:[{shape:small_ball}]}}]` - matches if firework has at least one explosion with `small_ball` shape
 
-##### `writable_book_content`
+###### `writable_book_content`
 
 -   Matcher for `writable_book_content` component
 -   Fields
     -   `pages` - optional collection matcher for strings (matching only the unfiltered/raw contents of each page)
 
-##### `written_book_content`
+###### `written_book_content`
 
 -   Matcher for `written_book_content` component
 -   Fields
@@ -1419,7 +1421,7 @@ After:
     -   `generation` - optional integer range check for generation
     -   `resolved` - optional boolean
 
-##### `attribute_modifiers`
+###### `attribute_modifiers`
 
 -   Matcher for `attribute_modifiers` component
 -   Fields:
@@ -1431,29 +1433,29 @@ After:
         -   `operation` - optional operation type (same values as `operation` field from `attribute_modifiers` component)
         -   `slot` - optional applicable slot type (same values as `slot` field from `attribute_modifiers` component)
 
-##### `trim`
+###### `trim`
 
 -   Matcher for `trim` component
 -   Fields:
     -   `material` - optional id, list of ids or tag for material to be matched
     -   `pattern` - optional id, list of ids or tag for pattern to be matched
 
-## Advancements
+### Advancements
 
-### Changes to `item_used_on_block`
+#### Changes to `item_used_on_block`
 
 -   This criteria trigger is now only triggered when a specific item is used successfully on a block (as opposed to any interaction with a block)
     -   For example, when using an Axe to scrape Oxidized Copper blocks would trigger, while using an Axe on a Crafting Table would not
 
-### Added `default_block_use`
+#### Added `default_block_use`
 
 -   Triggers due to the default interaction of a block by a player, such as opening a door
 
-### Added `any_block_use`
+#### Added `any_block_use`
 
 -   Triggers due to any type of interaction with a block by a player, such as using an item on the block or its default usage
 
-### Added `crafter_recipe_crafted`
+#### Added `crafter_recipe_crafted`
 
 -   Triggered when a Crafter ejects a successfully crafted item into the world
 -   Fields (same format as `recipe_crafted`):
@@ -1461,7 +1463,7 @@ After:
     -   `recipe_id` - the ID of the recipe being crafted
     -   `ingredients` - a list of item predicates matching the ingredients that form the recipe being crafted
 
-### Added `fall_after_explosion`
+#### Added `fall_after_explosion`
 
 -   Triggered when a player begins falling after being knocked upwards by an explosion or wind burst
 -   Fields:
@@ -1470,7 +1472,7 @@ After:
     -   `distance` - distance predicate matching how far the player must be from `start_position` to cause the trigger to activate
     -   `cause` - entity predicate matching the entity that caused the explosion or burst to happen
 
-## Loot Tables
+### Loot Tables
 
 -   Added `gameplay/panda_sneeze` loot table for drops when Pandas sneeze
 -   Loot table entry `loot_table` (which returns all items from provided nested loot table) now has the following syntax:
@@ -1479,7 +1481,7 @@ After:
         -   full loot table (same format as in standalone file)
 -   Added new loot table type `minecraft:equipment` used for equipping items onto mobs
 
-### `storage` Number Provider
+#### `storage` Number Provider
 
 -   This number provider can access numeric values from command storage directly
 -   If selected storage does not exist or tag selected by path is not numeric or does not exist, the provider returns 0
@@ -1487,11 +1489,11 @@ After:
     -   `storage` - namespaced id of command storage
     -   `path` - NBT path to field
 
-### Modified Loot Functions
+#### Modified Loot Functions
 
 -   Nested lists are no longer supported in function lists
 
-#### `set_contents`
+##### `set_contents`
 
 -   The `type` field has been removed
 -   Added a new mandatory field `component`:
@@ -1500,23 +1502,23 @@ After:
     -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `bundle_contents` and `charged_projectiles` will ignore empty stacks
 
-#### `set_custom_data` (renamed from `set_nbt`)
+##### `set_custom_data` (renamed from `set_nbt`)
 
 -   Now applies to the `custom_data` component of the target item
 -   The `tag` field now accepts both SNBT data written as a string (existing format) and unflattened tags
 
-#### `copy_custom_data` (renamed from `copy_nbt`)
+##### `copy_custom_data` (renamed from `copy_nbt`)
 
 -   Now applies to the `custom_data` component of the target item
 
-#### `set_name`
+##### `set_name`
 
 -   Added optional field `target` to specify which name should be set
 -   Values:
     -   `custom_name` - sets `custom_name` component (default)
     -   `item_name` - sets `item_name` component
 
-#### `set_attributes`
+##### `set_attributes`
 
 -   The modifier `slot` field now supports `any`, `armor`, `hand`, and `body` values
 -   The modifier `operation` values have been renamed:
@@ -1526,14 +1528,14 @@ After:
 -   Added `replace` field to the `set_attributes` loot function (default: `true`)
     -   When `false`, attributes will be appended
 
-#### `set_lore`
+##### `set_lore`
 
 -   The `replace` field has been removed
 -   Now has `mode` like `set_fireworks` and `set_written_book_pages`
 
-### New Loot Functions
+#### New Loot Functions
 
-#### `set_components`
+##### `set_components`
 
 -   Adds or replaces provided components on the target item
 -   Fields:
@@ -1541,7 +1543,7 @@ After:
     -   `components` - map of component id to component value (format varied by id)
         -   Components with a `!` prefix (e.g. `"!minecraft:damage": {}`) will cause this component to be removed
 
-#### `copy_components`
+##### `copy_components`
 
 -   Copies components from a specified source onto an item
 -   This is now used in the Vanilla pack in place of the `copy_name` and `copy_nbt` functions
@@ -1555,7 +1557,7 @@ After:
         -   if omitted, defaults to empty
     -   Only components that are included (explicitly or implicitly) but not excluded will be copied
 
-#### `modify_contents`
+##### `modify_contents`
 
 -   Applies a modifier function to every item inside of a component
 -   If the component does not exist, it will not be added
@@ -1565,14 +1567,14 @@ After:
         -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `modifier` - function or list of functions to be applied to every item inside container
 
-#### `set_item`
+##### `set_item`
 
 -   Replaces item type of item stack without changing its count and components
 -   Fields:
     -   `conditions` - optional list of conditions to filter this function
     -   `item` - new item type
 
-#### `filtered`
+##### `filtered`
 
 -   Applies a sub-function only to items that match item predicate
 -   Fields:
@@ -1580,21 +1582,21 @@ After:
     -   `item_filter` - item predicate used to match items
     -   `modifier` - functions to apply to matching items
 
-#### `set_custom_model_data`
+##### `set_custom_model_data`
 
 -   Sets the `custom_model_data` component on the target item according to a number provider
 -   Fields:
     -   `conditions` - optional list of conditions to filter this function
     -   `value` - integer number provider
 
-#### `set_ominous_bottle_amplifier`
+##### `set_ominous_bottle_amplifier`
 
 -   Sets the `ominous_bottle_amplifier` component on the target item according to a number provider
 -   Fields:
     -   `conditions` - optional list of conditions to filter this function
     -   `amplifier` - a number provider used to generate the `ominous_bottle_amplifier` component
 
-#### `set_fireworks`
+##### `set_fireworks`
 
 -   Sets the details of the `minecraft:fireworks` component
 -   Fields:
@@ -1621,7 +1623,7 @@ After:
                     -   If omitted, `0` (before first explosion) is used
             -   `append`: append explosions at the end of the list
 
-#### `set_firework_explosion`
+##### `set_firework_explosion`
 
 -   Sets the details of the `minecraft:firework_explosion` component
 -   Fields:
@@ -1643,7 +1645,7 @@ After:
         -   Set whether the explosion should have a twinkle or not
         -   If omitted, the original `has_twinkle` value is kept (or `false` is used if there was no component)
 
-#### `set_book_cover`
+##### `set_book_cover`
 
 -   Sets the cover details of the `minecraft:written_book_content` component
 -   If present, any pages in the book are left untouched
@@ -1660,7 +1662,7 @@ After:
         -   The generation value to set
         -   If omitted, the original generation is kept (or `0` is used if there was no component)
 
-#### `set_writable_book_pages`
+##### `set_writable_book_pages`
 
 -   Manipulates the pages of the `minecraft:writable_book_content` component
 -   Fields:
@@ -1683,14 +1685,14 @@ After:
                 -   If omitted, `0` (before first page) is used
         -   `append`: append pages at the end of the book
 
-#### `set_written_book_pages`
+##### `set_written_book_pages`
 
 -   Manipulates the pages of the `minecraft:written_book_content` component
 -   Same format as `set_writable_book_content` but the `pages` field contains filterable Chat Components instead of Strings
     -   Unlike the `written_book_content` component, `pages` stores a list of JSON objects instead of JSON in string form
 -   Any cover data is left untouched, and the page content components are set to resolve next time a player opens the book
 
-#### `toggle_tooltips`
+##### `toggle_tooltips`
 
 -   This function can be used to modify item component tooltip visibility
 -   It works by setting fields like `show_in_tooltip` without changing other values
@@ -1700,7 +1702,7 @@ After:
 -   Example:
     -   `{function:"toggle_tooltips","toggles":{"enchantments":false}}` will hide enchantments tooltip
 
-## Recipes
+### Recipes
 
 -   Recipe types `crafting_shaped`, `crafting_shapeless`, `stonecutting` and `smithing_transform` now accept `components` for the `result` item stack
 -   The `result` field for recipe types `smelting`, `blasting`, `smoking` and `campfire_cooking` is now an item stack format without a count, which means you'll need to specify an object with an `id` field
@@ -1708,7 +1710,7 @@ After:
 
 ![A tiny Kai, roughly 2 pixels tall, is standing next to a Birch Button and staring up towards a normal (but relatively giant) Milk Bucket item.](https://launchercontent.mojang.com/v2/images/1.20.5tech5thumbnail.jpg)
 
-## Attributes
+### Attributes
 
 -   Added `generic.scale` attribute that can be used to rescale any living entity (default: `1.0`)
     -   Certain entities have special restrictions due to technical limitations:
@@ -1725,7 +1727,7 @@ After:
 
 ![A tiny Camel is looking at a very large Bee that flies towards the camera. In the background a giant Chicken is falling right above a regularly-sized Sheep.](https://launchercontent.mojang.com/v2/images/1.20.5tech2thumbnail.jpg)
 
-## Particles
+### Particles
 
 Added the following particle types:
 
@@ -1738,7 +1740,7 @@ Added the following particle types:
 -   `trial_spawner_detection_ominous`
 -   `ominous_spawning`
 
-## Particle Representation
+### Particle Representation
 
 -   Particle options in commands and in fields like `Particles` in Area Effect clouds now use the same representation as worldgen files (like existing biomes' ambient particle settings)
 -   For example, command `/particle minecraft:dust 1.0 0.0 0.0 2.0 ...` becomes `/particle minecraft:dust{color:[1.0, 0.0, 0.0], scale:2.0} ...`
@@ -1765,25 +1767,25 @@ Added the following particle types:
     -   Fields:
         -   `color`: packed integer ARGB color, or list of floats (0.0 to 1.0) representing RGBA color
 
-## Enchantments
+### Enchantments
 
 -   The `minecraft:sweeping` enchantment has been renamed to `minecraft:sweeping_edge`
 -   Projectile weapon Enchantments like `infinity`, `multishot` and `piercing` now work on both Crossbows and Bows, if placed onto the alternative weapon using data manipulation or a change to the `enchantable/*` tags)
 
-## Damage Types
+### Damage Types
 
 -   Llamas now use a new damage type `spit` instead of `mob_projectile`
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `minecraft:does_not_block_hoppers` for blocks that will never disable a Hopper when placed above one
 -   Added `minecraft:blocks_wind_charge_explosions` for blocks not impacted by the explosion when hit by Wind Charge
 -   Added `minecraft:incorrect_for_wooden_tool`, `minecraft:incorrect_for_gold_tool`, `minecraft:incorrect_for_stone_tool`, `minecraft:incorrect_for_iron_tool`, `minecraft:incorrect_for_diamond_tool`, `minecraft:incorrect_for_netherite_tool`
     -   These tags combine the existing `needs_diamond_tool`, `needs_iron_tool`, and `needs_stone_tool` tags for each specific tool tier
 
-### Item Tags
+#### Item Tags
 
 New item tags controlling what enchantments can be added to what gear:
 
@@ -1839,7 +1841,7 @@ Removed item tags:
 
 -   Removed tag `minecraft:tools` (overlapping with `minecraft:breaks_decorated_pots`)
 
-### Entity Type Tags
+#### Entity Type Tags
 
 -   Added `minecraft:ignores_poison_and_regen` for entities that cannot be affected by Poison and Regeneration effects
 -   Added `minecraft:illager_friends` for entities that Illagers will consider allies (unless on a different team)
@@ -1853,16 +1855,16 @@ Removed item tags:
 -   Added `minecraft:sensitive_to_smite` for entities that take extra damage from the Smite Enchantment
 -   Added `minecraft:wither_friends` for entities that the Wither will not target and which cannot harm the Wither
 
-### Damage Type Tags
+#### Damage Type Tags
 
 -   Added `minecraft:bypasses_wolf_armor` for damage sources that cannot be absorbed by Wolf Armor
 -   Added `minecraft:is_player_attack` for attacks performed by the player
 
-### Enchantment Tags
+#### Enchantment Tags
 
 -   Added `minecraft:tooltip_order` controlling which order Enchantments are listed in tooltips
 
-## Banner Patterns
+### Banner Patterns
 
 Banner Patterns will now be loaded into a dynamic registry from data packs (`data/<namespace>/banner_pattern/<id>`)
 
@@ -1872,7 +1874,7 @@ Banner Patterns will now be loaded into a dynamic registry from data packs (`dat
     -   `translation_key` (string) is a translation key prefix
         -   e.g. `block.minecraft.banner.custom.pattern` resolves to `block.minecraft.banner.custom.pattern.<dye color>`
 
-## Wolf Variants
+### Wolf Variants
 
 Wolf variants can be data-driven by adding entries to `data/<namespace>/wolf_variant/<id>.json`.
 
@@ -1883,7 +1885,7 @@ Wolf variants can be data-driven by adding entries to `data/<namespace>/wolf_var
     -   `angry_texture` - to angry texture for this variant
     -   `biome` - a single entry, list or a tag describing biomes in which this variant naturally spawns
 
-## Worldgen Data Formats
+### Worldgen Data Formats
 
 -   Added new terrain adaptation type for structures: `encapsulate`
     -   Density will be added all around every piece of a structure
@@ -1891,7 +1893,7 @@ Wolf variants can be data-driven by adding entries to `data/<namespace>/wolf_var
 -   Int and float providers are no longer wrapped in an extra `value` field next to `type`
     -   For example, `{"type":"minecraft:uniform","value":{"min_inclusive":0.0,"max_inclusive":1.0}}` becomes `{"type":"minecraft:uniform","min_inclusive":0.0,"max_inclusive":1.0}`
 
-# Resource Pack Versions 23 through 32
+## Resource Pack Versions 23 through 32
 
 The Resource Pack version is now 32. These are the changes compared to version 22, used in 1.20.4.
 
@@ -1900,7 +1902,7 @@ The Resource Pack version is now 32. These are the changes compared to version 2
 -   Changes to fonts
 -   Changes to shaders
 
-## Models and Textures
+### Models and Textures
 
 -   Added textures for Wolf variations
 -   Added files for Armadillo and Wolf Armor
@@ -1926,7 +1928,7 @@ The Resource Pack version is now 32. These are the changes compared to version 2
     -   `weaving`
     -   `wind_charged`
 
-## GUI
+### GUI
 
 -   The `gui/options_background` and the `gui/light_dirt_background` textures have been removed. Instead;
     -   Added `gui/menu_background` to be used as the background of screens, while `gui/menu_list_background` is used for the background of lists for menus accessed from the Title Screen
@@ -1940,12 +1942,12 @@ The Resource Pack version is now 32. These are the changes compared to version 2
 -   Added `misc/credits_vignette` texture, which is rendered behind the poem and the credits
 -   Split map decoration atlas into separate files
 
-### Map Decorations
+#### Map Decorations
 
 -   Map decoration icons have been split from the former `map_icons.png` to use an atlas loaded from the `textures/map/decorations/` directory
 -   The process of upgrading your pack can be assisted by using this automated [Slicer](https://github.com/Mojang/slicer/releases/tag/v1.1.5) tool
 
-## Fonts
+### Fonts
 
 -   The `ttf` font provider transforms have been adjusted to have more reasonable defaults
     -   `shift` is no longer applied double, and now directly represents a number of pixels in the game UI
@@ -1955,7 +1957,7 @@ The Resource Pack version is now 32. These are the changes compared to version 2
     -   `shift` is now restricted to the range `[-512; 512]`
 -   Added font variant filters to font providers
 
-### Font Variant Filters
+#### Font Variant Filters
 
 -   Every glyph provider can now be enabled or disabled based on certain set of variants
 -   Available variants are currently hardcoded and controlled by the font options menu
@@ -1966,7 +1968,7 @@ The Resource Pack version is now 32. These are the changes compared to version 2
     -   Keys in that object are variant names (for example `uniform`)
     -   Glyph provider will be included only when value in filter matches actual value of variant in key
 
-## Shaders
+### Shaders
 
 -   The unused attributes array in core shader definitions has been removed
 -   The unused `position_color_normal` and `position_tex_lightmap_color` shaders have been removed
@@ -1977,7 +1979,7 @@ The Resource Pack version is now 32. These are the changes compared to version 2
 -   Added optional boolean field `use_linear_filter` to post-processing passes which when set to `true` switches texture sampling mode from nearest-neighbor sampling to linear interpolation for that pass
 -   Added `entity_outline_box_blur` post-processing shader
 
-## Particles
+### Particles
 
 Added the following particle types:
 
@@ -1990,7 +1992,7 @@ Added the following particle types:
 -   `trial_spawner_detection_ominous`
 -   `vault_connection`
 
-## Sound Events
+### Sound Events
 
 Added the following sound events:
 
@@ -2009,7 +2011,7 @@ Added the following sound events:
 -   `event.mob_effect.trial_omen`
 -   `item.ominous_bottle.dispose`
 
-# Experimental Features
+## Experimental Features
 
 The following changes only apply when their respective Experiment is turned on, either by activating the corresponding experimental data pack or by turning it on in the Experiments screen while creating the world.
 
@@ -2028,7 +2030,7 @@ The following changes only apply when their respective Experiment is turned on, 
 
 ![Noor is attacking a Piglin Brute by jumping from the top of a Bastion Remnant with a Mace. There is a Crimson Forest in the background.](https://launchercontent.mojang.com/v2/images/1.20.5exp3thumbnail.jpg)
 
-## Mace
+### Mace
 
 -   A new heavy weapon to smash your enemies!
 -   Can be crafted with a Breeze Rod and a Heavy Core
@@ -2066,15 +2068,15 @@ The following changes only apply when their respective Experiment is turned on, 
         -   Maces enchanted with Wind Burst will emit a Wind Burst upon hitting an enemy, launching the attacker upward and enabling the linking of smash attacks one after the other
         -   Each level will bounce the attacker higher up in the air
 
-## Heavy Core
+### Heavy Core
 
 -   A mysterious, dense block which can be combined with a Breeze Rod to craft a brand-new weapon: the Mace!
 
-## Breeze Rod
+### Breeze Rod
 
 -   An item dropped by the Breeze that can be crafted into 4 Wind Charges, or used with the Heavy Core to craft the Mace
 
-## Breeze
+### Breeze
 
 -   Now drops 1-2 Breeze Rods when killed by a player
     -   The number of Breeze Rods dropped is affected by looting enchantments
@@ -2088,7 +2090,7 @@ The following changes only apply when their respective Experiment is turned on, 
 
 ![Noor is jumping from one tall Jungle tree to another using a Wind Charge to launch themselves high into the air. There is a mountain overgrown with Bamboo Forest in the background.](https://launchercontent.mojang.com/v2/images/1.20.5exp2thumbnail.jpg)
 
-## Wind Charge
+### Wind Charge
 
 -   Become the Breeze! Using a Wind Charge item will fire off a Wind Charge projectile similar to the Breeze's
 -   The Wind Charge can be used to launch entities away from the impact of the Wind Burst
@@ -2100,12 +2102,12 @@ The following changes only apply when their respective Experiment is turned on, 
 -   Players that launch themselves with a Wind Charge only accumulate fall damage below the y-level of where they collided with the Wind Burst
     -   This means, for example, if a player uses a Wind Charge at y64 to launch themselves 9 blocks into the air, and they land back where they started at y64, they will take 0 damage.
 
-## Trial Spawner
+### Trial Spawner
 
 -   The Trial Spawner now has the same two default loot tables as they have in the Trial Chamber
 -   Trial spawners can now only activate when a player is in line of sight
 
-## Trial Chambers
+### Trial Chambers
 
 -   Trial Chambers are now more consistently buried by terrain when found underground
 -   Ominous Vaults can now be found inside rooms, intersections and at the end of corridors
@@ -2125,15 +2127,15 @@ Known issue:
 
 -   Corner quadrants in slanted may still fail to generate correctly
 
-## Trial Key
+### Trial Key
 
 -   Updated texture to reflect new Vault visuals
 
-## Trial Chamber Explorer Map
+### Trial Chamber Explorer Map
 
 -   Struggle no more to locate a Trial Chamber - level up your nearest Cartographer to Journeyman for the opportunity to trade for an Explorer Map pointing to a nearby Trial Chamber
 
-## Vault
+### Vault
 
 -   A block that holds locked treasure and loot - find the right key to eject its rewards
     -   Can be found throughout Trial Chambers, containing the structures' most valuable loot
@@ -2149,7 +2151,7 @@ Known issue:
 -   Cannot be crafted nor obtained in Survival, and does not drop anything when mined
 -   Vaults are explosion resistant and cannot be moved
 
-## Ominous Events
+### Ominous Events
 
 -   Bad Omen has been expanded to give access to an optional experience in Trial Chambers
 -   These optional experiences can be accessed through Bad Omen, which are now known as Ominous Events
@@ -2166,7 +2168,7 @@ Known issue:
 
 ![An infographic explaining the Ominous Event System, as explained above.](https://launchercontent.mojang.com/v2/images/1.20.5ominouseventsystemthumbnail.jpg)
 
-### Ominous Bottle
+#### Ominous Bottle
 
 -   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
     -   Comes in 5 variations, one for each Bad Omen level
@@ -2176,19 +2178,19 @@ Known issue:
 
 ![Noor is fighting in Trial Chambers with Trial Omen effect. The Zombies who are trying to attack Noor are wearing Chainmail Armor with Armor Trims. There are multiple Lingering potion effect clouds present in the chamber with another potion about to burst.](https://launchercontent.mojang.com/v2/images/1.20.5exp5thumbnail.jpg)
 
-## Ominous Trials
+### Ominous Trials
 
 -   A new Ominous Event that can be accessed by exploring a Trial Chamber with Bad Omen
 -   This event will have players facing more powerful Trial Spawners if they dare!
 
-### Trial Omen
+#### Trial Omen
 
 -   A variant that Bad Omen can transform into
     -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
     -   The Trial Omen has a duration of 15 minutes multiplied by the transformed Bad Omen's level
 -   Players that have Trial Omen are surrounded by ominous particles
 
-### Ominous Trial Spawner
+#### Ominous Trial Spawner
 
 -   A more powerful active phase of the Trial Spawner with unique challenges and rewards
     -   Provides a more challenging experience that advanced players can opt into for better rewards
@@ -2211,14 +2213,14 @@ Known issue:
 
 ![Noor is standing on an Oxidized Copper stairway in Trial Chambers and looking at an Ominous Trial Key which has appeared on top of a Trial Spawner as a reward after a difficult fight.](https://launchercontent.mojang.com/v2/images/1.20.5exp6thumbnail.jpg)
 
-### Ominous Trial Key
+#### Ominous Trial Key
 
 -   A new variant of the Trial Key which can only be obtained by defeating an Ominous Trial Spawner
 -   They can be used to unlock Ominous Vaults
 
 ![Noor is about to open an Ominous Vault with an Ominous Trial Key in Trial Chambers.](https://launchercontent.mojang.com/v2/images/1.20.5exp7thumbnail.jpg)
 
-### Ominous Vault
+#### Ominous Vault
 
 -   A variant of Vaults that have a different texture and emit soul flames instead of normal flames
 -   These can be found throughout the Trial Chambers in harder to find places and require an Ominous Trial Key to unlock
@@ -2226,7 +2228,7 @@ Known issue:
 
 ![A Bogged is aiming its bow at something at night in a Swamp. It is a Skeleton with moss on its bones and Mushrooms growing on its head. The Moon is rising between Mangrove trees in the background.](https://launchercontent.mojang.com/v2/images/1.20.5exp1thumbnail.jpg)
 
-## Bogged
+### Bogged
 
 -   A new variant of Skeletons that shoots poisonous arrows
     -   They're faster to take down with 16 health instead of 20 health
@@ -2236,7 +2238,7 @@ Known issue:
     -   Can also be found spawning from Trial Spawners in some Trial Chambers
 -   The Bogged drops 2 mushrooms (either both red/brown or one of each) when sheared
 
-## Mob Effects
+### Mob Effects
 
 -   The following effects have been added:
     -   Wind Charged
@@ -2260,26 +2262,26 @@ Known issue:
     -   If the amount exceeds the max entity cramming cap (24 by default), it will not spawn any Slimes
     -   If it does not exceed it, it will attempt to spawn 2 Slimes up until the max entity cramming cap
 
-## Copper Grates
+### Copper Grates
 
 -   Stonecutting Copper Blocks into Copper Grates outputs 4 Copper Grates
 
-## Pottery Sherds
+### Pottery Sherds
 
 -   Added Flow, Guster, and Scrape Pottery Sherds
 -   These can be obtained by breaking Decorated Pots that display them in Trial Chambers
 
-## Banner Patterns
+### Banner Patterns
 
 -   Added Flow and Guster Banner Patterns
 
-## Armor Trims
+### Armor Trims
 
 -   Added Bolt and Flow Armor Trims and Smithing Templates
 -   Bolt can be duplicated using a Copper Block or Waxed Copper
 -   Flow can be duplicated using a Breeze Rod
 
-## Advancements
+### Advancements
 
 -   Added the following advancements:
     -   `Minecraft: Trial(s) Edition` - Step foot in a Trial Chamber
@@ -2291,11 +2293,11 @@ Known issue:
     -   `Over-Overkill` - Deal 50 hearts of damage in a single hit using the Mace (challenge - gives 50 exp)
     -   `Revaulting` - Unlock an Ominous Vault with an Ominous Trial Key (goal)
 
-## Trade Rebalance
+### Trade Rebalance
 
 -   In the Trade Rebalance Experiment, Villagers who buy armor now ignore durability and can buy damaged armor
 
-# Fixed bugs in 1.20.5
+## Fixed bugs in 1.20.5
 
 -   [MC-19893](https://bugs.mojang.com/browse/MC-19893) options\_background.png is incorrectly displayed upside down in the credits after beating the dragon
 -   [MC-71977](https://bugs.mojang.com/browse/MC-71977) Changing generic.attack\_damage of tamed wolf has no effect / taming wolf removes custom generic.attack\_damage

@@ -1,22 +1,24 @@
+# 1.19.4-pre4
+
 We are now releasing the fourth pre-release for Minecraft 1.19.4. This pre-release contains bug fixes, some cherry texture tweaks, and a button in the options menu to view the game credits.
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   Added "Credits & Attribution" button in the Options menu
 
-# Technical Changes
+## Technical Changes
 
-## Display entities
+### Display entities
 
 -   When a new interpolation is started, it now starts from the current state instead of the final state
 
-# Changes to Experimental Features
+## Changes to Experimental Features
 
 -   The textures for the Cherry Tree Leaves and Cherry Sign have been updated
 
-# Fixed bugs in 1.19.4 Pre-release 4
+## Fixed bugs in 1.19.4 Pre-release 4
 
 -   [MC-172305](https://bugs.mojang.com/browse/MC-172305) Some words within "/clear" command feedback messages are always pluralized
 -   [MC-193497](https://bugs.mojang.com/browse/MC-193497) Tall Grass & Large Fern are rendered incorrectly when an Enderman is holding them

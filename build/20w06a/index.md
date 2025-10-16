@@ -1,4 +1,6 @@
-# Features in 20w06a
+# 20w06a
+
+## Features in 20w06a
 
 -   Added new Nether blocks!
 -   Knockback resistance is now a scale instead of a probability
@@ -10,7 +12,7 @@
 -   Walls do not have gaps anymore when stacked vertically
 -   Added Warped Forest biome to the Nether
 
-## Blocks
+### Blocks
 
 Many new block types have been added!
 
@@ -26,7 +28,7 @@ Many new block types have been added!
 -   Soul Soil can be used to craft Soul Torches - and those can be crafted into Soul Lanterns!
 -   Using bone meal on Netherrack can now spread Nylium
 
-## Crimson Forest
+### Crimson Forest
 
 Crimson Forests can now be found in the Nether!
 
@@ -36,17 +38,17 @@ Crimson Forests can now be found in the Nether!
 -   Hoglins wander these Forests
 -   Crimson spores swirl through the air
 
-## Netherite
+### Netherite
 
 -   A new high level material found in the Nether. Use it to upgrade your diamond gear!
 
-### How to make Netherite
+#### How to make Netherite
 
 -   Mine Ancient Debris in the lower depths of the Nether. At own risk. No insurance coverage for that.
 -   Refine it into Netherite Scrap in a furnace (although that's kind of slow so you might want a Blast Furnace).
 -   Combine 4 Nether Scrap with 4 Gold Ingots in a crafting table to make a Netherite Ingot.
 
-### Netherite effects
+#### Netherite effects
 
 -   Netherite items float in lava. So you don't lose all your gear after that unplanned lava bath.
 -   Netherite items have higher enchantment value than diamond (but not as high as gold).
@@ -56,7 +58,7 @@ Crimson Forests can now be found in the Nether!
 -   Netherite armor gives you knockback resistance, so you barely get knocked back at all when hit by arrows and such.
 -   And it looks cool!
 
-## Soulsand Valley
+### Soulsand Valley
 
 Soulsand Valleys can now be found in the Nether!
 
@@ -67,12 +69,12 @@ Soulsand Valleys can now be found in the Nether!
 -   A light blue glow envelopes the valley
 -   Beware of Skeletons here
 
-## Sounds
+### Sounds
 
 -   Ghasts sounds are now heard at shorter range
 -   Updated block sounds for Bone Blocks, Netherrack, Soul Sand, Netherwart, Nether Bricks and Quartz Ore
 
-## Warped Forest
+### Warped Forest
 
 Warped Forests can now be found in the Nether!
 
@@ -82,32 +84,32 @@ Warped Forests can now be found in the Nether!
 -   Warped spores swirl through the air
 -   The Warped Forests are strange, but also the least hostile place of Nether
 
-## World Generation
+### World Generation
 
 -   The old Nether biome is now called Nether Wastes
 -   Made shipwrecks and ocean ruins a bit less common, so you get more excited when you find one!
 
-# Technical changes in 20w06a
+## Technical changes in 20w06a
 
 -   Added a `locatebiome` command
 
-## Commands
+### Commands
 
-### locatebiome
+#### locatebiome
 
 New command that locates a specified biome. Useful in creative mode when you're looking for a specific biome and don't want to fly around randomly searching for it. Syntax: `locatebiome <biome>` Parameters:
 
 -   `biome` - The id of the biome to find
 
-## Particles
+### Particles
 
 -   New particle types: ash, crimson\_spore, soul\_fire\_flame and warped\_spore
 
-## Rendering
+### Rendering
 
 -   Nailed Entity shadows to the ground.
 
-# Fixed bugs in 20w06a
+## Fixed bugs in 20w06a
 
 -   [MC-17431](https://bugs.mojang.com/browse/MC-17431) Shift-clicking stacked items with a data tag into the enchanting table GUI removes data tags from the moved item
 -   [MC-45619](https://bugs.mojang.com/browse/MC-45619) Water, Signs, Vines, Torches etc. in the same block as item frame break item frame's redstone signal

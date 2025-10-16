@@ -1,8 +1,10 @@
+# 20w28a
+
 This week's snapshot introduces experimental support for custom biomes in data packs. This work has involved redoing some of the internal plumbing of things behind the scene, so it might be a bit leaky. We hope no important parts drip out, but if they do, pick them back up for us, please.
 
 As always, make sure to make backups if you try a world in a snapshot.
 
-# Changes in 20w28a
+## Changes in 20w28a
 
 ​
 
@@ -13,7 +15,7 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ​
 
-# Technical Changes in 20w28a
+## Technical Changes in 20w28a
 
 ​
 
@@ -22,7 +24,7 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ​
 
-## Customized world generation
+### Customized world generation
 
 ​
 
@@ -39,7 +41,7 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ​
 
-## Dedicated server packet limit
+### Dedicated server packet limit
 
 ​
 
@@ -49,7 +51,7 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ​
 
-# Fixed bugs in 20w28a
+## Fixed bugs in 20w28a
 
 ​
 

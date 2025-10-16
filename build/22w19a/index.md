@@ -1,18 +1,20 @@
+# 22w19a
+
 Thursday snapshot! Apart from some bugfixes and some changes to fancy tags and commands, we're introducing "chat preview" as a way to cryptographically sign chat messages that have been dynamically styled by servers. And for this snapshot only, we've left in our testing option `test-rainbow-chat` in `server.properties`, which can be set to true together with the new `previews-chat` option for testing. If this is something that interests you, and especially if you run a server, we would love your feedback on it.
 
 Enjoy!
 
-# Changes in 22w19a
+## Changes in 22w19a
 
 -   Warden and Iron Golems now make sure to spawn above something solid
 
-# Technical Changes in 22w19a
+## Technical Changes in 22w19a
 
 -   Servers can now enable Chat Preview, which displays a server-controlled preview above the chat edit box
 -   Changes to the locate and place commands
 -   Point of Interest tags
 
-## Chat Preview
+### Chat Preview
 
 -   Servers can enable Chat Preview by setting `previews-chat=true` in `server.properties`
 -   When enabled, a server-controlled preview appears above the chat edit box, showing how the message will look when sent
@@ -24,7 +26,7 @@ Enjoy!
 -   Dynamic chat styling can also be controlled by the server, although this is only signed when Chat Preview is enabled
     -   Clients can prefer to always show the original, signed message by enabling "Only Show Signed Chat" in Chat Settings
 
-## Commands
+### Commands
 
 -   Added template sub-command to `place`\-command
 -   `locate` command moved to `locate structure`, `locatebiome` moved to `locate biome`
@@ -32,7 +34,7 @@ Enjoy!
 -   Servers will now also send an additional icon and MOTD packet after a player has connected
     -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
 
-### Place template
+#### Place template
 
 The `place`\-command can now also place templates at a given location. Syntax: `place template <template> [pos] [rotation] [mirror] [integrity] [seed]`
 
@@ -46,14 +48,14 @@ Parameters:
 -   `integrity`: The structure integrity value between 0 and 1
 -   `seed`: The seed to use for the randomized degradation when integrity is less than 1
 
-## Point of Interest types
+### Point of Interest types
 
 -   Removed `unemployed` and `nitwit` `point_of_interest_type`s
 -   Added tag `point_of_interest_type/acquirable_job_site` for all job sites seeked by Villagers with `none` profession
 -   Added tag `point_of_interest_type/village` for PoI that are part of Village
 -   Added tag `point_of_interest_type/bee_home` for all PoI targeted by Bees
 
-# Fixed bugs in 22w19a
+## Fixed bugs in 22w19a
 
 -   [MC-197647](https://bugs.mojang.com/browse/MC-197647) Players cannot jump off the edge of blocks when sneaking if they have a block above
 -   [MC-231600](https://bugs.mojang.com/browse/MC-231600) Sculk sensor continuously receives vibrations when next to a powered big dripleaf

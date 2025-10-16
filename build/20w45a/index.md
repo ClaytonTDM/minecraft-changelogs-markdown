@@ -1,8 +1,10 @@
+# 20w45a
+
 Good things come to those who wait, and we've believe you've waited long enough. The first Caves & Cliffs snapshot is finally here and ready to enter the Java Edition of Minecraft! We hope that you're as excited about this as we are, because this snapshot brings you a variety of features, some changes to existing features, and a few technical changes. All of it is listed in this blog post, and we can't wait to see you experiment with it all.
 
 Happy mining!
 
-# New Features in 20w45a
+## New Features in 20w45a
 
 -   Added bundles!
 -   Added candles!
@@ -14,14 +16,14 @@ Happy mining!
 -   Added Tinted Glass!
 -   A Shulker hitting a Shulker with a Shulker Bullet can make a new Shulker.
 
-## Amethysts
+### Amethysts
 
-### Amethyst Blocks
+#### Amethyst Blocks
 
 -   Amethyst comes in block form inside the geodes in two ways: Block of Amethyst and Budding Amethyst
 -   All types of Amethyst blocks (clusters included) create beautiful sounds when you walk on them, break them, place them, or hit them with a projectile - go make some music!
 
-### Amethyst Clusters
+#### Amethyst Clusters
 
 -   Amethyst Clusters grow from Budding Amethyst, which can be found inside geodes
 -   Clusters have 4 growth stages: Small Amethyst Bud, Medium Amethyst Bud, Large Amethyst Bud, and Amethyst Cluster
@@ -29,23 +31,23 @@ Happy mining!
 -   Fully-grown Amethyst Clusters drop 4 Amethyst Shards (or more with Fortune) when an Iron Pickaxe or higher is used, and drop nothing otherwise when broken
 -   Clusters can be Silk Touched at any stage
 
-### Amethyst Geodes
+#### Amethyst Geodes
 
 -   These huge geodes can be found anywhere underground in the overworld
 -   Amethyst geodes have an outer layer of a new stone called Tuff
 -   Amethyst geodes have a second layer of another new block called Calcite
 -   Amethyst geodes have an inner layer of various Amethyst blocks
 
-### Amethyst Shards
+#### Amethyst Shards
 
 -   Amethyst Clusters drop 4 Amethyst Shards (or more with Fortune)
 
-### Budding Amethyst
+#### Budding Amethyst
 
 -   On any side of a Budding Amethyst block where there is air, or a water source block, a Small Amethyst Bud will eventually grow
 -   Amethyst Buds can only grow when attached to Budding Amethyst, and will grow until they become Amethyst Clusters
 
-## Bundles
+### Bundles
 
 -   Bundles are items that hold other items.
 -   A bundle can hold a mixture of items, but only one stack’s worth. For example, a bundle could fit:
@@ -58,7 +60,7 @@ Happy mining!
 -   Right-click a bundle to empty it.
 -   Wrap a present in a bundle and give it to your friend!
 
-## Candles
+### Candles
 
 -   Candles come in all 16 colors + 1 uncolored variant
 -   Up to 4 can be placed in one block
@@ -66,32 +68,32 @@ Happy mining!
 -   Waterloggable! (But you cannot light them underwater, silly)
 -   Wish anybody a happy birthday with a candle cake!
 
-## Cauldrons
+### Cauldrons
 
 -   Cauldrons can now be filled with buckets of lava!
 -   Filled lava cauldrons give off a redstone signal of strength 1
 
-## Copper
+### Copper
 
-### Copper blocks
+#### Copper blocks
 
 -   Craft 9 copper ingots to a copper block
 -   Craft cut copper, cut copper stairs and cut copper slabs
 -   Use honeycomb to craft waxed copper blocks
 
-### Copper ore
+#### Copper ore
 
 -   Copper ore can be found in ore blobs across Overworld, similar to iron and coal (this is not the final generation for copper…)
 -   Smelt copper ore to get a copper ingot
 
-### Lightning Rod
+#### Lightning Rod
 
 -   The Lightning Rod is crafted from three copper ingots
 -   Keep your builds safe (well, as long as the closest area around the lightning rod is fire proof) during thunderstorms!
 -   The lightning rod will protect an area of 4 \* 16 blocks around it from the, sometimes devastating, lightning strikes!
 -   Lightning rods give off a redstone signal when struck by lightning
 
-### Oxidation
+#### Oxidation
 
 -   Copper will oxidize over time
 -   There are for stages: copper, lightly weathered copper, semi-weathered copper and weathered copper
@@ -99,19 +101,19 @@ Happy mining!
 -   Waxed copper blocks will not oxidize
 -   You can wax any oxidation stage - how lovely that means you can keep that pretty lightly weathered copper block in it’s lightly weathered stage forever!
 
-## Spyglass
+### Spyglass
 
 -   You can use your spyglass to see faraway things
 -   Pretend to be a sea captain, or catch your neighbor in the act as they dye your sheep lime green
 -   The spyglass is crafted from two copper ingots and one amethyst shard
 
-## Tinted Glass
+### Tinted Glass
 
 -   Tinted Glass is a type of glass that does not allow light to pass through
 -   Tinted Glass is crafted by putting a Glass block in the middle of 4 Amethyst Shards
 -   Tinted Glass can be obtained without silk touch; it does not shatter like normal glass
 
-# Changes in 20w45a
+## Changes in 20w45a
 
 -   Experience orbs now sometimes merge when in large quantities to improve performance. This does not change the rate at which the player can absorb them, it simply limits the amount of separate orbs floating around in the world. Orbs that merge will gain the lifetime of the most recently created one.
 -   Simple firework rockets with 1 gunpowder can now be crafted using the recipe book
@@ -119,7 +121,7 @@ Happy mining!
 -   Minecarts and rails work in water
 -   Particles now appear when pistons break blocks
 
-## Minecarts
+### Minecarts
 
 Minecarts and rails now work in water
 
@@ -127,26 +129,26 @@ Minecarts and rails now work in water
 -   Flowing water doesn’t break rails
 -   Minecarts can pass through water, but get slowed down more than usual
 
-# Technical Changes in 20w45a
+## Technical Changes in 20w45a
 
 -   Entities are now saved separately from terrain chunks.
 -   Added loot table function set\_banner\_pattern
 -   Pack format in version.json has been split into data and resource versions
 -   Servers can now require custom resource packs to be accepted
 
-## Custom server resource packs
+### Custom server resource packs
 
 A dedicated server can enforce custom resource packs by setting `require-resource-pack` in `server.properties`. When this option is used, players will be prompted for a response and will be disconnected if they decline the required pack.
 
-## Entity storage
+### Entity storage
 
 Entities have been extracted from main (terrain) chunks and are now stored in separate `entities` directory (similar to POI storage). Those new files are still region files with NBT.
 
-## Loot tables
+### Loot tables
 
-### New functions
+#### New functions
 
-#### `set_banner_pattern`
+##### `set_banner_pattern`
 
 Sets tags needed for banner patterns. Parameters:
 
@@ -155,7 +157,7 @@ Sets tags needed for banner patterns. Parameters:
     -   `color` - name of color (`light_gray`, etc.)
 -   `append` - if `true`, new elements will be appended to existing ones instead of replacing
 
-# Fixed bugs in 20w45a
+## Fixed bugs in 20w45a
 
 -   [MC-98219](https://bugs.mojang.com/browse/MC-98219) Experience orbs follow dead players
 -   [MC-108469](https://bugs.mojang.com/browse/MC-108469) Chunk-wise entity lists often don't get updated correctly (Entities disappear)

@@ -1,8 +1,10 @@
+# 25w09b
+
 Back so soon! We're releasing a second snapshot this week, following frequently occurring issues in yesterday's snapshot.
 
 Happy mining!
 
-# Fixed bugs in 25w09b
+## Fixed bugs in 25w09b
 
 -   [MC-280302](https://bugs.mojang.com/browse/MC-280302) Text does not render in menus until entering a world
 -   [MC-280303](https://bugs.mojang.com/browse/MC-280303) Game crashes when trying to render a warden

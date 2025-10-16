@@ -1,12 +1,14 @@
+# 22w07a
+
 Another snapshot is now available for Minecraft: Java Edition. If you're into custom worlds, you might want to try out biome tags.
 
 Enjoy!
 
-# Technical Changes in 22w07a
+## Technical Changes in 22w07a
 
 -   Biome tags are now used to determine which biomes a structure can generate in
 
-# Fixed bugs in 22w07a
+## Fixed bugs in 22w07a
 
 -   [MC-237110](https://bugs.mojang.com/browse/MC-237110) Grass blocks can generate underwater
 -   [MC-238977](https://bugs.mojang.com/browse/MC-238977) Glow squids spawn in villager farms and wells in superflat worlds

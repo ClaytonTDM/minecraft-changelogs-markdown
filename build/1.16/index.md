@@ -1,3 +1,5 @@
+# 1.16
+
 One does not simply walk into the Nether, but it seems that's what everyone is about to do anyway...
 
 Today we're releasing the full Nether Update in all its glory! Traverse through familiar, fiery wastes into new unexplored fungal forests, spooky valleys, and deltas brimming with basalt. Dig your way through these biomes and you might be able to find a new curious material, suspiciously titled "ancient debris". What will you make of it (it’s totally not Netherite)?
@@ -6,7 +8,7 @@ Fight your way through hordes of Piglins… Or don't! They’re actually pretty 
 
 Enjoy the update!
 
-# Features
+## Features
 
 -   Added Basalt Deltas biome to the Nether
 -   Added Crimson Forest biome to the Nether
@@ -50,19 +52,19 @@ Enjoy the update!
 -   When a Villager is struck by lightning, the witch it is converted to will no longer despawn
 -   When fishing, treasure loot can now only be obtained by fishing in open waters
 
-## Accessibility
+### Accessibility
 
 -   Added "Line Spacing" chat and accessibility option
 -   Added "Chat Delay" accessibility option
 
-## Advancements
+### Advancements
 
 -   Piglins and Hoglins are now required for `Monster Hunter` and `Monsters Hunted`
 -   `Serious Dedication` is now awarded for obtaining a Netherite hoe
 -   Obtaining blackstone now also counts for the `Stone Age` advancement
 -   Breeding Striders now counts for `The Parrots and the Bats` and is now required for `Two by Two`
 
-### New Advancements
+#### New Advancements
 
 -   `Bullseye` unlocks when hitting the bullseye of a target block from at least 30 meters away
 -   `Hidden in the Depths` unlocks when obtaining ancient debris
@@ -76,7 +78,7 @@ Enjoy the update!
 -   `War Pigs` unlocks when looting a chest in a bastion
 -   `Oh Shiny` unlocks when distracting an angry Piglin with gold
 
-## Basalt Deltas
+### Basalt Deltas
 
 Basalt Deltas can now be found in the Nether!
 
@@ -85,7 +87,7 @@ Basalt Deltas can now be found in the Nether!
 -   Magma cubes finally have their own home and spawn very frequently here
 -   A new block, blackstone, can be found here in large patches
 
-## Bastion Remnants
+### Bastion Remnants
 
 What's made of blackstone and full of Piglins and Hoglins? Bastion remnants!
 
@@ -93,18 +95,18 @@ What's made of blackstone and full of Piglins and Hoglins? Bastion remnants!
 -   You can find these sizable structures in all Nether biomes, except the treacherous ash-dusted regions of Basalt Deltas
 -   Explore, loot, and conquer a bastion remnant to call it your home – but beware! Piglins don't take kindly to intruders stealing their possessions
 
-## Bees
+### Bees
 
 -   Reduced the maximum distance a bee can wander away from its home hive to ~22 blocks
 
-## Block Renames
+### Block Renames
 
 Some blocks have been renamed. Turns out singular fungus in the Nether attempted to falsely present itself as many fungi – so sneaky!
 
 -   Crimson fungi is now called crimson fungus
 -   Warped fungi is now called warped fungus
 
-## Blocks
+### Blocks
 
 Many new blocks have been added, and changes have been made to a few existing ones.
 
@@ -136,13 +138,13 @@ Many new blocks have been added, and changes have been made to a few existing on
 -   Nether sprouts can be harvested with shears
 -   Food can now be placed on unlit campfires
 
-## Creative Mode
+### Creative Mode
 
 -   You can now milk cows and Mooshrooms in creative mode
 -   You can now get stew from Mooshrooms in creative mode
 -   When using an empty bucket on water in creative mode, you now get a bucket of water. If you have a bucket of water in your inventory already, no additional water buckets will be added when you use your empty bucket on water
 
-## Crimson Forest
+### Crimson Forest
 
 Crimson Forests can now be found in the Nether!
 
@@ -154,7 +156,7 @@ Crimson Forests can now be found in the Nether!
 -   Hoglins wander these forests
 -   Crimson spores swirl through the air
 
-## Dispensers
+### Dispensers
 
 -   Dispensers can now saddle pigs and horses
 -   Dispensers can now put horse armor on horses
@@ -163,20 +165,20 @@ Crimson Forests can now be found in the Nether!
 -   Dispensers can now shear a Mooshroom
 -   Dispensers can now shear snow golems
 
-## F3 + N (Toggle Spectator)
+### F3 + N (Toggle Spectator)
 
 A small change has been made to this debug combination.
 
 -   By default, using this key would return you to Creative after toggling from Spectator. It now will toggle back to the previous game mode you had
 -   As an example, if you were in Survival, then toggled to Spectator and back, you would be set back to Survival
 
-## Farmers
+### Farmers
 
 -   Farmers can now put excess seeds in the composter to create bone meal
     -   Bone meal is used by the farmers to grow crops
 -   Farmers share excess wheat to other farmers, so more farmers can make bread
 
-## Game Mode Switcher
+### Game Mode Switcher
 
 New F3 debug feature which allows you to switch game modes with traditional "tabbing" functionality.
 
@@ -185,7 +187,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 -   Release F3 to apply
 -   Your last game mode is remembered and will be the first selected option, so you can quickly toggle between two game modes with a single press of F3 + F4!
 
-## Hoe Changes
+### Hoe Changes
 
 We've made some changes to hoes to make them more useful in the Nether.
 
@@ -194,7 +196,7 @@ We've made some changes to hoes to make them more useful in the Nether.
 -   Those enchantments can now be provided through enchanting table
 -   Hoes are now the appropriate tool for mining hay, targets, dried kelp blocks, leaves, Shroomlights, Nether wart blocks, warped wart blocks, sponges, and wet sponges.
 
-## Hoglins
+### Hoglins
 
 -   Hoglins are big aggressive beasts that live in crimson forests in the Nether
 -   They attack players on sight. Be careful – they can easily knock you off a ledge!
@@ -206,26 +208,26 @@ We've made some changes to hoes to make them more useful in the Nether.
 -   Want to keep hoglins off your back? Pro tip: Hoglins hate the smell of warped fungi
 -   Hoglins that somehow end up in the Overworld become Zoglins fairly quickly – but who would ever bring a Hoglin to the Overworld?
 
-## Lodestone
+### Lodestone
 
 A new block that can help you get your bearings!
 
 -   Crafted from a Netherite ingot and chiseled stone bricks
 -   Use a compass on a lodestone to create a lodestone compass, which will point to that lodestone
 
-## Mobs
+### Mobs
 
 -   Players can no longer mount another entity when the crouch key is held down
 -   Added gamerule universalAnger (disabled by default), which makes angered neutral mobs attack any nearby player – not just the player that angered them. Works best if you disable forgiveDeadPlayers
 -   Added gamerule forgiveDeadPlayers (enabled by default), which makes angered neutral mobs stop being angry when the targeted player dies nearby
 
-### Forgive dead players
+#### Forgive dead players
 
 -   If this gamerule is disabled, then angered mobs will stay angry even if the targeted player dies
 -   If both forgiveDeadPlayers and universalAnger are enabled, an angered neutral mob will stop being angry when their target dies. They won't seek any new targets after that
     -   Notable exception: Angered Zombified Piglins continuously spread anger. So even if one Zombified Piglin stops being angry because its target died, other angered Zombified Piglins nearby are likely to make it angry again. The only way to stop the anger is if none of the angered Zombified Piglins see a player for a while
 
-### Neutral mob anger
+#### Neutral mob anger
 
 Updated anger management for most neutral mobs (polar bear, wolf, bee, Enderman, Piglin, Zombified Piglin).
 
@@ -238,7 +240,7 @@ Updated anger management for most neutral mobs (polar bear, wolf, bee, Enderman,
     -   Notable exception: If a beehive or nest is broken, the bees will be angry at all nearby players
 -   Some mobs spread anger (wolf, Zombified Piglin, Piglin, bee). If a player attacks one, all nearby mobs of the same type will get angry at that player
 
-### Universal anger
+#### Universal anger
 
 Universal anger is basically guilt by association. A neutral mob attacked by players will be angry at players in general, regardless of who attacked them. More specifically:
 
@@ -250,29 +252,29 @@ Universal anger is basically guilt by association. A neutral mob attacked by pla
 -   Mobs that spread anger will also spread universal anger. So if a player attacks a Zombified Piglin, all other Zombified Piglins within sight will be universally angry and attack their nearest player
 -   An angered neutral mob will stop being angry if it can't see any eligible target for a while
 
-### Zombified Piglins
+#### Zombified Piglins
 
 -   Zombie Pigmen are now known as Zombified Piglins, and they now have ears. Well, at least one ear
 -   Zombified Piglins no longer attack innocent bystanders (unless you enable gamerule universalAnger)
 -   Zombified Piglins stop being angry if the targeted player dies nearby (unless you disable gamerule forgiveDeadPlayers)
 -   Zombified Piglins continuously spread to other Zombified Piglins, as long as they see their target
 
-## Nether Biome Fog
+### Nether Biome Fog
 
 -   Biome fog color smoothly blends between biomes. Smooth!
 
-## Netherite
+### Netherite
 
 -   A new high level material found in the Nether. Use it to upgrade your diamond gear!
 
-### How to make Netherite
+#### How to make Netherite
 
 1.  Mine ancient debris in the lower depths of the Nether. At your own risk though. No insurance coverage for that
 2.  Refine it into Netherite scrap in a furnace or blast furnace
 3.  Combine four Netherite scrap with four gold ingots in a crafting table to make a Netherite ingot
 4.  Use a smithing table to fuse the Netherite ingot with your diamond weapon, tool, or armor
 
-### Netherite effects
+#### Netherite effects
 
 -   Netherite items float in lava – just so you don't lose all your gear after that unplanned lava bath
 -   Netherite items have higher enchantment value than diamond (but not as high as gold)
@@ -283,16 +285,16 @@ Universal anger is basically guilt by association. A neutral mob attacked by pla
 -   Netherite blocks can be used as the base of a beacon and Netherite ingots can be used as the fuel for a beacon. Weird flex but ok
 -   ...and it looks cool!
 
-## Parity
+### Parity
 
 -   Changed ambient block lighting in the Nether for parity with Bedrock edition
 
-## Parrot
+### Parrot
 
 -   Parrots imitate hostile mobs less often
 -   Parrots do not randomly imitate hostile mobs when gamemode is on peaceful
 
-## Piglins
+### Piglins
 
 -   Piglins are an aggressive civilization that live in the Nether
 -   They mostly hang around in Crimson Forests, but you might find some in the Nether Wastes too
@@ -311,7 +313,7 @@ Universal anger is basically guilt by association. A neutral mob attacked by pla
     -   ...and they like to play with Baby Hoglins
 -   Added a Piglin banner pattern that can be found in bastion remnants
 
-## Redstonewire
+### Redstonewire
 
 The blockstate, rendering, and behavior of redstone wire are more in line with each other. Redstone will provide power to blocks on all sides it shows a visual connection to, and not do so on those sides without a visual connection.
 
@@ -322,18 +324,18 @@ The blockstate, rendering, and behavior of redstone wire are more in line with e
 -   A wire that is redirected to go over a block will now always provide power to the block. This is most noticeable when the wire has signal strength 1
 -   When right-clicking a single piece of redstone, it will toggle between a the cross and the dot
 
-### Target block
+#### Target block
 
 -   The target block now conducts redstone signals
 
-## Ruined Portals
+### Ruined Portals
 
 Shattered remains of ancient Nether portals. Wonder who built them?
 
 -   They can be found in any Overworld or Nether biome
 -   Some are hidden underground, under the sea, or buried in sand
 
-## Soul Speed
+### Soul Speed
 
 Never suffer again drudging through Soul Sand Valleys – Soul Speed has you covered!
 
@@ -341,7 +343,7 @@ Never suffer again drudging through Soul Sand Valleys – Soul Speed has you cov
 -   However, there's a downside: enchantments will slowly degrade your boots each soul block you walk on
 -   Can only be obtained by bartering with those pesky Piglins
 
-## Soulsand Valley
+### Soulsand Valley
 
 Soulsand Valleys can now be found in the Nether!
 
@@ -352,7 +354,7 @@ Soulsand Valleys can now be found in the Nether!
 -   A light blue glow envelopes the valley
 -   Beware of skeletons here
 
-## Sounds
+### Sounds
 
 -   Ghasts sounds are now heard at shorter range
 -   Updated block sounds for bone blocks, Netherrack, soul sand, Nether wart, Nether bricks, and quartz ore
@@ -360,7 +362,7 @@ Soulsand Valleys can now be found in the Nether!
 -   New mood detection algorithm for cave sounds
 -   Added a new music disc titled "Pigstep" by Lena Raine, which can only be found in bastion remnants
 
-## Strider
+### Strider
 
 A new mob living the lava lakes of the Nether.
 
@@ -368,7 +370,7 @@ A new mob living the lava lakes of the Nether.
 -   Can be saddled, but has a will of its own
 -   Really likes the smell of warped fungi – might even be convinced to follow it
 
-## Target Block
+### Target Block
 
 Because let's face it, your aim could use some practice!
 
@@ -376,7 +378,7 @@ Because let's face it, your aim could use some practice!
 -   Test your skills with a variety of projectiles, including eggs, snowballs, tridents, and more
 -   You will need one hay block and four redstone for this recipe
 
-## Villager Workstation Logic
+### Villager Workstation Logic
 
 -   Villagers no longer try to work at the same workstation
 -   The most experienced nearby villager for the profession corresponding to the workstation you add will get the workstation
@@ -384,7 +386,7 @@ Because let's face it, your aim could use some practice!
 -   Villagers can no longer claim workstations or professions during raids or night time
 -   Villagers will check and make sure their workstation is valid at all times of day as long as they are within 16 blocks of their workstation
 
-## Warped Forest
+### Warped Forest
 
 Warped Forests can now be found in the Nether!
 
@@ -396,23 +398,23 @@ Warped Forests can now be found in the Nether!
 -   Warped spores swirl through the air
 -   The Warped Forests are strange, but also the least hostile place in the Nether
 
-## Weeping Vines
+### Weeping Vines
 
 -   Weeping vines are now climbable!
 
-## World Generation
+### World Generation
 
 -   The old Nether biome is now called Nether Wastes
 -   Shipwrecks and ocean ruins are now a bit less common, so you get more excited when you find one!
 -   Patches of blackstone and gravel now generate in all Nether biomes, and patches of soul sand now generate in Soul Sand Valleys
 
-## Zoglins
+### Zoglins
 
 -   Zoglins are zombified Hoglins – the result of bringing a Hoglin into the Overworld
 -   Unlike Hoglins, they can't be bred or fed, and they don't care about warped fungus
 -   Beware – these beasts are raving mad and attack just about everything they see!
 
-# Technical
+## Technical
 
 -   Added `target_hit` advancement trigger
 -   Added `thrown_item_picked_up_by_entity` advancement trigger
@@ -446,9 +448,9 @@ Warped Forests can now be found in the Nether!
 -   "Singleplayer" button will jump directly to "Create World" screen if there are no worlds to select
 -   Temporarily removed structure settings from flat level preset strings (workaround: use import/export settings functionality)
 
-## Advancements
+### Advancements
 
-### Extended entity checks
+#### Extended entity checks
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -497,13 +499,13 @@ Full list of extended triggers:
 -   `target_hit` - `projectile`
 -   `villager_trade` - `villager`
 
-### Miscellaneous trigger changes
+#### Miscellaneous trigger changes
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 -   `location` got a new property `smokey` which checks if the location is closely above a campfire
 -   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
 
-### New trigger
+#### New trigger
 
 -   `target_hit` trigger type
     -   `signal_strength` matches the signal strength output from the block on hit
@@ -518,7 +520,7 @@ Full list of extended triggers:
     -   `location` matches the location at the center of the block the item was used on
     -   `item` matches the item used on the block
 
-## Attributes
+### Attributes
 
 Attributes have been moved to game registry. That means few changes: Renames:
 
@@ -536,24 +538,24 @@ Attributes have been moved to game registry. That means few changes: Renames:
 -   `generic.attackSpeed` 🡆 `generic.attack_speed`
 -   `generic.armorToughness` 🡆 `generic.armor_toughness`
 
-## Block placement
+### Block placement
 
 -   Ladders and tripwire hooks can now be placed on observers, redstone blocks, and target blocks
 -   Doors, rails, buttons, pressure plates, redstone, and more can now be placed on soulsand and full-block of snow layers
 -   Soulsand with a rail on top will no longer slow down minecarts
 
-## Block storage
+### Block storage
 
 `BlockStates` in `Sections` elements no longer contain values stretching over multiple 64-bit fields. If number of bits per block is not power of two (i.e. single 64-bit value can't fill whole number of blockstates) some bits will not be used. For example, if single block state takes 5 bits, highest 4 bits of every 64-bit field will be unused. That also means slight increase in storage size (in case of 5 bits, from 320 to 342 64-bit fields).
 
-## Block Tags
+### Block Tags
 
 -   `minecraft:climbable` is now a block tag that allows datapacks to determine which blocks are, well, climbable
 -   `minecraft:soul_speed_blocks` is any block that the soul speed enchantment increases speed on
 
-## Chat components
+### Chat components
 
-### Hover event argument
+#### Hover event argument
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -561,9 +563,9 @@ Attributes have been moved to game registry. That means few changes: Renames:
     -   For `show_entity` - object with fields: `id` (UUID), `name` (chat component), and `type` (entity type resource location)
 -   Old style `value` argument is now deprecated (but still supported)
 
-## Commands
+### Commands
 
-### attribute
+#### attribute
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -578,23 +580,23 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 -   `name` - string (in optional quotes) describing human-readable name of modifier
 -   `value` - floating point value (note: certain attributes have limits on final value, so your change might not be noticeable)
 
-### locatebiome
+#### locatebiome
 
 New command that locates a specified biome. Useful in creative mode when you're looking for a specific biome and don't want to fly around randomly searching for it. Syntax: `locatebiome <biome>` Parameters:
 
 -   `biome` - The id of the biome to find
 
-### spawnpoint
+#### spawnpoint
 
 The spawnpoint command now supports being run in any dimension.
 
-### spreadplayers
+#### spreadplayers
 
 Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>`
 
 -   `maxHeight` - Specifies the maximum height for resulting positions
 
-### UUIDs in NBT
+#### UUIDs in NBT
 
 UUIDs stored in NBT are now represented as an array of four integers. Example: `{UUID:[I;1498693494,1027158888,1898994005,860320107]}` Along with that a couple of fields have been renamed:
 
@@ -602,7 +604,7 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 -   `TrustedUUIDs` of foxes is now `Trusted`
 -   `target_uuid` of conduits is now `Target`
 
-## Custom Worlds
+### Custom Worlds
 
 -   Added experimental support for new custom worlds
 -   Edit world screen now has an option to export world settings to a JSON file
@@ -611,12 +613,12 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 -   Flat level preset string lost structure settings (they are now stored in a common format for all worlds), we will restore some form of this functionality soon
 -   Buffet world can no longer be created from server.properties, flat level settings changed a bit; better support for custom world creation on the server is coming soon
 
-## Data pack selection
+### Data pack selection
 
 -   Data packs can now be selected before world is created
 -   "Re-Create" option will also copy data packs present in source world
 
-## Datapack loading
+### Datapack loading
 
 -   If datapack reload fails, changes will not be applied and game will continue using previous data
 -   If existing datapacks prevent world from loading, game will give option to load world in safe mode, which loads only vanilla datapack
@@ -624,42 +626,42 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 -   Added `--safeMode` option to server to load only with vanilla datapack
 -   Game will now detect critical datapack issues, like missing required tags and prevent world from being loaded
 
-## Effects
+### Effects
 
 -   Increased view distance in lava slightly while having the fire resistance effect
 
-## Entity Broadcasting
+### Entity Broadcasting
 
 It is now possible to control at what range the server sends data about entities to clients.
 
 -   Added an `entity-broadcast-range-percentage` server property controlling how close entities need to be before being sent to clients. Higher values means entities are visible further away from players but cause more network traffic. Specifies percentage of default value, so for example `50` specifies half of the default range
 
-## Fonts
+### Fonts
 
 -   `Force Unicode` option now switches between normal and alternative font (called `uniform.json`) – no reload needed
 
-## IO operations
+### IO operations
 
-### Synchronous writes
+#### Synchronous writes
 
 Region files are now opened in synchronous mode to prevent data loss and corruption after crash. For performance reasons this feature is disabled by default on non-Windows clients. Status of this feature can be manually controlled by following options:
 
 -   For dedicated servers: `sync-chunk-writes` within `server.properties`
 -   For clients: `syncChunkWrites` within `options.txt`
 
-### World save format
+#### World save format
 
 -   Saving `level.dat` now uses randomly-named temporary files (instead of using `level.dat_new` every time)
 -   `player/*.dat` are now saved in a way similar to `level.dat` (including leaving `.dat_old` files)
 
-## Item frames
+### Item frames
 
-### New tags
+#### New tags
 
 -   `Invisible` - makes item frame invisible (item inside frame remains visible)
 -   `Fixed` - prevents item frame from being broken and item inside from being removed
 
-## Jigsaw block
+### Jigsaw block
 
 -   Jigsaw now can have one of 12 orientations
 -   Added new property `Joint type` to describe if attached piece can be rotated (`rollable`) or not (`aligned`)
@@ -667,41 +669,41 @@ Region files are now opened in synchronous mode to prevent data loss and corrupt
 -   `attachement_type` has been split into `name` (on parent block) and `target` (on child block)
 -   Added a button in the GUI that generates a jigsaw structure starting from the jigsaw block, using given generation depth
 
-## JMX Monitoring
+### JMX Monitoring
 
 It is now possible to monitor the server tick times though JMX. The rationale for this is that JMX is a well known and supported monitoring technology with existing integrations and tools. This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
 
-### Enabling JMX Monitoring
+#### Enabling JMX Monitoring
 
 -   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds
 -   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html)
 
-## Loot Tables
+### Loot Tables
 
-### Entity Predicate
+#### Entity Predicate
 
 -   Added `fishing_hook` sub-predicate
 
-#### fishing\_hook
+##### fishing\_hook
 
 Check properties of the fishing hook
 
-##### Parameters
+###### Parameters
 
 -   `in_open_water` - Matches whether the fishing location is open water fishing or not. A fishing location is considered to be open water if the fishing hook is in water, there are no blocks besides lily pads above water and all water blocks are source blocks with no solid underwater blocks around
 
-## Pack selection screen
+### Pack selection screen
 
 -   Packs can now be dropped directly on data and resource pack selection screens
 -   Dropped files and directories will be copied to appropriate places
 
-## Particles
+### Particles
 
 -   New particle types: ash, crimson\_spore, soul\_fire\_flame, and warped\_spore
 -   New particle types: dripping\_obsidian\_tear, falling\_obsidian\_tear, and landing\_obsidian\_tear
 -   New particle type: soul
 
-## Rendering
+### Rendering
 
 -   Nailed Entity shadows to the ground
 -   Added an Entity Distance scale option ranging from 50% to 500%
@@ -709,7 +711,7 @@ Check properties of the fishing hook
 -   Added new "Fabulous!" graphics option
     -   This uses per-pixel blending layers for some transparent elements
 
-## Smithing recipes
+### Smithing recipes
 
 There's now a `smithing` recipe type. Recipes of this type are used in the smithing table to upgrade one item type into another type, maintaining tags.
 
@@ -717,16 +719,16 @@ There's now a `smithing` recipe type. Recipes of this type are used in the smith
 -   `addition` - Ingredient specifying valid items to trigger the upgrade
 -   `result` - Item specifying the resulting type of the upgraded item
 
-## Text style
+### Text style
 
-### Colors
+#### Colors
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`
 
-### Custom fonts
+#### Custom fonts
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`
 
-## Fixed Bugs
+### Fixed Bugs
 
 [Nearly 500 bugs](https://bugs.mojang.com/issues/?filter=24954) fixed in this release.

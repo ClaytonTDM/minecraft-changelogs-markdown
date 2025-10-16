@@ -1,11 +1,13 @@
+# 21w16a
+
 Snapshot 21w16a introduces some changes to azaleas and dripstone. On top of that, we've tweaked the textures of raw ores. There are also a few additions to the Caves & Cliffs preview datapack.
 
-# New Features in 21w16a
+## New Features in 21w16a
 
 -   Azalea and Flowering Azalea can now be bonemealed to get an Azalea Trees
 -   Added dripstone growth
 
-## Dripstone growth
+### Dripstone growth
 
 -   If a stalactite is hanging from a dripstone block with a water source above, it will slowly grow both the stalactite from above and a stalagmite from below
 -   Growth speed is random but very slow, a single growth step can take several minecraft days
@@ -15,32 +17,32 @@ Snapshot 21w16a introduces some changes to azaleas and dripstone. On top of that
 -   If the stalagmite tip is inside water it won't receive drops, and therefore won't be grown by a dripping stalactite. Same thing if there is any fluid between the two tips
 -   A stalagmite or stalactite will never grow into a fluid
 
-# Changes in 21w16a
+## Changes in 21w16a
 
 -   Tweaked the texture of raw ores and raw ore blocks
 
 ![Snapshot 21w16a Texture Comparison](https://launchercontent.mojang.com/images/snapshot-21w16a-ore-texture-comparison.png) New raw ore textures in snapshot 21w16a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w16aoretexturecomparisonfull.png) for a link to the full resolution image.
 
-# Changes to the Caves & Cliffs Preview
+## Changes to the Caves & Cliffs Preview
 
 Download the updated [datapack here](https://launcher.mojang.com/v1/objects/ebe5698b1f6787e30662691f57511a08587db502/CavesAndCliffsPreview.zip) ![Minecraft Snapshot 21w16a Lava Aquifer](https://launchercontent.mojang.com/images/snapshot-21w16a-carousel.jpg) A lava aquifer in snapshot 21w16a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w16acarouselfull.png) for a link to the full resolution image.
 
 -   Aquifers below height 0 will sometimes be lava aquifers instead of water aquifers
 -   Ore veins can now spawn underground
 
-## Ore veins
+### Ore veins
 
 -   Ore veins are large, rare, snake-like underground ore formations
 -   Copper veins form above height 0 and are mixed with granite
 -   Iron veins form below height 0 and are mixed with tuff
 
-# Technical Changes in 21w16a
+## Technical Changes in 21w16a
 
 -   Users who previously permanently declined server resource packs will now still be shown the pack prompt if the pack is mandatory (instead of being immediately disconnected)
 -   The statistic for play time has been renamed to `play_time`
 -   There is now a statistic for "Time with World Open" (`total_world_time`) that also includes time when the game was paused
 
-# Bugs fixed in 21w16a
+## Bugs fixed in 21w16a
 
 -   [MC-29522](https://bugs.mojang.com/browse/MC-29522) stat.playOneMinute adds a value of 1 every tick
 -   [MC-55775](https://bugs.mojang.com/browse/MC-55775) Statistics screen sometimes doesn't show up to date information

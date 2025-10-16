@@ -1,6 +1,8 @@
+# 1.19.3-pre3
+
 We're now releasing pre-release 3 for Minecraft 1.19.3 with more bug fixes. Happy mining!
 
-# Fixed bugs in 1.19.3 Pre-release 3
+## Fixed bugs in 1.19.3 Pre-release 3
 
 -   [MC-108597](https://bugs.mojang.com/browse/MC-108597): Shulker box still plays the close sound, even if it is destroyed or replaced
 -   [MC-165686](https://bugs.mojang.com/browse/MC-165686): Knowledge book texture in the crafting UI hasn't been updated

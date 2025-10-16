@@ -1,12 +1,14 @@
+# 1.18-pre2
+
 The second pre-release for Minecraft Java is now available. In this pre-release, we've upgraded the Java version that is bundled with the game, and the game now uses Java 17. Other than this, we've mostly been busy fixing bugs.
 
 Enjoy!
 
-# Technical Changes in 1.18 Pre-Release 2
+## Technical Changes in 1.18 Pre-Release 2
 
 Minecraft now uses Java version 17. If you are using a default setup the Launcher will download and install the correct version. If you are using a custom Java setup or a third-party launcher, you will need to ensure that your Java installation is version 17 or above.
 
-# Fixed Bugs in 1.18 Pre-Release 2
+## Fixed Bugs in 1.18 Pre-Release 2
 
 -   [MC-32813](https://bugs.mojang.com/browse/MC-32813) Floating water / lava above caves / cave carver doesn't update water
 -   [MC-206303](https://bugs.mojang.com/browse/MC-206303) Minecarts have old textures on the bottom

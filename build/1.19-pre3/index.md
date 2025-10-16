@@ -1,16 +1,18 @@
+# 1.19-pre3
+
 It is now time for pre-release 3 for Minecraft 1.19, which will be our last pre-release for this week. In this pre-release we've tweaked the sonic boom attack and fixed more bugs.
 
 Enjoy!
 
-# Changes in 1.19 Pre-release 3
+## Changes in 1.19 Pre-release 3
 
 -   Wardens' sonic boom attack now bypasses the damage reduction by armor enchantments such as Protection
 
-# Technical Changes in 1.19 Pre-release 3
+## Technical Changes in 1.19 Pre-release 3
 
 -   `item_interact_start` is no longer detectable as a vibration to allow more specific actions be detected, like `drink` or `eat`, but `item_interact_finish` still is
 
-# Fixed Bugs in 1.19 Pre-Release 3
+## Fixed Bugs in 1.19 Pre-Release 3
 
 -   [MC-209932](https://bugs.mojang.com/browse/MC-209932) Sculk sensors only detect the last turtle egg being broken when being stepped on
 -   [MC-210277](https://bugs.mojang.com/browse/MC-210277) Sculk sensors are not activated upon chickens laying eggs

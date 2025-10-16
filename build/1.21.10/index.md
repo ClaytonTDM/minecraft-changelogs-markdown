@@ -1,10 +1,12 @@
+# 1.21.10
+
 It's hotfixin' time in the shipping room this week! Today we are releasing 1.21.10 to address some important issues that have been reported for 1.21.9.
 
 And for those of you that were hoping for a Snapshot release today, fret not! We are planning on releasing that one later this week. Exciting times!
 
 Happy mining!
 
-# Fixed bugs in 1.21.10
+## Fixed bugs in 1.21.10
 
 -   [MC-211096](https://bugs.mojang.com/browse/MC-211096) Entities in cobwebs clip though pistons
 -   [MC-278182](https://bugs.mojang.com/browse/MC-278182) Items glitch inside the piston head when pushed through powder snow or cobwebs

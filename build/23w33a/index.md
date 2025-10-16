@@ -1,12 +1,14 @@
+# 23w33a
+
 We are making some important updates to our Player Reporting Tool in this Snapshot to better protect the online safety of our players.
 
 Playing Minecraft should be an inclusive and safe experience for everyone, which is why alongside in-game chat messages, you will now be able to report player skins and usernames that violate our Community Standards in Java Edition.
 
 Just like with chat reports, nothing is automated. Any reported skin or username will be reviewed manually by a team of trained Minecraft moderators, who will use the submitted evidence to decide whether the skin and/or username is in breach of our Community Standards. Skins that are in violation of these standards will be removed from Minecraft and will no longer be accessible for use by any player. Usernames that are in violation of these standards will need to be changed before that player can play online via a shared server or Realm; though single player mode will still be accessible. To find out more about this and other safety policies, including more detail on the suspension procedure, appeals process, and how we handle malicious or repeat reporting, please visit our dedicated FAQ page.
 
-# New Features
+## New Features
 
-## Player Skin & Name Reporting
+### Player Skin & Name Reporting
 
 -   Player Skins and Names can now be reported in the Social Interactions Screen
 -   If a skin or name is reported, and found to be violating the [Community Standards](https://www.minecraft.net/community-standards), our team of human moderators can action in a few ways:
@@ -26,7 +28,7 @@ Just like with chat reports, nothing is automated. Any reported skin or username
     -   Can still play singleplayer
 -   A skin or name that has been banned cannot be used by any player in the future
 
-# Changes
+## Changes
 
 -   Sponges and Wet Sponges now have their own custom sounds
 -   The calculations to determine whether a mob can attack a player or other mobs have been changed
@@ -35,7 +37,7 @@ Just like with chat reports, nothing is automated. Any reported skin or username
 -   Added "I want to report them" Player Reporting category
 -   A change has been reverted where armor trim patterns would be masked by the underlying armor texture
 
-## Mob attack reach changes
+### Mob attack reach changes
 
 The calculations to determine whether a mob can attack a player or other mobs have been changed. Previously a mob's horizontal width was used to determine their attack reach and their height had no effect. The area where a mob can attack is now their bounding box extended in horizontal directions.
 
@@ -51,16 +53,16 @@ Here are some situations where the new rules will affect the reach of mobs:
 
 This change does not affect the reach of players, and mobs still need to see their target to attack it. We believe this new system will be more intuitive and will result in a more consistent behavior, and we welcome all feedback on this change.
 
-# Technical Changes
+## Technical Changes
 
 -   The charts on the debug screen can now be toggled with F3+1 (pie chart), F3+2 (FPS and TPS) and F3+3 (bandwidth and ping) instead of holding Shift, Alt or Ctrl while opening the screen
 
-## Data Pack Changes
+### Data Pack Changes
 
 -   Added `decal` field to armor trim patterns (default: `false`)
     -   If `true`, the pattern texture will be masked based on the underlying armor
 
-# Fixed bugs in 23w33a
+## Fixed bugs in 23w33a
 
 -   [MC-2310](https://bugs.mojang.com/browse/MC-2310) Wrong attack radius calculation damages/kills entities through blocks and corners
 -   [MC-112133](https://bugs.mojang.com/browse/MC-112133) Eating chorus fruit does not reset fall distance

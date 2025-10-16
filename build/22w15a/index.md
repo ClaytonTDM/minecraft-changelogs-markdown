@@ -1,17 +1,19 @@
+# 22w15a
+
 Let me tell you a little story about hubris. Well, not so much a story as a lament. Because some of you have been thinking that the warden was a little too easy. I won’t name names, but I know you’re out there. Why else would we be adding ranged attacks for this already terrifying mob? Was the sniffing not enough? When will it end? Not today, apparently. Enjoy a new terrifying warden along with more advancements and technical changes.
 
-# New Features in 22w15a
+## New Features in 22w15a
 
 -   Added advancement "When the Squad Hops into Town" for getting each Frog variant on a Lead
 -   Added advancement "Sneak 100" for sneaking near a Sculk Sensor or Warden to prevent it hearing you
 -   Added a new ranged attack to the Warden.
 
-## Warden Ranged Attack
+### Warden Ranged Attack
 
 -   Building up high, hiding behind walls or being out of range of their powerful melee attack will cause Wardens to switch to their ranged attack
     -   Their rib cages will open up to shriek a sonically charged ranged attack that can penetrate walls
 
-# Changes in 22w15a
+## Changes in 22w15a
 
 -   Added Darkness effect to "How Did We Get Here?" advancement
 -   Allays have a natural health regen of 2 health per second
@@ -24,12 +26,12 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 -   Wardens can now sniff you from further away
 -   The vertical range Wardens get angry at a target while sniffing is now 20 blocks instead of 6 blocks
 
-## Changes to vibrations
+### Changes to vibrations
 
 -   Carpets, like Wool blocks, will now dampen the vibrations caused by their placing, breaking or dropping as items
 -   Carpets now also dampen the vibrations caused by running and jumping over them
 
-# Technical Changes in 22w15a
+## Technical Changes in 22w15a
 
 -   Removed `item_delivered_to_player` advancement trigger
 -   Added `thrown_item_picked_up_by_player` advancement trigger
@@ -38,11 +40,11 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 
 -   Added `sonic_explosion` particle
 
-## Advancements
+### Advancements
 
-### New triggers
+#### New triggers
 
-#### `thrown_item_picked_up_by_player`
+##### `thrown_item_picked_up_by_player`
 
 -   Triggered when a player picks up an item that was thrown by an entity
 -   Conditions:
@@ -50,19 +52,19 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
     -   `entity` - a predicate for the entity that threw the item
     -   `item` - a predicate for the item
 
-#### `avoid_vibration`
+##### `avoid_vibration`
 
 -   Triggered when a vibration event is ignored because the source player is holding the sneak key
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-## Game Events
+### Game Events
 
 -   Renamed game event tag `ignore_vibrations_on_occluding_block` to `dampenable_vibrations`
 -   Added block tag `dampens_vibrations` to indicate blocks which will not trigger vibrations when placed, broken or stepped on
 -   Renamed item tag `occludes_vibration_signals` to `dampens_vibrations` item tag as well
 
-# Fixed bugs in 22w15a
+## Fixed bugs in 22w15a
 
 -   [MC-36783](https://bugs.mojang.com/browse/MC-36783) Item frames/Glow item frames don't change their hitbox if they contain a map
 -   [MC-147686](https://bugs.mojang.com/browse/MC-147686) Joining a world that uses custom resources shows default resources until fully loaded

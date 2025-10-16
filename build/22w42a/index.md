@@ -1,16 +1,18 @@
+# 22w42a
+
 Hello there! We are now releasing the first snapshot for 1.19.3! You might have been thinking that this snapshot would be for 1.20, but times are changing. Going forward, we are taking a bit of a different approach to how we release minor and major versions for Minecraft: Java Edition. Essentially, we will be releasing minor versions more often. You can find out more details about this in a post over [here](https://help.minecraft.net/hc/articles/9971900758413).
 
 In this snapshot we’re introducing feature toggle, which you might have seen in [a post we released yesterday](https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition). This means we can add a toggle for Update 1.20 with features such as the Camel, without committing to releasing them in version 1.19.3. This lets us have experimental features available for testing, while still being able to release updates with new functionality, changes, and improvements, without having to remove those features from the game first.
 
 In this snapshot you’ll be seeing [the features that we talked about during Minecraft Live](https://www.minecraft.net/article/minecraft-live-2022-the-recap) as experimental features, a few changes to chat, some technical changes and many bug fixes.
 
-# New Features in 22w42a
+## New Features in 22w42a
 
 -   Some experimental features are now available through built-in experimental datapacks
 -   Bundles are now available as an experimental feature
 -   Added a new "Panorama Scroll Speed" accessibility option
 
-## Experimental Features
+### Experimental Features
 
 -   Some experimental features now need to be enabled to appear in worlds
 -   Such features are enabled by adding a built-in datapack when creating a world
@@ -18,7 +20,7 @@ In this snapshot you’ll be seeing [the features that we talked about during Mi
 -   Worlds that are using experimental features will be marked as "Experimental" in world selection list
 -   Experimental features cannot be toggled for existing worlds
 
-### Added Camel
+#### Added Camel
 
 Camels are now available when Update 1.20 experimental features are enabled.
 
@@ -33,7 +35,7 @@ Camels are now available when Update 1.20 experimental features are enabled.
 -   Camels can either walk slowly or sprint quickly
 -   They can also dash forward but will lose stamina for a while when doing so
 
-### Bamboo Wood Set
+#### Bamboo Wood Set
 
 A new set of Bamboo wood blocks are now available when Update 1.20 experimental features are enabled.
 
@@ -55,7 +57,7 @@ A new set of Bamboo wood blocks are now available when Update 1.20 experimental 
 -   Added a unique Bamboo Raft and Bamboo Chest Raft which can be crafted like normal boats, but with Bamboo Planks
     -   They function the same as ordinary boats, but have a unique look to them
 
-### Chiseled Bookshelf
+#### Chiseled Bookshelf
 
 A new, chiseled variation of the Bookshelf is now available when Update 1.20 experimental features are enabled.
 
@@ -66,7 +68,7 @@ A new, chiseled variation of the Bookshelf is now available when Update 1.20 exp
 -   Comparators can detect the last book placed/removed
     -   Perfect for hiding secrets in your spooky library
 
-### Hanging Signs
+#### Hanging Signs
 
 Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now you can! Hanging signs are now available when Update 1.20 experimental features are enabled.
 
@@ -80,12 +82,12 @@ Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now 
 -   Unlike normal Signs, they cannot be placed directly on the ground without support from the side or above
     -   However, Hanging Signs that have a horizontal bar will not pop when the supporting block is removed
 
-## Sounds
+### Sounds
 
 -   Various wood types now have unique sounds when placed, broken, or walked on
     -   There are three sets of unique sounds: Overworld wood types, Nether wood types, and Bamboo
 
-# Changes in 22w42a
+## Changes in 22w42a
 
 -   Reworked the Creative Inventory tabs
 -   Changes to chat
@@ -93,7 +95,7 @@ Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now 
 -   Stronghold placement code has been changed to be more efficient, causing stronghold positions to shift
     -   They are still placed in concentric rings, but their positions in the rings may change by a few degrees
 
-## Creative Inventory
+### Creative Inventory
 
 The ordering of tabs and the contents in the Creative Inventory have been tweaked to make the experience of finding relevant blocks and items easier.
 
@@ -108,7 +110,7 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
     -   It can still be accessed through commands
 -   This is a first iteration to bring a better experience to the Creative Inventory, and we will look closely at the feedback for these changes to iterate as needed
 
-## Chat
+### Chat
 
 -   Removed Chat Preview
 -   Chat messages deleted by server moderators will no longer be completely hidden, but rather replaced with text stating "This chat message has been deleted by the server."
@@ -119,21 +121,21 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
     -   The 'Not Secure' tag is now light gray and does not have an icon
 -   Partially filtered chat messages now show the filtered text as gray hashes with a hover text saying that it was filtered
 
-# Technical Changes in 22w42a
+## Technical Changes in 22w42a
 
 -   Added Feature Flags - world options to enable or disable some experimental or unfinished features (like blocks, entities and items)
 -   Network protocol changes
 -   Instances of recipe types that have recipe books now have field `category` to determine placement
 
-## Feature flags
+### Feature flags
 
-### General notes
+#### General notes
 
 -   Feature flags are options that enable or disable certain groups of game elements (like blocks, entities and items), later called "features"
 -   Game elements controlled by flags are hardcoded
 -   Feature flags are stored in world
 
-### Configuration and datapack changes
+#### Configuration and datapack changes
 
 -   Feature flags are enabled by datapacks
     -   New pack metadata section called `features` is added, containing enabled feature flags in list named `enabled`
@@ -143,9 +145,9 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
     -   `initial-disabled-packs` - comma-separated list of packs to not auto-enable
 -   Datapacks discovered after world creation will be disabled if they require features that are not enabled for loaded world
 
-### Effects of feature flags
+#### Effects of feature flags
 
-#### Blocks
+##### Blocks
 
 -   Disabled block ids are not recognized by commands that can create new blocks
 -   Block items for disabled blocks are disabled
@@ -153,29 +155,29 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   Disabled blocks won't be loaded as part of entities (for example as falling sand or blocks carried by Endermen)
 -   Players can't interact with disabled blocks
 
-#### Entities
+##### Entities
 
 -   Disabled entity ids are not recognized by commands that can summon new entities
 -   Disabled entities will not spawn or load
 -   Spawn egg items for disabled entities are disabled
 
-#### Items
+##### Items
 
 -   Disabled items are hidden from creative menu
 -   Recipes and loot tables are prevented from creating disabled items
 -   Disabled item ids are not recognized by commands that can create new items
 -   Disabled items can't be used for interactions or attacking
 
-## Network Protocol
+### Network Protocol
 
 -   The network protocol now supports adding player entities to the world without being added to the 'tab' player list
 -   Servers can now lazily distribute players' profile public keys along with their first chat packet
 -   Message 'headers' within the Secure Chat protocol no longer need to be distributed when private messages are sent
 -   Contextual message references are now deduplicated for efficiency within the Secure Chat network protocol
 
-## Recipes
+### Recipes
 
-### Crafting book categories
+#### Crafting book categories
 
 -   Crafting book categories/tabs can now be controlled by recipe definitions
 -   Categories available for `shaped`/`shapeless` and various special crafting recipes:
@@ -190,13 +192,13 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   Some crafting books collapse multiple categories into a single tab
 -   The exact mappings might change in the future
 
-## Resource Packs
+### Resource Packs
 
 -   The Resource Pack version is now 11
 -   Removed "fixers" for resource packs with versions 3 and 4 (pre-flattening)
     -   The game will no longer try to adapt packs with those versions to the current version
 
-# Fixed bugs in 22w42a
+## Fixed bugs in 22w42a
 
 -   [MC-14167](https://bugs.mojang.com/browse/MC-14167) Mobs build up fall damage when dangling on a lead
 -   [MC-96449](https://bugs.mojang.com/browse/MC-96449) Rabbits sometimes don't drop any raw rabbit upon being killed

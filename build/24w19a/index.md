@@ -1,10 +1,12 @@
+# 24w19a
+
 The weekend is right around the corner, and what better way to celebrate that fact than by bringing you a serving of Snapshot Friday? This one rounds off the week by introducing performance improvements to chunk loading, alongside the usual assortment of technical improvements and bug fixes.
 
 On another note, last week's Snapshot introduced some changes to the Mace that went undocumented in the 24w18a changelog. That was a whoopsie on our end, and to clear up any confusion we've decided to add those changes to this changelog in addition to updating the previous one. We're sorry about that!
 
 Happy mining!
 
-# Mace changes from 24w18a
+## Mace changes from 24w18a
 
 -   Raised Mace durability from 250 to 500
 -   Reduced Mace base damage to 5
@@ -16,28 +18,28 @@ Happy mining!
     -   Any block fallen after that give 1 damage per block
 -   Density and Breach are now incompatible with each other and the other damage enchantments (Smite and Bane of Arthropods)
 
-# Changes
+## Changes
 
 -   Blocks frozen by Frost Walker now emit "Block Placed" vibrations (frequency 13)
 -   Changes to sounds
 -   Improved chunk loading performance
 
-## Sounds
+### Sounds
 
 -   Added 4 new cave ambient sounds
 -   Replaced turn off and turn on sounds for Copper Bulb with one toggle sound
 
-## Chunk loading improvements
+### Chunk loading improvements
 
 -   When reading an already generated chunk from disk, surrounding chunks are no longer unnecessarily loaded
     -   This is also visible on the singleplayer world loading screen
 -   The new system has less memory and CPU overhead
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 43
 
-# Data Pack Version 43
+## Data Pack Version 43
 
 -   The `custom_data` component can now be specified as an SNBT string to preserve type information in JSON
     -   This is the same as is used in the `set_custom_data` loot function and `custom_data` predicate
@@ -54,16 +56,16 @@ Happy mining!
     -   default is 0
     -   Trial Chambers have a padding of 10 since they are generated deep underground and sometimes would intersect with Bedrock layer
 
-## Enchantments
+### Enchantments
 
-### Entity Effect Types
+#### Entity Effect Types
 
 -   Added field `trigger_game_event` for effect types `replace_block`, `replace_disc` and `set_block_properties`
     -   Format: Optional Game Event ID for a game event to trigger when a block has been replaced
 
-## Tags
+### Tags
 
-### Directory renames
+#### Directory renames
 
 -   Some types that used legacy directory names (based on plural name of element) have been renamed to match registry name
 -   Affected directories:
@@ -73,17 +75,17 @@ Happy mining!
     -   `tags/fluids` -> `tags/fluid`
     -   `tags/game_events` -> `tags/game_event`
 
-### Block Tags
+#### Block Tags
 
 -   `fire_aspect_lightable`: All blocks that should be possible to light by hitting with Fire Aspect enchanted tools
 
-### Damage Type Predicate
+#### Damage Type Predicate
 
 -   New option: `is_direct` - optional boolean
     -   When present, requires the damage to be direct (`true`) or indirect (`false`)
     -   Damage is direct when its direct and source entities are the same
 
-# Fixed bugs in 24w19a
+## Fixed bugs in 24w19a
 
 -   [MC-9568](https://bugs.mojang.com/browse/MC-9568) Mobs suffocate / go through blocks when growing up near a solid block
 -   [MC-9644](https://bugs.mojang.com/browse/MC-9644) Launched falling\_block entities do not travel through portals

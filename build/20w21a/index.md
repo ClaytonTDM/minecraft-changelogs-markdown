@@ -1,6 +1,8 @@
+# 20w21a
+
 In this snapshot, we're adding support for custom world settings and custom dimensions. This is an early release to hear your feedback about this feature - do note that this support is considered experimental and unsupported. Any custom world settings may change from one snapshot to the next, and worlds using custom settings will be clearly marked as experimental in your worlds list. ​
 
-# New Features in 20w21a
+## New Features in 20w21a
 
 ​
 
@@ -11,7 +13,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-## Redstone Toggle
+### Redstone Toggle
 
 ​
 
@@ -20,7 +22,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-# Changes in 20w21a
+## Changes in 20w21a
 
 ​
 
@@ -33,7 +35,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-# Technical Changes in 20w21a
+## Technical Changes in 20w21a
 
 ​
 
@@ -42,11 +44,11 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-## Commands
+### Commands
 
 ​
 
-### `spreadplayers`
+#### `spreadplayers`
 
 ​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
 
@@ -54,7 +56,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-### `locate`
+#### `locate`
 
 ​
 
@@ -62,7 +64,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-## Custom Worlds
+### Custom Worlds
 
 ​
 
@@ -75,7 +77,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-# Fixed bugs in 20w21a
+## Fixed bugs in 20w21a
 
 -   [MC-97247](https://bugs.mojang.com/browse/MC-97247) Map making sound uses equipment sound subtitle
 -   [MC-97507](https://bugs.mojang.com/browse/MC-97507) Using item which modifies the held item shows "Gear equips" subtitle

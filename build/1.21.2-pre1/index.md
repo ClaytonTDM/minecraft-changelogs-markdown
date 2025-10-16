@@ -1,42 +1,44 @@
-# Experimental Features
+# 1.21.2-pre1
 
-## Winter Drop
+## Experimental Features
 
-### Creaking mob
+### Winter Drop
+
+#### Creaking mob
 
 -   Creaking will not activate or freeze around players in Creative mode
 -   Creaking summoned from the Creaking Heart cannot be named with a Nametag
 
-### Creaking Heart
+#### Creaking Heart
 
 -   Comparators attached to the Creaking Heart block will output a signal strength dependent on the distance to the connected Creaking
 
-# Changes
+## Changes
 
 -   Tweaked air bubbles UI
     -   Added an empty state for air bubbles along with a wobble when the player is drowning
     -   Added a popping sound when the bubbles pop in the UI
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 57
 -   Resource Pack version is now 41
 
-# Data Pack Version 57
+## Data Pack Version 57
 
 -   Added `disablePlayerMovementCheck` game rule (default: false) that disables player movement speed restriction
     -   This behaves the same as the `disableElytraMovementCheck` rule, but applies irrespective of flying with Elytra
 
-## Item Components
+### Item Components
 
-### `minecraft:equippable`
+#### `minecraft:equippable`
 
 -   Added field `camera_overlay` (optional): namespaced ID of the overlay texture to use when equipped
     -   If not specified, no overlay is used
     -   The ID will address a texture under the `textures/` folder and automatically assumed to be `.png`
         -   For instance, `misc/pumpkinblur` addresses `textures/misc/pumpkinblur.png`
 
-## Particles
+### Particles
 
 -   Format of color fields in particle options is now more standardized:
     -   RGB fields can always be encoded either as a vector of floats (order: `[R,G,B]`) or as a single packed integer (order: `RGB`)
@@ -47,13 +49,13 @@
         -   `minecraft:dust_color_transition.from_color` (previously accepted only vector of floats)
         -   `minecraft:dust_color_transition.to_color` (previously accepted only vector of floats)
 
-# Resource Pack Version 41
+## Resource Pack Version 41
 
 -   Added texture and sound for tweaked air bubble UI
     -   New texture added for empty air bubble
     -   Sound added for when air bubble pops
 
-# Fixed bugs in 1.21.2 Pre-Release 1
+## Fixed bugs in 1.21.2 Pre-Release 1
 
 -   [MC-276360](https://bugs.mojang.com/browse/MC-276360) Repeating command block data is often lost when moving it around in inventory
 -   [MC-276604](https://bugs.mojang.com/browse/MC-276604) Horse Armor no longer has enchantment glint

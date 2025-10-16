@@ -1,10 +1,12 @@
+# 24w05a
+
 Hi everyone! We're back with yet another snapshot for 1.20.5, which includes a collection of technical changes, bug fixes and a new experimental feature for Trial Chambers, the Vault Block!
 
 We're very interested in hearing your feedback on this new feature over at the feedback site: [Let's talk about Vaults!](https://aka.ms/mcvaultsfeedback)
 
 Happy looting!
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 30
 -   The Resource Pack version is now 25
@@ -12,17 +14,17 @@ Happy looting!
 -   Added an option to not compress region files
 -   Allowed server operators to view dedicated server TPS debug chart
 
-## Region file compression algorithm
+### Region file compression algorithm
 
 -   Added a third value to the dedicated server configuration property `region-file-compression`:
     -   `none` does not compress the data. Consumes significantly more space and requires significant time to read and write, even though CPU is used less. Might make sense together with filesystem level compression
 
-## Reserved compression id for third-party servers
+### Reserved compression id for third-party servers
 
 -   Compression id `127` can now be used for custom implementations of region file compression
 -   When used, the version id must be followed by a namespaced string representing the custom algorithm used
 
-# Data Pack Version 30
+## Data Pack Version 30
 
 -   Potion effects stored in items or entities will no longer encode their default values
     -   `amplifier`: `0`
@@ -50,7 +52,7 @@ Happy looting!
         -   `connected_particles_range` The range players who have not unlocked the Vault must be within before particles will flow from them
             -   Default value: `4.5`
 
-# Resource Pack Version 25
+## Resource Pack Version 25
 
 -   The unused attributes array in core shader definitions has been removed
 -   The unused `position_color_normal` and `position_tex_lightmap_color` shaders have been removed
@@ -61,11 +63,11 @@ Happy looting!
 -   Changed texture for the Trial Key item
 -   Added texture and particle file for `vault_connection` particle
 
-# Experimental Features
+## Experimental Features
 
 -   Added Vault block
 
-## Vault
+### Vault
 
 -   A block that holds locked treasure and loot - find the right key to eject its rewards
     -   Found throughout Trial Chambers, containing the structures' most valuable loot
@@ -83,11 +85,11 @@ Happy looting!
 -   Vaults currently reuse the same loot table that reward chests previously used in the Trial Chambers
     -   This loot table is temporary and will be completely revised as development continues
 
-## Trial Key
+### Trial Key
 
 -   Updated texture to reflect new Vault visuals
 
-# Fixed bugs in Snapshot 24w05a
+## Fixed bugs in Snapshot 24w05a
 
 -   [MC-225170](https://bugs.mojang.com/browse/MC-225170) Normal matrix scaling broken in some situations
 -   [MC-260099](https://bugs.mojang.com/browse/MC-260099) Sniffer's snout shading changes during sniffing

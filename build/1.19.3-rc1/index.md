@@ -1,8 +1,10 @@
+# 1.19.3-rc1
+
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.3. If there are no major issues following this release candidate, no further changes will be done before the full release.
 
 Happy mining!
 
-# Fixed bugs in 1.19.3 Release Candidate 1
+## Fixed bugs in 1.19.3 Release Candidate 1
 
 -   [MC-58668](https://bugs.mojang.com/browse/MC-58668): Smooth Lighting Minimum and Maximum levels no longer differ
 -   [MC-185279](https://bugs.mojang.com/browse/MC-185279): "Done" and "Cancel" buttons in the game rules screen are not selected in the right order when navigating using Tab

@@ -1,12 +1,14 @@
+# 23w51a
+
 We're now releasing Snapshot 23w51a, the first snapshot for Minecraft 1.20.5. This one comes with a present for your pet Wolf in time for the holidays - and the Armadillo.
 
 Happy brushing!
 
-# New Features
+## New Features
 
 -   Added Armadillo, Armadillo Scutes and Wolf Armor
 
-## Armadillo
+### Armadillo
 
 -   The Armadillo is a new passive mob that:
     -   drops Armadillo Scutes periodically
@@ -14,7 +16,7 @@ Happy brushing!
     -   spawns in Savannas
     -   its favorite food is Spider Eye
 
-### Armadillo Rolling Up Behavior
+#### Armadillo Rolling Up Behavior
 
 -   Armadillo rolls up when it detects a threat such as:
     -   a sprinting player
@@ -28,13 +30,13 @@ Happy brushing!
 -   When an Armadillo is rolled up it does not walk, cannot eat, and will not be tempted by food
     -   It will continue to scan for threats: if none are detected for 3 seconds, it will unroll
 
-### Armadillo Scutes
+#### Armadillo Scutes
 
 -   Armadillo Scutes can be used to craft Wolf Armor
 -   They are dropped by Armadillos
 -   Dispensers can be used to brush Armadillo Scutes off Armadillos
 
-## Wolf Armor
+### Wolf Armor
 
 -   Using Wolf Armor on an adult tamed Wolf will equip the armor on the wolf.
 -   Only a Wolf's owner can put a Wolf Armor on their tamed Wolf, and with this in mind; Dispensers cannot put Wolf Armor on wolves.
@@ -43,16 +45,16 @@ Happy brushing!
 -   Only a Wolf's owner can shear a Wolf Armor from it, and with this in mind; Dispensers cannot remove Wolf Armor from wolves.
 -   If a Wolf dies while wearing armor, it will drop the armor.
 
-# Changes
+## Changes
 
 -   Renamed scutes that come from Turtles to Turtle Scutes
 -   Llamas and Shulkers are no longer able to destroy armor stands
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 27
 
-# Data Pack 27
+## Data Pack 27
 
 -   Llamas now use a new damage type `spit` instead of `mob_projectile`
 -   `FactorCalculationData` has been removed from mob effect instance tags
@@ -60,9 +62,9 @@ Happy brushing!
 -   Player reach distance can now be controlled with the `generic.block_interaction_range` and `generic.entity_interaction_range` attributes
 -   The maximum number of blocks that an entity can step up without jumping is now controlled by the `generic.step_height` attribute
 
-# Experimental Features
+## Experimental Features
 
-## Breeze
+### Breeze
 
 -   Added a new 'whirl' idle sound
 -   Added a 'charging up attack' sound
@@ -70,11 +72,11 @@ Happy brushing!
 -   Added a projectile deflection sound
 -   Tweaked existing sounds
 
-## Trial Spawner
+### Trial Spawner
 
 -   The Trial Spawner now has the same two default loot tables as they have in the Trial Chamber
 
-# Fixed bugs in 23w51a
+## Fixed bugs in 23w51a
 
 -   [MC-130244](https://bugs.mojang.com/browse/MC-130244) When opening chat in F1 mode, previous messages aren't visible
 -   [MC-153643](https://bugs.mojang.com/browse/MC-153643) Debug overlay is rendered behind hotbar items

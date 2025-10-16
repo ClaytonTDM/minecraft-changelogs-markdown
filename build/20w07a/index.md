@@ -1,6 +1,8 @@
+# 20w07a
+
 Ahh, a freshly baked snapshot! It undoubtedly smells better than the piglins that we just added...
 
-# Features in 20w07a
+## Features in 20w07a
 
 -   Endermen can now pick up some of the new Nether blocks
 -   Endermen will no longer pick up Netherrack
@@ -8,11 +10,11 @@ Ahh, a freshly baked snapshot! It undoubtedly smells better than the piglins tha
 -   Added Piglins
 -   Netherite blocks can be used as the base of a beacon and Netherite ingots can be used as the fuel for a beacon. Weird flex but ok.
 
-## Advancements
+### Advancements
 
 -   Piglins and hoglins are now required for Monster Hunter and Monsters Hunted
 
-## Hoglins
+### Hoglins
 
 -   Hoglins are big aggressive beasts that live in crimson forests in the nether
 -   They attack players on sight, so be careful, they can easily knock you off a ledge!
@@ -23,7 +25,7 @@ Ahh, a freshly baked snapshot! It undoubtedly smells better than the piglins tha
 -   Baby hoglins like to pretend they are tough - but don't worry, they are more like angry puppies with no teeth
 -   Want to keep hoglins off your back? Pro tip: Hoglins hate the smell of warped fungi!
 
-## Piglins
+### Piglins
 
 -   Piglins are an aggressive civilization that live in the nether
 -   They mostly hang around in the crimson forest, but you might find some in the nether wastes too
@@ -40,7 +42,7 @@ Ahh, a freshly baked snapshot! It undoubtedly smells better than the piglins tha
 -   Baby piglins are not as dangerous, but they can be mischievous so watch your back
 -   ... and they like to play with baby hoglins
 
-# Fixed bugs in 20w07a
+## Fixed bugs in 20w07a
 
 -   [MC-65951](https://bugs.mojang.com/browse/MC-65951) Armor stands fall through fences
 -   [MC-75328](https://bugs.mojang.com/browse/MC-75328) /clear doesn't clear items in the inventory crafting grid

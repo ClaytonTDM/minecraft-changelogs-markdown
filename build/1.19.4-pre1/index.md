@@ -1,34 +1,36 @@
+# 1.19.4-pre1
+
 We are now releasing the first pre-release for Minecraft 1.19.4. This pre-release contains a new high contrast accessibility setting, some updates to the Create World tab visuals, a new execute subcommand, improvements to startup performance, and lots of bug fixes!
 
 For the remainder of the 1.19.4 cycle, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
 
 Happy mining!
 
-# Important Note
+## Important Note
 
 -   Experimental 1.20 worlds created in the previous snapshot (23w07a) can no longer be opened in this version
 
-# Changes
+## Changes
 
 -   The enchantment glint for items in the inventory has been made more visible
 -   The default value of the "Glint Strength" setting has been reduced to 75%
 -   Potions no longer have an enchantment glint due to it obscuring the color of the potion contents
 -   Added a notification system for Realms to tell you about important information about your Realm
 
-## Accessibility
+### Accessibility
 
 -   Added a built-in resource pack that enhances the contrast of UI elements
     -   The resource pack can be enabled in the Accessibility Options screen or manually in the Resource Pack screen
     -   This is only available in the menus for now, but we’ll be looking to bring this to gameplay UIs in the future as well
 
-## Updated Create New World Screen
+### Updated Create New World Screen
 
 -   The appearance of the tab bar in the Create New World screen has been updated
     -   Tabs now have unique visuals instead of being traditional buttons
     -   The tabs now align to the center of the screen
     -   The content has been aligned to the top of the screen
 
-# Technical Changes
+## Technical Changes
 
 -   The resource pack version is now 13
 -   Changed the following game events:
@@ -36,19 +38,19 @@ Happy mining!
 -   New Damage Type Tag: `bypasses_cooldown` - damage types with this tag bypass the regular invincibility time after taking damage
 -   New Entity Type Tag: `fall_damage_immune` - entity types with this tag do not take fall damage
 
-## Resource Pack format
+### Resource Pack format
 
 -   The enchantment glint now has two separate texture files: `enchanted_glint_entity.png` and `enchanted_glint_item.png`
 
-## Commands
+### Commands
 
-#### `execute positioned over`
+##### `execute positioned over`
 
 New `execute` sub-command for finding positions on top of a heightmap. Changes the height of the execution position to be on top of the given heightmap. Syntax:
 
 -   `execute positioned over <heightmap>`
 
-##### Heightmaps
+###### Heightmaps
 
 A heightmap records the highest position in a column of blocks according to some criteria. Available options:
 
@@ -57,13 +59,13 @@ A heightmap records the highest position in a column of blocks according to some
 -   `motion_blocking_no_leaves`: Any non-leaf motion blocking material
 -   `ocean_floor`: Any non-fluid motion blocking material
 
-# Changes for Experimental Features
+## Changes for Experimental Features
 
 -   The Brush crafting recipe now uses a Feather, Copper Ingot and Stick in a vertical line
 -   The Sniffer Spawn Egg colors have been updated
 -   The recipe for the Decorated Pot made of all Bricks can now be found in the Recipe Book
 
-# Fixed bugs in 1.19.4 Pre-release 1
+## Fixed bugs in 1.19.4 Pre-release 1
 
 -   [MC-106484](https://bugs.mojang.com/browse/MC-106484) Some potions are indistinguishable by color
 -   [MC-132200](https://bugs.mojang.com/browse/MC-132200) Ghost block hoppers appear if summoned by command to powered location

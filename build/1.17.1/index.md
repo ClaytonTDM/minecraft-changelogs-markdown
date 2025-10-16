@@ -1,6 +1,8 @@
+# 1.17.1
+
 We're now releasing Minecraft: Java Edition 1.17.1. This release changes some behaviours of the features added in Caves & Cliffs: Part I, and it also fixes a few bugs and critical issues.
 
-# Changes in 1.17.1
+## Changes in 1.17.1
 
 -   Blue axolotls can now only be obtained through breeding
 -   Non-screaming goats now have a rare chance to produce a screaming goat when bred
@@ -9,12 +11,12 @@ We're now releasing Minecraft: Java Edition 1.17.1. This release changes some be
 -   Powder snow now fills cauldrons 2 times faster than before (still pretty slowly, though!)
 -   Zombies, Zombie Villagers, Husks and Drowned will no longer pick up glow ink sacs
 
-# Technical Changes in 1.17.1
+## Technical Changes in 1.17.1
 
 -   Deaths of named mobs are now logged
 -   In case of DNS-based redirection, the client will send the hostname actually used to connect (this restores the pre-1.17 behaviour)
 
-# Fixed bugs in 1.17.1
+## Fixed bugs in 1.17.1
 
 -   [MC-123654](https://bugs.mojang.com/browse/MC-123654) - "Sun, moon, and/or clouds are not showing if render distance is below 4"
 -   [MC-131290](https://bugs.mojang.com/browse/MC-131290) - "Enchantments are saved as shorts, but are loaded as and function with integer values"

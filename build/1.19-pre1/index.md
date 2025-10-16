@@ -1,10 +1,12 @@
+# 1.19-pre1
+
 Presenting the first pre-release of 1.19: The Wild Update!
 
 From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release ;)
 
 As always, a big thank you to the community for your feedback, bugs reported, and awesome ideas throughout the snapshot series. Let the pre-releases commence!
 
-# Changes in 1.19 Pre-release 1
+## Changes in 1.19 Pre-release 1
 
 -   Slightly reduced the number of Mangrove trees in Mangrove Swamps
 -   Endermen, Skeletons, Wither Skeletons and Piglins now spawn in a wider range of light levels in the Nether (from light level 0 to 11)
@@ -12,19 +14,19 @@ As always, a big thank you to the community for your feedback, bugs reported, an
 -   Item interaction vibrations are now ignored when sneaking
 -   Placing items that aren't armor (such as Pumpkins and Skulls) in your headwear slot now plays a generic equip sound
 
-# Technical Changes in 1.19 Pre-release 1
+## Technical Changes in 1.19 Pre-release 1
 
 -   Auto-completion is now available for the template argument to `place template`
 -   Custom servers can now enable or disable chat preview for certain clients by sending a new network packet
 -   Now, a chat preview is also shown for chat-related commands, such as `/say` and `/msg`
 -   `test-rainbow-chat` has been removed from `server.properties`
 
-## Added Game Events
+### Added Game Events
 
 -   `note_block_play` with a vibration frequency of 6
 -   `instrument_play` with a vibration frequency of 15
 
-# Fixed bugs in 1.19 Pre-release 1
+## Fixed bugs in 1.19 Pre-release 1
 
 -   [MC-94060](https://bugs.mojang.com/browse/MC-94060) Equipping armor/elytra through inventory or dispenser doesn't play sounds
 -   [MC-134892](https://bugs.mojang.com/browse/MC-134892) PacketBuffer.writeString's max length is in bytes, while readString is in characters

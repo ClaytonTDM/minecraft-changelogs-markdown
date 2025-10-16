@@ -1,22 +1,24 @@
+# 1.21.6-pre2
+
 We're kicking the week off with another pre-release, including some music and happy ghast bug fixes. The Chase the Skies drop is getting closer and the pre-release schedule might include more than one pre-release per week.
 
-# Changes
+## Changes
 
-## Music and Sound
+### Music and Sound
 
 -   The following sound categories have been renamed:
     -   Friendly Creatures -> Friendly Mobs
     -   Hostile Creatures -> Hostile Mobs
 
-# Technical Changes
+## Technical Changes
 
-## Dialogs
+### Dialogs
 
-### Dialog Description Format
+#### Dialog Description Format
 
-#### Input Control Types
+##### Input Control Types
 
-##### `minecraft:text`
+###### `minecraft:text`
 
 -   Output values:
     
@@ -25,7 +27,7 @@ We're kicking the week off with another pre-release, including some music and ha
     
     -   If `height` field is omitted, but `max_lines` is present, the height that will be chosen to fit the maximum number of lines can't exceed `512`
 
-# Fixed bugs in 1.21.6 Pre-Release 2
+## Fixed bugs in 1.21.6 Pre-Release 2
 
 -   [MC-217887](https://bugs.mojang.com/browse/MC-217887) Unsigned books written in 1.9-pre1 or earlier don't upgrade properly
 -   [MC-297575](https://bugs.mojang.com/browse/MC-297575) Happy Ghast with nbt NoAI set to true can't be controlled by player

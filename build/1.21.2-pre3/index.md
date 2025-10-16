@@ -1,25 +1,27 @@
+# 1.21.2-pre3
+
 We are rounding off this week with the third 1.21.2 Pre-Release, including even more bug fixes!
 
 Happy mining and have a nice weekend!
 
-# Changes
+## Changes
 
-## High Contrast Resource Pack
+### High Contrast Resource Pack
 
 Added the following high contrast textures:
 
 -   Frame and background textures for tooltips
 -   Slot background and highlight textures for the Bundle tooltip
 
-# Technical Changes
+## Technical Changes
 
 -   Resource Pack version is now 42
 
-# Resource Pack Version 42
+## Resource Pack Version 42
 
 -   Added `container/bundle/slot_background` texture for bundle slot background
 
-# Fixed bugs in 1.21.2 Pre-Release 3
+## Fixed bugs in 1.21.2 Pre-Release 3
 
 -   [MC-277316](https://bugs.mojang.com/browse/MC-277316) Passengers dismount minecarts/boats when converting
 -   [MC-277453](https://bugs.mojang.com/browse/MC-277453) Projectiles visually fall when shot in a wall with high tick rate

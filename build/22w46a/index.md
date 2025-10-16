@@ -1,22 +1,24 @@
+# 22w46a
+
 We are now releasing snapshot 22w46a for Minecraft 1.19.3 with [playable mob sounds](https://www.minecraft.net/article/playable-mob-sounds-coming-minecraft-1-20) added as an experimental feature, improvements for telemetry data and several technical improvements.
 
 Happy mining!
 
-# New Experimental Features in 22w46a
+## New Experimental Features in 22w46a
 
 -   Books in Chiseled Bookshelf can be added or removed from any slot by targeting the specific slot
 
-## Mob Heads on Note Blocks interaction
+### Mob Heads on Note Blocks interaction
 
 -   When placing a Mob Head on a Note Block, that Note Block will now play one of the ambient sounds of that mob when played by a player or powered by Redstone
 
-## Piglin Mob Head
+### Piglin Mob Head
 
 -   Piglins will now drop their heads when killed by a charged Creeper
 -   Placing the Piglin head on a Note Block will play one of the Piglin's ambient sounds
 -   The Piglin head will flap its ears when powered by Redstone, or when worn by a player while walking
 
-# Changes in 22w46a
+## Changes in 22w46a
 
 -   In the Nether dimension Endermen, Skeletons and Wither Skeletons now only spawn at light level 7 and below (instead of 11 and below)
     -   This is intended to nerf certain portal-based mob farms
@@ -24,19 +26,19 @@ Happy mining!
 -   Added new top textures for Block of Bamboo and Block of Stripped Bamboo
 -   Bamboo Plank texture has been tweaked to match the same tiling pattern as other plank variants
 
-## Creative Inventory changes
+### Creative Inventory changes
 
 -   Reordered Redstone tab based on feedback
 -   Added Rails to the Tools & Utilities tab next to Minecarts
 
-# Technical Changes in 22w46a
+## Technical Changes in 22w46a
 
 -   Blocks carried by Endermen now use loot tables to generate drops when killed
 -   Changes to texture loading and stitching
 -   Translation files and `pack.mcmeta` are now including non-ASCII characters (encoded as UTF-8) directly instead of using escape sequences
 -   Added new Telemetry Events
 
-## Telemetry
+### Telemetry
 
 This release includes the WorldUnloaded event, a required event, as well as several opt-in events. Diagnostic tracking is a tool that helps us understand what you like about Minecraft, which allows us to make those things better.
 
@@ -48,7 +50,7 @@ The rest of the current telemetry events are opt-in, which means that you can ch
 
 Just like all the thoughts and comments we get from you on our feedback site, this is something that greatly helps us improve Minecraft. We want to make a game that you want to play, so we want to know what that game needs. Even if it’s more lava.
 
-### Telemetry transparency
+#### Telemetry transparency
 
 -   Added Telemetry Data Collection Screen
     -   This screen displays information about the type of data that is sent
@@ -61,22 +63,22 @@ Just like all the thoughts and comments we get from you on our feedback site, th
     -   These can be found under the `logs/telemetry` directory
         -   A shortcut to this directory is available via the "Open My Data" button on the Telemetry Data Collection screen
 
-### Required telemetry events
+#### Required telemetry events
 
 -   Added WorldUnloaded event
 -   Removed client Java version from the WorldLoaded event
 
-#### WorldLoaded & WorldUnloaded
+##### WorldLoaded & WorldUnloaded
 
 Understanding how Minecraft is played allows us to focus game updates and improvements on the areas that are most relevant to players. The data that tells us this includes game mode, client or server modded status, and game version.
 
 WorldLoaded & WorldUnloaded are two paired events that calculate how long the world session has lasted (in seconds and ticks). Data from WorldLoaded is sent when a world is launched, and data from WorldUnloaded is sent when a world is shut down (quitting to title, disconnecting from a server).
 
-### Optional telemetry events
+#### Optional telemetry events
 
 -   Added PerformanceMetrics and WorldLoadTimes events
 
-#### PerformanceMetrics
+##### PerformanceMetrics
 
 Knowing the overall performance profile of Minecraft helps us tune and optimize the game for a wide range of machine specifications and operating systems.
 
@@ -84,13 +86,13 @@ The periodic performance metrics includes data such as frame-rates, rendering pe
 
 Game version is included to help us compare the performance profile for new versions of Minecraft.
 
-#### WorldLoadTimes
+##### WorldLoadTimes
 
 It’s important for us to understand how long it takes to join a world, and how that changes over time. For example, when we add new features or do larger technical changes, we need to see what impact that had on load times.
 
 This event includes the total time in milliseconds for the world to load, whether this was a new world, as well as game version and platform details.
 
-## Texture loading changes
+### Texture loading changes
 
 -   Context: When the game loads all textures used by block and item models need to be stitched (merged) into a single image, called the "atlas"
     -   Individual textures that are stitched onto the atlas are called "sprites"
@@ -98,7 +100,7 @@ This event includes the total time in milliseconds for the world to load, whethe
     -   By default, textures not in the `textures/item` and `textures/block` directories will no longer be automatically recognized and will fail to load
 -   Resource packs can now have configuration files, located in `atlases` directory, that control which images are included in the atlases
 
-### Atlas configuration files
+#### Atlas configuration files
 
 -   New directory `atlases` is now present for resource packs
 -   This directory contains JSON entries for configuring atlases:
@@ -130,12 +132,12 @@ This event includes the total time in milliseconds for the world to load, whethe
         -   Values such as `x` are transformed to real image coordinates via dividing by their divisor, and then multiplying by the real image size
 -   Example: if a pack has a file named `assets/test/textures/fancy/iridium.png` and source is `{"type": "directory", "source": "fancy", "prefix": "custom/"}`, the texture will be available in models as `test:custom/iridium`
 
-## Commands
+### Commands
 
 -   New command: `fillbiome`
 -   New execute sub-command: `execute if|unless biome`
 
-### `fillbiome`
+#### `fillbiome`
 
 Changes biome entries for an area. Note that biomes are not stored per-block, so affected positions may not match input precisely.
 
@@ -149,7 +151,7 @@ Parameters:
 -   `to`: The other corner of the area to fill
 -   `biome`: The biome to set
 
-### `execute`
+#### `execute`
 
 Execute commands can now be conditional on biomes.
 
@@ -157,7 +159,7 @@ Syntax:
 
 `execute if|unless biome <pos> <biome>`
 
-# Fixed bugs in 22w46a
+## Fixed bugs in 22w46a
 
 -   [MC-121865](https://bugs.mojang.com/browse/MC-121865) High potion effect durations being displayed as **:** is misleading
 -   [MC-147605](https://bugs.mojang.com/browse/MC-147605) Text cursors can exist in multiple fields

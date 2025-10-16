@@ -1,3 +1,5 @@
+# 24w03a
+
 New year, new Snapshot - we're now releasing the third Snapshot of Minecraft 1.20.5. This time around, we're bringing some updates to the Armadillo, the Breeze, as well as accessibility improvements.
 
 In addition to a big bundle of bug fixes, we're bringing some changes to how spawn chunks are handled.
@@ -12,27 +14,27 @@ We're interested in hearing your feedback on this change and how the new default
 
 [Let's talk about spawn chunks!](https://aka.ms/spawnchunksfeedback)
 
-# New Features
+## New Features
 
-## Armadillo
+### Armadillo
 
 Armadillo visual update! We gathered feedback from the first Armadillo snapshot, and the next step in the look of the Armadillo, the Armadillo Scutes and the Wolf Armor are now here.
 
 -   Armadillos now also spawn in Badlands
 
-### Armadillo Rolling Up Behavior
+#### Armadillo Rolling Up Behavior
 
 -   Spiders and Cave Spiders will run away from Armadillos not in a rolled up state
 
-# Changes
+## Changes
 
 -   Adjusted the texture of the Wolf Collar layer to be more consistent with the new Wolf Armor
 
-## Accessibility
+### Accessibility
 
 -   The default focus is now always set when entering or exiting any menu while navigating using tab or arrow keys
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 28
 -   The Resource Pack version is now 24
@@ -42,7 +44,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 -   Added cookie packets
 -   Decreased the default size of the spawn chunks and made the value configurable
 
-## Transfer Packets
+### Transfer Packets
 
 -   Custom servers can now request that clients connect to another server with a new packet
 -   When a client is transferred it will connect to the target server with a new transfer intent (id 3)
@@ -51,7 +53,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 -   Resource packs are maintained across transfers
 -   In the case of a transfer custom servers can skip authentication with a new flag
 
-## Cookie Packets
+### Cookie Packets
 
 -   Cookie packets allow custom servers to request and store data on a client
     -   Each cookie may be up to 5 KiB in size
@@ -59,7 +61,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 -   Cookies are persisted across server transfers but are not persisted when the player disconnects
     -   This allows servers to pass along information such as authentication or custom game data to the new server
 
-## Spawn Chunk Changes
+### Spawn Chunk Changes
 
 -   The size of the spawn chunks changed from radius 10 (19x19 entity ticking chunks) to radius 2 (3x3 entity ticking chunks)
     -   This was done to reduce memory usage, loading times and CPU usage
@@ -68,15 +70,15 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
     -   Possible values are 0 to 32, where 0 completely disables the spawn chunks and 10 is equivalent to the functionality before this change
     -   Default value is 2, equivalent to 3x3 entity ticking chunks
 
-# Data Pack Version 28
+## Data Pack Version 28
 
 -   The `minecraft:sweeping` enchantment has been renamed to `minecraft:sweeping_edge`
 -   Added Advancement Criteria trigger `default_block_use` which triggers due to the default interaction of a block by a player, such as opening a door
 -   Added Advancement Criteria trigger `any_block_use` which triggers due to any type of interaction with a block by a player, such as using an item on the block or its default usage
 
-## Tags
+### Tags
 
-### Item Tags
+#### Item Tags
 
 New item tags controlling what enchantments can be added to what gear:
 
@@ -97,7 +99,7 @@ New item tags controlling what enchantments can be added to what gear:
 -   `minecraft:enchantable/crossbow`
 -   `minecraft:enchantable/vanishing`
 
-### Entity Type Tags:
+#### Entity Type Tags:
 
 -   Added `minecraft:ignores_poison_and_regen` for entities that cannot be affected by Poison and Regeneration effects
 -   Added `minecraft:illager_friends` for entities that Illagers will consider allies (unless on a different team)
@@ -107,7 +109,7 @@ New item tags controlling what enchantments can be added to what gear:
 -   Added `minecraft:sensitive_to_impaling` for entities sensitive to Impaling
 -   Added `minecraft:wither_friends` for entities that the Wither will not target and which cannot harm the Wither
 
-# Resource Pack 24
+## Resource Pack 24
 
 -   The `ttf` font provider transforms have been adjusted to have more reasonable defaults
     -   `shift` is no longer applied double, and now directly represents a number of pixels in the game UI
@@ -115,18 +117,18 @@ New item tags controlling what enchantments can be added to what gear:
     -   The font baseline is positioned consistently with the default font (7 pixels below line top)
     -   This means that generally, any font with a `size` of 9 and no `shift` should look correct by default
 
-# Experimental Features
+## Experimental Features
 
-## Breeze
+### Breeze
 
 -   Breeze now deflects all projectiles
 -   Deflected projectiles now deflect in the direction of the shooter
 
-## Trade Rebalance
+### Trade Rebalance
 
 -   In the Trade Rebalance Experiment, Villagers who buy armor now ignore durability and can buy damaged armor
 
-# Fixed bugs in Snapshot 24w03a
+## Fixed bugs in Snapshot 24w03a
 
 -   [MC-153160](https://bugs.mojang.com/browse/MC-153160) Villagers don't auto-fill items if NBT data doesn't match
 -   [MC-155857](https://bugs.mojang.com/browse/MC-155857) Team command doesn't affect illagers and witches' AI

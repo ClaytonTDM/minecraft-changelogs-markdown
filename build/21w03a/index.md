@@ -1,6 +1,8 @@
+# 21w03a
+
 Today's Caves & Cliffs snapshot is particularly shiny! You could almost say it's glowing... Oh wait, that's a squid.
 
-# New Features in 21w03a
+## New Features in 21w03a
 
 ​
 
@@ -9,7 +11,7 @@ Today's Caves & Cliffs snapshot is particularly shiny! You could almost say it's
 
 ​
 
-## Glow Lichen
+### Glow Lichen
 
 -   A dim light source that generates in caves
 -   Use shears to pick it up
@@ -17,7 +19,7 @@ Today's Caves & Cliffs snapshot is particularly shiny! You could almost say it's
 
 ​
 
-## Glow Squid
+### Glow Squid
 
 Glow squids have been added, but do not yet spawn naturally. You can find spawn eggs for them in the creative inventory.
 
@@ -30,7 +32,7 @@ Glow squids have been added, but do not yet spawn naturally. You can find spawn 
 
 ​
 
-# Changes in 21w03a
+## Changes in 21w03a
 
 ​
 
@@ -38,7 +40,7 @@ Glow squids have been added, but do not yet spawn naturally. You can find spawn 
 
 ​
 
-# Fixed bugs in 21w03a
+## Fixed bugs in 21w03a
 
 ​
 

@@ -1,13 +1,15 @@
+# 20w14a
+
 Even though we just added [every update imaginable to Minecraft](https://www.minecraft.net/article/every-update-imaginable-coming-minecraft), we thought that it might be good to pick up the Nether Update snapshots from where we left off. This snapshot introduces the Zoglins!
 
-# New Features in 20w14a
+## New Features in 20w14a
 
 -   Hoglins that somehow end up in the Overworld become Zoglins fairly quickly - but who would ever bring a Hoglin to the Overworld?
 -   Compasses can now be enchanted with Curse of Vanishing
 
 ​
 
-## Zoglins
+### Zoglins
 
 ​
 
@@ -15,13 +17,13 @@ Even though we just added [every update imaginable to Minecraft](https://www.min
 -   Unlike hoglins they can't be bred or fed, and they don't care about warped fungus
 -   Beware - these beasts are raving mad and attack just about everything they see!
 
-# Changes in 20w14a
+## Changes in 20w14a
 
 -   The main menu background is now in the Nether
 -   The General statistics list is now alphabetically sorted
 -   Strider balancing
 
-## Strider Balancing
+### Strider Balancing
 
 -   Strider speed while mounted has been significantly increased to more closely resemble boat speeds
 -   Warped Fungus on a Stick now has 100 max item damage, and only takes 1 damage per Strider consume
@@ -29,7 +31,7 @@ Even though we just added [every update imaginable to Minecraft](https://www.min
 
 ​
 
-# Technical Changes in 20w14a
+## Technical Changes in 20w14a
 
 -   The compass now has `LodestonePos`, `LodestoneDimension` and `LodestoneTracked` data fields. If `LodestoneTracked` is zero, the game will skip checking for a Lodestone in the specified position.
 -   Attributes are now added to game registry, similar to items, sound events, etc.
@@ -37,14 +39,14 @@ Even though we just added [every update imaginable to Minecraft](https://www.min
 
 ​
 
-## Attributes
+### Attributes
 
 Attributes have been moved to game registry. That means few changes: ​
 
 -   Items and entities will no longer keep unknown attributes
 -   Names of some attributes have been renamed to meet resource location requirements
 
-### Renames:
+#### Renames:
 
 -   `generic.maxHealth` 🡆 `generic.max_health`
 -   `zombie.spawnReinforcements` 🡆 `zombie.spawn_reinforcements`
@@ -58,7 +60,7 @@ Attributes have been moved to game registry. That means few changes: ​
 -   `generic.attackSpeed` 🡆 `generic.attack_speed`
 -   `generic.armorToughness` 🡆 `generic.armor_toughness`
 
-# Fixed bugs in 20w14a
+## Fixed bugs in 20w14a
 
 -   [MC-83039](https://bugs.mojang.com/browse/MC-83039) End City chests generate destroyed, items on the ground
 -   [MC-91893](https://bugs.mojang.com/browse/MC-91893) Missing subtitles for various sounds

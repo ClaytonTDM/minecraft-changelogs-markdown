@@ -1,14 +1,16 @@
+# 22w17a
+
 Prepare to drop some sick bleats in the latest Minecraft: Java Edition snapshot! We're bringing in the sweet sounds of the goat horn. There are also some changes to the warden and the allay.
 
 If the technical aspects of chatting is where it's at for you, make sure to check out the changes to chat signing.
 
 Enjoy!
 
-# New Features in 22w17a
+## New Features in 22w17a
 
 -   Added Goat Horn!
 
-## Goat Horn
+### Goat Horn
 
 -   A Goat Horn drops when a Goat rams a tree or any other hard block that occurs naturally where Goats spawn (Logs, Stone, Packed Ice, Iron Ore, copper Ore, or Emerald Ore)
     -   Other solid blocks are unfamiliar to the Goat, so it won't ram them
@@ -17,7 +19,7 @@ Enjoy!
 -   There are 8 Goat Horn variants, 4 of them exclusive to screaming Goats
 -   Goat Horns can sometimes be found in Pillager Outposts
 
-# Changes in 22w17a
+## Changes in 22w17a
 
 -   The Allay connecting with Note Blocks is now better visualized by the vibration particle
 -   The Allay connecting with Note Blocks can now be blocked by Wool Blocks again
@@ -28,7 +30,7 @@ Enjoy!
 -   Sculk blocks now have very low blast resistance
 -   Warden balancing
 
-## Warden
+### Warden
 
 -   Their ranged attack will now:
     -   Bypass shields and armor
@@ -36,12 +38,12 @@ Enjoy!
     -   Display a custom death message
 -   Wardens now drop a single Sculk Catalyst upon death
 
-# Technical Changes in 22w17a
+## Technical Changes in 22w17a
 
 -   Signed Chat
 -   Removed `dampenable_vibrations` game event tag
 
-## Multiplayer Secure Chat Signing
+### Multiplayer Secure Chat Signing
 
 This is the first step in a process to provide more security and player safety features for in-game chat. We'd love to hear your thoughts, but keep in mind that many features such as server-driven styling of chat messages are still missing.
 
@@ -52,7 +54,7 @@ This is the first step in a process to provide more security and player safety f
     -   By default this is set to `false`, allowing players to connect without a Mojang-signed public key
 -   Chat styling is now handled via server resource packs with the translation key `chat.type.text`
 
-# Fixed bugs in 22w17a
+## Fixed bugs in 22w17a
 
 -   [MC-13103](https://bugs.mojang.com/browse/MC-13103) Texture Z-Fighting at Wolf/Dog/Cat snout
 -   [MC-53312](https://bugs.mojang.com/browse/MC-53312) Illager/(zombie) villager/witch robes don't render the last two rows of pixels

@@ -1,16 +1,18 @@
+# 1.21-pre1
+
 We're bringing you the first Pre-Release of 1.21 with leashable boats, portal-able Ender Pearls and bug fixes!
 
 With this snapshot, we are temporarily removing the functionality of lighting blocks on fire using the Fire Aspect enchantment, as we want to refine it further. This functionality will be reintroduced in a later release.
 
 Happy portaling! ;)
 
-# New Features
+## New Features
 
-## Ominous Trial Spawner
+### Ominous Trial Spawner
 
 -   Mobs removed by a Trial Spawner converting to Ominous state now drop any items they previously picked up from the ground
 
-# Changes
+## Changes
 
 -   Mace attack speed has been changed to 0.6
 -   Doors of different materials can now form a double door
@@ -18,54 +20,54 @@ Happy portaling! ;)
 -   It is now possible to ride entities such as Horses or Minecarts through portals
     -   When riding entities through portals, the delay before teleporting is not applied
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 46
 -   Removed the `entitiesWithPassengersCanUsePortals` gamerule that was introduced last snapshot. Entity with passengers being able to use portals is now the default behavior.
 -   Report data generator now includes information about network packets
 -   The game will now store reports from failed chunks' loads and saves in the `debug` directory
 
-## Server links
+### Server links
 
 -   There are some generic-use link names, like "Support" or "Website", without any special functionality
 
-# Data Pack Versions 42 through 46
+## Data Pack Versions 42 through 46
 
 -   Added new configurable fields to jigsaw structures and `single_pool_element` types
 
-## Enchantments
+### Enchantments
 
-### Level-Based Values
+#### Level-Based Values
 
-#### `lookup`
+##### `lookup`
 
 A Level-Based Value type that maps a list of values to specific levels, and applies a fallback if the level is greater than the number of values supplied. Fields:
 
 -   `values` - A list of values indexed by `level - 1` to apply, if present
 -   `fallback` - A fallback Level-Based Value to apply if the level is greater than the size of `values`
 
-### Effect Conditions
+#### Effect Conditions
 
 Unlike with loot tables, all effect conditions need to be inline objects and cannot be references.
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   `fire_aspect_lightable` has been removed
     -   With this snapshot, we are temporarily removing the functionality of lighting blocks on fire using the Fire Aspect enchantment, as we want to refine it further. This functionality will be reintroduced in a later release.
 
-## Loot tables
+### Loot tables
 
-### Conditions
+#### Conditions
 
-#### `random_chance_with_enchanted_bonus`
+##### `random_chance_with_enchanted_bonus`
 
 -   `chance`: field has been removed
 -   `unenchanted_chance`: new field for the chance for an unenchanted item
 -   `enchanted_chance`: new field for the chance for an enchanted item - a Level-Based Value
 
-## Structures
+### Structures
 
 -   Added `liquid_settings` field to structures of type `minecraft:jigsaw`. Possible values:
     -   `apply_waterlogging`: If any waterloggable block overlaps with existing water, it will become waterlogged
@@ -75,7 +77,7 @@ Unlike with loot tables, all effect conditions need to be inline objects and can
     -   Same possible values as the `liquid_settings` in jigsaw structures
     -   Overrides the inherited liquid settings from the parent jigsaw structure while generating this pool element
 
-# Fixed bugs in 1.21 Pre-Release 1
+## Fixed bugs in 1.21 Pre-Release 1
 
 -   [MC-902](https://bugs.mojang.com/browse/MC-902) The end obsidian platform resets every time entities go through the end portal, which can cause blocks to be deleted
 -   [MC-50612](https://bugs.mojang.com/browse/MC-50612) Command blocks do not update when you place them near any source of power

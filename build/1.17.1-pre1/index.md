@@ -1,6 +1,8 @@
+# 1.17.1-pre1
+
 Happy Friday! The first pre-release for 1.17.1 is now available for download. This pre-release introduces a few changes to some gameplay mechanics, and it also fixes a bunch of bugs.
 
-# Changes in 1.17.1 Pre-release 1
+## Changes in 1.17.1 Pre-release 1
 
 -   Blue axolotls can now only be obtained through breeding
 -   Non-screaming goats now have a rare chance to produce a screaming goat when bred
@@ -9,15 +11,15 @@ Happy Friday! The first pre-release for 1.17.1 is now available for download. Th
 -   Powder snow now fills cauldrons 2 times faster than before (still pretty slowly, though!)
 -   Zombies, Zombie Villagers, Husks and Drowned will no longer pick up glow ink sacs
 
-# The Caves & Cliffs Preview
+## The Caves & Cliffs Preview
 
 Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
 
-# Technical Changes in 1.17.1 Pre-release 1
+## Technical Changes in 1.17.1 Pre-release 1
 
 -   In case of DNS-based redirection, the client will send the hostname actually used to connect (this restores the pre-1.17 behaviour)
 
-# Bugs fixed in 1.17.1 Pre-release 1
+## Bugs fixed in 1.17.1 Pre-release 1
 
 -   [MC-123654](https://bugs.mojang.com/browse/MC-123654) Sun, moon, and/or clouds are not showing if render distance is below 4
 -   [MC-131290](https://bugs.mojang.com/browse/MC-131290) Enchantments are saved as shorts, but are loaded as and function with integer values

@@ -1,13 +1,15 @@
+# 23w03a
+
 We're now releasing the first snapshot for Minecraft 1.19.4. This release contains new accessibility functionality, new commands and plenty of bug fixes!
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   Vexes now use a separate charging animation when empty-handed
 -   Armor Stands now preserve custom names when placed and broken
 
-## Accessibility
+### Accessibility
 
 -   Added an accessibility onboarding screen for players launching the game for the first time
 -   Added arrow key navigation
@@ -16,12 +18,12 @@ Happy mining!
 -   Added a new "Notification Display Time" accessibility option
     -   Changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-### Arrow key navigation
+#### Arrow key navigation
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 11
 -   Added a network protocol feature for forcing bundle of packets to be processed within same client tick
@@ -31,33 +33,33 @@ Happy mining!
 -   A new `string` source is now available for the `data modify` command
 -   New `execute` sub-commands
 
-## Network Protocol
+### Network Protocol
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-### Packet bundles
+#### Packet bundles
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
 -   For security reasons this feature is not supported in serverbound direction
 
-## Block Behavior
+### Block Behavior
 
 -   Fire burns out faster in certain biomes, and this is now controlled by the `increased_fire_burnout` biome tag
 
-## Mob Spawning
+### Mob Spawning
 
 -   The `only_allows_snow_and_gold_rabbits` biome tag has been renamed to `spawns_gold_rabbits` to match its behavior
 -   White Rabbit variants are now controlled by the `spawns_white_rabbits` biome tag
 -   Fox variants are now controlled by the `spawns_snow_foxes` biome tag
 
-## Mob Behavior
+### Mob Behavior
 
 -   Snow Golems melting in warm biomes is now controlled by the `snow_golem_melts` biome tag
 
-## Commands
+### Commands
 
-### `clone`
+#### `clone`
 
 The clone command now supports specifying the source and target dimensions. New syntax:
 
@@ -68,7 +70,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-### `data`
+#### `data`
 
 New source available:
 
@@ -79,9 +81,9 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-### `execute`
+#### `execute`
 
-#### `execute if|unless`
+##### `execute if|unless`
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -93,7 +95,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-#### `execute on`
+##### `execute on`
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -111,17 +113,17 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, selector returns zero elements.
 
-### `title`
+#### `title`
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-### `weather`
+#### `weather`
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-### `ride`
+#### `ride`
 
 New command to allow entities to start or stop riding other entities
 
@@ -138,26 +140,26 @@ Syntax:
     -   Dismounts `target` from any vehicle it is riding
     -   Fails if `target` is not riding anything
 
-## Game Rules
+### Game Rules
 
 -   Added `commandModificationBlockLimit`, controlling the maximum number of blocks changed in one execution of `clone`, `fill` and `fillbiome`
 
-## Chat components
+### Chat components
 
-### Translation fallback
+#### Translation fallback
 
 Added an optional `fallback` field to `translate` text components.
 
 -   The new field is a string that will be used in place of translation if it is missing
 -   If `fallback` is missing, the old behavior (i.e. using the key itself as the translation) is preserved
 
-# Experimental Features
+## Experimental Features
 
-## Note block interaction
+### Note block interaction
 
 -   Mob heads can now be placed on top of note blocks without sneaking
 
-# Fixed bugs in 23w03a
+## Fixed bugs in 23w03a
 
 -   [MC-26678](https://bugs.mojang.com/browse/MC-26678) Damage wobble no longer shows direction of incoming damage
 -   [MC-30403](https://bugs.mojang.com/browse/MC-30403) Sprinting isn't canceled when dismounting rideable entities while sprinting

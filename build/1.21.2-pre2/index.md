@@ -1,16 +1,18 @@
+# 1.21.2-pre2
+
 Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes and Pale Hanging Moss changes. During this stabilization phase before the full release of Minecraft Java Edition 1.21.2 we are focusing on fixing bugs and don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
 
-# Experimental Features
+## Experimental Features
 
-## Winter Drop
+### Winter Drop
 
-### Pale Moss
+#### Pale Moss
 
 -   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
 -   Pale Moss Carpet is now more efficient to destroy with Sword
 -   Pale Moss Carpet now plays the correct step sound when walking over it
 
-# Fixed bugs in 1.21.2 Pre-Release 2
+## Fixed bugs in 1.21.2 Pre-Release 2
 
 -   [MC-54532](https://bugs.mojang.com/browse/MC-54532) Sneaking while falling on Slime Blocks inflicts fall damage
 -   [MC-160810](https://bugs.mojang.com/browse/MC-160810) Some items are held sideways in left hand

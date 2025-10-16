@@ -1,17 +1,19 @@
+# 25w15a
+
 Snapshot on a Tuesday? Yes! From now on we will be moving snapshots to the same weekday as full releases, Tuesdays.
 
 This week we are releasing the first snapshot of the second game drop of 2025, including the happy ghast, ghastling, dried ghast and ghast harness. Experience soaring new gameplay thanks to the happy ghast, and discover how to raise one of your own – from retrieving a dried ghast block from the Nether to submerging it in water in the Overworld to spawn a ghastling. We are also adding the locator bar to Java this week, you can finally easily find your friends when you are out adventuring.
 
 Take your first test flight with the happy ghast, craft your own dried ghast – and send us your [feedback](https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes)!
 
-# New Features
+## New Features
 
 -   Added Dried Ghast block
 -   Added Happy Ghast mob
 -   Added Harness items
 -   Added new advancements
 
-## Dried Ghast block
+### Dried Ghast block
 
 -   Can be found in the Nether in Nether Fossil structures
 -   Is crafted with 1 Bone Block and 8 Ghast Tears
@@ -20,9 +22,9 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 -   If mined during the waterlogging, it will revert to its “dry” state regardless of what state it has reached during waterlogging
 -   Will revert states back to its initial “dry” state when it is taken away from being waterlogged, using the same time scale
 
-## Happy Ghast mob
+### Happy Ghast mob
 
-### Ghastling
+#### Ghastling
 
 -   Ghastling is a young version of the Happy Ghast mob
 -   Spawns from a Dried Ghast block that has continuously been waterlogged for about 20 minutes
@@ -34,7 +36,7 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 -   Can be tempted and fed using Snowballs
 -   Will grow up into a Happy Ghast after about 20 minutes (or faster if fed Snowballs)
 
-### Happy Ghast
+#### Happy Ghast
 
 -   The adult Happy Ghast is a new flying mount that can carry up to four players
 -   Grows up from a Ghastling after about 20 minutes (or faster if the Ghastling is fed Snowballs)
@@ -63,11 +65,11 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
     -   If wearing a Harness, the Happy Ghast idles closer to the home position (within 32 blocks)
 -   The Happy Ghast will try to stay close to blocks when roaming on its own
 
-## Ghast
+### Ghast
 
 -   Updated Ghast texture
 
-## Harness items
+### Harness items
 
 -   Harness is a new item that can be equipped on a Happy Ghast to allow players to ride it
 -   It is 16 new items, one for each color
@@ -77,16 +79,16 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 -   Allows up to 4 players to mount the Happy Ghast
 -   Can be removed from the Happy Ghast using Shears but only when no players are mounted
 
-## Advancements
+### Advancements
 
 -   Added new "Stay Hydrated!" Husbandry Advancemet when a Dried Ghast Block is placed into Water
 -   Added "Heart Transplanter" Adventure Advancement that is unlocked when a player places a Creaking Heart with the correct alignment between two Pale Oak Log blocks
 
-# Experimental Features
+## Experimental Features
 
 -   This snapshot introduces a new experimental Feature Toggle that adds a locator bar to find your friends easily. You must turn on this Feature Toggle in the Experiments Menu when creating a new world if you want to test the locator bar. You can find more information about Feature Toggles [here](https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition).
 
-## Locator Bar
+### Locator Bar
 
 The Locator Bar is an experimental new UI element for players that displays the direction of Waypoints.
 
@@ -95,12 +97,12 @@ The Locator Bar is an experimental new UI element for players that displays the 
 -   The Locator Bar will display colored indicators when the camera is facing within 120 degrees towards a Waypoint. If a Waypoint is above/below the camera's viewport (the screen) an up/down arrow will display
 -   Any Waypoint that is determined to be a Player or Mob that belongs to a Team then the color indicator will match the Team color
 
-### Player Changes
+#### Player Changes
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-### Item Changes
+#### Item Changes
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -112,27 +114,27 @@ The Locator Bar is an experimental new UI element for players that displays the 
     -   Dragon Head
     -   Piglin Head
 
-### Potion Changes
+#### Potion Changes
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
-### Game Rules
+#### Game Rules
 
-#### Added `useLocatorBar`
+##### Added `useLocatorBar`
 
 -   Default is enabled for servers running the Locator Bar experiment
 -   Toggling to off will remove all existing Waypoints from all players
 
-### Attributes
+#### Attributes
 
-#### Added `waypoint_transmit_range` and `waypoint_receive_range`
+##### Added `waypoint_transmit_range` and `waypoint_receive_range`
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
 -   Mobs with a transmission range above zero will send waypoint packets to nearby receivers
 -   Similarly, receivers only receive with a range above zero, and cannot receive waypoints outside of this range
 
-### `waypoint` command
+#### `waypoint` command
 
 This is a new command for querying and modifying waypoints.
 
@@ -158,7 +160,7 @@ Parameters:
         -   `*_end` is the far values (furthest from the player)
     -   `reset` will restore the default behavior of distant Locator Bar icons fading out to 0.2 alpha
 
-# Changes
+## Changes
 
 -   Updated the textures for the Ghast
 -   Increased the third-person camera distance when spectating or riding Ghasts, Ender Dragons, and Giants
@@ -166,7 +168,7 @@ Parameters:
 -   Spectators will now teleport together with, but stop spectating, entities that move to other dimensions
 -   Rules for when ambient desert blocks sounds play have been tweaked
 
-## Ambient Desert Block Sounds Changes
+### Ambient Desert Block Sounds Changes
 
 -   Ambient sand sounds no longer require sky access to play
 -   Ambient sand sounds now have a slightly decreased chance to play
@@ -176,7 +178,7 @@ Parameters:
 -   Short Dry Grass and Tall Dry Grass can now trigger ambient wind sounds when above 2 Sand, Red Sand or Terracotta blocks
 -   Dead Bush ambient sounds now have a slightly increased chance of playing
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 72
 -   The Resource Pack version is now 56
@@ -184,21 +186,21 @@ Parameters:
 
 > **Developer's Note**: _The GUI rendering code is undergoing a significant refactoring in this Snapshot series. The version of it released in this Snapshot is not supposed to be final and will be further iterated upon._
 
-# Data Pack Version 72
+## Data Pack Version 72
 
 -   Dimension Type definitions have a new optional field, `cloud_height` that indicates on what y-level the clouds start in the dimension
 -   New `version` command has been added
 -   New `datapack create` subcommand has been added
 
-## Commands
+### Commands
 
-### Added `version`
+#### Added `version`
 
 -   No arguments
 -   Prints current version information on server side
 -   Available in singleplayer or for server operators
 
-### Added `datapack create`
+#### Added `datapack create`
 
 -   Creates new empty directory data pack for current world
 -   Supported pack version is always equal to one supported by game
@@ -207,18 +209,18 @@ Parameters:
     -   `id` - new pack name, must be a valid directory name
     -   `name` - text component to be placed in `description` in `pack.mcmeta`
 
-## Attributes
+### Attributes
 
-### Added `camera_distance`
+#### Added `camera_distance`
 
 -   Default value: `4.0`
 -   Modifies the distance at which the camera is placed away from the player or spectated entity when in a third-person view
 -   If the entity being ridden has a larger `camera_distance` attribute, that distance will be used
 -   This distance is multiplied by the `scale` attribute to get a final target camera distance
 
-## Data Components
+### Data Components
 
-### `attribute_modifiers` Item Component
+#### `attribute_modifiers` Item Component
 
 -   Added optional `display` field to `attributes_modifiers` entries
     -   There are 3 `display` types:
@@ -227,48 +229,48 @@ Parameters:
         -   `override` - Replaces the shown attribute modifier text
             -   Contains a single field `value` for the text contents to show for this attribute modifer entry
 
-## Entity Data
+### Entity Data
 
-### `area_effect_cloud`
+#### `area_effect_cloud`
 
 -   The `Particle` field has been renamed to `custom_particle`, and now always functions as an exact override for the default colored `entity_effect` particle
     -   The field will not be written if no override is specified
     -   The color will no longer be inherited from the potion contents when specifying the `entity_effect` or `tinted_leaves` particle types
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#triggers_ambient_desert_dry_vegetation_block_sounds` - blocks that can trigger ambient desert dry vegetation sounds to play from blocks above
 -   `#plays_ambient_desert_block_sounds` has been renamed to `#triggers_ambient_desert_sand_block_sounds`
 
-### Item Tags
+#### Item Tags
 
 -   Added `#happy_ghast_food` - items that can be used to feed Happy Ghasts
 -   Added `#happy_ghast_tempt_items` - items that can be used to tempt Happy Ghasts
 
-### Entity Tags
+#### Entity Tags
 
 -   Added `#can_equip_harness` - entities that can equip the Harness items
 -   Added `#followable_friendly_mobs` - non-baby entities that will be followed by Baby Happy Ghasts
 
-# Resource Pack Version 56
+## Resource Pack Version 56
 
 -   The game will now consistently respect `blur` texture parameter in `.png.mcmeta` files
 
-## Sound Events
+### Sound Events
 
 -   `block.sand.wind` has been renamed to `block.dry_grass.ambient`
 
-## Sounds
+### Sounds
 
 -   Changed location on the sounds for glow squid, squid, guardian, horse, rabbit and pufferfish from `entity` folder to the `mob` folder
 
-## Equipment Assets
+### Equipment Assets
 
 -   Added new `happy_ghast_body` layer type, rendering in the body slot of the Happy Ghast
 
-# Fixed bugs in 25w15a
+## Fixed bugs in 25w15a
 
 -   [MC-147260](https://bugs.mojang.com/browse/MC-147260) Map icons are not displayed in the cartography table
 -   [MC-191306](https://bugs.mojang.com/browse/MC-191306) Sounds played using /playsound are played in all dimensions

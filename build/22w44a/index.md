@@ -1,8 +1,10 @@
+# 22w44a
+
 Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
 
 Happy Mining!
 
-# Changes in 22w44a
+## Changes in 22w44a
 
 -   Bamboo Mosaic can now be used as fuel
 -   Chiseled Bookshelves now works with Hoppers
@@ -11,7 +13,7 @@ Happy Mining!
 -   Spawn Egg changes
 -   Step sound changes
 
-## Creative Inventory changes
+### Creative Inventory changes
 
 A (hopefully) final round of changes have been made to the Creative Tab orderings to address feedback:
 
@@ -44,7 +46,7 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
     -   Consumables
 -   Reordered ore materials and blocks to be more consistent across tabs
 
-## Monster Spawners
+### Monster Spawners
 
 -   Spawners no longer have a default mob spawn type when placed by a player (previously was the Pig)
 -   Will not emit fire particles when a mob spawn type has not been defined
@@ -53,13 +55,13 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
 -   The mob type is now displayed in the hover description of a Spawner item stack
     -   If a mob type has not been defined yet, the hover description will describe how to set it
 
-## Spawn Eggs
+### Spawn Eggs
 
 -   Added new Spawn Egg items for Ender Dragon, Iron Golem, Snow Golem and Wither mobs to Creative mode
     -   Ender Dragon and Wither Spawn Eggs will only be available through commands to prevent accidental destruction of player builds
 -   Polar Bear Spawn Egg colors have changed to distinguish it from the Ghast Spawn Egg
 
-## Sounds
+### Sounds
 
 -   Step sounds can now be heard when walking on:
     -   Carpets
@@ -71,11 +73,11 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
     -   Crimson Roots
     -   Warped Roots
 
-# Technical Changes in 22w44a
+## Technical Changes in 22w44a
 
 -   Added new game rules
 
-## Game Rules
+### Game Rules
 
 -   Added `blockExplosionDropDecay`, `mobExplosionDropDecay` and `tntExplosionDropDecay` game rules
     -   When set to `false`, all blocks drop loot
@@ -92,7 +94,7 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
 -   Added `globalSoundEvents` game rule, controlling whether certain gameplay moments are heard by all players regardless of location
     -   Defaults to `true`
 
-# Fixed bugs in 22w44
+## Fixed bugs in 22w44
 
 -   [MC-30403](https://bugs.mojang.com/browse/MC-30403) Sprinting isn't canceled when dismounting rideable entities while sprinting
 -   [MC-137136](https://bugs.mojang.com/browse/MC-137136) Lily Pads use incorrect sound

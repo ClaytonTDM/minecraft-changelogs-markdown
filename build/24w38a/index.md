@@ -1,43 +1,45 @@
+# 24w38a
+
 Hey! This snapshot brings you dyable Bundles in the Bundles experiment and fully-featured world creation for Realms, including Hardcore mode.
 
 Happy dyeing!
 
-# Experimental Features
+## Experimental Features
 
-## Bundles
+### Bundles
 
 -   The Bundle can be dyed 16 different colors using Dyes
 
-# Changes
+## Changes
 
 -   Shulker Box coloring recipes are now shown in the recipe book
 -   Updated the world creation screen for Realms
 -   Enabled hardcore mode for Realms
 -   Throwing items out of your inventory very quickly in creative mode is now throttled
 
-## Realms
+### Realms
 
 -   Now uses the normal, fully featured world creation screen
     -   Enables game rule customization
     -   Enables datapack customization
 
-### Hardcore mode
+#### Hardcore mode
 
 Hardcore mode is now available in Realms and is accessible by creating a new world or recreating an existing one
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 54
 -   Resource Pack version is now 39
 -   Temporary option for ignoring connection errors on client side (`strictErrorHandling`) has been removed
 
-# Data Pack Versions 54
+## Data Pack Versions 54
 
 -   Introduced new Item tag `bundles` which includes all Bundle Items
 
-## New Recipe Type
+### New Recipe Type
 
-### `crafting_transmute` recipe type
+#### `crafting_transmute` recipe type
 
 -   New crafting recipe type has been introduced: `crafting_transmute`
 -   When matched, output will copy the input item stack, changing the item type but preserving all stack components
@@ -49,14 +51,14 @@ Hardcore mode is now available in Realms and is accessible by creating a new wor
     -   `material` - additional ingredient to use
     -   `result` - item type to use for output
 
-# Resource Pack Versions 39
+## Resource Pack Versions 39
 
 -   Bundle models and textures have 16 colored variants
 -   The models and UV mapping related to the Torch and blocks containing Redstone Torch have been updated
     -   The "inverted" model now uses 6 separate faces creating the same effect as a model with a negative size
     -   Updated the UV layout for the inverted model
 
-# Fixed bugs in 24w38a
+## Fixed bugs in 24w38a
 
 -   [MC-13246](https://bugs.mojang.com/browse/MC-13246) On certain enchanted items, the Anvil will display a "too expensive" message before attempting to repair, combine, or rename them
 -   [MC-134626](https://bugs.mojang.com/browse/MC-134626) Squids/glow squids bounce up and down in bubble columns, teleporting high up in the air

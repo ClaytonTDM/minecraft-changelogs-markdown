@@ -1,29 +1,31 @@
+# 24w09a
+
 Hello! Here is a slightly bigger than usual snapshot with a lot of technical changes, refreshed UI, another iteration of Wolf Armor, and tweaks to new features.
 
 Since the initial release of the Wolf Armor, we have been working on improving it to increase its protection, usability and add customization. For protection there is a new approach to armor, which considers the player's need to quickly see the state of the armor without using UI elements, and the ability to act quickly to help their pet wolf if needed. Please try it out and let us know what you think over at the feedback site: [Let's talk about Wolf Armor!](https://aka.ms/wolfarmorfeedback)
 
-# Experimental Features
+## Experimental Features
 
-## Bogged
+### Bogged
 
 -   The Bogged drops 2 mushrooms (either both red/brown or one of each) when sheared
 -   Updated Bogged texture and model
 
-## Wind Charge
+### Wind Charge
 
 -   Removed randomness from the radius of both Breeze- and player-shot Wind Charges
 
-## Vault
+### Vault
 
 -   Additional changes to the Vault texture to even further distinguish from Trial Spawners
 
-# Changes
+## Changes
 
 -   Changes to Wolf Armor
 -   The game's UI has been updated with a fresher look
 -   Ctrl+Picking a renamed block (such as a Chest) in Creative Mode will now give a renamed item
 
-## Wolf Armor
+### Wolf Armor
 
 -   The Wolf Armor will protect the wolf from most damage sources until the armor loses all durability and breaks
 -   Wolf Armor shows signs of increased breakage as durability goes down
@@ -31,7 +33,7 @@ Since the initial release of the Wolf Armor, we have been working on improving i
 -   Wolf armor can be dyed in similar fashion to Leather Armor
 -   The Wolf's owner can now repair Wolf Armor on a Wolf
 
-## UI
+### UI
 
 The UI has been updated to sport a fresher look and to be more consistent when it comes to the layout of different UI elements, all while retaining the essence and feel of the old screens.
 
@@ -49,7 +51,7 @@ As always, we're eager to hear your thoughts and opinions on further improvement
 -   Lists now have clearer borders at the top and bottom
 -   After defeating the Ender Dragon and entering the End Portal, the End Poem and credits are now displayed with a background based on the animated End Portal effect
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 33
 -   The Resource Pack version is now 28
@@ -58,13 +60,13 @@ As always, we're eager to hear your thoughts and opinions on further improvement
 -   Trying join a single player world with less than 64 MB free disk space will show a warning screen
     -   Additionally, a warning toast will be shown periodically while in game
 
-# Data Pack Version 33
+## Data Pack Version 33
 
 -   Added `minecraft:bypasses_wolf_armor` for damage sources that can not be absorbed by Wolf Armor
 -   Loot table entry with id `loot_table` now also accepts inline loot tables
 -   Unstructured NBT data attached to stacks of items (`tag` field) has been replaced with structured 'components'
 
-## Loot Tables
+### Loot Tables
 
 Loot table entry `loot_table` (which returns all items from provided nested loot table) now has the following syntax:
 
@@ -72,7 +74,7 @@ Loot table entry `loot_table` (which returns all items from provided nested loot
     -   namespaced id - reference to another named loot table
     -   full loot table (same format as in standalone file)
 
-## Item Stack Components
+### Item Stack Components
 
 We are making some large changes to how Item Stack-specific properties are stored and represented in this snapshot, replacing the current NBT 'tag' with structured components.
 
@@ -110,7 +112,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   Block definitions are now added to `blocks.json` report (note: those definitions are not used yet and present only for informational purposes)
 -   If the `key_item` field of Vault block is not present, the Vault cannot be unlocked
 
-### `minecraft:custom_data`
+#### `minecraft:custom_data`
 
 -   Can be used for custom data storage on an item
 -   Can be accessed with pre-existing tag syntax (`{...}`) in commands
@@ -119,7 +121,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   Format: object with any fields
     -   e.g. `custom_data={some:'data'}`
 
-### `minecraft:damage`
+#### `minecraft:damage`
 
 -   The amount of durability removed from an item
 -   If removed, the item will not be damageable
@@ -128,7 +130,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `damage=12`
 -   For damageable items, has an implicit default value of: `0`
 
-### `minecraft:repair_cost`
+#### `minecraft:repair_cost`
 
 -   The additional experience cost required to modify an item in an Anvil
 -   Replaces `RepairCost` tag
@@ -136,7 +138,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `repair_cost=12`
 -   If not set, has an implicit default value of: `0`
 
-### `minecraft:unbreakable`
+#### `minecraft:unbreakable`
 
 -   If set, the item will not lose any durability when used
 -   Replaces `Unbreakable` boolean tag
@@ -146,7 +148,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   Replaces 3rd bit of `HideFlags` tag
     -   e.g. `unbreakable={}`, `unbreakable={show_in_tooltip:false}`
 
-### `minecraft:enchantments`
+#### `minecraft:enchantments`
 
 -   Stores a list of enchantments and their levels on an item
 -   Replaces `Enchantments` tag
@@ -158,7 +160,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `enchantments={levels:{'minecraft:protection':2},show_in_tooltip:false}`
 -   If not set, has an implicit default value of: `{levels:{}}`
 
-### `minecraft:stored_enchantments`
+#### `minecraft:stored_enchantments`
 
 -   Stores list of enchantments and their levels for an Enchanted Book
 -   The effects provided by enchantments do not apply from this component
@@ -167,14 +169,14 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   `show_in_tooltip` value replaces 6th bit of `HideFlags` tag
 -   On Enchanted Books, has an implicit default value of: `{levels:{}}`
 
-### `minecraft:custom_name`
+#### `minecraft:custom_name`
 
 -   Custom name override for an item
 -   Replaces `display.Name` tag
 -   Format: JSON chat component string
     -   e.g. `custom_name='{"text": "This item is renamed!", "color": "red"}'`
 
-### `minecraft:lore`
+#### `minecraft:lore`
 
 -   Additional lines to include in an item's tooltip
 -   Replaces `display.Lore` tag
@@ -182,7 +184,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `lore=['{"text": "The cake is a lie!"}']`
 -   If not set, has an implicit default value of: `[]`
 
-### `minecraft:can_break`
+#### `minecraft:can_break`
 
 -   Controls which blocks a player in Adventure mode can break with this item
 -   Replaces `CanDestroy` tag
@@ -198,7 +200,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   Alternatively, can be represented by a single block predicate
         -   e.g. `can_break={blocks:'minecraft:stone'}`
 
-### `minecraft:can_place_on`
+#### `minecraft:can_place_on`
 
 -   Controls which blocks a player in Adventure mode can place on with this item
 -   Replaces `CanPlaceOn` tag
@@ -211,7 +213,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   Alternatively, can be represented by a single block predicate
         -   e.g. `can_place_on={blocks:'minecraft:stone'}`
 
-### `minecraft:dyed_color`
+#### `minecraft:dyed_color`
 
 -   Represents a color applied to a dyeable item (`#minecraft:dyeable` tag)
 -   Replaces `display.color` tag
@@ -221,7 +223,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   Replaces 7th bit of `HideFlags` tag
     -   e.g. `dyed_color={rgb:16711680}`
 
-### `minecraft:attribute_modifiers`
+#### `minecraft:attribute_modifiers`
 
 -   Holds attribute modifiers applied to any item
 -   Replaces `AttributeModifiers` tag
@@ -258,7 +260,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `attribute_modifiers={modifiers:[type:'minecraft:generic.scale',uuid:[1,2,3,4],name:'Big!',amount:1.0,operation:'add_multiplied_base']}`
 -   If not set, has an implicit default value based on the item type's default attributes (e.g. attack damage for weapons)
 
-### `minecraft:charged_projectiles`
+#### `minecraft:charged_projectiles`
 
 -   Holds all projectiles that have been loaded into a Crossbow
 -   If not present, the Crossbow is not charged
@@ -267,14 +269,14 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `charged_projectiles=[{id:'minecraft:arrow'}]`
     -   No longer restricted to 3 entries
 
-### `minecraft:intangible_projectile`
+#### `minecraft:intangible_projectile`
 
 -   Marks that a projectile item would be intangible when fired (i.e. can only be picked up by a creative mode player)
 -   Only set when items are inside a Crossbow's `charged_projectiles` component
 -   Format: empty object
     -   e.g. `intangible_projectile={}`
 
-### `minecraft:bundle_contents`
+#### `minecraft:bundle_contents`
 
 -   Holds all items stored inside of a Bundle
 -   If removed, items cannot be added to the Bundle
@@ -283,7 +285,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `bundle_contents=[{id:'minecraft:poisonous_potato'}]`
 -   On Bundles, has an implicit default value of: `[]`
 
-### `minecraft:map_color`
+#### `minecraft:map_color`
 
 -   Represents the tint of the decorations on the Filled Map item
 -   Replaces `display.MapColor` tag
@@ -291,7 +293,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `map_color=16711680`
 -   On Filled Maps, has an implicit default value of: `4603950`
 
-### `minecraft:map_decorations`
+#### `minecraft:map_decorations`
 
 -   Holds a list of markers to be placed on a Filled Map (used for Explorer Maps)
 -   Replaces `Decorations` tag
@@ -339,21 +341,21 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `map_decorations={'Some marker':{type:'target_x',x:123.0,z:-45.0,rotation:0.0f}}`
 -   On Filled Maps, has an implicit default value of: `{}`
 
-### `minecraft:map_id`
+#### `minecraft:map_id`
 
 -   References the shared map state holding map contents and markers for a Filled Map
 -   Replaces `map` tag
 -   Format: integer id
     -   e.g. `map_id=1`
 
-### `minecraft:custom_model_data`
+#### `minecraft:custom_model_data`
 
 -   Can be used to replace the models of items by selecting for the `minecraft:custom_model_data` property in the item model
 -   Replaces `CustomModelData` tag
 -   Format: integer value
     -   e.g. `custom_model_data=43`
 
-### `minecraft:potion_contents`
+#### `minecraft:potion_contents`
 
 -   Holds the contents of a potion (Potion, Splash Potion, Lingering Potion), or potion applied to an item (Tipped Arrow)
 -   Replaces `Potion`, `CustomPotionColor`, and `custom_potion_effects` tags
@@ -367,7 +369,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `potion_contents={potion:'minecraft:invisibility',custom_color:16711680}`
 -   On Potion or Tipped Arrow items, has an implicit default value of: `{}`
 
-### `minecraft:writable_book_contents`
+#### `minecraft:writable_book_contents`
 
 -   Holds the contents in a Book and Quill
 -   Replaces `pages` and `filtered_pages` tags
@@ -383,7 +385,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `writable_book_contents={pages:[{text:'Hello world!'}]}`
 -   On Book and Quill, has an implicit default value of: `{pages:[]}`
 
-### `minecraft:written_book_contents`
+#### `minecraft:written_book_contents`
 
 -   Holds the contents and metadata of a Written Book
 -   Replaces `pages`, `filtered_pages`, `title`, `filtered_title`, `author`, `generation`, and `resolved` tags
@@ -399,7 +401,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   If `false`, will be resolved when opened by a player
     -   e.g. `written_book_contents={pages:[{text:'Hello world!'}],title:{text:'A delightful read'},author:'Herobrine',generation:1,resolved:true}`
 
-### `minecraft:trim`
+#### `minecraft:trim`
 
 -   Holds the trims applied to an item
     -   Presence of the component is no longer restricted by the `#minecraft:trimmable_armor` tag (although, this tag is still used for recipes)
@@ -411,7 +413,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   Replaces 8th bit of `HideFlags` tag
     -   e.g. `trim={pattern:'minecraft:silence',material:'minecraft:redstone'}`
 
-### `minecraft:suspicious_stew`
+#### `minecraft:suspicious_stew`
 
 -   Holds the effects that will be applied when consuming Suspicious Stew
 -   Replaces `effects` tag of the same format
@@ -421,14 +423,14 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `suspicious_stew=[{id:'minecraft:poison'}]`
 -   On Suspicious Stew, has an implicit default value of: `[]`
 
-### `minecraft:hide_additional_tooltip`
+#### `minecraft:hide_additional_tooltip`
 
 -   If present, disables 'additional' tooltip part which comes from the item type
 -   Replaces 6th bit of `HideFlags` tag
 -   Format: empty object
     -   e.g. `hide_additional_tooltip={}`
 
-### `minecraft:debug_stick_state`
+#### `minecraft:debug_stick_state`
 
 -   Stores the selected block state properties used by a Debug Stick
 -   Replaces `DebugProperty` tag
@@ -436,7 +438,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `debug_stick_state={'minecraft:turtle_egg':'eggs','minecraft:furnace':'facing'}`
 -   On Debug Stick, has an implicit default value of: `{}`
 
-### `minecraft:entity_data`
+#### `minecraft:entity_data`
 
 -   Stores unstructured NBT data to apply to an entity when using an item that spawns an entity, such as a Spawn Egg or Armor Stand
 -   Replaces previous `EntityTag` tag, with same behavior
@@ -445,7 +447,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   Any additional fields will be merged into the entity when spawned
     -   e.g. `entity_data={id:'minecraft:pig',Health:1.0f}`
 
-### `minecraft:bucket_entity_data`
+#### `minecraft:bucket_entity_data`
 
 -   Stores unstructured NBT data to apply to an entity when placed from a bucket
 -   Replaces `NoAI`, `Silent`, `NoGravity`, `Glowing`, `Invulnerable`, `Health`, `Age`, `Variant`, `HuntingCooldown`, and `BucketVariantTag` tags
@@ -454,14 +456,14 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `bucket_entity_data={NoAI:1,Age:43}`
 -   On bucketed mob items, has an implicit default value of: `{}`
 
-### `minecraft:instrument`
+#### `minecraft:instrument`
 
 -   Holds the instrument type used by a Goat Horn
 -   Replaces `instrument` tag of same format
 -   Format: instrument id
     -   e.g. `instrument='minecraft:ponder_goat_horn'`
 
-### `minecraft:recipes`
+#### `minecraft:recipes`
 
 -   List of recipes that should be unlocked when using the Knowledge Book item
 -   Replaces `Recipes` tag of same format
@@ -469,7 +471,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `recipes=['minecraft:acacia_boat','minecraft:anvil']`
 -   On Knowledge Book, has an implicit default value of: `[]`
 
-### `minecraft:lodestone_target`
+#### `minecraft:lodestone_target`
 
 -   If present, specifies the target Lodestone that a Compass should point towards
 -   Replaces `LodestonePos`, `LodestoneDimension`, and `LodestoneTracked` tags
@@ -480,7 +482,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   If `true`, when the Lodestone at the target position is removed, the component will be removed
     -   e.g. `lodestone_target={pos:[13,64,-43],dimension:'minecraft:the_nether'}`
 
-### `minecraft:firework_explosion`
+#### `minecraft:firework_explosion`
 
 -   Stores the explosion crafted in a Firework Star
 -   Replaces `Explosion.Type`, `Explosion.Colors`, `Explosion.FadeColors`, `Explosion.Trail`, and `Explosion.Flicker` tags
@@ -501,7 +503,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   Renamed from `Flicker` tag
     -   e.g. `firework_explosion={shape:'large_ball',colors:[16711680],has_trail:true}`
 
-### `minecraft:fireworks`
+#### `minecraft:fireworks`
 
 -   Stores all explosions crafted into a Firework Rocket, as well as flight duration
 -   Replaces `Fireworks.Explosions` and `Fireworks.Flight` tags
@@ -512,7 +514,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `fireworks={explosions:[{shape:'large_ball',colors:[16711680],has_trail:true}],flight_duration:2}`
 -   On Firework Rocket, has an implicit default value of: `{explosions:[],flight_duration:1}`
 
-### `minecraft:profile`
+#### `minecraft:profile`
 
 -   Controls the skin displayed on a Player Head
 -   Copied to Player Head block when placed
@@ -527,7 +529,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   `signature`: string (optional)
     -   e.g. `profile={name:'MHF_Sheep'}`
 
-### `minecraft:note_block_sound`
+#### `minecraft:note_block_sound`
 
 -   Controls the sound played by a Player Head when placed on a Note Block
 -   Copied to Player Head block when placed
@@ -535,7 +537,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   Format: sound event id
     -   e.g. `note_block_sound='minecraft:ambient.cave'`
 
-### `minecraft:base_color`
+#### `minecraft:base_color`
 
 -   Stores the base color for a Shield
 -   Replaces `BlockEntityTag.Base` tag
@@ -558,7 +560,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   `black` (was `15`)
     -   e.g. `base_color='magenta'`
 
-### `minecraft:banner_patterns`
+#### `minecraft:banner_patterns`
 
 -   Stores the additional patterns applied to a Banner or Shield
 -   Copied to Banner block when placed
@@ -571,7 +573,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `banner_patterns=[{pattern:'minecraft:stripe_top',color:'red'}]`
 -   On Banners and Shields, has an implicit default value of: `[]`
 
-### `minecraft:pot_decorations`
+#### `minecraft:pot_decorations`
 
 -   Stores the Sherds applied to each side of a Decorated Pot
 -   Copied to Decorated Pot block when placed
@@ -580,7 +582,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `['arms_up_pottery_sherd','angler_pottery_sherd','danger_pottery_sherd','shelter_pottery_sherd']`
 -   On Decorated Pots, has an implicit default value of: `['minecraft:brick','minecraft:brick','minecraft:brick','minecraft:brick']`
 
-### `minecraft:container`
+#### `minecraft:container`
 
 -   Holds the contents of Shulker Boxes in item form
 -   Copied to Shulker Box block when placed
@@ -591,7 +593,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g. `container=[{slot:7,item:{id:'diamond_pickaxe',components:{'minecraft:unbreakable':{}}}}]`
 -   On Shulker Boxes, has an implicit default value of: `[]`
 
-### `minecraft:bees`
+#### `minecraft:bees`
 
 -   Holds the bees inside a Beehive or Bee Nest
 -   Copied to Beehive or Bee Nest block when placed
@@ -605,7 +607,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   e.g: `bees=[{entity_data:{id='minecraft:bee'},ticks_in_hive:3,min_ticks_in_hive:10}]`
 -   On Beehive and Bee Nest, has an implicit default value of: `[]`
 
-### `minecraft:lock`
+#### `minecraft:lock`
 
 -   Holds the lock state of a container-like block
     -   An item with a custom name of the same value must be used to open this container
@@ -614,7 +616,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   Format: string value, representing the key
     -   e.g: `lock='hunter2'`
 
-### `minecraft:container_loot`
+#### `minecraft:container_loot`
 
 -   Holds the unresolved loot table and seed of a container-like block
 -   Copied to container block when placed
@@ -625,7 +627,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   If not specified, or `0`, the seed will be picked randomly when the loot table is evaluated
     -   e.g. `container_loot={loot_table:'minecraft:chests/buried_treasure',seed:123}`
 
-### `minecraft:block_entity_data`
+#### `minecraft:block_entity_data`
 
 -   Stores unstructured NBT data to apply to a block entity when placing a block such as a Chest or Furnace
 -   Replaces previous `BlockEntityTag` tag, with same behavior
@@ -636,14 +638,14 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   Any additional fields will be merged into the block entity when placed
     -   e.g. `block_entity_data={id:'minecraft:chest',Items:[{Slot:1,item:'minecraft:diamond'}]}`
 
-### `minecraft:block_state`
+#### `minecraft:block_state`
 
 -   Holds block state properties to apply when placing a block
 -   Replaces `BlockStateTag` tag
 -   Format: map of property key to property value
     -   e.g: `block_state={eggs:'10'}`
 
-### `minecraft:enchantment_glint_override`
+#### `minecraft:enchantment_glint_override`
 
 -   Overrides the enchantment glint effect on an item
 -   Can be used in the same way that an invalid `Enchantments` tag would previously behave to add a glint
@@ -652,7 +654,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   If `false`, an item with a glint will not display this glint (either from enchantments or intrinsic properties of the item)
     -   e.g: `enchantment_glint_override=true`
 
-## Commands
+### Commands
 
 -   Commands such as `/give`, `/item`, `/loot`, and `/clear` have updated item syntax
 -   Components can now be specified after the item name in square brackets
@@ -678,7 +680,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   `multiply_base` -> `add_multiplied_base`
     -   `multiply` -> `add_multiplied_total`
 
-## Item Stack Format
+### Item Stack Format
 
 -   Along with format changes due to components, the structures of item stacks on disk and in data packs have been updated for consistency
 -   Previous `id` (string) and `Count` (byte) fields have been replaced with `id` (namespaced string) and `count` (integer) fields
@@ -695,7 +697,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   Instead, in places that support it, the field should be ommitted
     -   In some cases, such as lists of stacks (e.g. `HandItems` in living entities), an empty map (`{}`) is used to represent empty stacks
 
-## Other Format Changes
+### Other Format Changes
 
 -   Tipped Arrows no longer store their applied potion effects
     -   This is instead fetched from their held `item`
@@ -714,7 +716,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   Villager Trades can be configured to accept only undamaged items by selecting for `'minecraft:damage': 0`
     -   By default, if no components are specified, any item will be accepted (similar to `components` field in item predicates)
 
-## Loot Item Functions
+### Loot Item Functions
 
 -   Added `minecraft:set_components` function
     -   Adds or replaces the given component on the input item
@@ -739,7 +741,7 @@ With such a large change, we deeply value your feedback! You can share your thou
         -   `multiply_base` -> `add_multiplied_base`
         -   `multiply_total` -> `add_multiplied_total`
 
-## Predicate Formats in Loot Tables & Advancements
+### Predicate Formats in Loot Tables & Advancements
 
 -   Item predicate format has been updated:
     -   `tag` field has been removed
@@ -763,11 +765,11 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   `biome` -> `biomes`, and supports a single entry, hash-prefixed biome tag, or list of biomes
     -   `structure` -> `structures`, and supports a single entry, hash-prefixed structure tag, or list of structures
 
-## Enchantments
+### Enchantments
 
 -   Projectile weapon Enchantments like `infinity`, `multishot` and `piercing` now work on both Crossbows and Bows, if placed onto the alternative weapon using data manipulation or a change to the `enchantable/*` tags)
 
-# Resource Pack Version 27
+## Resource Pack Version 27
 
 -   Added additional textures to support colored layers of Wolf Armor for the wolf model and Wolf Armor item:
     -   `textures/entity/wolf/wolf_armor_overlay.png`
@@ -778,7 +780,7 @@ With such a large change, we deeply value your feedback! You can share your thou
     -   `textures/entity/wolf/wolf_armor_crackiness_medium.png`
     -   `textures/entity/wolf/wolf_armor_crackiness_high.png`
 
-# Resource Pack Version 28
+## Resource Pack Version 28
 
 -   The `options_background` and the `light_dirt_background` textures have been removed
     -   Instead, `menu_background` is used as the background of screens, while `menu_list_background` is used for the background of lists
@@ -788,7 +790,7 @@ With such a large change, we deeply value your feedback! You can share your thou
 -   The `widget\scroller_background` sprite has been added
 -   The following textures in Realms have been removed: `changes`, `changes_highlighted`, `restore`, `restore_highlighted`, `make_operator_highlighted`, `remove_operator_highlighted`, `remove_player_highlighted`
 
-# Fixed bugs in Snapshot 24w09a
+## Fixed bugs in Snapshot 24w09a
 
 -   [MC-118890](https://bugs.mojang.com/browse/MC-118890) Tipped arrows stuck in the ground never lose their effect
 -   [MC-195572](https://bugs.mojang.com/browse/MC-195572) The fog from lava is much denser when having the Fire Resistance effect active compared to Bedrock Edition

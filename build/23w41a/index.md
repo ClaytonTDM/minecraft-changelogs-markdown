@@ -1,20 +1,22 @@
+# 23w41a
+
 For this week's Snapshot, we've made improvements to the Decorated Pots!
 
 Additionally, Realms is now available in Snapshots moving forward! Any player who has an active Realms subscription is eligible to create a free Snapshot Realm. This Snapshot Realm will be separate from your regular Realm to prevent any issues from impacting your regular Realm. For more information on how Snapshot Realms work, please see Realms in [Minecraft: Java Edition Snapshot FAQ](https://help.minecraft.net/hc/en-us/articles/20143730191245).
 
-# New Features
+## New Features
 
-## Snapshot Realms
+### Snapshot Realms
 
 -   Realms is now available in Snapshots, Pre-Releases, and Release Candidates
 -   The version of the last played world on a Realm is displayed in the Realms list
 -   Experiments are available for newly created worlds
 
-# Changes
+## Changes
 
 -   Decorated Pots can now store items, and can be smashed by projectiles
 
-## Decorated Pots
+### Decorated Pots
 
 -   Decorated Pots now store up to a single stack of items
 -   Hoppers, Hopper Minecarts and Droppers can now insert and/or extract items from Decorated Pots
@@ -27,12 +29,12 @@ Additionally, Realms is now available in Snapshots moving forward! Any player wh
 
 We want to hear your feedback on these improvements to Decorated Pots - let us know what you think in [our dedicated feedback site post](https://feedback.minecraft.net/hc/en-us/community/posts/20289952762637-Let-s-talk-about-Decorated-Pot-improvements-)!
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 20
 -   The name of non-living entities will now be shown if looked at and a CustomName is set, or always displayed if CustomNameVisible is set, similar to living entities
 
-# Data Pack Version 20
+## Data Pack Version 20
 
 -   Changed `function` command results
 -   Adjusted check for gamerule `maxCommandChainLength`
@@ -42,9 +44,9 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
 -   Decorated Pots with `cracked` state set to true will always shatter when broken
 -   Added new `dust_plume` particle type
 
-## Commands
+### Commands
 
-### Functions
+#### Functions
 
 -   `function` command has been changed to better accomodate new `return` command
 -   Functions no longer have any result unless they use `return` or there was error during lookup or instantiation
@@ -58,7 +60,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
     -   That means that a single call to `function` will store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-#### Limits
+##### Limits
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -72,7 +74,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   New limit with game rule `maxCommandForkCount` now restricts total amount of context that can be created by single state of functions like `execute`
     -   Example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5\*5 = 25 contexts
 
-### `execute if function`
+#### `execute if function`
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -82,7 +84,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-#### Matching
+##### Matching
 
 The matching of the result value of the function(s) that run:
 
@@ -92,7 +94,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-### `return run`
+#### `return run`
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in previous version.
 
@@ -106,7 +108,7 @@ This takes the `result` value from running the specified `command` and returns t
 -   In case of fork (for example `return run execute as @e run some_command`) the first execution of the command will return
     -   If there are no executions (for example in `return run execute if @e[something_impossible] run some_command`) function will not return and will continue execution
 
-# Fixed bugs in Snapshot 23w41a
+## Fixed bugs in Snapshot 23w41a
 
 -   [MC-16937](https://bugs.mojang.com/browse/MC-16937) Shooting an arrow into the nether portal can hurt anybody when PvP is disabled
 -   [MC-50319](https://bugs.mojang.com/browse/MC-50319) Player owned projectiles lose their player ownership when exiting portals

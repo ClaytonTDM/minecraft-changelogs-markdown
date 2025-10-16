@@ -1,12 +1,14 @@
+# 1.20-pre5
+
 Summer is around the corner here at the office, and what better time to stay inside and try out the new pre-release?!
 
 Happy crafting, you wonderful people!
 
-# Library version updates
+## Library version updates
 
 -   `uniform` font has been updated to use Unifont 15.0.03 (was 15.0.01 last pre-release)
 
-# Fixed bugs in 1.20 Pre-release 5
+## Fixed bugs in 1.20 Pre-release 5
 
 -   [MC-120158](https://bugs.mojang.com/browse/MC-120158) Anvils and other falling\_blocks with HurtEntities set to true kill items and xp orbs
 -   [MC-261294](https://bugs.mojang.com/browse/MC-261294) Jack o'lantern can be placed on the player or armor stand head without commands and without appearing the blur

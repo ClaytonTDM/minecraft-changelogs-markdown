@@ -1,6 +1,8 @@
+# 24w46a
+
 Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a bunch of component improvements coming your way, Resin Clumps can be waterlogged now, and Rabbits can finally roam free again. Furthermore, there's a whole swarm of other bug fixes.
 
-# Changes
+## Changes
 
 -   Wither Skeletons no longer have Bows as their preferred weapon
 -   Creakings will now persist when a world is reloaded
@@ -9,36 +11,36 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 -   Resin Clump block can be placed on any full face of a neighboring block
 -   Resin Clump block can now be waterlogged, and can therefore be placed underwater
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 60
 -   The Resource Pack version is now 45
 
-# Data Pack Version 60
+## Data Pack Version 60
 
 -   Removed `creaking_transient` entity type
 
-## Item tags
+### Item tags
 
 -   Removed `trim_templates`
 -   Added `#wither_skeleton_disliked_weapons` for weapons that Wither Skeletons don't want to pick up
 
-# Resource Pack Version 45
+## Resource Pack Version 45
 
 -   All blocks that previously rendered only block entity (banners, heads, beds, chests, conduits, decorated pots, shulker boxes and signs) will now also render normal block model over it (same as existing behavior of bells, enchantment tables, etc.)
     -   Note: rendered block entity still can't be removed or data-driven, this change only affects previously ignored block models
 
-## Item models
+### Item models
 
-### `minecraft:special` item model type
+#### `minecraft:special` item model type
 
-#### Changed `minecraft:head` special model type
+##### Changed `minecraft:head` special model type
 
 -   Added field `texture` - optional namespaced ID for texture, without `textures/entity/` prefix and `.png` suffix
     -   If absent, default texture will be used, depending on `kind` field
     -   Additionally, if present, `minecraft:profile` component is ignored
 
-#### Added `minecraft:standing_sign` special model type
+##### Added `minecraft:standing_sign` special model type
 
 -   Renders a standing sign
 -   Fields:
@@ -46,7 +48,7 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-#### Added `minecraft:hanging_sign` special model type
+##### Added `minecraft:hanging_sign` special model type
 
 -   Renders a hanging sign
 -   Fields:
@@ -54,30 +56,30 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/hanging/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-### `minecraft:condition` item model type
+#### `minecraft:condition` item model type
 
 -   Removed `minecraft:xmas` boolean property, replaced by `minecraft:local_time`
 -   Removed `minecraft:shift_down` boolean property, replaced by `minecraft:extended_view`
 
-#### Changed `minecraft:has_component` boolean property
+##### Changed `minecraft:has_component` boolean property
 
 -   Added field: `ignore_default` - if default component value should be handled as "no component", default: `false`
 
-#### Added `minecraft:extended_view` boolean property
+##### Added `minecraft:extended_view` boolean property
 
 -   Returns true if player has requested extended details by holding shift key down
     -   Note: not a keybind, can't be rebound
 -   Only works when item is displayed in UI
 -   No fields
 
-#### Added `minecraft:keybind_down` boolean property
+##### Added `minecraft:keybind_down` boolean property
 
 -   Returns true if keybind is currently active
 -   Fields:
     -   `keybind` - keybind ID, same as value in `keybind` text component
         -   Examples: `key.use`, `key.left`
 
-#### Added `minecraft:local_time` property
+##### Added `minecraft:local_time` property
 
 -   Returns the current time formatted according to a given pattern
 -   The value is updated every second
@@ -101,13 +103,13 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 
 > **Developer's Note**: _There is no "use locale set on client" option to avoid unexpected issues when the user's locale does not match the pack developer's one. Also, time is complicated, be careful._
 
-#### Added `minecraft:holder_type` property
+##### Added `minecraft:holder_type` property
 
 -   Returns holding entity type, if present
 -   No fields
 -   Values: namespaced entity type ID
 
-# Fixed bugs in 24w46a
+## Fixed bugs in 24w46a
 
 -   [MC-150224](https://bugs.mojang.com/browse/MC-150224) Rabbits can occasionally get stuck on the edges of blocks
 -   [MC-160001](https://bugs.mojang.com/browse/MC-160001) Skulls, signs, hanging signs, banners and decorated pots have no breaking/sprinting particles

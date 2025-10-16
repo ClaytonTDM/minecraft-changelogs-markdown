@@ -1,29 +1,31 @@
+# 23w17a
+
 Hello! Here is a new snapshot with tweaks to the new features, new advancements, new music and some long-awaited technical changes. For some time we've been working on a new faster light engine, and we are finally ready to share the result. Special thank you to the community for not only pointing out the issues with the game's light engine, but also to community members that have developed mods and plugins which have highlighted these performance challenges and served as an inspiration for our new implementation.
 
 Please break it in all possible ways and report bugs!
 
-# New Features
+## New Features
 
 -   Added new advancements for Trails & Tales
 -   Added new Trails & Tales ambient music
 -   Added a new music disc obtainable through archaeology
 
-## New advancements
+### New advancements
 
-### Husbandry advancements
+#### Husbandry advancements
 
 -   `Smells interesting` : Obtain a Sniffer Egg
 -   `Little sniffs` : Feed a Snifflet (requires `Smells interesting`)
 -   `Planting the past` : Plant any Sniffer seed (requires `Little sniffs`)
 
-### Adventure advancements
+#### Adventure advancements
 
 -   `Respecting the remnants` : Brush a Suspicious block to obtain a Pottery Sherd
 -   `Careful restoration` : Make a Decorated Pot out of 4 Pottery Sherds (requires `Respecting the remnants`)
 -   `Crafting a new look` : Craft a trimmed armor at a Smithing Table
 -   `Smithing with style` : Apply these smithing templates at least once: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder (requires `Crafting a new look`)
 
-## New ambient music
+### New ambient music
 
 -   Added the following new music tracks by Aaron Cherof to Cherry Groves, Desert, Jungle, Badlands, and Flower Forest biomes
     -   A Familiar Room
@@ -31,19 +33,19 @@ Please break it in all possible ways and report bugs!
     -   Crescent Dunes
     -   Echo in the Wind
 
-## New music disc
+### New music disc
 
 -   Added a new music disc which can be found by brushing suspicious blocks in Trail Ruins
     -   When put in a Jukebox, Relic by Aaron Cherof is played
 
-# Changes
+## Changes
 
 -   Both types of Sculk Sensors now stay in their Cooldown phase for 10 ticks, with other phase timings being adjusted to compensate
 -   Crafted Decorated Pots with at least one pattern now have a hover tooltip displaying the Sherd & Brick ingredients
 -   Updated the credits
     -   Added the ability to scroll upwards by pressing the `up arrow` key
 
-## Sculk Sensor Phases
+### Sculk Sensor Phases
 
 -   Sculk Sensors and Calibrated Sculk Sensors have three phases: Inactive, Active and Cooldown
 -   The default phase is Inactive
@@ -61,7 +63,7 @@ Please break it in all possible ways and report bugs!
     -   Cooldown: 1 game tick for both types of Sculk Sensors
 -   These phase timings were tweaked so that it is less common for activated contraptions to recursively activate the Sculk Sensor that powered them
 
-# Technical Changes
+## Technical Changes
 
 -   The resource pack version is now 15, accounting for the font and credits update
     -   `legacy_unicode` glyph provider has been removed
@@ -74,9 +76,9 @@ Please break it in all possible ways and report bugs!
 -   Added new font glyph providers: `unihex` and `reference`, removed `legacy_unicode`
 -   Improved performance of the light engine
 
-## Fonts
+### Fonts
 
-### New `unihex` glyph provider
+#### New `unihex` glyph provider
 
 -   New glyph provider for reading Unifont HEX files
     -   HEX format describes bitmap font glyphs
@@ -94,19 +96,19 @@ Please break it in all possible ways and report bugs!
         -   `left`, `right` - integers describing position of left-most and right-most columns of glyph in range
             -   any bits in columns outside this range will be discarded
 
-### New `reference` glyph provider
+#### New `reference` glyph provider
 
 -   New glyph provider can be used to include providers from other fonts
     -   Providers are guaranteed to be loaded only once, no matter how many times they are included
 -   Provider has one field `id`, that describes other font to be included in currently loaded one
     -   Inclusion is performed after all fonts are loaded, so it will include all providers for a given font defined in all datapacks
 
-### Removed `legacy_unicode` glyph provider
+#### Removed `legacy_unicode` glyph provider
 
 -   `legacy_unicode` glyph provider has been removed
 -   This functionality has been replaced by `unihex` provider
 
-# Fixed bugs in Snapshot 23w17a
+## Fixed bugs in Snapshot 23w17a
 
 -   [MC-108045](https://bugs.mojang.com/browse/MC-108045) Minecraft not using latest unifont unicode chart; characters are missing
 -   [MC-127394](https://bugs.mojang.com/browse/MC-127394) Minecraft does not render characters in Unicode mb4 range

@@ -1,8 +1,10 @@
+# 1.19.4
+
 We're now releasing 1.19.4 for Minecraft: Java Edition. This release comes with improvements to horse breeding and jukeboxes, new visuals for potions, new accessibility features and many new technical capabilities like the damage and ride commands and display and interaction entities.
 
 The update\_1\_20 experiment has also been updated with a first look at the Sniffer, Archaeology, Armor Trims and Cherry Grove features.
 
-# Changes
+## Changes
 
 -   Updated Horse Breeding
 -   Jukeboxes have changed to be at parity with Bedrock
@@ -20,30 +22,30 @@ The update\_1\_20 experiment has also been updated with a first look at the Snif
 -   Added a notification system for Realms to tell you about important information about your Realm
 -   Added "Credits & Attribution" button in the Options menu
 
-## Horses, Donkeys and Llamas
+### Horses, Donkeys and Llamas
 
 The speed, jump height and health of a baby is now a variation of the average of the parents' attributes, rather than being biased towards the average possible value.
 
 This change makes horse breeding a viable way of getting great horses, if a player starts with good parents and puts in enough time and Golden Carrots.
 
-## Jukebox
+### Jukebox
 
 -   Emits a note particle above it while playing a music disc
 -   While playing a music disc, it will emit a redstone signal of 15
 -   Droppers and hoppers can now interact with it
 
-## Creative menu
+### Creative menu
 
 -   Added painting variants to the creative menu
 -   Paintings with a pre-defined variant will now display the author and title in the item description when hovered over
 
-## Recipe unlocking
+### Recipe unlocking
 
 -   The Crafting Table recipe is unlocked immediately on creating a new world
 -   The Crossbow recipe is no longer unlocked by sticks
 -   The Soul Campfire recipe is no longer unlocked by sticks
 
-## Updated Create New World Screen
+### Updated Create New World Screen
 
 -   The screen is now organized into three tabs
     -   The Game-Tab allows to set the world name, Gamemode, Difficulty and whether to allow cheats
@@ -57,7 +59,7 @@ This change makes horse breeding a viable way of getting great horses, if a play
     -   The screen can always be found under the More-tab
     -   In snapshots, a shortcut button can be found under the Game-tab
 
-## Accessibility
+### Accessibility
 
 -   Added an accessibility onboarding screen for players launching the game for the first time
 -   Auto-Jump is now off by default
@@ -70,18 +72,18 @@ This change makes horse breeding a viable way of getting great horses, if a play
 -   Added two new options in the accessibility menu for adjusting the speed and transparency of enchantment glints
 -   Added a "Notification Time" accessibility option that changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-### Arrow key navigation
+#### Arrow key navigation
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
 
-### High contrast resource pack
+#### High contrast resource pack
 
 -   Added a built-in resource pack that enhances the contrast of UI elements
 -   Added a new option in the Accessibility menu that enables the high contrast resource pack
 -   This only affects the menu UIs for now, but we’ll be looking to bring this to gameplay UIs in the future as well
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 12
 -   The resource pack version is now 13
@@ -119,16 +121,16 @@ This change makes horse breeding a viable way of getting great horses, if a play
     -   New menu with Smithing Template slot was added called `smithing`
 -   Added new flag (value 128) to `HideFlags` NBT field for hiding armor trim item tooltips
 
-## Resource Pack format
+### Resource Pack format
 
 -   The enchantment glint now has two separate texture files: `enchanted_glint_entity.png` and `enchanted_glint_item.png`
 -   The texture format used to dynamically scale buttons and sliders has been updated to always include fixed 20px borders on the left and right
 -   Slider textures are now defined in a separate `slider.png` file
 -   The Create New World screen now uses a separate `light_dirt_background.png` for its background, unlike other screens
 
-## Commands
+### Commands
 
-### `clone`
+#### `clone`
 
 The clone command now supports specifying the source and target dimensions.
 
@@ -141,7 +143,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-### `damage`
+#### `damage`
 
 New command to apply damage to entities.
 
@@ -162,7 +164,7 @@ Parameters:
 -   `location`: The location the damage originated at (when no entity caused the damage)
     -   For instance, `location` might represent the location of a Bed exploding in the Nether
 
-### `data`
+#### `data`
 
 New source available:
 
@@ -173,14 +175,14 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-### `effect`
+#### `effect`
 
 -   `infinite` is now a valid option for effect durations
     -   Infinite effect durations show up as "∞" in the player inventory view
 
-### `execute`
+#### `execute`
 
-#### `execute if|unless`
+##### `execute if|unless`
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -192,7 +194,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-#### `execute on`
+##### `execute on`
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -216,7 +218,7 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, the selector returns zero elements.
 
-#### `execute positioned over`
+##### `execute positioned over`
 
 New `execute` sub-command for finding positions on top of a heightmap. Changes the height of the execution position to be on top of the given heightmap.
 
@@ -224,7 +226,7 @@ Syntax:
 
 -   `execute positioned over <heightmap>`
 
-##### Heightmaps
+###### Heightmaps
 
 A heightmap records the highest position in a column of blocks according to some criteria. Available options:
 
@@ -233,7 +235,7 @@ A heightmap records the highest position in a column of blocks according to some
 -   `motion_blocking_no_leaves`: Any non-leaf motion blocking material
 -   `ocean_floor`: Any non-fluid motion blocking material
 
-#### `execute summon`
+##### `execute summon`
 
 New `execute` sub-command for summoning a new entity and binding the context (`@s`) to it. Meant to simplify entity setup and reduce the need for raw NBT editing.
 
@@ -241,21 +243,21 @@ Syntax:
 
 -   `execute summon <entity id>`
 
-### `fillbiome`
+#### `fillbiome`
 
 -   The amount of network data transmitted when using the `fillbiome` command has been optimized
 
-## `title`
+### `title`
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-### `weather`
+#### `weather`
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-### `ride`
+#### `ride`
 
 New command to allow entities to start or stop riding other entities.
 
@@ -272,7 +274,7 @@ Syntax:
     -   Dismounts `target` from any vehicle it is riding
     -   Fails if `target` is not riding anything
 
-## Damage Types
+### Damage Types
 
 Damage Types are a new registry that can be extended through data packs. A Damage Type determines how damage is handled by the game. This includes which attributes the damage has as well as which death message is used when an entity dies due to that type of damage.
 
@@ -308,9 +310,9 @@ Fields:
 
 Damage type tags control many aspects of how damage from different sources are interpreted.
 
-## Predicates
+### Predicates
 
-### Damage Type Predicates
+#### Damage Type Predicates
 
 The following fields have been removed from damage type predicates: `is_projectile`, `is_explosion`, `bypasses_armor`, `bypasses_invulnerability`, `bypasses_magic`, `is_fire`, `is_magic`, `is_lightning`.
 
@@ -319,31 +321,31 @@ A new `tags` array has been added, with the predicate matching if all entries ma
 -   `id`: The ID of a damage type tag
 -   `expected`: Whether the damage is expected to have or not have the tag for the predicate to match
 
-## Game Rules
+### Game Rules
 
 -   Added `commandModificationBlockLimit`, controlling the maximum number of blocks changed in one execution of `clone`, `fill` and `fillbiome`
 -   Added `doVinesSpread` game rule, determining if vines will spread to nearby blocks
     -   Defaults to `true`
 
-## Text components
+### Text components
 
 Added an optional `fallback` field to `translate` text components.
 
 -   The new field is a string that will be used in place of translation if it is missing
 -   If `fallback` is missing, the old behavior (i.e. using the key itself as the translation) is preserved
 
-## Display entities
+### Display entities
 
 Three new entities have been added for flexible display of items, blocks and text
 
 -   Those entities, similarily to `marker`, don't tick and have no collisions or physics
 -   Models render at entity position, with normal rotation around X and Y axis (so it can be controlled by teleport commands), but also with additional arbitrary model transform
 
-### Common data types
+#### Common data types
 
 Tag contents for display entities include some new data types with a complex structure. Any form can be used for modifying data, but only one form is used for saving.
 
-#### Transformations
+##### Transformations
 
 Arbitrary affine transform.
 
@@ -354,14 +356,14 @@ Arbitrary affine transform.
     -   `scale` - 3d vector
     -   Transforms are composed in order `translation`, `left_rotation`, `scale`, `right_rotation`
 
-#### Rotations
+##### Rotations
 
 -   Quaternion form (used for saving): array of 4 numbers, describing components (x, y, z, w)
 -   Axis-angle form: object with following fields:
     -   `axis` - unit 3d vector
     -   `angle` - in radians
 
-### Interpolation
+#### Interpolation
 
 Some properties of display entities can be interpolated. That means that clients will see gradual changes over time instead of instantaneous jumps.
 
@@ -381,7 +383,7 @@ Display entities keep track of current and previous values of interpolated value
 -   The interpolation target can be updated without setting `start_interpolation`, but it will still behave as if it was started at the moment of the last update to `start_interpolation`
     -   That means that if the value is updated, but more than `interpolation_duration` ticks have passed since last `start_interpolation` update, the entity will immediately jump to new values
 
-### Common properties
+#### Common properties
 
 All display entity types have the following fields:
 
@@ -403,7 +405,7 @@ All display entity types have the following fields:
     -   Both default to `0`
 -   `glow_color_override` - override glow border color. Defaults to `-1` (use team color). Alpha component is ignored
 
-### `item_display`
+#### `item_display`
 
 Displays a single item stack.
 
@@ -415,7 +417,7 @@ Fields:
 -   `item_display` - describes item model transform applied to item (as defined in `display` section in model JSON)
     -   Values: `none` (default), `thirdperson_lefthand`, `thirdperson_righthand`, `firstperson_lefthand`, `firstperson_righthand`, `head`, `gui`, `ground`, `fixed`
 
-### `block_display`
+#### `block_display`
 
 Displays a block state.
 
@@ -425,7 +427,7 @@ Fields:
 
 -   `block_state` - block state to display. Same format as item held by endermen (example `{Name:"minecraft:dirt"}`)
 
-### `text_display`
+#### `text_display`
 
 Displays a text component.
 
@@ -443,7 +445,7 @@ Fields:
 
 Note: text display backgrounds uses new shader types `rendertype_text_background` and `rendertype_text_background_see_through`.
 
-## Interaction Entities
+### Interaction Entities
 
 A new type of entity that records attacks ("left clicks") and interactions ("right clicks"). Interactions are invisible and of a custom size.
 
@@ -455,53 +457,53 @@ Fields:
 -   `interaction`: Records the last interaction action on the entity
 -   `response`: Boolean specifying if interacting should trigger a response (arm swing, sound effects, etc - default `false`)
 
-### Action Format
+#### Action Format
 
 When an action is stored, it always has two fields:
 
 -   `player`: The UUID (in standard integer array format) of the player performing the action
 -   `timestamp`: The timestamp of the game tick when the event happened (stored as a long)
 
-### Advancement Triggers
+#### Advancement Triggers
 
 -   Interacting with an Interaction entity triggers `player_interacted_with_entity`
 -   Attacking an Interaction entity triggers `player_hurt_entity`
 
-### `execute on` with Interactions
+#### `execute on` with Interactions
 
 The Interaction entity targets the player who last interacted with it. That makes the following possible:
 
 -   `execute on attacker`: execute as the last player who attacked the entity
 -   `execute on target`: execute as the last player who interacted with the entity
 
-## Tags
+### Tags
 
-### Block Behavior
+#### Block Behavior
 
 -   Fire burns out faster in certain biomes, and this is now controlled by the `increased_fire_burnout` biome tag
 
-### Mob Spawning
+#### Mob Spawning
 
 -   The `only_allows_snow_and_gold_rabbits` biome tag has been renamed to `spawns_gold_rabbits` to match its behavior
 -   White Rabbit variants are now controlled by the `spawns_white_rabbits` biome tag
 -   Fox variants are now controlled by the `spawns_snow_foxes` biome tag
 
-### Mob Behavior
+#### Mob Behavior
 
 -   Snow Golems melting in warm biomes is now controlled by the `snow_golem_melts` biome tag
 -   Only mobs in the `dismounts_underwater` entity tag will now force the rider to dismount when underwater
 
-## Network Protocol
+### Network Protocol
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-### Packet bundles
+#### Packet bundles
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
 -   For security reasons this feature is not supported in the serverbound direction
 
-## Paletted Permutations
+### Paletted Permutations
 
 -   `paletted_permutations` is a new type of atlas configuration source used to dynamically generate new textures in memory based on a set of color palettes
 -   Color palettes allow you to swap out the colors of a texture without having to supply all files for the variants of a texture in a resource pack
@@ -550,7 +552,7 @@ You can then reference the resulting textures in other resources like this:
     }
     
 
-## Trim Patterns & Materials
+### Trim Patterns & Materials
 
 -   Trim patterns and materials for armor are defined by the server through the `trim_pattern` and `trim_material` registry respectively
     -   As a result, new trim patterns and materials can be added via data packs
@@ -571,7 +573,7 @@ You can then reference the resulting textures in other resources like this:
     -   `description` which is a text component used for displaying the material name of an armor trim when hovering an armor item stack
         -   The style defined in this description is applied to the armor trim pattern `description` as well
 
-# Experimental Features
+## Experimental Features
 
 The following changes only apply when one or more Experiments is turned on, either by activating the corresponding experimental data pack or by turning it on in the Experiments screen while creating the world.
 
@@ -584,7 +586,7 @@ The following changes only apply when one or more Experiments is turned on, eith
 -   Added Archaeology
 -   Mob Heads can now be placed on top of Note Blocks without sneaking
 
-## Smithing Templates
+### Smithing Templates
 
 -   Smithing Tables have been redesigned into a workstation for physical equipment upgrades and modifications
 -   Alongside slots for combining a piece of equipment and materials, there is now a required slot for an item type called Smithing Templates
@@ -594,7 +596,7 @@ The following changes only apply when one or more Experiments is turned on, eith
 -   Smithing Templates are consumed when used to upgrade an item in the Smithing Table
 -   You can craft a copy of a Smithing Template in the Crafting Table with 7 diamonds + 1 block of material that the template is made out of + 1 smithing template, which will output 2 of the same Smithing Template
 
-## Netherite Equipment
+### Netherite Equipment
 
 -   Netherite equipment crafting now also requires a Netherite Upgrade Smithing Template
 -   Netherite Upgrade Smithing Templates can be found randomly in all Bastion Remnant chests, and there is a guarantee of 2 in every Treasure Room Bastion Remnant
@@ -603,7 +605,7 @@ The following changes only apply when one or more Experiments is turned on, eith
     -   Make Netherite equipment a more significant achievement in the game's progression
     -   Adapt Netherite more naturally into the new Smithing Table crafting system
 
-## Armor Trims
+### Armor Trims
 
 -   You can now visually customize your armor with a variety of unique trims at the Smithing Table
 -   Armor trims are purely visual with no gameplay benefits, and can only be applied to Helmets, Chestplates, Leggings and Boots
@@ -630,7 +632,7 @@ The following changes only apply when one or more Experiments is turned on, eith
 -   The viable ingredients you can use to define the color of your armor trim are the following:
     -   Iron, Copper, Gold, Lapis, Emerald, Diamond, Netherite, Redstone, Amethyst, Quartz
 
-## Sniffer
+### Sniffer
 
 -   The Sniffer is the mob vote winner of Minecraft Live 2022
 -   Sniffers cannot be tempted or tamed
@@ -639,13 +641,13 @@ The following changes only apply when one or more Experiments is turned on, eith
 -   Sniffers can be bred by feeding them Torchflower Seeds
 -   The Sniffer is currently only available as a Spawn Egg in the creative inventory
 
-## Torchflowers
+### Torchflowers
 
 -   The Torchflower seed can be planted on farmland and grows into a flower
 -   The seed can be used to breed two Sniffers
 -   The full-grown flower can be harvested and replanted but can also be crafted into a dye
 
-## Cherry Groves
+### Cherry Groves
 
 -   Added a new Cherry Grove biome, with pretty cherry blossom trees
     -   The biome can be found in the mountains, in similar places as Meadows
@@ -657,24 +659,24 @@ The following changes only apply when one or more Experiments is turned on, eith
     -   Placing a petal on a block increases the number of petals
     -   Mining the block gives you the number of petals in the block
 
-## Archaeology
+### Archaeology
 
-### The Brush
+#### The Brush
 
 -   The brush is a craftable item you can use to brush things
 
-### Suspicious Sand
+#### Suspicious Sand
 
 -   Can be found in Desert Temples and Desert Wells
 -   This fragile block is hard to spot and easy to destroy, so be careful!
 -   Brushing the Suspicious Sand with a Brush will extract objects that were buried long ago
 
-### Pottery Shards
+#### Pottery Shards
 
 -   Pottery Shards have pictures on them
 -   They cannot be crafted and are only found by brushing Suspicious Sand
 
-### Decorated Pots
+#### Decorated Pots
 
 -   Crafting four Pottery Shards together will create a Decorated Pot with a picture on each side
 -   Brick items can be used instead of Pottery Shards in the Decorated Pot recipe
@@ -682,6 +684,6 @@ The following changes only apply when one or more Experiments is turned on, eith
 -   Smash a Decorated Pot with any block-breaking tool to break it apart and get the Pottery Shards back
     -   Hitting the pot with bare hands, silk touch tools, or any other item, will drop an intact pot instead
 
-# Fixed bugs in 1.19.4
+## Fixed bugs in 1.19.4
 
 Around 150 bugs were fixed in this release. View the [list on the issue tracker](https://bugs.mojang.com/issues/?filter=27608).

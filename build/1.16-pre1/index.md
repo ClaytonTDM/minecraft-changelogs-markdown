@@ -1,12 +1,14 @@
+# 1.16-pre1
+
 It's time for 1.16 pre-releases!
 
 Going forward you should mostly see bugs being fixed. Additionally, pre-releases doesn't necessarily tend to our usual cadence of releasing on Wednesdays, so keep an eye out!
 
-# New Features in 1.16 Pre-release 1
+## New Features in 1.16 Pre-release 1
 
 -   Added new "Fabulous" graphics option - uses per-pixel blending layers for some transparent elements
 
-# Changes in 1.16 Pre-release 1
+## Changes in 1.16 Pre-release 1
 
 -   You can now milk Cows and Mooshrooms in creative mode
 -   You can now get stew from Mooshrooms in creative mode
@@ -17,22 +19,22 @@ Going forward you should mostly see bugs being fixed. Additionally, pre-releases
 -   Zombified piglins no longer attack innocent bystanders (unless you enable gamerule universalAnger)
 -   Zombified piglins stop being angry if the targeted player dies nearby (unless you disable gamerule forgiveDeadPlayers)
 
-# Technical Changes in 1.16 Pre-release 1
+## Technical Changes in 1.16 Pre-release 1
 
 -   Smithing recipes can now be added or changed through data packs
 -   Game will now detect critical datapack issues, like missing required tags and prevent world from being loaded
 
-## Data Pack Selection
+### Data Pack Selection
 
 -   Data packs can now be selected before world is created
 -   "Copy world" option will also copy data packs present in source world
 
-## Pack Selection Screen
+### Pack Selection Screen
 
 -   Packs can now be dropped directly on data and resource pack selection screens
 -   Dropped files and directories will be copied to appropriate places
 
-## Smithing Recipes
+### Smithing Recipes
 
 There's now a `smithing` recipe type. Recipes of this type are used in the smithing table to upgrade one item type into another type, maintaining tags.
 
@@ -40,7 +42,7 @@ There's now a `smithing` recipe type. Recipes of this type are used in the smith
 -   `addition` - Ingredient specifying valid items to trigger the upgrade.
 -   `result` - Item specifying the resulting type of the upgraded item.
 
-# Fixed Bugs in 1.16 Pre-release 1
+## Fixed Bugs in 1.16 Pre-release 1
 
 -   [MC-4520](https://bugs.mojang.com/browse/MC-4520) Aggressive neutral mobs become neutral when the world is reloaded
 -   [MC-9856](https://bugs.mojang.com/browse/MC-9856) you cannot pick up buckets of water/lava in creative mode

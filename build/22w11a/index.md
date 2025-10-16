@@ -1,8 +1,10 @@
+# 22w11a
+
 Minecraft: Java Edition is jumping on the Wild Update train! The first snapshot for 1.19 is now available. It contains frogs, the Deep Dark, and a bunch of new blocks. We've also entered the era of 3D directional audio. Keeping up with the times!
 
 Happy mining!
 
-# New Features in 22w11a
+## New Features in 22w11a
 
 -   Added the Deep Dark biome
 -   Added Frogs & Tadpoles
@@ -11,7 +13,7 @@ Happy mining!
 -   Added Sculk, Sculk Veins, Sculk Shrieker and Sculk Catalyst blocks
 -   Added 3D Directional Audio option
 
-## Deep Dark
+### Deep Dark
 
 Dig into the depths far underground to uncover the darkest biome in Minecraft - the Deep Dark.
 
@@ -19,7 +21,7 @@ Dig into the depths far underground to uncover the darkest biome in Minecraft - 
 -   The floor of the Deep Dark is covered in sculk
 -   No mobs spawn in the Deep Dark
 
-## Frog
+### Frog
 
 -   Frogs can jump
 -   Frogs can swim
@@ -30,7 +32,7 @@ Dig into the depths far underground to uncover the darkest biome in Minecraft - 
 -   Each Frog variant drops a specific Froglight Block
 -   Three Froglight blocks are added, a lightsource block
 
-## Tadpoles
+### Tadpoles
 
 -   Tadpoles can swim in water
 -   Tadpoles on land "jump around" like fishes on land, and eventually dies
@@ -38,7 +40,7 @@ Dig into the depths far underground to uncover the darkest biome in Minecraft - 
 -   Tadpoles grow into a different type of frog based on the biome they are born in (Cold, Temperate, Warm)
 -   Tadpoles can be caught in a bucket
 
-## Mangrove wood blocks
+### Mangrove wood blocks
 
 Added a new type of wood: Mangrove! Mangrove biome + mangrove trees are coming in a later snapshot.
 
@@ -47,26 +49,26 @@ Added a new type of wood: Mangrove! Mangrove biome + mangrove trees are coming i
 -   Mangrove roots and muddy mangrove roots
 -   Mangrove boat, button, pressure plate, door, trapdoor, sign, slab, fence, fence gate, and stairs
 
-## Mangrove leaves and propagules
+### Mangrove leaves and propagules
 
 -   Mangrove propagule is a sapling that grows from the bottom of mangrove leaves
 -   Bonemealing mangrove leaves will cause a new propagule to start growing beneath it
 -   Propagules grow through 4 stages, and growth can be accelerated by bonemealing
 -   You can break off a fully grown propagule and plant it like a sapling. For now it will grow in an oak tree, but will of course grow into a mangrove tree when that is done.
 
-## Mud
+### Mud
 
 -   Mud is a block that will generate in the upcoming Mangrove biome.
 -   When walking on mud, entities sink down a bit. Like soul sand, but without the slowdown.
 -   Mud can be created by using a water bottle on dirt, by hand or with a dispenser.
 -   Packed mud can be crafted from mud
 
-## Mud bricks
+### Mud bricks
 
 -   Mud bricks are a building block that can be crafted from packed mud
 -   Mud bricks can be crafted into Mud brick stairs, walls, and slabs using a crafting table or stonecutter.
 
-## Sculk
+### Sculk
 
 The rattling tendrils of the Sculk Sensors had to come from somewhere, right? Introducing Sculk, a new family of blocks that dwells in the Deep Dark.
 
@@ -91,12 +93,12 @@ they find a valid substrate they can feed of off - The charge from souls in the 
 -   Sculk, Sculk Veins and Sculk Catalysts require Silk Touch to acquire. Otherwise, they drop experience when mined
 -   The efficient tool for all Sculk family blocks is the Hoe
 
-## 3D Directional Audio
+### 3D Directional Audio
 
 -   Added sound option for 3D Directional Audio simulation
 -   This option is best experienced with headphones
 
-# Technical Changes in 22w11a
+## Technical Changes in 22w11a
 
 -   The data pack format is now 10
 -   The resource pack format is now 9
@@ -108,19 +110,19 @@ they find a valid substrate they can feed of off - The charge from souls in the 
 -   World presets/types and flat world presets in "Create World" screen can now be controlled by datapacks
 -   Added server property `max-chained-neighbor-updates` to limit the amount of consecutive neighbor updates before skipping additional ones. Negative values remove the limit.
 
-## Blending
+### Blending
 
 -   Blending now support 3d biome blending, so it will blend the underground biomes as well.
 -   Removed `blending_data.old_noise`, now existence of `blending_data` in chunk data determines if a chunk is considered old
 -   Added `blending_data.min_section` and `blending_data.max_section` that determines which sections will be used for data for blending
 
-## Space glyph provider
+### Space glyph provider
 
 -   New glyph provider type `space` is added to allow creation of space-like glyphs
 -   New provider has single argument called `advances` which is map of codepoint to glyph advance (width)
 -   Rendering of space glyph is not longer hardcoded (needs to be declared manually in font)
 
-## Pack filters
+### Pack filters
 
 -   Data and resource packs can have `filter` section in `pack.mcmeta`.
 -   This section has mandatory field `block`, which is a list of patterns (regular expressions) for namespaces and paths.
@@ -143,18 +145,18 @@ they find a valid substrate they can feed of off - The charge from souls in the 
     }
     
 
-## World presets
+### World presets
 
 -   New registry types `worldgen/world_preset` and `worldgen/flat_level_generator_preset` were added to data-drive presents (like "Amplified" or "Single Biome")
 -   Two tags for world presets added (`normal` and `alternative`) to control values show on "World Type" button in "Create World" screen
 -   One tag added for flat world presents (`visible`) to control order of elements displayed in "Configure Flat World" screen
 -   World presets can also be used as a value of `level-type` in `server.properties`
 
-## Predicates
+### Predicates
 
 -   The `feature` field in location predicates is now called `structure`
 
-# Fixed bugs in 22w11a
+## Fixed bugs in 22w11a
 
 -   [MC-67308](https://bugs.mojang.com/browse/MC-67308) Door top and side textures flip illogically when opened and closed
 -   [MC-95103](https://bugs.mojang.com/browse/MC-95103) Shield item rendering not adjusted to the center

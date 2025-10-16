@@ -1,6 +1,8 @@
+# 1.16-pre8
+
 Squish, squash is the sound bugs make when you squish them. Or was it squash them? Anyway, here's pre-release 8 with more bug fixes.
 
-# Fixed Bugs in 1.16 Pre-Release 8
+## Fixed Bugs in 1.16 Pre-Release 8
 
 -   [MC-114030](https://bugs.mojang.com/browse/MC-114030) Structure blocks take and apply NBT data of entities and tile entities directly instead of a copy when loading and saving structures
 -   [MC-127971](https://bugs.mojang.com/browse/MC-127971) Trying to throw a trident while having a shield or bow equipped will make the trident appear backwards in your hand

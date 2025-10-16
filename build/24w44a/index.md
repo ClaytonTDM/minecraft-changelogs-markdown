@@ -1,12 +1,14 @@
+# 24w44a
+
 We're back in the shipping room to serve you the first snapshot release for Minecraft: Java Edition 1.21.4! It's coming in hot with some new pale goodies in the form of Eyeblossoms and Resin, two new additions to the Pale Garden biome. You'll also find that leaves will now fall from the Pale Oak trees in said biome, something we hope will crank up the eerie atmosphere even further. In addition to that, this release is also bringing a collection of technical updates and bug fixes.
 
 Happy mining!
 
-# New Features
+## New Features
 
 The `winter_drop` is no longer an experiment.
 
-## Added Eyeblossoms
+### Added Eyeblossoms
 
 Eyeblossoms are new flowers that generate in the Pale Garden biome. Unique features:
 
@@ -25,7 +27,7 @@ Eyeblossoms are new flowers that generate in the Pale Garden biome. Unique featu
 -   Gray or Orange Dye can be crafted from Closed and Open Eyeblossoms respectively
 -   Wandering Trader can sell Open Eyeblossoms
 
-## Added Resin Clump, Block of Resin, Resin Brick, and a family of Resin Bricks blocks
+### Added Resin Clump, Block of Resin, Resin Brick, and a family of Resin Bricks blocks
 
 -   Attacking a Creaking will cause its Creaking Heart to exude 2 to 3 Resin Clumps
 -   Resin Clump spawns on the sides of Pale Oak Logs that are close, and are connected to the Creaking Heart
@@ -38,13 +40,13 @@ Eyeblossoms are new flowers that generate in the Pale Garden biome. Unique featu
 -   The proper tool for Resin Bricks family of blocks is a pickaxe
 -   Resin Clumps can be found in the Woodland Mansion chest loot
 
-# Changes
+## Changes
 
 -   The panorama has been updated
 -   Sword is no longer efficient to break Moss Carpet. The proper tool for Moss Carpet remains the Hoe
 -   Bees are now withered on player interactions with Wither Roses instead of typical breeding/growing behavior
 
-## Required tools for drops
+### Required tools for drops
 
 > **Developer's Note**: _We made it so any block that drops when its support is broken will also drop when mined with any tool. It seemed unfair that breaking a block directly could destroy it if it was possible to obtain it with any tool just by breaking the block below!_
 
@@ -52,35 +54,35 @@ Eyeblossoms are new flowers that generate in the Pale Garden biome. Unique featu
 -   The Brewing Stand now drops when broken with any tool
 -   The Ender Chest now drops Obsidian when broken with an incorrect tool, instead of dropping nothing
 
-## Pale Garden
+### Pale Garden
 
 -   Pale Garden has no music and if a player enters the biome while music is playing, the music will fade out
 
-## Creaking Heart
+### Creaking Heart
 
 -   Creaking Heart can be obtained by using a Silk Touch enchanted tool
 -   Creaking Heart can be crafted with a Resin Block and Pale Oak Logs
 -   Naturally placed Creaking Hearts drop 20-24 experience when broken by a player, with or without silk touch
 -   Breaking a Creaking Heart block will drop a 1-3 Resin Clumps, and it is affected by Fortune enchantment
 
-## Pale Oak Tree
+### Pale Oak Tree
 
 -   Pale Oak Leaves have a chance to spawn leaf particles if exposed on the bottom side
 -   Player grown Pale Oak trees grow without any decorations
 -   Naturally generated Pale Oak trees have Pale Hanging Moss hanging from the foliage, Pale Moss patches on the ground, and Creaking Heart blocks can generate in them
 -   Wandering Trader can sell Pale Oak Saplings
 
-## Pale Moss Block
+### Pale Moss Block
 
 -   Wandering Trader can sell a Pale Moss Block
 
-## Pale Hanging Moss
+### Pale Hanging Moss
 
 -   Pale Hanging Moss breaks instantly when mined
 -   Pale Hanging Moss requires shears or silk touch tools to be obtained
 -   Wandering Trader can sell Pale Hanging Moss
 
-## Creaking mob
+### Creaking mob
 
 -   Creaking melee attacks deal 3 points of damage (1.5 hearts)
 -   Illagers are scared of Creaking and will run away from them
@@ -96,13 +98,13 @@ The following changes apply for naturally spawning Creaking:
     -   The Creaking is too far away from the Creaking Heart
     -   A player intersects with the Creaking for a few seconds
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 58
 -   The Resource Pack version is now 43
 -   Removed the `winter_drop` feature flag and built-in data pack
 
-# Data Pack Version 58
+## Data Pack Version 58
 
 -   `trail` particle has a new required field: `duration`
     -   Indicates, in ticks, how long the particle will take to fly from the start to the target
@@ -130,11 +132,11 @@ The following changes apply for naturally spawning Creaking:
 -   Item blocks with `minecraft:block_entity_data` component will now set block entity data only if `id` tag matches type of placed block entity
     -   Additionally, a warning will be added to item tooltip if placing such item might directly or indirectly lead to command execution with high permission level
 
-## Commands
+### Commands
 
 -   Suggestions will now be shown for attribute modifier IDs existing on the target in the `attribute` command
 
-### `attribute` Command
+#### `attribute` Command
 
 New subcommand to reset the base value of an attribute to its default value for the target entity. If the attribute does not exist on the entity, the command will fail.
 
@@ -148,13 +150,13 @@ Parameters:
 -   `target`: The entity to update the attribute for
 -   `attribute`: The attribute ID to update
 
-## TNT Minecart Data
+### TNT Minecart Data
 
 -   The `TNTFuse` field of TNT Minecarts has been renamed to `fuse`
 -   Addeded optional field `explosion_speed_factor` that controls the amount of added damage depending on the speed of the Minecart
     -   Default value: `1.0`
 
-## Text Components
+### Text Components
 
 Added optional `shadow_color` style field to Text Components, which overrides the shadow properties of text.
 
@@ -164,7 +166,7 @@ Added optional `shadow_color` style field to Text Components, which overrides th
 -   If specified as `0`, the shadow will never be displayed for this text
 -   If specified as a non-zero value, the shadow will always be displayed with this color
 
-# Resource Pack Version 43
+## Resource Pack Version 43
 
 -   Added the following new block models and textures:
     -   `chiseled_resin_bricks`
@@ -184,7 +186,7 @@ Added optional `shadow_color` style field to Text Components, which overrides th
 -   Updates to GUI sprites
 -   The UV mapping of the Magma Cube texture has been updated
 
-## GUI Sprites
+### GUI Sprites
 
 -   The `toast/system` sprite layout has been updated to use standard nine-slicing functionality
 -   The `toast/tutorial` sprite will now be scaled for taller toasts, and as such has nine-slice scaling in the default Resource Pack
@@ -220,7 +222,7 @@ Added optional `shadow_color` style field to Text Components, which overrides th
     -   `container/horse/llama_armor_slot` -> `container/slot/llama_armor`
     -   `container/horse/saddle_slot` -> `container/slot/saddle`
 
-# Fixed bugs in 24w44a
+## Fixed bugs in 24w44a
 
 -   [MC-12829](https://bugs.mojang.com/browse/MC-12829) Flying through climbable blocks in creative mode slows you down
 -   [MC-16132](https://bugs.mojang.com/browse/MC-16132) Cave carvers don't cut through snow blocks

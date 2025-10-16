@@ -1,6 +1,8 @@
+# 1.21.8
+
 Nothing beats graphical corruption and freeze issues like a blazing, steamy hotfix. Today we are releasing 1.21.8 fixing various issues experienced on certain graphics devices.
 
-# Fixed bugs in 1.21.8
+## Fixed bugs in 1.21.8
 
 -   [MC-295947](https://bugs.mojang.com/browse/MC-295947) The game screen occasionally freezes while the game keeps running on Intel graphics of Gen11 architecture
 -   [MC-296107](https://bugs.mojang.com/browse/MC-296107) Entity and block entity textures become corrupted over time on Intel graphics of Gen11 architecture

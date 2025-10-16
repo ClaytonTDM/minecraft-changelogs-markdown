@@ -1,25 +1,27 @@
+# 24w12a
+
 Here's snapshot 24w12a with new advancements and several tweaks.
 
 Happy Mining!
 
-# Experimental Features
+## Experimental Features
 
-## Trial Chambers
+### Trial Chambers
 
 Trial Chambers now generate slightly more rarely and a bit more spaced out from each other
 
-## Trial Chambers Explorer Map
+### Trial Chambers Explorer Map
 
 -   Struggle no more to locate a Trial Chamber - level up your nearest Cartographer to Journeyman for the opportunity to trade for an Explorer Map pointing to a nearby Trial Chamber
 
-## Heavy Core
+### Heavy Core
 
 -   Can now be waterlogged
 -   Survives lava flows
 -   Most efficient tool is now the pickaxe
 -   Adjusted destroy time and explosion resistance
 
-## Advancements
+### Advancements
 
 -   Added the following advancements:
     -   `Minecraft: Trial(s) Edition` - Step foot in a Trial Chamber
@@ -30,7 +32,7 @@ Trial Chambers now generate slightly more rarely and a bit more spaced out from 
     -   `Lighten Up` - Scrape a Copper Bulb with an Axe to make it brighter
     -   `Over-Overkill` - Deal 50 hearts of damage in a single hit using the Mace
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 36
 -   The Resource Pack version is now 30
@@ -38,7 +40,7 @@ Trial Chambers now generate slightly more rarely and a bit more spaced out from 
     -   `/particle entity_effect <r> <g> <b> <a>`
     -   4 float values ranging from 0.0 to 1.0 representing RGBA
 
-# Data Pack Version 36
+## Data Pack Version 36
 
 -   Added a `crafter_recipe_crafted` trigger which is triggered when a Crafter ejects a successfully crafted item into the world.
     -   `<player>` an entity predicate matching the player who is nearby
@@ -61,14 +63,14 @@ Trial Chambers now generate slightly more rarely and a bit more spaced out from 
 -   Added new item stack components
 -   Added new loot functions
 
-## `wolf_variant` definitions
+### `wolf_variant` definitions
 
 -   Field `texture` has been renamed to `wild_texture`
 -   `wild_texture`, `tame_texture` and `angry_texture` no longer require values to be prefixed with `textures/` and suffixed with `.png`
 
-## Commands
+### Commands
 
-### Inline loot values
+#### Inline loot values
 
 Arguments in following commands that previously accepted namespaced ids of loot tables, modifiers and predicates can now also accept inline definitions:
 
@@ -76,9 +78,9 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 -   `item`
 -   `execute if predicate` Values have same structure as matching JSON files, though they are encoded as SNBT. Example: `execute if predicate {condition:weather_check, raining:true}`
 
-## Loot tables
+### Loot tables
 
-### `storage` number provider
+#### `storage` number provider
 
 -   This number provider is able to access numeric values from command storage directly
 -   If selected storage does not exist or tag selected by path is not numeric or does not exist, provider returns 0
@@ -86,16 +88,16 @@ Arguments in following commands that previously accepted namespaced ids of loot 
     -   `storage` - namespaced id of command storage
     -   `path` - NBT path to field
 
-### `set_lore` function
+#### `set_lore` function
 
 -   The `replace` field has been removed
 -   Now has `mode` like `set_fireworks` and `set_written_book_pages`
 
-### `set_written_book_pages` function
+#### `set_written_book_pages` function
 
 -   `pages` is now a JSON Object rather than a string containing JSON
 
-### `toggle_tooltips` loot function
+#### `toggle_tooltips` loot function
 
 -   This function can be used to modify item component tooltip visiblity
 -   It works by setting fields like `show_in_tooltip` without changing other values
@@ -105,11 +107,11 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 -   Example:
     -   `{function:"toggle_tooltips","toggles":{"enchantments":false}}` will hide enchantments tooltip
 
-### Functions
+#### Functions
 
 -   Nested lists are no longer supported in function lists
 
-## Item predicate argument
+### Item predicate argument
 
 The item predicate syntax (used in `execute if|unless items` and `clear` commands) has been significantly expanded.
 
@@ -137,29 +139,29 @@ The item predicate syntax (used in `execute if|unless items` and `clear` command
 -   The syntax for custom data partial matching (`{}`) has been removed in favor of using `custom_data` predicates
     -   So `stick{a:2}` becomes `stick[custom_data~{a:2}]`
 
-## Predicates
+### Predicates
 
-### Item sub-predicates
+#### Item sub-predicates
 
 -   Predicate `minecraft:custom_data` now accepts both SNBT data written as a string (existing format) and unflattened tags
     -   That means that `*[custom_data~{a:1}]` and `*[custom_data~"{a:1}"]` are equivalent
     -   Flattened string format has been kept since NBT type information can't be expressed in JSON
 
-### Entity sub-predicates
+#### Entity sub-predicates
 
-#### `wolf`
+##### `wolf`
 
 New `wolf` sub-predicate has been added to match wolf variants Fields:
 
 -   `variant` - wolf variant to match (single entry, list of entries or tag)
 
-#### `cat`, `frog`, `painting`
+##### `cat`, `frog`, `painting`
 
 -   Field `variant` now accepts single entries, list of entries or tags
 
-## New Item Stack Components
+### New Item Stack Components
 
-### `minecraft:food`
+#### `minecraft:food`
 
 -   When present, this item will behave as if a food (can be eaten)
 -   Format: object with fields
@@ -177,14 +179,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g: `food={nutrition:4,saturation_modifier:0.1}`
 -   On food items, has an implicit default value for that food type
 
-### `minecraft:max_stack_size`
+#### `minecraft:max_stack_size`
 
 -   Controls the maximum stacking size of this item
 -   Format: integer between 1 and 99
     -   e.g. `max_stack_size=4`
 -   Has an implicit default value according to the item type (usually `64`)
 
-### `minecraft:max_damage`
+#### `minecraft:max_damage`
 
 -   Controls the maximum amount of damage than an item can take
 -   If not present, the item cannot be damaged
@@ -192,14 +194,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `max_damage=123`
 -   Has an implicit default value for damageable items
 
-### `minecraft:fire_resistant`
+#### `minecraft:fire_resistant`
 
 -   If present, this item will not burn in fire
 -   Format: empty object
     -   e.g. `fire_resistant={}`
 -   Has an implicit default value for fire-resistant items such as Netherite
 
-### `minecraft:rarity`
+#### `minecraft:rarity`
 
 -   Controls the color of the item name
 -   Format: enumerated value, one of:
@@ -210,7 +212,7 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `rarity=rare`
 -   Special items such as Golden Apples have an implicit default value
 
-### `minecraft:tool`
+#### `minecraft:tool`
 
 -   Controls the behavior of the item as a tool
 -   Format: object with fields
@@ -224,13 +226,13 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `tool={rules:[{blocks:"#mineable/pickaxe",speed:4.0,correct_for_drops:true}]}`
 -   Vanilla tool items will have an implicit default value based on their tier and tool type
 
-### `hide_tooltip`
+#### `hide_tooltip`
 
 -   If present, it will completely hide whole item tooltip (that includes item name)
 -   Tooltip will be still visible and searchable in creative mode
 -   Format: empty object
 
-## New Tags
+### New Tags
 
 -   Added `incorrect_for_wooden_tool`, `incorrect_for_gold_tool`, `incorrect_for_stone_tool`, `incorrect_for_iron_tool`, `incorrect_for_diamond_tool`, `incorrect_for_netherite_tool` block tags
     -   These tags combine the existing `needs_diamond_tool`, `needs_iron_tool`, and `needs_stone_tool` tags for each specific tool tier
@@ -239,13 +241,13 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
 -   Added `piglin_food`, `fox_food`, `cow_food`, `goat_food`, `sheep_food`, `wolf_food`, `cat_food`, `horse_food`, `horse_tempt_items`, `camel_food`, `armadillo_food`, `bee_food`, `chicken_food`, `frog_food`, `hoglin_food`, `llama_food`, `llama_tempt_items`, `ocelot_food`, `panda_food`, `pig_food`, `rabbit_food`, `strider_food`, `strider_tempt_items`, `turtle_food`, `parrot_food`, `parrot_poisonous_food` item tags to control which items can be fed to or tempt the corresponding mobs
 -   `axolotl_tempt_items` has been renamed to `axolotl_food`
 
-# Resource Pack Version 30
+## Resource Pack Version 30
 
 -   Map decoration icons have been split from the former `map_icons.png` to use an atlas loaded from the `textures/map/decorations/` directory
 -   The process of upgrading your pack can be assisted by using this automated [Slicer](https://github.com/Mojang/slicer/releases/tag/v1.1.4) tool
 -   Added `trial_chambers` map decoration icon
 
-# Fixed bugs in 24w12a
+## Fixed bugs in 24w12a
 
 -   [MC-266467](https://bugs.mojang.com/browse/MC-266467) Wind charges stutter when flying through the air
 -   [MC-267747](https://bugs.mojang.com/browse/MC-267747) Click and hover events don't work when viewing chat while F1 is enabled

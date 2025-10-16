@@ -1,26 +1,28 @@
+# 1.21-pre3
+
 The third pre-release for 1.21 is now available and it comes with even more bugfixes!
 
 Additionally, we introduced some intentional but undocumented changes to the Wind Burst Enchantment in Pre-Release 1 last week. To remedy this, we're including those changes in this changelog instead.
 
 Happy mining!
 
-# Changes
+## Changes
 
-## Wind Burst
+### Wind Burst
 
 -   Following changes were introduced in Pre-Release 1; The Wind Burst enchantment now bounces the player 7 blocks up per enchantment level
     -   With great power comes great responsibility - and risk! At level 3, the enchantment will bounce the player 21 blocks up which _doing some quick maths_ will hurt quite a bit when hitting the ground again
     -   In other words, make sure you have a target locked in (or other means of mitigating the fall damage) before making contact with the ground again
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 48
 
-# Data Pack Version 48
+## Data Pack Version 48
 
 -   `replace_disc` entity effect type is renamed to `replace_disk`
 
-# Fixed bugs in 1.21 Pre-Release 3
+## Fixed bugs in 1.21 Pre-Release 3
 
 -   [MC-252817](https://bugs.mojang.com/browse/MC-252817) Placing a map into an item frame and removing it does not remove the green player marker
 -   [MC-267988](https://bugs.mojang.com/browse/MC-267988) Tamed entities ignore their "LookAtPlayerGoal" distance and look in the direction of their owners from any distance when being stood up

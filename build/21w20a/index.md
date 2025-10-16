@@ -1,6 +1,8 @@
+# 21w20a
+
 Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
 
-# Changes in 21w20a
+## Changes in 21w20a
 
 -   Actually made geodes rarer this time
 -   GUI narration now includes position and usage of hovered or focused element
@@ -8,15 +10,15 @@ Another snapshot is now going out. This time around, we fixed quite a few bugs, 
 -   Axolotls will now only play dead when in water
 -   Llamas no longer spit at players in peaceful mode
 
-# Changes to the Caves & Cliffs Preview
+## Changes to the Caves & Cliffs Preview
 
 Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6db99ffcf95594e384e72671ae279ced/CavesAndCliffsPreview.zip).
 
-# Technical changes in 21w20a
+## Technical changes in 21w20a
 
 -   Added a new NBT tag for entities - "HasVisualFire" - which will cause any entity with this flag to visually appear on fire, even if they are not actually on fire
 
-# Bugs fixed in 21w20a
+## Bugs fixed in 21w20a
 
 -   [MC-610](https://bugs.mojang.com/browse/MC-610) Grass / Flowers / Snow are placed incorrectly in newly created chunks
 -   [MC-102220](https://bugs.mojang.com/browse/MC-102220) Barrier Blocks are not shown when "Show Invisible Blocks" is selected in Save Structure Blocks

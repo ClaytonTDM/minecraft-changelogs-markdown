@@ -1,4 +1,6 @@
-# Features
+# 1.14
+
+## Features
 
 -   Lots of accessibility improvements!
 -   Added Bamboo Blocks into the game
@@ -49,7 +51,7 @@
 -   Biome based architecture for villages
 -   Added Wandering Trader
 
-## Accessibility
+### Accessibility
 
 -   There's a new Accessibility menu which provides a useful place for all of our accessibility features to be toggled
 -   When the narrator is turned on, buttons will be narrated on focus
@@ -57,7 +59,7 @@
 -   Most lists allow up/down arrow keys to navigate through them
 -   We've added a new option for turning up the background of all transparent text elements, which should help make them more readable for some people
 
-## Bamboo
+### Bamboo
 
 They call it exotic. Which is just people talk for awesome. Which it is, which is why we're so happy that we added it to the game.
 
@@ -70,7 +72,7 @@ They call it exotic. Which is just people talk for awesome. Which it is, which i
 -   Bamboo can be placed into flower pots
 -   Bamboo can also be found in shipwrecks and jungle temples
 
-## Barrels
+### Barrels
 
 _Do a barrel roll!_
 
@@ -78,7 +80,7 @@ _Do a barrel roll!_
 -   Rotate them!
 -   Find them in villages!
 
-## Bells
+### Bells
 
 _Ding dong, who's there? A RAID? GET INSIDE!!!_
 
@@ -87,13 +89,13 @@ _Ding dong, who's there? A RAID? GET INSIDE!!!_
 -   A villager will ring the bell to alert other villagers of an impending raid
 -   Ringing bells reveals all nearby mobs that can appear in raids
 
-## Berries
+### Berries
 
 -   Delicious!
 -   Not very filling!
 -   Plant your berries in the ground and look with your special eyes as they grow up into a strong, independent bush!
 
-## Berry Bushes
+### Berry Bushes
 
 -   Commonly found in taiga, taiga hills, and taiga mountains
 -   Rarely found in snowy taiga and snowy taiga hills and snowy taiga mountains
@@ -103,20 +105,20 @@ _Ding dong, who's there? A RAID? GET INSIDE!!!_
 -   Supports bone meal!
 -   Doesn't support silk touch!
 
-## Biome based architecture for villages
+### Biome based architecture for villages
 
 -   Villages have recieved an updated look, with several new themes
 -   The theme depends on the biome the village is in, taking both climate and to available resources into consideration
 -   Uses the new mysterious jigsaw block for generation
 -   Adds new structure files, quite many actually
 
-## Blast Furnace
+### Blast Furnace
 
 -   A new furnace upgrade that allows for smelting ores and melting metals faster than the traditional furnace
 -   Can be crafted via three smooth stone, one furnace, and five iron ingots
 -   Added to world gen in some villager buildings
 
-## Campfires
+### Campfires
 
 Come one, come all, and toast your buns around the campfire!
 
@@ -126,7 +128,7 @@ Come one, come all, and toast your buns around the campfire!
 -   Cosy light source
 -   Can be lit/unlit
 
-## Cartography Table
+### Cartography Table
 
 -   New functional block that provides an easier and simpler way of cloning, extending, and locking of maps
 -   New map functionality with cartography table
@@ -134,7 +136,7 @@ Come one, come all, and toast your buns around the campfire!
 -   Fancy UI to more closely represent what the recipes actually do functionally
 -   Crafted with two planks and two paper
 
-## Cat and ocelot split
+### Cat and ocelot split
 
 Anti-fusion!
 
@@ -145,7 +147,7 @@ Anti-fusion!
 -   Cat collars can now be dyed
 -   Added several new cat skins!
 
-## Community Suggestions
+### Community Suggestions
 
 As it turns out, you guys have GREAT suggestions!
 
@@ -157,12 +159,12 @@ As it turns out, you guys have GREAT suggestions!
 -   Dispensers with shears in them will now shear sheep that have wool in front of them
 -   TNT and TNT minecart explosions now have 100% drop rate
 
-## Composter
+### Composter
 
 -   Instead of eating your veggies you can make fertilizer from it!
 -   Crafted with 3 planks and 4 fences
 
-## Crossbows
+### Crossbows
 
 This is such a fearsome weapon that it makes us quiver!
 
@@ -172,32 +174,32 @@ This is such a fearsome weapon that it makes us quiver!
 -   New loading mechanics
 -   Unique load animation
 
-### Enchantments
+#### Enchantments
 
 -   Choose between the following three enchantments for your crossbow:
 
-#### Multishot (I)
+##### Multishot (I)
 
 -   Ever wanted to shoot more than one arrow at once? Look no further! With multishot, your crossbow splits your arrow into three, shooting the usual arrow straight ahead and two more at angles off to the sides!
 -   Cannot be combined with piercing
 
-#### Piercing (I, II, III, IV)
+##### Piercing (I, II, III, IV)
 
 -   With this pointy enchantment, arrows shot from your crossbow can travel through mobs, hitting more than one per shot
 -   The number of mobs that can be damaged by a single arrow is equal to the level of this enchantment + 1
 -   Cannot be combined with multishot
 
-#### Quick Charge (I, II, III)
+##### Quick Charge (I, II, III)
 
 -   Each level of quick charge decreases the amount of time it takes to fully charge your crossbow by .25 seconds
 
-### Loading Mechanics
+#### Loading Mechanics
 
 -   To charge the crossbow, hold down the "Use" button
 -   Once the crossbow string has been pulled all the way back, let go
 -   Boom! Your crossbow is now loaded and ready to shoot with a single click of the "Use" button
 
-## Decorative Blocks
+### Decorative Blocks
 
 Oh my, a bunch of new blocks!
 
@@ -233,7 +235,7 @@ Oh my, a bunch of new blocks!
 -   Changed the recipe of nether brick fence to four brick blocks and two brick items
 -   Changed the recipe of signs to require all of the same wood type, not any wood type
 
-## Dyes
+### Dyes
 
 We've been dyeing to tell you more about this!
 
@@ -241,19 +243,19 @@ We've been dyeing to tell you more about this!
 -   Unified all dye names (red, yellow, and green dyes no longer have special names)
 -   Added new recipes to obtain coloured stained glass and coloured carpet
 
-## Fletching Table
+### Fletching Table
 
 -   Crafted with four planks and two flint
 -   Villagers use it as a work site
 
-## Flowers
+### Flowers
 
 Get your green fingers!
 
 -   To celebrate our new dyes, we added... flowers! Say hello to cornflower, wither rose and lily of the valley
 -   Be careful of the wither rose! Don't let its subdued beauty lull you into a false sense of security...
 
-## Fox
+### Fox
 
 What do they say? ...but really, what do they say?
 
@@ -268,28 +270,28 @@ What do they say? ...but really, what do they say?
 -   Foxes like to eat any and every food item they find on the ground
 -   You may find a fox exploring a nearby village at night
 
-## Grindstone
+### Grindstone
 
 -   Moved inventory and crafting table repairing into the grindstone, this will be its new home
 -   Has the ability to remove all non-curse enchantments from an item; for each enchant removed some XP is reimbursed
 
-## Hero of the Village
+### Hero of the Village
 
 -   Hero of the Village effect causes the cost of trades with villagers to be reduced by a percentage and scales with level of the effect.
 -   Hero of the Village additionally causes Villagers to occassionally toss items to you to thank you!
 
-## Horse Leather Armor
+### Horse Leather Armor
 
 -   Added a new armour type for horses
 -   Dye it in lots (yes, LOTS!) of different colours
 
-## Illager Patrols
+### Illager Patrols
 
 -   Spawn in the world as a pack of five random illagers
 -   Spawn in all variations of the Plains, Taiga, Deserts, Savanna
 -   Scary-spooky new banner can be found a top the patrol leaders head
 
-## Lantern
+### Lantern
 
 Wait, another new block!?
 
@@ -297,7 +299,7 @@ Wait, another new block!?
 -   The lantern can be placed either hanging under a block or on top of a block
 -   It gives slightly more light than the torch
 
-## Lectern
+### Lectern
 
 Ermahgerd berks... holder... thingy?
 
@@ -307,7 +309,7 @@ Ermahgerd berks... holder... thingy?
 -   Emits redstone pulses when page is changed
 -   Use a comparator to get book reading progress
 
-## Loom
+### Loom
 
 Bröther, may I have some lööm?
 
@@ -316,7 +318,7 @@ Bröther, may I have some lööm?
 -   Special banner patterns (oxeye daisy, creeper skull, wither skeleton skull, enchanted golden apple) can now be crafted. These patterns don't consume the pattern item when used in the loom
 -   Old pattern recipes in the crafting table for apply patterns to banners have been removed
 
-## New blocks
+### New blocks
 
 Even more! Can you believe it?!
 
@@ -331,20 +333,20 @@ Even more! Can you believe it?!
 -   Added stonecutter
 -   Added village bell
 
-## New Textures
+### New Textures
 
 The extraordinary Minecraft Texture Update has been available at minecraft.net for quite a while, and now it’s finally available by default in the game
 
 -   We’ve renovated the old textures of Minecraft and polished them for a new beginning
 -   If you're feeling nostalgic you can always enable the old "Programmer Art" textures in the resource pack menu
 
-## Noteblock
+### Noteblock
 
 -   5 new Noteblock sounds have been added: Iron Xylophone, Cow Bell, Didgeridoo, Bit, and Banjo
 -   1 previously existing, but unused, sound effect has now been made available: Pling
 -   The new Noteblock sounds can be heard by using Iron Blocks, Soul Sand, Pumpkins, Emerald Blocks, Hay Blocks, or Glowstone
 
-## Panda
+### Panda
 
 We bring pandamonium!
 
@@ -356,29 +358,29 @@ We bring pandamonium!
 -   Most importantly: pandas are cute and terribly silly!
 -   The babies are, in general, even more silly than their parents. Silly panda cubs!
 
-## Pillager
+### Pillager
 
 -   A new type of illager that, well, pillages!
 -   Pillagers wield a new weapon, the crossbow!
 
-## Pillager Outpost
+### Pillager Outpost
 
 -   As if finding pillager patrols out in the wild wasn't scary enough, keep an eye out during your explorations and you may just find one of their outposts
 -   Can be found in any biome villages generates in
 -   Takes advantage of the new mystery block, the jigsaw, for generation
 
-## Raids
+### Raids
 
 -   If you find an illager wearing a banner on its head, be careful not to kill it!
 -   If you do kill it, you might find yourself facing a 'Bad Omen'
 -   If you find yourself with a bad omen buff, be _especially_ careful not to walk into a village
 -   If you do walk into a village with it? Best of luck!
 
-## Ravager
+### Ravager
 
 -   A fearsome new foe who packs quite a wallop. Grab your sword and shield and prepare to get knocked around!
 
-## Rewrite of Book & Quill editing
+### Rewrite of Book & Quill editing
 
 The pen is mightier than the sword. Unless you're fighting a pillager!
 
@@ -389,13 +391,13 @@ The pen is mightier than the sword. Unless you're fighting a pillager!
 -   Improved page filling and line wrapping
 -   Increased book length (100 pages)
 
-## Rewrite of Sign editing
+### Rewrite of Sign editing
 
 -   Movable cursor for free text editing
 -   Selection support
 -   Copy & paste
 
-## Scaffolding
+### Scaffolding
 
 Here to make your life easy! No strings attached.
 
@@ -404,23 +406,23 @@ Here to make your life easy! No strings attached.
 -   Easily climbable
 -   Easily the best use of your Bamboo
 
-## Smithing Table
+### Smithing Table
 
 -   Crafted with 4 planks + 2 iron ingots
 -   Villagers use it as a work site
 
-## Smoker
+### Smoker
 
 -   New furnace upgrade that allows for the smelting of foods faster than the traditional furnace
 -   Can be crafted via four Logs, and one furnace
 -   Added to world gen in some villager buildings
 
-## Stonecutter
+### Stonecutter
 
 -   New functional block that provides a simpler way to craft various stones (stairs, slabs, chiseled, and more)
 -   Crafted with three stone + one iron ingot
 
-## Suspicious Stew
+### Suspicious Stew
 
 Hmmmm...
 
@@ -429,7 +431,7 @@ Hmmmm...
 -   Whoever eats this stew will be imbued with an unknown effect for several seconds!
 -   Whoever crafts the stew will know what effect they gave it
 
-## Trading changes
+### Trading changes
 
 -   Lots of new trades have been added
 -   Villagers now level up in a new way
@@ -438,7 +440,7 @@ Hmmmm...
 -   The villagers will restock up to two times per day (if they can work at their work station!)
 -   Added visual trading; villagers will display the item they want to trade for your in-hand item
 
-## Villager changes
+### Villager changes
 
 -   Villagers and zombie villagers now have new fancy skins
 -   Added mason profession
@@ -449,13 +451,13 @@ Hmmmm...
 -   Village detection is now based on beds, job sites, and meeting points instead of doors
 -   Iron Golems will spawn when enough villagers meet
 
-## Wandering Trader
+### Wandering Trader
 
 -   A mysterious trader that can be randomly found around
 -   Provides various random trades from a variety of different biomes
 -   Is escorted around by a few llama with some sweet new decorations! (Careful! They can be temperamental)
 
-# Technical
+## Technical
 
 -   New optional tag for block items: `BlockStateTag` - contains map of block state properties to be overwritten after block is placed (note: item model is not affected).
 -   Creative menu search box now accepts tags (starting with `#`)
@@ -484,28 +486,28 @@ Hmmmm...
 -   Time arguments in `time set`, `time add` and `schedule function` can now have units (`t` - ticks, `s` - seconds, `d` - days). Fractions are allowed (for example `0.5d`), but result will be rounded to nearest integer.
 -   `teammsg` command - Sends a message to all players on your team.
 
-## Advancements
+### Advancements
 
 -   Entity type predicates now accept tags (`#baz`)
 
-### Damage source predicate
+#### Damage source predicate
 
 -   Damage source predicate now has option: `is_lightning`
 
-### Entity equipment predicate
+#### Entity equipment predicate
 
 -   Entity predicate now accepts `equipment` field
 -   This predicate can contain up to six fields: `head`, `chest`, `legs`, `feet`, `mainhand`, `offhand`
 -   If this predicate is non-null, test will fail for entities that have no equipment (i.e. not mobs, players or armor stands)
 
-### Entity flags predicate
+#### Entity flags predicate
 
 -   Entity predicate now accepts `flags` field
 -   Available tests: `is_on_fire`, `is_sneaking`, `is_sprinting`, `is_swimming`, `is_baby`
 
-## Chat components
+### Chat components
 
-### NBT chat component
+#### NBT chat component
 
 -   Block variant `{"nbt": <path>, "block":"<coordinates>"}`, where `<coordinates>` field uses same format as `/setblock`
 -   Entity variant `{"nbt": <path>, "entity":<selector>}`, where `selector` field uses same format as `/kill`
@@ -514,12 +516,12 @@ Hmmmm...
     -   if there are no elements, returns empty string
     -   if there are multiple elements, merges them with `,`
 
-## Commands
+### Commands
 
 -   `type` field in `@` selectors now accepts entity type tags (`type=#foo` and `type=!#bar`)
 -   Item frame contents can now be modified with `/replaceitem`
 
-### `data`
+#### `data`
 
 -   `data modify <block or entity> <path> <operation> <source>`
     -   Apply operation to selected fields
@@ -530,24 +532,24 @@ Hmmmm...
         -   `from <block or entity> <path>` - copies value from existing tag
         -   `value <nbt>` - uses NBT literal
 
-### `execute`
+#### `execute`
 
 -   `execute if data <block or entity> <path>` (and `execute unless`)
     -   when used as command, return count of matched elements
     -   when used as part of command, continues on non-zero(`if`) or zero(`unless`) count
 
-### `loot`
+#### `loot`
 
 General syntax: `loot <target> <source>`
 
-#### Sources
+##### Sources
 
 -   `fish <loot table id> <fishing location> [tool <item>|mainhand|offhand]` - uses fishing context
 -   `loot <loot table id>` - uses loot chest context (can be also used for advancement awards and cat gifts)
 -   `kill <entity selector>` - simulates entity drops
 -   `mine <mining location> [tool <item>|mainhand|offhand]` - simulates block drops
 
-#### Targets
+##### Targets
 
 -   `spawn <position>` - drops in world
 -   `replace` - works similar to `/replaceitem`. If `count` is missing, command will try to place all returned items. If `count` is higher than number of items, remaining slots will be cleared.
@@ -556,19 +558,19 @@ General syntax: `loot <target> <source>`
 -   `give <player selector>` - inserts items into player's inventory (similar to `/give`)
 -   `insert <position>` - inserts items into container (similar to shift left-click)
 
-### `schedule`
+#### `schedule`
 
 Schedules function or tag to run in `<time>` gametime ticks. Returns trigger time. Any tag or function can be scheduled only once. Calling this command for already scheduled function or tag will replace older record.
 
-### `teammsg`
+#### `teammsg`
 
 General syntax: `teammsg <message>` Sends `<message>` to all players on the team of the player who runs the command. Available to all players on a team.
 
-#### Alias
+##### Alias
 
 -   `tm <message>`
 
-### NBT paths
+#### NBT paths
 
 -   Can now return multiple values. When used as target, modification will be applied to every element
 -   When setting location and no elements are found, new matching element will be created:
@@ -579,19 +581,19 @@ General syntax: `teammsg <message>` Sends `<message>` to all players on the team
 -   Allow negative indices in `[index]` to select element from end (i.e. `[-1]` is last element, `[-2]` second to last, etc)
 -   Add `[]` to select all elements from list
 
-## Dedicated server
+### Dedicated server
 
-### `server.properties`
+#### `server.properties`
 
 -   `difficulty` and `gamemode` settings now accept string names (integer values are still allowed as legacy option)
 -   Server will exit faster is `eula.txt` is not set
 
-### Command line
+#### Command line
 
 -   Added new option `--help`. Not going to tell you what it does.
 -   New command line option `initSettings` initializes `eula.txt` and `server.properties` with defaults, then exits
 
-## Light engine
+### Light engine
 
 We are de-lighted to have a new light engine!
 
@@ -601,7 +603,7 @@ We are de-lighted to have a new light engine!
 -   Added support for directional opacity of blocks (used by slabs, stairs, snow layers, non-full-block dirt-related blocks and extended piston base blocks)
 -   Also made enchanting table, end portal frame block and piston base block block light correctly
 
-## Loot tables
+### Loot tables
 
 **Note:** Some functions and predicates (like `set_name`, `set_lore`, `fill_player_head`, `entity_properties`) accept entity target parameter. Possible values are:
 
@@ -618,120 +620,120 @@ We are de-lighted to have a new light engine!
 -   `killer` - primary source of damage
 -   `direct_killer` - direct source of damage (may be different than `killer` - for example, when killing with bow, `killer` will be bow user, while `direct_killer` will be arrow entity)
 
-### Modified conditions
+#### Modified conditions
 
-#### `entity_properties`
+##### `entity_properties`
 
 Now uses same predicate syntax as advancements (like `player_killed_entity`). Parameters are now described in `predicate` field. If this field is empty object, any entity is accepted (but still has to be present).
 
-### Modified functions
+#### Modified functions
 
-#### `set_name`
+##### `set_name`
 
 Added new parameter `entity` (see note about entity target parameter for values). If present, name will be resolved with that entity (allows using selector and score components).
 
-### New conditions
+#### New conditions
 
-#### `alternative`
+##### `alternative`
 
 Joins conditions from parameter `terms` with "or" ("disjunction").
 
-#### `block_state_property`
+##### `block_state_property`
 
 Check properties of block state.
 
-##### Parameters
+###### Parameters
 
 -   `block` - id of block. Test will fail, if broken block does not match
 -   `properties` - map of `property:value` pairs
 
-#### `damage_source_properties`
+##### `damage_source_properties`
 
 Checks damage source. Same syntax as `entity_properties`, but uses damage source predicate (see `player_hurt_entity` advancement trigger).
 
-#### `inverted`
+##### `inverted`
 
 Inverts condition from parameter `term`
 
-#### `location_check`
+##### `location_check`
 
 Applies advancement location predicate.
 
-##### Parameters
+###### Parameters
 
 -   `predicate` - predicate applied to location. Uses same structure as advancements.
 
-#### `match_tool`
+##### `match_tool`
 
 Checks tool (available for block breaking and fishing).
 
-##### Parameters
+###### Parameters
 
 -   `predicate` - predicate applied to item. Uses same structure as advancements.
 
-#### `survives_explosion`
+##### `survives_explosion`
 
 Return true with `1/explosion radius` probability.
 
-#### `table_bonus`
+##### `table_bonus`
 
 Passes with probability picked from table, indexed by enchantment level.
 
-##### Parameters
+###### Parameters
 
 -   `enchantment` - id of enchantment
 -   `chances` - list of probabilities for enchantment level, indexed from 0
 
-#### `weather_check`
+##### `weather_check`
 
 No surprise here.
 
-##### Parameters
+###### Parameters
 
 -   `raining` - optional boolean
 -   `thundering` - optional boolean
 
-### New entries
+#### New entries
 
-#### `alternatives`
+##### `alternatives`
 
 Tests conditions of child entries and executes first that can run. Has no weight or quality, but may have conditions.
 
-#### `dynamic`
+##### `dynamic`
 
 Gets block specific drops. Currently implemented:
 
 -   `minecraft:contents` - block entity contents, for shulker boxes
 -   `minecraft:self` - for banners and player skulls
 
-#### `group`
+##### `group`
 
 Executes child entries when own conditions pass. Has no weight or quality.
 
-#### `sequence`
+##### `sequence`
 
 Executes child entries until first one that can't run due to conditions. Has no weight or quality, but may have conditions.
 
-#### `tag`
+##### `tag`
 
 Adds contents of item tag. Fields:
 
 -   `name` - id of tag
 -   `expand` - if false, entry will return all contents of tag, otherwise entry will behave as multiple item entries (all with same weight and quality)
 
-### New functions
+#### New functions
 
-#### `apply_bonus`
+##### `apply_bonus`
 
 Applies one of predefined bonus formulas.
 
-##### Common fields
+###### Common fields
 
 -   `enchantment` - id for enchantment level used for calculation
 -   `formula` - type of used bonus formula
 -   `parameters` - values required for formula (depend on type)
 
-##### Formulas (based on existing fortune bonuses):
+###### Formulas (based on existing fortune bonuses):
 
 -   `binomial_with_bonus_count`:
     -   parameters: `extraRounds : int`, `probability : float`
@@ -743,15 +745,15 @@ Applies one of predefined bonus formulas.
     -   no parameters
     -   applies formula `count * (max(0, random(0..1) - 1) + 1)`
 
-#### `copy_name`
+##### `copy_name`
 
 Copies display name from block entity to item (see enchanting table behaviour)
 
-#### `copy_nbt`
+##### `copy_nbt`
 
 Copies NBT from source to item tags.
 
-##### Parameters
+###### Parameters
 
 -   `source` - may be `this`, `killer`, `killer_player` or `block_entity`
 -   `ops` - list of copy operations:
@@ -759,68 +761,68 @@ Copies NBT from source to item tags.
     -   `target` - target path
     -   `op` - `replace`, `append` (for lists), `merge` - for compound tags
 
-#### `explosion_decay`
+##### `explosion_decay`
 
 Applies flat chance (equal to `1/explosion radius`) for every item to be destroyed (items in stack are processed separately)
 
-#### `fill_player_head`
+##### `fill_player_head`
 
 Copies player profile info to player head item.
 
-##### Parameters
+###### Parameters
 
 -   `entity` - source of profile (see note about entity target parameter for values, will do nothing if it's not player).
 
-#### `limit_count`
+##### `limit_count`
 
 Limits count of every item stack to range.
 
-##### Parameters
+###### Parameters
 
 -   `limit`:
     -   `min` - optional
     -   `max` - optional
 
-#### `set_contents`
+##### `set_contents`
 
 Populates `BlockEntityTag.Items` (works for shulker boxes, chests, etc.) with items from entries.
 
-##### Parameters
+###### Parameters
 
 -   `entries` - list of entries (same as in pool)
 
-#### `set_loot_table`
+##### `set_loot_table`
 
 Sets `BlockEntityTag.LootTable` and `BlockEntityTag.LootPoolSeed` tags.
 
-##### Parameters
+###### Parameters
 
 -   `name` - id of loot table
 -   `seed` - seed (if omitted or 0, `LootPoolSeed` will not be set)
 
-#### `set_lore`
+##### `set_lore`
 
 Adds or replaces lore lines.
 
-##### Parameters
+###### Parameters
 
 -   `lore` - list of lines (in chat component format) to be added
 -   `replace` - if true, previous lore is erased
 -   `entity` - if present, name will be resolved with selected entity (see note about entity target parameter for values).
 
-## Performance Improvements
+### Performance Improvements
 
 -   Improved performance of Redstone Wire when depowering.
 -   Improved performance of Fish.
 -   Mobs that would spawn and then despawn from being too far away from the player the next tick no longer spawn.
 
-## Refactoring
+### Refactoring
 
-### Changes to render options
+#### Changes to render options
 
 -   Removed option to turn off VBO in the game settings. VBO are now always used.
 
-## Worldgen
+### Worldgen
 
 -   Most of the biome related features now have a registry and their configuration can be serialized. I wonder what this is going to be used for...
 -   Added "Bamboo Jungle" and "Bamboo Jungle Hills" biomes which behave like a normal jungle, but have bamboo!

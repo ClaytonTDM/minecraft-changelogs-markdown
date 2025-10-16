@@ -1,25 +1,27 @@
+# 23w44a
+
 In this week's Snapshot we're taking a break from new features to improve ones we've already added, including fixes to Commands and the ability to use Loot Tables with Decorated Pots.
 
-# Changes
+## Changes
 
 -   Copper Doors & Copper Trapdoors has updated textures
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 23
 
-# Data Pack Version 23
+## Data Pack Version 23
 
 -   Decorated Pots can now utilize loot tables and will read from the `LootTable` tag key
 -   Additional changes to command functions
 
-## Commands
+### Commands
 
-### `tick`
+#### `tick`
 
 -   The `<time>` parameter in the `tick step` command is now optional. The default value is 1
 
-### `return`
+#### `return`
 
 -   `return run` will now always return
     -   If there are no valid results from returned command, function containing `return run` will fail (i.e. `success=0` and `result=0`)
@@ -27,19 +29,19 @@ In this week's Snapshot we're taking a break from new features to improve ones w
 -   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store value and return it outside function
 -   New subcommand `return fail` is added to make whole function fail (i.e. return `success=0` and `result=0`)
 
-### `function`
+#### `function`
 
 -   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
 -   A single call to the `function` command will always have return when run with `return run`
     -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
 
-### `execute if|unless function`
+#### `execute if|unless function`
 
 -   `execute if|unless function` will no longer always fail if all functions had no return
     -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
     -   First `return` in any of called functions will return (for a single context)
 
-# Fixed bugs in Snapshot 23w44a
+## Fixed bugs in Snapshot 23w44a
 
 -   [MC-219293](https://bugs.mojang.com/browse/MC-219293) When teleporting via Chorus Fruit, the burping and teleporting sounds play at the wrong location
 -   [MC-265805](https://bugs.mojang.com/browse/MC-265805) Executing a tail-recursive function consumes memory resources linearly with recursion depth

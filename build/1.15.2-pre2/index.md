@@ -1,8 +1,10 @@
-# CHANGES IN 1.15.2 PRE-RELEASE 2
+# 1.15.2-pre2
+
+## CHANGES IN 1.15.2 PRE-RELEASE 2
 
 -   Fixed bugs
 
-# FIXED BUGS IN 1.15.2 PRE-RELEASE 2
+## FIXED BUGS IN 1.15.2 PRE-RELEASE 2
 
 -   [MC-169825](https://bugs.mojang.com/browse/MC-169825) - “Multiplayer (3rd party)” shows in window title when disconnecting from a singleplayer world
 -   [MC-169839](https://bugs.mojang.com/browse/MC-169839) - Certain potion effects that override lower level effects don’t get removed after their duration ends

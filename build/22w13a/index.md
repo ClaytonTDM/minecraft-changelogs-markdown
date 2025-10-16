@@ -1,13 +1,15 @@
+# 22w13a
+
 **Allay**, the mob that nobody is really sure how to pronounce, is now entering the latest Minecraft: Java Edition snapshot. Along with our new shiny blue friend, we've added the **ancient** **cities**, which have seen some pretty drastic changes since the experimental snapshot a few weeks ago, so make sure you check them out.
 
 Happy mining!
 
-# New Features in 22w13a
+## New Features in 22w13a
 
 -   Added Allay mob
 -   Added Ancient Cities
 
-## Allay
+### Allay
 
 -   Allays will collect all the surrounding items that match the item they are holding
 -   Allays will like a player who hands them an item and will bring the items they collect to their liked player
@@ -15,7 +17,7 @@ Happy mining!
 -   Interacting with an Allay with an empty hand will remove the item the Allay is holding
 -   Allays can be found in Pillager Outposts and Woodland Mansions
 
-## Ancient City
+### Ancient City
 
 Wander the halls of these long-abandoned structures in the Deep Dark depths to uncover some relics long forgotten.
 
@@ -24,28 +26,28 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 -   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
 -   Mobs cannot spawn in Ancient Cities
 
-### Differences compared to the Experimental Deep Dark snapshot
+#### Differences compared to the Experimental Deep Dark snapshot
 
 -   Many adjustments have been made to Ancient Cities, with new and tweaked structures
 -   Loot tables have been adjusted for Ancient Cities, including a separate loot table for the "ice box" structures
 
-# Changes in 22w13a
+## Changes in 22w13a
 
 -   The recipes for minecart with chest/furnace/tnt/hopper are now shapeless
 -   When broken each minecart variant drops itself as item, instead of splitting into two items (such as chest and minecart)
 -   Only wool and wool carpets now block the sounds coming from noteblocks
 
-# Technical Changes in 22w13a
+## Technical Changes in 22w13a
 
 -   Added `kill_mob_near_sculk_catalyst` advancement trigger
 -   Sculk shrieker block state changes
 -   Renamed some game events
 
-## Advancements
+### Advancements
 
-### New triggers
+#### New triggers
 
-#### `kill_mob_near_sculk_catalyst`
+##### `kill_mob_near_sculk_catalyst`
 
 -   Triggered when a player kills an entity next to Sculk Catalyst
 -   Conditions:
@@ -53,13 +55,13 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
     -   `entity` - a predicate for the entity that was killed
     -   `killing_blow` - a predicate for how the entity was killed
 
-## Sculk Shrieker
+### Sculk Shrieker
 
 -   Added `can_summon` blockstate to the Sculk Shrieker that determines whether a Shrieker can summon a Warden or not
 -   Shriekers placed via worldgen will have `can_summon` set to true
 -   When a Shrieker is placed or generated via Sculk spread, `can_summon` is set to false
 
-## Game Events
+### Game Events
 
 Some game events have been renamed, with some of those changes to make them more gramatically consistent:
 
@@ -86,7 +88,7 @@ Other miscellaneous changes to game events:
 -   Added `ignore_vibrations_on_occluding_block` game event tag with subsequent logic
 -   `entity_interact` should be dispatched more often when interacting with various mobs
 
-# Fixed bugs in 22w13a
+## Fixed bugs in 22w13a
 
 -   [MC-249103](https://bugs.mojang.com/browse/MC-249103) Z-fighting can be seen on the underside of frogs' feet
 -   [MC-249110](https://bugs.mojang.com/browse/MC-249110) Z-fighting textures inside the frog's mouth

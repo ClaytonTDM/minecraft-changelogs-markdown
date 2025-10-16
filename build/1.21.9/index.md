@@ -1,6 +1,8 @@
+# 1.21.9
+
 Minecraft has entered The Copper Age! Express yourself in every shade of copper as you transform this versatile metal into handy tools, shiny armor, gleaming light sources, oxidizing decor, smart storage, and even lively mechanical companions known as copper golems. In addition to these shiny new features, this drop comes with a bunch of technical news and fixes. The End now has a flashing skylight, you can populate the world with NPCs called mannequins, and item sprites can now be added into text. Whether scraped or oxidized, this is the start of a new clonking era of creativity!
 
-# New Features
+## New Features
 
 -   Added Copper Chest
 -   Added Copper Golem
@@ -17,13 +19,13 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
 
 > **Developer’s Note:** _Did you know that Minecraft: Java Edition is available in over a hundred languages? And it's all thanks to you, our community, and your vital contributions keeping the translation project running. If you would like to help translating the game, join us on [Crowdin](https://crowdin.com/project/minecraft). Happy International Translation day!_
 
-## Copper Chest
+### Copper Chest
 
 -   The Copper Chest is a new type of chest that has waxed and oxidized variants
 -   Copper Chests oxidize over time and can be waxed like other Copper blocks
 -   A Copper Chest can be crafted using a Chest and 8 Copper Ingots
 
-## Copper Golem
+### Copper Golem
 
 -   The Copper Golem is a new mob which can be spawned by placing a Jack o'Lantern or Carved Pumpkin on top of a Copper block
 -   Copper Golems oxidize over time and can be waxed like Copper blocks
@@ -36,7 +38,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   The flower can be removed with Shears
     -   This flower is dropped when the Copper Golem turns into a Copper Golem Statue ![A trio of Copper Golems hanging out in a Taiga Village.](https://launchercontent.mojang.com/v2/images/1.21.9golempumpkin.jpg)
 
-### Copper Golem Item Sorting
+#### Copper Golem Item Sorting
 
 -   If the Copper Golem is not holding an item, it will look for nearby Copper Chests to try to pick up an item
     -   The Copper Golem will look in any oxidized and waxed Copper Chest variant to pick up items
@@ -49,7 +51,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
 -   If no matching chest is found the Copper Golem will idle for 7 seconds before trying again
 -   The search area for chests from the Copper Golem's position is horizontally 32 blocks and vertically 8 blocks ![Three Copper Golems are crossing a bridge built out of copper. Two of the golems are transporting items.](https://launchercontent.mojang.com/v2/images/1.21.9bridge2.jpg)
 
-## Copper Golem Statue Block
+### Copper Golem Statue Block
 
 ![A Copper Statue, doing its signature "star" pose, can be seen on top of a copper pedestal.](https://launchercontent.mojang.com/v2/images/1.21.9praisethesun.jpg)
 
@@ -60,7 +62,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   The pose of the statue can be changed by interacting with it
     -   Each pose emits a Redstone Comparator signal ![A house made out of various Copper blocks, with some Copper Golem Statues in various poses](https://launchercontent.mojang.com/v2/images/1.21.9copperbuilding.jpg)
 
-## Copper Equipment
+### Copper Equipment
 
 -   Added Copper Nugget
 -   Added Copper armor
@@ -79,7 +81,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   Has the same loot table and chance of generating as Iron Horse Armor
     -   Armor toughness: 4 ![Two horses, wearing Copper Horse Armor, can be seen tied to fence posts in a Village. Two Armor Stands can also be seen, fully kitted with sets of Copper Armor.](https://launchercontent.mojang.com/v2/images/1.21.9armor2.jpg)
 
-## Copper Decorations
+### Copper Decorations
 
 ![Sunny can be seen running across a mineshaft bridge, placing down Copper Torches along their way.](https://launchercontent.mojang.com/v2/images/1.21.9coppertorch.jpg)
 
@@ -97,7 +99,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   The lantern itself oxidizes, changing its look as it ages
     -   Functionally identical to the Lantern ![An entrance to a village, made out of Copper Bars and Lanterns.](https://launchercontent.mojang.com/v2/images/1.21.9copperbars.jpg)
 
-## Shelf
+### Shelf
 
 -   The Shelf is a new type of decorative block which comes in the following variants:
     -   Oak
@@ -124,11 +126,11 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   Interacting with three connected Shelves swaps their contents with all items in the player's hotbar
     -   It does not matter which of the connected Shelves the player interacts with ![Sunny in Copper armor standing in front of some Redstone-powered Shelves](https://launchercontent.mojang.com/v2/images/1.21.9shelf.jpg)
 
-## Lightning Rod
+### Lightning Rod
 
 -   Lightning Rods now oxidize like other Copper blocks
 
-## The End Light Flashes
+### The End Light Flashes
 
 -   The End dimension now has skylight
     -   Normally the skylight does not affect how the dimension looks
@@ -138,7 +140,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
 -   The "Hide Sky Flashes" accessibility option disables the End flashes
     -   When the flash is disabled by the setting the world is not lit by the flash but the flash source is still visible in the sky and the sound effect still plays ![A purple flash of light can be seen in the sky of The End.](https://launchercontent.mojang.com/v2/images/1.21.9endskyflash.jpg)
 
-## Minecraft Server Management Protocol
+### Minecraft Server Management Protocol
 
 Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 
@@ -182,7 +184,7 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
         -   JVM argument: `-Dmanagement.tls.keystore.password=`
         -   Server property: `management-server-tls-keystore-password=`
 
-## Chat Drafts
+### Chat Drafts
 
 -   Unsent chat messages now get saved as Chat Drafts if the chat was forcibly closed
     -   This includes it being closed by external sources such as dying or a dialog opening, but not the player intentionally closing their chat
@@ -198,7 +200,7 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Added an option to the Chat Settings screen that enables saving unsent chat messages by default
     -   With this option enabled, unsent messages will _always_ get saved as Chat Drafts, even if the player intentionally closed their chat
 
-## Server Code of Conduct
+### Server Code of Conduct
 
 When connecting to a server, a Code of Conduct screen can now be shown.
 
@@ -206,7 +208,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-### Server Setup
+#### Server Setup
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for Code of Conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -215,11 +217,11 @@ When connecting to a server, a Code of Conduct screen can now be shown.
         -   If it doesn't exist, the `en_us` Code of Conduct will be used
         -   If that also doesn't exist, an arbitrary available entry is used
 
-## Sounds
+### Sounds
 
 -   Some sound sliders in the Music & Sound Options now play a preview sound when adjusting the setting outside a world
 
-## Accessibility
+### Accessibility
 
 -   The "Attack/Destroy" and "Use Item/Place Block" key binds are now toggleable, meaning they can be set to either "Hold" or "Toggle" in the Controls screen
 -   Added "Invert Mouse X" option to the Mouse Settings screen, which inverts the mouse x-axis
@@ -230,7 +232,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   The spectator hotbar menu key can now be rebound
     -   It is part of a new `Spectator` category in the Key Binds screen, alongside the pre-existing `Highlight Players` key bind
 
-# Changes
+## Changes
 
 -   Performance improvements
 -   The Chain block has been renamed to "Iron Chain"
@@ -250,14 +252,14 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 
 > **Developer’s Note:** _We do not expect the update to OpenGL version to affect many people, if any at all. Our posted Minimum Requirement has been OpenGL 4.0 since 2017, and OpenGL 3.3 turned 15 years old recently._
 
-## Performance Improvements
+### Performance Improvements
 
 -   Entity rendering order was improved for significantly better performance
     -   You’ll notice much smoother gameplay in areas with lots of mobs, like mob farms
     -   FPS won’t improve much if most of your lag comes from things other than entities, like playing with high render distance while not being near many mobs
 -   Particles outside the player's view are not rendered anymore, which provides a performance improvement in some cases
 
-## World Loading and Spawn Chunks
+### World Loading and Spawn Chunks
 
 -   The concept of fixed "Spawn Chunks" has been removed
 -   The game will ensure that the following chunks are fully loaded before the player joins or the server starts, in the same way as spawn chunks formerly were:
@@ -276,7 +278,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 
 > _We believe that the niche held by spawn chunks has now been filled by alternative methods of chunk loading, such as using portals or ender pearls, particularly with the changes in this release to how the game loads these chunks before the world starts ticking._
 
-## Server Properties
+### Server Properties
 
 Several server properties were removed in favor of making them into game rules, allowing these settings to be changed while the server is running.
 
@@ -302,7 +304,7 @@ Several server properties were removed in favor of making them into game rules, 
 -   Added server property `enable-code-of-conduct`
     -   Details on this property can be found in the "Server Setup" header
 
-## Game Rules
+### Game Rules
 
 -   Removed `spawnChunkRadius` game rule
 -   Added `pvp` game rule controlling whether players can deal damage to other players
@@ -316,13 +318,13 @@ Several server properties were removed in favor of making them into game rules, 
 -   Added `spawnerBlocksEnabled` game rule controlling if Spawner Blocks should be enabled or not
     -   Defaults to `true`
 
-## Mob Spawning
+### Mob Spawning
 
 -   The logic for choosing a type of equipment for mobs spawning with equipment has been tweaked to add Copper as a possibility
     -   The initial roll to choose a type now chooses between Leather, Copper and Gold
     -   The chance to increase an armor tier has increased from 9.5% to 10.87%
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Test Instance Blocks now preserve error markers between world reloads
 -   Ambient lighting on entities has been adjusted to be more visually in line with blocks and other parts of the game
@@ -337,18 +339,18 @@ Several server properties were removed in favor of making them into game rules, 
         -   The fins on fish
         -   And more!
 
-## Recipes
+### Recipes
 
 -   Changed the Copper Trapdoor recipe to use 4 Copper Ingots instead of 6 and now yields one Copper Trapdoor instead of two
 
-## Sounds
+### Sounds
 
 -   The Happy Ghast is now audible from 64 blocks
 -   Sounds for Chests now play at a lower volume
 -   The volume at which a sound is played at now respects the sound source volume value
 -   The "Voice/Speech" sound source has been rephrased to "Narrator/Voice"
 
-## UI
+### UI
 
 -   The Resource Pack and Data Pack selection screens now have a search box
 -   More text inputs now support selecting text by mouse dragging
@@ -356,14 +358,14 @@ Several server properties were removed in favor of making them into game rules, 
 -   When adding a new server to the server list, the server name is no longer prefilled
     -   When omitted, the default name "Minecraft Server" is used
 
-### Mouse cursor
+#### Mouse cursor
 
 -   Some UI components will now change the shape of the mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
 -   Additionally, clickable parts of text labels (like links) will now change the cursor to the "hand" shape
 -   This feature can be disabled with the "Allow Cursor Changes" option in the Mouse Settings screen
 
-### Debug Overlay
+#### Debug Overlay
 
 -   The debug overlay is accessible by pressing F3, as before
 -   The debug overlay can now be accessed from everywhere in the game, not only when in a game world
@@ -379,12 +381,12 @@ Several server properties were removed in favor of making them into game rules, 
 
 > **Developer's Note**: _Previously, gathering the information every frame to render the F3 screen had a significant performance cost. So opening the screen to check your FPS noticeably dropped the FPS. Now checking your FPS in the `Performance` profile should not affect game performance._
 
-### Chat
+#### Chat
 
 -   It is now possible to start chatting while standing inside a Nether Portal
 -   The chat will now remain open and unchanged if the player was chatting before being transferred to another dimension
 
-## Accessibility
+### Accessibility
 
 -   Dye Colors now have updated icons
     -   The goal with these is to enhance visual cohesion across the dye set while maintaining distinct shapes to support colorblind accessibility
@@ -393,20 +395,20 @@ Several server properties were removed in favor of making them into game rules, 
 -   The "Show Subtitles" option has been rephrased to "Closed Captions" to more accurately describe what it does
 -   The "Hide Lightning Flashes" accessibility setting has been renamed to "Hide Sky Flashes" as it includes the End light flashes
 
-# Technical Changes
+## Technical Changes
 
 -   Pack versions now have minor versions
 -   The Data Pack version is now 88.0
 -   The Resource Pack version is now 69.0
 -   Some previously hidden debug features have been exposed to players
 
-## Pack Formats
+### Pack Formats
 
 -   The pack versions for data packs and resource packs now have minor versions
     -   A minor version increment of the game's pack version is backwards-compatible, meaning all packs made for previous iterations of the same major version will keep working
 -   Packs can set compatibility requirements on minor versions in case they rely on resources introduced in a minor version
 
-### Pack Metadata
+#### Pack Metadata
 
 The pack.mcmeta format has been updated:
 
@@ -429,7 +431,7 @@ The pack.mcmeta format has been updated:
         -   Otherwise, it is not allowed and must be removed
     -   Added required fields `min_format` and `max_format` with the same formats as the fields above with the same name for the `pack` section
 
-## Debug Features
+### Debug Features
 
 -   Some debug features that were previously removed during compilation are now preserved and can be used by players
 -   Individual values can be enabled with JVM properties:
@@ -441,7 +443,7 @@ The pack.mcmeta format has been updated:
     -   Features are not guaranteed to work as intended
     -   Features might be added, changed or removed without a notice
 
-# Data Pack Versions 82.0 Through 88.0
+## Data Pack Versions 82.0 Through 88.0
 
 -   Added Mannequin entities
 -   World Borders can now be set per dimension
@@ -450,7 +452,7 @@ The pack.mcmeta format has been updated:
 -   Added `fetchprofile` command for downloading player profiles
 -   Renamed `chain` to `iron_chain`
 
-## Mannequins
+### Mannequins
 
 Added a new type of technical entity called `minecraft:mannequin` which can only be spawned with summon commands.
 
@@ -473,14 +475,14 @@ Data Fields:
 -   `hide_description` - Optional boolean specifying that no description should be shown at all
     -   A Mannequin with the description hidden displays as if a Player had no `below_score` display ![Mannequins of Alex and Sunny, swimming and standing up respectively, can be seen inside a Lush Cave.](https://launchercontent.mojang.com/v2/images/1.21.9mannequins.jpg)
 
-## World Border
+### World Border
 
 -   The World Border is now dimension-specific
     -   This means that each dimension can have its own World Border size, position, etc.
 
-## Text Rendering
+### Text Rendering
 
-### `object` Text Component
+#### `object` Text Component
 
 -   New text component with type `object` has been added
 -   This component will display a non-character object as a part of text
@@ -492,7 +494,7 @@ Data Fields:
 -   Similarly to the `nbt` text component, the `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-#### `atlas` Object Type
+##### `atlas` Object Type
 
 -   Renders a single sprite from a sprite atlas as a character
 -   Format:
@@ -505,7 +507,7 @@ General note about atlas contents:
 -   The contents are controlled by files in the `assets/minecraft/atlases/` directory in a resource pack
 -   The current contents can be reviewed with the F3+S key combination
 
-#### `player` Object Type
+##### `player` Object Type
 
 -   Renders a player head
 -   If a partial profile is given, the skin is resolved in the same way as the `minecraft:profile` component on a player head
@@ -516,12 +518,12 @@ General note about atlas contents:
         -   `properties`: profile properties, optional map
     -   `hat`: controls rendering of a hat layer, boolean, default `true`
 
-### `run_command` Click Event
+#### `run_command` Click Event
 
 -   Previously, if the `command` field contained a command that required a signed message (`/say`, `/me`, `/msg`, `/tell`, `/w`, `/teammsg`, `/tm`), it would be silently discarded
 -   Instead, a screen will be shown that lets the user insert the command into the chat window or copy the command to their clipboard if the chat window can't be opened
 
-## Commands
+### Commands
 
 -   The `summon` command now fails when trying to summon monsters while the difficulty is set to Peaceful
 -   The `spawnpoint` and `setworldspawn` commands now have control over the full player look direction
@@ -531,7 +533,7 @@ General note about atlas contents:
     -   This means players can respawn e.g. in the Nether when they have no Bed or Respawn Anchor
 -   Server commands now run from the respawn dimension by default instead of always running in the Overworld
 
-### Added `fetchprofile`
+#### Added `fetchprofile`
 
 -   A new command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously while the game keeps running
@@ -547,11 +549,11 @@ Syntax:
 -   `fetchprofile name <player name>` - resolves profile by name (case-insensitive)
 -   `fetchprofile id <uuid>` - resolves profile by id
 
-## Data Components
+### Data Components
 
-### Modified `minecraft:profile`
+#### Modified `minecraft:profile`
 
-#### New Resolution Behavior
+##### New Resolution Behavior
 
 -   Previously the contents of this component would permanently change when the profile was resolved, i.e. downloaded from Minecraft services
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -572,7 +574,7 @@ Syntax:
 -   Items stack based on exact contents, so even if a dynamic component is eventually resolved to the same profile as a static one, they won't stack together
 -   Player heads in older maps that have not been loaded in newer versions yet will usually be converted to dynamic contents
 
-#### Player Skin Overrides
+##### Player Skin Overrides
 
 -   Profiles can now also have additional fields that can replace various values used for rendering
 -   If any of the fields are omitted, the value from the resolved profile is used, even if the profile resolves to the default skin
@@ -587,27 +589,27 @@ Syntax:
         -   If this value is not present either as an override or in a player profile, Mannequins using this profile will use the cape texture, or if that is also not present, the default Elytra texture when wearing an Elytra
     -   `model` - Optional model type, one of `wide` and `slim`
 
-### `blocks_attacks` Item Component
+#### `blocks_attacks` Item Component
 
 -   If the damage reduced in an attack is `0`, for example by the `angle` threshold not matching, the item can no longer get disabled in the attack, nor cause knockback due to blocking
 
-## Entity Data
+### Entity Data
 
-### Modified `minecraft:player`
+#### Modified `minecraft:player`
 
 -   Changes to the `respawn` object
     -   `angle` has been renamed to `yaw` and is now a required field
     -   `pitch` has been added as a required field
     -   `dimension` is now a required field
 
-## Block Entity Data
+### Block Entity Data
 
-### Modified `minecraft:skull`
+#### Modified `minecraft:skull`
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary
 
-## Loot Tables
+### Loot Tables
 
 -   Added `minecraft:entity_interact` loot table type which takes the following parameters:
     -   `target_entity`, the entity being interacted with
@@ -634,34 +636,34 @@ Syntax:
 -   Added `harvest/sweet_berry_bush` loot table for drops when a Sweet Berry Bush with Sweet Berries is harvested by interacting with it
 -   Added `carve/pumpkin` loot table for drops when a Pumpkin is carved using Shears
 
-## Loot Functions
+### Loot Functions
 
-### `minecraft:fill_player_head`
+#### `minecraft:fill_player_head`
 
 -   The `entity` field now accepts new entity context values:
     -   `target_entity`
     -   `interacting_entity`
 
-### `minecraft:set_lore`
+#### `minecraft:set_lore`
 
 -   The `entity` field now accepts new context values:
     -   `target_entity`
     -   `interacting_entity`
 
-### `minecraft:copy_custom_data`
+#### `minecraft:copy_custom_data`
 
 -   The `source` field now accepts new context values:
     -   `target_entity`
     -   `interacting_entity`
 
-### `minecraft:copy_name`
+#### `minecraft:copy_name`
 
 -   The `source` field now accepts new context values:
     -   `direct_attacker`
     -   `target_entity`
     -   `interacting_entity`
 
-### `minecraft:copy_components`
+#### `minecraft:copy_components`
 
 -   The `source` field now accepts new context values:
     -   `this`
@@ -672,23 +674,23 @@ Syntax:
     -   `interacting_entity`
     -   `tool`
 
-## Predicates
+### Predicates
 
-### `minecraft:entity_scores`
-
--   The `entity` field now accepts new entity context values:
-    -   `target_entity`
-    -   `interacting_entity`
-
-### `minecraft:entity_properties`
+#### `minecraft:entity_scores`
 
 -   The `entity` field now accepts new entity context values:
     -   `target_entity`
     -   `interacting_entity`
 
-## Enchantments
+#### `minecraft:entity_properties`
 
-### `explode` Effects
+-   The `entity` field now accepts new entity context values:
+    -   `target_entity`
+    -   `interacting_entity`
+
+### Enchantments
+
+#### `explode` Effects
 
 New field: `block_particles` - specifies per-block particles. Each block particle is randomly chosen according to weights. A set limit of block particles is spawned each tick from all explosions that tick.
 
@@ -699,16 +701,16 @@ Format: List of entries:
 -   `scaling`: Optional scaling to apply between explosion center and block position, or `1.0` if not specified
 -   `speed`: Optional scaling to apply to the speed of the particle, or `1.0` if not specified
 
-## World Generation
+### World Generation
 
 -   The `initial_density_without_jaggedness` field in `noise_settings` definitions has been replaced with a `preliminary_surface_level` field
     -   `initial_density_without_jaggedness` was a 3D density function that was used to determine an approximate surface level by scanning for the first point with a density greater than `0.390625`
     -   `preliminary_surface_level` is a 2D density function that should produce the y-level of the approximate surface
     -   The `minecraft:find_top_surface` density function can be used to replicate the previous scanning
 
-### Density Functions
+#### Density Functions
 
-#### Added `minecraft:find_top_surface`
+##### Added `minecraft:find_top_surface`
 
 -   Approximates the topmost surface of a given density function
 -   It scans from an upper bound to a lower bound to find the point at which the density changes from negative to positive
@@ -722,7 +724,7 @@ Fields:
 -   `lower_bound` - integer, lowest possible y-value
 -   `cell_height` - positive integer defining the grid resolution on which to scan
 
-#### Added `minecraft:invert`
+##### Added `minecraft:invert`
 
 -   Resolves to `1/argument`
 
@@ -730,7 +732,7 @@ Fields:
 
 -   `argument` - density function
 
-### Jigsaw Structures
+#### Jigsaw Structures
 
 -   The `max_distance_from_center` field may now specify a different restriction on the vertical axis from horizontal
     -   This can be specified by an object with fields:
@@ -739,9 +741,9 @@ Fields:
         -   e.g.: `"max_distance_from_center": { "horizontal": 20, "vertical": 500 }`
     -   The previous format of a single inline value specifying both horizontal and vertical distance is still supported
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#copper_chests` - all Copper Chest blocks
 -   Added `#copper` - all Copper blocks
@@ -751,7 +753,7 @@ Fields:
 -   Added `#lanterns` - all Lantern blocks
 -   Added `#bars` - all Bar blocks
 
-### Item Tags
+#### Item Tags
 
 -   Added `#copper_chests` - all Copper Chest block items
 -   Added `#copper` - all Copper block items
@@ -763,24 +765,24 @@ Fields:
 -   Added `#bars` - all Bar block items
 -   Added `#shearable_from_copper_golem` - all items that can be removed from the Copper Golem's saddle slot via Shears
 
-### Entity Type Tags
+#### Entity Type Tags
 
 -   Added `#cannot_be_pushed_onto_boats` - mobs that cannot be pushed onto boats which includes the Creaking, players and all aquatic mobs that aren't amphibious
 -   Added `#accepts_iron_golem_gift` - mobs that will accept and receive an offered item from an Iron Golem
 -   Added `#candidate_for_iron_golem_gift` - mobs that an Iron Golem will attempt to offer an item to, but may not necessarily accept it (see `#accepts_iron_golem_gift`)
 
-## Particles
+### Particles
 
 -   `dragon_breath` now optionally takes a `power` parameter (float, default `1.0`), which is multiplied onto its initial velocity, after all randomness
 -   `instant_effect` and `effect` now optionally take `power` (float, default `1.0`) and `color` (rgb, default `0xFFFFFF`) parameters
 -   `flash` now requires a `color` parameter (argb)
 
-# Resource Pack Versions 64.0 Through 69.0
+## Resource Pack Versions 64.0 Through 69.0
 
 -   Added new display transform "on\_shelf"
     -   Used for displaying items on the Shelf
 
-## Block Sprites
+### Block Sprites
 
 -   Added new block sprites:
     -   `copper`
@@ -826,7 +828,7 @@ Fields:
 -   Renamed the following block sprites:
     -   `chain` to `iron_chain`
 
-## Entity Sprites
+### Entity Sprites
 
 -   Added new entity sprites:
     -   `copper_golem`
@@ -838,7 +840,7 @@ Fields:
     -   `weathered_copper_golem_eyes`
     -   `oxidized_copper_golem_eyes`
 
-## Item Sprites
+### Item Sprites
 
 -   Added new item sprites:
     -   `copper_axe`
@@ -863,15 +865,15 @@ Fields:
 -   Renamed the following item sprites:
     -   `chain` to `iron_chain`
 
-## Textures
+### Textures
 
 -   Added a new texture:
     -   `environment/end_flash.png`
 -   Moved the result slot of `gui/container/villager.png` up by one pixel
 
-## Sounds
+### Sounds
 
-### Sound Events
+#### Sound Events
 
 -   Added new sound events:
     -   `block.copper_chest.open`
@@ -912,16 +914,16 @@ Fields:
     -   `block.shelf.take_item`
     -   `weather.end_flash"`
 
-## Particles
+### Particles
 
 -   Added new particle:
     -   `copper_fire_flame`
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
-### Shaders
+#### Shaders
 
 -   The following unused shaders have been removed:
     -   `core/position_color_lightmap.vsh`
@@ -934,7 +936,7 @@ Fields:
 -   When set, cardinal lighting will be computed separately for front- and back-faces
 -   As we now require OpenGL 3.3, we have bumped the version of all shaders from `150` to `330`
 
-### Changes to Full Screen Passes
+#### Changes to Full Screen Passes
 
 -   The following vertex shaders have been removed, and replaced by `core/screenquad.vsh`:
     -   `core/blit_screen.vsh`
@@ -946,7 +948,7 @@ Fields:
 -   Vertex shaders for post-processing effects, as well as lightmap generation and full screen blits are no longer are passed the `Position` attribute, and instead must assign vertex coordinates by `gl_VertexID`
 -   These passes furthermore are only executed with 3 vertices, instead of a full quad
 
-# Fixed bugs in 1.21.9
+## Fixed bugs in 1.21.9
 
 -   [MC-383](https://bugs.mojang.com/browse/MC-383) - In the world selection screen, world names/versions/timestamps can overflow the list to the right
 -   [MC-2681](https://bugs.mojang.com/browse/MC-2681) - No loading progress bar whenever we create a new world or when the game is loading something
@@ -1106,7 +1108,7 @@ Fields:
 -   [MC-301770](https://bugs.mojang.com/browse/MC-301770) - The `below_name` plate is not displayed higher for players and mannequins named “deadmau5”
 -   [MC-301883](https://bugs.mojang.com/browse/MC-301883) - Entities going through portals with their Motion set to more than 10 on an axis have their Motion tag reset
 
-# Get the Release
+## Get the Release
 
 To install the Release, open up the [Minecraft Launcher](/content/minecraft-net/language-masters/download.html) and click play! Make sure your Launcher is set to the "Latest Release” option.
 

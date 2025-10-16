@@ -1,16 +1,18 @@
+# 22w06a
+
 Today we're happy to share snapshot 22w06a with you. It contains compliance updates for South Korean players and is Totally Teeming with Technical Tag Tastiness.
 
 Happy Mining (in moderation)!
 
-# Changes in 22w06a
+## Changes in 22w06a
 
 If you’re playing in South Korea, we added gameplay timers and notices in compliance with gaming laws to help remind players to take occasional breaks from gameplay. For more information, please see [the FAQ](https://help.minecraft.net/hc/articles/360052763631).
 
-# Technical Changes in 22w06a
+## Technical Changes in 22w06a
 
 -   Any type present in registries (blocks, items, biomes, etc.) can now have tags
 
-## Universal tags
+### Universal tags
 
 -   Tags can now be defined for any registry (blocks, items, biomes, etc. - see `registries.json` in report)
 -   New tags are stored in datapacks under `tags` directory (same as old ones)
@@ -33,7 +35,7 @@ If you’re playing in South Korea, we added gameplay timers and notices in comp
     -   `feature.root_system` configuration: `root_replaceable`
     -   `structure_processor.protected_blocks`: `value`
 
-# Fixed bugs in 22w06a
+## Fixed bugs in 22w06a
 
 -   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
 -   [MC-239708](https://bugs.mojang.com/browse/MC-239708) Superflat world "Water World" preset settings are obsolete for the 1.18 update

@@ -1,20 +1,22 @@
+# 20w13a
+
 Ever felt that you want to take a ride across fields of lava? Yeah? Me too! This snapshot introduces the adorable(?) strider. It might need some help with directions...
 
-# New Features in 20w13a
+## New Features in 20w13a
 
 -   Added the Lodestone
 -   Added the Strider
 -   Basalt is formed when lava flows over soul soil next to blue ice
 -   Farmer villagers can now compost seeds
 
-## Lodestone
+### Lodestone
 
 A new block that can help you get your bearings!
 
 -   Crafted from a netherite ingot and chiseled stone bricks
 -   Use a compass on a lodestone to create a lodestone compass pointing to that lodestone
 
-## Strider
+### Strider
 
 A new mob living the lava lakes of the Nether.
 
@@ -22,31 +24,31 @@ A new mob living the lava lakes of the Nether.
 -   Can be saddled, but has a will of its own
 -   Really likes the smell of warped fungi - might even be convinced to follow it
 
-## Farmers
+### Farmers
 
 -   Farmer villagers can now put excess seeds in the composter to create bone meal
 -   Bone meal is used by the farmers to grow crops
 -   Farmers share excess wheat to other farmers, so more farmers can make bread
 
-# Changes in 20w13a
+## Changes in 20w13a
 
 -   You're now more likely to get soul speed books and boots when bartering with Piglins
 -   You can now charge the Respawn Anchor using a Dispenser
 
-# Technical Changes in 20w13a
+## Technical Changes in 20w13a
 
-## Jigsaw block
+### Jigsaw block
 
 -   Jigsaw now can have one of 12 orientations
 -   Added new property `Joint type` to describe if attached piece can be rotated (`rollable`) or not (`aligned`)
 -   NBT field `target_pool` has been renamed to `pool`
 -   `attachement_type` has been split into `name` (on parent block) and `target` (on child block).
 
-## Loot tables
+### Loot tables
 
 -   A fishing location is now considered to be open water if the fishing hook is in water, there are no blocks besides lily pads above water and all water blocks are source blocks with no solid underwater blocks around
 
-# Fixed bugs in 20w13a
+## Fixed bugs in 20w13a
 
 -   [MC-118080](https://bugs.mojang.com/browse/MC-118080) Bows without pulling predicate animate when other bows are pulled back
 -   [MC-154427](https://bugs.mojang.com/browse/MC-154427) Villagers only pick up four stacks of items

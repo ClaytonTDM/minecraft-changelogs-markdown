@@ -1,3 +1,5 @@
+# 1.21
+
 It's a fantastic day today, because it's release day Thursday! And not just any old release day. This one is extra special because today we're shipping Minecraft: Java Edition 1.21, also known as the Tricky Trials Update!
 
 Venture into the hazardous Trial Chambers alone or with friends, face off against the new Breeze mob and craft a smashingly powerful new weapon, the Mace! Take your ingenious Redstone designs to new heights with the Crafter, play around with the Wind Charge, discover new decorative blocks made of Copper and Tuff, enjoy new Paintings, Music Discs, and more!
@@ -8,7 +10,7 @@ Embark on your very first adventure in Tricky Trials by delving into the full ch
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added a new underground structure called the Trial Chambers
 -   Added 2 new mobs
@@ -67,9 +69,9 @@ Happy mining!
 
 ![Sunny and Makena are posing in a Trial Chamber, showcasing the new Flow and Bolt Armor Trims.](https://launchercontent.mojang.com/v2/images/t1.21newtrialchamberspatterns.jpg)
 
-## Structures
+### Structures
 
-### Trial Chambers
+#### Trial Chambers
 
 -   Trial Chambers are a new structure in the Overworld where players can explore and take on combat challenges
     -   Made out of a variety of Copper and Tuff blocks, and can be found in different sizes
@@ -99,9 +101,9 @@ Happy mining!
     -   For example, one Trial Chamber might only spawn Zombies, Cave Spiders and Strays, while another might only spawn Spiders, Silverfish and Skeletons
     -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
 
-## Mobs
+### Mobs
 
-### Breeze
+#### Breeze
 
 -   A cunning hostile mob spawned by some Trial Spawners in Trial Chamber rooms
     -   Drops 1-2 Breeze Rods when killed by a player
@@ -124,7 +126,7 @@ Happy mining!
 -   Will not retaliate against attacks from the following mobs: Skeletons, Strays, Bogged, Zombies, Husks, Spiders, Cave Spiders and Slimes
     -   The same mobs will not retaliate against a Breeze when hurt by its Wind Charge projectile
 
-### Bogged
+#### Bogged
 
 -   A new variant of Skeletons that shoots poisonous arrows
     -   They're easier to take down with 16 health instead of 20 health
@@ -136,9 +138,9 @@ Happy mining!
 
 ![A Bogged is aiming its Bow at something at night in a Swamp. It is a Skeleton variation with moss on its bones and Mushrooms growing on its head. The Moon is rising between Mangrove trees in the background.](https://launchercontent.mojang.com/v2/images/t1.21newbogged.jpg)
 
-## Weapons
+### Weapons
 
-### Mace
+#### Mace
 
 -   A new heavy weapon to smash your enemies!
     -   Has a base damage of 5
@@ -163,7 +165,7 @@ Happy mining!
 
 ![Noor is using a Mace with a Wind Burst enchantment to fight a group of Pillagers next to a Pillager Outpost. One of the Pillagers is dramatically thrown towards the viewer by the Wind Burst explosion, while the others are aiming their Crossbows at Noor.](https://launchercontent.mojang.com/v2/images/t1.21newmace.jpg)
 
-## Enchantments
+### Enchantments
 
 Three new enchantments have been added which are exclusive to the Mace
 
@@ -187,9 +189,9 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Successfully landing a Wind Burst attack causes the player to lose the fall damage protection they would otherwise have from landing a successful smash attack
     -   Each level will bounce the attacker an additional 7 blocks into the air
 
-## Blocks
+### Blocks
 
-### Crafter
+#### Crafter
 
 -   A new block that enables the crafting of items and blocks via Redstone
     -   Can be crafted with 5 Iron Ingots, 2 Redstone Dust, 1 Crafting Table and 1 Dropper
@@ -202,7 +204,7 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ![An automated rail Crafter is producing rails. Makena is collecting the rails and Noor is building a railway.](https://launchercontent.mojang.com/v2/images/t1.21newcrafter.jpg)
 
-#### Crafter User Interface
+##### Crafter User Interface
 
 -   Has a 3x3 interactable crafting grid
 -   The crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by interacting with it while not holding an item
@@ -212,7 +214,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   The arrow pointing out from the recipe grid will light up red when the Crafter is currently powered
 -   The Crafter User Interface is shared between all players interacting with it, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-#### Crafter Interaction with Other Blocks
+##### Crafter Interaction with Other Blocks
 
 -   The signal strength of a Comparator reading a Crafter is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers and Minecarts with Hoppers can be used to both insert and extract items from the Crafter
@@ -224,7 +226,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   If the item cannot be moved, it will be ejected into the world
 -   Items are removed from Crafters by Hoppers and Minecarts with Hoppers in the same order as from other containers like Chests
 
-### Trial Spawner
+#### Trial Spawner
 
 -   A new variant of Monster Spawners that ejects rewards upon defeat
     -   Cannot be crafted nor obtained by players in Survival - instead, they can be found naturally throughout Trial Chambers
@@ -243,7 +245,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   The mob type can be set by interacting with it while holding a Spawn Egg
 -   Has an Ominous Trial Spawner variant, accessible through an Ominous Trial
 
-### Vault
+#### Vault
 
 -   A block that holds locked treasure and loot - players must find the right key to eject its rewards
     -   Can be found throughout Trial Chambers, containing the structures' most valuable loot
@@ -261,7 +263,7 @@ Three new enchantments have been added which are exclusive to the Mace
 -   The loot it ejects is randomized each time it is unlocked
 -   Has an Ominous Vault variant, unlockable through an Ominous Trial
 
-### Copper Family
+#### Copper Family
 
 -   The Copper family of blocks has been expanded to add:
     -   Chiseled Copper
@@ -271,12 +273,12 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Copper Trapdoor
     -   Oxidized and waxed variants of all of the above
 
-#### Chiseled Copper
+##### Chiseled Copper
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-#### Copper Grate
+##### Copper Grate
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -288,7 +290,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Hostile mobs cannot naturally spawn on them
     -   Can hold water
 
-#### Copper Bulb
+##### Copper Bulb
 
 -   A light-emitting block that can toggle its light emission through Redstone pulses
 -   Oxidizes like other Copper blocks, and emits light based on oxidation level
@@ -307,14 +309,14 @@ Three new enchantments have been added which are exclusive to the Mace
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-#### Copper Doors and Trapdoors
+##### Copper Doors and Trapdoors
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Behaves like wooden doors, meaning they can be opened and closed with interaction as well as Redstone
     -   Can be opened by mobs that have the ability to open doors
 -   Crafted with Copper Ingots
 
-### Tuff Family
+#### Tuff Family
 
 -   Tuff has been expanded to have its own family of blocks:
     -   Stair, Slab, Wall and Chiseled variants
@@ -322,21 +324,21 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Polished Tuff with Stair, Slab and Wall variants
 -   All Tuff variants can be crafted in the Stonecutter
 
-### Heavy Core
+#### Heavy Core
 
 -   A mysterious, dense block which can be combined with a Breeze Rod to craft the Mace
 -   Can only be obtained from Ominous Vaults
 
 ![A house built out of Tuff Bricks, Chiseled Tuff and new Copper-based blocks. Decorative Pots with new Guster and Flow patterns are also visible.](https://launchercontent.mojang.com/v2/images/t1.21newtuff.jpg)
 
-## Items
+### Items
 
-### Trial Explorer Map
+#### Trial Explorer Map
 
 -   Used to locate a nearby Trial Chamber
 -   Level up a Cartographer Villager to Journeyman for the opportunity to trade for this map
 
-### Ominous Bottle
+#### Ominous Bottle
 
 -   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
     -   Comes in 5 variations, one for each Bad Omen level
@@ -344,7 +346,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Can be stacked to 64
 -   Ominous Bottles can be found uncommonly in any Vaults, and are dropped by Raid Captains which are defeated outside a Raid
 
-### Wind Charge
+#### Wind Charge
 
 -   Become the Breeze! Using this item will fire off a Wind Charge projectile similar to the Breeze's
     -   Can be used to launch entities away from the impact of the Wind Burst
@@ -358,33 +360,33 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ![Sunny is using Wind Charges to jump across rocky formations in Badlands. The Wind Charge particles are visible where they jumped up from.](https://launchercontent.mojang.com/v2/images/t1.21newwindcharge.jpg)
 
-### Trial Key
+#### Trial Key
 
 -   An item that can only be obtained from Trial Spawners
 -   Can be used to unlock Vaults
 
-### Breeze Rod
+#### Breeze Rod
 
 -   An item dropped by a Breeze that can be crafted into 4 Wind Charges, or used with the Heavy Core to craft a Mace
 
-### Pottery Sherds
+#### Pottery Sherds
 
 -   Added Flow, Guster, and Scrape Pottery Sherds
 -   These can be obtained by breaking Decorated Pots that display them in Trial Chambers
 
-### Banner Patterns
+#### Banner Patterns
 
 -   Added Flow Banner Pattern, found in Vaults
 -   Added Guster Banner Pattern, found in Ominous Vaults
 
-### Armor Trims
+#### Armor Trims
 
 -   Added Bolt Armor Trim and Smithing Template, found in Vaults
     -   Can be duplicated using a Copper Block or Waxed Copper
 -   Added Flow Armor Trim and Smithing Template, found in Ominous Vaults
     -   Can be duplicated using a Breeze Rod
 
-## Music Discs
+### Music Discs
 
 Added 3 new music discs:
 
@@ -392,7 +394,7 @@ Added 3 new music discs:
 -   "Creator" by Lena Raine. Can be found rarely in Ominous Vaults, and has a comparator output of 12 when played in a Jukebox
 -   "Creator (Music Box)" by Lena Raine. Can be found rarely in Decorated Pots broken in Trial Chambers, and has a comparator output of 11 when played in a Jukebox
 
-## Paintings
+### Paintings
 
 Added five new paintings by artist Sarah Boeving:
 
@@ -422,7 +424,7 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
 
 ![Noor is looking at the new paintings in a gallery. "Unpacked" by Sarah Boeving is in the forefront. Around Noor, six items are displayed on Chiseled Tuff Brick stands: 3 new Music Discs, an enchanted Mace, an enchanted Golden Sword, and an enchanted Copper Door.](https://launchercontent.mojang.com/v2/images/t1.21newmuseum.jpg)
 
-## Ominous Events
+### Ominous Events
 
 -   Bad Omen has been expanded to give access to an optional experience in Trial Chambers
 -   These optional experiences can be accessed through Bad Omen, and are now known as Ominous Events
@@ -432,26 +434,26 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
     -   It is no longer given to players that defeat a Raid Captain outside a Raid
     -   Instead, players can gain access to Bad Omen by consuming the new Ominous Bottle item
 
-### Raids
+#### Raids
 
 -   Bad Omen no longer triggers a Raid directly when entering a Village
     -   Instead, it will transform into a Raid Omen variant with a duration of 30 seconds
     -   Once the Raid Omen expires, a Raid will start at the location the player gained the Raid Omen
     -   Like any other effect, players can drink a Bucket of Milk to clear the Raid Omen, preventing the Raid from starting
 
-### Ominous Trials
+#### Ominous Trials
 
 -   A new Ominous Event that can be accessed by exploring a Trial Chamber while Bad Omen is active
 -   This event will have players facing more powerful Ominous Trial Spawners, if they dare
 
-#### Trial Omen
+##### Trial Omen
 
 -   A variant that Bad Omen can transform into
     -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
     -   The Trial Omen will have a duration of 15 minutes multiplied by the transformed Bad Omen's level
 -   Players that have Trial Omen are surrounded by ominous particles
 
-#### Ominous Trial Spawner
+##### Ominous Trial Spawner
 
 -   A more powerful active phase of the Trial Spawner with unique challenges and rewards
     -   Provides a more challenging experience that combat-loving players can opt into for better rewards
@@ -485,18 +487,18 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
     -   It will stay Ominous until it has been defeated and its cooldown has finished
 -   When defeated, it will eject a different set of loot to normal Trial Spawners
 
-#### Ominous Vault
+##### Ominous Vault
 
 -   A variant of Vaults that have a more menacing looking and emit soul flames instead of normal flames
 -   These hold a more valuable set of rewards than the standard Vaults that are unlocked by Trial Keys
 -   Can be found throughout Trial Chambers in harder to reach places, and require an Ominous Trial Key to unlock
 
-#### Ominous Trial Key
+##### Ominous Trial Key
 
 -   A variant of the Trial Key which has a 30% chance to eject when defeating an Ominous Trial Spawner
 -   Can be used to unlock Ominous Vaults
 
-## Status Effects
+### Status Effects
 
 -   The following status effects have been added:
     -   Wind Charged
@@ -521,7 +523,7 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
     -   If the amount exceeds the max entity cramming cap (24 by default), it will not spawn any Slimes
     -   If it does not exceed it, it will attempt to spawn 2 Slimes up until the max entity cramming cap
 
-## Music
+### Music
 
 Added 9 new background music tracks which will all play in the main menu:
 
@@ -544,7 +546,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 -   "Watcher" by Aaron Cherof
 -   "yakusoku" by Kumi Tanioka
 
-## Advancements
+### Advancements
 
 -   Added 8 new advancements
     -   "Minecraft: Trial(s) Edition" - Step foot in a Trial Chamber
@@ -560,7 +562,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 
 ![Boats are leashed to a Fence on the dock in a Desert Village. Steve is sitting in a boat together with a Villager.](https://launchercontent.mojang.com/v2/images/t1.21leashedboats.jpg)
 
-# Changes
+## Changes
 
 -   Improved chunk loading performance
 -   Doors of different materials can now form a double door
@@ -592,26 +594,26 @@ The following have been added to the pool of songs which play in Overworld Biome
 
 ![Sunny and Noor are next to a fully rebuilt Ruined Portal. The brave Sunny throws an Ender Pearl towards the lit Nether Portal. Noor is to the side holding a Leash tied to a Boat with a Sheep in it.](https://launchercontent.mojang.com/v2/images/t1.21pearlportal.jpg)
 
-## Chunk Loading Improvements
+### Chunk Loading Improvements
 
 -   When reading an already generated chunk from disk, surrounding chunks are no longer unnecessarily loaded
     -   This is also visible on the singleplayer world loading screen
 -   The new system has less memory and CPU overhead
 
-## Realms Improvements
+### Realms Improvements
 
 -   Any member of a Realm can now upgrade a world
 -   In the Realms main screen, all online players of a Realm are displayed
     -   When hovered, a tooltip is shown with each player's head and name
 -   Updated the confirmation screens in Realms to show as popups
 
-## Server Links
+### Server Links
 
 -   Servers can now provide a list of links to clients
 -   If client has received any links, a new button called "Server Links..." will show up in the Pause Menu
     -   To make space for that button, the "Report Bugs" and "Give Feedback" buttons are moved into a sub-screen
 
-## Disconnection Screen Improvements
+### Disconnection Screen Improvements
 
 -   In some cases client will now store detailed information about disconnection (similar to crash reports)
     -   When that happens, an "Open Disconnection Report Directory" button will be added to the disconnection screen
@@ -619,7 +621,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 
 ![Sunny is riding a Minecart that leads into a Nether Portal.](https://launchercontent.mojang.com/v2/images/t1.21minecartportal.jpg)
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 48
 -   Resource Pack version is now 34
@@ -631,7 +633,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 
 ![A swarm of Bees are leashed to a Dragon Egg Block Display Entity, flying above a Savannah. This gives the impression that the Bees have plotted to steal the Dragon Egg.](https://launchercontent.mojang.com/v2/images/t1.21techbeeswithegg.jpg)
 
-## Server Links
+### Server Links
 
 -   New clientbound packet `server_links` is available in `configuration` and `game` protocols
 -   On receival, the links are made available in the Pause Menu
@@ -645,13 +647,13 @@ The following have been added to the pool of songs which play in Overworld Biome
     -   If this field is non-empty, server will send that link to clients
     -   This field should contain well-formed URL
 
-## Custom Server Crash Report Details
+### Custom Server Crash Report Details
 
 -   New clientbound packet `custom_report_details` is available in the `configuration` and `game` protocols
 -   This packet contains a list of key-value text entries
 -   If received, contents of this packet will be added in a separate section to any crash or disconnection report generated during connection to this server
 
-# Data Pack Versions 42 Through 48
+## Data Pack Versions 42 Through 48
 
 -   Added new Music Disc items and loot table entries for the Music Discs
 -   Painting variants are now data-driven
@@ -667,7 +669,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 -   Added new placement modifier type `fixed_placement` to place features in a set of fixed positions
 -   Added new feature type `end_platform` for the obsidian platform in the end
 
-## Painting Variants
+### Painting Variants
 
 -   Painting variants registry are now loaded from packs
 -   Path to painting definition is `data/<namespace>/painting_variant/<id>.json`
@@ -676,7 +678,7 @@ The following have been added to the pool of songs which play in Overworld Biome
     -   `height` - height of painting in blocks, between 1 and 16
     -   `asset_id` - id of sprite in `paintings` atlas
 
-## Jukebox Songs
+### Jukebox Songs
 
 -   Added a jukebox song registry which is loaded from data packs
 -   Path to jukebox song definition is `data/<namespace>/jukebox_song/<id>.json`
@@ -687,7 +689,7 @@ The following have been added to the pool of songs which play in Overworld Biome
     -   `comparator_output` - the redstone signal output by a comparator when played in a Jukebox, between 0 and 15
 -   Added `minecraft:jukebox_playable` item stack component
 
-### `jukebox_playable` Item Component
+#### `jukebox_playable` Item Component
 
 -   If set, the item can be inserted into Jukeboxes to play a song
 -   Format: object with fields
@@ -700,7 +702,7 @@ The following have been added to the pool of songs which play in Overworld Biome
 
 ![Steve is playing around with a Jukebox in the center of a Village. A Nether Star can be seen on top of the Jukebox, suggesting that Steve has used custom data to vibe out to songs that he likes.](https://launchercontent.mojang.com/v2/images/t1.21techcustommusic.jpg)
 
-## Attributes
+### Attributes
 
 -   Attribute Modifiers no longer have a UUID and name combination
 -   Instead, Attribute Modifiers are now uniquely identified by a namespaced ID, similar to other resources
@@ -709,17 +711,17 @@ The following have been added to the pool of songs which play in Overworld Biome
 -   Existing built-in modifiers will be upgraded to new IDs
 -   Existing custom modifiers will be upgraded to the UUID as an ID in the `minecraft` namespace
 
-### `attribute` Command
+#### `attribute` Command
 
 -   The `uuid` and `name` arguments have been replaced with a singular `id` argument
 
-### Item Stack Attribute Modifiers
+#### Item Stack Attribute Modifiers
 
 -   The `uuid` and `name` fields have been removed
 -   Attribute Modifiers now have an `id` (namespaced ID) field
     -   This is a unique identifier per attribute for the modifier
 
-### Entity Attributes
+#### Entity Attributes
 
 -   Attributes are now stored as `attributes`
 -   Attribute format:
@@ -734,7 +736,7 @@ The following have been added to the pool of songs which play in Overworld Biome
                 -   `add_multiplied_base` - previously `1`
                 -   `add_multiplied_total` - previously `2`
 
-## Enchantments
+### Enchantments
 
 ![Efe, wearing Diamond Boots with a custom enchantment that spawns sparkling particles, tempts a Cat with Salmon in a snowy Village under moonlight.](https://launchercontent.mojang.com/v2/images/t1.21techcustomenchantparticles.jpg)
 
@@ -771,13 +773,13 @@ Fields:
     -   Each entry is one of `any`, `hand`, `mainhand`, `offhand`, `armor`, `feet`, `legs`, `chest`, `head` and `body`
 -   `effects`: A map of effect components, as described below in the Effect Components section
 
-### Level-Based Values
+#### Level-Based Values
 
 Many effects of Enchantments depend on the level of the Enchantment. For these fields, a type called Level-Based Values is used. In their most basic form, Level-Based Values can be written as floating-point constants, which is interpreted as a value that isn't in fact level-based, the constant is used as-is for all levels.
 
 If a Level-Based value is not a floating-point constant, it is an object with a `type` field, specifying one of the following types.
 
-#### `linear`
+##### `linear`
 
 The most common type of Level-Based Value is a `linear` value. A `linear` Level-Based Value has two fields:
 
@@ -786,7 +788,7 @@ The most common type of Level-Based Value is a `linear` value. A `linear` Level-
 
 In effect, a `linear` Level-Based Value results in `base + per_level_above_first * (level - 1)`.
 
-#### `clamped`
+##### `clamped`
 
 A Level-Based Value type that clamps a value between a min and max. Fields:
 
@@ -794,14 +796,14 @@ A Level-Based Value type that clamps a value between a min and max. Fields:
 -   `min`: A floating point value specifying the minimum value of the output
 -   `max`: A floating point value specifying the maximum value of the output
 
-#### `fraction`
+##### `fraction`
 
 A Level-Based Value type that represents the fraction between two values. Fields:
 
 -   `numerator`: A Level-Based Value used as the numerator
 -   `denominator`: A Level-Based Value used as the denominator
 
-#### `levels_squared`
+##### `levels_squared`
 
 A Level-Based Value type that evaluates to the square of the levels, plus an addition. Fields:
 
@@ -809,18 +811,18 @@ A Level-Based Value type that evaluates to the square of the levels, plus an add
 
 In effect, a `levels_squared` Level-Based Value results in `level ^ 2 + added`
 
-#### `lookup`
+##### `lookup`
 
 A Level-Based Value type that maps a list of values to specific levels, and applies a fallback if the level is greater than the number of values supplied. Fields:
 
 -   `values` - A list of values indexed by `level - 1` to apply, if present
 -   `fallback` - A fallback Level-Based Value to apply if the level is greater than the size of `values`
 
-### Value Effect Types
+#### Value Effect Types
 
 Value Effects are effects used to manipulate the amount of _something_ in the game.
 
-#### `add`
+##### `add`
 
 A Value Effect that adds a value to the processed results.
 
@@ -829,7 +831,7 @@ Fields:
 -   `value`: A Level-Based Value determining how much to add
     -   Negative values are supported
 
-#### `all_of`
+##### `all_of`
 
 A Value Effect that runs a number of other Value Effects, in order. This can be useful when the same set of conditions apply to a number of Value Effects.
 
@@ -837,7 +839,7 @@ Fields:
 
 -   `effects`: A list of the Value Effects to run
 
-#### `multiply`
+##### `multiply`
 
 A Value Effect that multiplies the processed value by a given factor.
 
@@ -845,7 +847,7 @@ Fields:
 
 -   `factor`: A Level-Based Value determining the factor to multiply in
 
-#### `remove_binomial`
+##### `remove_binomial`
 
 A Value Effect that runs a Binomial series of checks, reducing the input value by 1 for every successful check.
 
@@ -854,7 +856,7 @@ Fields:
 -   `chance`: A Level-Based Value representing the chance that an input value is dropped.
     -   The span is 0 to 1, with 0 being no chance to drop an input value and 1 dropping all input values
 
-#### `set`
+##### `set`
 
 A Value Effect that overwrites the input value with a given Level-Based Value.
 
@@ -862,7 +864,7 @@ Fields:
 
 -   `value`: The Level-Based Value to use as the result
 
-### Attribute Effects
+#### Attribute Effects
 
 Attribute effects use the Attribute system to apply an Attribute Modifier whenever the Enchanted Item is correctly equipped. Attribute effects do not have a dynamic type - they are all the same type.
 
@@ -876,11 +878,11 @@ Fields:
     -   One of `add_value`, `add_multiplied_base` and `add_multiplied_total`
 -   `amount`: A Level-Based Value describing the amount
 
-### Entity Effect Types
+#### Entity Effect Types
 
 Entity Effects are Enchantment effects that generally do something to an Entity involved in an event. Which entity is affected depends on the specific component being configured.
 
-#### `all_of`
+##### `all_of`
 
 An Entity Effect that runs a list of other Entity Effects. This can be useful when a set of conditions should apply to more than one Entity Effect.
 
@@ -888,7 +890,7 @@ Fields:
 
 -   `effects`: List of Entity Effects to run
 
-#### `apply_mob_effect`
+##### `apply_mob_effect`
 
 An Entity Effect that applies a random Mob Effect to the affected entity, chosen from a set of options. The duration and amplifier are randomized within a given span. The effect of specifying larger maximum values than the minimum value is undefined.
 
@@ -899,7 +901,7 @@ Fields:
 -   `min_duration`, `max_duration`: Level-Based Values representing the minimum and maximum duration of the effect in seconds
 -   `min_amplifier`, `max_amplifier`: Level-Based Values representing the minimum and maximum amplifier
 
-#### `damage_entity`
+##### `damage_entity`
 
 An Entity Effect that applies damage to the affected entity. The amount of damage is randomized within a given span. The effect of specifying a larger maximum value than the minimum value is undefined.
 
@@ -908,7 +910,7 @@ Fields:
 -   `damage_type`: The ID of the Damage Type to use
 -   `min_damage`, `max_damage`: Level-Based Values representing the minimum and maximum amount of damage
 
-#### `damage_item`
+##### `damage_item`
 
 An Entity Effect that applies damage to the Enchanted Item. The damage is not applied to items held by players in creative mode.
 
@@ -916,7 +918,7 @@ Fields:
 
 -   `amount`: A Level-Based Value determining the amount of damage to apply
 
-#### `explode`
+##### `explode`
 
 An Entity Effect that causes an explosion.
 
@@ -941,7 +943,7 @@ Fields:
 -   `large_particle`: The large particle emitted by the explosion
 -   `sound`: The sound event caused by the explosion
 
-#### `ignite`
+##### `ignite`
 
 An Entity Effect that ignites the affected entity for a given number of seconds.
 
@@ -949,7 +951,7 @@ Fields:
 
 -   `duration`: A Level-Based Value specifying the number of seconds the fire should last
 
-#### `play_sound`
+##### `play_sound`
 
 An Entity Effect that plays a sound.
 
@@ -959,7 +961,7 @@ Fields:
 -   `volume`: A Float Provider between `0.00001` and `10.0` specifying the volume of the sound
 -   `pitch`: A Float Provider between `0.00001` and `2.0` specifying the pitch of the sound
 
-#### `replace_block`
+##### `replace_block`
 
 An Entity Effect that replaces a block in the world.
 
@@ -973,7 +975,7 @@ Fields:
     -   Optional, if omitted all block types are replaced
 -   `trigger_game_event`: Optional Game Event ID for a game event to trigger when a block has been replaced
 
-#### `replace_disk`
+##### `replace_disk`
 
 An Entity Effect that replaces blocks in a disk / cylinder in the world.
 
@@ -989,7 +991,7 @@ Fields:
     -   Optional, if omitted all block types are replaced
 -   `trigger_game_event`: Optional Game Event ID for a game event to trigger when a block has been replaced
 
-#### `run_function`
+##### `run_function`
 
 An Entity Effect that runs a Command Function. The execution entity the effect is executing for is represented as `@s` and `~ ~ ~` is the position of the event, rotated in the direction of the affected entity.
 
@@ -997,7 +999,7 @@ Fields:
 
 -   `function`: Namespaced ID of the Command Function to run
 
-#### `set_block_properties`
+##### `set_block_properties`
 
 An Entity Effect that sets properties on a block
 
@@ -1009,7 +1011,7 @@ Fields:
     -   Optional, if omitted \[0, 0, 0\] is used
 -   `trigger_game_event`: Optional Game Event ID for a game event to trigger when a block has been changed
 
-#### `spawn_particles`
+##### `spawn_particles`
 
 An Entity Effect that spawns particles around the affected entity.
 
@@ -1032,7 +1034,7 @@ Fields:
         -   Optional, interpreted as `0` if omitted
         -   Example: a `movement_scale` of `1` adds the velocity of the entity to the spawned particles
 
-#### `summon_entity`
+##### `summon_entity`
 
 An Entity Effect that summons a new entity, randomly chosen from a set of Entity Types, at the site of the event.
 
@@ -1042,13 +1044,13 @@ Fields:
     -   Either an Entity Type ID, a list of Entity Type IDs or an Entity Type Tag prefixed with `#`
 -   `join_team`: Boolean that specifies whether the summoned entity should join the team of the owner of the Enchanted Item
 
-### Location-Based Effect Types
+#### Location-Based Effect Types
 
 Location-Based Effects are special effects that activate and deactivate depending on where the owner of the Enchanted Item moves. Location-Based Effect only trigger when such items are initially equipped and subsequently when the owning entity moves to a new space in the Block grid - i.e. when their coordinates change to a new integer value.
 
 All Entity Effect types can also be used as Location-Based Effects, and in addition `attribute` can be used to specify an Attribute Effect as a location-based effect.
 
-### Effect Conditions
+#### Effect Conditions
 
 Most Enchantment effects are filtered using Conditions (same types as in loot tables). This enables effects to be specific for different situations. Each Effect Component defines which parameters are available for the condition to evaluate - some parameters are available for all of these parameter sets, while some are specific to a certain set.
 
@@ -1056,39 +1058,39 @@ Unlike with loot tables, all effect conditions need to be inline objects and can
 
 Each effect component specifies which parameters are available in the Effect Components list below.
 
-#### Damage Parameters
+##### Damage Parameters
 
 -   Entities: `this`, `attacker`, `direct_attacker`
 -   Enchantment Level
 -   Origin
 -   Damage Source
 
-#### Item Parameters
+##### Item Parameters
 
 -   Tool
 -   Enchantment Level
 
-#### Location Parameters
+##### Location Parameters
 
 -   Entities: `this`
 -   Enchantment Level
 -   Origin
 -   Enchantment Active status
 
-#### Entity Parameters
+##### Entity Parameters
 
 -   Entities: `this`
 -   Enchantment Level
 -   Origin
 
-#### Hit Block Parameters
+##### Hit Block Parameters
 
 -   Entities: `this`
 -   Enchantment Level
 -   Origin
 -   Block State
 
-### Effect Components
+#### Effect Components
 
 The `effects` field in an Enchantment is a map of Effect Component type the Effect List data. Most Effect Components are lists, so any number of Effects can be added of any Component Type. The data for each effect generally involves having a specified condition context and Effect Type, but some Effects also deviate from this format.
 
@@ -1200,11 +1202,11 @@ In cases where the documentation specifies a Condition Context and Effect, the C
 
 ![Noor, basking in the sunset, fires a Crossbow with a custom enchantment that allows for multiple Firework Rockets to be fired simultaneously.](https://launchercontent.mojang.com/v2/images/t1.21techcustommultishotfireworks.jpg)
 
-## Enchantment Providers
+### Enchantment Providers
 
 Enchantment Providers are new ways for the game to source Enchantments to use in various situations where Enchantments show up.
 
-### Spawn Equipment Enchantment Providers
+#### Spawn Equipment Enchantment Providers
 
 -   `mob_spawn_equipment`: Enchantment Provider for mobs that spawn with randomly Enchanted equipment
 -   `pillager_spawn_crossbow`: Enchantment Provider for Pillagers that spawn with Enchanted Crossbows
@@ -1213,11 +1215,11 @@ Enchantment Providers are new ways for the game to source Enchantments to use in
 -   `raid/vindicator`: Enchantment Provider that is applied as a buff on the Axe of a Vindicator spawning as wave 1-5
 -   `raid/vindicator_post_wave_5`: Enchantment Provider that is applied as a buff on the Axe of a Vindicator spawning as waves above 5
 
-### Enderman Loot Enchantment Provider
+#### Enderman Loot Enchantment Provider
 
 -   `enderman_loot_drop`: Enchantment Provider that is used for the "fake tool" applied to the carried block of a killed Enderman
 
-### Villager Trade Rebalance Enchantment Providers
+#### Villager Trade Rebalance Enchantment Providers
 
 All Equipment-specific Enchantments in Villager trades in the Villager Trade Rebalance experiment are now sourced from Enchantment Providers.
 
@@ -1227,9 +1229,9 @@ These Enchantment Providers are only used when the Villager Trade Rebalance expe
 
 For example: `trades/desert_armorer_helmet_4` and `trades/taiga_armorer_chestplate_5`.
 
-### Enchantment Provider Types
+#### Enchantment Provider Types
 
-#### `single_enchantment`
+##### `single_enchantment`
 
 An Enchantment Provider which always provides the same Enchantment. The level of the Enchantment can be either constant or randomized.
 
@@ -1238,7 +1240,7 @@ Fields:
 -   `enchantment`: Namespaced ID of the Enchantment
 -   `level`: Int provider representing the level of the Enchantment
 
-#### `enchantments_by_cost`
+##### `enchantments_by_cost`
 
 An Enchantment Provider which gives one or more Enchantments from a set of options according to a given cost (similar to the cost value in the Enchantment Table).
 
@@ -1247,7 +1249,7 @@ Fields:
 -   `enchantments`: The set of Enchantments as either a single Enchantment, a list of Enchantments or hash-prefixed Enchantment Tag
 -   `cost`: Int provider representing the cost to use for the Enchanting process
 
-#### `enchantments_by_cost_with_difficulty`
+##### `enchantments_by_cost_with_difficulty`
 
 An Enchantment Provider which works like `enchantments_by_cost`, but where the cost is calculated partially based on the local difficulty of the area where the event happens causing the Enchantments to be added.
 
@@ -1259,13 +1261,13 @@ Fields:
 -   `min_cost`: Positive integer representing the minimum possible cost
 -   `max_cost_span`: Non-negative integer representing the span of the cost randomization when the special factor is at its maximum
 
-## Damage Types
+### Damage Types
 
 -   New damage type: `campfire`, split from `in_fire`
 
-## Tags
+### Tags
 
-### Directory renames
+#### Directory renames
 
 -   Some registry types that used legacy datapack directory names (based on plural name of element) have been renamed to match registry name
 -   Affected directories:
@@ -1283,17 +1285,17 @@ Fields:
     -   `tags/fluids` -> `tags/fluid`
     -   `tags/game_events` -> `tags/game_event`
 
-### Item Tags
+#### Item Tags
 
 -   Removed `music_discs` item tag
 
-### Block Tags
+#### Block Tags
 
 -   `air`: All blocks that resemble air
 
-### Enchantment Tags
+#### Enchantment Tags
 
-#### Enchantment Functionality Tags
+##### Enchantment Functionality Tags
 
 -   `curse`: Enchantments that get listed in red in tooltips and cannot be removed by disenchanting
 -   `prevents_bee_spawns_when_mining`: Enchantments that allow a tool to mine Bee Nests and Beehives with the Bees still inside
@@ -1302,7 +1304,7 @@ Fields:
 -   `prevents_infested_spawns`: Enchantments that allow a tool to break Infested blocks without causing the mob inside to spawn
 -   `smelts_loot`: Enchantments that cause loot drops to be smelted
 
-#### Enchantment Availability Tags
+##### Enchantment Availability Tags
 
 -   `tradeable`: Enchantments that show up on Books in Villager trades
 -   `on_traded_equipment`: Enchantments that show up on enchanted equipment in Villager trades
@@ -1311,7 +1313,7 @@ Fields:
 -   `on_mob_spawn_equipment`: Enchantments that can show up on equipment worn by randomly spawned mobs
 -   `on_random_loot`: Enchantments that can show up in Chests found in the world
 
-#### Enchantment Exclusivity Tags
+##### Enchantment Exclusivity Tags
 
 New tags used by the Vanilla Enchantments to control which ones are mutually exclusive, all of which are found under the `exclusive_set/` path.
 
@@ -1323,25 +1325,25 @@ New tags used by the Vanilla Enchantments to control which ones are mutually exc
 -   `mining`: Mining-related Enchantments that cannot co-exist
 -   `riptide`: Enchantments that cannot co-exist with Riptide
 
-#### Trade Rebalance Enchantment Tags
+##### Trade Rebalance Enchantment Tags
 
 In the experimental `trade_rebalance` pack, each biome type has two tags:
 
 -   `trades/<biome>_common`: Contains Enchantments traded on the lower profession levels
 -   `trades/<biome>_special`: Contains Enchantments traded on the highest profession level
 
-### Damage Type Tags
+#### Damage Type Tags
 
 -   Removed `breeze_immune_to` Damage type tag
 -   Added `burn_from_stepping`: Damage types that represent burning damage from stepping on something - in particular, damage types countered by the `frost_walker` Enchantment
 -   Added `panic_environmental_causes`: Damage types that cause panic in aggressive animals that can panic, i.e. mobs that retaliate when attacked
 -   Added `panic_causes`: Damage types that cause panic in passive animals, i.e. mobs that run away when attacked
 
-## Loot Tables
+### Loot Tables
 
-### Conditions
+#### Conditions
 
-#### Targets
+##### Targets
 
 Some target entity names have been renamed to fit in a more generic context:
 
@@ -1349,7 +1351,7 @@ Some target entity names have been renamed to fit in a more generic context:
 -   `direct_killer` is now called `direct_attacker`
 -   `killer_player` is now called `attacking_player`
 
-#### `enchantment_active_check`
+##### `enchantment_active_check`
 
 New condition, requires the "Enchantment Active" parameter to exist in the context, which currently means it only works in Enchantment conditions.
 
@@ -1357,11 +1359,11 @@ Fields:
 
 -   `active`: boolean determining whether the check should match for an active (`true`) or inactive (`false`)
 
-#### `random_chance`
+##### `random_chance`
 
 -   The `chance` field is now a Number Provider
 
-#### `random_chance_with_enchanted_bonus`
+##### `random_chance_with_enchanted_bonus`
 
 Renamed from `random_chance_with_looting`. Field changes:
 
@@ -1371,15 +1373,15 @@ Renamed from `random_chance_with_looting`. Field changes:
 -   `enchanted_chance`: new field for the chance for an enchanted item - a Level-Based Value
 -   `enchantment`: new field containing the namespaced ID of the Enchantment which grants the bonus chance
 
-### Functions
+#### Functions
 
-#### `enchanted_count_increase`
+##### `enchanted_count_increase`
 
 Renamed from `looting_enchant`. Now has a new field:
 
 -   `enchantment`: Namespaced ID of the Enchantment that increases yields
 
-#### `enchant_randomly`
+##### `enchant_randomly`
 
 -   Changed format - the `enchantments` field is now called `options`
 -   `options` is now specified as one of an Enchantment, a list of Enchantments or an Enchantment Tag (prefixed with `#`)
@@ -1387,20 +1389,20 @@ Renamed from `looting_enchant`. Now has a new field:
     -   If omitted, defaults to `true`
     -   Note: Books are considered compatible with all Enchantments
 
-### `enchant_with_levels`
+#### `enchant_with_levels`
 
 -   The `treasure` field has been removed
 -   Changed format - `options` is now specified as one of an Enchantment, a list of Enchantments or an Enchantment Tag (prefixed with `#`)
 
-### `copy_name`
+#### `copy_name`
 
 -   Some of the possible values for the `source` field have changed:
     -   `killer` renamed to `attacking_entity`
     -   `killer_player` renamed to `last_damage_player`
 
-### Number Providers
+#### Number Providers
 
-#### `enchantment_level`
+##### `enchantment_level`
 
 A new number provider that sources values from the Enchantment Level parameter.
 
@@ -1408,15 +1410,15 @@ Fields:
 
 -   `amount`: A Level-Based Value giving a value based on the level of the Enchantment
 
-## Predicates
+### Predicates
 
-### Damage Type Predicate
+#### Damage Type Predicate
 
 -   New option: `is_direct` - optional boolean
     -   When present, requires the damage to be direct (`true`) or indirect (`false`)
     -   Damage is direct when its direct and source entities are the same
 
-### Enchantment Predicate
+#### Enchantment Predicate
 
 -   The `enchantment` field has been removed
 -   Added an `enchantments` field, one of an Enchantment, a list of Enchantments or an Enchantment Tag (prefixed with `#`)
@@ -1424,7 +1426,7 @@ Fields:
 -   If no `enchantments` field is specified, any enchantment matching `levels` will succeed the test
     -   If neither the `levels` nor `enchantments` fields are defined, the predicate will match an item that has any enchantment
 
-### Jukebox Playable Predicate
+#### Jukebox Playable Predicate
 
 New item sub-predicate available as `jukebox_playable`.
 
@@ -1432,18 +1434,18 @@ New item sub-predicate available as `jukebox_playable`.
 -   Fields:
     -   `song` - optional id, list of ids or tag for jukebox song to be matched
 
-### Entity Predicate
+#### Entity Predicate
 
 -   New sub-predicate type Movement Predicate available as `movement`
 -   New sub-predicate type Periodic Ticks Predicate available as `periodic_tick`
 -   New option: `movement_affected_by` - optional Location Predicate
     -   When present, adds requirements on a block at most 0.5 blocks below the entity which can affect its movement
 
-### Player Predicate
+#### Player Predicate
 
 -   The `gamemode` field has been changed to accept a list of game modes
 
-### Entity Flags Predicate
+#### Entity Flags Predicate
 
 New possible fields:
 
@@ -1452,13 +1454,13 @@ New possible fields:
     -   Gliding with Elytra
     -   Flying in Creative Mode
 
-### Location Predicate
+#### Location Predicate
 
 New possible field:
 
 -   `can_see_sky`: Optional boolean - if provided, matches exactly when the location has the maximum possible level of sky light
 
-### Movement Predicate
+#### Movement Predicate
 
 New predicate type. Possible fields:
 
@@ -1468,19 +1470,19 @@ New predicate type. Possible fields:
 -   `vertical_speed`: `min`/`max` limits for the vertical speed component of the entity's movement in blocks / second
 -   `fall_distance`: `min`/`max` limits for the fall distance of the entity in blocks
 
-### Periodic Ticks Predicate
+#### Periodic Ticks Predicate
 
 New Entity sub-predicate available as `periodic_tick` in Entity Predicates. Format: a positive integer.
 
 This sub-predicate is true every _n_ ticks of an entity's lifetime.
 
-## Attributes
+### Attributes
 
-### `generic.attack_knockback`
+#### `generic.attack_knockback`
 
 Now also works on Players.
 
-### `generic.burning_time`
+#### `generic.burning_time`
 
 A factor to how long an entity remains on fire after being ignited. A factor of `0` removes the entire burn time, a factor of `1` lets the entity burn the default fire time - larger values increase the amount of time the entity remains on fire.
 
@@ -1488,7 +1490,7 @@ A factor to how long an entity remains on fire after being ignited. A factor of 
 -   Minimum: `0`
 -   Maximum: `1024`
 
-### `generic.explosion_knockback_resistance`
+#### `generic.explosion_knockback_resistance`
 
 A factor to how much knockback an entity takes from an Explosion. A factor of `1` removes the entire knockback, a factor of `0` means no knockback reduction.
 
@@ -1496,7 +1498,7 @@ A factor to how much knockback an entity takes from an Explosion. A factor of `1
 -   Minimum: `0`
 -   Maximum: `1`
 
-### `player.mining_efficiency`
+#### `player.mining_efficiency`
 
 Mining speed factor added to the speed of mining when using a tool that efficiently mines a block.
 
@@ -1504,7 +1506,7 @@ Mining speed factor added to the speed of mining when using a tool that efficien
 -   Minimum: `0`
 -   Maximum: `1024`
 
-### `generic.movement_efficiency`
+#### `generic.movement_efficiency`
 
 How efficiently the entity can move through impeding terrain that slows down movement. A factor of `1` removes all movement penalty, a factor of `0` applies full movement penalty.
 
@@ -1512,7 +1514,7 @@ How efficiently the entity can move through impeding terrain that slows down mov
 -   Minimum: `0`
 -   Maximum: `1`
 
-### `generic.oxygen_bonus`
+#### `generic.oxygen_bonus`
 
 Factor to the chance an Entity has to not use up air when underwater. `0` has no effect, values over `0` are used in the following formula to determine the chance of using up air:
 
@@ -1522,7 +1524,7 @@ Factor to the chance an Entity has to not use up air when underwater. `0` has no
 -   Minimum: `0`
 -   Maximum: `1024`
 
-### `player.sneaking_speed`
+#### `player.sneaking_speed`
 
 The movement speed factor when sneaking. A factor of `1` means sneaking is as fast as walking, a factor of `0` means unable to move while sneaking.
 
@@ -1530,7 +1532,7 @@ The movement speed factor when sneaking. A factor of `1` means sneaking is as fa
 -   Minimum: `0`
 -   Maximum: `1`
 
-### `player.submerged_mining_speed`
+#### `player.submerged_mining_speed`
 
 The mining speed factor when submerged. A factor of `1` means mining as fast submerged as on land, a factor of `0` means unable to mine while submerged. Note that this represents only the submersion factor itself, and other factors (such as not touching the ground) also apply.
 
@@ -1538,7 +1540,7 @@ The mining speed factor when submerged. A factor of `1` means mining as fast sub
 -   Minimum: `0`
 -   Maximum: `20`
 
-### `player.sweeping_damage_ratio`
+#### `player.sweeping_damage_ratio`
 
 How much of the base attack damage that gets transferred transfer to secondary targets in a sweep attack. This is additive to the base attack of the sweep damage itself of `1`. A value of `0` means none of the base attack damage is transferred (sweep damage is `1`). A value of `1` means all of the base attack damage is transferred (sweep damage is `attack_damage + 1`)
 
@@ -1546,7 +1548,7 @@ How much of the base attack damage that gets transferred transfer to secondary t
 -   Minimum: `0`
 -   Maximum: `1`
 
-### `generic.water_movement_efficiency`
+#### `generic.water_movement_efficiency`
 
 The movement speed factor when submerged. The higher, the more of the underwater movement penalty is mitigated. Note that this represents only the submersion factor itself, and other factors (such as not touching the ground) also apply.
 
@@ -1554,9 +1556,9 @@ The movement speed factor when submerged. The higher, the more of the underwater
 -   Minimum: `0`
 -   Maximum: `1`
 
-## Block Predicates (World Generation Style)
+### Block Predicates (World Generation Style)
 
-### `unobstructed`
+#### `unobstructed`
 
 New block predicate type that passes if the selected block is unobstructed (no entities are in the space of the block).
 
@@ -1565,16 +1567,16 @@ Fields:
 -   `offset`: List of 3 int offset coordinates, specifying the offset from the origin position to test
     -   Optional, defaults to `[0, 0, 0]` if unspecified
 
-## Entity Data
+### Entity Data
 
-### Projectiles
+#### Projectiles
 
 -   Arrow-like projectile data now contains a `weapon` field containing an Item Stack representing the weapon the projectile was fired from
 -   The `ShotFromCrossbow` field has been removed
 -   Removed `power` NBT tag and replaced it with `acceleration_power` tag with a number value that control the projectiles acceleration (and maximum speed)
     -   This change affects the following projectiles; `dragon_fireball`, `large_fireball`, `small_fireball`, `fireball`, `breeze_wind_charge`, `wind_charge`, `wither_skull`
 
-## Item Components
+### Item Components
 
 -   The `custom_data` component can now be specified as an SNBT string to preserve type information in JSON
     -   This is the same as is used in the `set_custom_data` loot function and `custom_data` predicate
@@ -1583,7 +1585,7 @@ Fields:
         -   Once consumed, the food item will be replaced with the specified item
         -   e.g. `food={nutrition:1,saturation:0,using_converts_to:{id:"poisonous_potato",components:{"minecraft:custom_name":'"Wait what?"'}}}`
 
-## Structures
+### Structures
 
 -   Added `dimension_padding` field to structures of type `minecraft:jigsaw`, which ensures that a structure is not generating through the edges of a dimension by adding vertical padding to its bounding box
     -   Can be written as an object with two fields:
@@ -1600,7 +1602,7 @@ Fields:
     -   Has the same possible values as the `liquid_settings` in jigsaw structures
     -   If provided, it overrides the inherited liquid settings from the parent jigsaw structure while generating this pool element
 
-## Commands
+### Commands
 
 -   The item argument in the `/give`, `/item`, and `/loot` commands now supports removal of default components with `!` prefix
     -   e.g. `/give @s diamond_pickaxe[!tool]` will give a Diamond Pickaxe without the `tool` component
@@ -1608,21 +1610,21 @@ Fields:
     -   This functions as `@e[sort=nearest,limit=1]`
     -   Additional requirements may still be provided; for example: `@n[type=pig]` will select the closest Pig
 
-# Resource Pack Versions 33 Through 34
+## Resource Pack Versions 33 Through 34
 
 -   Added new textures and music assets for Music Discs
 -   Renamed sound events for Ominous Trial Spawner becoming active and ambient sound
 -   Added the `block.vault.reject_rewarded_player` sound event
 -   Changes to Shaders
 
-## Shaders
+### Shaders
 
 -   The `blend` block in core shader definitions has been removed, as it was not used
 -   The `position_color_tex` shader has been removed, replaced with the pre-existing `position_tex_color`
 -   The `glint_direct` shader has been removed, replaced with the pre-existing `glint` shader
 -   The `armor_glint` shader has been removed, as it was unused
 
-# Fixed bugs in 1.21
+## Fixed bugs in 1.21
 
 -   [MC-67](https://bugs.mojang.com/browse/MC-67) Entities with passengers cannot travel through portals
 -   [MC-902](https://bugs.mojang.com/browse/MC-902) The end obsidian platform resets every time entities go through the end portal, which can cause blocks to be deleted

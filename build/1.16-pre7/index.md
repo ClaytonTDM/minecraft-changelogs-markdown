@@ -1,6 +1,8 @@
+# 1.16-pre7
+
 We've now released pre-release 7 to fix a few more bugs.
 
-# Fixed Bugs in 1.16 Pre-Release 7
+## Fixed Bugs in 1.16 Pre-Release 7
 
 -   [MC-176447](https://bugs.mojang.com/browse/MC-176447) Striders left/right leg uses the same texture
 -   [MC-180467](https://bugs.mojang.com/browse/MC-180467) World Border is no longer fully solid

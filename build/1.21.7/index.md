@@ -1,21 +1,23 @@
+# 1.21.7
+
 A hot-as-lava hotfix. It's Minecraft 1.21.7, bringing updates to your disco, plus a fresco and some crash and bug fixes. We've added a new 3x3 painting to honor everyone's best friend, as well as refreshed the loot dropped by an iconic mob. The Baby Zombie riding a Chicken (Chicken Jockey) will drop the “Lava Chicken” music disc when defeated.
 
 We will be back with the next snapshot in a few weeks.
 
 Happy Mining!
 
-# New Features
+## New Features
 
 -   Added a painting of a good boy by artist Sarah Boeving
 -   Added music disc "Lava Chicken" by Hyper Potions
     -   Drops when defeating a Baby Zombie riding a Chicken (Chicken Jockey)
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 81
 -   The Resource Pack version is now 64
 
-# Fixed bugs in 1.21.7
+## Fixed bugs in 1.21.7
 
 -   [MC-280354](https://bugs.mojang.com/browse/MC-280354) Loading and unloading a resource pack that uses a x32000 atlas breaks the game
 -   [MC-297748](https://bugs.mojang.com/browse/MC-297748) The moon is rendered incorrectly on some Qualcomm graphics

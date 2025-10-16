@@ -1,10 +1,12 @@
+# 22w12a
+
 Waaaaaaaaaaah! It's Wal... wait that's not it. It's the warden! The spooky, unfriendly (maybe it just wants a hug?) mob is making its way into our latest snapshot.
 
 Additionally, you'll be seeing some functionality for the sculk shriekers and some fancy new boats (they have chests).
 
 Enjoy!
 
-# New Features in 22w12a
+## New Features in 22w12a
 
 -   Added Darkness mob effect
 -   Added Sculk Shrieker functionality
@@ -12,7 +14,7 @@ Enjoy!
 -   Added boat with chest
 -   Added the Swift Sneak enchantment
 
-## Sculk Shrieker
+### Sculk Shrieker
 
 -   Added functionality to the Sculk Shrieker: Notable for its boney appendages, this block responds to Sculk Sensors detecting vibrations by sending out a warning call to distant Wardens
     -   Watch out when stepping on them, as they will feel that too and send out a call!
@@ -21,7 +23,7 @@ Enjoy!
 
 Added Warden mob
 
-## Warden
+### Warden
 
 The horror of the Deep Dark! A creature with no eyes, roughly resembling the Sculk that can be found throughout the Deep Dark, the Warden is an unstoppable force of nature that inhabits this biome
 
@@ -40,7 +42,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   They do not drop any loot
 -   Wardens are powerful creatures, and it is often better to sneak around one that has emerged instead of taking it head on - you've been warned
 
-## Darkness
+### Darkness
 
 -   A new mob effect unique to the Warden and Sculk Shrieker, which will afflict you with it when nearby
 -   Lowers the gamma down at an equivalent of "Moody" while having this effect
@@ -49,7 +51,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   A new Accessibility slider has been added in your Options menu called “Darkness Pulsing”
     -   Controls how dark the Darkness effect gets when a Warden or Sculk Shrieker gives it to you, but will not affect the fog distance
 
-## Boat with chest
+### Boat with chest
 
 -   Lets you bring more stuff on your boat adventures
 -   If you are in the boat, press the open inventory key to access the chest contents
@@ -58,7 +60,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   Also works with hoppers, droppers, and other blocks that interact with chests
 -   Like other chests, opening a boat chest or breaking the boat will anger piglins, since they think all chests belong to them
 
-## Swift Sneak
+### Swift Sneak
 
 Imbue your leggings with this shiny new enchantment to move as fast while crouching as you would normally walk!
 
@@ -66,13 +68,13 @@ Imbue your leggings with this shiny new enchantment to move as fast while crouch
 -   Has 3 different levels with different speed increases
 -   It is the first enchantment unique to leggings equipment!
 
-# Changes in 22w12a
+## Changes in 22w12a
 
 -   The Deep Dark biome is now less flooded than surrounding areas
 -   Leaves are now waterloggable
 -   Removed debug hotkey cycling render distance
 
-# Fixed bugs in 22w12a
+## Fixed bugs in 22w12a
 
 -   [MC-149805](https://bugs.mojang.com/browse/MC-149805) While editing a book, you cannot use Ctrl+Home or Ctrl+End to jump to the beginning or end of the text
 -   [MC-165503](https://bugs.mojang.com/browse/MC-165503) Fence gates (between walls) aren't affected by ambient occlusion/smooth lighting

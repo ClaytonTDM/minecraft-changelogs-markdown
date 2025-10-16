@@ -1,8 +1,10 @@
+# 25w10a
+
 It's time for a new Minecraft snapshot! We've got some more under-the-hood updates including a `tntExplodes` game rule previously found in Bedrock edition, new features in SNBT syntax, and allowing all entities to store custom data. We also have some more bug fixes coming your way.
 
 You can now also enjoy a new main menu background, happy mining!
 
-# Changes
+## Changes
 
 -   The Sheep wool texture has been tweaked to remove the stark line at the back
 -   Blocks that are broken by a Piston now play their breaking sound
@@ -10,12 +12,12 @@ You can now also enjoy a new main menu background, happy mining!
 -   The textures of Test Blocks and Test Instance Blocks have been updated
 -   Cactus Flowers can now be placed on Farmland
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 70
 -   The Resource Pack version is now 54
 
-# Data Pack Version 70
+## Data Pack Version 70
 
 -   All entities can now store custom data
 -   Unified format and functionality of predicates for components on Entities and Block Entities
@@ -23,27 +25,27 @@ You can now also enjoy a new main menu background, happy mining!
 -   Added new `tntExplodes` Game Rule
 -   Added `#flowers` item tag - corresponding item tag for the already existing `#flowers` block tag
 
-## Entity Data
+### Entity Data
 
 -   Custom data (previously present only on Marker) is now available on all entities
     -   It's exposed as a `minecraft:custom_data` component, so it can be set by spawning items and matched by predicates
     -   The component is currently stored in a field called `data`, which will be changed in the future when more proper storage for entity components is introduced
     -   It's stored only if it's non-empty
 
-## Entity Predicates
+### Entity Predicates
 
 -   A new optional field has been added to entity predicates: `predicates`
     -   Its functionality and format is identical to the field `predicates` on item predicates, but they operate on entity components
         -   When present, `predicates` will match partial contents of entity components
 
-## Block Predicates
+### Block Predicates
 
 -   New optional fields have been added to block predicates: `components` and `predicates`
 -   Their functionality and format are identical to the fields `components` and `predicates` on item predicates, but they operate on block entity components (when present)
     -   When present, `components` will match exact contents of block entity components
     -   When present, `predicates` will match partial contents of block entity components
 
-## SNBT Format
+### SNBT Format
 
 -   To simplify input of data and macro use, SNBT now also supports following operations:
     -   `bool(arg)` - converts argment to boolean
@@ -52,18 +54,18 @@ You can now also enjoy a new main menu background, happy mining!
     -   `uuid(str)` - converts string representation of UUID to integer array
 -   Implicit infinite float values (like `1e1000`) are now rejected
 
-## `tntExplodes` Game Rule
+### `tntExplodes` Game Rule
 
 -   When `false`, TNT will not explode and cannot be primed
 -   Default value: `true`
 
-# Resource Pack Version 54
+## Resource Pack Version 54
 
 -   "Global" uniforms may now be defined in any shader, and the game will attempt to fill it
     -   Currently, these are: `ModelViewMat`, `ProjMat`, `TextureMat`, `ScreenSize`, `ColorModulator`, `Light0_Direction`, `Light1_Direction`, `GlintAlpha`, `FogStart`, `FogEnd`, `FogColor`, `FogShape`, `LineWidth`, `GameTime`, `ModelOffset`
     -   The type of the uniform must match what it would normally be, or it'll be undefined behavior
 
-# Fixed bugs in 25w10a
+## Fixed bugs in 25w10a
 
 -   [MC-269386](https://bugs.mojang.com/browse/MC-269386) Flow Pottery Sherd is not in the correct spot in the creative inventory
 -   [MC-270043](https://bugs.mojang.com/browse/MC-270043) Reduced armor glint applies to tridents

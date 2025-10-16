@@ -1,40 +1,42 @@
+# 23w45a
+
 We're happy to share another snapshot, this time offering an early look at some exciting new adventures waiting for you underground in the form of Trial Chambers!
 
 Trial Chambers are designed to be challenging moments of combat and exploration hidden medium-deep below the surface of the Overworld. Trial Chambers bring new decorative and lighting blocks, new Trial Spawners to deliver a different style of multi-mob fights, and the bushy-browed Breeze, a new mob specific to Trial Chambers which will add quite a bit of chaos to your combats.
 
 Happy Mining!
 
-# Changes
+## Changes
 
 -   Monster Spawner now renders their inner faces when looking inside
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 24
 -   The Resource Pack version is now 21
 
-# Data Pack Version 24
+## Data Pack Version 24
 
 -   Added experimental Breeze mob
 -   Added experimental Trial Spawner block
 -   Increased maximum value of Jigsaw structure variable `size` from 7 to 20
 -   Added `trial_chambers_copper_bulb_degradation` structure processor list
 
-# Resource Pack Version 21
+## Resource Pack Version 21
 
 -   `uniform` font has been updated to use Unifont 15.1.04 (from 15.0.06)
 -   The only supported texture format is now .png
 
-## Breeze Mob
+### Breeze Mob
 
 -   Added entity models and textures for experimental Breeze mob:
     -   `breeze`, `wind_charge`
 -   Added shader:
     -   `breeze_wind`
 
-# Experimental Features
+## Experimental Features
 
-## Added Breeze mob
+### Added Breeze mob
 
 -   The Breeze is a cunning, hostile mob that can spawn via Trial Spawner in some rooms within the Trial Chambers
 -   The Breeze moves primarily by leaping around the target, sometimes jumping quite long distances
@@ -50,7 +52,7 @@ Happy Mining!
     -   Lit Candles (both standalone and on cake) are extinguished
 -   Wind bursts do not have any effect on Iron Doors, Iron Trapdoors, or any block being held in its position by a Redstone signal
 
-## Trial Spawner
+### Trial Spawner
 
 -   Trial Spawner is a new variant of Monster Spawners that ejects rewards upon completion and can have variable levels of challenge in multiplayer
 -   The challenge level will increase for each new player a Trial Spawner notices nearby
@@ -67,7 +69,7 @@ Happy Mining!
     -   The mob type can be set by interacting with it while holding a Spawn Egg
 -   Creative and Spectator players cannot be detected or noticed by Trial Spawners
 
-## Trial Chambers
+### Trial Chambers
 
 -   Trial Chambers are a new structure in the Overworld where players can explore and take on combat challenges during the mid-game
     -   Trial Chambers are made out of a variety of Copper and Tuff blocks and can be found in different sizes from large to small
@@ -94,17 +96,17 @@ Happy Mining!
     -   For example, one Trial Chamber might only spawn Zombies, Cave Spiders and Strays, while another might only spawn Slimes, Silverfish and Skeletons
     -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
 
-### Known issues
+#### Known issues
 
 -   The corridors sometimes end with a dead end
 -   Aquifers, Lush Caves, and Sculk Veins sometimes intersect with the Trial Chamber
 
-## Trial Key
+### Trial Key
 
 -   An item that can only be obtained from Trial Spawners
 -   Trial Keys do not currently have any functionality
 
-# Fixed bugs in Snapshot 23w45a
+## Fixed bugs in Snapshot 23w45a
 
 -   [MC-131646](https://bugs.mojang.com/browse/MC-131646) Drowned spawners only work in biomes where drowned spawn
 -   [MC-177446](https://bugs.mojang.com/browse/MC-177446) "RootVehicle" tag in playerdata entry is not upgraded

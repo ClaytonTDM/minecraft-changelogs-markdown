@@ -42,10 +42,31 @@ function htmlToMarkdown(html) {
 
 async function createVersionFolder(version, type, imageUrl, body) {
 	const folderName = path.join("build", `${version}`);
+
+	try {
+		await fs.access(folderName);
+		console.log(`Skipping existing folder: ${folderName}`);
+		return;
+	} catch (error) {}
+
 	await fs.mkdir(folderName, { recursive: true });
 
-	const markdown = htmlToMarkdown(body);
+	let markdown = htmlToMarkdown(body);
+	markdown = markdown.replace(/^(#{1,5}) /gm, (match, hashes) => `#${hashes} `);
+
+	markdown = `# ${version}\n\n${markdown}`;
+
 	await fs.writeFile(path.join(folderName, "index.md"), markdown);
+
+	const htmlPath = path.join(folderName, "index.html");
+	const mdPath = path.join(folderName, "index.md");
+	try {
+		await fs.symlink("index.md", htmlPath);
+	} catch (error) {
+		if (error.code !== "EEXIST") {
+			console.error(`Error creating symlink for ${version}:`, error.message);
+		}
+	}
 
 	const imageExt = "jpg";
 	const imagePath = path.join(folderName, `${version}.${imageExt}`);
@@ -67,6 +88,13 @@ async function createFromVersionFolder(
 	allVersions
 ) {
 	const folderName = path.join("build", `from-${version}`);
+
+	try {
+		await fs.access(folderName);
+		console.log(`Skipping existing folder: ${folderName}`);
+		return;
+	} catch (error) {}
+
 	await fs.mkdir(folderName, { recursive: true });
 
 	const currentVersion = allVersions.find((v) => v.version === version);
@@ -79,12 +107,13 @@ async function createFromVersionFolder(
 		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
 			const v = versionsToInclude[i];
 			const imagePath = path.join(folderName, `${v.version}.png`);
-			if (v.image && v.image.url) {
-				let fullImageUrl = v.image.url;
-				if (!fullImageUrl.startsWith("http")) {
-					fullImageUrl = `https://launchercontent.mojang.com${fullImageUrl}`;
+			const targetImagePath = path.join("..", `${v.version}`, `${v.version}.jpg`);
+			try {
+				await fs.symlink(targetImagePath, imagePath);
+			} catch (error) {
+				if (error.code !== "EEXIST") {
+					console.error(`Error creating image symlink for ${v.version}:`, error.message);
 				}
-				await downloadImage(fullImageUrl, imagePath);
 			}
 		}
 	} else {
@@ -94,17 +123,28 @@ async function createFromVersionFolder(
 		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
 			const v = versionsToInclude[i];
 			const imagePath = path.join(folderName, `${v.version}.png`);
-			if (v.image && v.image.url) {
-				let fullImageUrl = v.image.url;
-				if (!fullImageUrl.startsWith("http")) {
-					fullImageUrl = `https://launchercontent.mojang.com${fullImageUrl}`;
+			const targetImagePath = path.join("..", `${v.version}`, `${v.version}.jpg`);
+			try {
+				await fs.symlink(targetImagePath, imagePath);
+			} catch (error) {
+				if (error.code !== "EEXIST") {
+					console.error(`Error creating image symlink for ${v.version}:`, error.message);
 				}
-				await downloadImage(fullImageUrl, imagePath);
 			}
 		}
 	}
 
 	await fs.writeFile(path.join(folderName, "index.md"), markdown);
+
+	const htmlPath = path.join(folderName, "index.html");
+	try {
+		await fs.symlink("index.md", htmlPath);
+	} catch (error) {
+		if (error.code !== "EEXIST") {
+			console.error(`Error creating symlink for from-${version}:`, error.message);
+		}
+	}
+
 	console.log(`Created folder: ${folderName}`);
 }
 
@@ -204,6 +244,15 @@ async function main() {
 			const indexContent = await fs.readFile(fromLatestPath, "utf-8");
 			await fs.writeFile(path.join("build", "index.md"), indexContent);
 			console.log(`Created index.md from from-${latestRelease}`);
+
+			const buildHtmlPath = path.join("build", "index.html");
+			try {
+				await fs.symlink("index.md", buildHtmlPath);
+			} catch (error) {
+				if (error.code !== "EEXIST") {
+					console.error("Error creating index.html symlink:", error.message);
+				}
+			}
 		}
 
 		console.log("Done!");

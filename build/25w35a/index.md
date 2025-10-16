@@ -1,30 +1,32 @@
+# 25w35a
+
 In this week's snapshot we are adding a Minecraft Server Management Protocol which lets servers query players, tweak game rules, update server settings, and listen for real-time server event notifications. Some server properties have been moved to game rules, allowing them to be updated while the server is running. Additionally, player icons can now be used in chat, the copper golem has received some improvements and we are shipping a bunch of bug fixes.
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added Halychian language support
 
-# Changes
+## Changes
 
-## Recipes
+### Recipes
 
 -   Hanging Signs can now only be crafted using Iron Chains
 
-## UI
+### UI
 
 -   When adding a new server to the server list, the name is no longer prefilled. When left empty the default name is used.
 -   More text inputs now support selecting text by mouse dragging
 
-### Mouse cursor
+#### Mouse cursor
 
 -   Some UI components will now change shape of mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
 -   Additionally, clickable parts of text labels (like links) will now change cursor to the "hand" shape
 -   This feature can be disabled with "Allow Cursor Changes" option in "Mouse Settings..." menu
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Copper Golems hitbox has been tweaked
     -   The hitbox is now 0.98 blocks in height to be able to pathfind in one block high spaces
@@ -32,13 +34,13 @@ Happy mining!
 -   The Copper Golem now uses the Saddle equipment slot for blocks placed atop of its Lightning Rod
     -   Its Head equipment slot will now function like a regular head slot, akin to its functionality for humanoid mobs
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 85.0
 -   The Resource Pack version is now 67.0
 -   Added Minecraft Server Management Protocol
 
-## Server Properties
+### Server Properties
 
 Several server properties were removed in favour of making them into game rules, allowing these settings to be changed while the server is running.
 
@@ -55,7 +57,7 @@ Several server properties were removed in favour of making them into game rules,
 -   Added server property `status-heartbeat-interval` controlling the interval the management server sends heartbeat notifications to connected clients
     -   Defaults to `0`, meaning it’s disabled
 
-## Minecraft Server Management Protocol
+### Minecraft Server Management Protocol
 
 Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 
@@ -82,11 +84,11 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
     -   Response: `{"jsonrpc":"2.0","id":1,"result":{"jsonrpc":"2.0","id":1,"error":{"code":-32601,"message":"Method not found","data":"Method not found: minecraft:foo/bar"}}}`
     -   Errors and error codes follow [JSON-RPC 2.0 error object format](https://www.jsonrpc.org/specification#error_object)
 
-# Data Pack Version 85.0
+## Data Pack Version 85.0
 
 -   Renamed `chain` to `iron_chain`
 
-## Game Rules
+### Game Rules
 
 -   Added `pvp` game rule controlling whether players can deal damage to other players
     -   Defaults to `true`
@@ -97,9 +99,9 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Added `enableCommandBlocks` game rule controlling if Command Blocks should be enabled or not
     -   Defaults to `true`
 
-## Text rendering
+### Text rendering
 
-### `object` Text Component
+#### `object` Text Component
 
 -   This component has been updated to support displaying other non-character objects as a part of text
 -   New format:
@@ -108,12 +110,12 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Similarly to `nbt` text component `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-#### `atlas` Object Type
+##### `atlas` Object Type
 
 -   Behaves the same way as the `object` component did previously, but is now a separate object type
 -   Uses the same format as before
 
-#### `player` Object Type
+##### `player` Object Type
 
 -   Renders player head
 -   If partial profile is given, skin is resolved in the same way as `minecraft:profile` component on player head
@@ -124,21 +126,21 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
         -   `properties`: profile properties, optional map
     -   `hat`: controls rendering of a hat layer, boolean, default `false`
 
-# Resource Pack Version 67.0
+## Resource Pack Version 67.0
 
-## Block Sprites
+### Block Sprites
 
 Renamed the following block sprites:
 
 -   `chain` to `iron_chain`
 
-## Item Sprites
+### Item Sprites
 
 Renamed the following item sprites:
 
 -   `chain` to `iron_chain`
 
-# Fixed bugs in 25w35a
+## Fixed bugs in 25w35a
 
 -   [MC-278550](https://bugs.mojang.com/browse/MC-278550) While flying in creative or spectator mode, the surface of water can prevent you from sprinting
 -   [MC-297126](https://bugs.mojang.com/browse/MC-297126) "Failed to read field..." error spam when upgrading a 25w15a or 25w16a world

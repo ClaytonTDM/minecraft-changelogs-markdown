@@ -1,39 +1,41 @@
+# 1.20.5-pre2
+
 It's the start of a new week and we're coming right out of the gate with another pre-release for Minecraft: Java Edition 1.20.5! Apart from upping our pun-game in the Advancements department, this pre-release also fixes a slew of bugs and crashes.
 
 Happy mining!
 
-# New Features
+## New Features
 
-## Advancements
+### Advancements
 
 -   `Snip it!` advancement is renamed to `Shear Brilliance`
 
-# Changes
+## Changes
 
 -   Using ctrl+pick block no longer lists "(+NBT)" in the item tooltip
 
-## UI
+### UI
 
 -   The animated Nether Portal texture is displayed when changing dimension to or from The Nether
 -   The animated End Portal effect is displayed when changing dimension to or from The End
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 40
 -   Invalid data in packets sent from a server will now cause the game client to disconnect
 
-# Data Pack Version 40
+## Data Pack Version 40
 
-## Modified loot functions
+### Modified loot functions
 
-### `set_fireworks`
+#### `set_fireworks`
 
 Fields `explosions` and `mode` have been grouped together as a sub-object
 
 -   `{ "explosions": <list>, "mode": <mode>, <mode-dependent fields>}` becomes `{"explosions": {"values": <list>, "mode": <mode>, <mode-dependent fields>}}`
 -   New `explosions` field is now optional, while `values` field inside it is now mandatory
 
-# Fixed bugs in 1.20.5 Pre-Release 2
+## Fixed bugs in 1.20.5 Pre-Release 2
 
 -   [MC-199973](https://bugs.mojang.com/browse/MC-199973) Wet wolf is rendered too dark compared to past versions
 -   [MC-259355](https://bugs.mojang.com/browse/MC-259355) Game crashes because /place sometimes does not check whether position is loaded and out of world

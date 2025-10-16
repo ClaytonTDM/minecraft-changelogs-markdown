@@ -1,37 +1,39 @@
+# 1.20-pre1
+
 It is now time for the first Pre-release for Minecraft 1.20: The Trails and Tales update!
 
 From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
 
 As always, a big thank you to the community for your feedback, bugs reported, and awesome ideas throughout the snapshot series. Let the pre-releases commence!
 
-# Changes
+## Changes
 
 -   Colored Wool, Carpets and Beds can now be dyed to any other color
 
-# Technical Changes
+## Technical Changes
 
 -   Added new damage types: `outside_border` and `generic_kill`
 -   Random sequences for loot tables are now deterministic
 -   Changes in `server.properties` encoding
 -   `string` data sources for the `data` command now accept negative boundaries, which are interpreted as index counted from the end of the string
 
-## Damage Types
+### Damage Types
 
 -   Players outside the world border are now hurt by the damage type `outside_border` instead of `in_wall`
 -   Forcibly removing an entity using i.e. the `/kill` command now uses damage type `generic_kill` instead of `out_of_world`
 
-## Loot Table Random Sequences
+### Loot Table Random Sequences
 
 The game now uses named random sequences to deterministically produce loot for loot tables. Each random sequence produces a unique sequence based on the world seed and sequence ID, which means a loot table will produce the same results when ran with the same parameters in the same world.
 
 The ID of the random sequence to use for a loot table is specified in a new field called `random_sequence`.
 
-## `server.properties`
+### `server.properties`
 
 -   File is now read in UTF-8 initially, with previous encoding (ISO 8859-1/Latin 1) as a fallback
 -   File is now written with UTF-8 encoding
 
-# Fixed bugs in 1.20 Pre-release 1
+## Fixed bugs in 1.20 Pre-release 1
 
 -   [MC-180](https://bugs.mojang.com/browse/MC-180) When reaching the other side of a nether portal the animation plays forever until stepped out of
 -   [MC-2215](https://bugs.mojang.com/browse/MC-2215) Encoding errors in server.properties

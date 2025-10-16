@@ -1,13 +1,15 @@
+# 24w14a
+
 Hello Minecraft players! Today we have a Snapshot with some technical changes and bug fixes for you.
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 38
 -   The game now requires Java 21
 -   The game now requires a 64-bit Operating System
 -   The included Java distribution is now the Microsoft build of OpenJDK 21.0.2
 
-# Data Pack Version 38
+## Data Pack Version 38
 
 -   Added `replace` field to the `set_attributes` loot function (default: `true`)
     -   When `false`, attributes will be appended
@@ -15,7 +17,7 @@ Hello Minecraft players! Today we have a Snapshot with some technical changes an
 -   The `profile` component and fields on player head items and blocks respectively now support resolving from a UUID
     -   By specifying the `id` field without a `name`, the `name` and textures will be looked up
 
-# Fixed bugs in Snapshot 24w14a
+## Fixed bugs in Snapshot 24w14a
 
 -   [MC-80142](https://bugs.mojang.com/browse/MC-80142) Power tag for wither skulls, small/dragon fireballs and wind charges is not synced correctly, leading to stuttering during flight
 -   [MC-266467](https://bugs.mojang.com/browse/MC-266467) Wind charges stutter when flying through the air

@@ -1,10 +1,12 @@
+# 1.20.3
+
 We're now releasing 1.20.3 for Minecraft: Java Edition. This release comes with new functionality for Decorated Pots, a new look for the Bat and improvements to Shields.
 
 This release also includes new features for map makers and pack creators like Scoreboard Display Names and extensions for the `execute` and `return` commands and a new administrative tool: the `tick` command.
 
 The optional Update 1.21 Experiment also shows up in this version as a sneak preview of features for the next major version of Minecraft.
 
-# Changes
+## Changes
 
 -   Decorated Pots can now store items, and can be smashed by projectiles
 -   When a player is blocking with a shield, the arm with the shield now follows the direction the player is looking at, when viewed from third-person perspective
@@ -15,7 +17,7 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
 
 ![Minecraft Java Edition 1.20.3 Image 2 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_image_2_tn.jpg)
 
-## Decorated Pots
+### Decorated Pots
 
 -   Decorated Pots now store up to a single stack of items
 -   Hoppers, Droppers and Minecarts with Hoppers can now insert and/or extract items from Decorated Pots
@@ -26,19 +28,19 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
 -   Decorated Pots can be smashed by projectiles which cause them to shatter and drop their content
 -   Decorated Pots now stack up to 64
 
-## Bat
+### Bat
 
 -   The Bat has an updated model, animations and texture
 
 ![Minecraft Java Edition 1.20.3 Image 1 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_image_1_tn.jpg)
 
-## Minor Tweaks
+### Minor Tweaks
 
 -   Monster Spawner now renders their inner faces when looking inside
 -   Thrown Ender Pearls produce a teleportation sound on impact
 -   Small tweaks to the Telemetry Data Collection screen
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 26
 -   The Resource Pack version is now 22
@@ -46,9 +48,9 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
 -   The name of non-living entities will now be shown if targeted and a CustomName is set, or always displayed if CustomNameVisible is set, similar to living entities
 -   Changes to downloaded/world resource pack handling
 
-## Chat Components
+### Chat Components
 
-### Serialization
+#### Serialization
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as strings instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network
@@ -66,23 +68,23 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
     -   `hoverEvent[action=show_entity].contents.name`
     -   `hoverEvent[action=show_item].contents.tag`
 
-## World Resource Packs
+### World Resource Packs
 
 Changes have been made to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
 
-### User Interface
+#### User Interface
 
 -   The download screen has been replaced with a toast
 -   World resource pack application now starts together with chunk loading
 
-### Local Storage
+#### Local Storage
 
 Downloaded packs are now stored in the `downloads` directory (with a different file organization than the old `server-resource-packs`)
 
 -   Only up to 20 files are cached
 -   Inside this directory there is also log file (`log.json`) that stores information about downloaded files for debug purposes
 
-### Server Config
+#### Server Config
 
 Downloaded packs now have a unique id (GUID/UUID) that can be used to differentiate them
 
@@ -91,7 +93,7 @@ Downloaded packs now have a unique id (GUID/UUID) that can be used to differenti
 -   If the hash of a pack is not set, this pack will be redownloaded before every application
     -   Previously, if the hash was missing, the latest downloaded version of pack was applied
 
-### Packets
+#### Packets
 
 Some additional options have been added for 3rd-party servers software:
 
@@ -100,14 +102,14 @@ Some additional options have been added for 3rd-party servers software:
 -   The client now sends additional updates about packs (like download success)
 -   Resource packs are no longer cleaned when entering configuration phase
 
-# Data Pack Version 19
+## Data Pack Version 19
 
-## Tags
+### Tags
 
 -   Added `can_breathe_under_water` entity type tag which disables drowning
 -   Added `can_break_armor_stand` damage type tag for damage types that can incrementally knock down armor stands
 
-# Data Pack Version 20
+## Data Pack Version 20
 
 -   Changed `function` command results
 -   Adjusted check for gamerule `maxCommandChainLength`
@@ -117,9 +119,9 @@ Some additional options have been added for 3rd-party servers software:
 -   Decorated Pots with the `cracked` state set to true will always shatter when broken
 -   Added new `dust_plume` particle type
 
-## Commands
+### Commands
 
-### Functions
+#### Functions
 
 (See further changes in Pack Version 23)
 
@@ -135,7 +137,7 @@ Some additional options have been added for 3rd-party servers software:
     -   A single call to `function` will now store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-#### Limits
+##### Limits
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -149,7 +151,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   A new limit with game rule called `maxCommandForkCount` now restricts the total amount of contexts that can be created by single state of functions like `execute`
     -   For example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5\*5 = 25 contexts
 
-### `execute if function`
+#### `execute if function`
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in a previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -159,7 +161,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-#### Matching
+##### Matching
 
 The matching of the result value of the function(s) that run:
 
@@ -169,7 +171,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-### `return run`
+#### `return run`
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in a previous version.
 
@@ -183,7 +185,7 @@ This takes the `result` value from running the specified `command` and returns t
 -   In case of a fork (for example `return run execute as @e run some_command`), the first execution of the command will return
     -   If there are no executions (for example in `return run execute if entity @e[something_impossible] run some_command`), the function will not return and will continue execution (changed in Data Pack Version 23)
 
-# Data Pack Version 21
+## Data Pack Version 21
 
 -   Introduced Jigsaw structure pool aliases, which can be used to rewire pool selection
 -   Added field `block_state` to `tnt` entity to allow replacement of rendered block model
@@ -192,7 +194,7 @@ This takes the `result` value from running the specified `command` and returns t
 -   Added new game rule `projectilesCanBreakBlocks` to control whether impact projectiles will destroy blocks that are destructible by them, i.e. Chorus Flowers, Pointed Dripstone and Decorated Pots
 -   Added `white_smoke` particle type
 
-## Jigsaw Pool Aliases
+### Jigsaw Pool Aliases
 
 -   Added optional `pool_aliases` list to Jigsaw structures
 -   Aliases represent the possibility to rewire Jigsaw pool connections by redirecting pool references on individual structure instances
@@ -208,14 +210,14 @@ This takes the `result` value from running the specified `command` and returns t
         -   only one group is selected per structure instance
         -   this enables modelling selections such as "if pool X is replaced with X1, also replace pool Y with Y1"
 
-# Data Pack Version 22
+## Data Pack Version 22
 
 -   Added `tick` command
 -   Added two new input fields for Selection Priority and Placement Priority in the Jigsaw block edit screen
 -   Added `item` to `minecraft:arrow` and `minecraft:spectral_arrow`, this is the item that will be picked up
 -   Renamed `Trident` to `item` in `minecraft:trident`
 
-## `tick` Command
+### `tick` Command
 
 Added a new `tick` command. This is an adminstative and debugging command that allows control of the ticking flow and measuring the performance of the game. The command requires elevated permissions (admins and above) and so it is not by default available in command blocks and datapacks.
 
@@ -239,7 +241,7 @@ Syntax:
 
 ![Minecraft Java Edition 1.20.3 Image 3 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_image_3_tn.jpg)
 
-## Jigsaw Selection & Placement Priority
+### Jigsaw Selection & Placement Priority
 
 -   Selection Priority
     -   When the parent piece is being processed for connections, this controls the order in which this Jigsaw block attempts to connect to its target piece
@@ -250,14 +252,14 @@ Syntax:
 -   This functionality has been added to support the ability for Jigsaw structures to generate branches in a depth-first order, as well as give finer control over ordering of connections
 -   All existing Jigsaw blocks will default their Selection and Placement Priority to 0, resulting in the same behaviour as before these two configurable values were introduced
 
-# Data Pack Version 23
+## Data Pack Version 23
 
 -   Decorated Pots can now utilize loot tables and will read from the `LootTable` tag key
 -   Additional changes to command functions
 
-## Commands
+### Commands
 
-### `return`
+#### `return`
 
 -   `return run` will now always return
     -   If there are no valid results from the returned command, the function containing the `return run` will fail (i.e. `success=0` and `result=0`)
@@ -265,32 +267,32 @@ Syntax:
 -   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store the value and return it outside the function
 -   A new subcommand `return fail` has been added to make the whole function fail (i.e. return `success=0` and `result=0`)
 
-### `function`
+#### `function`
 
 -   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
 -   A single call to the `function` command will always return when run with `return run`
     -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
 
-### `execute if|unless function`
+#### `execute if|unless function`
 
 -   `execute if|unless function` no longer always fails if none of the functions had a `return`
     -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
     -   The first `return` in any of called functions will return (for a single context)
 
-# Data Pack Version 24
+## Data Pack Version 24
 
 -   Increased maximum value of Jigsaw structure variable `size` from 7 to 20
 
-# Data Pack Version 25
+## Data Pack Version 25
 
 -   Added individual display names for scoreboard entries
 -   Scoreboard sidebar will now render even when if there are no scores in selected objective
 
-## Commands
+### Commands
 
-### `scoreboard`
+#### `scoreboard`
 
-#### Display Names
+##### Display Names
 
 Each entry in a scoreboard can now have a custom display name.
 
@@ -302,7 +304,7 @@ Each entry in a scoreboard can now have a custom display name.
     -   `scoreboard players display name <targets> <objective> <text component>` - set display name
     -   `scoreboard players display name <targets> <objective>` - clear display name
 
-#### Display Name Auto-Update
+##### Display Name Auto-Update
 
 To make display name management easier, objectives can also be configured to auto-update display names on every score update.
 
@@ -311,7 +313,7 @@ To make display name management easier, objectives can also be configured to aut
 -   Command to control auto-update for objective:
     -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
 
-#### Number Formatting
+##### Number Formatting
 
 Scores in numeric form can now be formatted.
 
@@ -327,17 +329,17 @@ Scores in numeric form can now be formatted.
     -   `fixed <text component>` - the score will be replaced with the text component
     -   `blank` - the score will not be displayed
 
-# Data Pack Version 26
+## Data Pack Version 26
 
 -   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
 
-# Resource Pack Version 19
+## Resource Pack Version 19
 
 -   Added block model, item model and block state definitions for `crafter`
 -   Added GUI container texture and sprites for `crafter`
 -   Added `white_smoke` particle definition
 
-# Resource Pack Version 20
+## Resource Pack Version 20
 
 -   `bat.png` has been updated for the new Bat model with new texture mapping
 -   Added block models, items models and block state definitions for the following blocks:
@@ -370,25 +372,25 @@ Scores in numeric form can now be formatted.
     -   `tuff_bricks`
     -   `chiseled_tuff_bricks`
 
-# Resource Pack Version 21
+## Resource Pack Version 21
 
 -   The `uniform` font has been updated to use Unifont 15.1.04 (from 15.0.06)
 -   The only supported texture format is now `.png`
 
-## Breeze Mob
+### Breeze Mob
 
 -   Added entity models and textures for experimental Breeze mob:
     -   `breeze`, `wind_charge`
 -   Added shader:
     -   `breeze_wind`
 
-# Resource Pack Version 22
+## Resource Pack Version 22
 
 -   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
 
-# Experimental Features
+## Experimental Features
 
-## Crafter
+### Crafter
 
 -   The Crafter is a new block that enables the crafting of items and blocks via Redstone
 -   The Crafter will eject one crafted item at a time when powered by a Redstone pulse
@@ -396,7 +398,7 @@ Scores in numeric form can now be formatted.
 -   If the output result has multiple types of items, all the result items will be ejected together
 -   When placed, the front face of the Crafter will face towards the Player
 
-### Crafter User Interface
+#### Crafter User Interface
 
 -   The Crafter has a 3x3 interactable crafting grid
 -   The Crafter’s crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by interacting with it while not holding an item
@@ -405,7 +407,7 @@ Scores in numeric form can now be formatted.
 -   Unlike the Crafting Table, the Crafter displays a preview of the crafted item which will be crafted and ejected on the next Redstone pulse, but cannot be manually taken out by the player
 -   The Crafter User Interface is shared between all players interacting with it, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-### Crafter Interaction with Other Blocks
+#### Crafter Interaction with Other Blocks
 
 -   The signal strength of a Comparator reading a Crafter is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers and Minecarts with Hoppers can be used to both insert and extract items from the Crafter
@@ -419,7 +421,7 @@ Scores in numeric form can now be formatted.
 
 ![Minecraft Java Edition 1.20.3 Experimental Image 3 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_experimental_3_tn.jpg)
 
-## Copper Family
+### Copper Family
 
 The Copper family of blocks has been expanded, including:
 
@@ -430,12 +432,12 @@ The Copper family of blocks has been expanded, including:
 -   Copper Trapdoor
 -   Oxidized and waxed variants of all of the above
 
-### Chiseled Copper
+#### Chiseled Copper
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-### Copper Grate
+#### Copper Grate
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -447,7 +449,7 @@ The Copper family of blocks has been expanded, including:
     -   Hostile mobs cannot naturally spawn on them
     -   Can hold Water
 
-### Copper Bulb
+#### Copper Bulb
 
 -   A light-emitting block that can toggle its light emission through Redstone pulses
 -   Oxidizes like other Copper blocks, and emits light based on oxidation level
@@ -466,13 +468,13 @@ The Copper family of blocks has been expanded, including:
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-### Copper Doors and Trapdoors
+#### Copper Doors and Trapdoors
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Works like wooden doors in that they can be opened and closed with interaction, as well as Redstone
 -   Crafted with Copper Blocks that have a shared oxidation level
 
-## Tuff Family
+### Tuff Family
 
 Tuff has been expanded to have its own family of blocks, including:
 
@@ -482,7 +484,7 @@ Tuff has been expanded to have its own family of blocks, including:
 
 All Tuff variants can be crafted in the Stonecutter.
 
-## Added Breeze Mob
+### Added Breeze Mob
 
 -   The Breeze is a cunning hostile mob spawned by the Trial Spawner in some rooms within the Trial Chambers
 -   The Breeze moves primarily by leaping around its target
@@ -501,7 +503,7 @@ All Tuff variants can be crafted in the Stonecutter.
 
 ![Minecraft Java Edition 1.20.3 Experimental Image 1 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_experimental_1_tn.jpg)
 
-## Trial Spawner
+### Trial Spawner
 
 -   The Trial Spawner is a new variant of Monster Spawners that ejects rewards upon completion
 -   The challenge level will increase for each new player a Trial Spawner notices nearby
@@ -520,7 +522,7 @@ All Tuff variants can be crafted in the Stonecutter.
 
 ![Minecraft Java Edition 1.20.3 Experimental Image 2 Thumbnail](https://launchercontent.mojang.com/images/1.20.3_experimental_2_tn.jpg)
 
-## Trial Chambers
+### Trial Chambers
 
 -   Trial Chambers are a new structure in the Overworld where players can explore and take on combat challenges
     -   Trial Chambers are made out of a variety of Copper and Tuff blocks, and can be found in different sizes
@@ -548,16 +550,16 @@ All Tuff variants can be crafted in the Stonecutter.
     -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
 -   Natural mob spawning does not occur within Trial Chambers
 
-### Known Issues
+#### Known Issues
 
 -   The corridors sometimes end with a dead end
 -   Aquifers, Lush Caves, and Sculk Veins sometimes intersect with the Trial Chamber
 
-## Trial Key
+### Trial Key
 
 -   An item that can only be obtained from Trial Spawners
 -   Trial Keys do not currently have any functionality
 
-# Fixed bugs in 1.20.3
+## Fixed bugs in 1.20.3
 
 Around 85 bugs were fixed in this release. View the [list on the issue tracker](https://bugs.mojang.com/issues/?filter=27936).

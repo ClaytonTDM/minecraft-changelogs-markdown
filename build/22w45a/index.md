@@ -1,15 +1,17 @@
+# 22w45a
+
 Minecraft Snapshot 22w45a is now out and about. This snapshot introduces the [new default skins](https://www.minecraft.net/article/introducing-new-default-skins) for offline players, bamboo blocks, and a visual refresh for the Vex. On top of that, there’s some additional creative inventory tweaks.
 
 Happy mining!
 
-# New Features in 22w45a
+## New Features in 22w45a
 
 -   Added new default skins for offline players
 -   Added Block of Bamboo and Stripped Block of Bamboo
     -   Block of Bamboo can be crafted from 9 Bamboo and can be stripped like other wood logs
     -   Bamboo Planks crafted from Block of Bamboo yield only 2 planks compared to 4 for wood logs
 
-# Changes in 22w45a
+## Changes in 22w45a
 
 -   The Vex now has a new look
 -   The Wild update music has been tweaked to be slightly less loud
@@ -19,12 +21,12 @@ Happy mining!
 -   Added Operator Items Tab option in the Controls menu which is off by default
 -   Creative Inventory changes
 
-## Vex
+### Vex
 
 -   Changes to Vex model and textures
     -   The Vex retains a slightly oversized hitbox to make it easier to fight
 
-## Creative Inventory changes
+### Creative Inventory changes
 
 -   Operator-only items now appear in a new Operator Utilities tab if you have both:
     -   Operator Items Tab option in Controls menu set to `ON`
@@ -63,7 +65,7 @@ Happy mining!
 -   Tooltips for all items in Creative Menu outside single-category tabs will show categories where this item can be found
     -   Previously this only happened on the search tab
 
-# Technical Changes in 22w45a
+## Technical Changes in 22w45a
 
 -   The `/publish` command has new arguments to enable commands and set the default gamemode
     -   New syntax: `/publish [allowCommands] [gamemode] [port]`
@@ -72,7 +74,7 @@ Happy mining!
     -   The game mode and allow cheats buttons are now initialized with the default values of the world
 -   The Resource Pack version is now 12
 
-# Fixed bugs in 22w45a
+## Fixed bugs in 22w45a
 
 -   [MC-80032](https://bugs.mojang.com/browse/MC-80032) Horses can suffocate when going through nether portals
 -   [MC-118140](https://bugs.mojang.com/browse/MC-118140) Result map tooltip when zooming out a map shows previous zoom value instead of new one

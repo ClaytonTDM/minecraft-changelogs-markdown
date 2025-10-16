@@ -1,12 +1,14 @@
+# 1.21.9-pre4
+
 Here is another Pre-Release for 1.21.9 with more bugfixes!
 
-# Changes
+## Changes
 
-## UI
+### UI
 
 -   Debug Options screen is now accessible using F3 + F6, instead of the previous F3 + F5
 
-# Fixed bugs in 1.21.9 Pre-Release 4
+## Fixed bugs in 1.21.9 Pre-Release 4
 
 -   [MC-300216](https://bugs.mojang.com/browse/MC-300216) The new F3 + F5 debug settings menu does not open on Mac keyboards
 -   [MC-301735](https://bugs.mojang.com/browse/MC-301735) Server Management Protocol Kick command parameter mis match

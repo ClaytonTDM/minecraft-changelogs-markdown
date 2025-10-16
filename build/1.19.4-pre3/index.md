@@ -1,26 +1,28 @@
+# 1.19.4-pre3
+
 We're back again with the third pre-release for Minecraft 1.19.4. This pre-release contains more bug fixes, as well as color adjustments for potions. The archer pottery shard texture has also been updated. ​ Happy mining! ​
 
-# Changes
+## Changes
 
 -   Potions have had their colors adjusted to make them more distinguishable from each other
 
 ​
 
-# Technical Changes
+## Technical Changes
 
 -   Pressing F3+S will now dump contents of dynamic textures (like atlases, maps, etc.) to `screenshots/debug/`
 
 ​
 
-# Experimental Feature Changes
+## Experimental Feature Changes
 
-## Pottery Shards
+### Pottery Shards
 
 -   Updated the textures of the Archer Pottery Shard based on community feedback
 
 ​
 
-# Fixed bugs in 1.19.4-pre3
+## Fixed bugs in 1.19.4-pre3
 
 -   [MC-148458](https://bugs.mojang.com/browse/MC-148458) Ridable mobs aren't knocked back upon death
 -   [MC-250486](https://bugs.mojang.com/browse/MC-250486) Error saving GUI scale option when toggling fullscreen while fullscreen resolution is changed

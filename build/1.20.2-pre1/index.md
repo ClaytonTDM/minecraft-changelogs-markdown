@@ -1,8 +1,10 @@
+# 1.20.2-pre1
+
 Are you pre-pared for Pre-release 1 of 1.20.2? Moving into pre-releases means that, moving forward, you won't see any significant changes besides bug fixes and tweaks until the next snapshot cycle. It also means that we will be releasing more frequently than just Wednesdays, so keep your eyes peeled! However, Pre-release 1 brings new changes to the 'Villager Trade Rebalance' experiment, updates to Recipe Book search, command changes, and a new game rule!
 
 Happy crafting!
 
-# Changes
+## Changes
 
 -   The Recipe Book search has been updated with the following changes:
     -   The search will only match the beginning of any word in the item's name
@@ -12,12 +14,12 @@ Happy crafting!
 -   Updated structure icons on explorer maps sold by Cartographers
 -   When villagers unlock new trades, the order of those trades in the UI is now always random instead of sometimes being deterministic
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 18
 -   Client options are now sent during the configuration network phase when joining a server
 
-## Data Pack Version 18
+### Data Pack Version 18
 
 This data pack version removes the recently introduced `execute if function` and `return run` functionality. Flaws with those commands (see bugs [MC-264595](https://bugs.mojang.com/browse/MC-264595), [MC-264699](https://bugs.mojang.com/browse/MC-264699) and [MC-264710](https://bugs.mojang.com/browse/MC-264710)) require some substantial changes to fix, which we do not want to make close to a release.
 
@@ -28,15 +30,15 @@ These commands will instead be reintroduced early in the next snapshot series wh
 -   Numbers used as macro arguments are now always inserted without suffixes, regardless of numeric type
 -   Added game rule `enderPearlsVanishOnDeath`, controlling whether thrown ender pearls vanish when the player that threw them dies (default `true`)
 
-# Experimental Features
+## Experimental Features
 
-## Villager Trade Rebalance Part 2
+### Villager Trade Rebalance Part 2
 
 This pre-release updates the Villager Trade Rebalance experiment. This experiment has no effect on normal worlds. If you want to try these changes, you must turn on the Feature Toggle in the Experiments Menu when creating a new world. You can find more information about Feature Toggles [here](https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition).
 
 Thank you to everyone that has sent in their suggestions and feedback regarding the experimental trade change! We are trying out these changes to rebalance the villager trade system and make it more fair and fun for everyone. However, these changes are not yet final, and they will stay as experimental features while we continue to work on them. We appreciate your feedback on these changes. Visit [this link](https://aka.ms/VillagerTradingFeedback) to share your thoughts! We have been following the discussions about the previous Librarian and Wandering Trader updates and look forward to seeing the conversation continue.
 
-### Cartographer
+#### Cartographer
 
 Before now, Cartographers only sold maps to the Ocean Monument and Woodland Mansion. In this experiment Cartographers can sell seven new maps as well. These new maps each point to a different village or structure and can be used to find seven different biomes. This will help players who want to quickly find a specific location without waiting until they come across it by chance.
 
@@ -44,7 +46,7 @@ Cartographers from different biomes will sell a different selection of maps. Sta
 
 Cartographers now sell 7 new maps: Desert Village Map, Jungle Explorer Map, Plains Village Map, Savanna Village Map, Snow Village Map, Swamp Explorer Map, and Taiga Village Map.
 
-### Armorer
+#### Armorer
 
 The Armorer's trades have been updated with many changes.
 
@@ -59,7 +61,7 @@ Other changes include:
 -   The Savanna Armorer sells cursed diamond armor at reduced prices
 -   The Taiga Armorer can swap one piece of diamond armor for another
 
-### Structure Loot
+#### Structure Loot
 
 Certain Enchanted Books now have a high chance of generating in some structures:
 
@@ -69,7 +71,7 @@ Certain Enchanted Books now have a high chance of generating in some structures:
 -   Desert Temples: Unbreaking (I to III)
 -   Jungle Temples: Unbreaking (I to III)
 
-# Fixed bugs in 1.20.2 Pre-release 1
+## Fixed bugs in 1.20.2 Pre-release 1
 
 -   [MC-70127](https://bugs.mojang.com/browse/MC-70127) Some block state changes aren't communicated to clients
 -   [MC-72721](https://bugs.mojang.com/browse/MC-72721) Chat messages show after death independent of chat setting

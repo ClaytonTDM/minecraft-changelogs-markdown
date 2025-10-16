@@ -1,21 +1,23 @@
+# 22w03a
+
 Happy New Year! It's time for the first snapshot of 2022 to hit the shelves. This snapshot series will be leading up to the release of 1.18.2. With this release we aim to address a few issues before moving on and starting with the Wild Update snapshots.
 
 This snapshot contains tweaks to the world seed input and adds a new `placefeature` command. On top of that, it also fixes a bunch of bugs.
 
 Happy mining!
 
-# Changes in 22w03a
+## Changes in 22w03a
 
 -   A seed of the number zero is no longer handled as a special case
 -   Any spaces before/after an inputted seed will now be trimmed
 -   Ender chests are no longer gift wrapped around Christmas
 
-# Technical Changes in 22w03a
+## Technical Changes in 22w03a
 
 -   The `locate` command now uses a namespaced id parameter
 -   Added command: `placefeature`
 
-## `placefeature`
+### `placefeature`
 
 New command that places a configured feature at a given location. Syntax: `placefeature <id> [pos]`
 
@@ -24,7 +26,7 @@ Parameters:
 -   `id`: The namespaced id of a configured feature to place
 -   `pos`: The position to use as the origin for the feature placement (if omitted, `~ ~ ~` is used)
 
-# Fixed bugs in 22w03a
+## Fixed bugs in 22w03a
 
 -   [MC-83938](https://bugs.mojang.com/browse/MC-83938) Standing on entities with solid collision boxes (shulkers, boats) kicks you for flying
 -   [MC-98727](https://bugs.mojang.com/browse/MC-98727) Server: Entering a boat/minecart/horse while going upwards from jumping causes a kick for flying

@@ -1,14 +1,16 @@
+# 25w37a
+
 A new week, and a new snapshot. This one includes another big batch of bug fixes, copper golem polishing and our beloved friend can now open doors.
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   OpenGL 3.3 is now required to play the game, up from 3.2. This does not change our posted Minimum Requirements
 
 > **Developer’s Note:** _We do not expect the update to OpenGL version to affect many people, if any at all. Our posted Minimum Requirements has been OpenGL 4.0 since 2017, and OpenGL 3.3 turned 15 years old recently._
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Fixed a bug where breaking a Shelf while another player is interacting with it could lead to visual bugs in the player inventory
 -   Copper Golems hitbox has been tweaked
@@ -27,7 +29,7 @@ Happy mining!
         -   The fins on fish
         -   And more!
 
-## Game Mode Switching
+### Game Mode Switching
 
 -   Switching from Spectator Mode to Creative Mode no longer causes the player to stop flying
     -   Instead, flight now only gets disabled when switching game modes if the player is near the ground
@@ -37,7 +39,7 @@ Happy mining!
 
 > **Developer's Note**: _This change is a partial revert of a bugfix from a previous snapshot. Even though the old behavior prior to the fix was unintended, the approach we took to fixing flight didn't quite **land** the way we wanted it to. In response to community feedback, we're trying this new approach as a less disruptive alternative._
 
-## Minecraft Server Management Protocol
+### Minecraft Server Management Protocol
 
 -   Clients must authenticate to access the API
     -   Clients should supply an `Authorization` bearer token header with a server specific secret
@@ -57,7 +59,7 @@ Happy mining!
         -   JVM argument: `-Dmanagement.tls.keystore.password=`
         -   Server property: `management-server-tls-keystore-password=`
 
-## Server Properties
+### Server Properties
 
 -   Default value of `management-server-port` was changed from `25585` to `0`, assigning an available port each time management server is started
 -   Added server property `management-server-tls-enabled` controlling whether the Minecraft Server Management Protocol uses TLS or not
@@ -68,32 +70,32 @@ Happy mining!
 -   Added server property `management-server-tls-keystore-password` controlling the password to the keystore file used for TLS
     -   Defaults to an empty string
 
-## Game Rules
+### Game Rules
 
 -   Added `spawnerBlocksEnabled` game rule controlling if Spawner Blocks should be enabled or not
     -   Defaults to `true`
 
-## Mob Spawning
+### Mob Spawning
 
 -   Logic for choosing type of equipment for mobs spawning with equipment has been tweaked to add Copper as a possibility
     -   The initial roll to choose a type now chooses between Leather, Copper and Gold
     -   The chance to increase an armor tier has increased from 9.5% to 10.87%
 
-## Sounds
+### Sounds
 
 -   Some sound sliders in the Music & Sound Options now play a preview sound when adjusting the setting outside a world
 
-## UI
+### UI
 
 -   The Resource Pack and Data Pack selection screens now have a search box
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 87.0
 -   The Resource Pack version is now 69.0
 -   Some previously hidden debug features have been exposed to players
 
-## Debug features
+### Debug features
 
 -   Some debug features that were previously removed during compilation are now preserved and can be used by players
 -   Individual values can be enabled with JVM properties:
@@ -106,19 +108,19 @@ Happy mining!
     -   It might crash your game or corrupt your worlds
     -   Individual options might be added, changed or removed without a notice
 
-# Data Pack Version 87.0
+## Data Pack Version 87.0
 
 -   Changed name of game rule `enableCommandBlocks` to `commandBlocksEnabled`
 
-# Resource Pack Version 69.0
+## Resource Pack Version 69.0
 
-## Textures
+### Textures
 
 -   Moved the result slot of `gui/container/villager.png` up by one pixel
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
-### Shaders
+#### Shaders
 
 -   A new `PER_FACE_LIGHTING` flag has been added to the following shaders:
     -   `core/entity.vsh`
@@ -126,7 +128,7 @@ Happy mining!
 -   When set, cardinal lighting will be computed separately for front- and back-faces
 -   As we now require OpenGL 3.3, we have bumped the version of all shaders from `150` to `330`
 
-# Fixed bugs in 25w37a
+## Fixed bugs in 25w37a
 
 -   [MC-220913](https://bugs.mojang.com/browse/MC-220913) Parity issue: Adjusting slider in the sound settings when not being in a world does not play a sound of that category
 -   [MC-254052](https://bugs.mojang.com/browse/MC-254052) /locate doesn't work outside build limit

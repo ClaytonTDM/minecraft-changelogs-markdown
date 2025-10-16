@@ -1,4 +1,6 @@
-# New Features in 21w05a
+# 21w05a
+
+## New Features in 21w05a
 
 -   Azalea bushes as well as flowering azaela bushes!
 -   Added cave vines and glow berries!
@@ -7,7 +9,7 @@
 -   Added moss!
 -   Added spore blossom!
 
-## Cave vines and glow berries
+### Cave vines and glow berries
 
 -   Cave vines grow down from the ceiling, like weeping vines
 -   When they grow they have a chance of producing glow berries
@@ -16,7 +18,7 @@
 -   Use glow berries to plant new cave vines
 -   Bonemealing a cave vine will create glow berries
 
-## Dripleaf
+### Dripleaf
 
 -   Small dripleaf needs moisture, so it grows on clay or underwater
 -   Small dripleaf grow into big dripleaf when bonemealed.
@@ -27,17 +29,17 @@
 -   The big dripleaf will break when hit by a projectile
 -   The wandering trader will sometimes sell small dripleaf plants
 
-## Moss
+### Moss
 
 -   Two new decorative blocks: Moss block and moss carpet
 -   Moss carpet can be crafted from moss blocks
 
-## Spore blossom
+### Spore blossom
 
 -   A beautiful large flower placed on ceilings
 -   Particles drip from it
 
-# Changes in 21w05a
+## Changes in 21w05a
 
 -   The stonecutter can be used to craft the different copper block variants
 -   The stages of copper oxidization are now called "Copper Block", "Exposed Copper Block", "Weathered Copper Block" and "Oxidized Copper Block" in sequence of least to most oxidized
@@ -45,7 +47,7 @@
 -   Added new sculk sensor events
 -   Changes to powder snow
 
-## Sculk Sensor Changes
+### Sculk Sensor Changes
 
 Added the following game events that the Sculk Sensor reacts to, along with corresponding frequency value:
 
@@ -89,19 +91,19 @@ Shulker Open
 -   `Mob Interact` is for specific mob interaction events that cause vibrations.
 -   `Prime Fuse` is for both TNT and Creepers.
 
-## Powder Snow changes
+### Powder Snow changes
 
 -   Flaming arrows now get extinguished when they collide with Powder Snow
 -   Skeletons now convert to Strays when frozen
 -   Powder snow is now pushable by pistons and sticky pistons
 -   Foxes can now walk on top of powder snow without falling in
 
-# Technical Changes in 21w05a
+## Technical Changes in 21w05a
 
 -   Improved performance when using many overrides on an item model
 -   Copper oxidization is now a random tick effect and thus affected by the randomTickSpeed game rule
 
-# Fixed Bugs in 21w05a
+## Fixed Bugs in 21w05a
 
 -   [MC-9568](https://bugs.mojang.com/browse/MC-9568) Mobs suffocate / go through blocks when growing up near a solid block
 -   [MC-130098](https://bugs.mojang.com/browse/MC-130098) Debug world spawns player at y=2 instead at y=70 where all the blocks are

@@ -1,8 +1,10 @@
+# 1.19.1-pre5
+
 We are now releasing pre-release 5 for Minecraft 1.19.1. This pre-release includes the remaining fixes for a known exploit regarding player report context. It also fixes some other crashes and bugs.
 
-# Changes in 1.19.1 Pre-release 5
+## Changes in 1.19.1 Pre-release 5
 
-## Chat
+### Chat
 
 -   When writing chat messages, the signing status of the displayed chat messages is shown with a colored indicator
     -   The indicator will either appear to the left of the chat input field, or to the left of the chat preview if chat preview is being used
@@ -10,7 +12,7 @@ We are now releasing pre-release 5 for Minecraft 1.19.1. This pre-release includ
     -   The indicator will be orange when Chat Preview is enabled and a preview is waiting to be signed
 -   The background of the chat preview will also display slightly faded when a preview is waiting to be signed
 
-## Chat Preview
+### Chat Preview
 
 -   Added "On Send" Chat Preview option for updating chat previews only when attempting to send a message
     -   To confirm sending a message, a second hit of the Enter/Return key is required
@@ -19,11 +21,11 @@ We are now releasing pre-release 5 for Minecraft 1.19.1. This pre-release includ
 -   Chat Preview is now enabled in singleplayer, and will display when using commands that have selector substitution such as `/say`
 -   Previewed hover events and click events are now highlighted with a solid background
 
-# Technical Changes in 1.19.1 Pre-release 5
+## Technical Changes in 1.19.1 Pre-release 5
 
 -   The `team_msg_command` chat type has been split apart into `team_msg_command_incoming` and `team_msg_command_outgoing`
 
-# Bugs fixed in 1.19.1 Pre-release 5
+## Bugs fixed in 1.19.1 Pre-release 5
 
 -   [MC-130243](https://bugs.mojang.com/browse/MC-130243) /debug stop message uses OS locale specific number formatting
 -   [MC-149047](https://bugs.mojang.com/browse/MC-149047) Scroll Sensitivity slider label uses OS locale for number formatting

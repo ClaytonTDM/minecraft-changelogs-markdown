@@ -1,3 +1,5 @@
+# 1.18
+
 It’s been quite the trek, but we’re here. At the summit. The Caves & Cliffs Update: Part II is out today, completing the much anticipated cave update. What better way to celebrate than by climbing to the top of a higher than ever mountain. Let’s take a moment and just take in that view. Wait. What’s that sound. Don’t tell me that goat is back.
 
 AAAAARGH.
@@ -6,7 +8,7 @@ Ouff! Ouch! Ow!
 
 Where am I? It’s dark down here! It’s almost as if I fell a greater distance than I would have before today. Figures. While I try to get out of this dripstone cave, I hope you enjoy all of the new features that 1.18 brings. Could you pass me a candle before you leave? It really is dark down here.
 
-# Features
+## Features
 
 -   Added an "Allow Server Listings" option to opt out of having your name displayed in server listings
 -   Added an Online options screen where you can now find the Realms Notifications option
@@ -34,14 +36,14 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Villages are slightly more spread out
 -   World spawn selection algorithm has been reworked, now spawns player according to climate parameters
 
-## Advancements
+### Advancements
 
 -   Added "Caves & Cliffs" for falling from top to bottom of the Overworld
 -   Added "Feels like home" for riding strider on lava for 50 blocks in the Overworld
 -   Added "Star Trader" for trading with a villager at the build height limit
 -   Added "Sound of Music" for playing music with a jukebox in a Meadow biome
 
-## Blocks
+### Blocks
 
 -   Enchanting Tables now emit a low amount of light
 -   Using Shears on the tip of a Cave Vine, Twisting Vine, Weeping Wine, and Kelp will stop them from further growing
@@ -49,7 +51,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   In the Stonecutter, a Block of Copper can be converted to 4 Cut Copper
 -   Restricted Big Dripleaf placement to Clay, Grass, Dirt, Farmland, Moss, Rooted Dirt, Podzol, and Mycelium
 
-## Effects
+### Effects
 
 -   Your list of effects are now shown to the right of your inventory, instead of the left side
 -   When the inventory effects list is visible, it will be hidden from the game view to reduce screen clutter
@@ -58,47 +60,47 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
     -   Compact is a single icon for each effect, suitable for small screen estate
 -   The game will automatically switch between the two modes to suit the available screen estate (including having the recipe book open)
 
-## Large ore veins
+### Large ore veins
 
 -   Ore Veins are large, rare, snake-like underground ore formations
 -   Copper Ore Veins form between heights 0 and 50 and are mixed with Granite
 -   Iron Ore Veins form betweens heights -60 and -8 and are mixed with Tuff
 
-## Mob Spawning
+### Mob Spawning
 
 -   Monsters now only spawn in places where the light from blocks is 0 (sky light still prevents spawning like before)
 
-## Music
+### Music
 
 -   Added new music by Lena Raine and Kumi Tanioka to the Overworld (when playing in Survival Mode) and the main menu
 -   Added a new music disc from Lena Raine titled 'Otherside'. This can be found rarely in Stronghold Corridor Chests or much more rarely in Dungeon Chests.
 
-## New Overworld Biomes
+### New Overworld Biomes
 
-### Dripstone Caves
+#### Dripstone Caves
 
 -   Contains plenty of Pointed Dripstone and Dripstone Block on the floors and ceilings, as well as within small pools of water
 -   In some places, you'll find larger stalagmites, stalactites, and columns built from Dripstone Blocks
 -   Contains extra Copper Ore
 -   Drowned can spawn in aquifers inside Dripstone Caves
 
-### Frozen Peaks
+#### Frozen Peaks
 
 -   Smooth mountain peaks with ice and snow
 -   Spawns Goats and Yeti. Wait, no, actually it's just Goats.
 
-### Grove
+#### Grove
 
 -   Snowy terrain with big Spruce Trees and Powder Snow traps. You might want to wear leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops
 -   Spawns Wolves, Rabbits, and Foxes
 
-### Jagged Peaks
+#### Jagged Peaks
 
 -   Dramatic jagged mountain peaks with Snow and Stone blocks
 -   Spawns Goats
 
-### Lush Caves
+#### Lush Caves
 
 -   Moss covers the floors and ceilings
 -   Spore Blossoms grow from the ceiling and drip particles
@@ -107,25 +109,25 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   The Azalea Tree loves to have its roots in Lush Caves, so if you find an Azalea Tree (either overground or in a cave) you know there is a Lush Cave beneath you
 -   Cave Vines with Glow Berries grow from the ceiling and light up the caves
 
-### Meadow
+#### Meadow
 
 -   Large grassy and flowery biome that tends to generate high up on plateaus or next to large mountain ranges
 -   Sometimes contains a lone, tall Oak or Birch Tree with a Bee Nest
 -   Think Sound of Music!
 -   Spawns Donkeys, Rabbits, and Sheep
 
-### Snowy Slopes
+#### Snowy Slopes
 
 -   Very snowy terrain that can hide Powder Snow traps. I hope you kept those leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops
 -   Spawns Rabbits and Goats
 
-### Stony Peaks
+#### Stony Peaks
 
 -   Stony mountain peaks that may be jagged or smooth
 -   These sometimes have large strips of Calcite running through them
 
-## New ore distribution
+### New ore distribution
 
 -   Changed ore generation to match the new world height, and to add more strategy to mining. There is no longer a single height level that is best for all ores – you need to make tradeoffs!
 -   Iron Ore generates below height 72, with a strong bias towards height 16. Iron Ore also generates above 80, with more Iron Ore as you go higher.
@@ -137,11 +139,11 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Diamond Ore generates below height 16, with more Diamond Ore the lower you go. Diamond Ore have reduced air exposure, so you will find more Diamond Ore buried or underwater than exposed to air.
 -   Emerald Ore generates above height -16 in mountainous biomes, with more Emerald Ore the higher you go. Emerald Ore below height 0 is very rare!
 
-##### Ore Distribution in Minecraft 1.18
+###### Ore Distribution in Minecraft 1.18
 
 ![Minecraft 1.18 Ore Distribution](https://launchercontent.mojang.com/images/1-18-ore-distribution.jpg)
 
-## Noise caves and Aquifers
+### Noise caves and Aquifers
 
 -   Noise caves are a new way of generating caves, providing more natural variety. They can get really huge sometimes! Noise caves come in three flavors:
     -   Cheese caves: Like the holes in swiss cheese. These often form caverns of various size.
@@ -158,11 +160,11 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Magma Blocks sometimes generates at the bottom of underground bodies of water
 -   Underwater cave carvers and underwater canyons have been removed, since aquifers are used to generate water in caves instead
 
-## Sprinting
+### Sprinting
 
 -   Previously, any collision with a block would reduce sprinting to walking. Now, for very minor angles of collision with a block, players retain their sprint. For larger angles of collision, the old behavior is retained.
 
-## Upgrading of old worlds
+### Upgrading of old worlds
 
 -   The transition between new and old terrain is less "cliffy"
     -   Will surface height blend? Yes.
@@ -172,7 +174,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   The old Bedrock between y=0 and y=4 in old chunks gets replaced with Deepslate
 -   A new Bedrock layer is placed at y=-64
 
-## World generation
+### World generation
 
 -   Generation range and build limits have been expanded by 64 blocks up and 64 blocks down, to a total range of 384 blocks
 -   Underground features, structures, and caves generate all the way down to y-64
@@ -191,7 +193,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Renamed some biomes
 -   Geodes now only generate up to height 30
 
-# Technical
+## Technical
 
 -   Added an accessibility option to stop the sky from flashing during thunderstorms
 -   Added `fall_from_height` and `ride_entity_distance` advancement triggers
@@ -224,18 +226,18 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Mob spawners can now override light checks for spawning
 -   Added telemetry for world loading
 
-## Advancements
+### Advancements
 
-### Changed triggers
+#### Changed triggers
 
-#### `nether_travel`
+##### `nether_travel`
 
 -   `entered` condition is renamed to `start_position`
 -   `exited` has been removed since it was identical to `player.location`
 
-### New triggers
+#### New triggers
 
-#### `fall_from_height`
+##### `fall_from_height`
 
 -   Triggered when a player lands after falling
 -   Conditions:
@@ -243,7 +245,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
     -   `start_position` - a location predicate for the last position before the falling started
     -   `distance` - a predicate for the distance between `start_position` and the player
 
-#### `ride_entity_in_lava`
+##### `ride_entity_in_lava`
 
 -   Triggered for every tick when a player rides in lava
 -   Conditions
@@ -251,20 +253,20 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
     -   `start_position` - a position where the riding started (first tick on lava)
     -   `distance` - a predicate for the distance between `start_position` and the player
 
-## Chunk Builder Setting
+### Chunk Builder Setting
 
 -   This setting determines if chunk sections are updated immediately during a single frame, or asynchronously using threads
 -   "Fully Blocking" corresponds to the previous way chunks were updated, which prevents potential visual gaps when blocks are destroyed
 -   "Threaded" will significantly reduce stutters when blocks are placed or destroyed (especially with light sources), however brief visual gaps may rarely occur
 -   "Semi Blocking" is the middle-option, and will only immediately update chunks that are deemed important, otherwise updates occur asynchronously using threads
 
-## Java 17
+### Java 17
 
 Minecraft now uses Java version 17. If you are using a default setup, the Launcher will download and install the correct version. If you are using a custom Java setup, or a third-party launcher, you will need to ensure that your Java installation is version 17 or above.
 
-## JFR Profiling
+### JFR Profiling
 
-### Custom events
+#### Custom events
 
 All events are enabled when starting the profiling using either `jfr start` command or `--jfrProfile` startup flag. If profiling is started through any other means for monitoring purposes, only the `ServerTickTime`, `LoadWorld` and `NetworkSummary` are included by default.
 
@@ -274,12 +276,12 @@ All events are enabled when starting the profiling using either `jfr start` comm
 -   `minecraft.ChunkGeneration`: time taken to generate individual chunk stages
 -   `minecraft.LoadWorld`: initial world loading duration
 
-### Overview
+#### Overview
 
 [Java Flight Recorder](https://openjdk.java.net/jeps/328) is the internal JVM profiling tool bundled with the Java Runtime to analyze performance and runtime characteristics.  
 It's a useful tool for exposing internal JVM performance metrics as well as custom metrics that can be monitored or analyzed using any stock Java profiler or monitoring agents.
 
-### Profiling lifecycle
+#### Profiling lifecycle
 
 A profiling run can be started using any of the following alternatives:  
 The run will then be stopped either by:
@@ -291,56 +293,56 @@ The run will then be stopped either by:
 -   `jfr stop` in-game command
 -   `jcmd` CLI tool
 
-### Reports
+#### Reports
 
 A summary JSON report is written both to the log file and in the debug folder accompanied by a `.jfr` recording ready to be analyzed in i.e [JMC](https://github.com/openjdk/jmc) or any other profiler tool supporting the format.
 
-## Loot tables
+### Loot tables
 
-### Changed functions
+#### Changed functions
 
-#### `set_contents`, `set_loot_table`
+##### `set_contents`, `set_loot_table`
 
 Added new mandatory field `type`. This type will be written into `BlockEntityTag.id`, to make sure that this tag can be correctly migrated between versions.
 
-### New functions
+#### New functions
 
-#### `set_potion`
+##### `set_potion`
 
 -   Sets the `Potion` tag on any item
 
-##### Parameters:
+###### Parameters:
 
 -   `id` - potion id
 
-## Maximum amount of background threads increased
+### Maximum amount of background threads increased
 
 -   Various background tasks including worldgen are executed on a background thread pool
 -   The default thread pool size equals the amount of available CPU threads, minus one
 -   The upper thread pool limit has been raised from 7 to 255, which should help higher-end machines with improved world-gen performance
 -   The upper limit can be overridden via the `max.bg.threads` Java system property, for example when running multiple servers on a single machine
 
-## Mob spawning
+### Mob spawning
 
 -   Monster spawning limits are now per-player, rather than global for each dimension
 
-## Old world conversion
+### Old world conversion
 
 -   Worlds last saved before Minecraft 1.2 (pre "Anvil") now require conversion in a previous version of the game to be able to be opened
 -   We recommend that you upgrade your old version, 1.2 (pre "Anvil") or older, to version 1.6.4 - worlds opened for the first time in later versions will have incorrect biome information
 
-## Particles
+### Particles
 
-### `block_marker`
+#### `block_marker`
 
 -   Renders with a texture declared in the `particle` slot for a model assigned to the configured block state
 -   Is summoned with same syntax as the `block` particle (i.e. `block_marker wheat[age=2]`)
 
-## Resource Pack format
+### Resource Pack format
 
 -   `minecraft/textures/gui/container/inventory.png` now contains an extra sprite for a thin-layout version of the effect list in the inventory
 
-## Server bundling
+### Server bundling
 
 -   `server.jar` now bundles individual libraries instead of merging all the files into a single archive
 -   This change is meant to solve certain problems related to Java modules
@@ -349,14 +351,14 @@ Added new mandatory field `type`. This type will be written into `BlockEntityTag
 -   If `bundlerMainClass` is empty, the program will just validate and extract files, and will then exit
 -   Server classes are now signed
 
-## Simulation Distance Setting
+### Simulation Distance Setting
 
 -   A new slider which is available under video settings
 -   Entities, blocks, and fluids will not be updated outside of simulation distance
 -   Allows higher render distance with less CPU load
 -   There's also a new `simulation-distance` property in the dedicated server properties
 
-## Spawner data changes
+### Spawner data changes
 
 Example:
 
@@ -396,13 +398,13 @@ Example:
 -   To make `SpawnPotentials` format similar to other weighted lists, structure was changed to `{weight: <int>, data: <previous contents without 'Weight', 'Entity' renamed to 'entity'>}`
 -   To accommodate that change, previous contents of `SpawnData` were moved to `SpawnData.entity` (making format of that field same as elements of `SpawnPotentials.data`)
 
-## Telemetry
+### Telemetry
 
 In this release, we are re-introducing diagnostic tracking, which was part of Minecraft: Java Edition until 2018. We are bringing it back to better understand our players and to improve their experience. Specifically this information will help us prioritise various aspects of development and identify pain points. All data is treated according to GDPR and CCPA best practices and is used to develop a better-performing and generally more enjoyable Minecraft: Java Edition.
 
 -   At this point, the only implemented event is world load
 
-### World Load event
+#### World Load event
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:
@@ -417,7 +419,7 @@ In this release, we are re-introducing diagnostic tracking, which was part of Mi
     -   server type (single player, Realms or other)
     -   game mode
 
-## World Data: Chunk Format
+### World Data: Chunk Format
 
 -   Removed chunk's `Level` and moved everything it contained up
 -   Chunk's `Level.Entities` has moved to `entities`
@@ -434,11 +436,11 @@ In this release, we are re-introducing diagnostic tracking, which was part of Mi
 -   Added `below_zero_retrogen` containing data to support below zero generation
 -   Added `blending_data` containing data to support blending new world generation with existing chunks
 
-## World Generation
+### World Generation
 
 -   Bedrock layers now generate dependent on the world seed
 -   New random number generator for overworld generation
 
-# Fixed Bugs in 1.18
+## Fixed Bugs in 1.18
 
 About 250 bugs were fixed in this release. [View the entire list on the issue tracker](https://bugs.mojang.com/issues/?filter=26552).

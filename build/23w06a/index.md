@@ -1,18 +1,20 @@
+# 23w06a
+
 Today we are bringing you the `damage` command and new display entities.
 
 Damage safely!
 
-# Changes
+## Changes
 
 -   Jukeboxes now emit a note particle above them while playing a music disc to match Bedrock
 
-## Accessibility
+### Accessibility
 
 -   Added a new option in the Accessibility menu called Damage Tilt for controlling the amount of camera shake when being hurt
 -   Added a tooltip in the Key Binds screen that specifies which keybinds are conflicting
 -   "Notification Display Time" accessibility option was renamed to "Notification Time"
 
-## Updated Create New World Screen
+### Updated Create New World Screen
 
 -   Tabs can be switched with the keyboard by pressing Ctrl+Tab and Ctrl+Shift+Tab
 -   Specific tabs can also be navigated to by pressing Ctrl+Tab Number
@@ -21,12 +23,12 @@ Damage safely!
     -   The screen can always be found under the More-tab
     -   In snapshots a shortcut button can be found under the Game-tab
 
-## Creative menu
+### Creative menu
 
 -   Added painting variants to creative menu
 -   Paintings with pre-defined variant will now display author and title in description when hovered over
 
-# Technical Changes
+## Technical Changes
 
 -   Added display entities for flexible display of items, blocks and text
 -   Added a `damage` command for applying damage to entities
@@ -37,25 +39,25 @@ Damage safely!
 -   Added a group of entities to display items, blocks and text
 -   Added `execute summon` to allow customization of a newly spawned entity
 
-## Display entities
+### Display entities
 
 Three new entities have been added for flexible display of items, blocks and text
 
 -   Those entities, similarily to `marker`, don't tick and have no collisions or physics
 -   Models render at entity position, with normal rotation around X and Y axis (so it can be controlled by teleport commands), but also with additional arbitrary model transform
 
-### Common data types
+#### Common data types
 
 Tag contents for those entities include some new data types with complex structure. Any form can be used for modifying data, but only one form is used for saving.
 
-#### `rotation`
+##### `rotation`
 
 -   Quaternion form (used for saving): array of 4 numbers, describing components (x, y, z, w)
 -   Axis-angle form: object with following fields:
     -   `axis` - 3d vector
     -   `angle` - in radians
 
-### `transformation`
+#### `transformation`
 
 Arbitrary affine transform
 
@@ -66,7 +68,7 @@ Arbitrary affine transform
     -   `scale` - 3d vector
     -   Transforms are composed in order `translation`, `left_rotation`, `scale`, `right_rotation`
 
-### Interpolation
+#### Interpolation
 
 Some properties of display entites can be interpolated. That means that clients will see gradual changes over time instead of instantenous jumps.
 
@@ -82,7 +84,7 @@ Display entities keep track of current and previous values of interpolated value
     -   Set to `-1` to load current game time instead)
 -   End of interpolation (entity fully in "current" state) is defined as `interpolation_start` + `interpolation_duration` (in ticks)
 
-### Common properties
+#### Common properties
 
 Every entity in family has the following fields:
 
@@ -101,7 +103,7 @@ Every entity in family has the following fields:
 -   `width`, `height` - describe size of culling bounding box. Bounding box spans vertically `y` to `y+height` and horizontally `width/2` in all directions from entity position. If either field is set to 0, culling is disabled. Both default to 0
 -   `glow_color_override` - override glow border color. Defaults to 0 (use team color)
 
-### `item_display`
+#### `item_display`
 
 Displays a single item stack.
 
@@ -113,7 +115,7 @@ Fields:
 -   `item_display` - describes item model transform applied to item (as defined in `display` section in model JSON)
     -   Values: `none` (default), `thirdperson_lefthand`, `thirdperson_righthand`, `firstperson_lefthand`, `firstperson_righthand`, `head`, `gui`, `ground`, `fixed`
 
-### `block_display`
+#### `block_display`
 
 Displays a block state.
 
@@ -123,7 +125,7 @@ Fields:
 
 -   `block_state` - block state to display. Same format as item held by endermen (example `{Name:"minecraft:dirt"}`)
 
-### `text_display`
+#### `text_display`
 
 Displays a text component.
 
@@ -141,7 +143,7 @@ Fields:
 
 Note: text display backgrounds uses new shader types `rendertype_text_background` and `rendertype_text_background_see_through`
 
-## Damage Types
+### Damage Types
 
 Damage Types are a new registry that can be extended through data packs. A Damage Type determines how damage is handled by the game. This includes which attributes the damage has as well as which death message is used when an entity dies due to that type of damage.
 
@@ -177,9 +179,9 @@ Fields:
 
 Damage type tags control many aspects of how damage from different sources are interpreted.
 
-## Commands
+### Commands
 
-### `damage`
+#### `damage`
 
 New command to apply damage to entities.
 
@@ -200,15 +202,15 @@ Parameters:
 -   `location`: The location the damage originated at (when no entity caused the damage)
     -   For instance, `location` might represent the location of a Bed exploding in the Nether
 
-### `execute summon`
+#### `execute summon`
 
 New `execute` sub-command for summoning new entity and binding context (`@s`) to it. Meant to simplify entity setup and reduce need for raw NBT editing.
 
 -   `execute summon <entity id>`
 
-## Predicates
+### Predicates
 
-### Damage Type Predicates
+#### Damage Type Predicates
 
 The following fields have been removed from damage type predicates: `is_projectile`, `is_explosion`, `bypasses_armor`, `bypasses_invulnerability`, `bypasses_magic`, `is_fire`, `is_magic`, `is_lightning`.
 
@@ -217,12 +219,12 @@ A new `tags` array has been added. Each entry has two fields:
 -   `id`: The ID of a damage type tag
 -   `expected`: Whether the damage is expected to have or not have the tag for the predicate to match
 
-## Game Rules
+### Game Rules
 
 -   Added `doVinesSpread` game rule, determining if vines will spread to nearby blocks
     -   Defaults to `true`
 
-# Fixed bugs in Snapshot 23w06a
+## Fixed bugs in Snapshot 23w06a
 
 -   [MC-12729](https://bugs.mojang.com/browse/MC-12729) Z-fighting can be seen on leggings and boots worn by entities
 -   [MC-145765](https://bugs.mojang.com/browse/MC-145765) Both "Text Background" settings strings are overflowing the buttons

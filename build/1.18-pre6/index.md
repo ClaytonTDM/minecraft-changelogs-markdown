@@ -1,16 +1,18 @@
+# 1.18-pre6
+
 The sixth pre-release for 1.18 is now available. This pre-releases squashes some more bugs. Additionally, we now save the game more often, similar how to you should remember to save backups more often.
 
 Happy mining!
 
-# Changes in 1.18 Pre-release 6
+## Changes in 1.18 Pre-release 6
 
 -   The numbers of features in cave biomes have been tweaked
 
-# Technical Changes in 1.18 Pre-release 6
+## Technical Changes in 1.18 Pre-release 6
 
 -   The game now saves chunks whenever there is time spare to reduce autosave spikes
 
-# Fixed Bugs in 1.18 Pre-release 6
+## Fixed Bugs in 1.18 Pre-release 6
 
 -   [MC-236947](https://bugs.mojang.com/browse/MC-236947) Signature attribute is stripped from java records
 -   [MC-238930](https://bugs.mojang.com/browse/MC-238930) Soul Sand and Soul Soil generate below the nether ceiling

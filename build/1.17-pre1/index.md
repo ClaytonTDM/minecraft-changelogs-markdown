@@ -1,14 +1,16 @@
+# 1.17-pre1
+
 The first 1.17 pre-release is here!
 
 From now on, you should mostly see bugs being fixed. In addition to that, pre-releases doesn't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out!
 
 Addtionally, based on feedback from the community, we have decided to include candles in part 1 of Caves & Cliffs again. Candles will become available in Bedrock shortly after the release of part 1.
 
-# New Features in 1.17 Pre-release 1
+## New Features in 1.17 Pre-release 1
 
 -   Added new advancements
 
-## Advancements
+### Advancements
 
 -   Added "Whatever Floats Your Goat!" for floating in a boat with a goat
 -   Added "Wax on" for applying wax to a Copper block!
@@ -22,7 +24,7 @@ Addtionally, based on feedback from the community, we have decided to include ca
 -   Added "Is it a Balloon?" for looking at a ghast through a spyglass
 -   Added "Is it a Plane?" for looking at a dragon through a spyglass
 
-# Changes in 1.17 Pre-release 1
+## Changes in 1.17 Pre-release 1
 
 -   Candles have been added back to the creative inventory
 -   Recipes for crafting and dying candles are once again available
@@ -30,11 +32,11 @@ Addtionally, based on feedback from the community, we have decided to include ca
 -   Glowing text on signs now has an outer glow, making text in dark colors more visible in the dark
 -   Holding down the space bar now increases the scroll speed in the credits
 
-# The Caves & Cliffs Preview
+## The Caves & Cliffs Preview
 
 Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6db99ffcf95594e384e72671ae279ced/CavesAndCliffsPreview.zip).
 
-# Technical changes in 1.17 Pre-release 1
+## Technical changes in 1.17 Pre-release 1
 
 -   Added `started_riding`, `lightning_strike` and `using_item` advancement triggers
 -   Added `source` condition to `effects_changed` trigger
@@ -48,17 +50,17 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
 -   Removed debug report command (use perf start/stop for server performance measurement)
 -   perf start/stop command on dedicated servers will now generate and persist server performance metrics
 
-## Advancements
+### Advancements
 
-### New triggers
+#### New triggers
 
-#### `started_riding`
+##### `started_riding`
 
 -   Triggered when player starts riding a vehicle or entity starts riding vehicle currently ridden by player
 -   Conditions:
     -   `player` - either a player that started riding or one of boat passengers
 
-#### `lightning_strike`
+##### `lightning_strike`
 
 -   Triggered when lighting finishes (i.e. entity disappears)
 -   Triggers for any player on server
@@ -67,16 +69,16 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
     -   `lightning` - predicate for lightning entity
     -   `bystander` - predicate for one of the entities in certain area around strike not hurt by it
 
-#### `using_item`
+##### `using_item`
 
 -   Triggered for every tick of using items (like crossbows, spyglass, fishing rods, etc)
 -   Conditions
     -   `player` - players that uses item
     -   `item` - item being used
 
-### Changed triggers
+#### Changed triggers
 
-#### `effects_changed`
+##### `effects_changed`
 
 -   Added `source` triggers that matches entity that triggered the change
 -   Might be empty when:
@@ -84,40 +86,40 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
     -   the effect is self-applied
     -   effect is removed
 
-### Changed predicates
+#### Changed predicates
 
-#### Item predicate
+##### Item predicate
 
 -   `item` field expended to `items`, now accepting array of item types
 
-#### Block predicate
+##### Block predicate
 
 -   `block` field expended to `blocks`, now accepting array of block types
 
-#### Entity predicate
+##### Entity predicate
 
 -   `passenger` - new sub-predicate for passenger directly riding this vehicle (if present, must match one or more)
 -   `stepping_on` - location predicate for block entity is currently standing on
 -   `lightning_bolt` - sub-predicate valid only for lightning bolt entity
 
-#### Player predicate
+##### Player predicate
 
 -   `looking_at` - entity currently viewed by player
     -   uses same line-of-sight rules as attacking mobs
     -   actual detection radius might be changed in future
 
-### Lightning bolt
+#### Lightning bolt
 
 -   `blocks_set_on_fire` - range check for of blocks set on fire by this entity
 -   `entity_struck` - predicate for entities struck by this lightning (if present, must match one or more)
 
-## Performance metrics reporting
+### Performance metrics reporting
 
 These will be saved to a zip file in `debug/profiling/<yyyy-MM-dd_HH.mm.ss-[levelname]-[version]>.zip` and could be used for performance regression analysis if included in bug reports.
 
 The exact metrics, output format, and names are susceptible to change between versions. Our plan is to continue iterating on which metrics to capture.
 
-### Client F3+L shortcut
+#### Client F3+L shortcut
 
 Pressing F3+L while in the game will start a recording for 10 seconds capturing metrics such as tick durations, used heap sizes and other more detailed stats.
 
@@ -125,13 +127,13 @@ Pressing F3+L before the 10-second limit will end the recording early.
 
 This shortcut is always available to clients, even on multi-player servers where it will record client-side performance.
 
-### Dedicated Server perf start/stop command
+#### Dedicated Server perf start/stop command
 
 `perf start` will start a recording for 10 seconds capturing metrics such as tick durations, used heap sizes and other more detailed stats.
 
 `perf stop` before the 10-second limit will end the recording early.
 
-# Bugs fixed in 1.17 Pre-release 1
+## Bugs fixed in 1.17 Pre-release 1
 
 -   [MC-19690](https://bugs.mojang.com/browse/MC-19690) Reducing maxHealth / max\_health can cause fake death
 -   [MC-65587](https://bugs.mojang.com/browse/MC-65587) Lag spike while loading player head textures/player skins

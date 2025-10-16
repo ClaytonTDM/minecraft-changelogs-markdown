@@ -1,6 +1,8 @@
+# 1.18-pre8
+
 It is now time for pre-release 8 for Minecraft 1.18 which contains more fixes for crashes and bugs.
 
-# Fixed Bugs in 1.18 Pre-release 8
+## Fixed Bugs in 1.18 Pre-release 8
 
 -   [MC-227537](https://bugs.mojang.com/browse/MC-227537) Crash: java.lang.NullPointerException: Cannot invoke "it.unimi.dsi.fastutil.objects.ObjectSet.remove(Object)" because "$$4" is null
 -   [MC-230866](https://bugs.mojang.com/browse/MC-230866) Eating whilst traveling through a Nether portal prints error in game log

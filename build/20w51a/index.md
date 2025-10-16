@@ -1,8 +1,10 @@
+# 20w51a
+
 Ready your screenshot buttons and start rehearsing your best "naaaaww"s. The final snapshot of the year enters Minecraft Java, and what better way to end the year than with something that has been on our bucket list for quite a while: the adorable **axolotl**?
 
 We hope you'll end the year on a good note, and the entirety of the Java team wishes you happy holidays.
 
-# New Features in 20w51a
+## New Features in 20w51a
 
 ​
 
@@ -10,7 +12,7 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-## Axolotl
+### Axolotl
 
 -   Amphibious!
 -   Axolotls currently love tropical fish, though this may change. Tropical fish or tropical fish buckets can be used to mate axolotls
@@ -27,14 +29,14 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-# Changes in 20w51a
+## Changes in 20w51a
 
 -   Bundles and shulker box items will now drop their items when destroyed
 -   Some changes have been made to Sculk Sensors
 
 ​
 
-## Sculk Sensors
+### Sculk Sensors
 
 -   Eating Start has been removed as an event for a few reasons.
     -   It is inconsistent with our philosophy around vibrations. Mining a block is not considered a vibration because a physical event hasn't happened in the world yet (you can stop mining and the block will revert). This is the same for eating: you can start eating, but then stop and the food reverts as if eating never occurred.
@@ -46,7 +48,7 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-### Vibration Frequency Changes
+#### Vibration Frequency Changes
 
 As we continue to consider feedback from the community, some changes to the frequency ranges have been made. We expect this to change quite heavily up until release to figure out the most interesting ranges for gameplay, and as always feedback is extremely welcome! Here is the newest table in this snapshot.
 
@@ -114,13 +116,13 @@ Fishing Rod Cast, Container Open, Explode, Lightning Strike, Piston Extend
 
 15
 
-# Technical Changes in 20w51a
+## Technical Changes in 20w51a
 
 -   Added gamerule playersSleepingPercentage (100 by default), which sets what percentage of players must sleep to skip the night. Setting to 0 will mean 1 player is always enough to skip the night. Setting above 100 will prevent skipping the night.
 
 ​
 
-# Fixed bugs in 20w51a
+## Fixed bugs in 20w51a
 
 ​
 

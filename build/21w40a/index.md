@@ -1,8 +1,10 @@
+# 21w40a
+
 Badabee badablurb.
 
 **We still highly recommend backing up your world before loading it in this snapshot.**
 
-# Changes in 21w40a
+## Changes in 21w40a
 
 -   World generation tweaks
 -   Changes to mob spawning
@@ -11,7 +13,7 @@ Badabee badablurb.
 -   A bunch of biome variant with similar features but different shapes have been merged into one, since the shape is controlled independently now
 -   Renamed some biomes
 
-## World Generation
+### World Generation
 
 -   Updated ore distribution to make branch mining deep down more rewarding. [Updated ore distribution chart](TODO)
     -   For example, added more unexposed diamonds
@@ -27,7 +29,7 @@ Badabee badablurb.
 -   Villages are slightly more spread out
 -   Removed water lake features, Aquifers provide local water levels
 
-## Mob Spawns
+### Mob Spawns
 
 -   Axolotls now only spawn in water, above clay blocks, in lush caves
 -   Glowsquids now only spawn in water blocks, under height 30
@@ -36,12 +38,12 @@ Badabee badablurb.
 -   Zombies once again spawn in dripstone caves - drowned can also spawn there however
 -   Goats no longer spawn in stony peaks
 
-# Technical Changes in 21w40a
+## Technical Changes in 21w40a
 
 -   Optimized AI for Axolotls, Goats, Hoglins, Zoglins, Piglins, Piglin Brutes and Villagers
 -   Bedrock layers generate dependent on the world seed now
 
-# Fixed bugs in 21w40a
+## Fixed bugs in 21w40a
 
 -   [MC-132306](https://bugs.mojang.com/browse/MC-132306) Snowy grass without snow near lakes in snowy biome
 -   [MC-169523](https://bugs.mojang.com/browse/MC-169523) As of 18w06a, the sand, clay and gravel blocks no longer generate around small lakes

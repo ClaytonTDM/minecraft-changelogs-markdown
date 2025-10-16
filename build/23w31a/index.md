@@ -1,18 +1,20 @@
+# 23w31a
+
 I was personally quite convinced that the game was already perfect, but it seems that our developers disagree. We are now releasing the first snapshot for Minecraft 1.20.2!
 
 This snapshot brings changes to Diamond Ore generation, the ability to waterlog Barriers, and a change to Villager curing. It also brings a new Experimental Toggle that updates Villager trading, which we are eager to hear your feedback on. As well as a big batch of bug fixes, you will find a whole lot of technical features and changes in this snapshot, including new commands, function macros, persistent command history, network performance improvements, and much more.
 
 Happy mining!
 
-# New Experimental Features in 23w31a
+## New Experimental Features in 23w31a
 
-## Villager Trade Rebalance
+### Villager Trade Rebalance
 
 This snapshot introduces a new experimental Feature Toggle that updates the Wandering Trader and Librarian trades. You must turn on this Feature Toggle in the Experiments Menu when creating a new world if you want to test the new trades. You can find more information about Feature Toggles [here](https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition).
 
 As this is an experiment, we would really appreciate your feedback as work continues and to help us decide on the future direction for Villager trades. Visit [this link](https://aka.ms/VillagerTradingFeedback) to share your thoughts!
 
-### Librarian Changes
+#### Librarian Changes
 
 Before these changes, players could get any village enchantment from any Librarian. A novice Librarian could sell the best enchantment in the game! For some players, this felt too random and made trading feel overpowered when compared to using the Enchanting Table or searching for Enchanted Books in structures.
 
@@ -27,7 +29,7 @@ Players will have to work towards getting the best trades instead of relying on 
     -   A player must build these villages to access their trades!
 -   Some enchantments have been removed from village trading and must be found in other ways
 
-### Wandering Trader Changes
+#### Wandering Trader Changes
 
 Some players felt that the Wandering Trader had unfair prices and didn't sell many useful items. We have lowered their prices, added more trades and increased the amounts available. The Wandering Trader will also now buy useful items from players, so it's possible to help them on their journey by giving them supplies even if you don't feel like buying anything.
 
@@ -35,7 +37,7 @@ Some players felt that the Wandering Trader had unfair prices and didn't sell ma
 -   Wandering Traders now sell Logs
 -   Wandering Traders can now buy many items, instead of only selling
 
-# Changes
+## Changes
 
 -   Diamond Ore is now generated more frequently in the Deepslate layers of the Overworld
 -   Curing a Zombie Villager now only gives a big discount the first time
@@ -45,11 +47,11 @@ Some players felt that the Wandering Trader had unfair prices and didn't sell ma
 -   Players will no longer be able to crouch while riding vehicles
 -   Chorus Flower no longer provides support for hanging or standing blocks
 
-## Diamond Ore Distribution
+### Diamond Ore Distribution
 
 In this snapshot, we have increased the amount of Diamond Ore found in the deepest parts of the world. Our goal is to make it more rewarding to mine for Diamonds in the Deepslate layers. We want your feedback on this! Please try out your favorite mining technique and let us know how it feels on [this feedback site](https://aka.ms/OreDistributionFeedback).
 
-# Technical Changes
+## Technical Changes
 
 -   The resource pack version is now 16
 -   The data pack version is now 16
@@ -61,14 +63,14 @@ In this snapshot, we have increased the amount of Diamond Ore found in the deepe
 -   Added validation for symbolic links in datapacks and resource packs
 -   When hitboxes are displayed through F3+B, entities that have a passenger will display the passenger's attachment point
 
-## Command History
+### Command History
 
 -   The last 50 commands that you sent in chat will be remembered across game sessions
 -   You can access the command and chat history by pressing up or down arrows in the chat
 -   Regular chat is only persisted within the same game session (leaving a server or world clears them)
 -   Recent commands are stored in `command_history.txt` in the game folder
 
-## Chunk Sending Optimization
+### Chunk Sending Optimization
 
 -   Chunks are no longer sent over the network to the client in one big continuous batch
 -   They are instead sent in smaller batches depending on the available bandwidth. This means that:
@@ -76,11 +78,11 @@ In this snapshot, we have increased the amount of Diamond Ore found in the deepe
     -   Clients with low-bandwidth connections can interact with the world while some chunks are still loading
 -   Only chunks within the client's render distance are now sent
 
-## Multi-version Packs
+### Multi-version Packs
 
 New features have been added to datapacks and resource packs to allow creation of packs that are compatible with multiple versions of game.
 
-### Pack Metadata
+#### Pack Metadata
 
 -   Pack metadata now includes an optional field `supported_formats` which describes a range for pack formats that this pack supports
     -   Examples: `16`, `[16,17]`, `{"min_inclusive": 16, "max_inclusive": 17}`
@@ -88,7 +90,7 @@ New features have been added to datapacks and resource packs to allow creation o
     -   If `supported_formats` is present, it must contain the value declared in `pack_format`
     -   Note: since this new information is ignored by older versions of the game, they will always see a "normal", single-version pack, without any extended compatibility
 
-### Overlays
+#### Overlays
 
 -   Packs can now contain overlay directories ("overlays")
 -   Overlays are sub-packs applied over the "normal" contents of a pack
@@ -105,7 +107,7 @@ New features have been added to datapacks and resource packs to allow creation o
 -   Order of application: overlays are stacked from the bottom to top of the list
     -   For example, if a pack has two overlays: `"entries": [{"directory":"A", ...}, {"directory":"B", ...}]`, the game will first look in `B`, then `A` and then in the top pack directory
 
-## Network Protocol
+### Network Protocol
 
 As part of ongoing work towards more data-driven features, the network protocol has been changed to include a new configuration phase.
 
@@ -125,12 +127,12 @@ As part of ongoing work towards more data-driven features, the network protocol 
 -   The server will now negotiate resource pack in the configuration phase
     -   This means that the player will no longer be in world when answering prompts and reloading resources
 
-## `server.properties`
+### `server.properties`
 
 -   New option: `log-ips` (default true)
     -   When set to `false`, will prevent player IPs from being included in the log when players join the game
 
-## Symbolic Link Validation
+### Symbolic Link Validation
 
 To improve safety, the game will now also detect symbolic links used inside data- and resource packs.
 
@@ -140,11 +142,11 @@ To improve safety, the game will now also detect symbolic links used inside data
 -   Additionally, directories and files that are not recognized as packs will no longer be copied via drag and drop
 -   For a detailed explanation, see this [help article](https://aka.ms/MinecraftSymLinks)
 
-## Telemetry
+### Telemetry
 
 -   Added a button to the Telemetry Data Collection Screen that links to the Microsoft Privacy Statement
 
-## Resource Pack Version 16
+### Resource Pack Version 16
 
 -   The process of upgrading your pack can be assisted by using this automated [Slicer](https://github.com/Mojang/slicer/releases/tag/v1.1) tool
 -   All textures containing multiple sprites in a sheet for GUI have been split into individual sprites under `textures/gui/sprites` (automated by Slicer tool)
@@ -158,14 +160,14 @@ To improve safety, the game will now also detect symbolic links used inside data
 -   The highlighted states for Realms invitation number icons have been removed
 -   The exclamation marks on the `notification\more.png` have been removed
 
-### GUI Sprite Sheet
+#### GUI Sprite Sheet
 
 -   Sprites used in GUI drawing have been split into individual sprite files instead of larger sprite sheets
     -   For example, `widgets/button.png` and `widgets/button_highlighted.png` have been split from `widgets.png`
 -   Each sprite can now be individually overriden by a resource pack instead of replacing the entire sheet
 -   Sprites are loaded into the `gui` atlas from the `textures/gui/sprites` directory
 
-#### GUI Sprite .mcmeta
+##### GUI Sprite .mcmeta
 
 -   Any sprite can now be animated using `.mcmeta` files, similar to other atlases
     -   `icon/trial_available` and `realm_status/expires_soon` are now animated this way
@@ -185,7 +187,7 @@ To improve safety, the game will now also detect symbolic links used inside data
                 -   Constant integer for uniform border size on all sides
                 -   Object containing `left`, `top`, `right`, and `bottom`
 
-## Data Pack Version 16
+### Data Pack Version 16
 
 -   Gamerule `randomTickSpeed` now affects the rate of accumulation of snow and ice the same way it affects crops and other blocks affected by random ticking
 -   Added a `random` command
@@ -198,9 +200,9 @@ To improve safety, the game will now also detect symbolic links used inside data
 -   Game event changes
 -   New tags
 
-### Commands
+#### Commands
 
-#### `random`
+##### `random`
 
 A new command for randomizing values and controlling random sequences. The `value` and `roll` forms can be used to draw a random value. In the case of `roll`, the resulting value is also shown in chat for all players.
 
@@ -227,7 +229,7 @@ If no seed is specified, the sequence resets to the default parameters.
 
 Note that `random value|roll <range>` used without a sequence id is available to non-operator players.
 
-#### `execute if function`
+##### `execute if function`
 
 A new execute sub-command that runs a function or function tag and matches the return value(s). If a tag is given, all functions run regardless of the results of prior functions. Syntax:
 
@@ -237,7 +239,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-##### Matching
+###### Matching
 
 The matching of the result value of the function(s) that run:
 
@@ -246,7 +248,7 @@ The matching of the result value of the function(s) that run:
     -   Uses the `return` command to return a value
     -   The return value is not 0
 
-#### `return run`
+##### `return run`
 
 A new form of the `return` command is now available, `return run`. Syntax:
 
@@ -254,12 +256,12 @@ A new form of the `return` command is now available, `return run`. Syntax:
 
 This takes the `result` value from running the specified `command` and returns that as the return value of the function. In all other aspects, it works like `return` with a specified return value. If the given command fails, the return value is `0`.
 
-### Functions
+#### Functions
 
 -   A single backslash `\` as the last non-whitespace character of a line now allows a command to be continued on the next line
     -   Leading and trailing whitespace of the following line are stripped before appending
 
-#### Macros
+##### Macros
 
 Functions can now contain macro lines, making them Function Macros.
 
@@ -267,7 +269,7 @@ Functions can now contain macro lines, making them Function Macros.
 -   A macro line also contains one or more substitutions in the form of `$(variable)`
 -   When calling a function macro a compound with data for all argument variables must be provided
 
-##### Calling Function Macros
+###### Calling Function Macros
 
 The `function` command has new forms:
 
@@ -288,7 +290,7 @@ Notes:
 -   When a macro is called, the values provided are substituted in place of the variable specifications and the resulting commands are executed
 -   Any syntax errors in the lines resulting from variable substitution result in the entire function call being skipped
 
-##### Performance Considerations
+###### Performance Considerations
 
 Using a macro means commands must be re-evaulated after variable substitution. This has an extra cost compared to running pre-parsed functions.
 
@@ -296,7 +298,7 @@ Regular commands (non-macro lines) are still pre-parsed. Only commands with vari
 
 This makes repeated calls with the same parameter set cheaper than new calls with different parameters, but an overhead still remains compared to regular functions. Note that only the values references by macro as parameters are included in this cache, so any extra data in the provided compound is ignored.
 
-### Display Entity Interpolation
+#### Display Entity Interpolation
 
 -   Display entities now start updating their client-side position and rotation on the first tick after an update
     -   In previous versions, updates were applied in the same tick, causing uneven motion
@@ -311,17 +313,17 @@ This makes repeated calls with the same parameter set cheaper than new calls wit
         -   That means any current movement will continue unchanged
 -   Note: behavior while riding remains unchanged from previous versions
 
-### Attributes
+#### Attributes
 
 -   Added new attribute `generic.max_absorption`
     -   `generic.max_absorption` acts similar to `generic.max_health`, but instead of being the upper bound for `Health`, it is the upper bound for `AbsorptionAmount`
     -   The mob effect `absorption` increases `generic.max_absorption` as well as fills the `AbsorptionAmount` to the max when applied
 
-### Game Events
+#### Game Events
 
 -   `entity_roar` and `entity_shake` game events have been removed and replaced with `entity_action` game event
 
-### Tags
+#### Tags
 
 -   Added `no_knockback` damage type tag which causes knockback to not be caused by the damage itself
     -   Used in Vanilla for damage that is caused by events, such as explosions, which apply knockback separately
@@ -329,7 +331,7 @@ This makes repeated calls with the same parameter set cheaper than new calls wit
 -   Added `concrete_powder` block tag for Concrete Powder blocks
 -   Added `camel_sand_step_sound_blocks` block tag for blocks that produce `entity.camel.step_sand` sound
 
-# Fixed bugs in Snapshot 23w31a
+## Fixed bugs in Snapshot 23w31a
 
 -   [MC-29371](https://bugs.mojang.com/browse/MC-29371) Several buttons and icons use the old tooltip design upon being hovered over
 -   [MC-67532](https://bugs.mojang.com/browse/MC-67532) Bottom 2 rows of pixels in selected hotbar slot texture don't appear in game

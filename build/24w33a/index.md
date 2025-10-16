@@ -1,3 +1,5 @@
+# 24w33a
+
 We know you have been waiting long for the next update, and we are finally kicking off the new snapshot cycle with Snapshot 24w33a!
 
 Over the summer someone changed our password and wouldn't let us know what it was until we finished 200 bug fixes (the password was cubepork14 by the way). This update also features a Bundle of new Experiments that we are eager for you to try out!
@@ -8,13 +10,13 @@ Read below for a full list of the changes included.
 
 Your thoughts on the game continue to shape new updates so please upvote and report any new bugs at [bugs.mojang.com](https://bugs.mojang.com/) and leave us your feedback at [feedback.minecraft.net](https://feedback.minecraft.net).
 
-# Experimental Features
+## Experimental Features
 
 The following changes only apply when their respective Experiment is turned on, either by activating the corresponding experimental data pack or by turning it on in the Experiments screen while creating the world.
 
 These experiments have no effect unless enabled. You can find more information about Feature Toggles [here](https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition).
 
-## Bundles
+### Bundles
 
 Bundles are back The Bundle was added to Java Edition as an experiment in 2020. We are now working on Bundles again! To test Bundles you must create a new world with the Bundles experiment turned on. (When creating a new world click ‘More’, then ‘Experiments’, then click the button next to the word ‘Bundles’.) A Bundle is an item that lets you stack different blocks or items together in the same inventory slot. Different items normally don’t stack together, so you can end up wasting space by only having a few items in each slot. A Bundle lets you pack those items together so there is no wasted space.
 
@@ -44,14 +46,14 @@ The Bundle has a tooltip that shows some of the items inside. If the Bundle has 
     -   Use right-click to remove the top item type from a Bundle
     -   When the Bundle tooltip is visible, use number keys or the mouse wheel to select a different item type then use right-click to remove it
 
-## Redstone Experiments
+### Redstone Experiments
 
 Added a new Experiment containing various Redstone-related changes. This can be enabled by selecting "Redstone Experiments" in the Experiments menu when creating a world.
 
 Please note that the experimental features behind this toggle are not aimed at any future release at this time. Instead, this is a place for us to try out changes and gather feedback.  
 We are excited to hear what you think about these changes: please share your feedback on the [feedpack page](https://aka.ms/fbredstone).
 
-### Redstone Wire
+#### Redstone Wire
 
 -   The performance impact of Redstone wire (connected blocks of Redstone Dust) has been improved
 -   Redstone wire now only triggers block updates on blocks that may receive power from the wire
@@ -68,7 +70,7 @@ We are excited to hear what you think about these changes: please share your fee
 
 ![The image shows three Redstone machines. In each of them a lever is powering a Redstone wire leading to two pistons that are trying to push into the same block. In the machine on the left, the wire to the left piston is shorter and the left piston is the one that got to extend. In the machine on the right, the wire to the right piston is shorter and the right piston is the one that got to extend. In the machine in the center, the wire is the same length to both pistons and which piston extended was picked by random choice.](https://launchercontent.mojang.com/v2/images/redstone.jpg)
 
-#### Order in Which a Line of Wire Changes
+##### Order in Which a Line of Wire Changes
 
 -   When a line of wire turns on, the wires closer to the power source will cause block updates first
 -   When a line of wire turns off, the wires closer to where the power source was, will cause block updates first
@@ -77,18 +79,18 @@ We are excited to hear what you think about these changes: please share your fee
     -   This means, when powering a line of wire from the side, it randomly chooses one of two possible update orders
     -   The advantage of having few possible update orders is that the results are more predictable
 
-#### Block Updates Around a Wire
+##### Block Updates Around a Wire
 
 -   The order in which blocks around the wire update is based on the direction the wire received an update from
 -   Currently, the order is: back, front, left, right, down, up
     -   left and right may be swapped, depending on the random choice made by the line of wire
 -   When the updates are further distributed through solid blocks, the same order is applied there
 
-### Known Issues
+#### Known Issues
 
 As this experiment only changes Redstone wire, interactions with other components may not always act as expected, especially when it comes to update orders.
 
-## Minecart Improvements
+### Minecart Improvements
 
 Added a new Experiment containing various movement changes to Minecarts. This can be enabled by selecting "Minecart Improvements" in the Experiments menu when creating a world.
 
@@ -98,7 +100,7 @@ Please note that the experimental features behind this toggle are not aimed at a
 
 We are excited to hear what you think about these changes: please share your feedback on this [feedback page](https://aka.ms/fbcarts).
 
-### Movement Changes
+#### Movement Changes
 
 -   Minecarts will articulate their movement better when going fast, riding on the rail all the time
     -   Minecarts will now smoothly turn along with the track and are less likely to halt or derail
@@ -114,19 +116,19 @@ We are excited to hear what you think about these changes: please share your fee
     -   Setting it to a specific value does not guarantee that a minecart will reach that particular max speed - there are built in air resistances and similar effects that the speed added through slopes or powered rails need to overcome
     -   This gamerule only exists in worlds with the experiment enabled
 
-### Minecart Changes
+#### Minecart Changes
 
 -   Minecarts can no longer be placed within another Minecart by the player or a dispenser
 -   Minecarts can now consistently be placed next to each other along a track
 -   Minecarts now pick up mobs more consistently when moving along a track
 
-### Known Impact
+#### Known Impact
 
 -   We are aware that these changes will make certain contraptions such as 'piston bolts' not work at all, or have their behavior changed
 -   Very delicate rail networks will have their timings changed due to slight changes in speeds, movement distance, friction etc.
 -   Contraptions that rely on Minecarts snapping to rails will no longer work, or have their behavior changed
 
-# Changes
+## Changes
 
 -   Various items and blocks have had their assigned rarities changed
 -   Tweaked portal cooldowns of vehicles and projectiles
@@ -159,7 +161,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   Furthermore, the impact of loading and generating chunks on tick rate has been reduced
 -   Redstone Torches have been given a new look with updated textures and models, to give it a unique and distinctive identity
 
-## Banner Patterns
+### Banner Patterns
 
 -   Each Banner Pattern item now includes their pattern type in their name instead of as a subtitle
     -   Unique item textures have been added to better distinguish each pattern type
@@ -170,7 +172,7 @@ We are excited to hear what you think about these changes: please share your fee
         -   Crafted with Paper and Vines
 -   The Bricks and Curved Border patterns in the Loom can no longer be accessed without the above Banner Patterns
 
-## Rarity
+### Rarity
 
 -   Rarity is a set of categories which determine the color used to display the name of an item or block
     -   It has no gameplay impact, but is used to signal how difficult something is to obtain
@@ -186,12 +188,12 @@ We are excited to hear what you think about these changes: please share your fee
         -   Likewise, any crafted item which has only Common crafting ingredients must also be Common
 -   The lists below detail the items and blocks which have changed to that rarity category
 
-### Common
+#### Common
 
 -   End Crystal
 -   Golden Apple
 
-### Uncommon
+#### Uncommon
 
 -   Sniffer Egg
 -   Chainmail Helmet
@@ -238,7 +240,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   5
     -   Precipice
 
-### Rare
+#### Rare
 
 -   Enchanted Golden Apple
     -   Enchanted Golden Apples have become more common in recent years due to being accessible in both Ancient Cities and Trial Chambers, warranting a demotion to Rare instead of Epic
@@ -259,13 +261,13 @@ We are excited to hear what you think about these changes: please share your fee
     -   otherside
     -   Creator
 
-### Epic
+#### Epic
 
 -   Elytra
 -   Dragon Head
 -   Silence Armor Trim
 
-## Inactivity FPS limit
+### Inactivity FPS limit
 
 -   The game will now limit the maximum framerate in certain situations
 -   These situations are controlled by a new Video Setting: `Reduce FPS when`
@@ -278,31 +280,31 @@ We are excited to hear what you think about these changes: please share your fee
         -   Also limits to 10 FPS when the game window is minimized
 -   The default is `AFK`
 
-## Player Safety
+### Player Safety
 
-### Skin Reporting
+#### Skin Reporting
 
 -   Added reporting reason "Sexually inappropriate"
     -   This is intended for skins that are graphic in nature relating to sexual acts, sexual organs, and sexual violence
 -   Removed reason "Defamation" due to lack of relevance for skins
 -   Removed reason "Threat of harm to others" due to already being covered by "Harassment or bullying" reporting reason
 
-### Name Reporting
+#### Name Reporting
 
 -   Added a text label above the description box to clarify that only the name of the player is subject to the report
 
-### Realms
+#### Realms
 
 -   Extended the `text-filtering-config` in order to support an internal migration for Realms Profanity Filtering
     -   Servers currently utilizing the `text-filtering-config` will be able to continue to do so without any changes
 
-## Trial Chambers
+### Trial Chambers
 
 -   Added new variations to the hallways, including "Encounters": Short challenges leading to a larger chamber.
 -   Beds in intersections now have their colors randomized.
 -   Replaced the empty chests at the entrance of chamber with a Hopper and Barrel to better show the players that these are meant for disposal and inventory managment!
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 49
 -   Resource Pack version is now 35
@@ -312,7 +314,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   When set to a positive value, causes the server to pause when no player has been online for that many seconds
 -   Removed `server.properties` options: `spawn-animals` and `spawn-npcs`
 
-## Network Protocol
+### Network Protocol
 
 -   Added `minecraft:client_tick_end` serverbound packet during play phase, sent when the client finishes processing its current tick
     -   This is unused by the Vanilla server, but left for use by custom server implementations
@@ -320,7 +322,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   This is controlled by a non-negative ordering index that is sorted highest to lowest
 -   The client now shares the state of the 'Particles' limiter option to be used by custom servers
 
-# Data Pack Version 49
+## Data Pack Version 49
 
 -   Goat Horn instruments are now data-driven
 -   Sheep shearing is now controlled by loot tables found as `shearing/sheep/<color>`
@@ -347,7 +349,7 @@ We are excited to hear what you think about these changes: please share your fee
 -   Invalid `selector` patterns in Chat Components will now cause commands to fail to parse, instead of resolving to an empty string
 -   Added `tempt_range` attribute - can be used to change the range, in blocks, at which temptable mobs can be tempted
 
-## Instruments
+### Instruments
 
 Goat Horn instruments are now defined in a data pack registry folder called `instruments`. Like other registries, changing this content in data packs is considered experimental and requires a full world re-load to take effect.
 
@@ -358,15 +360,15 @@ Fields:
 -   `use_duration`: The amount of time (in seconds) the instrument is considered in use after triggering, which also serves as its cooldown
 -   `description`: A Text Component used as the descrpition of the instrument in item tooltips
 
-## Painting variant
+### Painting variant
 
 -   Added new optional fields `author` and `title`, holding text components to be displayed in the creative menu tooltip
 -   This replaces previous mechanism where those values were derived from variant name
 -   Author tooltip has been removed for `earth`, `wind`, `fire`, `water` and `wither` variants
 
-## Tags
+### Tags
 
-### Item Tags
+#### Item Tags
 
 -   `furnace_minecart_fuel`: Items that can be used to refuel furnace minecart
 -   `villager_picks_up`: Items that a Villager will try to pick up from the ground
@@ -377,23 +379,23 @@ Fields:
     -   `diamond_tool_materials`
     -   `netherite_tool_materials`
 
-## New Item Components
+### New Item Components
 
-### `minecraft:repairable`
+#### `minecraft:repairable`
 
 -   If present, and this item is damageable, this item can be repaired in an Anvil using the specified ingredient
 -   Format: object with fields
     -   `items`: Item, list of Items, or hash-prefixed Item Tag matching what can be used to repair this item
     -   e.g. `repairable={items:'stick'}`
 
-### `minecraft:enchantable`
+#### `minecraft:enchantable`
 
 -   If present (and any enchantments are applicable), this item can be enchanted in an Enchanting Table
 -   Format: object with fields
     -   `value`: Positive integer, a higher value allows enchantments with a higher cost to be picked
     -   e.g. `enchantable={value:15}`
 
-## Recipes
+### Recipes
 
 The format used for recipe ingredients has been simplified and aligned with other fields that accept item lists (like item predicates):
 
@@ -405,7 +407,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
     -   ingredient must have at least one tag or item
 -   Fields `template`, `base` and `addition` in `smithing_transform` and `smithing_trim` recipes are now optional instead of accepting empty list
 
-# Resource Pack Version 35
+## Resource Pack Version 35
 
 -   Added break, fall, hit, place, and step sounds for the Spawner block
 -   Removals and renames of some translations is now automatically applied at startup
@@ -420,12 +422,12 @@ The format used for recipe ingredients has been simplified and aligned with othe
 -   The models and UV mapping related to the Torch and blocks containing Redstone Torch have been updated
 -   Added new models for the Redstone Torch and updated its texture
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 -   The format of post-processing effect configurations have been updated
 -   The `ChunkOffset` uniform in terrain shaders has been renamed to `ModelOffset`
 
-### Post-process Effect Definitions
+#### Post-process Effect Definitions
 
 -   `intarget` and `auxtargets` have been merged into a single `inputs` list, as specified by the input format below
 -   `outtarget` has been renamed to `output` with the same format
@@ -435,7 +437,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
     -   Target definitions with a specific size remain the same, with the `name` field moved into the map key
         -   For example, `[{"name": "potato", "width": 16, "height": 16}]` becomes `{"potato": {"width": 16, "height": 16}}`
 
-#### Input Format
+##### Input Format
 
 For both render target and texture inputs, the following fields may be specified:
 
@@ -462,26 +464,26 @@ For inputs from a static texture, the following fields may be specified:
 -   `width`: positive integer - width in pixels of the texture
 -   `height`: positive integer - height in pixels of the texture
 
-#### External Targets
+##### External Targets
 
 -   The 'Fabulous' graphics transparency post-processing config no longer specifies the sorted framebuffers as custom targets
     -   These are instead imported in the same way as the `minecraft:main` target
     -   `translucent`, `itemEntity`, `particles`, `weather`, `clouds` are now `minecraft:translucent`, `minecraft:item_entity`, `minecraft:particles`, `minecraft:weather`, and `minecraft:clouds` respectively
 -   The entity outline processing shader similarly imports the `minecraft:entity_outline` target
 
-# Translation removals and renames
+## Translation removals and renames
 
 -   During load some deprecated translation strings will now be removed and/or renamed
 -   Packs that used those translations will need to re-add them manually
 -   The full list is available in `/assets/minecraft/lang/deprecated.json` file inside the game's JAR file
 
-# Emissive layers for block models
+## Emissive layers for block models
 
 -   Added an optional `light_emission` field to block model elements
 -   Integer value between 0 and 15, with 0 being the default value (no light emission)
 -   If specified and non-zero, this will behave as the minimum light level that the element can receive
 
-# Fixed bugs in Snapshot 24w33a
+## Fixed bugs in Snapshot 24w33a
 
 -   [MC-379](https://bugs.mojang.com/browse/MC-379) spawn-animals and spawn-npcs=false removes all villagers and prevents summoning new mobs
 -   [MC-1673](https://bugs.mojang.com/browse/MC-1673) Several mobs can pop off paintings, item frames and leads and destroy minecarts, armor stands and anything in item form even when mobGriefing is turned off

@@ -1,3 +1,5 @@
+# 24w06a
+
 Poof! Here's snapshot 24w06a with the new experimental Wind Charge item and optimizations for Hoppers... among other changes!
 
 We'd love to get your feedback on the new Wind Charge feature over at the official feedback site: [Let's talk about Wind Charges!](https://aka.ms/mcwindchargefeedback)
@@ -6,9 +8,9 @@ We've also made a change so that a hopper will no longer try to pick up item ent
 
 Happy parkouring!
 
-# Experimental Features
+## Experimental Features
 
-## Wind Charge
+### Wind Charge
 
 -   Become the Breeze! Using a Wind Charge will fire off a wind charge projectile similar to the Breeze's
 -   A Wind Charge fired by a player will grant 10% more knockback than a Breeze's, but have a much smaller area of impact
@@ -18,18 +20,18 @@ Happy parkouring!
 -   Wind Charges can be fired from a dispenser
 -   Players that launch themselves with a wind charge only accumulate fall damage below the y-level of where they collided with the wind burst
 
-## Vault
+### Vault
 
 -   Tweaked the texture of Vaults to make them easier to distinguish from Trial Spawners
 
-# Changes
+## Changes
 
 -   Final tweaks to Armadillo
 -   Updates to Tamed Wolves health and damage
 -   Added option to use Japanese variants of CJK characters
 -   Hoppers will no longer try to pick up item entities if there is a full block placed above it
 
-## Armadillo
+### Armadillo
 
 -   Armadillos do not panic when damaged but roll up instead, and hide their head and feet
 -   Armadillos peek out to see if “the coast is clear” before unrolling
@@ -37,14 +39,14 @@ Happy parkouring!
 
 With these changes the Armadillo work is done for now, and we are switching our attention to the Wolf Armor instead.
 
-## Tamed Wolves health and damage
+### Tamed Wolves health and damage
 
 -   Tamed Wolves now have 40 health points (20 hearts) instead of 20 health points (10 hearts)
 -   They no longer take half of the damage from most environmental sources like they used to do
     -   In most cases this change will make no difference given the health boost, but now they can withstand more damage from players and arrows
 -   Feeding a Wolf now heals twice as many health points
 
-## Japanese font variants
+### Japanese font variants
 
 -   New option has been added to select Japanese variants for some CJK characters
 -   Replacement glyphs come from Japanese version of Unifont font
@@ -52,7 +54,7 @@ With these changes the Armadillo work is done for now, and we are switching our 
 -   Default value of this option is based on system locale language setting
 -   "Force Unicode" button has been moved to "Font Settings"
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 31
 -   The Resource Pack version is now 26
@@ -61,7 +63,7 @@ With these changes the Armadillo work is done for now, and we are switching our 
 -   Maximum length of a command in a function (including macro expansions) can no longer exceed 2,000,000 characters
 -   Reduced amount of data sent by the server during login by reusing parts of the vanilla datapack
 
-# Data Pack Version 31
+## Data Pack Version 31
 
 -   Potion effect amplifiers are restricted between 0 and 255 again
     -   The former behavior of effects such as Jump Boost, Levitation, and Mining Fatigue over 127 has been replaced with new attributes
@@ -80,17 +82,17 @@ With these changes the Armadillo work is done for now, and we are switching our 
 -   `ExitPortal` in End Gateways has been renamed to `exit_portal`
 -   `WanderTarget` in Wandering Traders has been renamed to `wander_target`
 
-## Tags
+### Tags
 
-### Block Tags:
+#### Block Tags:
 
 -   Added 'minecraft:blocks\_wind\_charge\_explosions' for blocks not impacted by the explosion when hit by Wind Charge.
 
-# Resource Pack Version 26
+## Resource Pack Version 26
 
 -   Added font variant filters to font providers
 
-## Font variant filters
+### Font variant filters
 
 -   Every glyph provider can now be enabled or disabled based on certain set of variants
 -   Available variants are currently hardcoded and controlled by font options menu
@@ -101,7 +103,7 @@ With these changes the Armadillo work is done for now, and we are switching our 
     -   Keys in that object are variant names (for example `uniform`)
     -   Glyph provider will be included only when value in filter matches actual value of variant in key
 
-# Fixed bugs in 24w06a
+## Fixed bugs in 24w06a
 
 -   [MC-72151](https://bugs.mojang.com/browse/MC-72151) Snow Golem's snowballs damage wolves instead of pushing them
 -   [MC-193202](https://bugs.mojang.com/browse/MC-193202) Tamed wolf health resets when NBT is loaded (e.g. relog)

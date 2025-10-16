@@ -1,25 +1,27 @@
+# 25w33a
+
 In this week's snapshot we've got a nice quality of life improvement for all the chatters out there. Now your unsent messages will be saved as drafts, check out the details below. Items on shelves will now be positioned in the middle of the shelf as default. Before we move our focus onto technical tweaks and bug fixes for this drop, we have one final feature to announce – and it involves a very cute interaction between the copper golem and the iron golem! With this, all features for our third game drop of 2025 are now in testing, and we'll start working our next game drop, which we are excited to tell you about soon!
 
-# New Features
+## New Features
 
 -   Added light flashes to The End dimension as part of the ongoing Vibrant Visuals work
 -   Iron Golems will sometimes plant a decorative flower onto a nearby Copper Golem
 -   Unsent chat messages now get saved as chat drafts
 
-## The End Light Flashes
+### The End Light Flashes
 
 -   The End dimension now has skylight
 -   Normally the skylight does not affect how the dimension looks
 -   From time to time flashes in the sky happen
 -   When they happen skylight intensity increases flooding the dimension with purple light
 
-## Copper Golem
+### Copper Golem
 
 -   Iron Golems will sometimes plant a decorative flower onto a nearby Copper Golem
     -   The flower can be removed with Shears
     -   This flower is dropped when the Copper Golem turns into a Copper Golem Statue Block
 
-## Chat Drafts
+### Chat Drafts
 
 -   Unsent chat messages now get saved as chat drafts if the chat was forcibly closed
     -   This includes it being closed by external sources such as dying or a dialog opening, but not the player intentionally closing their chat
@@ -35,52 +37,52 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 -   Added an option to the Chat Settings menu that enables saving unsent chat messages by default
     -   With this option enabled, unsent messages will _always_ get saved as chat drafts, even if the player intentionally closed their chat
 
-# Changes
+## Changes
 
 -   Players seen in the game world of the current server are now always shown in the Social Interactions screen even if they are offline
 
-## Blocks
+### Blocks
 
-### Shelf
+#### Shelf
 
 -   Items in the Shelf will render in the middle of the Shelf
 -   Updated the sizes of many items in the Shelf to better fit the Shelf
 
 > **Developer's Note:** _Thank you for all your valuable feedback on the shelf! Seeing the many creative ways you've been using this new block, we've decided to revert the change from last week that positioned items at the bottom of the shelf, as we agree that having the items centered provides more creative opportunities when building._
 
-## UI
+### UI
 
-### Chat
+#### Chat
 
 -   It is now possible to start chatting while standing inside a Nether Portal
 -   The chat will now remain open and unchanged if the player was chatting before being transferred to another dimension
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 83.1
 -   The Resource Pack version is now 65.2
 -   Added new display transform "on\_shelf"
     -   Used for displaying items on the Shelf
 
-# Data Pack Version 83.1
+## Data Pack Version 83.1
 
-## Block States
+### Block States
 
 -   Added `align_items_to_bottom` block state property to the Shelf block
     -   If `false` the items on the Shelf will ignore the vertical translation of the `on_shelf` item display transform and will be rendered vertically aligned to the middle of the Shelf
     -   If `true` the items on the Shelf will be rendered upward from the bottom of the Shelf and will respect the vertical translation of the `on_shelf` item display transform
     -   Default is `false` (items are aligned to the middle of the Shelf)
 
-## Attributes
+### Attributes
 
-### `run_command` Click Event
+#### `run_command` Click Event
 
 -   Previously, if the `command` field contained a command that required a signed message (`/say`, `/me`, `/msg`, `/tell`, `/w`, `/teammsg`, `/tm`), it would be silently discarded
 -   Instead, a screen will be shown that lets the user insert the command into the chat window or copy the command to their clipboard if the chat window can't be opened
 
-## Enchantments
+### Enchantments
 
-### `explode` Effects
+#### `explode` Effects
 
 New field: `block_effects` - specifies per-block particles. Each block particle is randomly chosen according to weights. A set limit of block particles is spawned each tick from all explosions that tick.
 
@@ -91,27 +93,27 @@ Format: List of entries:
 -   `scaling`: Optional scaling to apply between explosion center and block position, or `1.0` if not specified
 -   `speed`: Optional scaling to apply to the speed of the particle, or `1.0` if not specified
 
-## Tags
+### Tags
 
-### Item Tags
+#### Item Tags
 
 -   Added `#shearable_from_copper_golem` - all items that can be removed from the Copper Golem's head slot via Shears
 
-# Resource Pack Version 65.2
+## Resource Pack Version 65.2
 
-## Textures
+### Textures
 
 -   Added a new texture:
     -   `environment/end_flash.png`
 
-## Sounds
+### Sounds
 
-### Sound Events
+#### Sound Events
 
 -   Added new sound event:
     -   `weather.end_flash`
 
-# Fixed bugs in 25w33a
+## Fixed bugs in 25w33a
 
 -   [MC-26334](https://bugs.mojang.com/browse/MC-26334) Chat UI is forcibly cleared when killed
 -   [MC-46503](https://bugs.mojang.com/browse/MC-46503) You can retain entities' shaders by running the "/kill" command while in spectator mode

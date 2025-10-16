@@ -1,3 +1,5 @@
+# 23w46a
+
 This snapshot brings about a few redstone-focused changes. Notably, we’re tweaking the tick delay behavior of the crafter and the copper bulb while they’re still in experimental development.
 
 With these changes, we aim to make the crafter more consistent with other blocks that drop or eject items, and the copper bulb with other blocks that react or change state when a connected redstone signal changes. As a result of this, some contraptions built during the last few snapshots may no longer work properly.
@@ -6,23 +8,23 @@ We're really excited about the tinkering opportunities both these new redstone b
 
 Enjoy!
 
-# Changes
+## Changes
 
 -   Updated Crafter textures
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 25
 
-# Data Pack Version 25
+## Data Pack Version 25
 
 -   Added individual display names for scoreboard entries
 
-## Commands
+### Commands
 
-### `scoreboard`
+#### `scoreboard`
 
-#### Display names
+##### Display names
 
 -   Each entry in a scoreboard can now have a custom display name
 -   Those values are kept separate per objective and score holder
@@ -33,7 +35,7 @@ Enjoy!
     -   `scoreboard players display name <targets> <objective> <text component>` - set display name
     -   `scoreboard players display name <targets> <objective>` - clear display name
 
-#### Display name auto-update
+##### Display name auto-update
 
 -   To make display name management easier, objectives can also be configured to auto-update display names on every score update
 -   This option is disabled by default
@@ -41,7 +43,7 @@ Enjoy!
 -   Command to control auto-update for objective:
     -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
 
-#### Number formatting
+##### Number formatting
 
 -   Scores in numeric form can now be formatted
 -   Formats can be set for both objectives and individual scores
@@ -58,7 +60,7 @@ Formats:
 -   `fixed <text component>` - score will be replaced with text
 -   `blank` - score will not be displayed
 
-# Fixed bugs in Snapshot 23w46a
+## Fixed bugs in Snapshot 23w46a
 
 -   [MC-259321](https://bugs.mojang.com/browse/MC-259321) Spawner counts related entities against MaxNearbyEntities
 -   [MC-265662](https://bugs.mojang.com/browse/MC-265662) "Cannot kick server owner in LAN game" message when trying to kick yourself from non-LAN singleplayer world

@@ -1,11 +1,13 @@
+# 21w18a
+
 Hey-hoo! Will you look at that! It's Wednesday once again, which means we get to share updates about all the Minecraft bits and bobs. This week, we're distributing an ore distribution Snapshot for all you lovely Snapshot connoisseurs to feast upon. Enjoy!
 
-# Changes in 21w18a
+## Changes in 21w18a
 
 -   Infested Blocks are no longer instantly destroyed, and instead have half the destroy time of their non-infested counterpart.
 -   Screaming goats will use their ram attack more often than other goats will
 
-# Changes to the Caves & Cliffs Preview
+## Changes to the Caves & Cliffs Preview
 
 Download the [updated datapack](https://launcher.mojang.com/v1/objects/6b510a715701aec5e601c7966d87922a300e0c73/CavesAndCliffsPreview.zip).
 
@@ -21,7 +23,7 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6b510a715
 -   Extended the vertical range of the smaller blobs of iron ore, to make it possible to find iron in caves near the surface.
 -   Slightly reduced the amount of normal-sized iron blobs, to compensate for large ore veins and the increased range of smaller blobs.
 
-# Bugs fixed in 21w18a
+## Bugs fixed in 21w18a
 
 -   [MC-3587](https://bugs.mojang.com/browse/MC-3587) Last use of an anvil causes player to drop their item
 -   [MC-87935](https://bugs.mojang.com/browse/MC-87935) When closing the inventory while holding an item with the cursor in Creative mode, the item disappears

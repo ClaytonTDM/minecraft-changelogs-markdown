@@ -1,12 +1,14 @@
+# 25w06a
+
 This week we have been contemplating existential questions like "What came first; the cold chicken or the blue egg?". It's time for the cold chicken and the warm chicken to make their way into snapshot 25w06a together with their respective colorful egg. In addition, pink cactus flowers and dry grass will now decorate deserts and badlands.
 
-# New Features
+## New Features
 
 -   Added Warm and Cold Chicken variants
 -   Added Short Dry Grass and Tall Dry Grass
 -   Added Cactus Flower block which can grow on Cactus blocks
 
-## Farm Animal variants
+### Farm Animal variants
 
 -   Warm and cold variants have been added for Chicken
 -   Existing Chicken variant has been renamed to temperate
@@ -17,7 +19,7 @@ This week we have been contemplating existential questions like "What came first
     -   Brown Egg - The Egg that is laid by and can hatch warm Chicken variant
 -   Already existing Egg is laid by and can hatch temperate Chicken variant
 
-## Short and Tall Dry Grass
+### Short and Tall Dry Grass
 
 -   Added two new types of grass: Short Dry Grass and Tall Dry Grass
 -   Both are one block high, which makes Tall Dry Grass differ from Tall Grass which is two blocks high
@@ -30,7 +32,7 @@ This week we have been contemplating existential questions like "What came first
 -   Sheep can eat both to regrow its wool
 -   Both can be used as fuel for smelting
 
-## Cactus Flower
+### Cactus Flower
 
 -   Cactus Flower is a new type of flower which has a chance of generating on cactuses in Deserts and Badlands
 -   Cactus Flower can be placed on Cactus blocks or any block which has center support at the top of the block
@@ -41,7 +43,7 @@ This week we have been contemplating existential questions like "What came first
 -   Cactus Flowers can be used in the Composter
 -   A Cactus Flower can be used to craft 1 Pink Dye
 
-# Changes
+## Changes
 
 -   Any block in the simulation distance of a player or loaded by another source of chunk loading (such as Ender Pearls) may now receive random ticks, instead of just 8 chunks around players
     -   For example: if a chunk is loaded by an Ender Pearl or is in the spawn chunks, crops are able to grow, Ice can melt, Snow can fall, and a Cauldron can be filled by rain
@@ -49,43 +51,43 @@ This week we have been contemplating existential questions like "What came first
 -   Fire will no longer burn or spread if no player is within 8 chunks
 -   Tooltips for Fireworks and Crossbows now show a compact form of multiple repeated stars or projectiles that are identical
 
-## Firefly Bush
+### Firefly Bush
 
 Conditions for The Firefly Bush playing ambient sounds have changed. It now plays when all of the following conditions are met:
 
 -   it's night
 -   Firefly Bush not blocked from above by any collidable block (except Leaves)
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 66
 -   The Resource Pack version is now 51
 
-# Data Pack Version 66
+## Data Pack Version 66
 
 -   Added new `allowFireTicksAwayFromPlayer` Game Rule
 
-## Game Rule
+### Game Rule
 
-### `allowFireTicksAwayFromPlayer`
+#### `allowFireTicksAwayFromPlayer`
 
 -   When true, Fire and Lava ticks can occur ouside of an 8 chunk range of a player
 -   Default value: `false`
 
-## Block Tags
+### Block Tags
 
 -   `#dead_bush_may_place_on` has been renamed to `#dry_vegetation_may_place_on`
 -   Added `#edible_for_sheep` - blocks that can be eaten by Sheep to regrow their Wool
 
-## Item Tags
+### Item Tags
 
 -   Added `#eggs` - all variants of the Egg item
 
-## Entity Data
+### Entity Data
 
 -   The armor and off-hand equipment of Players is now also stored in the `equipment` field (although items written into the Inventory using armor and off-hand slot numbers still work)
 
-## Chicken Variants
+### Chicken Variants
 
 -   Chicken variants can be data-driven by adding entries to `data/<namespace>/chicken_variant/<id>.json`
 -   This feature is experimental
@@ -94,14 +96,14 @@ Conditions for The Firefly Bush playing ambient sounds have changed. It now play
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-# Resource Pack Version 51
+## Resource Pack Version 51
 
 -   New and updated Chicken textures
 -   Added textures for new Blue Egg and Brown Egg items
 -   Added textures for new Cactus Flower block
 -   Added textures for new Short Dry Grass and Tall Dry Grass blocks
 
-## New and updated Chicken textures
+### New and updated Chicken textures
 
 -   Added new textures for Chicken variants:
     -   `cold_chicken`
@@ -110,7 +112,7 @@ Conditions for The Firefly Bush playing ambient sounds have changed. It now play
 -   The `temperate_chicken` texture has been moved to a new folder:
     -   `entity/chicken.png` -> `entity/chicken/temperate_chicken.png`
 
-# Fixed bugs in 25w06a
+## Fixed bugs in 25w06a
 
 -   [MC-157196](https://bugs.mojang.com/browse/MC-157196) Tamed animals cannot be added to a team
 -   [MC-186241](https://bugs.mojang.com/browse/MC-186241) World border faces are rendered incorrectly with "Fabulous!" graphics

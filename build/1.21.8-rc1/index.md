@@ -1,10 +1,12 @@
+# 1.21.8-rc1
+
 Hotfix coming in ho-... very cold? Today we're releasing 1.21.8 Release Candidate 1, addressing various graphical corruption and freeze issues on certain graphics devices.
 
 As always, if you encounter any graphical issues with this Release Candidate, reports on our [Bug Tracker](https://bugs.mojang.com/projects/MC/summary) are very much appreciated!
 
 Happy Crafting!
 
-# Fixed bugs in 1.21.8 Release Candidate 1
+## Fixed bugs in 1.21.8 Release Candidate 1
 
 -   [MC-295947](https://bugs.mojang.com/browse/MC-295947) The game screen freezes after a while on some Intel integrated graphics
 -   [MC-296107](https://bugs.mojang.com/browse/MC-296107) Entities and block entities become visually corrupted after a while on some Intel integrated graphics

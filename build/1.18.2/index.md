@@ -1,10 +1,12 @@
+# 1.18.2
+
 We're now releasing 1.18.2 for Minecraft: Java Edition. This release adds universal tags and the placefeature command. It also introduces the possibility for experimental data packs to customize cave generation and to add new custom structures to worlds.
 
 Additionally, this version contains compliance updates for South Korean players.
 
 Enjoy!
 
-# Changes in 1.18.2
+## Changes in 1.18.2
 
 -   Users running Minecraft in a 32-bit environment will receive a warning in the main menu about the upcoming end of 32-bit environment support
 -   If you’re playing in South Korea, we added gameplay timers and notices in compliance with gaming laws to help remind players to take occasional breaks from gameplay
@@ -13,7 +15,7 @@ Enjoy!
 -   Dolphins will now more accurately pick the closest structure regardless of type
 -   Ender chests are no longer gift wrapped around Christmas
 
-# Technical Changes in 1.18.2
+## Technical Changes in 1.18.2
 
 -   Added command: `placefeature`
 -   The `locate` command now uses a namespaced id parameter
@@ -24,20 +26,20 @@ Enjoy!
 -   Any type present in registries (blocks, items, biomes, etc.) can now have tags
 -   The datapack version is now 9
 
-## `placefeature` Command
+### `placefeature` Command
 
 New command that places a configured feature at a given location. Syntax: `placefeature <id> [pos]` Parameters:
 
 -   `id`: The namespaced id of a configured feature to place
 -   `pos`: The position to use as the origin for the feature placement (if omitted, `~ ~ ~` is used)
 
-## Configurable caves
+### Configurable caves
 
 -   A new registry was added for Density functions (caves are created by combining those together)
 -   Noise settings got a new field `noise_router` (and lost a couple of flags), see `worldgen/noise_settings` folder in the worldgen report
 -   Noise router wires data-driven parts of the cave generation with the rest of the code
 
-## Configured Structures and Structure Sets
+### Configured Structures and Structure Sets
 
 The game now generates and stores data-driven configured structures.
 
@@ -46,7 +48,7 @@ The game now generates and stores data-driven configured structures.
 -   The `exploration_map` loot table function `destination` field is now a configured feature tag id
 -   The `exploration_map` loot table function no longer automatically sets the display name of the map
 
-## Universal tags
+### Universal tags
 
 -   Tags can now be defined for any registry (blocks, items, biomes, etc. - see `registries.json` in report)
 -   New tags are stored in datapacks under `tags` directory (same as old ones)
@@ -69,6 +71,6 @@ The game now generates and stores data-driven configured structures.
     -   `feature.root_system` configuration: `root_replaceable`
     -   `structure_processor.protected_blocks`: `value`
 
-# Fixed Bugs in 1.18.2
+## Fixed Bugs in 1.18.2
 
 In addition to crashes and other stability improvements, around 100 player-reported bugs were fixed in this release. View the [list on the issue tracker](https://bugs.mojang.com/issues/?filter=26771).

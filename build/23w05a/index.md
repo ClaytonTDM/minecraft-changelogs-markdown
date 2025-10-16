@@ -1,19 +1,21 @@
+# 23w05a
+
 In this snapshot we've tweaked the armor trim feature and redefined the Create New World user experience flow.
 
 Happy world creating!
 
-# Changes
+## Changes
 
 -   Updated the Create New World screen
 -   Interacting with armor or elytra items in-hand will now swap them with equipped gear
 -   The enchantment glint has been further tweaked to be slower and less visible, but also have more contrast in some intervals
 
-## Accessibility
+### Accessibility
 
 -   Changed how tooltips in the menu UI are positioned so buttons are still readable
 -   Added two new options in the Accessibility menu for adjusting the speed and transparency of enchantment glints
 
-## Updated Create New World Screen
+### Updated Create New World Screen
 
 -   The screen is now organized into three tabs
     -   The Game-Tab allows to set the world name, Gamemode, Difficultly and whether to allow cheats
@@ -21,9 +23,9 @@ Happy world creating!
     -   The More-Tab provides access to the Game Rules and DataPack Selection Screen
 -   Removed the Import Settings button and the corresponding Export Settings button in the Edit World Screen
 
-# Technical Changes
+## Technical Changes
 
-## Trim Patterns & Materials
+### Trim Patterns & Materials
 
 -   The following data is now also defined by a trim material:
     -   `override_armor_materials` which is an optional map of armor material to overriden color palette
@@ -32,14 +34,14 @@ Happy world creating!
 -   The following data is no longer defined by a trim material:
     -   `incompatible_armor_material`
 
-## Commands
+### Commands
 
-### `effect`
+#### `effect`
 
 -   `infinite` is now a valid option for effect durations
     -   Infinite effect durations show up as "∞" in the player inventory view
 
-# Experimental Features
+## Experimental Features
 
 -   Armor trims can now be applied to leather armor
 -   Armor can now have trims of the same material it is made out of
@@ -47,7 +49,7 @@ Happy world creating!
 -   The texture of the Dune armor trim has been tweaked so that the symbol on the chestplate is moved up a few pixels
 -   Loot tables for smithing templates have been adjusted
 
-## Loot tables for smithing templates
+### Loot tables for smithing templates
 
 -   The following common armor trims now always generate 2 templates in a chest when found:
     -   Dune
@@ -64,7 +66,7 @@ Happy world creating!
 -   Across the board, smithing templates have been made slightly more common
     -   Due to the method of crafting copies of templates, we want the process of discovering another template in a structure to feel like the player has just saved 7 diamonds. If the templates are too rare, this situation does not happen as much, meaning players will not be encouraged to explore more structures
 
-# Fixed bugs in Snapshot 23w05a
+## Fixed bugs in Snapshot 23w05a
 
 -   [MC-127749](https://bugs.mojang.com/browse/MC-127749) Cape is jittering; movement way sharper than in snapshot 18w03b
 -   [MC-147711](https://bugs.mojang.com/browse/MC-147711) Drowned no longer have a different swimming animation

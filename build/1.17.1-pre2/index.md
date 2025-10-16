@@ -1,14 +1,16 @@
+# 1.17.1-pre2
+
 The second pre-release for 1.17.1 is now available in your launcher. This pre-release fixes a few more bugs.
 
-# The Caves & Cliffs Preview
+## The Caves & Cliffs Preview
 
 Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
 
-# Technical Changes in 1.17.1 Pre-release 1
+## Technical Changes in 1.17.1 Pre-release 1
 
 -   Deaths of named mobs are now logged
 
-# Fixed Bugs in 1.17.1 Pre-Release 2
+## Fixed Bugs in 1.17.1 Pre-Release 2
 
 -   [MC-219290](https://bugs.mojang.com/browse/MC-219290) Calcite is too quiet compared to other blocks
 -   [MC-221656](https://bugs.mojang.com/browse/MC-221656) Creative mode obtained Bucket of Axolotl/Tropical Fish only spawns one kind axolotl/tropical fish

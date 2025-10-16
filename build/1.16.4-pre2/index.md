@@ -1,22 +1,24 @@
+# 1.16.4-pre2
+
 Time for another pre-release! This time around we've fixed some issues with the new social interactions screen and we've also fixed some crashes.
 
 In case you haven't heard, yesterday we announced that Mojang accounts will be migrating into Microsoft accounts. With this pre-release, we are preparing for that by having the game understand the settings and block-list of Microsoft accounts. You can read more about that over [here](https://www.minecraft.net/article/java-edition-moving-house), and you can find answers to questions you might have in the [FAQ](https://help.minecraft.net/hc/articles/360050865492). The FAQ will be continuously updated.
 
 We aim to release 1.16.4 sometime during next week.
 
-# Changes in 1.16.4 Pre-release 2
+## Changes in 1.16.4 Pre-release 2
 
 -   Players blocked in your Microsoft account are now also blocked in the game
 -   A button to open a link to the Accessibility Guide can now be found in the Accessibility Options screen
 
-## Social Interactions
+### Social Interactions
 
 -   The status of a player is now listed below their name on the Social Interactions screen
 -   A new tab is available to filter by Blocked players in the Social Interactions screen
 -   Chat from blocked players is always hidden
 -   Realms invites from blocked players are hidden
 
-# Fixed bugs in 1.16.4 Pre-release 2
+## Fixed bugs in 1.16.4 Pre-release 2
 
 -   [MC-202150](https://bugs.mojang.com/browse/MC-202150) Slider bar on social menu appears broken
 -   [MC-202147](https://bugs.mojang.com/browse/MC-202147) Cursor in Social Interactions & Recipe Book & Anvil menu doesn’t blink

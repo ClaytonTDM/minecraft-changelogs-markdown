@@ -1,8 +1,10 @@
+# 23w43a
+
 In this week's snapshot we're extending the Update 1.21 experiment with ALL the new blocks! And how about a bat makeover just in time for spooky fall? Happy crafting!
 
-# Experimental Features
+## Experimental Features
 
-## Copper Family
+### Copper Family
 
 -   The Copper family of blocks has been expanded, including:
     -   Chiseled Copper
@@ -12,12 +14,12 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Copper Trapdoor
     -   Oxidized and waxed variants of all of the above
 
-### Chiseled Copper
+#### Chiseled Copper
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-### Copper Grate
+#### Copper Grate
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -28,7 +30,7 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Cannot conduct redstone
     -   Hostile mobs cannot naturally spawn on them
 
-### Copper Bulb
+#### Copper Bulb
 
 -   A light-emitting block that can toggle its light emission through redstone pulses
 -   Oxidizes like other Copper blocks, and emits less light the more oxidized they are
@@ -47,13 +49,13 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-### Copper Doors and Trapdoors
+#### Copper Doors and Trapdoors
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Works like wooden doors in that they can be opened and closed with interaction as well as redstone
 -   Crafted with Copper Blocks of a shared oxidation level
 
-## Tuff Family
+### Tuff Family
 
 -   Tuff has been expanded to have its own family of blocks, including:
     -   Stair, Slab, Wall and Chiseled variants
@@ -61,29 +63,29 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Polished Tuff with Stair, Slab and Wall variants
 -   All Tuff variants can be crafted in the Stonecutter
 
-# Changes
+## Changes
 
 -   The Bat now has a new look
 -   Thrown Ender Pearls produce a teleportation sound on impact
 -   Small tweaks to the Telemetry Data Collection screen
 
-## Bat
+### Bat
 
 -   The Bat has an updated model, animations and texture
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 22
 -   The Resource Pack version is now 20
 
-# Data Pack Version 22
+## Data Pack Version 22
 
 -   Added `tick` command
 -   Added two new input fields for Selection Priority and Placement Priority in the Jigsaw block edit screen
 -   Added `item` to `minecraft:arrow` and `minecraft:spectral_arrow`, this is the item that will be picked up
 -   Renamed `Trident` to `item` in `minecraft:trident`
 
-## `tick` command
+### `tick` command
 
 Added a new `tick` command. This is an adminstative and debugging command that allows to control the ticking flow and measure the performance of the game. The command requires elevated permissions (admins and above) and so it is not by default available in command blocks and datapacks.
 
@@ -105,7 +107,7 @@ Syntax:
 
 `tick sprint stop` - stops the current tick sprint, and resumes the previous ticking target.
 
-## Jigsaw Selection & Placement Priority
+### Jigsaw Selection & Placement Priority
 
 -   Selection Priority
     -   When the parent piece is being processed for connections, this controls the order in which this Jigsaw block attempts to connect to its target piece
@@ -116,7 +118,7 @@ Syntax:
 -   This functionality has been added to support the ability for Jigsaw structures to generate branches in a depth-first order, as well as give finer control over ordering of connections
 -   All existing Jigsaw blocks will default their Selection and Placement Priority to 0, resulting in the same behaviour as before these two configurable values were introduced
 
-# Resource Pack Version 20
+## Resource Pack Version 20
 
 -   `bat.png` has been updated for the new Bat model
 -   Added block models, items models and block state definitions for the following blocks:
@@ -149,7 +151,7 @@ Syntax:
     -   `tuff_bricks`
     -   `chiseled_tuff_bricks`
 
-# Fixed bugs in Snapshot 23w43a
+## Fixed bugs in Snapshot 23w43a
 
 -   [MC-1981](https://bugs.mojang.com/browse/MC-1981) All arrow types lose their name/NBT data when shot and picked up
 -   [MC-257786](https://bugs.mojang.com/browse/MC-257786) The game takes a long time to process players leaving realms groups or accepting or declining realms invitations

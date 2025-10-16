@@ -1,8 +1,10 @@
+# 22w43a
+
 Did you know that Camels walk by lifting both legs on one side at the same time? Yes, in snapshot 22w43a, Minecraft knows too! This snapshot also contains another round of tweaks to the Creative Inventory.
 
 Happy Mining!
 
-# Changes in 22w43a
+## Changes in 22w43a
 
 -   Changed the colours of the Camel Spawn Egg
 -   Tweaked Camel walk cycle animation
@@ -11,11 +13,11 @@ Happy Mining!
 -   More Changes to the Creative Inventory
 -   Added Draft Player Reports
 
-## More Changes to the Creative Inventory
+### More Changes to the Creative Inventory
 
 A lot of feedback has come pouring in as a result of the creative inventory ordering changes.
 
-### Changes
+#### Changes
 
 -   Change the icons of creative tabs for better color coding as well as show most iconic visuals
 -   Nature Blocks tab has been renamed to Natural Blocks
@@ -33,7 +35,7 @@ A lot of feedback has come pouring in as a result of the creative inventory orde
 -   Basalt blocks are now found after Nether Brick blocks in the Building Blocks tab, next to Blackstone
 -   Generally reordered the plants of the Natural Blocks tab
 
-### Additions
+#### Additions
 
 -   Added to Redstone Blocks tab
     -   Boat with Chests
@@ -61,7 +63,7 @@ A lot of feedback has come pouring in as a result of the creative inventory orde
 -   Added to Tools & Utilities tab
     -   Bone Meal
 
-## Added Draft Player Reports
+### Added Draft Player Reports
 
 Player Reports can now be kept temporarily as a draft while connected to a server.
 
@@ -70,17 +72,17 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   Draft reports are kept until the player leaves the current server or world
     -   When leaving, the player will be prompted to either discard or finish and send the report
 
-# Technical Changes in 22w43a
+## Technical Changes in 22w43a
 
 -   Migrated linear algebra types to Java OpenGL Math Library (JOML)
 
-## Network Protocol
+### Network Protocol
 
 -   Servers can now lazily distribute players' profile public keys along with their first chat packet
 -   Profile public keys will now be refreshed without reconnecting
 -   Clients now reset their chat session on receiving a login packet
 
-# Fixed Bugs in 22w43a
+## Fixed Bugs in 22w43a
 
 -   [MC-84873](https://bugs.mojang.com/browse/MC-84873) DeathTime values 20+ cause corrupted mobs
 -   [MC-92017](https://bugs.mojang.com/browse/MC-92017) Shield damage direction is incorrect

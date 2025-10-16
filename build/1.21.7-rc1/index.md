@@ -1,12 +1,14 @@
+# 1.21.7-rc1
+
 Today we are shipping Release Candidate 1 for 1.21.7, a hotfix release that takes care of some critical issues that managed to sneak their way into the Chase the Skies drop (1.21.6). The hotfix also includes a new music disc and a painting of the good boy Dennis. If no other critical issues are found, this will be the version for 1.21.7 that can be expected to be released soon. Happy mining!
 
-# New Features
+## New Features
 
 -   Added a painting of a good boy by artist Sarah Boeving
 -   Added music disc "Lava Chicken" by Hyper Potions
     -   Drops when defeating a Baby Zombie riding a Chicken (Chicken Jockey)
 
-# Fixed bugs in 1.21.7 Release Candidate 1
+## Fixed bugs in 1.21.7 Release Candidate 1
 
 -   [MC-297748](https://bugs.mojang.com/browse/MC-297748) The moon is rendered incorrectly on some Qualcomm graphics
 -   [MC-298448](https://bugs.mojang.com/browse/MC-298448) Filled maps are rendered incorrectly on some Qualcomm graphics

@@ -1,3 +1,5 @@
+# 24w13a
+
 This fine Wednesday brings 24w13a, a snapshot containing changes to the Mace, Trial Chambers, and introduces the new Ominous Trials!
 
 You might just be inclined to try out the ominous new features of this snapshot. ...or else? Did I do that right?
@@ -6,7 +8,7 @@ Happy mining!
 
 Note: some of the features below will only work in freshly generated Trial Chambers.
 
-# Experimental Features
+## Experimental Features
 
 -   Changes to the Mace
 -   Tweaks to the Breeze and Wind Charges
@@ -17,7 +19,7 @@ Note: some of the features below will only work in freshly generated Trial Chamb
 -   Added Ominous Vault
 -   Added Ominous Trial Key
 
-## Mace
+### Mace
 
 -   Added a new explosive particle effect when executing a smash attack with the Mace to really show the player's power
 -   Increased the power and range of the knockback effect from a smash attack
@@ -48,12 +50,12 @@ Note: some of the features below will only work in freshly generated Trial Chamb
         -   Maces enchanted with Wind Burst will emit a Wind Burst upon hitting an enemy, launching the attacker upward and enabling the linking of smash attacks one after the other
         -   Each level will bounce the attacker higher up in the air
 
-## Breeze & Wind Charges
+### Breeze & Wind Charges
 
 -   The Breeze now avoids jumping into dangerous blocks or air
 -   Wind Charges no longer collide with End Crystals
 
-## Ominous Events
+### Ominous Events
 
 -   Bad Omen has been expanded to give access to an optional experience in Trial Chambers
 -   These optional experiences accessed through Bad Omen are now known as Ominous Events
@@ -68,7 +70,7 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   It is no longer given to players that defeat a Raid Captain outside a Raid
         -   Instead, players can gain access to Bad Omen by consuming a new Ominous Bottle
 
-### Ominous Bottle
+#### Ominous Bottle
 
 -   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
     -   Comes in 5 variations, one for each Bad Omen level
@@ -76,19 +78,19 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   Can be stacked to 64
 -   Can be found uncommonly in any Vaults that are unlocked with Trial Keys, and is dropped by Raid Captains when defeated outside a Raid
 
-## Ominous Trials
+### Ominous Trials
 
 -   A new Ominous Event that can be accessed by exploring a Trial Chamber with Bad Omen
 -   This event will have players facing more powerful Trial Spawners if they dare!
 
-### Trial Omen
+#### Trial Omen
 
 -   A variant that Bad Omen can transform into
     -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
     -   The Trial Omen has a duration of 15 minutes multiplied by the transformed Bad Omen's level
 -   Players that have Trial Omen are surrounded by ominous particles
 
-### Ominous Trial Spawner
+#### Ominous Trial Spawner
 
 -   A more powerful active phase of the Trial Spawner with unique challenges and rewards
     -   Provides a more challenging experience that advanced players can opt into for better rewards
@@ -109,18 +111,18 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   It will stay Ominous until it has been defeated and its cooldown has finished
 -   When defeated, it will eject a different set of loot to normal Trial Spawners
 
-### Ominous Trial Key
+#### Ominous Trial Key
 
 -   A new variant of the Trial Key which can only be obtained by defeating an Ominous Trial Spawner
 -   They can be used to unlock Ominous Vaults
 
-### Ominous Vault
+#### Ominous Vault
 
 -   A variant of Vaults that have a different texture and emit soul flames instead of normal flames
 -   These can be found throughout the Trial Chambers in harder to find places and require an Ominous Trial Key to unlock
     -   These Vaults hold a more valuable set of rewards than the standard Vaults unlocked by Trial Keys
 
-## Mob Effects
+### Mob Effects
 
 -   The following effects have been added:
     -   Wind Charged
@@ -141,7 +143,7 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   Slimes are immune to Oozing
     -   Silverfish are immune to Infested
 
-## Trial Chambers Loot
+### Trial Chambers Loot
 
 -   The loot found within Trial Chamber Vaults has been adjusted
 -   Standard Vaults will give slightly less items of high quality, but also include the following changes:
@@ -159,13 +161,13 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   It now has a focus on providing higher quality food more often to make replenishing between fights more safe
 -   Ominous Trial Keys have a 30% chance of ejecting from a defeated Ominous Trial Spawner, replacing the usual 50% chance to eject Trial Keys
 
-## Trial Spawner
+### Trial Spawner
 
 -   All spawners now increase the amount of mobs present at once by 0.5 for each additional player, down from 2
 -   Baby Zombie spawners now only have 2 mobs present at once for its baseline, down from 3 mobs
 -   Can now only activate when a player is in line of sight
 
-## Trial Chambers
+### Trial Chambers
 
 -   Remade `chamber_5` with variations, and renamed it to `eruption`
 -   Reduced amount of Trial Spawners in corridors
@@ -179,30 +181,30 @@ Known issues:
 
 -   Corner quadrants in slanted may still fail to generate correctly
 
-# Changes in 24w13a
+## Changes in 24w13a
 
 -   Added unique sounds for Cobwebs
 
-# Technical Changes in 24w13a
+## Technical Changes in 24w13a
 
 -   The Data Pack version is now 37
 -   The Resource Pack version is now 31
 -   Client chat state is now preserved by default when entering configuration phase
 -   Changes to chat network protocol
 
-## Chat
+### Chat
 
 -   Client chat state (on-screen messages and chat input history) is now preserved by client when entering and exiting configuration phase
 -   Message signature chain handling remains unchanged - going into configuration phase starts new session
 -   If client has message delay configured, pending messages will be delivered immediately before leaving world
 -   Server can clear chat state by sending `reset_chat` packet in configuration phase
 
-## Network Protocol
+### Network Protocol
 
 -   The `minecraft:chat_command_signed` packet has been split from `minecraft:chat_command`
     -   Commands that do not accept any signed arguments will use the unsigned packet, and will not pass any 'last seen' chat updates
 
-# Data Pack Version 37
+## Data Pack Version 37
 
 -   Added new loot table type `minecraft:equipment`
     -   Has required parameters of `this_entity` and `origin`
@@ -222,7 +224,7 @@ Known issues:
     -   `immune_to_infested` For entities that cannot receive the Infested mob effect
 -   Added `raider` sub entity predicate
 
-## Block entities
+### Block entities
 
 Non-default components on item stacks containing block items are now stored on block entities when placed
 
@@ -233,9 +235,9 @@ Non-default components on item stacks containing block items are now stored on b
     -   Some components (like `custom_name`) are still handled by legacy serialization, which means they might not be present in there
     -   Contains map of component id to component value
 
-## New Item Stack Components
+### New Item Stack Components
 
-### `minecraft:item_name`
+#### `minecraft:item_name`
 
 -   When present, replaces default item name with contained chat component
 -   Differences from `custom_name`:
@@ -243,15 +245,15 @@ Non-default components on item stacks containing block items are now stored on b
     -   `item_name` is not styled with italics when displayed to player
     -   `item_name` does not show labels where applicable (for example: banner markers, names in item frames)
 
-### `minecraft:ominous_bottle_amplifier`
+#### `minecraft:ominous_bottle_amplifier`
 
 -   Controls the amplifier amount for an Ominous Bottle's bad omen effect
 -   Format: integer between 0 and 4
     -   e.g. `ominous_bottle_amplifier=3`
 
-## Loot Functions
+### Loot Functions
 
-### `copy_components`
+#### `copy_components`
 
 Removed field `components` and replaced it with:
 
@@ -261,7 +263,7 @@ Removed field `components` and replaced it with:
     -   if omitted, defaults to empty
 -   Only components that are included (explicitly or implicitly) but not excluded will be copied
 
-### `set_name`
+#### `set_name`
 
 Added optional field `target` to specify which name should be set
 
@@ -269,23 +271,23 @@ Added optional field `target` to specify which name should be set
     -   `custom_name` - sets `custom_name` component (default)
     -   `item_name` - sets `item_name` component
 
-### Added `set_ominous_bottle_amplifier`
+#### Added `set_ominous_bottle_amplifier`
 
 Sets the `ominous_bottle_amplifier` component on the target item according to a number provider.
 
 -   `conditions`: list of conditions to filter this function
 -   `amplifier`: a number provider used to generate the `ominous_bottle_amplifier` component
 
-### Entity sub-predicates
+#### Entity sub-predicates
 
-#### `raider`
+##### `raider`
 
 New `raider` sub-predicate has been added to match raiders Fields:
 
 -   `has_raid` - Match whether the raider is in an active raid
 -   `is_captain` - Match whether the raider is a captain
 
-# Resource Pack Version 31
+## Resource Pack Version 31
 
 -   Added the following particle types:
     -   `infested`
@@ -325,7 +327,7 @@ New `raider` sub-predicate has been added to match raiders Fields:
     -   `bad_omen_121`
 -   Added new models for Ominous state of Vault block
 
-# Fixed bugs in 24w13a
+## Fixed bugs in 24w13a
 
 -   [MC-123804](https://bugs.mojang.com/browse/MC-123804) Explorer map and Ominous banner names appear in item frames, draw in italics, and can be removed with an anvil
 -   [MC-148057](https://bugs.mojang.com/browse/MC-148057) Ominous banners generated in outposts show the pattern list

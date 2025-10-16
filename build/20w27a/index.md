@@ -1,33 +1,35 @@
+# 20w27a
+
 It's time for another snapshot cycle as we make our way towards 1.16.2! This snapshot introduces the Piglin Brutes, and you might have heard about them in a [Bedrock beta](https://feedback.minecraft.net/hc/en-us/articles/360045006632-Minecraft-Beta-1-16-20-50-Xbox-One-Windows-10-Android-) already.
 
 The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these snapshots will be focused on fixing bugs.
 
-# New Features in 20w27a
+## New Features in 20w27a
 
 -   Added Piglin Brutes!
 
-## Piglin Brute
+### Piglin Brute
 
 -   Piglin Brutes are stronger versions of Piglins that live in bastions and protect the treasures there
 -   Unlike their cowardly and greedy counterparts, the Piglin Brutes cannot be distracted by gold and aren't afraid of anything
 -   Piglin Brutes attack players on sight, no matter how the player is dressed
 -   Piglin Brutes wield axes and don't need any armor, because they're just that tough
 
-# Changes in 20w27a
+## Changes in 20w27a
 
 -   Zoglins can now be leashed
 -   Crimson and warped fungus can now be placed on mycelium
 
-# Technical Changes in 20w27a
+## Technical Changes in 20w27a
 
 -   Small improvements to data and resource pack selection screens
 
-## Pack selection screens
+### Pack selection screens
 
 -   While screen is open, it will automatically update when pack directory contents change
 -   Both pack selection screen will now display contents of `pack.png` as pack icon
 
-# Fixed bugs in 20w27a
+## Fixed bugs in 20w27a
 
 -   [MC-1058](https://bugs.mojang.com/browse/MC-1058) A dragon head is invisible if the entity wearing it is not in view
 -   [MC-2404](https://bugs.mojang.com/browse/MC-2404) Stepping down while sneaking allows falling off of blocks
@@ -54,7 +56,7 @@ The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these
 -   [MC-191915](https://bugs.mojang.com/browse/MC-191915) While in a boat the elytra does not show as enchanted
 -   [MC-192894](https://bugs.mojang.com/browse/MC-192894) Transparency layers lose their auxiliary depth buffer ID when resized
 
-# Get the Snapshot
+## Get the Snapshot
 
 Snapshots are available for Minecraft Java Edition. To install the snapshot, open up the Minecraft Launcher and enable snapshots in the "Installations" tab.
 

@@ -1,6 +1,8 @@
+# 1.18-pre7
+
 We're now releasing the seventh pre-release for Minecraft 1.18, fixing more critical issues and tweaking cave biome features a bit further.
 
-# Changes in 1.18 Pre-release 7
+## Changes in 1.18 Pre-release 7
 
 ​
 
@@ -8,7 +10,7 @@ We're now releasing the seventh pre-release for Minecraft 1.18, fixing more crit
 
 ​
 
-# Fixed bugs in 1.18 Pre-release 7
+## Fixed bugs in 1.18 Pre-release 7
 
 ​
 

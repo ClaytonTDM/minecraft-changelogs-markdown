@@ -1,8 +1,10 @@
+# 1.18.2-pre3
+
 The third pre-release for 1.18.2 is now out, fixing more bugs!
 
 Happy Crafting!
 
-# Fixed bugs in 1.18.2 Pre-release 3
+## Fixed bugs in 1.18.2 Pre-release 3
 
 -   [MC-218739](https://bugs.mojang.com/browse/MC-218739) Glow berries and glow lichen generation does not cause light updates across chunk borders
 -   [MC-244772](https://bugs.mojang.com/browse/MC-244772) Can't double click to join a realm

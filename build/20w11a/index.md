@@ -1,6 +1,8 @@
+# 20w11a
+
 In this snapshot you can be on your merry way across the beautiful Soulsand Valleys with your freshly enchanted boots. It's a bit scary to be fair, so these boots will help you out with that bit...
 
-# Before we dive into this snapshot, a word about Redstone
+## Before we dive into this snapshot, a word about Redstone
 
 Redstone is one of the coolest things in Minecraft and many of you are members of communities that focus on building mind-blowing redstone contraptions, farms, computing machines and 256x256 piston doors.
 
@@ -14,13 +16,13 @@ Our goal is to bring all redstone components up to a level of quality that we ar
 
 Any changes we make will be communicated in the snapshot changelogs and as always we will be reading your feedback and comments.
 
-# New Features in 20w11a
+## New Features in 20w11a
 
 -   Added Soul Speed enchantment
 -   Added Twisting Vines that grow upwards
 -   Nether gold ore can now be found in the nether - it is just like gold ore, but more Nether-y
 
-## Soul Speed
+### Soul Speed
 
 Never suffer again drudging through Soul Sand Valleys - Soul Speed has you covered!
 
@@ -28,7 +30,7 @@ Never suffer again drudging through Soul Sand Valleys - Soul Speed has you cover
 -   There's a downside, however: enchantments will slowly degrade your boots each Soul block you walk on
 -   Can only be obtained by bartering with those pesky Piglins
 
-# Changes in 20w11a
+## Changes in 20w11a
 
 -   Bell blocks will now ring when hit by any projectile
 -   TNT and Campfires will now ignite when hit by any burning projectile
@@ -37,12 +39,12 @@ Never suffer again drudging through Soul Sand Valleys - Soul Speed has you cover
 -   Doors, rails, buttons, pressure plates, redstone and more can now be placed on soulsand and full-block of snow layers
 -   Soul sand with a rail on top will no longer slow-down minecarts
 
-# Technical Changes in 20w11a
+## Technical Changes in 20w11a
 
 -   `minecraft:soul_speed_blocks` is any block that the Soul Speed enchantment increases speed on
 -   New particle type: `soul`
 
-# Fixed bugs in 20w11a
+## Fixed bugs in 20w11a
 
 -   [MC-81659](https://bugs.mojang.com/browse/MC-81659) Fireball and witherskull hitboxes are frequently invisible for some seconds
 -   [MC-134900](https://bugs.mojang.com/browse/MC-134900) server.properties generator-settings for level-type FLAT not implemented; property is stored in ignored flat\_world\_options NBT

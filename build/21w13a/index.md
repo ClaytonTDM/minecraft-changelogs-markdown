@@ -1,22 +1,24 @@
+# 21w13a
+
 Another snapshot hits the streets, and it's dropping some sick bleats. That's right, Goats are leaping into this snapshot!
 
-# New Features in 21w13a
+## New Features in 21w13a
 
 -   Added the goat!
 -   Added an accessibility option
 
-## Goat
+### Goat
 
 -   Goats spawn in mountains
 -   Goats can scale the sides of mountains with their incredible jumps!
 -   Goats can be tempted and bred using wheat
 -   Goats are another source of milk!
 
-## Accessibility
+### Accessibility
 
 Added an alternative solid black background color for the Mojang Studios loading screen, toggleable with the "Monochrome Logo" accessibility option
 
-# Changes in 21w13a
+## Changes in 21w13a
 
 -   Tweaks to Caves
 -   Tweaks to Ore Distribution
@@ -31,7 +33,7 @@ Added an alternative solid black background color for the Mojang Studios loading
 -   Additions to Wandering Trader and Mason trades
 -   Additions to chest loot tables
 
-## Cave Tweaks
+### Cave Tweaks
 
 -   Mineshaft tweak: increased the max length of pillars and chains.
 -   Carver tweaks: made carvers less likely to be too flat to walk through.
@@ -40,12 +42,12 @@ Added an alternative solid black background color for the Mojang Studios loading
     -   Reduced likelihood of toothpick pillars (tall 1-block thin pillars)
     -   Other tweaks to make the cheese caves more varied and interesting.
 
-## Ore Distribution Tweaks
+### Ore Distribution Tweaks
 
 -   Slightly more iron
 -   Larger diamond blobs sometimes form
 
-## Powdered Snow
+### Powdered Snow
 
 -   Powder snow's durability/hardness was slightly increased
 -   Freeze time has decreased to 7 seconds and hurt frequency has decreased to 2 seconds
@@ -57,7 +59,7 @@ Added an alternative solid black background color for the Mojang Studios loading
 -   Leather horse armor now protects horses from freeze damage
 -   Mobs that enjoy the heat (Blazes, Magma Cubes, and Striders) take increased freeze damage
 
-## Trade & Loot Table Additions
+### Trade & Loot Table Additions
 
 -   Added the following trades to Mason:
     -   Will sell 4 Dripstone blocks for 1 emerald
@@ -68,19 +70,19 @@ Added an alternative solid black background color for the Mojang Studios loading
 -   Moss blocks can be found in Shipwreck chests
 -   Glow Berries can be found in Mineshaft chest minecarts
 
-# Technical Changes in 21w13a
+## Technical Changes in 21w13a
 
 -   Added metric cube of light!
 -   Unused parts of code are no longer removed
 
-## Light block
+### Light block
 
 -   Op-only (`/give`) air-like waterloggable block
 -   Emits light at level determined by block state
 -   Visible and targetable only when item is held (similar to barrier)
 -   Right click cycles light level
 
-# Bugs fixed in 21w13a
+## Bugs fixed in 21w13a
 
 -   [MC-3366](https://bugs.mojang.com/browse/MC-3366) End portal appears transparent from below
 -   [MC-70738](https://bugs.mojang.com/browse/MC-70738) Killing guardian with lava does not give cooked fish

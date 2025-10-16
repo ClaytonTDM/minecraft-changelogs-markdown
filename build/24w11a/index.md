@@ -1,3 +1,5 @@
+# 24w11a
+
 Oh look, it's a rare case of snapshot Thursday! This week we're expanding your arsenal with a smashing new weapon, the Mace! Use this weapon's special smash attack while leaping from a high place and watch your enemies get knocked back. The longer you fall, the harder you hit – but make sure you time it right! Your fall damage is only negated if you land the blow. Craft this new weapon by combining a Breeze Rod with the Heavy Core, a new item you can find by unlocking Trial Chamber Vaults.
 
 As usual, we invite you to share your thoughts about this new feature over at the feedback site: [Let's talk about the Mace!](https://aka.ms/mcmacefeedback)
@@ -6,7 +8,7 @@ Alongside this hefty new mob swatter, we're also bringing you new chambers and v
 
 Happy mace-ing!
 
-# Experimental Features
+## Experimental Features
 
 -   Added the Mace
 -   Added Breeze Rod
@@ -17,19 +19,19 @@ Happy mace-ing!
 -   Updated Vault loot table
 -   Updated Trial Chambers
 
-# Blocks
+## Blocks
 
-## Heavy Core
+### Heavy Core
 
 -   A mysterious, dense block which can be combined with a Breeze Rod to craft a brand-new weapon: the Mace!
 
-# Items
+## Items
 
-## Breeze Rod
+### Breeze Rod
 
 -   An item dropped by the Breeze that can be crafted into 4 Wind Charges, or used with the Heavy Core to craft the Mace
 
-## Mace
+### Mace
 
 -   A new heavy weapon to smash your enemies!
 -   Leverage the weight of this new weapon to deal additional damage the farther you fall before hitting your target
@@ -39,28 +41,28 @@ Happy mace-ing!
 -   Using a Mace will decrease its durability like any other weapon; repair it with Breeze Rods at an anvil
 -   Players can use a Mace in combination with Wind Charges to launch up and deliver devastating smash attacks on their enemies
 
-# Mobs
+## Mobs
 
-## Breeze
+### Breeze
 
 -   Drops 1-2 Breeze Rods when killed by a player
     -   The number of Breeze Rods dropped is affected by looting enchantments
 
-## Pottery Sherds
+### Pottery Sherds
 
 -   Added Flow, Guster, and Scrape Pottery Sherds
 
-## Banner Patterns
+### Banner Patterns
 
 -   Added Flow and Guster Banner Patterns
 
-## Armor Trims
+### Armor Trims
 
 -   Added Bolt and Flow Armor Trims and Smithing Templates
 -   Bolt can be duplicated using a Copper Block or Waxed Copper
 -   Flow can be duplicated using a Breeze Rod
 
-## Trial Chambers
+### Trial Chambers
 
 -   Added new chambers and variations, with new challenges
     -   Remade chamber\_9, and renamed it to "slanted"
@@ -80,7 +82,7 @@ Happy mace-ing!
     -   Guster Banner Pattern
     -   Heavy Core
 
-# Changes
+## Changes
 
 -   Adjusted flying behaviour for Bees and Parrot to keep them from overshooting their position when flying up and down
 -   Status effect particle colors are no longer blended into one particle color
@@ -89,7 +91,7 @@ Happy mace-ing!
 -   Updated the wolf armor crack textures
 -   Menu background blur has been updated to look better and be more performant
 
-## Wolf variants
+### Wolf variants
 
 When summon in other ways (e.g. using the Spawn Egg or using the `summon` command), the variant selection follows the natural spawning biome rules with the following extensions:
 
@@ -97,12 +99,12 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
 -   Spotted Wolf: will be selected in all Savanna biomes, including Savanna and Windswept Savanna Biomes
 -   Striped Wolf: will be selected in all Badlands biomes, including Badlands and Eroded Badlands Biomes
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 35
 -   The Resource Pack version is now 29
 
-# Data Pack Version 35
+## Data Pack Version 35
 
 -   Removed `any` entity sub-predicate
 -   Component-specific item predicate properties have been moved to separate field `predicates`
@@ -110,9 +112,9 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
 -   Contents of `item` entity can now be accessed through `contents` slot name
 -   Added new loot functions
 
-## Predicates
+### Predicates
 
-### Item sub-predicate
+#### Item sub-predicate
 
 -   Some fields from item predicate have been moved to a map in an optional field `predicates`
 -   The new field is similar to the `components` field on item stacks
@@ -133,7 +135,7 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
     -   That means that, for example, matching for empty enchantment list will not pass on items without `minecraft:damage` component
     -   Note: some components, like `minecraft:enchantments` have default values, so they will always match
 
-#### Example:
+##### Example:
 
 Before:
 
@@ -165,9 +167,9 @@ After:
     }
     
 
-## Loot Functions
+### Loot Functions
 
-### `set_fireworks`
+#### `set_fireworks`
 
 New function for setting the details of the `minecraft:fireworks` component.
 
@@ -195,7 +197,7 @@ Fields:
             -   If omitted, `0` (before first explosion) is used
     -   `append`: append explosions at the end of the list
 
-### `set_firework_explosion`
+#### `set_firework_explosion`
 
 New function for setting the details of the `minecraft:firework_explosion` component.
 
@@ -219,7 +221,7 @@ Fields:
     -   Set whether the explosion should have a twinkle or not
     -   If omitted, the original `has_twinkle` value is kept (or `false` is used if there was no component)
 
-### `set_book_cover`
+#### `set_book_cover`
 
 New function for setting the cover details of the `minecraft:written_book_content` component. If present, any pages in the book are left untouched.
 
@@ -237,7 +239,7 @@ Fields:
     -   The generation value to set
     -   If omitted, the original generation is kept (or `0` is used if there was no component)
 
-### `set_writable_book_pages`
+#### `set_writable_book_pages`
 
 New function for manipulating the pages of the `minecraft:writable_book_content` component.
 
@@ -262,13 +264,13 @@ Fields:
             -   If omitted, `0` (before first page) is used
     -   `append`: append pages at the end of the book
 
-### `set_written_book_pages`
+#### `set_written_book_pages`
 
 New function for manipulating the pages of the `minecraft:written_book_content` component. Same format as `set_writable_book_content` but the `pages` field contains filterable Components instead of Strings (same format as `pages` on the `minecraft:writable_book_content` component).
 
 Any cover data is left untouched, and the page content components are set to resolve next time a player opens the book.
 
-# Resource Pack Version 29
+## Resource Pack Version 29
 
 -   Added `gui/inworld_menu_background`, `gui/inworld_menu_list_background`, `gui/inworld_header_separator`, `gui/inworld_footer_separator` textures to allow menus accessed from the Pause Menu to look different from menus accessed from the Title Screen
 -   Added `gui/tab_header_background` texture, which is rendered behind the tab buttons in the Create World Screen
@@ -277,7 +279,7 @@ Any cover data is left untouched, and the page content components are set to res
 -   Added optional boolean field `use_linear_filter` to post-processing passes which when set to `true` switches texture sampling mode from nearest-neighbor sampling to linear interpolation for that pass
 -   Added `entity_outline_box_blur` post-processing shader
 
-# Fixed bugs in Snapshot 24w11a
+## Fixed bugs in Snapshot 24w11a
 
 -   [MC-153329](https://bugs.mojang.com/browse/MC-153329) Leashing an iron golem breaks its pathfinding until reloading the world
 -   [MC-165948](https://bugs.mojang.com/browse/MC-165948) Bees can be lured into dangerous blocks

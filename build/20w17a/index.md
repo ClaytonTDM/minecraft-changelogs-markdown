@@ -1,13 +1,15 @@
+# 20w17a
+
 This week's snapshot brings you some tweaks, bugfixes, and technical changes!
 
 We also have a survey up so that you can tell us what you think about the Nether Update. You can find it by clicking [here](https://www.surveymonkey.com/r/SF65G2F). We would very much appreciate if you could take the time and fill it out.
 
-# New Features in 20w17a
+## New Features in 20w17a
 
 -   Added an Entity Distance scale option ranging from 50% to 500%
 -   Difficulty and game rules can now be changed from "Create World" screen
 
-# Changes in 20w17a
+## Changes in 20w17a
 
 -   Improved Smithing Table UI
 -   Ruined portals now spawn less frequently
@@ -16,25 +18,25 @@ We also have a survey up so that you can tell us what you think about the Nether
 -   Walls now create posts under more things, like pressure plates and banners
 -   The "Singleplayer" button will jump directly to "Create World" screen if there are no worlds to select
 
-# Technical Changes in 20w17a
+## Technical Changes in 20w17a
 
 -   Block storage format in chunks slightly changed to speed up various tasks (rendering, pathfinding, world generation, etc).
 -   Chat component style can now select font.
 -   Full range of Unicode characters is supported (some may know what that means 😉)
 -   Added the `attribute` command
 
-## World save format
+### World save format
 
 -   Saving `level.dat` now uses randomly-named temporary files (instead of using `level.dat_new` every time)
 -   `player/*.dat` are now saved in a way similar to `level.dat` (including leaving `.dat_old` files)
 
-## Block storage
+### Block storage
 
 `BlockStates` in `Sections` elements no longer contain values stretching over multiple 64-bit fields. If number of bits per block is not power of two (i.e. single 64-bit value can't fill whole number of blockstates) some bits will not be used. For example, if single block state takes 5 bits, highest 4 bits of every 64-bit field will be unused. That also means slight increase in storage size (in case of 5 bits, from 320 to 342 64-bit fields).
 
-## Commands
+### Commands
 
-### `attribute`
+#### `attribute`
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -49,9 +51,9 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 -   `name` - string (in optional quotes) describing human-readable name of modifier
 -   `value` - floating point value (note: certain attributes have limits on final value, so your change might not be noticeable)
 
-## Chat components
+### Chat components
 
-### Hover event argument
+#### Hover event argument
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -59,19 +61,19 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
     -   For `show_entity` - object with fields: `id` (UUID), `name` (chat component) and `type` (entity type resource location)
 -   Old style `value` argument is now deprecated (but still supported)
 
-### Colors
+#### Colors
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`.
 
-### Custom fonts
+#### Custom fonts
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`.
 
-## Fonts
+### Fonts
 
 -   `Force Unicode` option now switches between normal and alternative font (called `uniform.json`) - no reload needed
 
-# Fixed bugs in 20w17a
+## Fixed bugs in 20w17a
 
 -   [MC-5410](https://bugs.mojang.com/browse/MC-5410) In creative mode, flying down is stopped when brushing up against ladders or vines.
 -   [MC-31032](https://bugs.mojang.com/browse/MC-31032) Using only one empty map doesn't increase minecraft.used:minecraft.map

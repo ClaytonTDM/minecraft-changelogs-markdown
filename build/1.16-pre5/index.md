@@ -1,12 +1,14 @@
+# 1.16-pre5
+
 Spend your weekend with this brand new fifth pre-release for Minecraft Java Edition 1.16 - it has a check to warn you not to try to run with too high graphics settings for your system and a bunch of bug fixes.
 
-# Changes in 1.16 Pre-Release 5
+## Changes in 1.16 Pre-Release 5
 
 -   Added a GPU warn list for graphics drivers that are known to have rendering issues with Fabulous graphics
 -   If your GPU driver is detected as problematic then a warning message will be displayed with details of the detected problem
 -   This warning message can be ignored, but support cannot be provided for graphics drivers on the warn list running Fabulous
 
-# Fixed Bugs in 1.16 Pre-Release 5
+## Fixed Bugs in 1.16 Pre-Release 5
 
 -   [MC-141934](https://bugs.mojang.com/browse/MC-141934) Ctrl + Pick block on a lectern does not display its book despite being saved to NBT
 -   [MC-148955](https://bugs.mojang.com/browse/MC-148955) Iron golems can spawn inside of non-full blocks

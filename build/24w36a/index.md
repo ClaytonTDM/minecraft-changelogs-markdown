@@ -1,37 +1,39 @@
+# 24w36a
+
 Hi everyone! In the most exciting Minecraft-related news of the day, we have a new movi- I mean snapshot coming your way! This week we are adding support for custom equipment with Data Packs and Resource Packs. We have also tweaked the Bundle so that you can empty a group of items when it's used in the hotbar. And as usual, we have included a bunch of bug fixes!
 
 Happy mining!
 
-# Known Issues
+## Known Issues
 
 -   Ender Pearls will not teleport you to the right location
 
-# Experimental Features
+## Experimental Features
 
-## Bundles
+### Bundles
 
 -   When a Bundle is used in the hotbar, one group of items is emptied at a time instead of everything being emptied at once
 
-# Changes
+## Changes
 
 -   Squid Spawn Eggs now only spawn adult Squids
     -   There is a 5% chance of Squids spawned in groups in the wild to be a baby
 -   When a mob converts from one type to another (ex: Piglin to Zombified Piglin), the health of the converted mob is set to the same percentage of max health as the original mob had before conversion
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 52
 -   Resource Pack version is now 37
 
-# Data Pack Version 52
+## Data Pack Version 52
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   `bats_spawnable_on`: Blocks that bats can spawn on
 
-### Item Tags
+#### Item Tags
 
 -   Added new tags to control which items can be used to repair various armor sets:
     -   `repairs_leather_armor`
@@ -44,22 +46,22 @@ Happy mining!
     -   `repairs_wolf_armor`
 -   `piglin_safe_armor`: Items that, when worn by a player, will cause Piglins to not get angry
 
-## Changed Item Components
+### Changed Item Components
 
-### `minecraft:item_name`
+#### `minecraft:item_name`
 
 This component is now always present on every item
 
-## New Item Components
+### New Item Components
 
-### `minecraft:item_model`
+#### `minecraft:item_model`
 
 -   Controls item model
 -   Present on every item
 -   Format: namespaced id
     -   `namespace:id` will reference model `/assets/<namespace>/models/item/<id>`
 
-### `minecraft:equippable`
+#### `minecraft:equippable`
 
 -   If present, this item can be equipped by players in the selected slot
 -   When right-clicking with an item with this component, it will be swapped into the appropriate slot
@@ -76,13 +78,13 @@ This component is now always present on every item
         -   If the item type has special dispenser behavior, this will have no effect
     -   e.g. `equippable={slot:'chest',equip_sound:'item.armor.equip_chain'}`
 
-### `minecraft:glider`
+#### `minecraft:glider`
 
 -   If present, this item will allow players to glide (as with Elytra) when equipped
 -   Format: empty object
     -   e.g. `glider={}`
 
-### `minecraft:tooltip_style`
+#### `minecraft:tooltip_style`
 
 -   If present, this item can use custom sprites for its tooltip background and frame
 -   Format: namespaced ID for a tooltip style
@@ -90,7 +92,7 @@ This component is now always present on every item
         -   `<namespace>:tooltip/<path>_background` and `<namespace>:tooltip/<path>_frame`
     -   e.g. `tooltip_style='minecraft:special_sword'`
 
-## Predicates
+### Predicates
 
 -   Added a new field in the Player sub-predicate, `input`, that can be used to detect which movement keys the player is pressing
 -   If specified the predicate matches with the corresponding keybind that the player is pressing; it supports detecting the following input:
@@ -102,7 +104,7 @@ This component is now always present on every item
     -   `sneak` : boolean (optional)
     -   `sprint` : boolean (optional)
 
-# Resource Pack Version 37
+## Resource Pack Version 37
 
 -   Introduced equipment models
 -   Textures for entity equipment have been moved and renamed
@@ -115,12 +117,12 @@ This component is now always present on every item
     -   If `true`, the inner parts of the texture (i.e. not the corners) will be stretched instead of tiled
     -   If not specified, defaults to `false` as before
 
-## Item Models
+### Item Models
 
 -   All item models can now use the `broken` property in model overrides that was previously limited to just Elytra
     -   This will have a value of 1 if the item has 1 durability left, or 0 otherwise
 
-## Custom Equipment Models
+### Custom Equipment Models
 
 The appearance of equipment when equipped by players or certain mobs can now be customized by defining 'equipment models' in the Resource Pack.
 
@@ -156,13 +158,13 @@ A model definition specifying both player and horse armor layers might look like
     }
     
 
-## Trims
+### Trims
 
 -   All equippable items with an equipment model defined support rendering trims, based on the `trim` component
 -   Trim textures will be loaded from the appropriate folder in the `textures/trims/entity` directory
     -   For example, armor with `wolf_body` layers will fetch trims from `textures/trims/entity/wolf_body`
 
-## Moved Textures
+### Moved Textures
 
 -   All equipment-related textures have been moved to subfolders of the `textures/entity/equipment` directory
     -   Player armor textures have been moved to `textures/entity/equipment/humanoid` and `textures/entity/equipment/humanoid_leggings`
@@ -178,7 +180,7 @@ A model definition specifying both player and horse armor layers might look like
     -   Textures in `textures/trims/models/armor` have been divided between `textures/trims/entity/humanoid` and `textures/trims/entity/humanoid_leggings`
     -   For leggings textures, the `_leggings` suffix is dropped
 
-# Fixed bugs in 24w36a
+## Fixed bugs in 24w36a
 
 -   [MC-16829](https://bugs.mojang.com/browse/MC-16829) The horse armor model does not show the enchantment glint effect
 -   [MC-38022](https://bugs.mojang.com/browse/MC-38022) Order of rendering translucent block faces fails to update with camera position

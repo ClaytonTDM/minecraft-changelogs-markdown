@@ -1,8 +1,10 @@
+# 1.21.2-pre4
+
 Hello! Another day, another Pre-Release. We're releasing the fourth Pre-Release of 1.21.2, further stabilizing this version.
 
 Happy mining!
 
-# Fixed bugs in 1.21.2 Pre-Release 4
+## Fixed bugs in 1.21.2 Pre-Release 4
 
 -   [MC-277496](https://bugs.mojang.com/browse/MC-277496) Text on maps that are in item frames render through blocks
 -   [MC-277502](https://bugs.mojang.com/browse/MC-277502) Compasses do not point in correct direction when in left hand

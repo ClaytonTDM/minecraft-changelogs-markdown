@@ -1,12 +1,14 @@
+# 25w07a
+
 Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updating trades for wandering traders and cartographers. We have also introduced new, biome-based spawn rules for sheep. It's time to go out and explore the world! Mojang's bug-tracker Mojira is migrating to the cloud and during the process bug reporting is unavailable. The new platform will soon be up and running, ready for players to log in, create accounts, and most importantly – report bugs! During the downtime, try to keep the bug alive and report it once Mojira is back!
 
-# New Features
+## New Features
 
 -   Sheep have different rules for which wool color to have based on biome they spawn in
 
-## Farm Animal variants
+### Farm Animal variants
 
-### Sheep wool color in warm and cold biomes
+#### Sheep wool color in warm and cold biomes
 
 -   Sheep have updated rules for which color of wool they have based on which biome they spawn in:
     -   Temperate Biomes: (these colors are unchanged from current behavior)
@@ -22,7 +24,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
         -   Uncommon Sheep colors are gray, yellow, orange and red
         -   There is a rare chance for a pink Sheep to spawn
 
-# Changes
+## Changes
 
 -   A Bush only drops when broken with Shears or a Silk Touch tool and is replaceable when building
 -   The look of both Mooshroom variants have been slightly updated to have an extruded snout
@@ -32,9 +34,9 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   Bundles can now be found in some of the chests in villages
 -   The breaking sound for grass sound type has been lowered affecting all blocks using this sound
 
-## Cartographer and Wandering Trader Trade Rebalance
+### Cartographer and Wandering Trader Trade Rebalance
 
-# Cartographer Trades
+## Cartographer Trades
 
 -   Cartographers now sell 7 new maps each pointing to a different village or other structures in a different biome. These maps can help players who want to quickly find a specific location
 -   Cartographers from different village types will sell a different range of maps and colored banners
@@ -44,7 +46,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 [Click here](https://minecraftnetassets.z13.web.core.windows.net/minecraft-net-assets-container/25w07a_cartographer_trades.png) for a link to the high-resolution image
 
-# Wandering Trader Trades
+## Wandering Trader Trades
 
 -   The Wandering Trader now has better prices, more trades and a larger amount of stock for many items
 -   They will also now buy basic supplies from players, so it's possible to get some emeralds by helping them prepare for their next journey even if you don't feel like buying anything
@@ -64,27 +66,27 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 [Click here](https://minecraftnetassets.z13.web.core.windows.net/minecraft-net-assets-container/25w07a_wandering_trader_trades.png) for a link to the high-resolution image
 
-## Sound for Leaf Litter and Grass
+### Sound for Leaf Litter and Grass
 
 -   Lowered volume in sound files for Leaf Litter (break, step, place)
 -   Lowered volume in sound files for grass sound type, affecting all blocks using this (dig)
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 67
 -   The Resource Pack version is now 52
 
-# Data Pack Version 67
+## Data Pack Version 67
 
 -   Changed so that `stepping_on` entity predicate can only evaluate to true if the entity is on ground
 
-# Tags
+## Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#camels_spawnable_on` - blocks that Camels can spawn on
 
-### Structure Tags
+#### Structure Tags
 
 -   Added `#on_savanna_village_maps` - structures that can appear on Savanna Village Maps
 -   Added `#on_desert_village_maps` - structures that can appear on Desert Village Maps
@@ -94,7 +96,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   Added `#on_swamp_explorer_maps` - structures that can appear on Swamp Explorer Maps
 -   Added `#on_jungle_explorer_maps` - structures that can appear on Jungle Explorer Maps
 
-## Entity Data
+### Entity Data
 
 -   `Pos`, `Motion`, and `Rotation` values without the correct number of components (3, 3, and 2 respectively) will now be fully discarded, instead of only selecting the specified components
 -   The `SleepingX`, `SleepingY`, and `SleepingZ` fields have been collected into a single `sleeping_pos` field
@@ -102,36 +104,36 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   Block States in the entity data of Arrows, Minecarts, Block Displays, Endermen, Falling Blocks, Primed TNT, or Piston Moving Blocks are no longer allowed to be specified as an empty object
 -   The `Tags` field will no longer be preserved if removed
 
-### `allay`
+#### `allay`
 
 -   Removed redundant `CanDuplicate` field (controlled by `DuplicationCooldown`)
 
-### `cat`
+#### `cat`
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-### `dolphin`
+#### `dolphin`
 
 -   Removed `TreasurePosX`, `TreasurePosY`, `TreasurePosZ` fields
 
-### `falling_block`
+#### `falling_block`
 
 -   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
 
-### `fox`
+#### `fox`
 
 -   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
 
-### `item`
+#### `item`
 
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-### `phantom`
+#### `phantom`
 
 -   The `Size` field has been renamed to `size`
 -   The `AX`, `AY`, and `AZ` fields have been collected into a single `anchor_pos` field
 
-### `player`
+#### `player`
 
 -   The `SpawnX`, `SpawnY`, `SpawnZ`, `SpawnAngle`, `SpawnDimension`, and `SpawnForced` fields have been collected into a single `respawn` field
     -   Format: object with fields
@@ -142,95 +144,95 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The `enteredNetherPosition` field has been renamed to `entered_nether_pos`, and is now formatted as a list of doubles
     -   e.g. `entered_nether_pos: [1.0, 2.0, 3.0]`
 
-### `primed_tnt`
+#### `primed_tnt`
 
 -   The `block_state` field now defaults to `tnt` if not specified
 
-### `shulker_bullet`
+#### `shulker_bullet`
 
 -   The `Dir` and `Target` fields will no longer be preserved when removed
 
-### `turtle`
+#### `turtle`
 
 -   The `HomePosX`, `HomePosY`, and `HomePosZ` fields have been collected into a single `home_pos` field
 -   Removed `TravelPosX`, `TravelPosY`, and `TravelPosZ` fields
 -   The `HasEgg` field has been renamed to `has_egg`
 
-### `vex`
+#### `vex`
 
 -   The `LifeTicks` field has been renamed to `life_ticks`
 -   The `BoundX`, `BoundY`, and `BoundZ` fields have been collected into a single `bound_pos` field
 
-### `villager`
+#### `villager`
 
 -   The `Gossips` field will no longer be preserved when removed
 
-### `wandering_trader`
+#### `wandering_trader`
 
 -   The `wander_target` field will no longer be preserved when removed
 
-### `wolf`
+#### `wolf`
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-### `zombie_villager`
+#### `zombie_villager`
 
 -   The `Gossips` field will no longer be preserved when removed
 
-### `evoker_fangs`, `area_effect_cloud`, and all projectiles
+#### `evoker_fangs`, `area_effect_cloud`, and all projectiles
 
 -   The `Owner` field will no longer be preserved when removed
 
-### `item_frame`, `glow_item_frame`, `painting`, and `leash_knot`
+#### `item_frame`, `glow_item_frame`, `painting`, and `leash_knot`
 
 -   The `TileX`, `TileY`, and `TileZ` fields have been collected into a single `block_pos` field
 
-### `arrow`, `spectral_arrow`, `trident`
+#### `arrow`, `spectral_arrow`, `trident`
 
 -   The `inBlockState` and `SoundEvent` fields will no longer be preserved when removed
 
-### `minecart`, `*_minecart`
+#### `minecart`, `*_minecart`
 
 -   The `CustomDisplayTile` field has been removed
 -   `DisplayState` will now always override the default displayed block state if specified
 -   `DisplayOffset` may now be specified to override the default offset even without a custom display block state set
 
-### `block_display`, `item_display`, and `text_display`
+#### `block_display`, `item_display`, and `text_display`
 
 -   The `glow_color_override` field will no longer be preserved when removed
 
-### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
+#### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
 
 -   The `patrol_target` field will no longer be preserved when removed
 
-## Block Entity Data
+### Block Entity Data
 
 -   The `CustomName` field will no longer be preserved when removed
 -   The `LootTable` field will no longer be preserved when removed
 
-### `end_gateway`
+#### `end_gateway`
 
 -   The `exit_portal` field will no longer be preserved when removed
 
-### `furnace`, `smoker`, `blast_furnace`
+#### `furnace`, `smoker`, `blast_furnace`
 
 -   The `RecipesUsed` field will no longer be preserved when removed
 
-### `skull`
+#### `skull`
 
 -   The `note_block_sound` field will no longer be preserved when removed
 
-# Resource Pack Version 52
+## Resource Pack Version 52
 
 -   Small changes in rendering of items in world
 
-## Updated Mooshroom texture and model
+### Updated Mooshroom texture and model
 
 -   The Mooshroom have updated model and texture
     -   Model now has a snout
     -   Model now has its legs mirrored
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
@@ -238,7 +240,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The shader programs themselves are still available and can be overridden
 -   The post-processing effects are still configurable as JSON
 
-### Post-process Effect Definitions
+#### Post-process Effect Definitions
 
 -   The field `program` was replaced with `vertex_shader` and `fragment_shader`
     -   `<namespace>:<path>` will resolve to `assets/<namespace>/shaders/<path>.<vsh|fsh>`
@@ -248,13 +250,13 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
     -   Leaving it unset is not recommended and is used for runtime configuration of the blur effect
 -   Leaving a uniform unspecified results in undefined behavior, you must specify each one that will be used by the shaders
 
-## Item rendering
+### Item rendering
 
-### Item Display
+#### Item Display
 
 -   `firstperson_lefthand` and `thirdperson_lefthand` transforms are now rendered the same as when held in hand
 
-### Item Entity
+#### Item Entity
 
 -   When on ground, model size is now taken into account when determining hovering motion
     -   That means that models should never clip into the block below, no matter what size they are
@@ -263,7 +265,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
     -   Otherwise model is rendered as a cluster of items offset in all directions around center
     -   Previously, flat stack rendering happened only for models with `builtin/generated` parent
 
-# Fixed bugs in 25w07a
+## Fixed bugs in 25w07a
 
 > **Developer's Note**: _Since our bugtracker is currently down due to the migration at the time of publishing this article, the links to bugs will not work temporarily._
 

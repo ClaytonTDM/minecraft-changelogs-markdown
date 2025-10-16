@@ -1,19 +1,21 @@
+# 23w04a
+
 Tuesday is the new Wednesday, did you know? Here is snapshot 23w04a with a new experimental Armor Trim Smithing feature in the Update\_1\_20 experimental pack.
 
 Happy trimming!
 
-# Changes
+## Changes
 
 -   Enchantment glint on items and armor is now more subtle
 
-# Experimental Features
+## Experimental Features
 
 -   Added a new armor trimming system to visually customize your armor
 -   Added Smithing Template items
 -   Redesigned the Smithing Table
 -   Changed how Netherite equipment is crafted
 
-## Smithing Templates
+### Smithing Templates
 
 -   Smithing Tables have been redesigned into a workstation for physical equipment upgrades and modifications
 -   Alongside slots for combining a piece of equipment and materials, there is now a required slot for an item type called Smithing Templates
@@ -23,7 +25,7 @@ Happy trimming!
 -   Smithing Templates are consumed when used to upgrade an item in the Smithing Table
 -   You can craft a copy of a Smithing Template in the Crafting Table with 7 diamonds + 1 block of material that the template is made out of + 1 smithing template, which will output 2 of the same Smithing Template
 
-## Netherite Equipment
+### Netherite Equipment
 
 -   Netherite equipment crafting now also requires a Netherite Upgrade Smithing Template
 -   Netherite Upgrade Smithing Templates can be found randomly in all Bastion Remnant chests, and there is a guarantee of 2 in every Treasure Room Bastion Remnant
@@ -32,7 +34,7 @@ Happy trimming!
     -   Make Netherite equipment a more significant achievement in the game's progression
     -   Adapt Netherite more naturally into the new Smithing Table crafting system
 
-## Armor Trims
+### Armor Trims
 
 -   You can now visually customize your armor with a variety of unique trims at the Smithing Table
     -   All armor is viable for trims except for leather armor
@@ -81,7 +83,7 @@ Happy trimming!
 -   Armor cannot have the same material it is made of applied to it as a trim
     -   For example, a Golden Chestplate cannot have a Golden Armor Trim
 
-# Technical Changes
+## Technical Changes
 
 -   Added a new type of atlas configuration source: `paletted_permutations`
     
@@ -101,7 +103,7 @@ Happy trimming!
 -   Added new flag (value 128) to `HideFlags` NBT field for hiding armor trim item tooltips
     
 
-## Paletted Permutations
+### Paletted Permutations
 
 -   `paletted_permutations` is a new type of atlas configuration source used to dynamically generate new textures in memory based on a set of color palettes
 -   Color palettes allow you to swap out the colors of a texture without having to supply all files for the variants of a texture in a resource pack
@@ -150,7 +152,7 @@ Happy trimming!
             
         
 
-## Trim Patterns & Materials
+### Trim Patterns & Materials
 
 -   Trim patterns and materials for armor are defined by the server through the `trim_pattern` and `trim_material` registry respectively
     -   As a result, new trim patterns and materials can be added via data packs
@@ -169,7 +171,7 @@ Happy trimming!
     -   `description` which is a text component used for displaying the material name of an armor trim when hovering an armor itemstack
         -   The style defined in this description is applied to the armor trim pattern `description` as well
 
-## Commands
+### Commands
 
 -   New relation available for `execute on`: `origin`:
     -   shooter, if the executing entity is a projectile (like arrow, fireball, trident, firework, thrown potion, etc.)
@@ -178,7 +180,7 @@ Happy trimming!
     -   igniter, if the executing entity is a primed tnt
     -   summoner, if the executing entity is evoker fangs or a vex
 
-# Fixed bugs in 23w04a
+## Fixed bugs in 23w04a
 
 -   [MC-198809](https://bugs.mojang.com/browse/MC-198809) Blast Protection does not reduce explosion knockback except at very high levels
 -   [MC-259189](https://bugs.mojang.com/browse/MC-259189) "Narrator: Not Available" isn't grayed out on accessibility splash

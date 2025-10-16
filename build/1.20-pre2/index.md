@@ -1,8 +1,10 @@
+# 1.20-pre2
+
 We are now releasing the second pre-release for Minecraft 1.20. This pre-release contains bug fixes.
 
 Happy Mining!
 
-# Technical Changes
+## Technical Changes
 
 -   Game will now display message box on startup if user enabled text-to-speech functionality, but it is not available
 -   `"item": "minecraft:air"` can now be used in datapack recipes to denote an ingredient that will match an empty slot.
@@ -15,7 +17,7 @@ Happy Mining!
         -   `minecraft:campfire_cooking`
         -   `minecraft:stonecutting`
 
-# Fixed bugs in 1.20 Pre-release 2
+## Fixed bugs in 1.20 Pre-release 2
 
 -   [MC-1310](https://bugs.mojang.com/browse/MC-1310) Dispensed boats and rafts get stuck inside of dispensers used to place them
 -   [MC-124327](https://bugs.mojang.com/browse/MC-124327) Changing the name of an item and then emptying the text field in an anvil doesn't make the rename unavailable, keeps last non-empty name on output item

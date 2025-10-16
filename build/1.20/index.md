@@ -1,8 +1,10 @@
+# 1.20
+
 What, is there something special happening today? Hold on, let me grab my calendar book from my chiseled bookshelf.
 
 Oh, it's time for Trails & Tales! How could I forget? Time to equip your new brush and ride your camel off to new adventures!
 
-# New Features
+## New Features
 
 -   All features and changes from the "Update 1.20" experimental pack are now part of the game
 -   Added Archaeology
@@ -24,7 +26,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   New Trails & Tales Advancements
 -   Added support for Windows Aarch64/ARM64
 
-## Archaeology
+### Archaeology
 
 -   Added craftable Brush item
 -   Added Suspicious Sand and Suspicious Gravel
@@ -42,7 +44,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   A total of 20 sherd have been distributed between the 5 Archaeology sites: Desert Wells, Desert Temples, Cold Ocean Ruins, Warm Ocean Ruins, and Trail Ruins
     -   They cannot be crafted, and are only found by brushing Suspicious Sand or Suspicious Gravel
 
-### Decorated Pots
+#### Decorated Pots
 
 -   Crafting four Pottery Sherds together will create a Decorated Pot with a picture on each side
 -   Brick items can be used instead of Pottery Sherds in the Decorated Pot recipe
@@ -51,7 +53,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   Hitting the pot with bare hands, silk touch tools, or any other item will drop an intact pot instead
 -   Crafted Decorated Pots with at least one pattern have a hover tooltip displaying the Sherd & Brick ingredients
 
-## Sniffer
+### Sniffer
 
 -   The Sniffer is the mob vote winner of Minecraft Live 2022
 -   Sniffers are passive, friendly mobs
@@ -59,7 +61,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Sniffers can only dig grass and dirt-like blocks
 -   Sniffers can be tempted by, and bred with Torchflowers Seeds
 
-### Sniffer Egg
+#### Sniffer Egg
 
 -   Can be found by brushing the Suspicious Sand of Warm Ocean Ruins
 -   When two Sniffers breed they do not immediately spawn a Snifflet; instead, a Sniffer Egg is dropped
@@ -67,14 +69,14 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   When placed on Moss, the Egg will hatch in approximately 10 minutes
     -   On all other blocks, it will hatch in approximately 20 minutes
 
-### Torchflowers
+#### Torchflowers
 
 -   The Sniffer can occasionally sniff up a Torchflowers seed, and it can be used to breed two Sniffers
 -   The Torchflower seed can be planted on Farmland and grows into a Torchflower
 -   The full-grown flower can be harvested and replanted
 -   The Torchflower can be crafted into Orange Dye
 
-### Pitcher Plant
+#### Pitcher Plant
 
 -   The Sniffer can occasionally sniff up a Pitcher Pod item
 -   The Pitcher Pod, when planted on Farmland, grows into a Pitcher Crop
@@ -82,7 +84,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Once fully grown, the Pitcher Crop can be harvested, yielding a two-block-tall Pitcher Plant
 -   The Pitcher Plant can be crafted into Cyan Dye
 
-## Camel
+### Camel
 
 -   Camels can be equipped with a Saddle and ridden by two players
 -   Camels spawn naturally when Desert Villages generate
@@ -96,7 +98,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Camels can either walk slowly or sprint quickly
 -   They can also dash forward but will lose stamina for a while when doing so
 
-## Smithing
+### Smithing
 
 -   Smithing Tables have been redesigned into a workstation for physical equipment upgrades and modifications
 -   Alongside slots for combining a piece of equipment and materials, there is now a required slot for an item type called Smithing Template
@@ -106,7 +108,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Smithing Templates are consumed when used to upgrade an item in the Smithing Table
 -   You can craft a copy of a Smithing Template in the Crafting Table with 7 diamonds + 1 block of material that the template is made out of + 1 smithing template, which will output 2 of the same Smithing Template
 
-### Netherite Equipment
+#### Netherite Equipment
 
 -   Netherite equipment crafting now also requires a Netherite Upgrade Smithing Template
 -   Netherite Upgrade Smithing Templates can be found randomly in all Bastion Remnant chests
@@ -116,7 +118,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   Make Netherite equipment more significant achievement in the game's progression
     -   Adapt Netherite more naturally into the new Smithing Table crafting system
 
-### Armor Trims
+#### Armor Trims
 
 -   You can now visually customize your armor with a variety of unique trims at the Smithing Table
 -   Armor trims are purely visual with no gameplay benefits
@@ -146,7 +148,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   The viable ingredients you can use to define the color of your armor trim are the following:
     -   Iron, Copper, Gold, Lapis, Emerald, Diamond, Netherite, Redstone, Amethyst, Quartz
 
-## Cherry Groves
+### Cherry Groves
 
 -   Added a new Cherry Grove biome, with pretty cherry blossom trees
     -   The biome can be found in the mountains, in similar places as Meadows
@@ -158,7 +160,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   Placing a Pink Petal into an already placed block increases the number of petals
     -   Drops the number of petals in the block when mined
 
-## Bamboo Wood Set
+### Bamboo Wood Set
 
 -   Added a new Bamboo wood set, with all the corresponding wooden things you can craft from it
 -   Block of Bamboo can be crafted from 9 Bamboo and can be stripped like other wood logs
@@ -170,7 +172,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Added a unique Bamboo Raft and Bamboo Chest Raft which can be crafted like normal boats, but with Bamboo Planks
     -   They function the same as ordinary boats, but have a unique look to them
 
-## Chiseled Bookshelf
+### Chiseled Bookshelf
 
 -   A new, chiseled variation of the Bookshelf
 -   Crafted with 6 planks and 3 wooden slabs
@@ -181,7 +183,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   The numbering of book slots starts from 1 at the top-left, and increments from left-to-right
 -   Works with Hoppers
 
-## Hanging Signs
+### Hanging Signs
 
 -   Hanging Signs are a more expensive version of normal Signs
     -   Crafted with 2 chains and 6 stripped logs of your preferred wood type
@@ -193,7 +195,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Unlike normal Signs, they cannot be placed directly on the ground without support from the side or above
     -   However, Hanging Signs that have a horizontal bar will not pop when the supporting block is removed
 
-## Signs
+### Signs
 
 The following changes have been made for both Signs and Hanging Signs.
 
@@ -206,7 +208,7 @@ The following changes have been made for both Signs and Hanging Signs.
 -   Signs can now also be waxed with Honeycomb, preventing any further edits to its text
 -   Opening the sign edit screen in singleplayer no longer pauses the game
 
-## Calibrated Sculk Sensors
+### Calibrated Sculk Sensors
 
 -   A new variant of Sculk Sensors that allows you to filter vibrations based on their frequency level
 -   They are not found naturally and can only be crafted with 1 Sculk Sensor and 3 Amethyst Shards in the Crafting Table
@@ -216,24 +218,24 @@ The following changes have been made for both Signs and Hanging Signs.
     -   They output their redstone signal for the first 10 game ticks
 -   They can detect vibrations up to 16 blocks away
 
-## Vibration Resonance
+### Vibration Resonance
 
 -   Blocks of Amethyst have a new behavior when placed adjacent to Sculk Sensors
     -   If that Sculk Sensor receives a vibration, the Block of Amethyst will re-emit its frequency as a separate vibration at its location
 -   This behavior is called Vibration Resonance, and allows players to move vibration frequencies across long distances without having to recreate the vibration naturally
 
-## Playable Mob Sounds
+### Playable Mob Sounds
 
 -   When placing a Mob Head on a Note Block, that Note Block will now play one of the ambient sounds of that mob when played by a player or powered by Redstone
 -   Mob Heads can be placed on top of Note Blocks without sneaking
 
-## Piglin Mob Head
+### Piglin Mob Head
 
 -   Piglins will now drop their heads when killed by a charged Creeper
 -   Placing the Piglin head on a Note Block will play one of the Piglin's ambient sounds
 -   The Piglin head will flap its ears when powered by Redstone, or when worn by a player while walking
 
-## New Music
+### New Music
 
 -   Added the following new music tracks by Aaron Cherof to Cherry Groves, Desert, Jungle, Badlands, and Flower Forest biomes:
     -   A Familiar Room
@@ -242,19 +244,19 @@ The following changes have been made for both Signs and Hanging Signs.
     -   Echo in the Wind
 -   Added a new music disc with the track "Relic" by Aaron Cherof, found in Trail Ruins
 
-## Windows Aarch64/ARM64 support
+### Windows Aarch64/ARM64 support
 
 -   Minecraft Java Edition is now fully supported on Windows devices using an Aarch64/ARM64 architecture, such as the Windows Surface Pro X
 
-## Advancements
+### Advancements
 
-### New Husbandry Advancements
+#### New Husbandry Advancements
 
 -   `Smells Interesting` : Obtain a Sniffer Egg
 -   `Little Sniffs` : Feed a Snifflet (requires `Smells interesting`)
 -   `Planting the Past` : Plant any Sniffer seed (requires `Little sniffs`)
 
-### New Adventure Advancements
+#### New Adventure Advancements
 
 -   `Respecting the Remnants` : Brush a Suspicious block to obtain a Pottery Sherd
 -   `Careful Restoration` : Make a Decorated Pot out of 4 Pottery Sherds (requires `Respecting the Remnants`)
@@ -262,7 +264,7 @@ The following changes have been made for both Signs and Hanging Signs.
 -   `Smithing with Style` : Apply these Trim Smithing Templates at least once: Spire, Snout, Rib, Ward, Silence, Vex, Tide, Wayfinder (requires `Crafting a New Look`)
 -   `The Power of Books` : Read the power signal of a Chiseled Bookshelf using a Comparator
 
-# Changes
+## Changes
 
 -   Changes to Sculk Sensor block behaviors
 -   Vibration frequencies of many actions in the game have been tweaked
@@ -282,7 +284,7 @@ The following changes have been made for both Signs and Hanging Signs.
 -   The game will now display a message box on startup if user enabled text-to-speech functionality, but it is not available
 -   Removed Herobrine
 
-## Sculk Changes
+### Sculk Changes
 
 -   If a vibration is scheduled to be received by a Sculk Sensor or Sculk Shrieker, they will stay queued until all adjacent chunks are loaded and ticking
     -   Prevents vibration resonance setups from breaking when unloading their chunks from a distance
@@ -291,7 +293,7 @@ The following changes have been made for both Signs and Hanging Signs.
 -   Sculk Sensors and Calibrated Sculk Sensors now strongly power the block they are placed on
 -   Both types of Sculk Sensors now stay in their Cooldown phase for 10 ticks, with other phase timings being adjusted to compensate
 
-### Sculk Sensor Phases
+#### Sculk Sensor Phases
 
 -   Sculk Sensors and Calibrated Sculk Sensors have three phases: Inactive, Active and Cooldown
 -   The default phase is Inactive
@@ -309,7 +311,7 @@ The following changes have been made for both Signs and Hanging Signs.
     -   Cooldown: 1 game tick for both types of Sculk Sensors
 -   These phase timings were tweaked so that it is less common for activated contraptions to recursively activate the Sculk Sensor that powered them
 
-### Vibration Frequencies
+#### Vibration Frequencies
 
 In preparation for the Calibrated Sculk Sensor, vibration frequencies have been greatly simplified to prevent unwanted interference. The following are category descriptions for each frequency and the expected events that they correspond to:
 
@@ -329,7 +331,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 14.  Mobs and players teleporting or spawning
 15.  Mobs and players dying or an explosion
 
-## Step Sounds
+### Step Sounds
 
 -   Walking on a block will now always play a step sound
     -   It was previously not the case if you were walking along the edge of a block with air or fluid besides it
@@ -338,13 +340,13 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
     -   The top-most block you are walking on is played as normal
     -   The block underneath is played at a lower volume and pitch
 
-## Advancements
+### Advancements
 
 -   Breeding Camels and Sniffers now count for "The Parrots and the Bats" and are now required for "Two by Two"
 -   Hanging Signs now count for "Glow and Behold"
 -   Visiting a Cherry Grove is now required for "Adventuring Time"
 
-# Technical Changes
+## Technical Changes
 
 -   Improved performance of the light engine
 -   The data pack version is now 15, accounting for sign data format, item display orientation and advancement changes
@@ -383,7 +385,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 -   Changed encoding of `server.properties` to UTF-8
 -   Added validation for symbolic links in world saves
 
-## Light Engine
+### Light Engine
 
 The light engine is responsible for calculating the brightness of each block in the world. Light is calculated during world generation as well as updated when a block is changed in the world. Behavior of the light engine has not been changed.
 
@@ -392,9 +394,9 @@ The light engine is responsible for calculating the brightness of each block in 
     -   Improves FPS in situations when a lot of light updates occur
     -   Improves how quickly chunks can be generated
 
-## Commands
+### Commands
 
-### `return`
+#### `return`
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -410,27 +412,27 @@ Parameters:
 
 -   `value`: An integer return value
 
-### `data`
+#### `data`
 
 -   `string` data sources now accept negative boundaries, which are interpreted as index counted from the end of the string
 
-## Display Entity
+### Display Entity
 
-### Interpolation Changes
+#### Interpolation Changes
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at the next tick after receiving an update)
 -   Display entities are not rendered until their initial data is received. That means display entities might not be shown on the first tick.
 -   Note: due to how the game handles updates, changes to entities made after summoning might be delivered to clients within a later tick
 
-### Rendering Changes
+#### Rendering Changes
 
 -   `item_display` items have been rotated 180 degrees around the Y axis to better match the transformation that is applied when rendering items on an Armor Stand head and in Item Frames
     -   For reference, the order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)
 
-## Structure post-processors
+### Structure post-processors
 
-### Capped post-processor
+#### Capped post-processor
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -440,7 +442,7 @@ Parameters:
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-### Rule post-processor block entity configuration
+#### Rule post-processor block entity configuration
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -454,15 +456,15 @@ Parameters:
         -   `loot_table` Referenced loot table to add to block entity as `LootTable` field
         -   Field `LootTableSeed` is also added to the block entity using random seeded by block position
 
-## Loot Tables
+### Loot Tables
 
-### Random Sequences
+#### Random Sequences
 
 The game now uses named random sequences to deterministically produce loot for loot tables. Each random sequence produces a unique sequence based on the world seed and sequence ID, which means a loot table will produce the same results when ran with the same parameters in the same world.
 
 The ID of the random sequence to use for a loot table is specified in a new optional field called `random_sequence`. If no sequence name is given, loot is drawn using a non-deterministic random source.
 
-### `reference`
+#### `reference`
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition).
 
@@ -470,17 +472,17 @@ Fields:
 
 -   `name` - location of function to call
 
-### `any_of`/`all_of`
+#### `any_of`/`all_of`
 
 -   Loot condition `alternative` has been renamed to `any_of`
 -   Added new loot condition `all_of` that passes only when all sub-conditions pass
     -   Has the same syntax as `any_of`
 
-## Advancements
+### Advancements
 
-### New Triggers
+#### New Triggers
 
-#### `recipe_crafted`
+##### `recipe_crafted`
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -490,7 +492,7 @@ Fields:
         -   Each predicate needs to be fulfilled to trigger the advancement. This allows for separation between recipes that have same identifier but use different ingredients.
         -   This field is optional. When not provided, or left empty, only the `recipe_id` will dictate the success of the trigger
 
-### Changed Triggers
+#### Changed Triggers
 
 -   All fields in `placed_block`, `item_used_on_block` and `allay_drop_item_on_block` have been collapsed into a single `location` field
 -   The new `location` is similar to the `player` field - it is a list of loot conditions/predicates
@@ -553,14 +555,14 @@ After:
     }
     
 
-## Damage Types
+### Damage Types
 
 -   Players outside the world border are now hurt by the damage type `outside_border` instead of `in_wall`
 -   Forcibly removing an entity using the `/kill` command now uses damage type `generic_kill` instead of `out_of_world`
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Removed `replaceable_plants` since it was only used as a subset of the blocks for the tag above, and not as universally
 -   Added `replaceable_by_trees` to better express blocks that are replaced when the tree grows through them
@@ -582,7 +584,7 @@ After:
 -   Added `cherry_logs` block tag
 -   Added `bamboo_blocks` block tag
 
-### Item Tags
+#### Item Tags
 
 -   Added `villager_plantable_seeds` to represent which kind of seeds Villagers can farm
 -   Added `noteblock_top_instruments` to control which blocks can be placed on top of Note Blocks without sneaking
@@ -597,11 +599,11 @@ After:
 -   Added `cherry_logs` item tag
 -   Added `bamboo_blocks` item tag
 
-### Biome Tags
+#### Biome Tags
 
 -   Added `has_structure/trail_ruins`
 
-## Game Events
+### Game Events
 
 -   Removed `piston_contract` game event in favor of `block_deactivate`
 -   Removed `piston_extend` and `dispense_fail` game events in favor of `block_activate`
@@ -622,9 +624,9 @@ After:
     -   14: `entity_place`, `lightning_strike`, `teleport`
     -   15: `entity_die`, `explode`
 
-## Fonts
+### Fonts
 
-### New `unihex` Glyph Provider
+#### New `unihex` Glyph Provider
 
 -   New glyph provider for reading Unifont HEX files
     -   HEX format describes font glyphs using a bitmap
@@ -642,19 +644,19 @@ After:
         -   `left`, `right` - integers describing the position of the left-most and right-most columns of the glyph in range
             -   Any bits in columns outside of this range will be discarded
 
-### New `reference` Glyph Provider
+#### New `reference` Glyph Provider
 
 -   New glyph provider that can be used to include providers from other fonts
     -   Providers are guaranteed to be loaded only once, no matter how many times they are included
 -   Provider has one field `id`, that describes another font to be included in the currently loaded one
     -   Inclusion is performed after all fonts are loaded, so it will include all providers for a given font defined in all datapacks
 
-### Removed `legacy_unicode` Glyph Provider
+#### Removed `legacy_unicode` Glyph Provider
 
 -   The `legacy_unicode` glyph provider has been removed
 -   This functionality has been replaced by the `unihex` provider
 
-## Quick Play
+### Quick Play
 
 -   Added support for four new command line arguments that allow the game to be launched directly into a world
 -   `quickPlayPath` takes a specified path for logging (relative to the run directory)
@@ -677,22 +679,22 @@ After:
         -   `--quickPlayMultiplayer "localhost:25565"`
         -   `--quickPlayRealms "1234"`
 
-## Telemetry
+### Telemetry
 
-### All Events
+#### All Events
 
 -   Added new property: `launcher_name`
     -   This is set based on the `minecraft.launcher.brand` system property
     -   This will help us troubleshoot game launch related bugs more effectively, as we will be able to see whether the issue originated in the Minecraft launcher or a third-party program
 
-### Updated Required Events
+#### Updated Required Events
 
 -   `world_loaded`
     -   Added new property: `realms_map_content`
         -   When loading into a Realms Map Content world (Minigame), the `world_loaded` event will receive the name of that map
         -   This is to help us understand how Java Realms players interact with Java Realms adventure or minimap content
 
-### New Optional Events
+#### New Optional Events
 
 -   `advancement_made`
     -   This event is triggered when a player completes an advancement, and allows us to see the advancement ID and the time when the advancement was completed
@@ -702,12 +704,12 @@ After:
     -   Includes the time it took for the client to load
     -   This is so that we can work on improving and reducing the time it takes to load the game client
 
-## `server.properties`
+### `server.properties`
 
 -   File is now read in UTF-8 initially, with previous encoding (ISO 8859-1/Latin 1) as a fallback
 -   File is now written with UTF-8 encoding
 
-## Symbolic Link Validation
+### Symbolic Link Validation
 
 To improve safety, the game will now detect symbolic links used inside world directory. For a detailed explanation, check our [help article](https://aka.ms/MinecraftSymLinks).
 
@@ -723,6 +725,6 @@ To improve safety, the game will now detect symbolic links used inside world dir
         -   Note: paths will use OS-specific separators
     -   `pattern`, which uses default `prefix` type
 
-# Fixed bugs in 1.20
+## Fixed bugs in 1.20
 
 Around 250 bugs were fixed in this release. View the [list on the issue tracker](https://bugs.mojang.com/issues/?filter=27705).

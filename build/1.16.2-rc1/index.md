@@ -1,10 +1,12 @@
+# 1.16.2-rc1
+
 We have now released 1.16.2 Release Candidate 1, fixing even more stability issues. If no further critical issues are found, we expect this version to be the full release of 1.16.2 on Tuesday next week.
 
-# Technical Changes in 1.16.2 Release Candidate 1
+## Technical Changes in 1.16.2 Release Candidate 1
 
 -   The Resource and Data pack version has been raised to 6
 
-# Fixed bugs in 1.16.2 Release Candidate 1
+## Fixed bugs in 1.16.2 Release Candidate 1
 
 -   [MC-197275](https://bugs.mojang.com/browse/MC-197275) Due to changes to walls, "pack\_format: 5" is not cross-compatible between 1.15 and 1.16
 -   [MC-197263](https://bugs.mojang.com/browse/MC-197263) End sky and nether fog don't work on servers

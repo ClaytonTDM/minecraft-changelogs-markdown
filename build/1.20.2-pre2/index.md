@@ -1,14 +1,16 @@
+# 1.20.2-pre2
+
 Another pre-release this week with minor changes and some bug fixes.
 
-# Recipe book search revert
+## Recipe book search revert
 
 We received a lot of great feedback on the changes to the Recipe Book search in the last pre-release, as well as a number of bugs. As we do not have time to address this feedback so close to release, we have reverted the change for now, but we may look into this again at a later time.
 
-# Technical Changes
+## Technical Changes
 
 -   The resource pack version is now 18 accounting for the new icons in last pre-release
 
-# Fixed bugs in 1.20.2 Pre-release 2
+## Fixed bugs in 1.20.2 Pre-release 2
 
 -   [MC-109346](https://bugs.mojang.com/browse/MC-109346) Newly rendered players always look south until they move their head
 -   [MC-206182](https://bugs.mojang.com/browse/MC-206182) Cannot tab out of console text field of command block

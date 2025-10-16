@@ -1,17 +1,19 @@
+# 1.21.5-pre1
+
 Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you will mostly see bug fixes and technical tweaks until the start of the next snapshot cycle. As we enter the pre-release phase we will be releasing more frequently than our regular cadence on Wednesdays, so keep an eye out for the next pre-release!
 
-# Changes
+## Changes
 
 -   Added Spawn Eggs textures for programmer art texture pack
 
-# Technical Changes
+## Technical Changes
 
 -   The Resource Pack version is now 55
 -   Arguments in commands that accept inline values like loot tables, predicates, modifiers, data components, formatted text (`/loot`, `/give`, `/tellraw`, `/execute if predicate`, data components in `/execute if items`, etc.) have been reverted to accept numbers in place of booleans
 
 > **Developer's Note**: The original change happened because we moved away from using NBT as an intermediate format for parsing those values, which meant that booleans were separated from numbers (similar to handling in JSON). We've decided to temporarily revert that, since some functionality can't be achieved yet without using storage and macro functions. However, once that missing functionality is added (and data can be transferred without being converted to and from text), legacy boolean handling will be removed once again.
 
-## Network Protocol
+### Network Protocol
 
 -   The clientbound `player_chat` packet now contains an index increasing for every message sent to the client
     -   The index starts at 0 when logging in (or is reset by configuration phase and the `login` packet)
@@ -22,11 +24,11 @@ Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you 
     -   This is a simple hash of the 'last seen' signatures which should be reconstructed by the server, allowing quicker detection of desynchronized state
     -   This can be passed as `0` to disable the check, for compatibility with protocol translation
 
-# Resource Pack Version 55
+## Resource Pack Version 55
 
 -   Tweaked Leaf Litter block models
 
-# Fixed bugs in 1.21.5 Pre-Release 1
+## Fixed bugs in 1.21.5 Pre-Release 1
 
 -   [MC-170134](https://bugs.mojang.com/browse/MC-170134) Minecraft uses several times more VRAM than needed after exploring terrain for a while
 -   [MC-279350](https://bugs.mojang.com/browse/MC-279350) Leaf litter multipart model system is unoptimized, causing render lag

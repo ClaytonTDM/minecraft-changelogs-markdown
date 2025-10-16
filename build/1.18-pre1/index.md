@@ -1,3 +1,5 @@
+# 1.18-pre1
+
 The first 1.18 pre-release is here!
 
 From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out!
@@ -6,7 +8,7 @@ That being said, this pre-release introduces biome blending, which means that yo
 
 Happy mining!
 
-# Changes in 1.18 Pre-Release 1
+## Changes in 1.18 Pre-Release 1
 
 -   Amplified and Large biome worlds have been adapted to the new terrain and are now once again available in the Create World screen
 -   Removed world types "Caves" and "Floating islands" from the world creation screen
@@ -15,11 +17,11 @@ Happy mining!
     -   Will biomes blend? Yes
     -   Will caves blend? Your mileage may vary
 
-# Technical changes in 1.18 Pre-Release 1
+## Technical changes in 1.18 Pre-Release 1
 
 -   `--report` option in data generator now creates full worldgen reference files instead of just biomes
 
-# Fixed bugs in 1.18 Pre-Release 1
+## Fixed bugs in 1.18 Pre-Release 1
 
 -   [MC-46584](https://bugs.mojang.com/browse/MC-46584) Clicking and dragging MOUSE3 (Mouse wheel) over item slots incorrectly attempts to place full stacks in survival
 -   [MC-53444](https://bugs.mojang.com/browse/MC-53444) You can get outside of the worldborder by mounting a rideable entity (boat, pig, etc.) outside of it

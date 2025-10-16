@@ -1,4 +1,6 @@
-# CHANGES IN 1.15.2 PRE-RELEASE 1
+# 1.15.2-pre1
+
+## CHANGES IN 1.15.2 PRE-RELEASE 1
 
 -   Bees no longer anger when a nearby nest/hive is destroyed using a silk touch tool
 -   Added `doPatrolSpawning` and `doTraderSpawning` game rules that control spawning of patrols and wandering traders, respectively
@@ -9,7 +11,7 @@
 -   Bee Nests now have a 0.2% chance of spawning in Forest, Wooded Hills, Birch Forest, Tall Birch Forest, Birch Forest Hills, and Tall Birch Hills biomes
 -   Fixed bugs
 
-# FIXED BUGS IN 1.15.2 PRE-RELEASE 1
+## FIXED BUGS IN 1.15.2 PRE-RELEASE 1
 
 -   [MC-862](https://bugs.mojang.com/browse/MC-862) - Spawn protection doesn’t work for item frames, paintings and armor stands
 -   [MC-1541](https://bugs.mojang.com/browse/MC-1541) - Beacon effect removes potion effect of the same type

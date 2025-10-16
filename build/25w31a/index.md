@@ -1,8 +1,10 @@
+# 25w31a
+
 Oh, how we have yearned for the shipping room! We're back with our first snapshot release of the season, bringing you a big bundle of features from our third game drop of the year. Test the copper golem and copper chest for a tidier, livelier base, and watch your helper oxidize and turn into a statue, complete with adorable, redstone signal-emitting poses. Build functional decor using the brand-new shelves and try out copper weapons, tools and armor. To top it off, this release also includes copper horse armor and oxidizing lightning rods, in addition to a slew of bug fixes and technical changes.
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added Copper Chest
 -   Added Copper Golem
@@ -10,13 +12,13 @@ Happy mining!
 -   Added Copper Equipment
 -   Added Shelf
 
-## Copper Chest
+### Copper Chest
 
 -   Copper Chests is a new type of chest that has waxed and oxidized variants
 -   Copper Chests oxidizes over time and can be waxed like other Copper blocks
 -   Copper Chests can be crafted using a Chest and Copper Ingots
 
-## Copper Golem
+### Copper Golem
 
 -   Copper Golem is a new mob which can be spawned by placing a Jack o'Lantern or Carved Pumpkin on top of a Copper block
 -   Copper Golem oxidize over time and can be waxed like Copper blocks
@@ -26,7 +28,7 @@ Happy mining!
 -   Copper Golem can help with sorting items into Chests
 -   Interacting with the Copper Golem with an empty hand will make it drop its carried item
 
-### Copper Golem Item Sorting
+#### Copper Golem Item Sorting
 
 -   If the Copper Golem is not holding an item, it will look for nearby Copper Chests to try to pick up an item
     -   The Copper Golem will look in any oxidized and waxed Copper Chest variant to pick up items
@@ -39,7 +41,7 @@ Happy mining!
 -   If no matching chest is found the Copper Golem will idle for 7 seconds before trying again
 -   The search area for chests from the Copper Golem's position is horizontally 32 blocks and vertically 8 blocks
 
-## Copper Golem Statue Block
+### Copper Golem Statue Block
 
 -   The Copper Golem Statue Block is a new type of decorative block which has waxed and oxidized variants
 -   The Copper Golem Statue Block oxidizes over time and can be waxed like Copper blocks
@@ -47,11 +49,11 @@ Happy mining!
 -   If the Copper Golem Statue Block has no oxidation when interacted with using an Axe the block will turn into a Copper Golem
 -   Each pose emits a Redstone comparator signal
 
-## Lightning Rod
+### Lightning Rod
 
 -   Lightning Rods now oxidize like other Copper Blocks and the Lightning Rod on the Copper Golem
 
-## Copper Equipment
+### Copper Equipment
 
 -   Added Copper Nugget
 -   Added Copper armor
@@ -70,7 +72,7 @@ Happy mining!
     -   Has the same loot table and chance of generating as Iron Horse Armor
     -   Armor toughness: 4
 
-## Shelf
+### Shelf
 
 -   The Shelf is a new type of decorative block which comes in the following variants:
     -   Oak
@@ -96,13 +98,13 @@ Happy mining!
     -   Interacting with three connected Shelves swaps their contents with all items in the player's hotbar
     -   It does not matter which of the connected Shelves the player interacts with
 
-## Accessibility
+### Accessibility
 
 -   The "Attack/Destroy" and "Use Item/Place Block" keybinds are now toggleable, meaning they can be set to either "Hold" or "Toggle" in the Controls screen
 -   Added "Invert Mouse X" option to the Mouse Settings screen, which inverts the mouse x-axis
 -   Added "Sprint Window" option to the Controls screen, which represents the time window in ticks where double-tapping the forward key activates sprint
 
-# Changes
+## Changes
 
 -   Monster Spawn Eggs now have a tooltip warning when the difficulty is set to Peaceful
     -   The mob no longer spawns for one tick when an attempt is made to use the Spawn Egg
@@ -111,7 +113,7 @@ Happy mining!
 -   A dimension that has any player activity, forceloaded chunks, active portals, or Ender Pearls in flight will be considered "active" and will keep processing chunks and entities
     -   Previously, this would only apply if a player was in the dimension or a chunk was forceloaded
 
-## World Loading and Spawn Chunks
+### World Loading and Spawn Chunks
 
 -   The concept of fixed "Spawn Chunks" has been removed
 -   The game will ensure that the following chunks are fully loaded before the player joins or the server starts, in the same way as spawn chunks formerly were:
@@ -130,16 +132,16 @@ Happy mining!
 
 > _We believe that the niche held by spawn chunks has now been filled by alternative methods of chunk loading, such as using portals or ender pearls, particularly with the changes in this snapshot to how the game loads these chunks before the world starts ticking._
 
-## Sounds
+### Sounds
 
 -   Happy ghast is now audible from 64 blocks
 -   Sounds for chests now plays at a lower volume
 -   The volume at which a sound is played at now respects the sound source volume value
 -   The "Voice/Speech" sound source has been rephrased to "Narrator/Voice"
 
-## UI
+### UI
 
-### Debug Screen
+#### Debug Screen
 
 -   The debug screen is accessible by pressing F3, as before
 -   It can now be accessed from everywhere in the game, not only when in a game world
@@ -156,7 +158,7 @@ Happy mining!
 
 > **Developer's Note**: _Previously the information gathering every frame to render the F3 screen had a significant performance cost. So opening the screen to check you FPS noticably dropped the FPS. Now checking your FPS in `Performance` profile should not affect game performance._
 
-## Accessibility
+### Accessibility
 
 -   A button leading to the Controls screen has been added to the Accessibility Settings screen
     
@@ -167,7 +169,7 @@ Happy mining!
     
     -   The goal with these is to enhance visual cohesion across the dye set while maintaining distinct shapes to support colorblind accessibility
 
-## Performance Improvements
+### Performance Improvements
 
 -   Entity rendering order was improved for significantly better performance
     -   You’ll notice much smoother gameplay in areas with lots of mobs, like mob farms
@@ -175,19 +177,19 @@ Happy mining!
 
 > **Developer's Note**: _This change is quite big, and we would not be surprised if we introduced some ordering issues with this. For example, some part of some mob rendering too early or too late and is not visible or is visually broken. Please play around with this and report the bugs you encounter!_
 
-# Technical Changes
+## Technical Changes
 
 -   Pack versions now have minor versions
 -   The Data Pack version is now 82.0
 -   The Resource Pack version is now 65.0
 
-## Pack Formats
+### Pack Formats
 
 -   The pack versions for data packs and resource packs now have minor versions
     -   A minor version increment of the game's pack version is backwards-compatible, meaning all packs made for previous iterations of the same major version will keep working
 -   Packs can set compatibility requirements on minor versions in case they rely on resources introduced in a minor version
 
-### Pack Metadata
+#### Pack Metadata
 
 The pack.mcmeta format has been updated:
 
@@ -210,23 +212,23 @@ The pack.mcmeta format has been updated:
         -   Otherwise, it is not allowed and must be removed
     -   Added required field `min_format` and `max_format` with the same formats the fields above with the same name for the `pack` section
 
-# Data Pack Version 82.0
+## Data Pack Version 82.0
 
-## Commands
+### Commands
 
 -   The `summon` command now fails when trying to summon monsters while the difficulty is set to Peaceful
 
-## Game Rules
+### Game Rules
 
 -   Removed `spawnChunkRadius` game rule
 
-## Data Components
+### Data Components
 
-### `blocks_attacks` Item Component
+#### `blocks_attacks` Item Component
 
 -   If the damage reduced in an attack is `0`, for example by `angle` threshold not matching, the item can no longer get disabled in the attack, nor cause knockback due to blocking
 
-## Loot Tables
+### Loot Tables
 
 -   Added `minecraft:entity_interact` loot table type which takes the following parameters:
     -   `target_entity`, the entity being interacted with
@@ -252,16 +254,16 @@ The pack.mcmeta format has been updated:
 -   Added `harvest/cave_vine` loot table for drops when a Cave Vine with Glowberries is harvested by interacting with it
 -   Added `carve/pumpkin` loot table for drops when a Pumpkin is carved using Shears
 
-## World Generation
+### World Generation
 
 -   The `initial_density_without_jaggedness` field in `noise_settings` definitions has been replaced with a `preliminary_surface_level` field
     -   `initial_density_without_jaggedness` was a 3D density function that was used to determine an approximate surface level by scanning for the first point with a density greater than `0.390625`
     -   `preliminary_surface_level` is a 2D density function that should produce the y-level of the approximate surface
     -   The `minecraft:find_top_surface` density function can be used to replicate the previous scanning
 
-### Density Functions
+#### Density Functions
 
-#### Added `minecraft:find_top_surface`
+##### Added `minecraft:find_top_surface`
 
 -   Approximates the topmost surface of a given density function
 -   It scans from an upper bound to a lower bound to find the point at which the density changes from negative to positive
@@ -275,7 +277,7 @@ Fields:
 -   `lower_bound` - integer, lowest possible y-value
 -   `cell_height` - positive integer defining the grid resolution on which to scan
 
-#### Added `minecraft:invert`
+##### Added `minecraft:invert`
 
 -   Resolves to `1/argument`
 
@@ -283,7 +285,7 @@ Fields:
 
 -   `argument` - density function
 
-### Jigsaw Structures
+#### Jigsaw Structures
 
 -   The `max_distance_from_center` field may now specify a different restriction on the vertical axis from horizontal
     -   This can be specified by an object with fields:
@@ -292,16 +294,16 @@ Fields:
         -   e.g: `"max_distance_from_center": { "horizontal": 20, "vertical": 500 }`
     -   The previous format of a single inline value specifying both horizontal and vertical distance is still supported
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#copper_chests` - all Copper Chest blocks
 -   Added `#copper` - all Copper blocks
 -   Added `#incorrect_for_copper_tool` - all blocks which will not drop items with a copper tool
 -   Added `#copper_golem_statues` - all Copper Golem Statue blocks
 
-### Item Tags
+#### Item Tags
 
 -   Added `#copper_chests` - all Copper Chest block items
 -   Added `#copper` - all Copper block items
@@ -309,9 +311,9 @@ Fields:
 -   Added `#repairs_copper_armor` - all items which repair copper armor
 -   Added `#copper_golem_statues` - all Copper Golem Statue block items
 
-# Resource Pack Version 65.0
+## Resource Pack Version 65.0
 
-## Block Sprites
+### Block Sprites
 
 -   Added new block sprites:
     -   `copper`
@@ -339,7 +341,7 @@ Fields:
     -   `spruce_shelf`
     -   `warped_shelf`
 
-## Entity Sprites
+### Entity Sprites
 
 -   Added new entity sprites:
     -   `copper_golem`
@@ -351,7 +353,7 @@ Fields:
     -   `weathered_copper_golem_eyes`
     -   `oxidized_copper_golem_eyes`
 
-## Item Sprites
+### Item Sprites
 
 -   Added new item sprites:
     -   `copper_axe`
@@ -366,7 +368,7 @@ Fields:
     -   `copper_shovel`
     -   `copper_sword`
 
-### Sound Events
+#### Sound Events
 
 -   Added new sound events:
     -   `block.copper_chest.open`
@@ -405,11 +407,11 @@ Fields:
     -   `block.shelf.place_item`
     -   `block.shelf.single_swap`
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
-### Changes to Full Screen Passes
+#### Changes to Full Screen Passes
 
 -   The following vertex shaders have been removed, and replaced by `core/screenquad.vsh`:
     -   `core/blit_screen.vsh`
@@ -421,7 +423,7 @@ Fields:
 -   Vertex shaders for post-processing effects, as well as lightmap generation and full screen blits are no longer are passed the `Position` attribute, and instead must assign vertex coordinates by `gl_VertexID`
 -   These passes furthermore are only executed with 3 vertices, instead of a full quad
 
-# Fixed bugs in 25w31a
+## Fixed bugs in 25w31a
 
 -   [MC-46634](https://bugs.mojang.com/browse/MC-46634) Thunder volume is not affected by weather volume settings
 -   [MC-73881](https://bugs.mojang.com/browse/MC-73881) Summoning monsters in peaceful difficulty spawns monster for 1 tick

@@ -1,27 +1,29 @@
+# 21w44a
+
 Another snapshot is now available. We've added new world generation below existing chunks, and blocks and fluids are now also part of the simulation distance setting. We also fixed a few bugs.
 
 Keep in mind that we're still working on the world upgrades, so making a backup before upgrading is still a good idea.
 
 Enjoy!
 
-# New Features in 21w44a
+## New Features in 21w44a
 
 -   New world generation is now inserted under existing chunks when upgrading a world to the new world height
 -   Added an Online options screen where you can now find the Realms Notifications option and Difficulty when on a server
 -   Added an "Allow Server Listings" option to opt-out of having your name displayed in server listings
 
-# Changes in 21w44a
+## Changes in 21w44a
 
 -   Sleeping now only resets the weather cycle if it was raining
 -   Blocks and fluids are now also affected by simulation distance. It might be a good idea to test that the behavior of your Redstone contraptions remained the same
 -   Optimized entity collisions
 
-# Technical Changes in 21w44a
+## Technical Changes in 21w44a
 
 -   Servers can now set property `hide-online-players` to `true` in order to not send a player list on status requests
 -   When JFR profiling is started from an external source, the JFR events for network packets are now aggregated instead of one event per packet
 
-# Bugs fixed in 21w44a
+## Bugs fixed in 21w44a
 
 -   [MC-63340](https://bugs.mojang.com/browse/MC-63340) Sleeping always resets time until rain
 -   [MC-170551](https://bugs.mojang.com/browse/MC-170551) Foxes can't spawn on podzol or coarse dirt

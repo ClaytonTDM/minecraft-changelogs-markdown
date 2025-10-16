@@ -1,23 +1,25 @@
+# 25w21a
+
 Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems some of our developers missed those beautiful, gray, rainy skies far too much and absolutely insisted on giving the clouds in Minecraft a new look. What a de-light!
 
-# New Features
+## New Features
 
 -   Updated the pattern of clouds in the sky
 -   Horses, Donkeys, and Mules can now be fed carrots to heal, grow, and improve their temper
 
-## Music and Sound
+### Music and Sound
 
 -   Added a new sound for when a Lead snaps
 -   Added new custom sounds for shearing Saddles, Horse Armor, and Carpets from Llamas
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 78
 -   The Resource Pack version is now 62
 
-# Data Pack Version 78
+## Data Pack Version 78
 
-## Dialogs
+### Dialogs
 
 -   `run_command` click actions will now correctly close dialogs and book screens even if the command does not require elevated permissions
 -   Dialogs should now correctly return to the previous non-dialog screen on close in all cases
@@ -33,7 +35,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
     -   `minecraft:single_option` input control - between `1` and `1024` (inclusive)
     -   `minecraft:number_range` input control - between `1` and `1024` (inclusive)
 
-### `minecraft:text` Input Control
+#### `minecraft:text` Input Control
 
 -   `max_length` - maximum length of input, positive integer with default of 32
 -   `multiline` - if present, allows users to input multiple lines, optional object with fields:
@@ -42,7 +44,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines
         -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
 
-### `minecraft:number_range` Input Control
+#### `minecraft:number_range` Input Control
 
 -   The `steps` field has been replaced with a new field:
     -   `step` - step size, optional positive float
@@ -50,13 +52,13 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If absent, any value from range the is allowed
 -   `initial` - if not specified, now defaults to the middle of the range
 
-### `minecraft:multi_action_input_form` Dialog Type
+#### `minecraft:multi_action_input_form` Dialog Type
 
 -   Added new field `columns` - positive integer describing number of columns, default: `2`
 
-# Resource Pack Version 62
+## Resource Pack Version 62
 
-## Sounds
+### Sounds
 
 -   Added `entity/leashknot/break` for when a Lead snaps
 -   The following sounds have been renamed:
@@ -71,7 +73,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
     -   `mob/horse/saddle_unequip`
     -   `mob/llama/unequip`
 
-# Fixed bugs in 25w21a
+## Fixed bugs in 25w21a
 
 -   [MC-36696](https://bugs.mojang.com/browse/MC-36696) Clicking on the statistics button on the menu screen advances the game by 1 tick
 -   [MC-112730](https://bugs.mojang.com/browse/MC-112730) Beacon beam and structure block render twice per frame

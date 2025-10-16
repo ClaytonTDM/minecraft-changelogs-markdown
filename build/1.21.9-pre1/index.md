@@ -1,31 +1,33 @@
+# 1.21.9-pre1
+
 The copper age is approaching and it's time for this drop's first pre-release. Today's release includes more copper golem improvements, some changes to the mannequins and several bug fixes. Pre-releases don't follow the regular Tuesday release schedule, so keep an eye out for the next one.
 
-# Changes
+## Changes
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Copper Golem now only tries to open Chests that are neighboring blocks when it's a passenger
 
-## Minecraft Server Management Protocol
+### Minecraft Server Management Protocol
 
 -   Notifications now use `minecraft:notification/` prefix instead of `notification:`
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 87.1
 
-# Data Pack Version 87.1
+## Data Pack Version 87.1
 
-## Mannequins
+### Mannequins
 
 -   Mannequins description text can now be configured
 -   Mannequins now accept `minecraft:profile` component from spawner items
 
-### Modified Data Fields
+#### Modified Data Fields
 
 -   `profile` - now has the same format as a `minecraft:profile` component (which has been extended to allow overrides), defaults to `{}` (i.e. static profile with both `id` and `name` missing)
 
-### New Data Fields
+#### New Data Fields
 
 -   `pose` - The pose of the Mannequin
     -   Valid entries: `standing`, `crouching`, `swimming`, `fall_flying`, `sleeping`
@@ -35,7 +37,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 -   `hide_description` - Optional boolean specifying that no description should be shown at all
     -   A Mannequin with the description hidden displays as if a Player had no `below_score` display
 
-## Commands
+### Commands
 
 -   The `spawnpoint` command now optionally takes in a `pitch` argument
 -   The `setworldspawn` command is no longer limited to the overworld
@@ -44,9 +46,9 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 -   Server commands now run from the respawn dimension by default instead of always the overworld
 -   The `fetchprofile` command now also prints a clickable text to summon a Mannequin with the resolved profile
 
-## Data Components
+### Data Components
 
-### Modified `minecraft:profile`
+#### Modified `minecraft:profile`
 
 -   Profiles can now also have additional fields that can replace various values used for rendering
 -   If any of the fields are omitted, the value from the resolved profile is used, even if the profile resolved to the default skin
@@ -61,25 +63,25 @@ The copper age is approaching and it's time for this drop's first pre-release. T
         -   If this value is not present either as override or in player profile, Mannequins using this profile will use the cape texture, or if that is also not present, the default Elytra texture when wearing Elytra
     -   `model` - Optional model type, one of `wide` and `slim`
 
-## Entity Data
+### Entity Data
 
-### Modified `minecraft:player`
+#### Modified `minecraft:player`
 
 -   Changes to the `respawn` object
     -   `angle` has been renamed to `yaw` and is now a required field
     -   `pitch` has been added as a required field
     -   `dimension` is now a required field
 
-## Loot Functions
+### Loot Functions
 
-### `minecraft:copy_name`
+#### `minecraft:copy_name`
 
 -   The `source` field now accepts new context values:
     -   `direct_attacker`
     -   `target_entity`
     -   `interacting_entity`
 
-### `minecraft:copy_components`
+#### `minecraft:copy_components`
 
 -   The `source` field now accepts new context values:
     -   `this`
@@ -90,7 +92,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
     -   `interacting_entity`
     -   `tool`
 
-# Fixed bugs in 1.21.9 Pre-Release 1
+## Fixed bugs in 1.21.9 Pre-Release 1
 
 -   [MC-160528](https://bugs.mojang.com/browse/MC-160528) End portals do not negate fall damage
 -   [MC-243759](https://bugs.mojang.com/browse/MC-243759) Explosions won't damage an entity if the distance to its eyes is 0

@@ -1,19 +1,21 @@
+# 1.19.3-pre1
+
 We’re now releasing the first pre-release for Minecraft 1.19.3. This pre-release fixes a few bugs, contains a few tweaks, and it has some technical changes.
 
 If everything goes as expected, we aim to release this version on December 6th.
 
 Happy mining!
 
-# Technical Changes in 1.19.3 Pre-release 1
+## Technical Changes in 1.19.3 Pre-release 1
 
 -   Added new entity sub-predicate types: `axolotl`, `boat`, `fox`, `mushroom`, `painting`, `rabbit`, `horse`, `llama`, `villager`, `parrot`, `tropical_fish`
 -   `fillbiome` command now supports a filtered mode
 -   Player Heads can now contain a `note_block_sound` field
     -   When present, this determines the sound a note block makes when the head is placed on top of it
 
-## Loot tables and Advancements
+### Loot tables and Advancements
 
-### New entity sub-predicate types
+#### New entity sub-predicate types
 
 -   Added new entity sub-predicates for some entity types with variants:
 -   `axolotl`
@@ -43,7 +45,7 @@ Happy mining!
 -   `tropical_fish`
     -   `variant` - values: `kob`, `sunstreak`, `snooper`, `dasher`, `brinely`, `spotty`, `flopper`, `stripey`, `glitter`, `blockfish`, `betty`, `clayfish`
 
-## `fillbiome` command
+### `fillbiome` command
 
 Now supports a filtered form. New syntax:
 
@@ -53,7 +55,7 @@ New parameter:
 
 -   `filter`: A biome or biome tag to replace
 
-# Fixed bugs in 1.19.3 Pre-release 1
+## Fixed bugs in 1.19.3 Pre-release 1
 
 -   [MC-156663](https://bugs.mojang.com/browse/MC-156663) Villager pathfinding broken in water
 -   [MC-177596](https://bugs.mojang.com/browse/MC-177596) Weaponsmith working subtitle is "Grindstone used" instead of "Weaponsmith works"

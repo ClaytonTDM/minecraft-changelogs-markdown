@@ -1,6 +1,8 @@
+# 1.20-pre7
+
 Pre-release 7 for Minecraft 1.20 is now available in the Minecraft Launcher. This pre-release adds validation of symbolic links and fixes a bug.
 
-## Changes
+### Changes
 
 To improve safety, the game will now detect symbolic links used inside world directory. For a detailed explanation, check our [help article](https://aka.ms/MinecraftSymLinks).
 
@@ -16,6 +18,6 @@ To improve safety, the game will now detect symbolic links used inside world dir
         -   Note: paths will use OS-specific separators
     -   `pattern`, which uses default `prefix` type
 
-# Fixed bug in 1.20 Pre-release 7
+## Fixed bug in 1.20 Pre-release 7
 
 -   [MC-257778](https://bugs.mojang.com/browse/MC-257778) Bamboo Mosaic Slabs and Stairs are not in the #slabs and #stairs block and item tags

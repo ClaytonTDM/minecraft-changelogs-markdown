@@ -1,20 +1,22 @@
+# 1.20.3-pre3
+
 We are now releasing the third Pre-Release for Minecraft 1.20.3, containing mostly bug fixes, as well as changes to server resource pack handling.
 
 Happy Mining!
 
-# Technical Changes
+## Technical Changes
 
-## World resource packs
+### World resource packs
 
-### Local storage
+#### Local storage
 
 -   Only up to 20 server resource packs are cached
 
-### Packets
+#### Packets
 
 -   Client now sends additional updates about packs (like download success)
 
-# Fixed bugs in 1.20.3 Pre-Release 3
+## Fixed bugs in 1.20.3 Pre-Release 3
 
 -   [MC-265908](https://bugs.mojang.com/browse/MC-265908) Pool aliases don't redirect start pool
 -   [MC-266060](https://bugs.mojang.com/browse/MC-266060) The word "ignored" is misspelled as "ingored" within the "commands.tick.query.rate.sprinting" string

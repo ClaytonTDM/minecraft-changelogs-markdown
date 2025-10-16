@@ -1,3 +1,5 @@
+# 21w06a
+
 Hello, new snapshot! Hello, new cave generation!
 
 Today's snapshot introduces a major change to how caves are generated within Minecraft. You could say that we're now introducing the cave part of Caves & Cliffs.
@@ -7,11 +9,11 @@ This is only the first step in our underground adventure, so please note that sn
 -   You'll be unable to open old worlds in this snapshot as there is currently no upgrade path towards the new world height
 -   All caves of the new type between y31 and y63 will be flooded with water
 
-# New Features in 21w06a
+## New Features in 21w06a
 
 -   Added noise caves and aquifers
 
-## Noise caves and Aquifers
+### Noise caves and Aquifers
 
 -   Noise caves are a new way of generating caves, providing more natural variety. They can get really huge sometimes! Noise caves come in two flavors:
     -   Cheese caves. Like the holes in swiss cheese. These often form caverns of various size.
@@ -24,7 +26,7 @@ This is only the first step in our underground adventure, so please note that sn
 -   Magma sometimes generates at the bottom of underground bodies of water
 -   Underwater cave carvers and underwater canyons have been removed, since aquifers are used to generate water in caves instead.
 
-# Changes in 21w06a
+## Changes in 21w06a
 
 -   Overworld build and generation limits have been expanded
 -   Mineshafts adapted to larger caves
@@ -33,18 +35,18 @@ This is only the first step in our underground adventure, so please note that sn
 -   A redstone powered big dripleaf will not tilt (except when hit by a projectile)
 -   The textures for hanging roots and small dripleaves have been updated
 
-## World generation
+### World generation
 
 -   Generation range and build limits have been expanded by 64 blocks up and 64 blocks down, to a total range of 384 blocks
 -   Underground features, structures, and caves generate all the way down to y -64.
 
-## Mineshaft changes
+### Mineshaft changes
 
 -   Mineshaft pieces don't generate if they would be fully floating in the air
 -   Mineshaft corridors are supported by log pillars when needed
 -   No floating cobwebs
 
-# Fixed bugs in 21w06a
+## Fixed bugs in 21w06a
 
 -   [MC-214346](https://bugs.mojang.com/browse/MC-214346) Big dripleaf can be broken with arrows in spawn protection
 -   [MC-213813](https://bugs.mojang.com/browse/MC-213813) Small dripleaf can destroy any block

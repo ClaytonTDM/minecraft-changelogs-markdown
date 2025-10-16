@@ -1,27 +1,29 @@
+# 23w18a
+
 In this snapshot we're bringing you an additional advancement, updates to telemetry, as well as a fix for an 11 year old bug!
 
 Happy stepping!
 
-# New Features
+## New Features
 
-## New advancements
+### New advancements
 
-### Adventure advancements
+#### Adventure advancements
 
 -   `The Power of Books` : Read the power signal of a Chiseled Bookshelf using a Comparator
 
-# Changes
+## Changes
 
 -   For ease of use, the Smithing Table no longer requires a Smithing Template to be in the template slot before placing an itemstack into the other slots
 -   Jukebox has been added to the Redstone Blocks creative tab
 
-## Step Sounds
+### Step Sounds
 
 -   Walking on a block will now always play a step sound
     -   It was previously not the case if you were walking along the edge of a block with air or fluid besides it
 -   Walking on the ocean floor will produce a step sound for the block you are walking on at a lower volume and pitch
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 15, accounting for sign data format, item display orientation and advancement changes
 -   Advancement trigger changes:
@@ -35,9 +37,9 @@ Happy stepping!
     -   The `world_loaded` event now has a new property: `realms_map_content`
     -   Added two new opt-in telemetry events: `game_load_times` and `advancement_made`
 
-## Advancements
+### Advancements
 
-### Changed triggers
+#### Changed triggers
 
 -   All fields in `placed_block`, `item_used_on_block` and `allay_drop_item_on_block` have been collapsed to a single `location` field
 -   New `location` is similar to `player` field - it's a list of loot conditions/predicates
@@ -100,36 +102,36 @@ After:
     }
     
 
-## Loot tables
+### Loot tables
 
-### `any_of`/`all_of`
+#### `any_of`/`all_of`
 
 -   Loot condition `alternative` has been renamed to `any_of`
 -   Added new loot condition `all_of` that passes only when all sub-conditions pass. It has the same syntax as `any_of`
 
-## Telemetry
+### Telemetry
 
 This release includes a new global property sent with every event, a new property in the required WorldLoaded event, as well as two new opt-in events. The updated required events will help us troubleshoot launcher bugs more efficiently, and understand how Java Realms content is interacted with. The updated optional events will help inform game design decisions, and allow us to track and improve game load speeds.
 
-### All events
+#### All events
 
 -   Added new property: `launcher_name`
     -   This is set based on the `minecraft.launcher.brand` system property. This will help us troubleshoot game launch related bugs more effectively, as we will be able to see whether the issue originated in the Minecraft launcher or a third-party program.
 
-### Updated required events
+#### Updated required events
 
 -   `world_loaded`
     -   Added new property: `realms_map_content`
         -   When loading into a Realms Map Content world (Minigame), the `world_loaded` event will receive the name of that map. This is to help us understand how Java Realms users interact with Java Realms adventure or minimap content.
 
-### New optional events
+#### New optional events
 
 -   `advancement_made`
     -   This event is triggered when a player completes an advancement, and allows us to see the advancement ID and the time when the advancement was completed. This helps us as a studio understand player progress and limits, which informs our game design.
 -   `game_load_times`
     -   An event that is triggered when the game client is loaded and includes the time it took for the client to load. This is so that we can work on improving and reducing the time it takes to load the game client.
 
-# Fixed bugs in Snapshot 23w18a
+## Fixed bugs in Snapshot 23w18a
 
 -   [MC-1133](https://bugs.mojang.com/browse/MC-1133) Whether or not a player experiences some effect is calculated based on the block under the center of the player
 -   [MC-48923](https://bugs.mojang.com/browse/MC-48923) Slime/magma cubes not affected by jump boost potion effect

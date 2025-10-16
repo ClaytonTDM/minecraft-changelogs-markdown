@@ -1,8 +1,10 @@
+# 1.17-pre2
+
 It's Monday and it's time for another pre-release! This one fixed a few bugs and crashes.
 
 In case you missed our recent [news](https://www.minecraft.net/article/caves---cliffs--part-i-has-release-date-), we just announced that we're releasing Caves & Cliffs Part I on June 8th. That's soon!
 
-# Bugs fixed in 1.17 Pre-release 2
+## Bugs fixed in 1.17 Pre-release 2
 
 -   [MC-68129](https://bugs.mojang.com/browse/MC-68129) Smooth lighting doesn't work properly underwater
 -   [MC-196298](https://bugs.mojang.com/browse/MC-196298) Arrows fired into the side of bamboo or pointed dripstone never despawn

@@ -1,30 +1,32 @@
+# 1.19.4-pre2
+
 We are now releasing the second pre-release for Minecraft 1.19.4. This pre-release contains bug fixes, as well as an updated model for the decorated pot.
 
 As a reminder, the pre-release cycle for 1.19.4 will continue to contain mostly bug fixes.
 
 Happy mining!
 
-# Technical Changes
+## Technical Changes
 
-## Mob Behavior
+### Mob Behavior
 
 -   Only mobs in the `dismounts_underwater` entity tag will now force the rider to dismount when underwater
 
-# Changes for Experimental Features
+## Changes for Experimental Features
 
-## Cherry Biome and Wood Set
+### Cherry Biome and Wood Set
 
 -   Updated the texture for Pink Petals
 -   Updated textures for the Cherry Door, Cherry Sapling, and Cherry Boat with Chest
 
-## Decorated Pot
+### Decorated Pot
 
 -   Updated the neck of the Decorated Pot model
     -   With the former pot we decided to make the pot's neck clip with blocks, so it would be extra flexible to build with
     -   However, this had some Z-fighting issues where 2 objects are in the same exact position and cause flickering
     -   This is prevented with the new and more complex block model
 
-# Fixed bugs in 1.19.4 Pre-release 2
+## Fixed bugs in 1.19.4 Pre-release 2
 
 -   [MC-137552](https://bugs.mojang.com/browse/MC-137552) Loaded crossbows look unloaded in item frames and when dropped on the ground
 -   [MC-229293](https://bugs.mojang.com/browse/MC-229293) Casting issue: Broken blocks drop items in the wrong position at high distances

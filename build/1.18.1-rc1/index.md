@@ -1,6 +1,8 @@
+# 1.18.1-rc1
+
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.18.1. This release candidate fixes crashes and bugs. If there are no major issues following this release, no further changes will be done before the full release. ​ Happy mining! ​
 
-# Fixed Bugs in 1.18 Release Candidate 1
+## Fixed Bugs in 1.18 Release Candidate 1
 
 ​
 

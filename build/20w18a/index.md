@@ -1,13 +1,15 @@
+# 20w18a
+
 In this snapshot we made some changes to Redstone wire and we fixed a bunch of bugs.
 
-# Changes in 20w18a
+## Changes in 20w18a
 
 -   Redstone wire changes
 -   The target block now conducts redstone signals
 
 ​
 
-## Redstone wire
+### Redstone wire
 
 The blockstate, rendering and behavior of redstonewire are more in line with each other. Redstone will provide power to blocks on all sides it shows a visual connection to, and not do so on those sides without a visual connection. ​
 
@@ -18,7 +20,7 @@ The blockstate, rendering and behavior of redstonewire are more in line with eac
 
 ​![Comparison between 1.15.2 and snapshot 20w18a](https://launchercontent.mojang.com/images/RedstoneChanges3_741x421.png)
 
-# Technical Changes in 20w18a
+## Technical Changes in 20w18a
 
 -   Added a `enable-status` option to the server.properties file which if set to `false` will suppress replies to status requests from clients. This makes the server appear offline in the multiplayer screen.
 -   Added control over how much entity data a server sends to clients
@@ -26,7 +28,7 @@ The blockstate, rendering and behavior of redstonewire are more in line with eac
 
 ​
 
-## Entity Broadcasting
+### Entity Broadcasting
 
 It is now possible to control at what range the server sends data about entities to clients. ​
 
@@ -34,14 +36,14 @@ It is now possible to control at what range the server sends data about entities
 
 ​
 
-## Advancements
+### Advancements
 
 -   Added `player` check to every trigger (except `impossible`)
 -   Entity checks in triggers can now use loot table condition syntax
 
 ​
 
-### Extended entity checks
+#### Extended entity checks
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -92,13 +94,13 @@ is now equivalent to:
 
 ​
 
-### Miscellaneous trigger changes
+#### Miscellaneous trigger changes
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 
 ​
 
-# Fixed bugs in 20w18a
+## Fixed bugs in 20w18a
 
 -   [MC-11211](https://bugs.mojang.com/browse/MC-11211) Unable to perform many right click actions when targeting the top face of blocks placed at y=255
 -   [MC-111381](https://bugs.mojang.com/browse/MC-111381) Rendering rotations for shulkers are set in onInitialSpawn method

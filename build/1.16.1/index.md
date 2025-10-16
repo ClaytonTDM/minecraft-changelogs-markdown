@@ -1,8 +1,10 @@
+# 1.16.1
+
 We're now releasing 1.16.1 for Minecraft: Java Edition. This version fixes stability issues with Realms.
 
 Looking for all the new stuff in the Nether Update release? You can check out [this post](https://www.minecraft.net/en-us/article/nether-update-java) to read about all the new things!
 
-# Get the Release
+## Get the Release
 
 To install the release, open up the [Minecraft Launcher](https://www.minecraft.net/download) and click play! Make sure your Launcher is set to the "Latest Release" option.
 

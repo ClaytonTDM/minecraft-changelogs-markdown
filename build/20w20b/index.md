@@ -1,19 +1,21 @@
+# 20w20b
+
 This week we are releasing a bit of a smaller snapshot. However, if you're into switching game modes and completing advancements, this is right up your alley!
 
 **Edit:** We've now released 20w20b to fix a bug
 
-# Fixed Bug in 20w20b
+## Fixed Bug in 20w20b
 
 -   [MC-183769](https://bugs.mojang.com/browse/MC-183769) NPE in server initialization
 
-# New Features in 20w20a
+## New Features in 20w20a
 
 -   Added new Game Mode Switcher debug menu
 -   Added new Nether Advancements
 
 ​
 
-## Game Mode Switcher
+### Game Mode Switcher
 
 New F3 debug feature which allows you to switch game modes with traditional "tabbing" functionality. ​
 
@@ -24,7 +26,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 
 ​
 
-### F3 + N (Toggle Spectator)
+#### F3 + N (Toggle Spectator)
 
 A small change has been made to this debug combination. ​
 
@@ -33,7 +35,7 @@ A small change has been made to this debug combination. ​
 
 ​
 
-## New Advancements
+### New Advancements
 
 -   `Hidden in the Depths` unlocks when obtaining Ancient Debris
 -   `Cover Me in Debris` unlocks when obtaining full Netherite armor
@@ -48,7 +50,7 @@ A small change has been made to this debug combination. ​
 
 ​
 
-# Changes in 20w20a
+## Changes in 20w20a
 
 -   The `Bullseye` advancement now unlocks when hitting the bullseye of a target block from at least 30 meters away
 -   The `Serious Dedication` advancement is now awarded for obtaining a Netherite Hoe
@@ -57,7 +59,7 @@ A small change has been made to this debug combination. ​
 
 ​
 
-# Technical Changes in 20w20a
+## Technical Changes in 20w20a
 
 -   Shulkers with "NoAI" can now be summoned with rotation.
 -   Added `thrown_item_picked_up_by_entity` advancement trigger
@@ -67,9 +69,9 @@ A small change has been made to this debug combination. ​
 
 ​
 
-## Advancements
+### Advancements
 
-### `item_used_on_block` trigger type
+#### `item_used_on_block` trigger type
 
 Properties:
 
@@ -78,7 +80,7 @@ Properties:
 
 ​
 
-### `player_generates_container_loot` trigger type
+#### `player_generates_container_loot` trigger type
 
 Properties:
 
@@ -86,7 +88,7 @@ Properties:
 
 ​
 
-### `item_used_on_block` trigger type
+#### `item_used_on_block` trigger type
 
 Properties:
 
@@ -95,14 +97,14 @@ Properties:
 
 ​
 
-## Miscellaneous trigger changes
+### Miscellaneous trigger changes
 
 -   `location` got a new property `smokey` which checks if the location is closely above a campfire
 -   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
 
 ​
 
-# Fixed bugs in 20w20a
+## Fixed bugs in 20w20a
 
 -   [MC-182967](https://bugs.mojang.com/browse/MC-182967) Throwing ender pearl whilst mounted doesn't teleport you
 -   [MC-179481](https://bugs.mojang.com/browse/MC-179481) Structure block offset can't be bigger than 32

@@ -1,20 +1,22 @@
+# 1.19.3
+
 We're now releasing 1.19.3 for Minecraft: Java Edition. This release gives the Vex a brand new look as well as containing technical improvements and bug fixes.
 
-# New Features in 1.19.3
+## New Features in 1.19.3
 
 -   Some experimental features are now available through built-in experimental datapacks
 -   Added a new "Panorama Scroll Speed" accessibility option
 -   Added new default skins for offline players
 -   New wood sounds
 
-## Sounds
+### Sounds
 
 -   Various wood types now have unique sounds when placed, broken, or walked on
     -   There are three sets of unique sounds: Overworld wood types, Nether wood types, and Bamboo (when enabled)
 -   Step sounds can now be heard when walking on Carpets, Lily Pads and Small Amethyst Buds
 -   Step sounds can now be heard when walking through Nether sprouts, Glow lichen, Crimson Roots and Warped Roots
 
-# Changes in 1.19.3
+## Changes in 1.19.3
 
 -   Reworked the Creative Inventory tabs
 -   Added Operator Items Tab option in the Controls menu which is off by default
@@ -32,7 +34,7 @@ We're now releasing 1.19.3 for Minecraft: Java Edition. This release gives the V
 -   Changes to tooltips
 -   The Wild update music has been tweaked to be slightly less loud
 
-## Creative Inventory
+### Creative Inventory
 
 The ordering of tabs and the contents in the Creative Inventory have been tweaked to make the experience of finding relevant blocks and items easier.
 
@@ -61,18 +63,18 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   Tooltips for all items in Creative Menu outside single-category tabs will show categories where this item can be found
     -   Previously this only happened on the search tab
 
-## Vex
+### Vex
 
 -   Changes to Vex model and textures
     -   The Vex retains its old, now slightly oversized, hitbox to make it easier to fight
 
-## Block Support
+### Block Support
 
 -   Fence Gates no longer provide center support beneath them
 -   When opening, Shulker Boxes will pop off blocks which are attached to opened faces (such as Torches)
     -   Blocks that require support cannot be placed on these open faces while the Shulker Box is open
 
-## Spawners
+### Spawners
 
 -   No longer has a default mob spawn type when placed by a player (previously was the Pig)
 -   Will not emit fire particles when a mob spawn type has not been defined
@@ -81,13 +83,13 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   The mob type is now displayed in the hover description of a Spawner item stack
     -   If a mob type has not been defined yet, the hover description will describe how to set it
 
-## Items
+### Items
 
 -   Added new Spawn Egg items for Ender Dragon, Iron Golem, Snow Golem and Wither mobs to Creative mode
     -   Ender Dragon and Wither Spawn Eggs will only be available through commands to prevent accidental destruction of player builds
 -   Polar Bear Spawn Egg colors have changed to distinguish it from the Ghast Spawn Egg
 
-## Chat
+### Chat
 
 -   Removed Chat Preview
 -   Chat messages deleted by server moderators will no longer be completely hidden, but rather replaced with text stating "This chat message has been deleted by the server."
@@ -99,7 +101,7 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   Partially filtered chat messages now show the filtered text as gray hashes with a hover text saying that it was filtered
 -   The Chat Reporting screen now shows when the player being reported rejoined chat
 
-## Added Draft Player Reports
+### Added Draft Player Reports
 
 Player Reports can now be kept temporarily as a draft while connected to a server.
 
@@ -108,18 +110,18 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   Draft reports are kept until the player leaves the current server or world
     -   When leaving, the player will be prompted to either discard or finish and send the report
 
-## LAN screen
+### LAN screen
 
 -   The screen now allows selecting the port on which to host the LAN world
 -   The game mode and allow cheats buttons are now initialized with the default values of the world
 
-## Tooltips
+### Tooltips
 
 -   When tabbing through buttons, tooltips are displayed above or below them
 -   Tooltips displayed when hovering are displayed next to the cursor
 -   Tooltips from focused buttons (focused by pressing tab) take priority over tooltips from hovered buttons
 
-# Technical Changes in 1.19.3
+## Technical Changes in 1.19.3
 
 -   Added Feature Flags - world options to enable or disable some experimental or unfinished features (like blocks, entities and items)
 -   Command changes
@@ -133,15 +135,15 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   Migrated linear algebra types to Java OpenGL Math Library (JOML)
 -   Blocks carried by Endermen now use loot tables to generate drops when killed
 
-## Feature flags
+### Feature flags
 
-### General notes
+#### General notes
 
 -   Feature flags are options that enable or disable certain groups of game elements (like blocks, entities and items), later called "features"
 -   Game elements controlled by flags are hardcoded
 -   Feature flags are stored in world
 
-### Configuration and datapack changes
+#### Configuration and datapack changes
 
 -   Feature flags are enabled by datapacks
     -   New pack metadata section called `features` is added, containing enabled feature flags in list named `enabled`
@@ -152,9 +154,9 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   Datapacks discovered after world creation will be disabled if they require features that are not enabled for loaded world
 -   Added new entity sub-predicate types: `axolotl`, `boat`, `fox`, `mushroom`, `painting`, `rabbit`, `horse`, `llama`, `villager`, `parrot`, `tropical_fish`
 
-### Effects of feature flags
+#### Effects of feature flags
 
-#### Blocks
+##### Blocks
 
 -   Disabled block ids are not recognized by commands that can create new blocks
 -   Block items for disabled blocks are disabled
@@ -162,26 +164,26 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   Disabled blocks won't be loaded as part of entities (for example as falling sand or blocks carried by Endermen)
 -   Players can't interact with disabled blocks
 
-#### Entities
+##### Entities
 
 -   Disabled entity ids are not recognized by commands that can summon new entities
 -   Disabled entities will not spawn or load
 -   Spawn egg items for disabled entities are disabled
 
-#### Items
+##### Items
 
 -   Disabled items are hidden from creative menu
 -   Recipes and loot tables are prevented from creating disabled items
 -   Disabled item ids are not recognized by commands that can create new items
 -   Disabled items can't be used for interactions or attacking
 
-## Commands
+### Commands
 
 -   New command: `fillbiome`
 -   New execute sub-command: `execute if|unless biome`
 -   Improvements to the `publish` command
 
-### `fillbiome`
+#### `fillbiome`
 
 Changes biome entries for an area. Note that biomes are not stored per-block, so affected positions may not match input precisely.
 
@@ -196,7 +198,7 @@ Parameters:
 -   `biome`: The biome to set
 -   `filter`: A biome or biome tag to replace
 
-### `execute`
+#### `execute`
 
 Execute commands can now be conditional on biomes.
 
@@ -204,7 +206,7 @@ Syntax:
 
 `execute if|unless biome <pos> <biome>`
 
-### `publish`
+#### `publish`
 
 The `publish` command has new arguments to enable commands and set the default gamemode.
 
@@ -212,7 +214,7 @@ Syntax:
 
 `publish [allowCommands] [gamemode] [port]`
 
-## Telemetry
+### Telemetry
 
 This release includes the WorldUnloaded event, a required event, as well as several opt-in events. Diagnostic tracking is a tool that helps us understand what you like about Minecraft, which allows us to make those things better.
 
@@ -224,7 +226,7 @@ The rest of the current telemetry events are opt-in, which means that you can ch
 
 Just like all the thoughts and comments we get from you on our feedback site, this is something that greatly helps us improve Minecraft. We want to make a game that you want to play, so we want to know what that game needs. Even if it’s more lava.
 
-### Transparency
+#### Transparency
 
 -   Added Telemetry Data Collection Screen
     -   This screen displays information about the type of data that is sent
@@ -237,22 +239,22 @@ Just like all the thoughts and comments we get from you on our feedback site, th
     -   These can be found under the `logs/telemetry` directory
         -   A shortcut to this directory is available via the "Open My Data" button on the Telemetry Data Collection screen
 
-### Required events
+#### Required events
 
 -   Added WorldUnloaded event
 -   Removed client Java version from the WorldLoaded event
 
-#### WorldLoaded & WorldUnloaded
+##### WorldLoaded & WorldUnloaded
 
 Understanding how Minecraft is played allows us to focus game updates and improvements on the areas that are most relevant to players. The data that tells us this includes game mode, client or server modded status, and game version.
 
 WorldLoaded & WorldUnloaded are two paired events that calculate how long the world session has lasted (in seconds and ticks). Data from WorldLoaded is sent when a world is launched, and data from WorldUnloaded is sent when a world is shut down (quitting to title, disconnecting from a server).
 
-### Optional events
+#### Optional events
 
 -   Added PerformanceMetrics and WorldLoadTimes events
 
-#### PerformanceMetrics
+##### PerformanceMetrics
 
 Knowing the overall performance profile of Minecraft helps us tune and optimize the game for a wide range of machine specifications and operating systems.
 
@@ -260,13 +262,13 @@ The periodic performance metrics includes data such as frame-rates, rendering pe
 
 Game version is included to help us compare the performance profile for new versions of Minecraft.
 
-#### WorldLoadTimes
+##### WorldLoadTimes
 
 It’s important for us to understand how long it takes to join a world, and how that changes over time. For example, when we add new features or do larger technical changes, we need to see what impact that had on load times.
 
 This event includes the total time in milliseconds for the world to load, whether this was a new world, as well as game version and platform details.
 
-## Game Rules
+### Game Rules
 
 -   Added `blockExplosionDropDecay`, `mobExplosionDropDecay` and `tntExplosionDropDecay` game rules
     -   When set to `false`, all blocks drop loot
@@ -283,9 +285,9 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   Added `globalSoundEvents` game rule, controlling whether certain gameplay moments are heard by all players regardless of location
     -   Defaults to `true`
 
-## Recipes
+### Recipes
 
-### Crafting book categories
+#### Crafting book categories
 
 -   Crafting book categories/tabs can now be controlled by recipe definitions
 -   Categories available for `shaped`/`shapeless` and various special crafting recipes:
@@ -300,7 +302,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   Some crafting books collapse multiple categories into a single tab
 -   The exact mappings might change in the future
 
-## Resource Packs
+### Resource Packs
 
 -   The Resource Pack version is now 12
 -   Removed "fixers" for resource packs with versions 3 and 4 (pre-flattening)
@@ -308,7 +310,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   Game now loads all block models and blockstate definitions in appropriate directories
     -   That means that if a pack has invalid model it will prevent pack from loading, even if this model is unused
 
-### Texture loading changes
+#### Texture loading changes
 
 -   Context: When the game loads all textures used by block and item models need to be stitched (merged) into a single image, called the "atlas"
     -   Individual textures that are stitched onto the atlas are called "sprites"
@@ -316,7 +318,7 @@ This event includes the total time in milliseconds for the world to load, whethe
     -   By default, textures not in the `textures/item` and `textures/block` directories will no longer be automatically recognized and will fail to load
 -   Resource packs can now have configuration files, located in `atlases` directory, that control which images are included in the atlases
 
-#### Atlas configuration files
+##### Atlas configuration files
 
 -   New directory `atlases` is now present for resource packs
 -   This directory contains JSON entries for configuring atlases:
@@ -348,12 +350,12 @@ This event includes the total time in milliseconds for the world to load, whethe
         -   Values such as `x` are transformed to real image coordinates via dividing by their divisor, and then multiplying by the real image size
 -   Example: if a pack has a file named `assets/test/textures/fancy/iridium.png` and source is `{"type": "directory", "source": "fancy", "prefix": "custom/"}`, the texture will be available in models as `test:custom/iridium`
 
-## Custom Player Head Note Block sounds
+### Custom Player Head Note Block sounds
 
 -   Player Heads can now contain a `note_block_sound` field
     -   When present, this determines the sound a note block makes when the head is placed on top of it
 
-## New entity sub-predicate types
+### New entity sub-predicate types
 
 -   Added new entity sub-predicates for some entity types with variants:
 -   `axolotl`
@@ -383,7 +385,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   `tropical_fish`
     -   `variant` - values: `kob`, `sunstreak`, `snooper`, `dasher`, `brinely`, `spotty`, `flopper`, `stripey`, `glitter`, `blockfish`, `betty`, `clayfish`
 
-## Network Protocol
+### Network Protocol
 
 -   The network protocol now supports adding player entities to the world without being added to the 'tab' player list
 -   Servers can now lazily distribute players' profile public keys along with their first chat packet
@@ -393,7 +395,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   Profile public keys will now be refreshed without reconnecting
 -   Clients now reset their chat session on receiving a login packet
 
-# Experimental Features in 1.19.3
+## Experimental Features in 1.19.3
 
 -   Some experimental features now need to be enabled to appear in worlds
 -   Such features are enabled by adding a built-in datapack when creating a world
@@ -401,11 +403,11 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   Worlds that are using experimental features will be marked as "Experimental" in world selection list
 -   Experimental features cannot be toggled for existing worlds
 
-## Bundles
+### Bundles
 
 -   Bundles are now available as an experimental feature
 
-## Added Camel
+### Added Camel
 
 Camels are now available when Update 1.20 experimental features are enabled.
 
@@ -420,7 +422,7 @@ Camels are now available when Update 1.20 experimental features are enabled.
 -   Camels can either walk slowly or sprint quickly
 -   They can also dash forward but will lose stamina for a while when doing so
 
-## Bamboo Wood Set
+### Bamboo Wood Set
 
 A new set of Bamboo wood blocks are now available when Update 1.20 experimental features are enabled.
 
@@ -446,7 +448,7 @@ A new set of Bamboo wood blocks are now available when Update 1.20 experimental 
 -   Added a unique Bamboo Raft and Bamboo Chest Raft which can be crafted like normal boats, but with Bamboo Planks
     -   They function the same as ordinary boats, but have a unique look to them
 
-## Chiseled Bookshelf
+### Chiseled Bookshelf
 
 A new, chiseled variation of the Bookshelf is now available when Update 1.20 experimental features are enabled.
 
@@ -459,7 +461,7 @@ A new, chiseled variation of the Bookshelf is now available when Update 1.20 exp
     -   Perfect for hiding secrets in your spooky library
 -   Works with Hoppers
 
-## Hanging Signs
+### Hanging Signs
 
 Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now you can! Hanging signs are now available when Update 1.20 experimental features are enabled.
 
@@ -473,21 +475,21 @@ Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now 
 -   Unlike normal Signs, they cannot be placed directly on the ground without support from the side or above
     -   However, Hanging Signs that have a horizontal bar will not pop when the supporting block is removed
 
-## Mob Heads on Note Blocks interaction
+### Mob Heads on Note Blocks interaction
 
 -   When placing a Mob Head on a Note Block, that Note Block will now play one of the ambient sounds of that mob when played by a player or powered by Redstone
 
-## Piglin Mob Head
+### Piglin Mob Head
 
 -   Piglins will now drop their heads when killed by a charged Creeper
 -   Placing the Piglin head on a Note Block will play one of the Piglin's ambient sounds
 -   The Piglin head will flap its ears when powered by Redstone, or when worn by a player while walking
 
-## Advancements
+### Advancements
 
 -   Breeding Camels now counts for "The Parrots and the Bats" and is now required for "Two by Two"
 -   Hanging Signs now counts for "Glow and Behold"
 
-# Fixed bugs in 1.19.3
+## Fixed bugs in 1.19.3
 
 Around 200 bugs were fixed in this release. View the [list on the issue tracker](https://bugs.mojang.com/issues/?filter=27487).

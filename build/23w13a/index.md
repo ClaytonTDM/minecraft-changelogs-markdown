@@ -1,10 +1,12 @@
+# 23w13a
+
 In this week's snapshot 23w13a we're following up on all the new things in last week's snapshot with a big round of bug fixes. Happy mining!
 
-# Changes
+## Changes
 
 -   GUI can be scaled on the Video Settings screen by holding `Ctrl` and scrolling the mouse wheel
 
-# Fixed bugs in Snapshot 23w13a
+## Fixed bugs in Snapshot 23w13a
 
 -   [MC-159637](https://bugs.mojang.com/browse/MC-159637) Mobs with passengers have broken movements
 -   [MC-230916](https://bugs.mojang.com/browse/MC-230916) "Potted Flowering Azalea Bush Plant" uses the wrong texture

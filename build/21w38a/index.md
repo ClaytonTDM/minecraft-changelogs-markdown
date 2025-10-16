@@ -1,34 +1,36 @@
+# 21w38a
+
 The second Caves & Cliffs: Part II snapshot is here! This snapshot mostly contains tweaks and bug fixes, but there are also some new technical additions such as a separate simulation distance slider and an increased thread count (no I'm not talking about the fancy sheets you're thinking about buying).
 
 Oh, and you also seemed to enjoy Strongholds quite a lot, so we decided to add them back into the game. Enjoy!
 
-# Known Issues in 21w38a
+## Known Issues in 21w38a
 
 -   This snapshot is still not compatible with older worlds - to play in this snapshot, you will have to create a new world
 -   World saving can sometimes take a very long time - if you see the world stop moving for a time, this is why
 
-# Changes in 21w38a
+## Changes in 21w38a
 
 -   Sprinting is no longer reduced to walking when gently brushing your sleeve against a wall
 -   Fixes for the distribution of ores
 
-## Ore distribution
+### Ore distribution
 
 -   Copper ore generates up to y 95 (as originally designed)
 -   Increased the amount of copper
 -   Lapis lazuli generates in blobs, like other ores (instead of spread out)
 
-## Sprinting
+### Sprinting
 
 -   Previously, any collision with a block would reduce sprinting to walking. Now, for very minor angles of collision with a block, players retain their sprint. For larger angles of collision, the old behavior is retained.
 
-# Technical Changes in 21w38a
+## Technical Changes in 21w38a
 
 -   A new setting has been added: "Simulation distance"
 -   Maximum amount of background threads increased
 -   Added telemetry for world loading
 
-## Simulation distance setting
+### Simulation distance setting
 
 -   Entities will not be updated outside of simulation distance.
 -   Allows higher render distance with less CPU load.
@@ -36,13 +38,13 @@ Oh, and you also seemed to enjoy Strongholds quite a lot, so we decided to add t
 -   A new `simulation-distance` property in dedicated server properties.
 -   We will continue working on it with a goal of simulation distance also affecting block and fluid ticking.
 
-## Maximum amount of background threads increased
+### Maximum amount of background threads increased
 
 Various background tasks including worldgen are executed on a background thread pool. Its size equals the amount of available CPU threads minus one, but there was an upper limit of 7. Now this upper limit is 255. This should help higher-end machines with world-gen performance.
 
 The upper limit can be overridden by `max.bg.threads` Java system property, for example when running multiple servers on a single machine.
 
-## Telemetry
+### Telemetry
 
 In this release, we are re-introducing diagnostic tracking, which was part of Minecraft: Java Edition until 2018. We are bringing it back to better understand our players and to improve their experience. Specifically, we hope to ensure stronger performance for the extremely heavy world generation in the second part of the Caves & Cliffs update later this year.
 
@@ -50,7 +52,7 @@ In practice, this can mean identifying technical pain points in the game, like h
 
 At this point the only implemented event is world load.
 
-### World Load event
+#### World Load event
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:
@@ -65,7 +67,7 @@ At this point the only implemented event is world load.
     -   server type (single player, Realms or other)
     -   game mode
 
-# Bugs fixed in 21w38a
+## Bugs fixed in 21w38a
 
 -   [MC-44055](https://bugs.mojang.com/browse/MC-44055) Game fails to switch the audio output from one device to another after the game has started (from title screen)
 -   [MC-236611](https://bugs.mojang.com/browse/MC-236611) No sound for using shears on weeping, twisting, cave vines or kelp

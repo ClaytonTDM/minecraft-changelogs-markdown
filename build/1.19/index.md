@@ -1,8 +1,10 @@
+# 1.19
+
 Oh, hello. I didn’t see you there! I was too busy inspecting these mangrove tree roots. They’re all tangled up! What do you mean they’re supposed to be? Hey, that’s pretty neat.
 
 While we’re on the topic – have you had a chance to check out all the other spiffy stuff that we added to Minecraft today? Because The Wild Update has officially launched and now the Overworld is full of frogs, allays, wardens (_shudder_), mud, boats with chests, new music, and much, much more! You can check out the list below for all the details, I’m too busy making heart eyes at these cute propagules to go through them all.
 
-# Features
+## Features
 
 -   Added Mangrove Swamp biome
 -   Added Mangrove Trees
@@ -32,7 +34,7 @@ While we’re on the topic – have you had a chance to check out all the other 
     -   This option is best experienced with headphones
 -   Replaced Realms subtle selected world highlight with a clear green checkmark
 
-## Mangrove Swamp
+### Mangrove Swamp
 
 Muddy! Murky! Magnificent! Welcome to Minecraft's newest biome - the Mangrove Swamp
 
@@ -43,7 +45,7 @@ Muddy! Murky! Magnificent! Welcome to Minecraft's newest biome - the Mangrove Sw
 -   Mud generates all the way from the surface down to Stone
 -   Tall Mangroves are far more common than Short Mangroves
 
-## Mangrove trees
+### Mangrove trees
 
 Introducing a new type of water-adapted trees that spawn propped up on roots
 
@@ -51,7 +53,7 @@ Introducing a new type of water-adapted trees that spawn propped up on roots
 -   Grows from Mangrove Propagules
 -   Moss Carpet generates on top of the tree's roots
 
-## Mangrove wood blocks
+### Mangrove wood blocks
 
 Added a new type of wood: Mangrove!
 
@@ -60,7 +62,7 @@ Added a new type of wood: Mangrove!
 -   Mangrove Roots and Muddy Mangrove Roots
 -   Mangrove Boat, Button, Pressure Plate, Door, Trapdoor, Sign, Slab, Fence, Fence Gate, and Stairs
 
-## Mangrove leaves and propagules
+### Mangrove leaves and propagules
 
 -   Mangrove Propagule is a type of sapling that grows from the bottom of Mangrove Leaves
 -   Bonemealing Mangrove Leaves will cause a new Propagule to start growing beneath it
@@ -70,7 +72,7 @@ Added a new type of wood: Mangrove!
 -   Propagules can be grown underwater
 -   The Wandering Trader will now sometimes offer Propagules for sale
 
-## Mud
+### Mud
 
 -   Mud is a block that will generate in the upcoming Mangrove biome
 -   When walking on Mud, entities slightly sink down into it like Soul Sand
@@ -78,16 +80,16 @@ Added a new type of wood: Mangrove!
 -   Mud can be created by using a water bottle on dirt, by hand or with a Dispenser
 -   Packed Mud can be crafted from Mud
 
-## Mud bricks
+### Mud bricks
 
 -   Mud Bricks are a building block that can be crafted from Packed Mud
 -   Mud Bricks can be crafted into Mud Brick Stairs, Walls, and Slabs using a Crafting Table or Stonecutter
 
-## Clay renewability
+### Clay renewability
 
 -   Placing Mud above a block that has pointed Dripstone underneath will eventually turn the Mud Block into Clay
 
-## Frogs
+### Frogs
 
 -   Frogs can spawn in Swamps and Mangrove Swamps on Grass, Mud, Mangrove Roots, and Muddy Mangrove Roots
 -   Frogs can croak
@@ -97,7 +99,7 @@ Added a new type of wood: Mangrove!
 -   Each Frog variant drops a specific Froglight Block
 -   Added three Froglight blocks, a type of light source blocks
 
-## Tadpoles
+### Tadpoles
 
 -   Tadpoles can swim in water
 -   Tadpoles on land "jump around" like fishes on land, and eventually dies
@@ -113,7 +115,7 @@ Added a new type of wood: Mangrove!
 
 ![Minecraft 1.19 Underwater in a Mangrove Swamp](https://launchercontent.mojang.com/images/1-19-mangrove-underwater-full.jpg) A view from being underwater in a Mangrove Swamp biome.
 
-## Deep Dark biome
+### Deep Dark biome
 
 Dig into the depths far underground to uncover the darkest biome in Minecraft - the Deep Dark.
 
@@ -122,7 +124,7 @@ Dig into the depths far underground to uncover the darkest biome in Minecraft - 
 -   The floor of the Deep Dark is covered in sculk
 -   No mobs spawn in the Deep Dark
 
-## Ancient City
+### Ancient City
 
 Wander the halls of these long-abandoned structures in the Deep Dark depths to uncover some relics long forgotten.
 
@@ -131,7 +133,7 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 -   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
 -   Mobs cannot spawn in Ancient Cities
 
-## Darkness
+### Darkness
 
 -   A new mob effect applied to nearby players by the Warden and Sculk Shrieker
 -   Lowers the gamma to an equivalent of "Moody" while having this effect
@@ -141,14 +143,14 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
     -   Controls strength of the Darkness lighting effect
     -   Does not affect the fog distance
 
-## Music Disc 5
+### Music Disc 5
 
 A new music disc has been added to the game
 
 -   Unlike other discs, it can only be obtained by finding and crafting 9 Disc Fragments together
 -   These Disc Fragments can be found rarely in Ancient City Chests
 
-## Recovery Compass
+### Recovery Compass
 
 A new Recovery Compass can be crafted with Echo Shards, another new item which can only be found in Ancient City Chests
 
@@ -156,7 +158,7 @@ A new Recovery Compass can be crafted with Echo Shards, another new item which c
 -   If you are not in the dimension you last died, or you haven't died yet in your world, it will spin randomly
 -   It can be crafted with 1 Compass surrounded by 8 Echo Shards, which can be found in Ancient Cities
 
-## Swift Sneak
+### Swift Sneak
 
 Imbue your leggings with this shiny new enchantment to move as fast while crouching as you would normally walk!
 
@@ -164,7 +166,7 @@ Imbue your leggings with this shiny new enchantment to move as fast while crouch
 -   Has 3 different levels with different speed increases
 -   It is the first enchantment unique to leggings equipment!
 
-## Sculk
+### Sculk
 
 The rattling tendrils of the Sculk Sensors had to come from somewhere, right? Introducing sculk, a new family of blocks that dwells in the Deep Dark. they find a valid substrate they can feed off of
 
@@ -193,7 +195,7 @@ The rattling tendrils of the Sculk Sensors had to come from somewhere, right? In
     -   If mined without Silk Touch, they will drop experience instead
 -   The efficient tool for all Sculk family blocks is the Hoe
 
-## Warden
+### Warden
 
 The horror of the Deep Dark! A creature with no eyes, roughly resembling the Sculk that can be found throughout the Deep Dark, the Warden is an unstoppable force of nature that inhabits this biome. Wardens are powerful creatures, and it is often better to sneak around one that has emerged instead of taking it head on - you have been warned.
 
@@ -217,7 +219,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   Wardens will also disable shields when they hit them with their fists
 -   They drop a Sculk Catalyst upon death
 
-## Changes to vibrations
+### Changes to vibrations
 
 -   Carpets, like Wool Blocks, will now dampen the vibrations caused by their placing, breaking, or dropping as items
 -   Carpets now also dampen the vibrations caused by running and jumping over them
@@ -231,7 +233,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 
 ![Minecraft 1.19 Sculk Family](https://launchercontent.mojang.com/images/1-19-sculk-full.jpg) A variety of sculk blocks.
 
-## Allay
+### Allay
 
 -   Allays will collect all the surrounding items that match the item they are holding
 -   Allays will like a player who hands them an item and will bring the items they collect to their liked player
@@ -242,7 +244,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   Allays are immune to damage from their liked player
 -   Allays have a natural health regen of 2 health per second
 
-## Boat with Chest
+### Boat with Chest
 
 -   Lets you bring more stuff on your boat adventures
 -   If you are in the Boat, press the open inventory key to access the Chest contents
@@ -251,7 +253,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   Also works with Hoppers, Droppers, and other blocks that interact with Chests
 -   Like other Chests, opening a Boat with Chest or breaking the Boat will anger Piglins, since they think all Chests belong to them
 
-## Goat Horns
+### Goat Horns
 
 -   A Goat Horn drops when a Goat rams a tree or any other hard block that occurs naturally where Goats spawn (Log, Stone, Packed Ice, Iron Ore, Copper Ore, or Emerald Ore)
     -   Other solid blocks are unfamiliar to the goat, so it won't ram them
@@ -260,7 +262,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   There are 8 Goat Horn variants, 4 of them exclusive to Screaming Goats
 -   Goat Horns can sometimes be found in Pillager Outposts
 
-## Advancements
+### Advancements
 
 -   Added "It Spreads" for killing a mob near a Sculk Catalyst
 -   Added "You've Got a Friend in Me" for having an Allay deliver items to you
@@ -271,7 +273,7 @@ The horror of the Deep Dark! A creature with no eyes, roughly resembling the Scu
 -   Added "Sneak 100" for sneaking near a Sculk Sensor or Warden to prevent it detecting you
 -   Added Darkness effect to the "How Did We Get Here?" advancement
 
-## Predictability of randomized events
+### Predictability of randomized events
 
 Some randomized events are now more predictable and no longer have a possibility of extreme behaviors:
 
@@ -284,17 +286,17 @@ Some randomized events are now more predictable and no longer have a possibility
 -   Randomized flight pattern of Fireworks
 -   Bobbing patterns and time until a Fish appears for Fishing Rods
 
-## Four new music tracks
+### Four new music tracks
 
 -   The new music tracks are called Ancestry, Aerie, Firebugs, and Labyrinthine
 -   They play in certain biomes
 
-## Minecart variants
+### Minecart variants
 
 -   The recipes for minecart with Chest/Furnace/TNT/Hopper are now shapeless
 -   When broken each Minecart variant drops itself as item, instead of splitting into two items (such as Chest and Minecart)
 
-## Monster Spawning
+### Monster Spawning
 
 -   Endermen, Skeletons, Wither Skeletons and Piglins now spawn in a wider range of light levels in the Nether (from light level 0 to 11)
     -   This makes it possible for more types of mobs to spawn inside Nether Portals, which causes them to instantly change dimensions after spawning
@@ -306,7 +308,7 @@ Some randomized events are now more predictable and no longer have a possibility
 
 ![Minecraft 1.19 Alex & Goat Horn](https://launchercontent.mojang.com/images/1-19-goathorn-full.jpg) Alex holding a Goat Horn.
 
-# Technical
+## Technical
 
 -   The data pack format is now 10
 -   The resource pack format is now 9
@@ -341,11 +343,11 @@ Some randomized events are now more predictable and no longer have a possibility
 -   Servers will now also send an additional icon and MOTD packet after a player has connected
     -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
 
-## Advancements
+### Advancements
 
-### New triggers
+#### New triggers
 
-#### `allay_drop_item_on_block`
+##### `allay_drop_item_on_block`
 
 -   Triggered when an Allay drops an item on a block
 -   Conditions:
@@ -353,13 +355,13 @@ Some randomized events are now more predictable and no longer have a possibility
     -   `location` - a predicate for the block that the item was dropped on
     -   `item` - a predicate for the item that was dropped
 
-#### `avoid_vibration`
+##### `avoid_vibration`
 
 -   Triggered when a vibration event is ignored because the source player is holding the sneak key
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-#### `kill_mob_near_sculk_catalyst`
+##### `kill_mob_near_sculk_catalyst`
 
 -   Triggered when a player kills an entity next to a Sculk Catalyst
 -   Conditions:
@@ -367,7 +369,7 @@ Some randomized events are now more predictable and no longer have a possibility
     -   `entity` - a predicate for the entity that was killed
     -   `killing_blow` - a predicate for how the entity was killed
 
-#### `thrown_item_picked_up_by_player`
+##### `thrown_item_picked_up_by_player`
 
 -   Triggered when a player picks up an item that was thrown by an entity
 -   Conditions:
@@ -375,13 +377,13 @@ Some randomized events are now more predictable and no longer have a possibility
     -   `entity` - a predicate for the entity that threw the item
     -   `item` - a predicate for the item
 
-## Blending
+### Blending
 
 -   Blending now supports 3D biome blending, which blends the underground biomes as well as the overground biomes
 -   Removed `blending_data.old_noise`, now existence of `blending_data` in chunk data determines if a chunk is considered old
 -   Added `blending_data.min_section` and `blending_data.max_section` that determines which section data that will be used for blending
 
-## Chat Preview
+### Chat Preview
 
 -   Servers can enable Chat Preview by setting `previews-chat=true` in `server.properties`
 -   Custom servers can enable or disable chat preview for certain clients by sending a new network packet
@@ -393,7 +395,7 @@ Some randomized events are now more predictable and no longer have a possibility
     -   This allows servers to apply dynamic message stylings while still allowing chat to be securely signed
 -   A warning screen is shown on the client when joining a server with Chat Preview, and it can be globally disabled in Chat Settings
 
-## Chat Types
+### Chat Types
 
 -   Different chat style formats can now be controlled by the server through the `chat_type` registry
     -   These are synchronized to clients when they join the server
@@ -401,9 +403,9 @@ Some randomized events are now more predictable and no longer have a possibility
         -   Chat can be similarly optionally narrated with a custom translation key or format
     -   The entire message can have formatting applied, such as italics or a specific color (but currently not click or hover events)
 
-## Commands
+### Commands
 
-### `place`
+#### `place`
 
 New command that replaces `placefeature` and can place features, jigsaws, structures, and templates at a given location. Syntax:
 
@@ -431,22 +433,22 @@ Parameters:
 -   `integrity`: The structure integrity value between 0 and 1
 -   `seed`: The seed to use for the randomized degradation when integrity is less than 1
 
-## Debug
+### Debug
 
 -   Added a heap memory allocation metric to the F3 debug screen
 -   Added estimated GPU utilization percentage to performance profiling metrics and the F3 debug screen
     -   This is only available for graphics devices that support GPU timer queries
 -   Removed the debug hotkey that cycles the render distance
 
-## Game Events
+### Game Events
 
-### Added Events
+#### Added Events
 
 -   `teleport` with a vibration frequency of 5
 -   `note_block_play` with a vibration frequency of 6
 -   `instrument_play` with a vibration frequency of 15
 
-### Combined Events
+#### Combined Events
 
 The following events have been collapsed into `block_activate` and `block_deactivate`:
 
@@ -455,7 +457,7 @@ The following events have been collapsed into `block_activate` and `block_deacti
 -   `block_switch`
 -   `block_unswitch`
 
-### Other Changes
+#### Other Changes
 
 Other miscellaneous changes to game events:
 
@@ -467,7 +469,7 @@ Other miscellaneous changes to game events:
 -   Added the `dampens_vibrations` block tag that that includes all Wool and Wool Carpet blocks, to indicate blocks that will not trigger when placed, broken, or stepped on
 -   Renamed item tag `occludes_vibration_signals` to `dampens_vibrations` item tag as well
 
-### Renamed Events
+#### Renamed Events
 
 Some game events have been renamed, with some of those changes to make them more gramatically consistent:
 
@@ -479,21 +481,21 @@ Some game events have been renamed, with some of those changes to make them more
 -   `ravager_roar` -> `entity_roar`
 -   `wolf_shaking` -> `entity_shake`
 
-## Game Rules
+### Game Rules
 
 -   Added `doWardenSpawning` game rule
 
-## Loot Tables
+### Loot Tables
 
-### New functions
+#### New functions
 
-#### `set_instrument`
+##### `set_instrument`
 
 Sets the item tags needed for instrument items to a randomly selected instrument from a tag Parameters:
 
 -   `options` - a tag reference specifying the instrument options to randomly pick from
 
-## Multiplayer Secure Chat Signing
+### Multiplayer Secure Chat Signing
 
 -   Chat messages between players are now cryptographically signed
     -   The message arguments to `/say`, `/msg`, `/teammsg`, and `/me` commands are all also signed
@@ -508,7 +510,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     -   Their messages will not show for players with "Only Show Secure Chat" enabled
     -   They may be unable to join server with the `enforce-secure-profile` option enabled
 
-## Pack filters
+### Pack filters
 
 -   Data and resource packs can have `filter` section in `pack.mcmeta`
 -   This section has mandatory field `block`, which is a list of patterns (regular expressions) for namespaces and paths
@@ -518,7 +520,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     -   Missing field matches every value
 -   For example, adding a pack with this section in `pack.mcmeta` after the vanilla pack will hide all the recipes and advancements defined by the vanilla pack
 
-### Example
+#### Example
 
     "filter": {
         "block": [
@@ -534,24 +536,24 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     }
     
 
-## Paintings
+### Paintings
 
 -   Paintings that are placeable in survival can now be controlled with the `painting_variant/placeable` tag
 -   Added unused paintings from Bedrock edition (`earth`, `wind`, `fire`, `water`)
     -   These paintings are not placeable by default, but can be added through a datapack
 
-## Point of Interest types
+### Point of Interest types
 
 -   Removed `unemployed` and `nitwit` `point_of_interest_type`s
 -   Added tag `point_of_interest_type/acquirable_job_site` for all job sites seeked by villagers with `none` profession
 -   Added tag `point_of_interest_type/village` for PoI that are part of village
 -   Added tag `point_of_interest_type/bee_home` for all PoI targeted by bees
 
-## Predicates
+### Predicates
 
 -   The `feature` field in location predicates is now called `structure`
 
-### Entity predicate
+#### Entity predicate
 
 -   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
 -   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
@@ -560,7 +562,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     -   `frog` has `variant` field matching Frog variant (`minecraft:warm`, `minecraft:temperate` or `minecraft:cold`)
     -   `slime` applies for Slimes and Magma Cubes, has `size` field matching Slime size (smallest is `1`)
 
-#### `catType` Example
+##### `catType` Example
 
 Before:
 
@@ -575,7 +577,7 @@ After:
      }
     
 
-#### `type_specific` Example
+##### `type_specific` Example
 
 Before:
 
@@ -592,19 +594,19 @@ After:
       }
     
 
-## Space glyph provider
+### Space glyph provider
 
 -   The new glyph provider type `space` is added to allow creation of space-like glyphs
 -   The new provider has a single argument called `advances` which is a map of codepoint to glyph advance (width)
 -   The rendering of space glyph is no longer hardcoded (needs to be declared manually in font)
 
-## World presets
+### World presets
 
 -   New registry types `worldgen/world_preset` and `worldgen/flat_level_generator_preset` have been added to configure data-driven presets (like "Amplified" or "Single Biome")
 -   Two tags for world presets have been added (`normal` and `alternative`) to control which values show on the "World Type" button in the "Create World" screen
 -   One tag has been added (`visible`) for flat world presets to control the order that elements are displayed in the "Configure Flat World" screen
 -   World presets can also be used as a value of `level-type` in `server.properties`
 
-# Fixed Bugs in 1.19
+## Fixed Bugs in 1.19
 
 -   About 150 bugs were fixed in this release. View the [entire list on the issue tracker](https://bugs.mojang.com/issues/?filter=27034).

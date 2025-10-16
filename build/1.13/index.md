@@ -1,6 +1,8 @@
-# Aquatic changelog
+# 1.13
 
-## General
+## Aquatic changelog
+
+### General
 
 -   All undead mobs now sink
 -   Changed underwater visibility
@@ -22,7 +24,7 @@
     -   Use a water bucket on a block to surround it with water
 -   Added an "Optimize World" button (singleplayer -> edit world -> optimize world), which upgrades an entire world from older version to the latest version in one go
 
-## Blocks
+### Blocks
 
 -   Added blue ice
     -   Found in icebergs
@@ -50,7 +52,7 @@
 -   Added turtle eggs
     -   Be sure to protect them from hostile mobs
 
-## Mobs
+### Mobs
 
 -   Added tropical fish
 -   Added turtles
@@ -69,7 +71,7 @@
 -   Changed the horse model to be more consistent with other mobs
 -   Removed Herobrine
 
-## Items
+### Items
 
 -   Added tridents
     -   The newest weapon in Minecraft
@@ -93,14 +95,14 @@
 -   Added dried kelp
 -   Added spawn eggs for all the new mobs
 
-## Biomes
+### Biomes
 
 -   Added multiple ocean biomes
 -   Added coral reefs
 -   Added underwater caves
 -   Added underwater ravines
 
-## Structures
+### Structures
 
 -   Added shipwrecks
 -   Added underwater ruins

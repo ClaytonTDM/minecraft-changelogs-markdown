@@ -1,15 +1,17 @@
+# 20w09a
+
 Today is a sad day for Obsidian... It's crying. If you're not into crying you could always take aim at the new Target that we've added.
 
 This update can also be found on [minecraft.net](https://www.minecraft.net/en-us/article/minecraft-snapshot-20w09a).
 
 If you find any bugs, please report them on the official [Minecraft Issue Tracker](https://aka.ms/snapshotbugs?ref=reddit).
 
-# New Features in 20w09a
+## New Features in 20w09a
 
 -   Added the Target Block!
 -   Added new Crying Obsidian block! It's sad and it cries purple energy
 
-## Target Block
+### Target Block
 
 Because let’s face it, your aim could use some practice
 
@@ -17,11 +19,11 @@ Because let’s face it, your aim could use some practice
 -   Test your skills with a variety of projectiles, including eggs, snowballs, tridents, and more!
 -   You will need one hay block and four redstone for this recipe
 
-## Zombified Piglin
+### Zombified Piglin
 
 -   Zombie Pigmen are now known as Zombified Piglins, and they now have ears... or well, one at least
 
-# Changes in 20w09a
+## Changes in 20w09a
 
 -   Bartering loot has been restructured to be more appealing to Survival players
 -   Crying Obsidian can now be obtained from Piglin Bartering
@@ -33,19 +35,19 @@ Because let’s face it, your aim could use some practice
 -   Biome fog color smoothly blends between biomes. Smooth
 -   Changed ambient block lighting in the Nether to be on parity with other editions
 
-## Block Renames
+### Block Renames
 
 Some blocks have been renamed. Turns out singular Fungus in the Nether attempted to falsely present itself as many Fungi - very sneaky!
 
 -   Crimson Fungi is now called Crimson Fungus
 -   Warped Fungi is now called Warped Fungus
 
-# Technical Changes in 20w09a
+## Technical Changes in 20w09a
 
 -   New particle types: `dripping_obsidian_tear`, `falling_obsidian_tear`, `landing_obsidian_tear`
 -   Piglins now have an `IsImmuneToZombification` data value that prevents them from zombifying in the overworld
 
-# Fixed bugs in 20w09a
+## Fixed bugs in 20w09a
 
 -   [MC-7424](https://bugs.mojang.com/browse/MC-7424) Fall damage death messages don't show block player fall from correctly (ladders, vines, water)
 -   [MC-102319](https://bugs.mojang.com/browse/MC-102319) Nether portal trigger and travel sounds are not assigned to any sound category

@@ -1,8 +1,10 @@
+# 1.20.1
+
 It's barely been a week, and we're already releasing 1.20.1 for Minecraft: Java Edition. This hotfix update contains fixes for critical issues found in the 1.20 release.
 
 Happy mining!
 
-# Fixed bugs in 1.20.1
+## Fixed bugs in 1.20.1
 
 -   Fixed a disk permissions-related crash
 -   [MC-263244](https://bugs.mojang.com/browse/MC-263244) The realms invitation icon that appears on the realms button in the main menu is displayed incorrectly

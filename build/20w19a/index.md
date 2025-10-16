@@ -1,13 +1,15 @@
+# 20w19a
+
 This snapshot contains another round of tweaks and bugfixes, but also quality of life features such as **strider distancing**. It might not be as important as social distancing, but we hope you'll like it. Stay safe and wash your hands!
 
-# New Features in 20w19a
+## New Features in 20w19a
 
 -   Added "distance by strider" statistic
 -   Patches of blackstone and gravel now generate in all Nether biomes, and patches of soul sand now generate in Soul Sand Valleys
 
 ​
 
-# Changes in 20w19a
+## Changes in 20w19a
 
 -   Villagers can now spawn iron golems regardless of their profession status or latest working time
 -   Bastions are now a bit less common
@@ -16,13 +18,13 @@ This snapshot contains another round of tweaks and bugfixes, but also quality of
 -   Tweaked spawning of mobs to more closely adhere to mob caps
 -   Biome distribution in the Nether has been tweaked
 
-# Technical Changes in 20w19a
+## Technical Changes in 20w19a
 
 -   Fish now have their own mob category and mob cap
 
 ​
 
-# Fixed bugs in 20w19a
+## Fixed bugs in 20w19a
 
 -   [MC-87949](https://bugs.mojang.com/browse/MC-87949) The shield use statistic is not working
 -   [MC-89956](https://bugs.mojang.com/browse/MC-89956) Levitation has no effect if gliding with elytra

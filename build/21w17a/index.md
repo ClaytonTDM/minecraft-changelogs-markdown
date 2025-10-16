@@ -1,8 +1,10 @@
+# 21w17a
+
 A delicious snapshot appears! This snapshot introduces some tweaks to the raw ore textures, a few copper changes, and the introduction of noodle caves in the Caves & Cliffs Preview datapack.
 
 If you have any [feedback](https://feedback.minecraft.net/), a penne for your thoughts...
 
-# Changes in 21w17a
+## Changes in 21w17a
 
 -   Small dripleaves can now also be placed on moss blocks
 -   Copper ore drops 2-3 raw copper when mined, or more when using a tool enchanted with Fortune
@@ -11,7 +13,7 @@ If you have any [feedback](https://feedback.minecraft.net/), a penne for your th
 
 ![Minecraft Snapshot 21w17a Texture Comparison](https://launchercontent.mojang.com/images/snapshot-21w17a-ore-texture-comparison.jpg) New raw ore textures in snapshot 21w17a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w17aoretexturecomparisonfull.jpg) for a link to the full resolution image.
 
-# Changes to the Caves & Cliffs Preview
+## Changes to the Caves & Cliffs Preview
 
 Download the [updated datapack](https://launcher.mojang.com/v1/objects/6d37f3c37d583e45f0d792f0eccd315032ada0fa/CavesAndCliffsPreview.zip).
 
@@ -20,13 +22,13 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6d37f3c37
 -   Large Ore Veins have been tweaked
 -   Added thinner, squigglier, and more claustrophobic variant of spaghetti caves
 
-## Large Ore Veins
+### Large Ore Veins
 
 -   Ore veins are now slightly rarer and slightly smaller (but they are still large!)
 -   The ores in the vein are clumpier and less evenly distributed
 -   If you are lucky you may find a raw ore block in the vein
 
-# Bugs fixed in 21w17a
+## Bugs fixed in 21w17a
 
 -   [MC-170443](https://bugs.mojang.com/browse/MC-170443) Banner copying recipe ignores existence of other items in crafting grid
 -   [MC-187664](https://bugs.mojang.com/browse/MC-187664) World border uses float to determine its size, making some border sizes inaccessible, and cannot be set to 30 million or beyond

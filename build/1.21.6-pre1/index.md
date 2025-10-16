@@ -1,18 +1,20 @@
+# 1.21.6-pre1
+
 Hey! This is the first pre-release of 1.21.6. From now on, you will mostly see us fixing bugs and the release schedule might include more than one pre-release per week. We are on the finish line for the second drop of the year!
 
-# Changes
+## Changes
 
 -   The Dried Ghast Block now emits a vibration frequency of 11 when its block state changes
 -   Shearing Saddles, Horse Armor, and Carpets now emits a vibration frequency of 6, along with the Unequip frequency of 4
 -   The Ambient Dried Ghast sounds are now adjusted under the Blocks sound option instead of the Ambient/Environment option
 -   A player riding a Happy Ghast can no longer completely fly through a Happy Ghast ridden by another player
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 79
 -   The Resource Pack version is now 63
 
-# Data Pack Version 79
+## Data Pack Version 79
 
 -   Dialogs can now configure if they pause the game and if they close after an action is taken
 -   Every dialog can now have inputs and can submit information
@@ -25,7 +27,7 @@ Hey! This is the first pre-release of 1.21.6. From now on, you will mostly see u
 -   The `minecraft:custom` click event has been expanded to carry full a NBT tag
 -   A new keybind called "Quick Actions" has been added to allow accessing content-configured dialogs
 
-## Quick Actions Keybind
+### Quick Actions Keybind
 
 -   A new keybind has been addded that allows users to access a set of dialogs
 -   Default key: `G`
@@ -36,7 +38,7 @@ Hey! This is the first pre-release of 1.21.6. From now on, you will mostly see u
         -   If this dialog is removed, the keybind does nothing
 -   This option is intended to be used in custom content and by servers, so this tag is empty by default
 
-## Common Dialog fields
+### Common Dialog fields
 
 New fields:
 
@@ -52,52 +54,52 @@ New fields:
             -   clicking this button will continue as if the dialog was closed (i.e. the game returns to the previous non-dialog screen, if any)
         -   The "Waiting for Response" screen will unpause the game in single-player mode to avoid locking the game
 
-## Dialog Types
+### Dialog Types
 
-### Changed `minecraft:multi_action`, `minecraft:server_links`, `minecraft:dialog_list`
+#### Changed `minecraft:multi_action`, `minecraft:server_links`, `minecraft:dialog_list`
 
 -   Replaced field `on_cancel` with `exit_action`, holding an optional action
     -   If `exit_action` is present, a button for it will appear in footer, otherwise the footer is not present
     -   `exit_action` is also used for the Escape action
 
-### Removed `minecraft:simple_input_form`
+#### Removed `minecraft:simple_input_form`
 
 -   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:notice`
 
-### Removed `minecraft:multi_action_input_form`
+#### Removed `minecraft:multi_action_input_form`
 
 -   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:multi_action` (without any specified `exit_action`)
 
-## Input Control Types
+### Input Control Types
 
 -   To accomodate the new `minecraft:custom` click event, all inputs will now return either a string or an NBT tag, depending on context
 
-### `minecraft:text`
+#### `minecraft:text`
 
 -   Output values:
     -   As template substitution: contents without modification
     -   As tag: a string tag with contents without modification
 
-### `minecraft:boolean`
+#### `minecraft:boolean`
 
 -   Output values:
     -   As template substitution: `on_true` when checked, `on_false` when unchecked
     -   As tag: `1b` when checked, `0b` when unchecked
 
-### `minecraft:number_range`
+#### `minecraft:number_range`
 
 -   Output values:
     -   As template substitution: text representation of current value
         -   Whole numbers will be sent without decimal point
     -   As tag: a float tag with current value
 
-### Dialog Body Types
+#### Dialog Body Types
 
 Hover and click events on text components within bodies now work as expected
 
 -   Click events are handled by the dialog screen like any other action - that means it will also run the `after_action`
 
-## Actions
+### Actions
 
 -   The format of actions has been changed due to the merging of plain and input dialogs
 -   After every action the dialog will always evaluate the contents of the `after_action` field (see above)
@@ -109,7 +111,7 @@ Fields:
     -   `type` - value from `minecraft:dialog_action_type` registry
     -   `<type-specific>` - see below, depends on `type`
 
-#### Static Dialog Action Types
+##### Static Dialog Action Types
 
 All existing `click_event` actions (except for `open_file`) are included as dialog action types.
 
@@ -124,7 +126,7 @@ Uses same format as `click_event` on text components (but with `action` replaced
     }
     
 
-#### `minecraft:dynamic/run_command` Action Type
+##### `minecraft:dynamic/run_command` Action Type
 
 -   This action will build a `run_command` event using a provided macro template
 -   The macro will be expanded with string values from all inputs
@@ -135,7 +137,7 @@ Fields:
 
 -   `template` - a string with a macro template to be interpreted as a command
 
-##### `minecraft:dynamic/custom` Action Type
+###### `minecraft:dynamic/custom` Action Type
 
 -   This method will build a `minecraft:custom` event using all input values
 -   All input contents will be sent together inside a compound tag, with tag value of each input put under id from `key` field of that input
@@ -146,12 +148,12 @@ Fields:
 -   `additions` - fields to be added to payload, optional compound tag
 -   `id` - namespaced ID
 
-# Resource Pack version 63
+## Resource Pack version 63
 
 -   Added `oversized_in_gui` item model field
 -   Introduced new player head special model type
 
-## Item Models
+### Item Models
 
 -   Item model definitions now have a boolean field `oversized_in_gui` which is `false` by default
     -   If `true`, the item model will be allowed to be bigger than its item slot
@@ -161,19 +163,19 @@ Fields:
 -   Introduced new item model `minecraft:player_head` to handle player profile texture loading and rendering
 -   Removed support for `minecraft:profile` from `minecraft:head`
 
-#### `minecraft:player_head` special model type
+##### `minecraft:player_head` special model type
 
 -   Renders a player head
 -   Uses profile from the `minecraft:profile` component to load a texture. Renders a default texture until the profile texture is fully loaded
 -   No fields
 
-#### `minecraft:head` special model type
+##### `minecraft:head` special model type
 
 -   No longer supports profile from `minecraft:profile` component to load a player texture
 -   Renders a default player texture when `kind` is `player` and no texture override is supplied
 -   Fields remain unchanged
 
-# Fixed bugs in 1.21.6 Pre-Release 1
+## Fixed bugs in 1.21.6 Pre-Release 1
 
 -   [MC-94800](https://bugs.mojang.com/browse/MC-94800) URL shown in open URL dialog is not shortened
 -   [MC-140819](https://bugs.mojang.com/browse/MC-140819) Lectern model extends past inventory slot

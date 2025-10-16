@@ -1,6 +1,8 @@
+# 20w30a
+
 Today we're releasing Snapshot 20w30a for Minecraft Java Edition in which we've tweaked Bastion Remnants, and given you the ability to have lanterns under water.
 
-# Changes in 20w30a
+## Changes in 20w30a
 
 -   Modified how respawn positions are chosen for beds and respawn anchors
 -   Lanterns can now be waterlogged
@@ -8,19 +10,19 @@ Today we're releasing Snapshot 20w30a for Minecraft Java Edition in which we've 
 -   Tweaked the Bastion Remnant chest loot
 -   Chests in Bastion Remnants are now more likely to be located on top of gilded blackstone
 
-## Respawn Block Positions
+### Respawn Block Positions
 
 -   Respawn anchors will prioritize cardinal directions over corners
 -   Beds will prioritize the side of the bed the player entered from and then spaces circling around the foot of the bed up to the head of the bed
 -   Respawning players will now face the block that they respawned at
 -   Placing players onto dangerous blocks is now avoided when possible
 
-# Technical Changes in 20w30a
+## Technical Changes in 20w30a
 
 -   The sign edit screen will now intialize from existing sign text (should have no noticeable impact on vanilla)
 -   Tags can now have optional entries
 
-## Optional Tag Entries
+### Optional Tag Entries
 
 Entries in tags can now be marked as optional. Failure to resolve optional entries does not prevent the whole tag from loading.
 
@@ -37,7 +39,7 @@ Example:
     
     
 
-# Fixed bugs in 20w30a
+## Fixed bugs in 20w30a
 
 -   [MC-35765](https://bugs.mojang.com/browse/MC-35765) Viewing text in Right-to-Left language while in another language renders backwards and non-connected
 -   [MC-57869](https://bugs.mojang.com/browse/MC-57869) Some item tooltips use § for coloring, rendering them incorrect in right-to-left languages

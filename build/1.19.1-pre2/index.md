@@ -1,12 +1,14 @@
+# 1.19.1-pre2
+
 Hey everyone! As a few of you might have noticed, we’ve made the decision to postpone the release of 1.19.1 and we're now going back into pre-release mode. This is in order to address a few of our more noticeable issues. We've yet to fully decide on a new release date, but it won't be too far in the future.
 
 We’ve received a lot of feedback regarding the Player Chat Report feature, which is something we address specifically in a newly released post [here](https://www.minecraft.net/article/addressing-player-chat-reporting-tool), as well as in our [FAQ](https://aka.ms/chatreportingfaq) which hopefully answers all your questions!
 
-# Changes in 1.19.1 Pre-Release 2
+## Changes in 1.19.1 Pre-Release 2
 
 We've added the ability to see the signing status of chat messages – this is so you can easily tell when a server is tampering with, or removing the signing security of, their players' messages.
 
-## Chat Trust Status
+### Chat Trust Status
 
 -   Messages that are not signed with the Secure Chat system, or have been tampered with by the server will now be marked
     -   Messages with missing or invalid signatures are marked as "Not Secure"
@@ -17,9 +19,9 @@ We've added the ability to see the signing status of chat messages – this is s
 -   Hovering over the icon will provide more information about the trust status
     -   For modified messages, the original secure text will also be displayed in the tooltip
 
-# Technical changes in 1.19.1 Pre-Release 2
+## Technical changes in 1.19.1 Pre-Release 2
 
-## Chat Types
+### Chat Types
 
 -   Chat types added to the `chat_types` registry are now only used for player chat, and not system messages
     -   The `system` and `game_info` chat types have been removed
@@ -27,11 +29,11 @@ We've added the ability to see the signing status of chat messages – this is s
     -   Chat types no longer support overlays
     -   A system message should instead be used to display overlays
 
-## server.properties
+### server.properties
 
 -   `enforce-secure-profile` is now defaulted to `true` for dedicated servers
 
-# Fixed Bugs in 1.19.1 Pre-Release 2
+## Fixed Bugs in 1.19.1 Pre-Release 2
 
 -   [MC-253112](https://bugs.mojang.com/browse/MC-253112) The game output console is logged with warnings regarding chat packets with invalid signatures when using entity selectors within commands
 -   [MC-253121](https://bugs.mojang.com/browse/MC-253121) Entities and other non-player chat message sources appear as players on the Select Chat Messages to Report screen

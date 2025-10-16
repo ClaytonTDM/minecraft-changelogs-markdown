@@ -1,8 +1,10 @@
-# New Features in 21w07a
+# 21w07a
+
+## New Features in 21w07a
 
 -   Added Grimstone!
 
-# Grimstone
+## Grimstone
 
 Grimstone can be found in the deepest parts of the underground, and is slightly tougher to mine than normal Stone.
 
@@ -25,13 +27,13 @@ Grimstone can be found in the deepest parts of the underground, and is slightly 
     -   Grimstone Tile Wall
     -   Chiseled Grimstone
 
-# Changes in 21w07a
+## Changes in 21w07a
 
 -   Tweaks and updates to world generation and ores
 -   Changes to the visuals of some ores and stone types
 -   Reordered Redstone Tab in Creative Inventory
 
-## World Generation
+### World Generation
 
 -   Tweaked huge caves to be more rare and decreased the chance that caves are filled with water
 -   Changed ore generation to match the new world height and to add more strategy to mining
@@ -42,7 +44,7 @@ Grimstone can be found in the deepest parts of the underground, and is slightly 
 
 ![Comparing old and new ore distribution](https://launchercontent.mojang.com/images/snapshot-21w07a-ore-comparison.png) [Click here](https://i.imgur.com/RH5cgSF.jpg) to view full resolution.
 
-## Visuals
+### Visuals
 
 -   Ores without unique shapes have been given new textures for accessibility reasons, so that each ore is distinguishable by shape alone
 -   Being the most iconic ore, Diamond Ore texture is staying the same to keep that classic feel maintained
@@ -50,7 +52,7 @@ Grimstone can be found in the deepest parts of the underground, and is slightly 
 
 ![snapshot-21w07a-texture-comparison](https://launchercontent.mojang.com/images/snapshot-21w07a-texture-comparison.jpg)
 
-## Creative Inventory
+### Creative Inventory
 
 -   The Redstone Tab has been reordered to prioritize highly-used blocks
 -   Redstone items/blocks have been grouped and ordered in the following way:
@@ -60,7 +62,7 @@ Grimstone can be found in the deepest parts of the underground, and is slightly 
     -   Common activators
     -   Openables
 
-# Fixed bugs in 21w07a
+## Fixed bugs in 21w07a
 
 -   [MC-147589](https://bugs.mojang.com/browse/MC-147589) Vines no longer randomly generate in jungles
 -   [MC-208613](https://bugs.mojang.com/browse/MC-208613) Amount of players who need to sleep to skip the night is calculated incorrectly

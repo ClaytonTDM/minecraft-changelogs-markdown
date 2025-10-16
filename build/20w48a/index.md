@@ -1,10 +1,12 @@
+# 20w48a
+
 Did someone ask for a snapshot full of tasty Caves & Cliffs features? Then you came to the right place! This particular snapshot adds blocks for dripstone – stalagmites and stalactites. Or is it stalactites and stalagmites? Anyway, you can’t find them in the world just yet… but try out the functionality of the new blocks!
 
-# New Features in 20w48a
+## New Features in 20w48a
 
 -   Added Dripstone Blocks and Pointed Dripstone
 
-## Pointed Dripstone
+### Pointed Dripstone
 
 -   Forms a stalactite if placed on the ceiling or a stalagmite if placed on the floor
 -   Can be combined to form longer stalactites & stalagmites
@@ -17,7 +19,7 @@ Did someone ask for a snapshot full of tasty Caves & Cliffs features? Then you c
 -   A stalactite with a lava source above the ceiling will fill a cauldron below with lava after a while
 -   Thrown tridents break pointed dripstone
 
-# Changes in 20w48a
+## Changes in 20w48a
 
 -   Right-clicking a bundle in the inventory now empties one item from the bundle
 -   Using a bundle now throws out its entire content into the world
@@ -26,11 +28,11 @@ Did someone ask for a snapshot full of tasty Caves & Cliffs features? Then you c
 -   Wearing any piece of leather armor now prevents freezing entirely
 -   Changed textures for amethysts, candles, clocks and compasses
 
-# Technical Changes in 20w48a
+## Technical Changes in 20w48a
 
 -   Added a freezeDamage game rule that allows players to toggle whether powder snow causes freeze damage or not
 
-# Fixed bugs in 20w48a
+## Fixed bugs in 20w48a
 
 -   [MC-3615](https://bugs.mojang.com/browse/MC-3615) Lava and water are completely transparent at certain height levels
 -   [MC-176614](https://bugs.mojang.com/browse/MC-176614) Swimming and doing certain actions make the player look very odd/does not have animations for swimming + doing certain actions

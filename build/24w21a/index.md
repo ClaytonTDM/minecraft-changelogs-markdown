@@ -1,8 +1,10 @@
+# 24w21a
+
 This week we're bringing a Snapshot you can vibe out to! This time around we're bringing data-driven jukeboxes, a new gamerule, and a bunch of fixes.
 
 Happy vibing!
 
-# Changes
+## Changes
 
 -   It seems we cooked a bit too hard with the new Piston sounds last week, which is why we're reverting back to the old sounds again
 -   Lowered volume of original sounds to address initial feedback of Pistons being too loud
@@ -12,47 +14,47 @@ Happy vibing!
 -   In the Realms main screen, all online players of a Realm are displayed
     -   When hovered, a tooltip is shown with each player's head and name
 
-## Vault
+### Vault
 
 -   Added sound effect to help players understand they've already looted a vault
 
-## Trial Chambers
+### Trial Chambers
 
 -   Trial Chambers are less likely to generate in the Deep Dark
 
-## Animal Panic
+### Animal Panic
 
 -   Animals now panic based on the damage caused by predefined Damage Source Types
 -   The panic lasts for 2 seconds after the damage is dealt. The following damage type tags are used by vanilla animals:
     -   `panic_environmental_causes`: Used by Wolves, Polar Bears (adults) and Pandas
     -   `panic_causes`: Used by all other animals and baby Polar Bears
 
-## Server links
+### Server links
 
 -   Servers can now provide a list of links to clients
 -   If client has received any links, a new button called "Server Links..." will show up in pause game screen
     -   To make space for that button, "Report Bugs" and "Give Feedback" buttons might be moved into a sub-screen if necessary
 
-## Disconnection screen improvements
+### Disconnection screen improvements
 
 -   In some cases client will now store detailed information about disconnection (similar to crash reports)
 -   When that happens, new "Open Disconnection Report Directory" button will be added to the disconnection screen
 -   When server provides link for bug reporting, it will be also be added as a button to the disconnection screen
 
-# Technical Changes
+## Technical Changes
 
 -   Resource Pack version is now 34
 -   Data Pack version is now 45
 -   Server can now provide list of links to client
 -   Servers can add custom details to crash and disconnection reports
 
-## Gamerules
+### Gamerules
 
 -   Added new `entitiesWithPassengersCanUsePortals` gamerule
     -   When `true`, entities with passengers can use Nether Portals, End Portals and End Gateways
     -   Defaults to `false`
 
-## Server links
+### Server links
 
 -   New clientbound packet `server_links` is available in `configuration` and `game` protocols
 -   On receival, client will make links available from pause menu
@@ -65,18 +67,18 @@ Happy vibing!
     -   If this field is non-empty, server will send that link to clients
     -   This field should contain well-formed URL
 
-## Custom server crash report details
+### Custom server crash report details
 
 -   New clientbound packet `custom_report_details` is available in `configuration` and `game` protocols
 -   This packet contains a list of key-value text entries
 -   If received, contents of this packet will be added in a separate section to any crash or disconnection report generated during connection to this server
 
-# Data Pack Version 45
+## Data Pack Version 45
 
 -   Jukebox songs are now data-driven
 -   Added new command syntax
 
-## Jukebox Songs
+### Jukebox Songs
 
 -   Added a jukebox song registry which is loaded from data packs
 -   Path to jukebox song definition is `data/<namespace>/jukebox_song/<id>.json`
@@ -87,7 +89,7 @@ Happy vibing!
     -   `comparator_output` - the redstone signal output by a comparator when played in a Jukebox, between 0 and 15
 -   Added `minecraft:jukebox_playable` item stack component
 
-### `jukebox_playable` item component
+#### `jukebox_playable` item component
 
 -   If set, the item can be inserted into Jukeboxes to play a song
 -   Format: object with fields
@@ -98,7 +100,7 @@ Happy vibing!
         -   This was formerly controlled by the `hide_additional_tooltip` component on Music Discs
     -   e.g. `jukebox_playable={song:'minecraft:precipice'}`, `jukebox_playable={song:'minecraft:precipice', show_in_tooltip:false}`
 
-## Attributes
+### Attributes
 
 -   Attribute modifiers no longer have a UUID and name combination
 -   Instead, attribute modifiers are now uniquely identified by a namespaced ID, similar to other resources
@@ -107,17 +109,17 @@ Happy vibing!
 -   Existing built-in modifiers will be upgraded to new IDs
 -   Existing custom modifiers will be upgraded to the GUID as an ID in the `minecraft` namespace
 
-### `attribute` command
+#### `attribute` command
 
 -   The `uuid` and `name` arguments have been replaced with a singular `id` argument
 
-### Item Stack Attribute Modifiers
+#### Item Stack Attribute Modifiers
 
 -   The `uuid` and `name` fields have been removed.
 -   Attribute Modifiers now have an `id` (namespaced ID) field
     -   This is a unique identifier per attribute for the modifier
 
-### Entity Attributes
+#### Entity Attributes
 
 -   Attributes are now stored as `attributes`
 -   Attribute format:
@@ -132,9 +134,9 @@ Happy vibing!
                 -   `add_multiplied_base` - previously `1`
                 -   `add_multiplied_total` - previously `2`
 
-## Enchantments
+### Enchantments
 
-### Attribute Effects
+#### Attribute Effects
 
 Fields:
 
@@ -143,27 +145,27 @@ Fields:
     -   This will be postfixed with the slot name when the enchanted item is equipped in a slot
     -   Must be unique to avoid different Enchantments (or other systems) interfering with each others
 
-### Entity Effect Types
+#### Entity Effect Types
 
-#### `damage_item`
+##### `damage_item`
 
 The damage is not applied to items held by players in creative mode.
 
-#### Hit Block Parameters
+##### Hit Block Parameters
 
 -   Entities: `this`
 -   Enchantment Level
 -   Origin
 -   Block State
 
-### Effect Components
+#### Effect Components
 
 -   `minecraft:hit_block`:
     -   Condition Context: changed to take a Hit Block Parameter - `this` is the entity hitting the Block
 
-## Tags
+### Tags
 
-### Directory renames
+#### Directory renames
 
 -   Some registry types that used legacy datapack directory names (based on plural name of element) have been renamed to match registry name
 -   Affected directories:
@@ -176,23 +178,23 @@ The damage is not applied to items held by players in creative mode.
     -   `functions` -> `function`
     -   `tags/functions` -> `tags/function`
 
-### Item Tags
+#### Item Tags
 
 -   Removed `music_discs` item tag
 
-### Block Tags
+#### Block Tags
 
 -   `air`: All blocks that resemble air
 
-### Damage Type Tags
+#### Damage Type Tags
 
 -   Removed `breeze_immune_to` damage type tag
 -   Added `panic_environmental_causes`: Damage types that cause panic in aggressive animals that can panic, i.e. mobs that retaliate when attacked
 -   Added `panic_causes`: Damage types that cause panic in passive animals, i.e. mobs that run away when attacked
 
-## Predicates
+### Predicates
 
-### Jukebox Playable Predicate
+#### Jukebox Playable Predicate
 
 New item sub-predicate available as `jukebox_playable`.
 
@@ -200,29 +202,29 @@ New item sub-predicate available as `jukebox_playable`.
 -   Fields:
     -   `song` - optional id, list of ids or tag for jukebox song to be matched
 
-### Player Predicate
+#### Player Predicate
 
 -   The `gamemode` field has been changed to accept a list of gamemodes
 
-## Commands
+### Commands
 
 -   Added `@n` entity selector, selecting the nearest entity
     -   This functions as `@e[sort=nearest,limit=1]`
     -   Additional requirements may still be provided; for example: `@n[type=pig]` will select the closest Pig
 
-# Resource Pack Version 34
+## Resource Pack Version 34
 
 -   Added the `block.vault.reject_rewarded_player` sound event
 -   Changes to Shaders
 
-## Shaders
+### Shaders
 
 -   The `blend` block in core shader definitions has been removed, as it was not used
 -   The `position_color_tex` shader has been removed, replaced with the pre-existing `position_tex_color`
 -   The `glint_direct` shader has been removed, replaced with the pre-existing `glint` shader
 -   The `armor_glint` shader has been removed, as it was unused
 
-# Fixed bugs in 24w21a
+## Fixed bugs in 24w21a
 
 -   [MC-67](https://bugs.mojang.com/browse/MC-67) Entities with passengers cannot travel through portals
 -   [MC-31819](https://bugs.mojang.com/browse/MC-31819) Hunger saturation depletes on peaceful difficulty

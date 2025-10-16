@@ -1,10 +1,12 @@
+# 1.20.3-pre2
+
 Hello again! The stabilization phase for 1.20.3 release continues. This Pre-Release brings more bug fixes.
 
-# Changes
+## Changes
 
 -   Breeze wind charges now break decorated pots, chorus flowers, and pointed dripstone blocks upon collision
 
-# Fixed bugs in 1.20.3 Pre-Release 2
+## Fixed bugs in 1.20.3 Pre-Release 2
 
 -   [MC-265291](https://bugs.mojang.com/browse/MC-265291) Command suggestions within the command block interface don't disappear when the console command field is unselected
 -   [MC-265426](https://bugs.mojang.com/browse/MC-265426) Certain inputs pressed whilst in F3+Esc Pause will be carried out after game is unpaused

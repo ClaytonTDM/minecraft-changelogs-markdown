@@ -1,12 +1,14 @@
+# 25w32a
+
 Another Tuesday, another Snapshot release! Alongside technical updates and bug fixes, this week we're introducing a copper-y collection of goodies from our third game drop of the year: Build with copper torches, lanterns, chains, and bars – and watch them develop that stunning signature patina. With this week's release, you'll also find that items displayed in shelves have learned the noble art of sitting down.
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added Copper Decorations
 
-## Copper Decorations
+### Copper Decorations
 
 -   Added Copper Torch
     -   A green variant of the Torch crafted from a Copper Nugget, Coal, and Stick
@@ -22,31 +24,31 @@ Happy mining!
     -   The lantern itself oxidizes, changing its look as it ages
     -   Functionally identical to the Lantern
 
-# Changes
+## Changes
 
 -   The Chain block has been renamed to "Iron Chain"
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Items on the Shelf have been repositioned to sit on the Shelf
 -   All Copper Golem Statues now always drop as item when mined
 -   All Copper Golem Statues now pop off as an item when pushed by a piston
 
-## Recipes
+### Recipes
 
 -   Changed the Copper Trapdoor recipe to use 4 Copper Ingots instead of 6
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 83.0
 -   The Resource Pack version is now 65.1
 -   Added a way to use GUI and item sprites in text
 
-# Data Pack Version 83.0
+## Data Pack Version 83.0
 
-## Entity Data
+### Entity Data
 
-### `copper_golem`
+#### `copper_golem`
 
 -   The `weather_state` field now expects a string id instead of integer id
     -   `0` -> `unaffected`
@@ -54,9 +56,9 @@ Happy mining!
     -   `2` -> `weathered`
     -   `3` -> `oxidized`
 
-## Text rendering
+### Text rendering
 
-### `object` Text Component
+#### `object` Text Component
 
 -   New text component with type `object` has been added
 -   This component will display a single sprite from sprite atlas as a character
@@ -71,27 +73,27 @@ General note about atlas contents:
 -   Contents are controlled by files in `assets/minecraft/atlases/` directory in a resource pack
 -   Current contents can be reviewed with the F3+S key combination
 
-## Loot Tables
+### Loot Tables
 
 -   Added `harvest/sweet_berry_bush` loot table for drops when a Sweet Berry Bush with Sweet Berries is harvested by interacting with it
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#chains` - all Chain blocks
 -   Added `#lanterns` - all Lantern blocks
 -   Added `#bars` - all Bar blocks
 
-### Item Tags
+#### Item Tags
 
 -   Added `#chains` - all Chain block items
 -   Added `#lanterns` - all Lantern block items
 -   Added `#bars` - all Bar block items
 
-# Resource Pack Version 65.1
+## Resource Pack Version 65.1
 
-## Block Sprites
+### Block Sprites
 
 Added new block sprites:
 
@@ -112,7 +114,7 @@ Added new block sprites:
 -   `weathered_copper_lantern`
 -   `weathered_copper_torch`
 
-## Item Sprites
+### Item Sprites
 
 Added new item sprites:
 
@@ -125,13 +127,13 @@ Added new item sprites:
 -   `weathered_copper_chain`
 -   `weathered_copper_lantern`
 
-## Particles
+### Particles
 
 Added new particle:
 
 -   `copper_fire_flame`
 
-# Fixed bugs in 25w32a
+## Fixed bugs in 25w32a
 
 -   [MC-163218](https://bugs.mojang.com/browse/MC-163218) Players with the Sneak option set to "Toggle" can sneak while in GUIs
 -   [MC-174759](https://bugs.mojang.com/browse/MC-174759) Dragon eggs can be teleported to a height below void

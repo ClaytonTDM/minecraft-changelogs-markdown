@@ -1,6 +1,8 @@
+# 1.16.2-pre3
+
 We have now released 1.16.2 Pre-release 3, fixing some stability issues.
 
-# Fixed bugs in 1.16.2 Pre-release 3
+## Fixed bugs in 1.16.2 Pre-release 3
 
 -   [MC-105248](https://bugs.mojang.com/browse/MC-105248) Wet wolves become nearly black in dark areas
 -   [MC-107529](https://bugs.mojang.com/browse/MC-107529) Marker:1 Armor Stands render themself and their equipment dark if inside solid blocks

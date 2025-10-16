@@ -1,16 +1,18 @@
+# 25w36a
+
 Snapshot 25w36a is out and it includes mannequins, a new technical entity that is spawned with commands and can be used as an NPC. Conflicting key binds will now function together allowing you to bind a key to multiple actions. And as always, this snapshot also includes technical tweaks and bug fixes.
 
 > > **Developer's Note**: _This snapshot brings a large change to how we collect and draw block entities and particles. We don't anticipate any change of behaviors so please keep an eye out and report anything suspicious as a bug, thank you!_
 
-# New Features
+## New Features
 
 -   World Borders can now be set per dimension
 
-## End Light Flashes
+### End Light Flashes
 
 -   While the Ender Dragon fog effect is active the flash source in the sky is not visible and the brightness of the light affecting the world is reduced
 
-## Accessibility
+### Accessibility
 
 -   Multiple key binds that have the same key assigned to them can now work together, while before only one would work
     -   For example, you can now bind `D` to `Jump` and `Strafe Left` to jump and strafe left at the same time
@@ -18,41 +20,41 @@ Snapshot 25w36a is out and it includes mannequins, a new technical entity that i
 -   The spectator hotbar menu key can now be rebound
     -   It is part of a new `Spectator` category in the Key Binds screen, alongside the pre-existing `Highlight Players` key bind
 
-# Changes
+## Changes
 
 -   Formatting codes are now stripped from Code of Conduct files
 
-## World Border
+### World Border
 
 -   The World Border is now dimension-specific
     -   This means that each dimension can have its own World Border size, position, etc.
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Copper Torch and Copper Lantern colors are adjusted to make them more discernible to color blind players
 
-## UI
+### UI
 
 -   Double-clicking a word in edit box now selects it
 
-## Block States
+### Block States
 
 -   Powered Shelves can now only connect to other Powered Shelves facing the exact same direction
 
-## Performance Improvements
+### Performance Improvements
 
 -   Particles outside of players view are not rendered anymore, which provides a performance improvement in some cases
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 86.0
 
-# Data Pack Version 86.0
+## Data Pack Version 86.0
 
 -   Added Mannequin entities
 -   The World Border is now dimension-specific
 
-## Mannequins
+### Mannequins
 
 Added a new type of technical entity called `minecraft:mannequin` which can only be spawned with summon commands.
 
@@ -78,15 +80,15 @@ Data Fields:
     -   Valid entries: `cape`, `jacket`, `left_sleeve`, `right_sleeve`, `left_pants_leg`, `right_pants_leg`, `hat`
 -   `main_hand` - Which hand is the main hand of the Mannequn - one of `left` and `right`
 
-## Particles
+### Particles
 
 -   `dragon_breath` now optionally takes a `power` parameter (float, default `1.0`), which is multiplied onto its initial velocity, after all randomness
 -   `instant_effect` and `effect` now optionally take `power` (float, default `1.0`) and `color` (rgb, default `0xFFFFFF`) parameters
 -   `flash` now requires a `color` parameter (argb)
 
-# Resource Pack Version 68.0
+## Resource Pack Version 68.0
 
-### Shaders
+#### Shaders
 
 -   The following unused shaders have been removed:
     -   `core/position_color_lightmap.vsh`
@@ -94,7 +96,7 @@ Data Fields:
     -   `core/position_color_tex_lightmap.vsh`
     -   `core/position_color_tex_lightmap.fsh`
 
-# Fixed bugs in 25w36a
+## Fixed bugs in 25w36a
 
 -   [MC-223142](https://bugs.mojang.com/browse/MC-223142) Player can move while spectating a marker
 -   [MC-225088](https://bugs.mojang.com/browse/MC-225088) Overworld surface is darker than before on low brightness

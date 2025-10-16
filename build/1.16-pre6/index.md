@@ -1,20 +1,22 @@
+# 1.16-pre6
+
 Start your new week by not slipping and sliding on blocks that should not be slippy or slidey - we've now released pre-release 6 for Minecraft Java Edition 1.16.
 
-# Changes in 1.16 Pre-Release 6
+## Changes in 1.16 Pre-Release 6
 
 -   Tweaked map colours of crimson and warped materials
 -   There is now a text that says "Search..." in the recipe book that higlights that you can... search...
 -   Opening the game mode switcher now has a default selection if you have not entered a different game mode before in that world.
     -   In this scenario, by default, you will now select Creative if currently in any other game mode, and Survival if currently in Creative
 
-# Technical Changes in 1.16 Pre-release 6
+## Technical Changes in 1.16 Pre-release 6
 
 ​ Added `player_interacted_with_entity` advancement trigger
 
 -   `item` matches the item which was in the player's hand during interaction
 -   `entity` matches the entity which was interacted with
 
-# Fixed Bugs in 1.16 Pre-Release 6
+## Fixed Bugs in 1.16 Pre-Release 6
 
 -   [MC-45749](https://bugs.mojang.com/browse/MC-45749) Potion particles spread always from the north-west corner of a block, regardless of impact
 -   [MC-163333](https://bugs.mojang.com/browse/MC-163333) Plains houses and decorations can generate in taiga villages

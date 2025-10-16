@@ -1,10 +1,12 @@
+# 1.16-pre4
+
 We've now released Minecraft 1.16 Pre-release 4, with tweaked spawn rates and another round of bug fixes.
 
-# Changes in 1.16 Pre-Release 4
+## Changes in 1.16 Pre-Release 4
 
 -   Tweaked hostile spawn rates in Warped Forests and Soulsand Valleys
 
-# Fixed Bugs in 1.16 Pre-Release 4
+## Fixed Bugs in 1.16 Pre-Release 4
 
 -   [MC-136085](https://bugs.mojang.com/browse/MC-136085) Blocks attached to multi-block blocks are deleted when breaking the other half of the block
 -   [MC-177463](https://bugs.mojang.com/browse/MC-177463) Crash report "Connection:" field contains unuseful value (Object.toString())

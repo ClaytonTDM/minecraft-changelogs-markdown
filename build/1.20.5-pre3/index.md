@@ -1,16 +1,18 @@
+# 1.20.5-pre3
+
 Back-to-back! Releasing yesterday was so much fun that we decided to ship another Pre-Release for Minecraft: Java Edition 1.20.5 today as well. This one is coming in hot with important bug & crash fixes.
 
 Happy mining!
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 41
 
-# Data Pack Version 41
+## Data Pack Version 41
 
 -   Replaced Entity Type tag `minecraft:punchable_projectiles` with tag `minecraft:redirectable_projectile` for projectiles which can be redirected by player attacks and projectiles
 
-# Fixed bugs in 1.20.5 Pre-Release 3
+## Fixed bugs in 1.20.5 Pre-Release 3
 
 -   [MC-269384](https://bugs.mojang.com/browse/MC-269384) Panorama sometimes spins quickly when exiting world
 -   [MC-270097](https://bugs.mojang.com/browse/MC-270097) Crash when set\_ominous\_bottle\_amplifier item modifier sets out-of-range amplifier

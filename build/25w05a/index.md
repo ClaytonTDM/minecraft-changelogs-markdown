@@ -1,13 +1,15 @@
+# 25w05a
+
 Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snapshot is filled with new features: Say hello the cold and warm cow variants roaming cold and warm biomes across the Overworld, treat your ears to new ambient desert sounds and spruce up your builds with the bush block and sparkling firefly bush! And of course, we're also bringing you a fresh collection of bug fixes and technical updates. Happy mining!
 
-# New Features
+## New Features
 
 -   Added cold and warm variants for the Cow
 -   Added Firefly Bush block
 -   Added Bush block
 -   Added new ambient block sounds for ambient sounds in Desert and Badlands biomes
 
-## Cow Variants
+### Cow Variants
 
 -   New Cow variants have been added, the variant is determined by the biome they spawn in
 -   Temperate variant - The Cow we are all familiar with
@@ -32,14 +34,14 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
     -   Badlands
 -   When bred by a player, a baby Cow variant will not be chosen by the current biome, but instead randomly selected from one of the parents' variants
 
-## Firefly Bush
+### Firefly Bush
 
 -   The Firefly Bush is found in Swamps and near Rivers
 -   When it's dark, glowing firefly particles appear around the Firefly Bush
 -   Using Bone Meal on a Firefly Bush will spawn another Firefly Bush item
 -   The Firefly Bush emits light level 2
 
-## Bush
+### Bush
 
 -   The Bush is a new type of decorative block that can be found in small patches in the following biomes:
     -   Plains
@@ -54,42 +56,42 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
 -   The Bush can be used in the Composter
 -   Using Bone Meal on a Bush places a neighbouring Bush next to the Bush if possible
 
-## New Ambient Sounds for Desert and Badlands
+### New Ambient Sounds for Desert and Badlands
 
 -   Sand, Red Sand and Terracotta of any color have a chance of playing ambient sounds when surrounded by any one of them on at least 3 sides 8 blocks away
     -   `block.sand.idle` can be played in any biome
     -   `block.sand.wind` only plays when in Desert or Badlands biomes
 -   Dead Bush blocks have a chance of playing ambient sounds when placed on top of two blocks that are any color of Terracotta, Sand or Red Sand blocks in any biome
 
-# Changes
+## Changes
 
 -   The look of the temperate Cow has been slightly updated to have an extruded snout
 -   Beacons and their beams now render beyond 16 chunks up to the client render distance
     -   To keep it easily visible at large distances, the beam is rendered thicker the further away you are
     -   The beam now renders up to 2048 blocks high, up from 1024
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 65
 -   The Resource Pack version is now 50
 
-# Data Pack Versions 65
+## Data Pack Versions 65
 
-## Commands
+### Commands
 
 -   Text component arguments in `/bossbar`, `/scoreboard` and `/team` commands are now resolved before use in context of entity held in `@s`
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#plays_ambient_desert_block_sounds` - blocks that will play ambient desert block sounds
 
-### Damage Type Tags
+#### Damage Type Tags
 
 -   Renamed `#bypasses_blocking` back to `#bypasses_shield`
 
-## Cow Variants
+### Cow Variants
 
 -   Cow variants can be data-driven by adding entries to `data/<namespace>/cow_variant/<id>.json`
 -   This feature is experimental
@@ -98,9 +100,9 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-## Item Components
+### Item Components
 
-### Changes to the `blocks_attacks` component
+#### Changes to the `blocks_attacks` component
 
 -   New `bypassed_by` field - hashtagged damage type tag (optional)
     -   If specified, blocking is bypassed by these damage types
@@ -108,18 +110,18 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
     -   `horizontal_blocking_angle` - angle in degrees as a positive float (default: `90`)
         -   The maximum angle between the user's facing and the incoming attack for the block to be effective
 
-# Resource Pack Version 50
+## Resource Pack Version 50
 
 -   Updated Pig textures
 -   New and updated Cow textures
 -   Added textures for new Firefly Bush block
 -   Added textures for new Bush blocks
 
-## Updated Pig textures
+### Updated Pig textures
 
 -   Texture `pig` has been renamed to `temperate_pig`
 
-## New and updated Cow textures and model
+### New and updated Cow textures and model
 
 -   Added new textures for Cow variants:
     -   `cold_cow`
@@ -131,7 +133,7 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
     -   Cow models now have a snout
     -   Cow models now have their legs mirrored
 
-# Fixed bugs in 25w05a
+## Fixed bugs in 25w05a
 
 -   [MC-108495](https://bugs.mojang.com/browse/MC-108495) Non-LivingBase entities can be on a team (and show color) but can't be targeted using team=
 -   [MC-165711](https://bugs.mojang.com/browse/MC-165711) Eye of ender hitbox always lags behind the animation

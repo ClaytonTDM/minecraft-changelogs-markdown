@@ -1,12 +1,14 @@
+# 20w22a
+
 It has been a busy week for us but we still wanted to squeeze out a snapshot as we've been busy squashing a bunch of bugs.
 
-# Experimental Rendering Changes
+## Experimental Rendering Changes
 
 We've included some experimental changes to graphics rendering in this snapshot, which might reveal some issues on a small number of older graphics cards.
 
 If do you find any new graphical bugs then please report them to the bug tracker with the make and model of your graphics card as well as which operating system you are using ​
 
-# New Features in 20w22a
+## New Features in 20w22a
 
 ​
 
@@ -14,7 +16,7 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ​
 
-# Changes in 20w22a
+## Changes in 20w22a
 
 ​
 
@@ -25,7 +27,7 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ​
 
-## Villager Workstation Logic
+### Villager Workstation Logic
 
 ​
 
@@ -37,7 +39,7 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ​
 
-# Technical Changes in 20w22a
+## Technical Changes in 20w22a
 
 ​
 
@@ -50,7 +52,7 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ​
 
-## Datapack loading
+### Datapack loading
 
 ​
 
@@ -62,7 +64,7 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ​
 
-# Fixed bugs in 20w22a
+## Fixed bugs in 20w22a
 
 -   [MC-667](https://bugs.mojang.com/browse/MC-667) Lily pads can be placed intersecting entities
 -   [MC-4065](https://bugs.mojang.com/browse/MC-4065) Messages/commands sent while in a bed won't be remembered in sent history

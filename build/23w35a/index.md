@@ -1,11 +1,13 @@
+# 23w35a
+
 We are releasing a new snapshot that contains updates to support libraries, and a whole bundle of bug fixes!
 
-# Technical Changes
+## Technical Changes
 
 -   The `LWJGL` library has been upgraded to version 3.3.2
 -   The default Java version shipped with the game has been upgraded to Microsoft OpenJDK 17.0.8
 
-# Fixed bugs in 23w35a
+## Fixed bugs in 23w35a
 
 -   [MC-229121](https://bugs.mojang.com/browse/MC-229121) JVM crash in jdk.internal.loader.NativeLibraries.load
 -   [MC-242385](https://bugs.mojang.com/browse/MC-242385) Inconsistency on the buffer size calculation in the chunk packet data

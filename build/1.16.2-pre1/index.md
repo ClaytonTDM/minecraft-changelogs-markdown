@@ -1,18 +1,20 @@
+# 1.16.2-pre1
+
 It's time for pre-releases for Minecraft Java Edition 1.16.2!
 
 From now on you should mostly see bug fixes leading up to the full release of 1.16.2 which we expect to happen in a few weeks.
 
-# New Features in 1.16.2 Pre-release 1
+## New Features in 1.16.2 Pre-release 1
 
 -   New accessibility settings have been added to help with visual comfort
 
-## Accessibility
+### Accessibility
 
 -   Distortion effects such as nausea and the Nether portal overlay can now be reduced
 -   At lower values, the nausea effect is replaced with a green overlay as an alternative visualization
 -   Field of view effects shown after speed modifiers are applied can now be reduced
 
-# Changes in 1.16.2 Pre-release 1
+## Changes in 1.16.2 Pre-release 1
 
 -   Chains can now be placed in all orientations
 -   Endermen will no longer place their held blocks onto bedrock blocks
@@ -20,11 +22,11 @@ From now on you should mostly see bug fixes leading up to the full release of 1.
 -   Villagers now lose their job sites when changing dimension
 -   Chat delay has been added to the Chat Settings screen
 
-# Technical Changes in 1.16.2 Pre-release 1
+## Technical Changes in 1.16.2 Pre-release 1
 
 -   Custom world generation and dimension settings now use the same folder pattern in data packs as other resources (`namespace/<type>/resource.json`)
 
-# Fixed bugs in 1.16.2 Pre-release 1
+## Fixed bugs in 1.16.2 Pre-release 1
 
 -   [MC-73884](https://bugs.mojang.com/browse/MC-73884) Throwable projectiles get destroyed at contact with non solid blocks
 -   [MC-125758](https://bugs.mojang.com/browse/MC-125758) Bubble column does not affect egg, snowball, ender pearl, splash potion, lingering potion, fireball and shulker bullet

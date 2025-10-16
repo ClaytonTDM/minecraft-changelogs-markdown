@@ -1,14 +1,16 @@
+# 24w07a
+
 We are now releasing 24w07a, containing bug fixes and a new skeleton variant called Bogged.
 
 Good luck dodging poisonous arrows!
 
-# Known Issues
+## Known Issues
 
 -   The fall damage reduction for the Wind Charge is not working
 
-# Experimental Features
+## Experimental Features
 
-## Bogged
+### Bogged
 
 -   A new variant of Skeletons that shoot poisonous arrows
     -   They're faster to take down with 16 health instead of 20 health
@@ -17,20 +19,20 @@ Good luck dodging poisonous arrows!
 -   These mossy and mushroom covered Skeletons spawn naturally in Swamps and Mangrove Swamps
     -   Can also be found spawning from Trial Spawners in some Trial Chambers
 
-# Changes
+## Changes
 
 -   Hoppers can once again pick up items from beehives and beenests, but other full blocks still block them
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 32
 
-# Data Pack Version 32
+## Data Pack Version 32
 
 -   Added `#minecraft:does_not_block_hoppers` for blocks that will never disable a Hopper when placed above one
 -   Added `gameplay/panda_sneeze` loot table for drops when Pandas sneeze
 
-# Fixed bugs in 24w07a
+## Fixed bugs in 24w07a
 
 -   [MC-266570](https://bugs.mojang.com/browse/MC-266570) Wind charges can't go through non solid blocks
 -   [MC-267732](https://bugs.mojang.com/browse/MC-267732) /place jigsaw still caps max depth at 7

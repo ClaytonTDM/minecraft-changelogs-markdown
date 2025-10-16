@@ -1,8 +1,10 @@
+# 1.20-pre3
+
 We are now releasing 1.20 Pre-release 3, containing even more bug fixes.
 
 Happy crafting!
 
-# Fixed bugs in 1.20 Pre-release 3
+## Fixed bugs in 1.20 Pre-release 3
 
 -   [MC-121788](https://bugs.mojang.com/browse/MC-121788) Jump boost, slow falling and levitation don't apply to ridden horses, pigs or striders until after a relog
 -   [MC-152258](https://bugs.mojang.com/browse/MC-152258) Riding an entity with slow falling will not stop fall damage

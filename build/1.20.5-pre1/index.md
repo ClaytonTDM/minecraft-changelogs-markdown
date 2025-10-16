@@ -1,10 +1,12 @@
+# 1.20.5-pre1
+
 It is now time for the first Pre-release of Minecraft 1.20.5, featuring some tweaks to Trial Chambers and Ominous Trials, as well as new advancements, a big set of technical tweaks and changes, and lots of bug fixes.
 
 From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
 
-# Experimental Features
+## Experimental Features
 
-## Trial Chambers
+### Trial Chambers
 
 -   More consistently buried by terrain when found underground
 -   Remade 'Chamber 6' with variations, and renamed it to 'Assembly'
@@ -14,7 +16,7 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
     -   Stopped Tuff Bricks from spawning in the air
     -   Added more lights to quadrants
 
-## Ominous Trials
+### Ominous Trials
 
 -   Mobs that can wear equipment will now often spawn with enchanted weapons and armor
     -   Armor enchantments include Protection IV, Projectile Protection IV and Fire Protection IV
@@ -23,28 +25,28 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
 -   Players are now chosen 50% of the time when an Ominous Trial Spawner chooses which entity to drop projectiles on top of
     -   Projectiles now spawn more accurately above chosen entities
 
-## Weaving
+### Weaving
 
 -   Now more consistently spawns 2-3 cobwebs on death
 -   Players are now affected by the movement buff through Cobwebs
     -   Move through Cobweb with 50% of their normal speed instead of 25%
 
-## Infested
+### Infested
 
 -   Now has a 10% chance to spawn 1-2 Silverfish instead of 5%
 -   Silverfish will now spawn at the center of the entity's bounding box and fling out in the direction the entity is facing
 
-## Oozing
+### Oozing
 
 -   Will only spawn slimes in a given 5x5x5 area up to the max entity cramming count
 
-## Advancements
+### Advancements
 
 -   Added `Revaulting` - Unlock an Ominous Vault with an Ominous Trial Key
 
-# New Features in 1.20.5-pre1
+## New Features in 1.20.5-pre1
 
-## Advancements
+### Advancements
 
 -   Added the following advancements:
     -   `Isn't it Scute?` - Get Armadillo Scutes from an Armadillo using a Brush
@@ -52,15 +54,15 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
     -   `Good as New` - Repair a damaged Wolf Armor using Armadillo Scutes
     -   `The Whole Pack` - Tame one of each Wolf variant
 
-# Changes in 1.20.5-pre1
+## Changes in 1.20.5-pre1
 
 -   Added support for Viossa language
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 39
 
-# Data Pack Version 39
+## Data Pack Version 39
 
 -   Added new item sub-predicates and loot functions
 -   Added new terrain adaptation type for structures: `encapsulate`
@@ -85,9 +87,9 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
 -   Added Entity Type tag `minecraft:punchable_projectiles` for projectiles which should be able to be punched and deflected toward the direction the player is looking
 -   Added Enchantment tag `minecraft:tooltip_order` controlling which order Enchantments are listed in tooltips
 
-## Modified loot functions
+### Modified loot functions
 
-### `set_contents`
+#### `set_contents`
 
 -   Unused field `type` has been removed
 -   Added new mandatory field `component`:
@@ -96,13 +98,13 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
     -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `bundle_contents` and `charged_projectiles` will ignore empty stacks
 
-### `set_custom_data`
+#### `set_custom_data`
 
 Field `tag` now accepts both SNBT data written as a string (existing format) and unflattened tags
 
-## New Loot Functions
+### New Loot Functions
 
-### `modify_contents`
+#### `modify_contents`
 
 -   Apply modifier function to every item inside a component
 -   If component does not exist, it will not be added
@@ -112,14 +114,14 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
         -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `modifier` - function or list of functions to be applied to every item inside container
 
-### `set_item`
+#### `set_item`
 
 -   Replaces item type of item stack without changing count and components
 -   Fields:
     -   `conditions` - list of conditions to filter this function
     -   `item` - new item type
 
-### `filtered`
+#### `filtered`
 
 -   Applies sub-function only to items that match item predicate
 -   Fields:
@@ -127,14 +129,14 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
     -   `item_filter` - item predicate used to match items
     -   `modifier` - functions to apply to matching items
 
-### `set_custom_model_data`
+#### `set_custom_model_data`
 
 -   Sets `custom_model_data` component
 -   Fields:
     -   `conditions` - list of conditions to filter this function
     -   `value` - integer number provider
 
-## New Item Sub-predicates
+### New Item Sub-predicates
 
 General rules of component predicates:
 
@@ -145,7 +147,7 @@ General rules of component predicates:
     -   Integer and float fields will be replaced with ranges
     -   Registry ids will be replaced with a type that accepts id, list of ids or a tag
 
-### Collection matcher
+#### Collection matcher
 
 Collection matcher is a shared part of predicate used for matching collections. Every instance of this matcher will have same fields with same functionality, with only difference being type of matched element Fields:
 
@@ -165,20 +167,20 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   Examples (when matching item stacks):
         -   `{count:[{count:3,test:{items:diamond}}]}}` will match only when there are exactly 3 stacks of diamonds (no matter the stack size)
 
-### `container`
+#### `container`
 
 -   Matcher for `container` component (like shulker box)
 -   Fields:
     -   `items` - optional collection matcher
         -   Note: empty items are ignored. That means `container~{items:{size:3}}` will only pass if there are exactly 3 non-empty stacks in container
 
-## `bundle_contents`
+### `bundle_contents`
 
 -   Matcher for `bundle_contents` component
 -   Fields:
     -   `items` - optional collection matcher
 
-## `firework_explosion`
+### `firework_explosion`
 
 -   Matcher for `firework_explosion` component
 -   Fields
@@ -186,7 +188,7 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   `has_trail` - optional boolean
     -   `has_twinkle` - optional boolean
 
-## `fireworks`
+### `fireworks`
 
 -   Matcher for `fireworks` component
 -   Fields:
@@ -194,13 +196,13 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   `flight_duration` - optional integer range check for flight duration
 -   Example: `minecraft:fireworks~{explosions:{contains:[{shape:small_ball}]}}]` - matches if firework has at least one explosion with `small_ball` shape
 
-## `writable_book_content`
+### `writable_book_content`
 
 -   Matcher for `writable_book_content` component
 -   Fields
     -   `pages` - optional collection matcher for strings (matching only unfiltered contents of page)
 
-## `fireworks`
+### `fireworks`
 
 -   Matcher for `written_book_content` component
 -   Fields
@@ -210,7 +212,7 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   `generation` - optional integer range check for generation
     -   `resolved` - optional boolean
 
-## `attribute_modifiers`
+### `attribute_modifiers`
 
 -   Matcher for `attribute_modifiers` component
 -   Fields:
@@ -222,14 +224,14 @@ Collection matcher is a shared part of predicate used for matching collections. 
         -   `operation` - optional operation type (same values as `operation` field from `attribute_modifiers` component)
         -   `slot` - optional applicable slot type (same values as `slot` field from `attribute_modifiers` component)
 
-## `trim`
+### `trim`
 
 -   Matcher for `trim` component
 -   Fields:
     -   `material` - optional id, list of ids or tag for material to be matched
     -   `pattern` - optional id, list of ids or tag for pattern to be matched
 
-## Particle representation
+### Particle representation
 
 -   Particle options in commands and in fields like `Particles` in Area Effect clouds now use the same representation as worldgen files (like existing biomes' ambient particle settings)
 -   For example, command `/particle minecraft:dust 1.0 0.0 0.0 2.0 ...` becomes `/particle minecraft:dust{color:[1.0, 0.0, 0.0], scale:2.0} ...`
@@ -255,7 +257,7 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   Field `value` has been renamed to `color`
     -   Field `color` now also accepts list of floats representing RGBA color
 
-# Fixed bugs in 1.20.5 Pre-Release 1
+## Fixed bugs in 1.20.5 Pre-Release 1
 
 -   [MC-165435](https://bugs.mojang.com/browse/MC-165435) Can't trigger flying mode in creative while standing in the middle of 2×2 magma block bubble column
 -   [MC-188497](https://bugs.mojang.com/browse/MC-188497) AngerTime and AngryAt cannot be set on summon

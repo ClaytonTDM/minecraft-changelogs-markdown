@@ -1,11 +1,13 @@
+# 25w17a
+
 After a long weekend we are back with another snapshot! This week we are moving the locator bar out of experiments, try it out and continue to give us your feedback over at [feedback.minecraft.net](http://feedback.minecraft.net/). We have also made some improvements to the Realms UI including region selection for your world. Happy Mining!
 
-# New Features
+## New Features
 
 -   Added an option to reduce the cloud range
 -   Added the Locator Bar, a new HUD element that shows the direction of other Players in multiplayer
 
-## Locator Bar
+### Locator Bar
 
 The Locator Bar is a new default UI element that displays the direction of other players in the world.
 
@@ -23,12 +25,12 @@ If there are no other players in the world the experience bar will display as no
             -   eg: `/waypoint modify @s color red` to set an indicator to red
         -   Players on a team will override their default indicator color with their team color
 
-### Player Changes
+#### Player Changes
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-### Item Changes
+#### Item Changes
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -40,16 +42,16 @@ If there are no other players in the world the experience bar will display as no
     -   Dragon Head
     -   Piglin Head
 
-### Potion Changes
+#### Potion Changes
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
-# Changes
+## Changes
 
 -   Improvements to the Realms configuration screen
 -   Introduced a Region Preference setting that allows for more granular control over what region a Realm is started
 
-## Realms
+### Realms
 
 -   Changed the layout of the Realms configuration screen to use tabs
     -   A Worlds tab containing changes to any of the world slots, creating new worlds and changing their settings
@@ -59,17 +61,17 @@ If there are no other players in the world the experience bar will display as no
 -   Introduced a Region Preference setting that allows for more granular control over what region a Realm is started
 -   Changed wording for `Close`/`Open` Realm to `Temporarily close`/`Reopen` Realm
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 74
 -   The Resource Pack version is now 58
 -   Added a Server-authoritative Waypoint broadcasting system for controlling the Locator Bar behavior for Players
 
-# Data Pack Version 74
+## Data Pack Version 74
 
-## Commands
+### Commands
 
-### Added `waypoint`
+#### Added `waypoint`
 
 This is a new command for querying and modifying waypoints.
 
@@ -93,7 +95,7 @@ Arguments:
     -   `set <waypoint_style/resource>` changes the style to a specific asset under `waypoint_style/`
     -   `reset` will restore the default icon behavior of the Locator Bar
 
-#### Waypoint Styles
+##### Waypoint Styles
 
 These define custom icons to be displayed on the Locator Bar and are within the `waypoint_style/` asset directory.
 
@@ -115,15 +117,15 @@ The default implementation is as such:
     -   `far_distance` distance must be greater than `near_distance`
 -   Each sprite is searched within the prefix of `hud/locator_bar_dot/` (the directory `textures/gui/sprites/hud/locator_bar_dot`).
 
-## Game Rules
+### Game Rules
 
-### Added `locatorBar`
+#### Added `locatorBar`
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 -   The Game Rule has been renamed from `useLocatorBar` during the experiment. This may break minor command related features in worlds created in the previous snapshot.
 
-### Added `waypoint_transmit_range` and `waypoint_receive_range`
+#### Added `waypoint_transmit_range` and `waypoint_receive_range`
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
@@ -137,29 +139,29 @@ Examples:
 -   `/attribute @s minecraft:waypoint_receive_range base set 0` will prevent a player from receiving (turns off their Locator Bar)
 -   `/attribute @s minecraft:waypoint_receive_range base set 120` will only let a player see Locator Bar dots that are within 120 blocks (hiding all players further than that)
 
-## Waypoint Broadcasting
+### Waypoint Broadcasting
 
 The Locator Bar works by a server-controlled Waypoint system. Waypoints are received by Players, and connections between Waypoints and Players are managed by the multiplayer server.
 
 -   By default, all Players transmit a Waypoint from themselves, and all Players receive all Waypoints
 -   Individual Players can have their transmission and receive ranges controlled by the `waypoint_transmit_range` and `waypoint_receive_range` attributes
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `happy_ghast_avoids` - blocks that happy ghasts avoid getting close to
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
 
-# Resource Pack Version 58
+## Resource Pack Version 58
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
-### `Fog` Uniform Block
+#### `Fog` Uniform Block
 
 -   `FOG_IS_SKY` has been removed in favour of splitting up the sky shader
 
-# Fixed bugs in 25w17a
+## Fixed bugs in 25w17a
 
 -   [MC-240121](https://bugs.mojang.com/browse/MC-240121) "1x1\_b5.nbt" piece does not generate in woodland mansions
 -   [MC-296369](https://bugs.mojang.com/browse/MC-296369) Dispensers cannot equip harnesses onto happy ghasts

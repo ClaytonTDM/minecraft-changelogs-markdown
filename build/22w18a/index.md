@@ -1,15 +1,17 @@
+# 22w18a
+
 Another snapshot is now available for Minecraft: Java Edition. This snapshot brings a few gameplay changes and some technical tidbits, such as the place command and cryptographically signed chat commands.
 
 Enjoy!
 
-# Changes in 22w18a
+## Changes in 22w18a
 
 -   Allays now follow their liked player even if they can't see them
 -   Allays will only lose track of a player if they are more than 64 blocks away
 -   The texture of the sonic boom particle has been updated
 -   Vibration listeners such as Sculk Sensors, Sculk Shriekers and Wardens now listen to the closest vibration instead of the first vibration in the tick
 
-# Technical Changes in 22w18a
+## Technical Changes in 22w18a
 
 -   Banner patterns available in the Loom can now be controlled with tags (`banner_pattern/no_item_required` for no pattern item and `banner_pattern/pattern_item/*` for specific banner pattern items)
 -   Servers can now define different chat style formats for clients
@@ -20,7 +22,7 @@ Enjoy!
 -   Added loot table function `set_instrument`
 -   Chat from the `/say`, `/msg`, `/teammsg`, and `/me` commands are now all also cryptographically signed
 
-## Chat Types
+### Chat Types
 
 -   Different chat style formats can now be controlled by the server through the `chat_type` registry
     -   These are synchronized to clients when they join the server
@@ -28,7 +30,7 @@ Enjoy!
         -   Chat can be similarly optionally narrated with a custom translation key or format
     -   The entire message can have formatting applied, such as italics or a specific color (but currently not click or hover events)
 
-## Place Command
+### Place Command
 
 New command that replaces `placefeature` and can place features, jigsaws and structures at a given location. Syntax:
 
@@ -46,11 +48,11 @@ Parameters:
 -   `depth`: The maximum number of jigsaw connections to traverse during placement
 -   `pos`: The position to use as the origin for the generation (if omitted, `~ ~ ~` is used)
 
-## Loot Tables
+### Loot Tables
 
-### New functions
+#### New functions
 
-#### `set_instrument`
+##### `set_instrument`
 
 Sets item tags needed for instrument items to a random value selected from a tag.
 
@@ -58,7 +60,7 @@ Parameters:
 
 -   `options` - a tag reference specifying the instrument options to randomly pick from
 
-# Fixed bugs in 22w18a
+## Fixed bugs in 22w18a
 
 -   [MC-207935](https://bugs.mojang.com/browse/MC-207935) - Simultaneous vibrations don't trigger as expected
 -   [MC-232009](https://bugs.mojang.com/browse/MC-232009) - Minecraft does not resolve SRV records correctly

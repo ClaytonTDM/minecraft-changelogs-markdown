@@ -1,21 +1,23 @@
+# 1.21.4-pre2
+
 We are starting off this week with the second 1.21.4 Pre-Release, including even more bug fixes!
 
 Happy mining!
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 61
 
-# Data Pack Version 61
+## Data Pack Version 61
 
-## Furnace, Smoker and Blast Furnace Data
+### Furnace, Smoker and Blast Furnace Data
 
 -   Renamed `CookTime` to `cooking_time_spent`
 -   Renamed `CookTimeTotal` to `cooking_total_time`
 -   Renamed `BurnTime` to `lit_time_remaining`
 -   Added field `lit_total_time` representing the total time the furnace should be lit
 
-# Fixed bugs in 1.21.4 Pre-Release 2
+## Fixed bugs in 1.21.4 Pre-Release 2
 
 -   [MC-10025](https://bugs.mojang.com/browse/MC-10025) Burn time indicator of a furnace not working correctly after reloading the world
 -   [MC-197857](https://bugs.mojang.com/browse/MC-197857) Villagers trying to claim claimed beds

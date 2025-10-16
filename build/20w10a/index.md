@@ -1,6 +1,8 @@
+# 20w10a
+
 Today's snapshot is loud! It comes with a bunch of new ambient sound that adds some really nice flavour to the Nether biomes. Apart from this, you now have to use the smithing table to craft Netherite. Happy mining!
 
-# New Features in 20w10a
+## New Features in 20w10a
 
 -   Added crimson and warped hyphae – all-sided "stem" blocks including stripped variations
 -   Use a smithing table to fuse the Netherite ingot with your diamond weapon/tool/armor
@@ -8,7 +10,7 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-# Changes in 20w10a
+## Changes in 20w10a
 
 ​
 
@@ -18,7 +20,7 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-## Hoe Changes
+### Hoe Changes
 
 ​ We've made some changes to Hoes to make them more useful in the Nether. ​
 
@@ -28,11 +30,11 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-# Technical Changes in 20w10a
+## Technical Changes in 20w10a
 
 ​
 
-## Entity UUIDs
+### Entity UUIDs
 
 ​
 
@@ -40,7 +42,7 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-## New tags for item frames
+### New tags for item frames
 
 ​
 
@@ -49,7 +51,7 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-## `target_hit` advancement trigger type
+### `target_hit` advancement trigger type
 
 ​ Conditions:
 
@@ -59,7 +61,7 @@ Today's snapshot is loud! It comes with a bunch of new ambient sound that adds s
 
 ​
 
-# Fixed bugs in 20w10a
+## Fixed bugs in 20w10a
 
 ​
 

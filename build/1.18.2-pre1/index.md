@@ -1,14 +1,16 @@
+# 1.18.2-pre1
+
 We're now releasing the first pre-release for Minecraft 1.18.2. This pre-release introduces the possibility for data packs to customize cave generation and to add new custom structures to worlds.
 
 If everything goes as expected, we aim to release this version on February 28th.
 
 Happy mining!
 
-# Changes in 1.18.2 Pre-release 1
+## Changes in 1.18.2 Pre-release 1
 
 -   Users running Minecraft in a 32-bit environment will receive a warning in the main menu about the upcoming end of 32-bit environment support
 
-# Technical Changes in 1.18.2 Pre-release 1
+## Technical Changes in 1.18.2 Pre-release 1
 
 -   The data pack version is now 9
 -   It is now possible to add custom structures in experimental datapacks
@@ -16,13 +18,13 @@ Happy mining!
 -   The `locate` command parameter is now a configured structure rather than a structure type. For instance, you can now use `/locate village_desert` or `/locate shipwreck_beached`
 -   A lot of the cave generation is now configurable through data packs
 
-## Configurable caves
+### Configurable caves
 
 -   A new registry was added for Density functions (caves are created by combining those together)
 -   Noise settings got a new field `noise_router` (and lost a couple of flags), see `worldgen/noise_settings` folder in the worldgen report
 -   Noise router wires data-driven parts of the cave generation with the rest of the code
 
-## Configured Structures and Structure Sets
+### Configured Structures and Structure Sets
 
 The game now generates and stores data-driven configured structures.
 
@@ -31,14 +33,14 @@ The game now generates and stores data-driven configured structures.
 -   The `exploration_map` loot table function `destination` field is now a configured feature tag id
 -   The `exploration_map` loot table function no longer automatically sets the display name of the map
 
-### Side effects
+#### Side effects
 
 Some gameplay oddities have been affected by this change.
 
 -   Dolphins will now more accurately pick the closest structure regardless of type
 -   Bastion Remnant bounding boxes are now slightly more accurate to the shape of the structure
 
-# Fixed bugs in 1.18.2 Pre-release 1
+## Fixed bugs in 1.18.2 Pre-release 1
 
 -   [MC-3524](https://bugs.mojang.com/browse/MC-3524) Structure related mobs do not spawn in flat type world generation
 -   [MC-146854](https://bugs.mojang.com/browse/MC-146854) Player movement favors x axis when in a corner

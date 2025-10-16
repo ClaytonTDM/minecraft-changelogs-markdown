@@ -1,18 +1,20 @@
+# 20w49a
+
 Another snapshot is going out, and this one introduces the Sculk. They're a bit creepy, but don't let that put you off. Pick up some good vibrations!
 
-# New Features in 20w49a
+## New Features in 20w49a
 
 -   Added Dripstone Caves biome
 -   Added Sculk Sensors
 
-## Dripstone Caves biome
+### Dripstone Caves biome
 
 This biome doesn't generate naturally yet, since it is designed for the upcoming larger caves. However, if you want to see the biome in the current caves you can create a single-biome world with dripstone caves.
 
 -   Contains plenty of Pointed Dripstone on the floors and ceilings, and small pools of water
 -   In some places you'll find larger stalagmites, stalactites, and columns built from Dripstone Blocks.
 
-## Sculk Sensors
+### Sculk Sensors
 
 -   Introducing the bizarre, tendril-filled world of Sculk - prepare for Sculk Sensors to creep you out with their unique ability to detect vibrations nearby.
 -   A vibration is anything that causes physical motion; if you are careful, there are some motions that are undetectable to sensors by sneaking.
@@ -26,14 +28,14 @@ This biome doesn't generate naturally yet, since it is designed for the upcoming
 -   The efficient tool to mine Sculk Sensors is the Hoe.
 -   They can be waterlogged.
 
-### Redstone Emission
+#### Redstone Emission
 
 -   Sculk Sensors emit a redstone signal when they are activated.
 -   The strength of the redstone signal is inversely proportional to the distance the vibration signal travelled.
     -   This means that the closer the vibration is, the stronger the redstone signal is.
     -   The output is also scaled based on the Sculk Sensor's radius, so it can reach the max redstone signal strength when the vibration is 0 distance away (directly on top of the sensor).
 
-### Vibration Frequencies
+#### Vibration Frequencies
 
 -   Sculk Sensors have a unique interaction with comparators.
 -   Each vibration in the game falls under a certain frequency value, and this value can be measured with a comparator.
@@ -183,22 +185,22 @@ Lightning Strike
 
 15
 
-### Wool Occlusion
+#### Wool Occlusion
 
 -   Wool has a special interaction with Sculk Sensors.
 -   If a wool block is in the way of a vibration source, the sensor will not be able to detect it.
 
-### Technical Tidbits
+#### Technical Tidbits
 
 -   Sculk Sensors have a cooldown period of 1 tick after being placed or after deactivating.
 -   During this short cooldown period, it cannot detect vibrations. This is to prevent it from activating itself when a contraption it is powering is being unpowered. Feedback is welcome on this point!
 
-# Changes in 20w49a
+## Changes in 20w49a
 
 -   The Fullness of a bundle now shows up regardless of whether Advanced Tooltips are on or off
 -   Stalactites and stalagmites merge if the tips are next to each other, unless you press shift while placing
 
-# Technical Changes in 20w49a
+## Technical Changes in 20w49a
 
 -   A new game event system has been implemented to support Sculk Sensors detecting vibrations.
 -   World height related values are now exposed for customized worlds
@@ -207,7 +209,7 @@ Lightning Strike
 -   New particle types: `vibration` and `dust_color_transition`
 -   A new game event system has been implemented to support Sculk Sensors detecting vibrations.
 
-## Game Events
+### Game Events
 
 This system has been developed to identify when certain in-world actions are happening in nearby chunks, particularly so the new Sculk Sensor can detect these events as vibrations.
 
@@ -249,7 +251,7 @@ The following is a list of the initial game events:
 -   `minecraft:eating_finish`
 -   `minecraft:lightning_strike`
 
-### Tags
+#### Tags
 
 There are also game event tags that come with this, and can be modified by data packs. They can be found under `data/minecraft/tags/game_events`.
 
@@ -262,7 +264,7 @@ The following game events are in `ignore_vibrations_stepping_carefully` by defau
 -   `minecraft:hit_ground`
 -   `minecraft:projectile_shoot`
 
-# Fixed bugs in 20w49a
+## Fixed bugs in 20w49a
 
 -   [MC-18880](https://bugs.mojang.com/browse/MC-18880) The Absorption effect has no texture for poison/wither hearts (appears empty instead)
 -   [MC-201840](https://bugs.mojang.com/browse/MC-201840) Optional function tags sometimes don't run even when the tag exists

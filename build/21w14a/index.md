@@ -1,23 +1,25 @@
+# 21w14a
+
 A new snapshot is ready to be served, although somewhat… raw. Gordon Ramsey would be furious. Please don’t tell him, we don’t want to be called donuts. :(
 
 Most of us have just gotten back from being off for a few days during Easter, so this snapshot is a bit on the smaller side.
 
-# New Features in 21w14a
+## New Features in 21w14a
 
 -   Added Raw Copper, Raw Iron and Raw Gold items
 -   Tuff blobs can now be found between heights 0 and 16
 
-## Smeltable Ore Drops
+### Smeltable Ore Drops
 
 -   Ores that are smeltable now drop raw item forms of the ore instead of the ore block, and these can be smelted just like before
 -   This is to prevent cluttering the inventory, and have consistency with Fortune on all ores
 -   Ore blocks from old worlds and silk-touched ore blocks will continue to be smeltable
 
-# Changes in 21w14a
+## Changes in 21w14a
 
 -   Fully oxidized copper can now be waxed
 
-# Bugs fixed in 21w14a
+## Bugs fixed in 21w14a
 
 -   [MC-203854](https://bugs.mojang.com/browse/MC-203854) Fishing rod texture always looks like it has been cast when in the player's hand
 -   [MC-207173](https://bugs.mojang.com/browse/MC-207173) Entering only colons into multiplayer Direct Connection & pressing enter crashes the game

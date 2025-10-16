@@ -1,12 +1,14 @@
+# 24w10a
+
 Woah, another snapshot day of the Wednesday variant! Today we are releasing 24w10a, featuring new Wolf Variants, some new Data Pack features, and lots of bug fixes.
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added variants of Wolves
 
-## Wolf variants
+### Wolf variants
 
 -   New Wolf variants have been added
 -   The variant is determined by the biome they spawn in
@@ -21,16 +23,16 @@ Happy mining!
     -   Snowy Wolf - A variant that spawns in the Grove biome. A rare type, that always walks alone
 -   Adjusted spawning conditions for Wolves, allowing them to spawn on Coarse Dirt and Podzol blocks
 
-# Changes
+## Changes
 
 -   Adjusted passive mobs spawning in Grove biome to only include Rabbits, Foxes and Wolves
 -   Button tooltips will no longer appear when hovering outside the containing element
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 34
 
-# Data Pack Version 34
+## Data Pack Version 34
 
 -   Recipe results can now specify component data
 -   Added new entity predicate field `slots`, for matching item slots
@@ -43,15 +45,15 @@ Happy mining!
 -   For now, the `count` field on Item Stacks is always stored again, even if `1`
     -   If the field is missing in data, will still fall back to `1`
 
-## Recipes
+### Recipes
 
 -   Recipe types `crafting_shaped`, `crafting_shapeless`, `stonecutting` and `smithing_transform` now accept `components` for the `result` item stack
 -   The `result` field for recipe types `smelting`, `blasting`, `smoking` and `campfire_cooking` is now an item stack format without a count, which means you'll need to specify an object with an `id` field
     -   This `result` now also accepts `components` data
 
-## Predicates
+### Predicates
 
-### `slots` entity sub-predicate
+#### `slots` entity sub-predicate
 
 -   New entity field `slots` allows to check single or multiple slots on any entity
 -   The field contains a map of slot names (same as ones used in `item` commands) to item predicate
@@ -72,7 +74,7 @@ Example:
     }
     
 
-## Slot names
+### Slot names
 
 -   Slot names (used in `item` commands and `slots` entity predicates) now include slot ranges
 -   Unless specified, existing commands can still only work on single slots
@@ -90,7 +92,7 @@ Example:
     -   `player.crafting.0` - `player.crafting.3`, `player.crafting.*` - player's crafting slots
         -   Note: this includes only player's inventory crafting slots. Crafting table (or any other slots on other screens) are not included
 
-### `execute if|unless items`
+#### `execute if|unless items`
 
 -   `execute if|unless items <source> <slots> <item_predicate>` command can be used to count items
     -   `<source>` is the same as one used in `item` command, i.e.
@@ -100,7 +102,7 @@ Example:
     -   `<item_predicate>` is the same as item predicate in `clear` command
 -   If used alone, it will return total number of items in stacks that match predicates
 
-## Banner Patterns
+### Banner Patterns
 
 -   Banner Patterns will now be loaded into a dynamic registry from data packs (`data/<namespace>/banner_pattern/<id>`)
     -   These entries have two fields:
@@ -109,7 +111,7 @@ Example:
         -   `translation_key` (string) is a translation key prefix
             -   e.g. `block.minecraft.banner.custom.pattern` resolves to `block.minecraft.banner.custom.pattern.<dye color>`
 
-## Item Stack Components
+### Item Stack Components
 
 -   The `minecraft:profile` component no longer requires the `name` field to be present
 -   Some additional Item Stack Components now support alternative, simple definitions:
@@ -125,7 +127,7 @@ Example:
     -   The `target` field is optional, and if not present, the compass will spin
 -   The maximum number of lore and fireworks entries has been raised to 256
 
-# Fixed bugs in 24w10a
+## Fixed bugs in 24w10a
 
 -   [MC-140397](https://bugs.mojang.com/browse/MC-140397) When combining two enchanted unbreakable items, the result will be two stacked items
 -   [MC-157133](https://bugs.mojang.com/browse/MC-157133) Enchanted books with curses can be stacked using a grindstone

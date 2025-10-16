@@ -1,17 +1,19 @@
+# 20w12a
+
 In this snapshot you can be on your merry way across the beautiful Soulsand Valleys with your freshly enchanted boots. It's a bit scary to be fair, so these boots will help you out with that bit...
 
 This update can also be found on [minecraft.net](https://www.minecraft.net/en-us/article/minecraft-snapshot-20w12a).
 
 If you find any bugs, please report them on the official [Minecraft Issue Tracker](https://aka.ms/snapshotbugs?ref=reddit).
 
-# New Features in 20w12a
+## New Features in 20w12a
 
 -   Added the respawn anchor that can set your respawn point in the Nether. Use while holding Glowstone to charge to a maximum of four charges - each respawn depletes one charge
 -   Added polished basalt! Smelt your basalt to make it clean and shiny!
 -   Warped and crimson nylium can now be bonemealed to get more of the strange new vegetation
 -   Hoes are now the appropriate tool to mine sponges and wet sponges
 
-# Changes in 20w12a
+## Changes in 20w12a
 
 -   When fishing, treasure loot can now only be obtained by fishing in open waters
 -   Reduced the maximum distance a bee can wander away from its home hive when randomly wandering to around 22 blocks
@@ -20,15 +22,15 @@ If you find any bugs, please report them on the official [Minecraft Issue Tracke
 -   Parrots do not randomly imitate hostile mobs when gamemode is on peaceful
 -   New mood detection algorithm for cave sounds
 
-# Technical Changes in 20w12a
+## Technical Changes in 20w12a
 
-## Commands
+### Commands
 
-### spawnpoint
+#### spawnpoint
 
 The spawnpoint command now supports being run in any dimension.
 
-### UUIDs in NBT
+#### UUIDs in NBT
 
 UUIDs stored in NBT are now represented as an array of four integers. Example: `{UUID:[I;1498693494,1027158888,1898994005,860320107]}` Along with that a couple of fields have been renamed:
 
@@ -36,23 +38,23 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 -   `TrustedUUIDs` of foxes is now `Trusted`
 -   `target_uuid` of conduits is now `Target`
 
-## Loot Tables
+### Loot Tables
 
-### Entity Predicate
+#### Entity Predicate
 
 -   Added `fishing_hook` sub-predicate
 
-#### `fishing_hook`
+##### `fishing_hook`
 
 Check properties of the fishing hook
 
-##### Parameters
+###### Parameters
 
 to be open water if there are no blocks above water and no solid underwater blocks around, all water blocks are source blocks and there are no bubble columns.
 
 -   `in_open_water` - Matches whether the fishing location is open water fishing or not. A fishing location is considered
 
-# Fixed bugs in 20w11a
+## Fixed bugs in 20w11a
 
 -   [MC-3328](https://bugs.mojang.com/browse/MC-3328) Dismounting an entity places riding entity / player half block too high
 -   [MC-64242](https://bugs.mojang.com/browse/MC-64242) Silent tag is not working for some entities

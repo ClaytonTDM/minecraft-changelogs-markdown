@@ -1,28 +1,30 @@
+# 22w14a
+
 Mangrove trees! Warm frogs! Mud blocks! More mangrove trees! Today, we’re happy to bring you the most mud-tastic Java snapshot to date!
 
 Sure, it might be our only mud-tastic snapshot to date – but the important thing is that our new biome, mangrove swamp, now is available for testing, along with nitty-gritty features like the recovery compass and other, more technical tidbits.
 
 Enjoy!
 
-# New Features in 22w14a
+## New Features in 22w14a
 
 -   Added Clay renewability
 -   Added Mangrove Trees
 -   Added Mangrove Swamp biome
 -   Added Echo Shard and Recovery Compass
 
-## Clay renewability
+### Clay renewability
 
 -   Placing Mud above a block that has Pointed Dripstone underneath will eventually turn the mud block into Clay
 
-## Mangrove trees
+### Mangrove trees
 
 Introducing a new type of water-adapted tree that spawns propped up on roots
 
 -   Have a chance of spawning a Bee Nest
 -   Grows from Mangrove Propagules
 
-## Mangrove Swamp
+### Mangrove Swamp
 
 Muddy! Murky! Magnificent! Welcome to the newest biome - the Mangrove Swamp
 
@@ -31,7 +33,7 @@ Muddy! Murky! Magnificent! Welcome to the newest biome - the Mangrove Swamp
 -   The floor of this biome is coated with a thick layer of Mud, so be sure to pack your best boots
 -   Have a nice boat ride under and around the larger-than-life roots of mangrove trees
 
-## Recovery Compass
+### Recovery Compass
 
 A new Recovery Compass can be crafted with Echo Shards which can only be found and are unique to Ancient City chests
 
@@ -39,20 +41,20 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 -   If you are not in the dimension you last died, or you haven't died yet in your world, it will randomly spin
 -   It can be crafted with 1 Compass surrounded by 8 Echo Shards, which can be found in Ancient Cities
 
-# Changes in 22w14a
+## Changes in 22w14a
 
 -   The Warden will now get angry at ALL living mobs that bump into it, not just players
 
-# Technical Changes in 22w14a
+## Technical Changes in 22w14a
 
 -   `CatType` fields on enitites with type `minecraft:cat` have been replaced with `variant`, with numeric values being replaced with string ids (so, for example, `5` becomes `minecraft:calico`)
 -   Some mutually exclusive tests in entity predicate (`player`, `fishing_hook`, `lightning_bolt` and `catType`) have been collapsed to `type_specific` field
 -   Added `item_delivered_to_player` advancement trigger
 -   Added `allay_drop_item_on_block` advancement trigger
 
-## Predicates
+### Predicates
 
-### Entity predicate
+#### Entity predicate
 
 -   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
 -   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
@@ -92,19 +94,19 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
     -   `frog` has `variant` field matching frog variant (`minecraft:warm`, `minecraft:temperate` or `minecraft:cold`)
     -   `slime` applies for slimes and magma creams, has `size` field matching slime size (smallest is `1`)
 
-## Advancements
+### Advancements
 
 -   Removed field `location` from triggers `location`, `slept_in_bed`, `hero_of_the_village` and `voluntary_exile` - it was handled exactly the same as `player.location`
 
-### New triggers
+#### New triggers
 
-#### `item_delivered_to_player`
+##### `item_delivered_to_player`
 
 -   Triggered when an allay delivers an item to a player
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-#### `allay_drop_item_on_block`
+##### `allay_drop_item_on_block`
 
 -   Triggered when an allay drops an item on a block
 -   Conditions:
@@ -112,7 +114,7 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
     -   `location` - a predicate for the block that the item was dropped on
     -   `item` - a predicate for the item that was dropped
 
-# Fixed bugs in 22w14a
+## Fixed bugs in 22w14a
 
 -   [MC-207289](https://bugs.mojang.com/browse/MC-207289) Sculk sensor wool occlusion has directional bias
 -   [MC-207635](https://bugs.mojang.com/browse/MC-207635) Sculk sensors react differently to wool occlusion depending on the global direction.

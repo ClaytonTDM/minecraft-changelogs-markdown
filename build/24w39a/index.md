@@ -1,27 +1,29 @@
+# 24w39a
+
 Happy Wednesday miners! With this snapshot we're now bundling Bundles into the game for real - Bundles are no longer experimental!
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Bundles are no longer experimental
 
-# Changes
+## Changes
 
 -   Updated slot highlight in the UI so Item texture has better visibility
     -   The previous textures have been added to Programmer Art resource pack
 -   Equipping a Carved Pumpkin on your head now removes the player marker from other players' maps
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 55
 -   Removed the `bundle` feature flag and built-in datapack
 
-# Data Pack Version 55
+## Data Pack Version 55
 
 -   `boat` and `chest_boat` entity types have been split into separate types, one per existing variant
 
-## Boat split
+### Boat split
 
 -   Variants of boats and chest boats now have separate entity type instead of `Type` field
 -   Removed entites:
@@ -49,23 +51,23 @@ Happy mining!
         -   `Type=mangrove` -> `minecraft:mangrove_chest_boat`
         -   `Type=bamboo` -> `minecraft:bamboo_chest_raft`
 
-## Container Locks
+### Container Locks
 
 -   The `Lock` field of containers has been renamed to `lock` and is now an item predicate
     -   Any items which match the predicate can open the container
 -   The `lock` data component is now also an item predicate
 
-## Tags
+### Tags
 
-### Item Tags
+#### Item Tags
 
 -   `map_invisibility_equipment`: Items that can be equipped to hide the player marker on other players maps
 
-## Predicates
+### Predicates
 
 -   `minecraft:boat` entity sub-predicate has been removed, since boats no longer have variants
 
-# Fixed bugs in 24w39a
+## Fixed bugs in 24w39a
 
 -   [MC-219083](https://bugs.mojang.com/browse/MC-219083) Hunger client/server desync when natural regeneration is off in peaceful mode
 -   [MC-275216](https://bugs.mojang.com/browse/MC-275216) Bowl is consumed when feeding a rabbit stew to a wolf

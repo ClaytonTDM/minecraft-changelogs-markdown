@@ -1,20 +1,22 @@
+# 1.21.6-pre3
+
 We've got another pre-release coming in hot! This time with a new advancement trigger and sound category but most importantly some much needed bug fixes.
 
-# New Features
+## New Features
 
-## Music and Sound
+### Music and Sound
 
 -   Added new sound volume category called "UI" for sounds played by UI elements, like button clicks
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 80
 
-# Data Pack Version 80
+## Data Pack Version 80
 
 -   Added `player_sheared_equipment` trigger
 
-## New Triggers
+### New Triggers
 
 Added `minecraft:player_sheared_equipment`
 
@@ -23,14 +25,14 @@ Added `minecraft:player_sheared_equipment`
     -   `item` - Item that is sheared
     -   `entity` - The entity that was sheared
 
-## Commands
+### Commands
 
-### Modified `playsound`
+#### Modified `playsound`
 
 -   Added new category `ui`
     -   Sounds in this category will continue playing when paused, similarly to `music`
 
-# Fixed bugs in 1.21.6 Pre-Release 3
+## Fixed bugs in 1.21.6 Pre-Release 3
 
 -   [MC-296371](https://bugs.mojang.com/browse/MC-296371) The entity shadows of happy ghasts are too small in relation to the size of their models
 -   [MC-296374](https://bugs.mojang.com/browse/MC-296374) The entity shadows of ghastlings are too small in relation to the size of their models

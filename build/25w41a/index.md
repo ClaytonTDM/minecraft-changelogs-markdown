@@ -1,15 +1,17 @@
+# 25w41a
+
 It's Snapshot Tues- I mean Thursday, everyone! Today, we are kicking off a brand-new Snapshot series and with it comes the first set of features from our upcoming game drop, Mounts of Mayhem! Charge into the fray with the spear, a new weapon with a unique enchantment. Explore the oceans atop your nautilus or claim undead mounts – the zombie horse and zombie nautilus – as your new steeds. Galloping side to side with these new features is both a revamped video settings screen that includes nifty new graphical presets, as well as the new stopwatch command which keeps track of real time. Bug fixes and technical changes round off the meal, as is tradition.
 
 Happy mining!
 
-# New Features
+## New Features
 
 -   Added Nautilus and Zombie Nautilus
 -   Added Nautilus Armor
 -   Added Spear Weapon
 -   Updated advancements to include Nautilus, Zombie Nautilus, and the Zombie Horse
 
-## Nautilus
+### Nautilus
 
 -   Nautilus is a new neutral aquatic mob
 -   Spawns in all ocean biomes
@@ -24,18 +26,18 @@ Happy mining!
     -   With a Saddle has a roaming restriction of 16 blocks
     -   Without a Saddle has a roaming restriction of 32 blocks
 
-### Zombie Nautilus
+#### Zombie Nautilus
 
 -   Zombie Nautilus is a new underwater mob that spawns with a Drowned rider wielding a Trident
 -   Zombie Nautilus is only hostile if ridden by a hostile mob
 -   Zombie Nautilus behaves similar to the Nautilus except that it cannot be bred
 
-## Nautilus Armor
+### Nautilus Armor
 
 -   Equippable on the Nautilus and Zombie Nautilus
 -   Comes in Copper, Golden, Iron, Diamond and Netherite versions
 
-## Spear Weapon
+### Spear Weapon
 
 -   New weapon that can be crafted in Wood, Stone, Copper, Iron, Gold, Diamond and Netherite versions
 -   Each material has different stats for timing, influencing how fast they are to use
@@ -44,7 +46,7 @@ Happy mining!
 -   Has two attacks. Jab and Charge
 -   Zombies, Husks, Zombified Piglins and Piglins can spawn with the Spear
 
-### Jab Attack
+#### Jab Attack
 
 -   Quick-press primary action button to use
 -   Low damage attack with knockback
@@ -53,7 +55,7 @@ Happy mining!
 -   Can hit multiple enemies
 -   Does not destroy blocks
 
-### Charge Attack
+#### Charge Attack
 
 -   Press and hold the secondary action button to use
 -   Damage is based on Spear material, the player’s view angle, and the velocity of both the player and the target
@@ -64,7 +66,7 @@ Happy mining!
 -   The Spear's range when used by mobs is half of that when used by players, but they can deal damage, dismount and knockback at lower speeds than the players
 -   Zombies, Husks and Zombified Piglins know how to charge with a Spear
 
-### Lunge Enchantment
+#### Lunge Enchantment
 
 -   Spear exclusive enchantment
 -   Only works with the Jab attack
@@ -72,7 +74,7 @@ Happy mining!
 -   The view angle needs to be perfectly leveled horizontally to achieve maximum lunge distance
 -   Does significant durability damage to the Spear
 
-## Advancements
+### Advancements
 
 -   Updated the "How did we get here?" advancement to include the `Breath of the Nautilus` effect
 -   Updated the "Best Friends Forever" advancement to include the Nautilus, Zombie Nautilus, and the Zombie Horse
@@ -81,7 +83,7 @@ Happy mining!
 -   Updated the "Monster Hunter" advancement to include the Zombie Nautilus
 -   Updated the "A Throwaway Joke", "Take Aim" and "It Spreads" advancements to include the Nautilus and Zombie Nautilus
 
-# Changes
+## Changes
 
 -   Zombies, Husks, Piglins and Zombified Piglins can now hold Spears
 -   Piglins now consider Golden Spears as one of the items they like
@@ -94,7 +96,7 @@ Happy mining!
     -   Blocks that did not have mipmaps before, such as different vines, rails, folliage (apart from leaves) and more should look better from higher distances
 -   Client FPS is expected to be higher for most players
 
-## Zombie Horse
+### Zombie Horse
 
 -   Zombie Horses now spawn naturally
 -   Zombie Horses spawn in darkness, and burn in sunlight like other undead mobs
@@ -111,11 +113,11 @@ Happy mining!
 -   Zombie Horses drops 2-3 Rotten Flesh when killed, with extra 0-1 for each level of Looting
 -   Zombies riding Zombie Horses now have a chance of dropping a Red Mushroom on death
 
-## Mob Spawning
+### Mob Spawning
 
 -   Zombie Horses now has a chance to spawn in plains and savanna biome types, with a zombie rider holding an iron spear
 
-## World Generation
+### World Generation
 
 -   Added various spears to various loot chests around the world
     -   Iron Spears can be found in Buried Treasure chests
@@ -127,17 +129,17 @@ Happy mining!
     -   Ocean Ruins
     -   Shipwreck
 
-## Status Effects
+### Status Effects
 
 -   Added `Breath of the Nautilus` effect
     -   Effect that affects mounted players
     -   Pauses player oxygen consumption (but does not replenish oxygen)
 
-## Sounds
+### Sounds
 
 -   Anvil destroy, land, place and use sounds now play at a slightly lower volume
 
-## Accessibility
+### Accessibility
 
 -   Keys used to access debug features can now be rebound
     -   It is part of a new `Debug` category in the Key Binds screen
@@ -145,7 +147,7 @@ Happy mining!
 -   The key to toggle GUI can now be rebound
 -   The key to toggle spectator shader effects, such as when spectating an enderman, can now be rebound
 
-## Input
+### Input
 
 Several uses of the `cmd` key on Mac have been rebound to `ctrl`:
 
@@ -154,14 +156,14 @@ Several uses of the `cmd` key on Mac have been rebound to `ctrl`:
 -   The input modfier to change GUI scale in the Video Settings screen
 -   Stopping the recipe book from cycling through variations of items
 
-## Debug Renderer Changes
+### Debug Renderer Changes
 
 -   Same as before, do not treat debug renderers as supported features, they are there only to aid with development
 -   More debug renderers are now available through the Debug Settings screen
 -   Some existing renderers were improved
 -   The performance of debug renderers has been significantly improved
 
-## Graphics Presets
+### Graphics Presets
 
 -   Settings on the Video Settings screen have been reordered and split into 3 sections: "Display", "Quality & Performance", and "Interface"
 -   The following settings that were duplicating accessibility settings have been removed from the Video Settings screen:
@@ -181,13 +183,13 @@ Several uses of the `cmd` key on Mac have been rebound to `ctrl`:
     -   The default preset is "Fancy" for new players
     -   But for players who are upgrading to this version the preset will be set to "Custom" to preserve your current configuration
 
-## UI
+### UI
 
 -   Menu sliders will now "stick" to the closest available value when you release them after dragging with a mouse
 -   When using keyboard to change slider values, arrow keys will now move the slider to the next available value, not by one pixel as before
 -   The `inF3` button in the Debug Option screen has been renamed to `inOverlay`
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 89.0
 -   The Resource Pack version is now 70.0
@@ -195,19 +197,19 @@ Several uses of the `cmd` key on Mac have been rebound to `ctrl`:
 -   Added ClientFps JFR event
 -   Experience packets that do not change the player's experience progress or level are no longer sent by the server
 
-## Minecraft Server Management Protocol Version 1.1.0
+### Minecraft Server Management Protocol Version 1.1.0
 
 -   Added a new notification `server/activity`
     -   Indicates that a network connection to the server has been initiated
     -   Rate limited to 1 notification per 30 seconds
 
-# Data Pack Version 89.0
+## Data Pack Version 89.0
 
 -   Added `stopwatch` command for keeping track of real time
 
-## Commands
+### Commands
 
-### Added `stopwatch`
+#### Added `stopwatch`
 
 -   New command that allows the creation of a Stopwatch that keeps track of real time
 -   Stopwatches do not depend on game ticks
@@ -222,16 +224,16 @@ Syntax:
 
 > **Developer's Note**: _This command is added to replace the need of using world borders to keep track of real time. The intent is to change the world border to be dependent on game ticks in a future snapshot. If you've relied on this way of measuring the passage of real time before, please switch to using the new command and let us know if anything doesn't work as intended. Thank you!_
 
-### `execute`
+#### `execute`
 
 -   Added new syntax `/execute if|unless stopwatch <id> <range>`
 -   Allows to compare the elapsed time of a given Stopwatch with a floating point value range
     -   The Stopwatch value is measured in seconds and has an accuracy of at most a millisecond
     -   Example: `/execute if stopwatch foo:bar ..10 run say Stopwatch foo:bar has not reached 10 seconds yet`
 
-## Item Components
+### Item Components
 
-### Added `minecraft:use_effects`
+#### Added `minecraft:use_effects`
 
 -   Controls how the player behaves when using an item (right mouse click)
 -   Format: object with fields
@@ -241,20 +243,20 @@ Syntax:
         -   Default value: `0.2`
     -   e.g. `use_effects={can_sprint:true,speed_multiplier:1.0}`
 
-### Added `minecraft:minimum_attack_charge`
+#### Added `minecraft:minimum_attack_charge`
 
 -   Sets the minimum attack charge on the attack indicator required to attack with this item
 -   Format: float (0.0 to 1.0)
     -   0.0: no charge required
     -   1.0: full charge required
 
-### Added `minecraft:damage_type`
+#### Added `minecraft:damage_type`
 
 -   Specifies the type of damage this item deals
 -   Format: string, damage type identifier
     -   e.g. `damage_type='minecraft:spear'`
 
-### Added `minecraft:kinetic_weapon`
+#### Added `minecraft:kinetic_weapon`
 
 -   Enables a charge-type attack when using the item (primarily for Spears), where, while being used, the damage is dealt along a ray every tick based on the relative speed of the entities
 -   Format: object with fields
@@ -282,7 +284,7 @@ Syntax:
 -   The damage dealt is calculated as `floor(relative_speed * velocity_multiplier)` where `relative_speed` is the difference of speed vectors of the attacker and the target as projected onto the axis of the attacker's view vector
     -   Any additional damage from enchantments or attribute modifiers is added after this calculation
 
-### Added `minecraft:piercing_weapon`
+#### Added `minecraft:piercing_weapon`
 
 -   Enables a quick attack that damages multiple entities along a ray (primarily for Spears)
 -   Format: object with fields
@@ -295,7 +297,7 @@ Syntax:
     -   `hit_sound`: Optional Sound Event to play when the weapon hits an entity
     -   e.g. `piercing_weapon={min_reach:0,max_reach:4,dismounts:true}`
 
-### Added `minecraft:swing_animation`
+#### Added `minecraft:swing_animation`
 
 -   Specifies the swing animation to play when attacking or interacting using this item
 -   Format: object with fields
@@ -305,29 +307,29 @@ Syntax:
         -   Default value: `6`
     -   e.g. `swing_animation={type:'stab',duration:20}`
 
-### Changed `minecraft:consumable`
+#### Changed `minecraft:consumable`
 
 -   The `animation` field has been updated:
     -   Renamed `spear` to `trident`
     -   Added new `spear` animation
 
-### Changed `minecraft:intangible_projectile`
+#### Changed `minecraft:intangible_projectile`
 
 -   Items with this component now show information about it in their tooltip
 
-## Entity Data
+### Entity Data
 
 -   The `AngryAt` field has been renamed to `angry_at`
 -   The `AngerTime` field has been removed
 -   An `anger_end_time` (long) field has been added, containing the time anger ends in game ticks
 
-## Damage Types
+### Damage Types
 
 -   Added a new `minecraft:spear` damage type
 
-## Predicates
+### Predicates
 
-### Component Predicates
+#### Component Predicates
 
 -   Component predicates (`predicates` field in block, item and entity predicates) now include predicates for checking existence of every component type
 -   Those predicates are written as `{<component_type>: {}}`
@@ -338,27 +340,27 @@ Syntax:
     -   `{predicates:{written_book_content:{}}` - special case of above that accepted any value, as long as component existed
     -   `{predicates:{instrument:{}}` - checks if component `minecraft:instrument` exists (was not allowed before)
 
-### Entity Predicates
+#### Entity Predicates
 
 The `flags` predicate now supports new values:
 
 -   `is_in_water`: when an entity is touching water or a bubble column
 -   `is_fall_flying`: when an entity is gliding with an elytra
 
-### Item Predicates
+#### Item Predicates
 
 -   Item predicate in command form (`<item>[predicate~{...},component={...}]`) has been extended to accept empty predicates for any component type
 -   Similarily to component predicates in data, those empty entries only check for component existence
 -   Existing shorter syntax for checking component existence remains unchanged
     -   That means `*[instrument]` and `*[instrument~{}]` are equivalent
 
-## Enchantments
+### Enchantments
 
-### Enchantment Effect Components
+#### Enchantment Effect Components
 
 -   `minecraft:post_piercing_attack`: Effects applying after a piercing attack with an item
 
-### Enchantment Entity Effects
+#### Enchantment Entity Effects
 
 -   `minecraft:apply_impulse`: applies an impulse to the targeted entity
     -   `direction` - The first step of determining the impules is applying this vector as local coordinates (the same used by `tp @s ^ ^ ^`) onto the entity look vector
@@ -366,19 +368,19 @@ The `flags` predicate now supports new values:
     -   `magnitude` - The third step is scaling the resulting vector by this Level-Based Value
 -   `minecraft:play_sound`: can now support a list of sound event identifiers, one for each level of enchantment. If a level is higher than the number of sounds, the last sound in the list is used
 
-#### Added `exponent`
+##### Added `exponent`
 
 -   Raises the base to the specified power level.
     -   `base` - Level-Based Value indicating the base of the exponent.
     -   `power` - Level-Based Value indicating the power of the exponent.
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#can_glide_through` - climbable blocks that can be glided through without stopping
 
-### Item Tags
+#### Item Tags
 
 -   Added `#nautilus_taming_items` - items that can be used to tame a Nautilus and a Zombie Nautilus
 -   Added `#nautilus_bucket_food` - bucketed fish items that can be used to feed a tamed Nautilus and Zombie Nautilus
@@ -388,22 +390,22 @@ The `flags` predicate now supports new values:
 -   Added `#enchantable/melee_weapon` - all primary melee weapons including Swords and Spears
 -   Renamed `#enchantable/sword` to `#enchantable/sweeping`
 
-### Entity Tags
+#### Entity Tags
 
 -   Added `#can_wear_nautilus_armor` - entities that can equip Nautilus Armor
 -   Added `#nautilus_hostiles` - entities that the Nautilus will be hostile towards when untamed
 -   Changed `#not_scary_for_pufferfish` to include Nautilus and Zombie Nautilus
 -   Added `#burn_in_daylight` - entities that burn in daylight
 
-### Enchantment Tags
+#### Enchantment Tags
 
 -   Added `#lunge_exclusive` - all enchantments incompatible with the `lunge` enchantment
 
-# Resource Pack Version 70.0
+## Resource Pack Version 70.0
 
 -   Unifont has been updated to 17.0.01
 
-# Textures
+## Textures
 
 -   `texture` section of `*.mcmeta` files has a new boolean field `darkened_cutout_mipmap`
     -   The default value is `false`
@@ -413,7 +415,7 @@ The `flags` predicate now supports new values:
 -   Only mipmaps of level 0 and 1 are now animated for block animated textures
 -   Glass and Glass Pane now support translucent textures
 
-## Item Sprites
+### Item Sprites
 
 -   Added new item sprites:
     -   `item/nautilus_spawn_egg`
@@ -427,7 +429,7 @@ The `flags` predicate now supports new values:
     -   When in inventory: `item/wooden_spear`, `item/stone_spear`, `item/copper_spear`, `item/iron_spear`, `item/golden_spear`, `item/diamond_spear`, `item/netherite_spear`
     -   When in hand: `item/wooden_spear_in_hand`, `item/stone_spear_in_hand`, `item/copper_spear_in_hand`, `item/iron_spear_in_hand`, `item/golden_spear_in_hand`, `item/diamond_spear_in_hand`, `item/netherite_spear_in_hand`
 
-## UI Sprites
+### UI Sprites
 
 -   Added new UI sprite:
     -   `container/slot/nautilus_armor`
@@ -439,7 +441,7 @@ The `flags` predicate now supports new values:
     -   `container/inventory/effect_background_large`
     -   `container/inventory/effect_background_small`
 
-## Celestials Atlas
+### Celestials Atlas
 
 -   A new `celestials` atlas has been introduced, including sprites for objects rendered in the sky such as the Sun and Moon
 -   Includes sprites from `<namespace>:textures/environment/celestial/<path>.png`
@@ -448,12 +450,12 @@ The `flags` predicate now supports new values:
     -   `textures/environment/end_flash.png` -> `end_flash`
     -   `textures/environment/moon_phases` -> `moon/full_moon`, `moon/waning_gibbous`, `moon/third_quarter`, `moon/waning_crescent`, `moon/new_moon`, `moon/waxing_crescent`, `moon/first_quarter`, `moon/waxing_gibbous`
 
-## Mob Effect Sprites
+### Mob Effect Sprites
 
 -   Added new mob effect sprite:
     -   `breath_of_the_nautilus`
 
-## Entity Textures
+### Entity Textures
 
 -   Added new entity textures:
     -   `entity/nautilus/nautilus.png`
@@ -466,7 +468,7 @@ The `flags` predicate now supports new values:
     -   `entity/equipment/nautilus_body/netherite.png`
     -   `entity/equipment/nautilus_saddle/saddle.png`
 
-## Sounds
+### Sounds
 
 -   Added new sounds for Spears:
     -   `item.spear.hit`
@@ -505,7 +507,7 @@ The `flags` predicate now supports new values:
 -   Added new sound event for the Zombie Horse:
     -   `entity.zombie_horse.angry`
 
-## Item Models
+### Item Models
 
 -   Added new option for all item models: `swap_animation_scale`
     -   Defaults to `1.0`
@@ -516,7 +518,7 @@ Added new item model:
 
 -   `spear_in_hand` - model for the Spear when in hand.
 
-# Fixed bugs in 25w41a
+## Fixed bugs in 25w41a
 
 -   [MC-22882](https://bugs.mojang.com/browse/MC-22882) Ctrl + Q doesn't work on Mac
 -   [MC-54989](https://bugs.mojang.com/browse/MC-54989) Sliders can be moved to positions between available values

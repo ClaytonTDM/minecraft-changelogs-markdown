@@ -1,15 +1,17 @@
+# 21w10a
+
 A truly fabulous snapshot enters the arena! This snapshot brings fundamental changes to our rendering pipeline with the introduction of the brand new tech that is OpenGL Core 3.2. On top of that, we're finally introducing the Lush Caves biome. However, as with the Dripstone Caves, this is only available through creating a custom world.
 
 There's an important note about this snapshot for those of you with older computers: With the introduction of OpenGL Core 3.2 there is a chance Minecraft Java will no longer run on computers that do not meet the [minimum system requirements](https://help.minecraft.net/hc/en-us/articles/360035131371-Minecraft-Java-Edition-system-requirements-). Computers that meet the [minimum system requirements](https://help.minecraft.net/hc/en-us/articles/360035131371-Minecraft-Java-Edition-system-requirements-) should not be affected.
 
-# New Features in 21w10a
+## New Features in 21w10a
 
 -   Added Lush Caves underground biome!
 -   Added Cracked Deepslate Bricks and Cracked Deepslate Tiles
 -   There is now an Infested variant of Deepslate found in the underground
 -   While they will not generate in the world by default, Deepslate versions of copper, emerald and coal ores have been added for use by creators of maps and data packs
 
-## Lush caves biome
+### Lush caves biome
 
 The Lush Caves underground biome now exists for use in single-biome worlds. It does not yet generate in other world types.
 
@@ -20,7 +22,7 @@ The Lush Caves underground biome now exists for use in single-biome worlds. It d
 -   The azalea tree loves to have its roots in lush caves, so if you find an azalea tree (either overground or in a cave) you know there is a lush cave beneath you
 -   Cave vines with glow berries grow from the ceiling and light up the caves
 
-# Changes in 21w10a
+## Changes in 21w10a
 
 -   Cobbled Deepslate can now be smelted into Deepslate.
 -   Deepslate can now be placed along any axis
@@ -36,7 +38,7 @@ Ore texture changes in snapshot 21w10a. [Click here](https://launchercontent.moj
 
 New textures for emerald, coal, and copper in Deepslate. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w10atexturecomparison2fullresolution.jpg) for a link to the full resolution image.
 
-## Ore distribution
+### Ore distribution
 
 Overworld ore generation has been tweaked.
 
@@ -51,23 +53,23 @@ Overworld ore generation has been tweaked.
 
 Ore distribution in snapshot 21w10a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w10aoredistributionfull.jpg) for a link to the full resolution image.
 
-# Technical Changes in 21w10a
+## Technical Changes in 21w10a
 
 -   The game now runs using OpenGL 3.2 core profile
 -   The maximum size that slimes can be summoned with is now 128
 -   The `give` command can only give up to 100 stacks of items at a time (e.g. 6400 stone or 100 iron swords)
 
-## OpenGL
+### OpenGL
 
 Rendering is now using OpenGL 3.2 core profile. All fixed function rendering has been replaced with shader based rendering.
 
-### Shaders
+#### Shaders
 
 Shaders are now included for all supported render states. Any shader except for the `blit` shader can also be replaced in resource packs. For now replacing these shaders is **not officially supported** and the way it works may change in the future.
 
 The current rendering engine uses a system similar to the post processing shader pipeline. There are some differences between both system that cater to the slightly different requirements.
 
-# Bugs fixed in 21w10a
+## Bugs fixed in 21w10a
 
 -   [MC-29318](https://bugs.mojang.com/browse/MC-29318) Client misses inventory updates while player is manipulating items causes invisible items
 -   [MC-84121](https://bugs.mojang.com/browse/MC-84121) Shape of glow effect is based on mob's base layer

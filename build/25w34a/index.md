@@ -1,12 +1,14 @@
+# 25w34a
+
 This week it's time for a smaller snapshot with a new main menu panorama, code of conducts for servers and much tinkering and fixing with our new friends, the Copper Golems. Happy mining!
 
 > **Developer's Note**: _The rendering changes introduced in 25w31a for entities are now expanded to affect block entities and items. Please report any issues you encounter in these areas._
 
-# New Features
+## New Features
 
 -   Servers can now have an in-game Code of Conduct
 
-## Server Code of Conduct
+### Server Code of Conduct
 
 When connecting to a server, a Code of Conduct screen can now be shown.
 
@@ -14,7 +16,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-### Server Setup
+#### Server Setup
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for code of conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -23,47 +25,47 @@ When connecting to a server, a Code of Conduct screen can now be shown.
         -   If it doesn't exist, the `en_us` code of conduct will be used
         -   If that also doesn't exist, an arbitrary available entry is used
 
-# Changes
+## Changes
 
 -   The main menu now has an updated background panorama showing Copper Golems in a Village
 
-## The End Light Flashes
+### The End Light Flashes
 
 -   The sound effect produced by a flash now has a higher delay
 -   The "Hide Lightning Flashes" accessibility setting has been renamed to "Hide Sky Flashes" and now also disables the End Flashes
     -   When the flash is disabled by the setting the world will not be lit by the flash, but the flash source will still be visible in the sky and the sound effect will still play
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   The eyes of the Copper Golem are now invisible as well when splashed with Potion of Invisibility
 -   Copper Golems hitbox has been tweaked
     -   The hitbox is now 0.6 blocks in width to be able to pathfind through open doors
     -   The hitbox is now 1.01 blocks in height to not get stuck in certain blocks
 
-## Sounds
+### Sounds
 
 -   Copper Golem & Copper Chests are now audible from up to 12 blocks away
 -   The copper sorting sounds have been tweaked to be quieter
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 84.0
 -   The Resource Pack version is now 66.0
 
-# Data Pack Version 84.0
+## Data Pack Version 84.0
 
 -   Player profiles in data components and block entities no longer resolve automatically
 -   Added `fetchprofile` command for downloading player profiles
 
-## Block States
+### Block States
 
 -   Removed `align_items_to_bottom` block state property from Shelf block
     -   It has been replaced with an equally named boolean field on the Shelf block entity
     -   Shelves created with this property set in the last snapshot will reset back to the default value (`false`)
 
-## Commands
+### Commands
 
-### Added `fetchprofile`
+#### Added `fetchprofile`
 
 -   New command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously
@@ -76,9 +78,9 @@ Syntax:
 -   `fetchprofile name <player name>` - resolves profile by name (case-insensitive)
 -   `fetchprofile id <uuid>` - resolves profile by id
 
-## Data Components
+### Data Components
 
-### Modified `minecraft:profile`
+#### Modified `minecraft:profile`
 
 -   Previously contents of this component would permanently change when profile was resolved, i.e. downloaded from Minecraft service
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -99,23 +101,23 @@ Syntax:
 -   Items stack based on exact contents, so even if a dynamic component is eventually resolved to the same profile as a static one, they won't stack together
 -   Player heads in older maps that have not been loaded in never versions yet will usually be converted to dynamic contents
 
-## Block Entity Data
+### Block Entity Data
 
-### Modified `minecraft:skull`
+#### Modified `minecraft:skull`
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary
 
-## Text components
+### Text components
 
 -   Bold and italics styles are ignored when drawing sprites
 
-# Resource Pack Version 66.0
+## Resource Pack Version 66.0
 
 -   Removed block state `align_items_to_bottom` from the Shelf block
     -   See above for details
 
-# Fixed bugs in 25w34a
+## Fixed bugs in 25w34a
 
 -   [MC-383](https://bugs.mojang.com/browse/MC-383) In the world selection screen, world names/versions/timestamps can overflow the list to the right
 -   [MC-36783](https://bugs.mojang.com/browse/MC-36783) Item frames/Glow item frames don't change their hitbox if they contain a map

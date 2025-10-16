@@ -1,25 +1,27 @@
+# 24w35a
+
 Hello! In this week's snapshot we have addressed some important bugs related to village raid spawns, Bundles and Redstone.
 
 Happy mining!
 
-# Experimental Features
+## Experimental Features
 
-## Bundles
+### Bundles
 
 -   Selecting items in a Bundle is now only done by scrolling
 
 > **Developer's Note**: _In previous snapshots you could select items in a Bundle with the number keys. We removed this because it was conflicting with hotkeys used by expert players, and it was not as useful now that the Bundle can have more than 10 items visible._
 
-# Changes
+## Changes
 
 -   Raiders must find a place to spawn no more than 96 blocks vertically above or below the village center, or a raid will not start
 -   It is now much less likely for raiders to not find a valid place to spawn when raiding
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 51
 
-# Data Pack Version 51
+## Data Pack Version 51
 
 -   Trial Spawner configurations in fields `normal_config` and `ominous_config` are now defined in registry `trial_spawner`
     -   This allows for easier customization of Trial Spawner configurations in data packs
@@ -27,31 +29,31 @@ Happy mining!
 -   Entities' rotation on the x axis is now clamped between -90 and 90
 -   `loot` command now returns an error when trying to drop from block without loot table (like air)
 
-## Loot tables
+### Loot tables
 
 -   Special loot table `empty` has been removed and is no longer defined in vanilla data pack
 
-### Sheep loot tables
+#### Sheep loot tables
 
 -   Sheep now always uses a single loot table `entities/sheep`
 -   Wool drops are still defined in sub-tables in `entities/sheep/<color>`, but they are now just dispatched from the main table
     -   Note: mutton drop is now controlled by the main table, while sub-tables are responsible only for wool drop
 -   Sheep shearing is now controlled by loot table found as `shearing/sheep`
 
-### Mooshroom shearing loot table
+#### Mooshroom shearing loot table
 
 -   Mooshroom shearing is now controlled by loot table found as `shearing/mooshroom`
 
-## New conditions
+### New conditions
 
-### `sheep` entity sub-predicate
+#### `sheep` entity sub-predicate
 
 New entity sub-predicate for testing sheep wool Fields:
 
 -   `sheared` - optional boolean
 -   `color` - optional wool dye color
 
-# Fixed bugs in 24w35a
+## Fixed bugs in 24w35a
 
 -   [MC-124331](https://bugs.mojang.com/browse/MC-124331) Redstone lamps do not show on maps
 -   [MC-129298](https://bugs.mojang.com/browse/MC-129298) Drowned don't chase you if they are in 1 block deep water

@@ -1,4 +1,6 @@
-# Changes in 1.15.1
+# 1.15.1
+
+## Changes in 1.15.1
 
 -   Optimized chunk rendering performance, especially for chunks with many different block states
 -   Fixed an error spammed to the game's log files caused by custom spawner blocks spawning villagers
@@ -7,7 +9,7 @@
 -   Fixed bugs
 -   Removed Herobrine
 
-# Fixed bugs in 1.15.1
+## Fixed bugs in 1.15.1
 
 -   [MC-135050](https://bugs.mojang.com/browse/MC-135050) - NullPointerException while tesselating block model
 -   [MC-167530](https://bugs.mojang.com/browse/MC-167530) - Anvils causing java.lang.StackOverflowError

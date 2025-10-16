@@ -1,10 +1,12 @@
+# 1.18-pre5
+
 We're now releasing pre-release 5 for Minecraft 1.18. This pre-release contains more bug fixes and a tweak to new cave generation under existing chunks.
 
-# Changes in 1.18 Pre-release 5
+## Changes in 1.18 Pre-release 5
 
 -   If there is any bedrock at height 0 in a chunk, new world generation will happen under any non-air block at height 0 in that chunk
 
-# Fixed Bugs in 1.18 Pre-release 5
+## Fixed Bugs in 1.18 Pre-release 5
 
 -   [MC-138118](https://bugs.mojang.com/browse/MC-138118) Parrot wing texture is reversed on the bottom
 -   [MC-148422](https://bugs.mojang.com/browse/MC-148422) Stripped dark oak log side texture is too bright

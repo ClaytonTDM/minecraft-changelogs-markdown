@@ -1,3 +1,5 @@
+# 21w37a
+
 Marvellous mountains and colossal caves, this snapshot has it all! Today we're bringing the Overworld revamp to regular snapshots. If you've been playing or checking out the experimental snapshots that we've been releasing, you should be familiar with what you're seeing. If not, you're in for a treat!
 
 Since we're extending the world height, and there are quite a few under-the-hood changes, we've been keeping an eye on how the game is running, and there are still improvements to be made. However, we would still appreciate it if you would be able to take this survey so that we can understand how you perceive the performance of this snapshot.
@@ -8,7 +10,7 @@ All of this said, we hope that you have a great time checking out these new addi
 
 Happy mining!
 
-# New Features in 21w37a
+## New Features in 21w37a
 
 -   Added noise caves and aquifers
 -   Added Dripstone Caves underground biome
@@ -22,35 +24,35 @@ Happy mining!
 -   New ore distribution and large ore veins
 -   Overworld build and generation limits have been expanded
 
-## Blocks
+### Blocks
 
 -   Enchanting Tables now emit a low amount of light
 -   Using shears on the tip of a Cave Vine, Twisting Vine, Weeping Wine or Kelp now causes it to stop growing
 
-## Dripstone Caves biome
+### Dripstone Caves biome
 
 -   Contains plenty of Pointed Dripstone and Dripstone Block on the floors and ceilings, and small pools of water
 -   In some places you'll find larger stalagmites, stalactites, and columns built from Dripstone Blocks
 -   Contains extra copper ore
 
-## Grove
+### Grove
 
 -   Snowy terrain with big spruce trees and powder snow traps. Might want to wear leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops.
 -   Spawns wolfs, rabbits, and foxes.
 
-## Large ore veins
+### Large ore veins
 
 -   Ore veins are large, rare, snake-like underground ore formations
 -   Copper veins form between y 0 and y 50 and are mixed with Granite
 -   Iron veins form below y -60 and y -8 and are mixed with Tuff
 
-## Lofty peaks
+### Lofty peaks
 
 -   Dramatic jagged mountain peaks with snow and stone
 -   Spawns goats
 
-## Lush Caves biome
+### Lush Caves biome
 
 -   Moss covers the floors and ceilings
 -   Spore Blossoms grow from the ceiling and drip particles
@@ -59,19 +61,19 @@ Happy mining!
 -   The Azalea Tree loves to have its roots in Lush Caves, so if you find an Azalea Tree (either overground or in a cave) you know there is a Lush Cave beneath you
 -   Cave Vines with Glow Berries grow from the ceiling and light up the caves
 
-## Meadow biome
+### Meadow biome
 
 -   Large grassy and flowery biome that tends to generate high up on plateaus or next to large mountain ranges.
 -   Sometimes contains a lone tall oak or birch tree, often with a bee nest.
 -   Think Sound of Music!
 -   Spawns donkeys, rabbits, and sheep.
 
-## Mob Spawning
+### Mob Spawning
 
 -   Monsters now only spawn in places where the light from blocks is 0 (sky light still prevents spawning like before)
 -   Fixed an issue where players in multiplayer can face more or far fewer enemies than intended, particularly when other players are flying
 
-## New ore distribution
+### New ore distribution
 
 -   Changed ore generation to match the new world height, and to add more strategy to mining.
 -   There is no longer a single y level that is best for all ores, you need to make tradeoffs.
@@ -88,7 +90,7 @@ Happy mining!
 -   Diamond generates below y 16, with more diamond the lower you go.
 -   Diamonds have reduced air exposure, so you will find more diamond buried or underwater than exposed to air.
 
-## Noise caves and Aquifers
+### Noise caves and Aquifers
 
 -   Noise caves are a new way of generating caves, providing more natural variety. They can get really huge sometimes! Noise caves come in three flavors:
     -   Cheese caves. Like the holes in swiss cheese. These often form caverns of various size
@@ -102,31 +104,31 @@ Happy mining!
 -   Magma Blocks sometimes generates at the bottom of underground bodies of water
 -   Underwater cave carvers and underwater canyons have been removed, since aquifers are used to generate water in caves instead
 
-## Options
+### Options
 
 -   Added an accessibility option to stop the sky flashing during thunderstorms
 -   Added an option to specify the audio device used by the game
 -   Added "Toggle Sprint" and "Toggle Sneak" to the Controls settings
 -   Moved Keybinds out to their own settings screen, accessible from Controls
 
-## Snowcapped peaks
+### Snowcapped peaks
 
 -   Smooth mountain peaks with ice and snow
 -   Spawns goats and yeti. No actually just goats.
 
-## Snowy slopes
+### Snowy slopes
 
 -   Very snowy terrain that can hide powder snow traps. Might want to wear leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops.
 -   Spawns rabbits and goats.
 
-## Stony peaks
+### Stony peaks
 
 -   Stony mountain peaks that may be jagged or smooth
 -   Spawns goats
 -   Contains strips of calcite sometimes
 
-## World generation
+### World generation
 
 -   Generation range and build limits have been expanded by 64 blocks up and 64 blocks down, to a total range of 384 blocks
 -   Underground features, structures, and caves generate all the way down to y-64
@@ -140,14 +142,14 @@ Happy mining!
 -   Strips of gravel can generate in stony shores
 -   Swamp trees can grow in water 2 blocks deep (instead of just 1 block deep)
 
-# Changes in 21w37a
+## Changes in 21w37a
 
 -   Illagers (Vindicator, Pillager, Evoker) no longer attack baby villagers
 -   Axolotls now only spawn in lush caves
 -   Axolotls now have their own, separate, mob cap
 -   Raised the cloud level from 128 to 192
 
-# Technical Changes in 21w37a
+## Technical Changes in 21w37a
 
 -   Replaced the clientbound chunk update network packet with another one which additionally contains light update data. Separate light update packet still exists and is sent when light update happens without chunk update.
 -   View distance now causes chunks to load cylindrically around players instead of in a square
@@ -161,16 +163,16 @@ Happy mining!
 -   Removed length limits for scoreboard, score holder and team names
 -   Mob spawners can now override light checks for spawning
 
-## JFR Profiling
+### JFR Profiling
 
-### Custom events
+#### Custom events
 
 -   `minecraft.ServerTickTime`: sampling event exposing average server tick times at one second intervals
 -   `minecraft.ChunkGeneration`: time taken to generate individual chunk stages
 -   `minecraft.PacketRead | minecraft.PacketSent`: network traffic
 -   `minecraft.WorldLoadFinishedEvent`: initial world loading duration
 
-### Ending a profiling run
+#### Ending a profiling run
 
 The run will then be stopped either by:
 
@@ -178,15 +180,15 @@ The run will then be stopped either by:
 -   `jfr stop` in-game command
 -   `jcmd` CLI tool
 
-### Overview
+#### Overview
 
 Java Flight Recorder ([https://openjdk.java.net/jeps/328](https://openjdk.java.net/jeps/328)) is the internal JVM profiling tool bundled with the Java Runtime to analyze performance and runtime characteristics. It's a useful tool for exposing internal JVM performance metrics as well as custom metrics that can be monitored or analyzed using any stock Java profiler or monitoring agents.
 
-### Reports
+#### Reports
 
 A summary JSON report is written both to the log file and in the debug folder accompanied by a `.jfr` recording ready to be analyzed in i.e JMC [https://github.com/openjdk/jmc](https://github.com/openjdk/jmc) or any other profiler tool supporting the format.
 
-### Starting a profiling run
+#### Starting a profiling run
 
 A profiling run can be started using any of the following alternatives:
 
@@ -194,26 +196,26 @@ A profiling run can be started using any of the following alternatives:
 -   `jfr start` in-game command
 -   Regular Java CLI tools such as `jcmd`
 
-## Loot tables
+### Loot tables
 
-### Changed functions
+#### Changed functions
 
-#### `set_contents`, `set_loot_table`
+##### `set_contents`, `set_loot_table`
 
 Added new mandatory field `type`. This type will be written into `BlockEntityTag.id`, to make sure this tag can be correctly migrated between versions
 
-## Old world conversion
+### Old world conversion
 
 -   Worlds last saved before Minecraft 1.2 ("pre-anvil") now require conversion in a previous version of a game to be able to be opened
 -   Conversion works best in versions 1.6.4 and before - worlds opened for the first time in later versions will have incorrect biome information
 
-## Priority update setting
+### Priority update setting
 
 -   This setting determines which chunks sections are updated synchronously during a single frame.
 -   The most conservative option "nearby" corresponds to the state before the update.
 -   The new options "by player" and "none" significantly reduce stutters when placing or removing blocks (especially light sources), but can potentially cause rare visually noticeable delays in world updates.
 
-## Spawner data changes
+### Spawner data changes
 
 -   Spawners now support the `custom_spawn_rules` NBT in the `SpawnData` field and the `SpawnPotentials` list
 -   `custom_spawn_rules` currently may contain fields `block_light_limit` and `sky_light_limit` - both are integer ranges with fields `min_inclusive` and `max_inclusive`
@@ -253,7 +255,7 @@ Example:
     ]
     
 
-# Fixed bugs in 21w37a
+## Fixed bugs in 21w37a
 
 -   [MC-29274](https://bugs.mojang.com/browse/MC-29274) Withers will not pursue players in survival mode unless attacked
 -   [MC-30560](https://bugs.mojang.com/browse/MC-30560) River through Eroded Badlands biome generates floating rock formations at water surface

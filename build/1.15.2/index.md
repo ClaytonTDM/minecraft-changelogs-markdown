@@ -1,4 +1,6 @@
-# Changes in 1.15.2
+# 1.15.2
+
+## Changes in 1.15.2
 
 -   Bees no longer anger when a nearby nest/hive is destroyed using a silk touch tool
 -   Added `doPatrolSpawning` and `doTraderSpawning` game rules that control spawning of patrols and wandering traders, respectively
@@ -9,7 +11,7 @@
 -   Bee Nests now have a 0.2% chance of spawning in Forest, Wooded Hills, Birch Forest, Tall Birch Forest, Birch Forest Hills, and Tall Birch Hills biomes
 -   Fixed bugs
 
-# Fixed bugs in 1.15.2
+## Fixed bugs in 1.15.2
 
 -   [MC-169825](https://bugs.mojang.com/browse/MC-169825) - “Multiplayer (3rd party)” shows in window title when disconnecting from a singleplayer world
 -   [MC-169839](https://bugs.mojang.com/browse/MC-169839) - Certain potion effects that override lower level effects don’t get removed after their duration ends

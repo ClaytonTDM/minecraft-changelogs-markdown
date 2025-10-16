@@ -1,10 +1,12 @@
+# 1.21.5
+
 It's time to experience new wonders of the Overworld as we release the Spring to Life drop, the first Minecraft game drop of 2025.
 
 The Spring to Life drop brings more reasons to explore both near and far! Warm winds have swept across biomes, bringing new mob variants, ambient sounds, and lush plants for you to discover. Befriend fluffy pigs, marvel at glittering firefly bushes, listen out for whispers of sand, and delight in a blooming Overworld humming with new beginnings.
 
 In this release we are also making the game tests system accessible through data packs with the new test command. And as usual, we continue to rebuild our engine to improve the experience for players and content creators. We are sure all those spare parts left on our floor can't be that important, right?
 
-# New Features
+## New Features
 
 -   Added cold and warm variants for the Pig, Cow and Chicken
 -   Sheep now spawn with wool color dependent on the biome in which they spawn
@@ -21,7 +23,7 @@ In this release we are also making the game tests system accessible through data
 -   Added new ambient block sounds in the Desert and Badlands biomes
 -   Added language support for Kyrgyz
 
-## Farm Animal Variants
+### Farm Animal Variants
 
 ![The cow, the chicken, and the pig are joined by their new variations high up on a mountain.](https://launchercontent.mojang.com/v2/images/1.21.5animalvariations.jpg)
 
@@ -92,7 +94,7 @@ In this release we are also making the game tests system accessible through data
     -   Blue Egg - The Egg that is laid by and can hatch cold Chicken variants
     -   Brown Egg - The Egg that is laid by and can hatch warm Chicken variants
 
-### Sheep Wool Color in Warm and Cold Biomes
+#### Sheep Wool Color in Warm and Cold Biomes
 
 -   Sheep now spawn with wool color dependent on the biome in which they spawn:
     -   Temperate biomes: (these colors are unchanged from previous behavior)
@@ -108,7 +110,7 @@ In this release we are also making the game tests system accessible through data
         -   Uncommon Sheep colors are gray, light gray, white and black
         -   There is a rare chance for a pink Sheep to spawn
 
-## Wolf Sounds Variants
+### Wolf Sounds Variants
 
 ![A wolf walking on top of a fallen oak tree.](https://launchercontent.mojang.com/v2/images/1.21.5fallentreewolf.jpg)
 
@@ -118,7 +120,7 @@ In this release we are also making the game tests system accessible through data
     -   Every Wolf will have a sound variant randomly assigned to it from these 7 variants
     -   The sound variant is not related to the texture variant
 
-## Spawn Egg Visuals Overhaul
+### Spawn Egg Visuals Overhaul
 
 ![Sunny and Noor are inspecting a collection of spawn eggs. A cartographer villager can also been seen peaking in through the window.](https://launchercontent.mojang.com/v2/images/1.21.5spawneggs.jpg)
 
@@ -126,7 +128,7 @@ In this release we are also making the game tests system accessible through data
 -   Each egg visual varies in shape to reflect the in-world size of the mob it spawns
     -   For example, smaller mobs tend to have a smaller Spawn Egg
 
-## Fallen Trees
+### Fallen Trees
 
 ![A fallen birch tree with a brown mushroom growing on top of it.](https://launchercontent.mojang.com/v2/images/1.21.5fallentree.jpg)
 
@@ -145,7 +147,7 @@ In this release we are also making the game tests system accessible through data
     -   Meadow
     -   River
 
-## Firefly Bush
+### Firefly Bush
 
 ![In the moonlit swamp, firefly bushes can be seen emitting particles. Meanwhile, a frog seems to be leaping towards the moon.](https://launchercontent.mojang.com/v2/images/1.21.5frogfireflybush.jpg)
 
@@ -157,7 +159,7 @@ In this release we are also making the game tests system accessible through data
     -   it is night
     -   it is not blocked from above by any collidable block except leaves
 
-## Leaf Litter
+### Leaf Litter
 
 -   Leaf Litter is a new type of decorative block which can be found in the Forests, Dark Forests and Wooded Badlands
     -   Note: Leaf Litter is only spawned as part of world generation, and does not regenerate during gameplay
@@ -173,7 +175,7 @@ In this release we are also making the game tests system accessible through data
 -   Leaf Litter is tinted based on which biome it is in
 -   Leaf Litter is replaceable when building
 
-## Wildflowers
+### Wildflowers
 
 -   Wildflowers are a new type of flower which grow in Birch Forests, Old Growth Birch Forests and Meadows
 -   Wildflowers can have different amounts of flowers in one block space
@@ -183,7 +185,7 @@ In this release we are also making the game tests system accessible through data
 -   Wildflowers can be placed in four orientations
 -   Wildflowers can be crafted into Yellow Dye
 
-## Bush
+### Bush
 
 -   The Bush is a new type of decorative block that can be found in small patches in the following biomes:
     -   Birch Forest
@@ -200,7 +202,7 @@ In this release we are also making the game tests system accessible through data
 -   A Bush only drops when broken with Shears or a Silk Touch tool
 -   The Bush is replaceable when building
 
-## Short and Tall Dry Grass
+### Short and Tall Dry Grass
 
 -   Added two new types of grass: Short Dry Grass and Tall Dry Grass
 -   Both are 1 block high, which means Tall Dry Grass differs from regular Tall Grass which is 2 blocks high
@@ -214,7 +216,7 @@ In this release we are also making the game tests system accessible through data
 -   Both can be used as fuel for smelting
 -   Both are replaceable when building
 
-## Cactus Flower
+### Cactus Flower
 
 -   Cactus Flower is a new type of flower that has a chance of generating on Cactuses in Deserts and Badlands
 -   Cactus Flower can be placed on Cactus blocks, Farmland, or any block which has center support at the top of the block
@@ -225,7 +227,7 @@ In this release we are also making the game tests system accessible through data
 -   Cactus Flowers can be used in the Composter
 -   A Cactus Flower can be used to craft 1 Pink Dye
 
-## Falling Leaf Particles
+### Falling Leaf Particles
 
 -   All Leaves blocks now have chance of spawning falling leaf particles
 -   The following blocks are affected by this change:
@@ -239,14 +241,14 @@ In this release we are also making the game tests system accessible through data
     -   Oak Leaves
     -   Spruce Leaves
 
-## New Ambient Sounds for Desert and Badlands
+### New Ambient Sounds for Desert and Badlands
 
 -   Sand, Red Sand and Terracotta of any color have a chance of playing ambient sounds when surrounded by another block in the same group on at least 3 sides, at a distance of 8 blocks
     -   `block.sand.idle` can be played in any biome
     -   `block.sand.wind` only plays when in Desert or Badlands biomes
 -   Dead Bush blocks have a chance of playing ambient sounds when placed on top of two blocks that are any color of Terracotta, Sand or Red Sand blocks in any biome
 
-# Changes
+## Changes
 
 -   The main menu panorama has been updated for the "Spring to Life" drop
 -   Beacons and their beams now render beyond 16 chunks, up to the client render distance
@@ -276,21 +278,21 @@ In this release we are also making the game tests system accessible through data
 -   If the game detects that the last startup did not complete normally, the fullscreen option will now be reset
 -   Removed Herobrine
 
-## Lodestone Changes
+### Lodestone Changes
 
 -   The Lodestone is now crafted from 1 Iron Ingot surrounded by 8 Chiseled Stone Bricks
 -   Lodestones can now be found as loot at Ruined Portals in the Overworld or Nether
 -   Advancement "Country Lode, Take me Home" has been moved from the "Nether" category to the "Adventure" category
 
-## Cartographer and Wandering Trader Trade Rebalance
+### Cartographer and Wandering Trader Trade Rebalance
 
-### Cartographer Trades
+#### Cartographer Trades
 
 -   Cartographers now sell 7 new maps each pointing to a different village or other structures in a different biome
 -   Cartographers from different village types will sell a different range of maps and colored banners
 -   Some prices and quantities have also been adjusted
 
-### Wandering Trader Trades
+#### Wandering Trader Trades
 
 -   The Wandering Trader now has better prices, more trades and a larger amount of stock for many items
 -   They will also now buy basic supplies from players, so it is possible to get some Emeralds by helping them prepare for their next journey - even if you don't feel like buying anything
@@ -306,25 +308,25 @@ In this release we are also making the game tests system accessible through data
     -   Enchanted Iron Pickaxe
     -   Potion of Invisibility
 
-## Mob Spawning Changes
+### Mob Spawning Changes
 
 -   Camels now spawn in Deserts
 -   Chickens, Cows, Pigs, and Sheep can now spawn in Badlands
 
-## World Generation Changes
+### World Generation Changes
 
 -   The Pale Garden biome now occupies more space that was previously taken by Dark Forest
 -   Woodland Mansions can now generate in the Pale Garden biome
 -   Short Grass now generates slightly sparser in Meadows
 
-## Simulation Distance
+### Simulation Distance
 
 -   Any block in simulation distance of a player, or loaded by another source of chunk loading such as Ender Pearls, may now receive random ticks instead of 8 chunks just around players
     -   For example: if a chunk is loaded by an Ender Pearl or is in the spawn chunks, crops are able to grow, Ice can melt, Snow can fall, and a Cauldron can be filled by rain
     -   Mob spawning, Lava spreading fire, and Lightning strikes still occur in the previous radius of 8 chunks around players
 -   Fire will no longer burn or spread if no player is within 8 chunks
 
-## Creaking and Creaking Heart
+### Creaking and Creaking Heart
 
 -   Creakings can now be named using Name Tags
     -   Named Creakings will persist through the day
@@ -335,14 +337,14 @@ In this release we are also making the game tests system accessible through data
 -   The transition between the awake and dormant states for Creaking Hearts, as well as the transition of Eye Blossoms is now based on the fixed day time
     -   All these behaviors are no longer affected by weather or dimension brightness
 
-## Mob Texture and Model Changes
+### Mob Texture and Model Changes
 
 -   The look of the temperate Cow has been slightly updated to have an extruded snout
 -   The look of both Mooshroom variants have been slightly updated to have an extruded snout
 -   Sheep's wool undercoat is now also colored when dyed
 -   The Sheep wool texture has been tweaked to remove the stark line at the back
 
-## Minor Tweaks to Blocks, Items and Entities
+### Minor Tweaks to Blocks, Items and Entities
 
 -   Sheep can now eat Fern blocks
 -   Landing on Powdered Snow with Leather Boots equipped after falling further than 2.5 blocks will now make entities fall through the snow
@@ -352,13 +354,13 @@ In this release we are also making the game tests system accessible through data
 -   Pale Oak Leaves and Pale Oak Saplings have an updated map color
 -   Improved tooltips for the Crossbow and all container items
 
-### Item Tooltips
+#### Item Tooltips
 
 -   Crossbows will now show all charged projectiles in their tooltip instead of just the first
     -   All charged projectiles will also add their entire tooltip as a subsection, instead of only Fireworks
 -   All container items with stored contents, such as a Chest picked with Ctrl+Pick Block, will now list the first 4 items in their tooltip just like Shulker Boxes
 
-## Sound Changes
+### Sound Changes
 
 -   The volume of the narrator is now affected by the game's configured volume in the "Voice" category
 -   Added new break, place, step, fall and hit sounds for Iron Blocks, Iron Bars, Iron Trapdoors, Iron Doors and Heavy Weighted Pressure Plates
@@ -366,12 +368,12 @@ In this release we are also making the game tests system accessible through data
 -   Blocks that are broken by a Piston now play their breaking sound
 -   Ambient block sounds in Desert, Badlands and Pale Garden which are only used for ambience have been moved from the "Blocks" to the 'Ambient/Environment' category
 
-## Realms World Uploads
+### Realms World Uploads
 
 -   Uploading a world to Realms will now enable Command Blocks by default
 -   It is now possible to upload Hardcore singleplayer worlds to Realms
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 71
 -   The Resource Pack version is now 55
@@ -381,7 +383,7 @@ In this release we are also making the game tests system accessible through data
     -   Adds debug labels to relevant OpenGL objects, making debugging rendering easier for developers
 -   Minor changes to chat network protocol
 
-## Game Test Entry Point
+### Game Test Entry Point
 
 This new entry point automatically starts a server, runs all available game test, and then exits.
 
@@ -402,7 +404,7 @@ Options:
 
 Example usage: `java -DbundlerMainClass="net.minecraft.gametest.Main" -jar server.jar --packs mytestpacks`
 
-## Network Protocol
+### Network Protocol
 
 -   The clientbound `player_chat` packet now contains an index increasing for every message sent to the client
     -   The index starts at 0 when logging in (or is reset by configuration phase and the `login` packet)
@@ -413,7 +415,7 @@ Example usage: `java -DbundlerMainClass="net.minecraft.gametest.Main" -jar serve
     -   This is a simple hash of the "last seen" signatures which should be reconstructed by the server, allowing quicker detection of desynchronized state
     -   This can be passed as `0` to disable the check, for compatibility with protocol translation
 
-# Data Pack Versions 62 through 71
+## Data Pack Versions 62 through 71
 
 -   The Game Tests system is now accessible through data packs and for mods
 -   Added new `allowFireTicksAwayFromPlayer` and `tntExplodes` Game Rules
@@ -445,7 +447,7 @@ Example usage: `java -DbundlerMainClass="net.minecraft.gametest.Main" -jar serve
 -   Changes to tags
 -   Added `firefly` and `tinted_leaves` particles
 
-## Game Tests
+### Game Tests
 
 ![Kai is seen testing curious behaviors with the new test blocks.](https://launchercontent.mojang.com/v2/images/1.21.5qctest.jpg)
 
@@ -453,7 +455,7 @@ The Game Tests system is a new integrated system for testing aspects of the game
 
 Generally, the test framework expects to run tests in a separate superflat world.
 
-### Test Instances
+#### Test Instances
 
 ![A game test is running, where a villagers is seen running through a maze to get to their bed.](https://launchercontent.mojang.com/v2/images/1.21.5villagertest.jpg)
 
@@ -475,7 +477,7 @@ Fields:
 -   `required_successes`: Number of attempts that must succeed for the test to be considered successful (default `1`)
 -   `type`: The type of test - one of `block_based` and `function`
 
-#### Function Tests
+##### Function Tests
 
 Function tests rely on built-in functions to run a test and indicate success or failure. They have one additional field:
 
@@ -483,11 +485,11 @@ Function tests rely on built-in functions to run a test and indicate success or 
 
 See the "Using the Game Test Framework from Code" changelog section for more information.
 
-#### Block Based Tests
+##### Block Based Tests
 
 Block based tests use Test Blocks in the test structure to run the test and indicate success or failure.
 
-### Test Environments
+#### Test Environments
 
 Test Environments are a way to group up tests and give them the right preconditions to run. A Test Environment is an asset in the `test_environment` registry. Each Test Environment definition has a `type` field that determines its setup:
 
@@ -509,7 +511,7 @@ Test Environments are a way to group up tests and give them the right preconditi
 
 The game provides a single, empty Test Environment by default: `minecraft:default`.
 
-### Test Blocks
+#### Test Blocks
 
 The Test Block is a block used for implementing a block-based tests. It has four modes:
 
@@ -520,7 +522,7 @@ The Test Block is a block used for implementing a block-based tests. It has four
 
 Block-based tests are required to have at least one `start` block and one `accept` block in the structure.
 
-### The `test` Command
+#### The `test` Command
 
 The `test` command is a new command used to create and run tests.
 
@@ -572,27 +574,27 @@ Parameters:
 -   `rotationSteps`: Number of extra 90 degree steps to apply to the test - if omitted, `0` is used
 -   `testsPerRow`: Number of tests to place per row in a grid layout - if omitted, `8` is used
 
-#### `test clear*`
+##### `test clear*`
 
 These subcommands clear the structures and blocks associated with the selected tests.
 
-#### `test create`
+##### `test create`
 
 This subcommand creates a test setup in the current location for the given test, preparing for a structure of the given size. This gives a starting point for creating the structure for the test.
 
-#### `test locate`
+##### `test locate`
 
 Attempts to locate the given test. Note that only loaded chunks are searched.
 
-#### `test reset*`
+##### `test reset*`
 
 These subcommands reset the structures for the selected tests, removing any surrounding barriers and placing the structure in from scratch.
 
-#### `test pos`
+##### `test pos`
 
 Shows the local coordinates to the block pointed at in the test. If the optional variable name is specified, this variable name is used in a code fragment obtained by clicking on the coordinates in the output message.
 
-#### `test run*`
+##### `test run*`
 
 Runs one or more tests. If multiple tests are run at once, they are placed in a grid and run in parallel, although only up to a certain limit. Beyond that limit, tests are run in rounds where each round completes before any tests from the next round are started.
 
@@ -607,21 +609,21 @@ If a test fails, the error is shown on a lectern book and an overlay.
 
 Note that Game Tests are designed to run on standard superflat worlds. The area around each test is replaced with stone when it runs, and the running test is encased in barrier blocks.
 
-#### `test stop`
+##### `test stop`
 
 This stops all running tests. Note that gameplay events triggered by tests may still remain.
 
-#### `test verify*`
+##### `test verify*`
 
 Verifies one or more tests by running multiple instances of the same test.
 
-### Test Instance Blocks
+#### Test Instance Blocks
 
 To run a test in a world, a Test Instance Block is used. This type of block represents the test as placed in the world and is used to interact with that test, to save the structure, reset or run the test.
 
 Using the `test` command to run or create a test will also place a Test Instance Block to control that test.
 
-### Using the Game Test Framework from Code
+#### Using the Game Test Framework from Code
 
 The Game Test Framework can also be used from code in a more versatile manner than block-based tests. For this to work, you need to mod the game to add your test functions to the `test_function` registry (`Registries.TEST_FUNCTION`).
 
@@ -643,20 +645,20 @@ More complicated setups will often use `helper.startSequence()` to model sequenc
 
 As opposed to block-based tests, function tests failing will often produce more helpful error messages including the location of whatever failed and what was expected at that location.
 
-## Game Rules
+### Game Rules
 
-### `allowFireTicksAwayFromPlayer`
+#### `allowFireTicksAwayFromPlayer`
 
 -   When `true`, fire and lava can spread fire outside the 8 chunk range of a player
 -   Note: the fire and lava blocks must still be in simulation distance to spread
 -   Default value: `false`
 
-### `tntExplodes`
+#### `tntExplodes`
 
 -   When `false`, TNT will not explode and cannot be ignited
 -   Default value: `true`
 
-## Uniform Variant Selection
+### Uniform Variant Selection
 
 -   Variants that have spawn rules now use a uniform approach for selection
 -   Selection process:
@@ -674,34 +676,34 @@ As opposed to block-based tests, function tests failing will often produce more 
             -   Additional fields are dependent on `type`
         -   If this field is not present, the condition is always true
 
-### Spawn Conditions
+#### Spawn Conditions
 
-#### `minecraft:biome`
+##### `minecraft:biome`
 
 -   Checks if entity is spawning in specific biomes
 -   Fields:
     -   `biomes` - single entry, list or a tag describing biomes
 
-#### `minecraft:moon_brightness`
+##### `minecraft:moon_brightness`
 
 -   Checks if the current moon brightness is within a certain range
 -   Fields:
     -   `range` - floating point range (a single number or an object like `{"min": 1, "max": 2}`)
 
-#### `minecraft:structures`
+##### `minecraft:structures`
 
 -   Checks if the entity is spawning in specific structures
 -   Fields:
     -   `structures` - single entry, list or a tag describing structures
 
-## Data-driven Mob Variants
+### Data-driven Mob Variants
 
-### Wolf Variants
+#### Wolf Variants
 
 -   The fields `angry_texture`, `tame_texture` and `wild_texture` have been grouped in an `assets` field, and renamed to `angry`, `tame`, and `wild`
 -   Added field `spawn_conditions` described in uniform variant selection above
 
-### Pig Variants
+#### Pig Variants
 
 -   Pig variants can be data-driven by adding entries to `data/<namespace>/pig_variant/<id>.json`
 -   This feature is experimental
@@ -710,7 +712,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-### Cat Variants
+#### Cat Variants
 
 -   Cat variants can be data-driven by adding entries to `data/<namespace>/cat_variant/<id>.json`
 -   This feature is experimental
@@ -718,7 +720,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-### Frog Variants
+#### Frog Variants
 
 -   Frog variants can be data-driven by adding entries to `data/<namespace>/frog_variant/<id>.json`
 -   This feature is experimental
@@ -726,7 +728,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-### Cow Variants
+#### Cow Variants
 
 -   Cow variants can be data-driven by adding entries to `data/<namespace>/cow_variant/<id>.json`
 -   This feature is experimental
@@ -735,7 +737,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-### Chicken Variants
+#### Chicken Variants
 
 -   Chicken variants can be data-driven by adding entries to `data/<namespace>/chicken_variant/<id>.json`
 -   This feature is experimental
@@ -744,7 +746,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-### Wolf Sound Variants
+#### Wolf Sound Variants
 
 -   Wolf sound variants can be data-driven by adding entries to `data/<namespace>/wolf_sound_variant/<id>.json`
 -   The file contains the following fields which correspond to sound events to use for the specific behaviour:
@@ -755,7 +757,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `pant_sound`
     -   `whine_sound`
 
-## Commands
+### Commands
 
 -   SNBT literals now accept heterogeneous lists
 -   `/data` can now create and modify heterogeneous lists transparently
@@ -766,7 +768,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Text Style in the `/scoreboard` command when specifying the `styled` number format is also now specified with SNBT instead of JSON
 -   Text Component arguments in `/bossbar`, `/scoreboard` and `/team` commands are now resolved before use (in the context of entity the held in `@s`)
 
-### Changes to `/setblock`, `/fill`, `/clone`, and `/place`
+#### Changes to `/setblock`, `/fill`, `/clone`, and `/place`
 
 -   The behavior of `setblock` and `fill` commands have changed in how they handle block entity data:
     -   If the block entity data is not specified, and the existing block has data, the block entity data will be preserved
@@ -783,7 +785,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `setblock <pos> <block> [destroy|keep|replace|strict]?`
     -   `place template <template> [<pos> [<rotation> [<mirror> [<integrity> [<seed> [strict]?]?]?]?]?]?`
 
-## NBT Changes
+### NBT Changes
 
 -   Any interface with NBT data within the game (SNBT representation, `/data`) now supports heterogeneous lists, i.e. ones where elements are not of the same type
     -   Inserting or replacing into a list of a different type with `/data` will no longer give an error
@@ -797,7 +799,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   No data produced by the game has changed: objects such as Text Components were already producing heterogeneous lists in this form
 -   Note: these wrapper objects may never be observed in-game, they are only relevant to developers working with the NBT file or network format directly
 
-## SNBT Changes
+### SNBT Changes
 
 -   The text format for describing object-like data in commands (like NBT, text components, predicates, etc.) has been extended
 -   To simplify input of data and macro use, SNBT now also supports following operations:
@@ -806,7 +808,7 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   if argument is a number value, returns `true` if it is non-zero
     -   `uuid(str)` - converts string representation of UUID to integer array
 
-### Number Format
+#### Number Format
 
 -   Either whole or fraction parts of a float number can be omitted
     -   Examples: `.1` and `1.` are valid now
@@ -827,7 +829,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   When a suffix is used without `u` or `s`, it defaults to signed for decimal numbers and unsigned for binary and hexadecimal numbers
     -   Note: since `b` is also a valid hexadecimal digit, byte sized hexadecimal values can only be written with a signed suffix, like `0x11ub` or `0x11sb`
 
-### Strings
+#### Strings
 
 -   Quoted strings can now use escape sequences beyond `\'`, `\"` and `\\`:
     -   Unicode escapes:
@@ -844,7 +846,7 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   `\r` - carriage return, Unicode `\u0d`
 -   Unquoted strings now can't start with `0-9`, `.`, `+`, `-` to avoid accidental collision with numbers
 
-### Number Arrays
+#### Number Arrays
 
 -   Values in arrays (`[B;]`, `[I;]`, `[L;]`) without a suffix are now assumed to have suffix matching the type of the array
     
@@ -853,19 +855,19 @@ As opposed to block-based tests, function tests failing will often produce more 
     
     -   Example: `[I;1b,2s,3]` is valid and equivalent to `[I;1i,2i,3i]`
 
-### Lists
+#### Lists
 
 -   Lists now accept trailing commas
     -   Example: `[1,2,]` is valid and equivalent to `[1,2]`
     -   Only one trailing comma is allowed, and it must come after a valid element - both `[,]` and `[1,,]` are invalid
 
-### Compounds
+#### Compounds
 
 -   Compounds (maps) now accept trailing commas
     -   Example: `{a:b,}`
     -   Only one trailing comma is allowed, and it must come after a valid key-value pair - both `{,}` and `{a:b,,}` are invalid
 
-## Text Component Data Format
+### Text Component Data Format
 
 -   Text Components are no longer stored as JSON wrapped by a string
 -   The format itself is the same as before, but inlined directly into the outer structure
@@ -877,7 +879,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   For Text Components with the `nbt` type and `interpret` set to `true`, Text Components will be parsed from the given NBT directly rather than converting to a string and parsing as JSON
 -   The format of hover and click events has been updated
 
-### Hover Events
+#### Hover Events
 
 -   The `hoverEvent` field has been renamed to `hover_event`
 -   The legacy `value` field (which was parsed from a rendered text component) is no longer supported
@@ -895,7 +897,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   The `type` field has been renamed to `id`
     -   e.g. `{action:'show_entity',contents:{id:[I;0,0,0,0],type:'minecraft:pig'}}` becomes `{action:'show_entity',uuid:[I;0,0,0,0],id:'minecraft:pig'}`
 
-### Click Events
+#### Click Events
 
 -   The `clickEvent` field has been renamed to `click_event`
 -   For the `open_url` action:
@@ -917,7 +919,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   e.g. `{action:'change_page',value:'1'}` becomes `{action:'change_page',page:1}`
 -   The `copy_to_clipboard` format is unchanged
 
-## Entity Data
+### Entity Data
 
 -   Custom data (previously present only on Marker) is now available on all entities
     -   It's exposed as a `minecraft:custom_data` component, so it can be set by spawning items and matched by predicates
@@ -934,7 +936,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Block States in the entity data of Arrows, Minecarts, Block Displays, Endermen, Falling Blocks, Primed TNT, or Piston Moving Blocks are no longer allowed to be specified as an empty object
 -   Many tweaks to entity data formats of specific entities
 
-### Equipment Data
+#### Equipment Data
 
 -   The `ArmorItems`, `HandItems`, and `body_armor_item` fields have been merged into an `equipment` field
     -   Format: map between equipment slot type and item stack
@@ -953,11 +955,11 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   e.g. `drop_chances:{chest:0.1,feet:1.0}`
 -   Drop chances with a default value will no longer be stored, and the `drop_chances` field is removed entirely if all defaults
 
-### `allay`
+#### `allay`
 
 -   Removed redundant `CanDuplicate` field (controlled by `DuplicationCooldown`)
 
-### `area_effect_cloud`
+#### `area_effect_cloud`
 
 -   Area Effect Clouds have a new field: `potion_duration_scale` (float)
     -   If not specified, defaults to `1.0`
@@ -967,25 +969,25 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   If the `Duration` field is `-1`, the Area Effect Cloud will never run out
 -   This means that an Area Effect Cloud summoned with no duration specified will no longer immediately disappear
 
-### `cat`
+#### `cat`
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-### `creeper`
+#### `creeper`
 
 -   The `Fuse` field now defaults to `30` if not specified
 -   The `ExplosionRadius` field now defaults to `3` if not specified
 
-### `dolphin`
+#### `dolphin`
 
 -   Removed `TreasurePosX`, `TreasurePosY`, `TreasurePosZ` fields
 -   The `Moistness` field now defaults to `2400` if not specified
 
-### `ender_dragon`
+#### `ender_dragon`
 
 -   The `DragonDeathTime` field now defaults to `0` if not specified
 
-### `falling_block`
+#### `falling_block`
 
 -   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
 -   The `HurtEntities` field now defaults to `false` if not specified (or `true` if `BlockState` is `anvil`)
@@ -994,48 +996,48 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The `DropItem` field now defaults to `true` if not specified
 -   The `TileEntityData` field will no longer be preserved if removed
 
-### `firework_rocket`
+#### `firework_rocket`
 
 -   The `ShotAtAngle` field now defaults to `false` if not specified
 
-### `fox`
+#### `fox`
 
 -   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
 
-### `ghast`
+#### `ghast`
 
 -   The `ExplosionPower` field now defaults to `1` if not specified
 
-### `goat`
+#### `goat`
 
 -   The `HasLeftHorn` and `HasRightHorn` fields now default to `true` if not specified
 
-### `interaction`
+#### `interaction`
 
 -   The `width` and `height` fields now default to `1` if not specified
 
-### `item`
+#### `item`
 
 -   The `Health` field now defaults to `5` if not specified
 -   The `PickupDelay` field now defaults to `0` if not specified
 -   The `Age` field now defaults to `0` if not specified
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-### `item_frame` and `glow_item_frame`
+#### `item_frame` and `glow_item_frame`
 
 -   The `TileX`, `TileY`, and `TileZ` fields have been collected into a single `block_pos` field
 -   The `ItemDropChance` field now defaults to `1.0` if not specified
 
-### `item`
+#### `item`
 
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-### `phantom`
+#### `phantom`
 
 -   The `Size` field has been renamed to `size`
 -   The `AX`, `AY`, and `AZ` fields have been collected into a single `anchor_pos` field
 
-### `player`
+#### `player`
 
 -   The `SpawnX`, `SpawnY`, `SpawnZ`, `SpawnAngle`, `SpawnDimension`, and `SpawnForced` fields have been collected into a single `respawn` field
     -   Format: object with fields
@@ -1046,104 +1048,104 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The `enteredNetherPosition` field has been renamed to `entered_nether_pos`, and is now formatted as a list of doubles
     -   e.g. `entered_nether_pos: [1.0, 2.0, 3.0]`
 
-### `primed_tnt`
+#### `primed_tnt`
 
 -   The `fuse` field now defaults to `80` if not specified
 -   The `block_state` field now defaults to `tnt` if not specified
 -   The `explosion_power` field now defaults to `4` if not specified
 
-### `shulker`
+#### `shulker`
 
 -   The `Color` field now defaults to `16` (no color) if not specified
 
-### `shulker_bullet`
+#### `shulker_bullet`
 
 -   The `Dir` and `Target` fields will no longer be preserved when removed
 
-### `skeleton`
+#### `skeleton`
 
 -   The `StrayConversionTime` field will no longer be preserved when removed
 
-### `spectral_arrow`
+#### `spectral_arrow`
 
 -   The `Duration` field now defaults to `200` if not specified
 
-### `snow_golem`
+#### `snow_golem`
 
 -   The `Pumpkin` field now defaults to `true` if not specified
 
-### `tnt_minecart`
+#### `tnt_minecart`
 
 -   The `fuse` field now defaults to `80` if not specified
 -   The `explosion_power` field now defaults to `4` if not specified
 -   The `explosion_speed_factor` field now defaults to `1` if not specified
 
-### `turtle`
+#### `turtle`
 
 -   The `HomePosX`, `HomePosY`, and `HomePosZ` fields have been collected into a single `home_pos` field
 -   Removed `TravelPosX`, `TravelPosY`, and `TravelPosZ` fields
 -   The `HasEgg` field has been renamed to `has_egg`
 
-### `trader_llama`
+#### `trader_llama`
 
 -   The `DespawnDelay` field now defaults to `47999`
 
-### `vex`
+#### `vex`
 
 -   The `LifeTicks` field has been renamed to `life_ticks`
 -   The `BoundX`, `BoundY`, and `BoundZ` fields have been collected into a single `bound_pos` field
 
-### `villager`
+#### `villager`
 
 -   The `FoodLevel` and `Xp` fields now default to `0` if not specified
 -   The `Gossips` and `ConversionTime` fields will no longer be preserved when removed
 
-### `wandering_trader`
+#### `wandering_trader`
 
 -   The `DespawnDelay` field now defaults to `0` if not specified
 -   The `wander_target` field will no longer be preserved when removed
 
-### `wolf`
+#### `wolf`
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-### `zombie`
+#### `zombie`
 
 -   The `DrownedConversionTime` field will no longer be preserved when removed
 
-### `zombie_villager`
+#### `zombie_villager`
 
 -   The `Xp` field now defaults to `0` if not specified
 -   The `Gossips` and `ConversionTime` fields will no longer be preserved when removed
 
-### `evoker_fangs`, `area_effect_cloud`, and all projectiles
+#### `evoker_fangs`, `area_effect_cloud`, and all projectiles
 
 -   The `Owner` field will no longer be preserved when removed
 
-### `painting` and `leash_knot`
+#### `painting` and `leash_knot`
 
 -   The `TileX`, `TileY`, and `TileZ` fields have been collected into a single `block_pos` field
 
-### `arrow`, `spectral_arrow`, `trident`
+#### `arrow`, `spectral_arrow`, `trident`
 
 -   The `inBlockState` and `SoundEvent` fields will no longer be preserved when removed
 -   The `damage` field now defaults to `2` if not specified
 
-### `dragon_fireball`, `wind_charge`, `breeze_wind_charge`, `wither_skull`, `small_fireball`, and `large_fireball`
+#### `dragon_fireball`, `wind_charge`, `breeze_wind_charge`, `wither_skull`, `small_fireball`, and `large_fireball`
 
 -   The `acceleration_power` field now defaults to `0.1` if not specified
 
-### `small_fireball` and `large_fireball`
+#### `small_fireball` and `large_fireball`
 
 -   The `ExplosionPower` field now defaults to `1` if not specified
 
-### `minecart`, `*_minecart`
+#### `minecart`, `*_minecart`
 
 -   The `CustomDisplayTile` field has been removed
 -   `DisplayState` will now always override the default displayed block state if specified
 -   `DisplayOffset` may now be specified to override the default offset even without a custom display block state set
 
-### `block_display`, `item_display`, and `text_display`
+#### `block_display`, `item_display`, and `text_display`
 
 -   The `interpolation_duration`, `teleport_duration`, and `start_interpolation` fields now default to `0` if not specified
 -   The `view_range` field now defaults to `1` if not specified
@@ -1152,56 +1154,56 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The `width` and `height` fields now default to `0` if not specified
 -   The `glow_color_override` field will no longer be preserved when removed
 
-### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
+#### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
 
 -   The `patrol_target` field will no longer be preserved when removed
 
-## Block Entity Data
+### Block Entity Data
 
 -   The `CustomName` field will no longer be preserved when removed
 -   The `LootTable` field will no longer be preserved when removed
 
-### `campfire`
+#### `campfire`
 
 -   The `CookingTimes` and `CookingTotalTimes` fields will no longer be preserved when removed
 
-### `chiseled_bookshelf`
+#### `chiseled_bookshelf`
 
 -   The `last_interacted_slot` field now defaults to `-1` if not specified
 
-### `end_gateway`
+#### `end_gateway`
 
 -   The `exit_portal` field will no longer be preserved when removed
 
-### `furnace`, `smoker`, `blast_furnace`
+#### `furnace`, `smoker`, `blast_furnace`
 
 -   The `RecipesUsed` field will no longer be preserved when removed
 
-### `hopper`
+#### `hopper`
 
 -   The `TransferCooldown` field now default to `-1` if not specified
 
-### `jigsaw`
+#### `jigsaw`
 
 -   The `name`, `target`, and `pool` fields now default to `minecraft:empty` if not specified
 -   The `final_state` field now defaults to `minecraft:air` if not specified
 
-### `sculk_shrieker`
+#### `sculk_shrieker`
 
 -   The `warning_level` field now defaults to `0` if not specified
 
-### `skull`
+#### `skull`
 
 -   The `note_block_sound` field will no longer be preserved when removed
 
-### `structure_block`
+#### `structure_block`
 
 -   The `ignoreEntities` and `showboundingbox` fields now default to `true` if not specified
 -   The `posY` field now defaults to `1` if not specified
 
-## Data Components
+### Data Components
 
-### New `weapon` Item Component
+#### New `weapon` Item Component
 
 -   When present, the "Item Used" statistic will be incremented for each attack with the item
 -   The specified amount of damage will be subtracted from the item's durability with each attack
@@ -1212,7 +1214,7 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   If non-zero, will disable a blocking Shield on successful attack for the specified amount of seconds
     -   e.g. `weapon={item_damage_per_attack:2}`
 
-### New `blocks_attacks` Item Component
+#### New `blocks_attacks` Item Component
 
 -   When present, this item can be used like a Shield to block attacks to the holding player
 -   Format: object with fields:
@@ -1257,7 +1259,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `disabled_sound` - sound event (optional)
         -   If specified, this sound will be played when the item goes on its disabled cooldown due to an attack
 
-### New `potion_duration_scale` Item Component
+#### New `potion_duration_scale` Item Component
 
 -   When present, for items that have the `potion_contents` component, the duration of the applied effects will be scaled by this factor
 -   This also applies to `custom_effects` in the `potion_contents` component, unlike the previous hardcoded scaling factor
@@ -1265,7 +1267,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Format: non-negative float
     -   e.g. `potion_duration_scale=0.25`
 
-### New `break_sound` Item Component
+#### New `break_sound` Item Component
 
 -   When present, this sound will be played when the item runs out of durability and breaks
 -   If not present, no sound will be played on break
@@ -1273,13 +1275,13 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Format: sound event
     -   e.g. `break_sound='item.wolf_armor.break'`
 
-### New `provides_banner_patterns` Item Component
+#### New `provides_banner_patterns` Item Component
 
 -   When present, this item can be placed in the pattern slot of a Loom
 -   Format: hash-prefixed banner pattern tag
     -   e.g. `provides_banner_patterns='#minecraft:pattern_item/globe'`
 
-### New `provides_trim_material` Item Component
+#### New `provides_trim_material` Item Component
 
 -   When present, this item will provide the specified trim material when used in a trimming recipe
 -   Note that to be used in the built-in smithing recipes, the item must also be in the `#trim_materials` tag
@@ -1287,13 +1289,13 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Format: trim material id
     -   e.g. `provides_trim_material='minecraft:iron'`
 
-### `tool` Item Component
+#### `tool` Item Component
 
 -   Added new optional field: `can_destroy_blocks_in_creative` (boolean)
     -   If `false`, players cannot break blocks while holding this tool in Creative Mode
     -   If not specified, defaults to `true`
 
-### `equippable` Item Component
+#### `equippable` Item Component
 
 -   Can now apply to `saddle` slot
 -   Any mob can now have equipment added in the `body` slot as long as the component allows it (`allowed_entities`)
@@ -1302,13 +1304,13 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   The item will not be equipped if the target already has an item in the relevant slot
     -   If not specified, defaults to `false`
 
-### Updated Tooltip Components
+#### Updated Tooltip Components
 
 -   The way in which tooltips are controlled by components has been reworked
 -   Individual `show_in_tooltip` fields, as well as the `hide_additional_tooltip` and `hide_tooltip` components have been replaced by a general `tooltip_display` component
 -   Filled Maps without any `map_id` component no longer show an "Unknown Map" tooltip (invalid IDs will still produce this tooltip)
 
-### New `tooltip_display` Item Component
+#### New `tooltip_display` Item Component
 
 -   This component allows the tooltips provided specifically by any given item component to be suppressed
 -   This replaces the previous `show_in_tooltip` fields, `hide_additional_tooltip` and `hide_tooltip` components
@@ -1319,7 +1321,7 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   The tooltips provided by any component in this list will be hidden
         -   If that component provides no tooltip, it will have no effect
 
-#### Removed `hide_additional_tooltip` Item Component
+##### Removed `hide_additional_tooltip` Item Component
 
 -   Replaced by use of the `tooltip_display` component and `hidden_components` field
 -   The following components previously covered by the `hide_additional_tooltip` component may need to be hidden:
@@ -1345,17 +1347,17 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   This additionally means that tooltips from the above listed components are no longer restricted to specific item types
 -   Note: for existing items in a world with the `hide_additional_tooltip` component, any of the above listed components also present on the same item will be added to the list to hide in `tooltip_display`
 
-#### Removed `hide_tooltip` Item Component
+##### Removed `hide_tooltip` Item Component
 
 -   Replaced by use of the `tooltip_display` component and `hide_tooltip` field
 
-#### `attribute_modifiers` Item Component
+##### `attribute_modifiers` Item Component
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   This component now always uses its simplified form, with the `modifiers` field inlined to top-level
     -   e.g. `attribute_modifiers={modifiers:[...]}` -> `attributes_modifiers=[...]`
 
-#### `dyed_color` Item Component
+##### `dyed_color` Item Component
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   This component now always uses its simplified form, with the `rgb` field inlined to top-level
@@ -1363,32 +1365,32 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The specified color now supports the RGB array format
     -   e.g. `dyed_color=[0.5, 1.0, 0.2]`
 
-#### `can_place_on` and `can_break` Item Components
+##### `can_place_on` and `can_break` Item Components
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   The `predicates` field has been inlined to top-level, and supports either a single element or list
     -   e.g. `can_place_on={predicates:[{blocks:'stone'},{blocks:'dirt'}]}` -> `can_place_on=[{blocks:'stone'},{blocks:'dirt'}]`
     -   or: `can_place_on={predicates:[{blocks:'stone'}]}` -> `can_place_on={blocks:'stone'}`
 
-#### `enchantments` and `stored_enchantments` Item Components
+##### `enchantments` and `stored_enchantments` Item Components
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   These components now always use their simplified form, with the `levels` field inlined to top-level
     -   e.g. `enchantments={levels:{sharpness:2}}` -> `enchantments={sharpness:2}`
 
-#### `jukebox_playable` Item Component
+##### `jukebox_playable` Item Component
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
-#### `trim` Item Component
+##### `trim` Item Component
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
-#### `unbreakable` Item Component
+##### `unbreakable` Item Component
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
-### Entity Components
+#### Entity Components
 
 -   Entities now have a set of components for configuring variants and other aspects of appearance
 -   If those components are present on spawning item, they will be applied to the new entity
@@ -1424,9 +1426,9 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `minecraft:potion_contents` - Lingering Potion to Area Effect Cloud
     -   `minecraft:potion_duration_scale` - Lingering Potion to Area Effect Cloud
 
-## Predicates
+### Predicates
 
-### Entity Predicates
+#### Entity Predicates
 
 -   New optional fields have been added to entity predicates: `components` and `predicates`
     -   Their functionality and format are identical to the fields `components` and `predicates` on item predicates, but they operate on entity components
@@ -1452,23 +1454,23 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The `color` field has been removed from the `minecraft:sheep` sub-predicate
 -   The `stepping_on` field will now only match the specified location if the entity is on the ground
 
-### Block Predicates
+#### Block Predicates
 
 -   New optional fields have been added to block predicates: `components` and `predicates`
 -   Their functionality and format are identical to the fields `components` and `predicates` on item predicates, but they operate on block entity components (when present)
     -   When present, `components` will match exact contents of block entity components
     -   When present, `predicates` will match partial contents of block entity components
 
-## Loot Functions
+### Loot Functions
 
-### `toggle_tooltips`
+#### `toggle_tooltips`
 
 -   Now supports any component id in the `toggles` map
 -   Any component specified will be toggled in the `tooltip_display` component
 
-## Recipes
+### Recipes
 
-### `crafting_transmute` Recipe Type
+#### `crafting_transmute` Recipe Type
 
 -   The `result` field now supports specifying a count and a components patch to apply to the result
 -   The components patch is applied to the final transmuted item
@@ -1479,12 +1481,12 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   e.g. `"result": {"id": "minecraft:stick", "count": 3, "components": {"!minecraft:damage": {}, "minecraft:enchantment_glint_override": {}}}`
 -   The field can still be defined as before as an inline item id (e.g. `"result": "minecraft:stick"`)
 
-### `smithing_transform` Recipe Type
+#### `smithing_transform` Recipe Type
 
 -   The `base` ingredient field is no longer optional
     -   Previously, if no base ingredient was given, the recipe would parse but never be usable
 
-### `smithing_trim` Recipe Type
+#### `smithing_trim` Recipe Type
 
 -   The `base`, `template`, and `addition` ingredient fields are no longer optional
     -   Previously, if these ingredients were not given, the recipe would parse but never be usable
@@ -1493,14 +1495,14 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Format: trim pattern id
     -   e.g. `"pattern": "minecraft:bolt"`
 
-## Trim Patterns and Trim Materials
+### Trim Patterns and Trim Materials
 
 -   The registry definitions for trim patterns and trim materials no longer include an `item` field
 -   Instead, this mapping in patterns and materials is defined by the recipe and item components respectively
 
-## World Generation
+### World Generation
 
-### Added `fallen_tree` Feature Type
+#### Added `fallen_tree` Feature Type
 
 -   Places a stump block (given by `trunk_provider`), and a number of logs to the side placed in a random direction (given by `trunk_provider`, rotated by direction)
 -   Format:
@@ -1509,7 +1511,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `stump_decorators` - List of Tree Decorators to apply to the stump block
     -   `log_decorators` - List of Tree Decorators to apply to the log blocks
 
-### Added `attached_to_logs` Tree Decorator Type
+#### Added `attached_to_logs` Tree Decorator Type
 
 -   Places blocks adjacent to logs in random directions, with a specified probability
 -   Format:
@@ -1517,9 +1519,9 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `block_provider` - Block State Provider, selects the adjacent block to place
     -   `directions` - list of directions, the cardinal directions in which blocks can be placed
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#replaceable_by_mushrooms` - exhaustive list of all bocks that can be replaced as a mushroom is placed or grows
 -   Added `#sword_instantly_mines` - blocks that are instantly mined by Swords
@@ -1528,24 +1530,24 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Added `#camels_spawnable_on` - blocks that Camels can spawn on
 -   `#dead_bush_may_place_on` has been renamed to `#dry_vegetation_may_place_on`
 
-### Item Tags
+#### Item Tags
 
 -   Added `#book_cloning_target` - item that can be crafted together with a Written Book to clone it
 -   Added `#eggs` - all variants of the Egg item
 -   Added `#flowers` - corresponding item tag for the already existing `#flowers` block tag
 
-### Biome Tags
+#### Biome Tags
 
 -   Added `#spawns_cold_variant_farm_animals` - all biomes where cold variant of farm animals spawn
 -   Added `#spawns_warm_variant_farm_animals` - all biomes where warm variants of farm animals spawn
 
-### Entity Tags
+#### Entity Tags
 
 -   Added `#can_equip_saddle` - entities that can be equipped with a Saddle
     -   Note: this does not mean that the Saddle will function, just that it can be equipped into the saddle slot
 -   Added `#can_wear_horse_armor` - entity that can hold horse armor in their body slot
 
-### Structure Tags
+#### Structure Tags
 
 -   Added `#on_savanna_village_maps` - structures that can appear on Savanna Village Maps
 -   Added `#on_desert_village_maps` - structures that can appear on Desert Village Maps
@@ -1555,24 +1557,24 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Added `#on_swamp_explorer_maps` - structures that can appear on Swamp Explorer Maps
 -   Added `#on_jungle_explorer_maps` - structures that can appear on Jungle Explorer Maps
 
-### Cat Variant Tags
+#### Cat Variant Tags
 
 -   Removed `#default_spawns` and `#full_moon_spawns`
 
-## Particles
+### Particles
 
-### `tinted_leaves`
+#### `tinted_leaves`
 
 -   This particle is spawned below most Leaves blocks
 -   Fields:
     -   `color`: Tint color, specified either as packed int or list of 4 floats
 
-### `firefly`
+#### `firefly`
 
 -   This particle spawns around Firefly Bushes
 -   Has no fields
 
-# Resource Pack Version 47 through 55
+## Resource Pack Version 47 through 55
 
 -   Added new block sprites for new content
 -   The Creaking Heart "active" state has been renamed to "awake"
@@ -1589,7 +1591,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Expanded `paletted_permutations` atlas sprite source to support custom separators
 -   Small changes in rendering of items in world
 
-## Block Sprites
+### Block Sprites
 
 -   Added new block sprites:
     -   `bush`
@@ -1612,7 +1614,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `creaking_heart_active` -> `creaking_heart_awake`
     -   `creaking_heart_top_active` -> `creaking_heart_top_awake`
 
-## Item Sprites
+### Item Sprites
 
 -   Added new item sprites:
     -   `blue_egg`
@@ -1622,7 +1624,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `wildflowers`
     -   `<mob>_spawn_egg` for every mob, replacing the previous `spawn_egg` and `spawn_egg_overlay` sprites
 
-## Sound Events
+### Sound Events
 
 -   Added new sound events:
     -   `block.cactus_flower.break`
@@ -1650,13 +1652,13 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   `entity.wolf_<variant>.whine`
 -   Removed sound event: `entity.wolf.howl`
 
-## Particles
+### Particles
 
 -   Added new particle sprites:
     -   `firefly`
     -   `leaf_<frame>` with frame ranging between 0 and 11
 
-## New and Updated Pig Textures
+### New and Updated Pig Textures
 
 -   Added new textures for Pig variants:
     -   `cold_pig`
@@ -1664,7 +1666,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Texture `pig` has been renamed to `temperate_pig`
 -   Changed the size of `temperate_pig` and `pig_saddle` texture
 
-## New and Updated Cow Textures and Model
+### New and Updated Cow Textures and Model
 
 -   Added new textures for Cow variants:
     -   `cold_cow`
@@ -1676,7 +1678,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Models now have a snout
     -   Models now have their legs mirrored
 
-## New and Updated Chicken Textures
+### New and Updated Chicken Textures
 
 -   Added new textures for Chicken variants:
     -   `cold_chicken`
@@ -1685,13 +1687,13 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   The `temperate_chicken` texture has been moved to a new folder:
     -   `entity/chicken.png` -> `entity/chicken/temperate_chicken.png`
 
-## Updated Sheep Textures
+### Updated Sheep Textures
 
 -   Name of `sheep_fur` texture has been renamed to `sheep_wool`
 -   Sheep now has a separate texture for its wool undercoat, which is dynamically recolored in-game
     -   The name of this undercoat texture is `sheep_wool_undercoat`
 
-## Equipment Assets
+### Equipment Assets
 
 -   Equipment assets may now define new layer types:
     -   `pig_saddle` - equipment layer for Pig saddles
@@ -1714,9 +1716,9 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `entity/horse/horse_zombie.png` -> `entity/equipment/zombie_horse_saddle/saddle.png`
 -   Equipment layers configured to be dyeable will now show if the `dyed_color` component is present on the item, even if the item is not in the `#dyeable` tag
 
-## Item Models
+### Item Models
 
-### `minecraft:component` Select Property
+#### `minecraft:component` Select Property
 
 -   New data source has been added to `select` item model: `component`
 -   Returns value of component on item, if any
@@ -1726,7 +1728,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Example: if `component` is set to `minecraft:wolf/collar`, list of cases will accept dye colors, like `lime`
     -   If value comes from registry and current datapack does not provide it, entry will be silently ignored
 
-### `minecraft:component` Boolean Property
+#### `minecraft:component` Boolean Property
 
 -   New conditional model property has been added to `condition` item model: `component`
 -   Uses component predicates (like ones used in item predicates) to match item components
@@ -1735,14 +1737,14 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `predicate` - type of component predicate (member of `minecraft:data_component_predicate_type` registry)
     -   `value` - predicate-specific value
 
-## Atlas
+### Atlas
 
-### `minecraft:paletted_permutations` Sprite Source
+#### `minecraft:paletted_permutations` Sprite Source
 
 -   New field:
     -   `separator` - optional string (default: `_`) - value to be used when joining texture and permutation names to produce sprite name
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
@@ -1753,7 +1755,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Currently, these are: `ModelViewMat`, `ProjMat`, `TextureMat`, `ScreenSize`, `ColorModulator`, `Light0_Direction`, `Light1_Direction`, `GlintAlpha`, `FogStart`, `FogEnd`, `FogColor`, `FogShape`, `LineWidth`, `GameTime`, `ModelOffset`
     -   The type of the uniform must match what it would normally be, or it'll be undefined behavior
 
-### Post-process Effect Definitions
+#### Post-process Effect Definitions
 
 -   The field `program` was replaced with `vertex_shader` and `fragment_shader`
     -   `<namespace>:<path>` will resolve to `assets/<namespace>/shaders/<path>.<vsh|fsh>`
@@ -1763,13 +1765,13 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Leaving it unset is not recommended and is used for runtime configuration of the blur effect
 -   Leaving a uniform unspecified results in undefined behavior, you must specify each one that will be used by the shaders
 
-## Item Rendering
+### Item Rendering
 
-### Item Display
+#### Item Display
 
 -   `firstperson_lefthand` and `thirdperson_lefthand` transforms are now rendered the same as when held in hand
 
-### Item Entity
+#### Item Entity
 
 -   When on ground, model size is now taken into account when determining hovering motion
     -   That means that models should never clip into the block below, no matter what size they are
@@ -1778,7 +1780,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   Otherwise, the model is rendered as a cluster of items offset in all directions around center
     -   Previously, flat stack rendering happened only for models with `builtin/generated` parent
 
-# Fixed bugs in 1.21.5
+## Fixed bugs in 1.21.5
 
 -   [MC-7697](https://bugs.mojang.com/browse/MC-7697) Tridents or arrows shot through lava sometimes don't catch fire
 -   [MC-13738](https://bugs.mojang.com/browse/MC-13738) Invisible saddle when using invisibility potion on a horse, donkey or mule

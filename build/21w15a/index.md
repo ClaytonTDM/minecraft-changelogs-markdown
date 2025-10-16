@@ -1,8 +1,10 @@
+# 21w15a
+
 In today’s snapshot, we’re making a few needed changes that directly relate to our [recent announcement](https://www.minecraft.net/article/a-caves---cliffs-announcement). If you haven’t yet read it, we strongly recommend you do. You can also check out [this Caves & Cliffs video](https://youtu.be/6YgKUZnUyak) from Agnes and Henrik to learn more about our plans for the update.
 
 Even though some features will be released later than we’d planned, you can still try them out through a separate data pack. More information, as well as our latest tweaks, can be found here below.
 
-# Caves & Cliffs World Generation
+## Caves & Cliffs World Generation
 
 The riskier and technically more complex world generation changes for the Caves & Cliffs update will be shipped in a later update and have been switched off in this snapshot. This means:
 
@@ -16,7 +18,7 @@ The riskier and technically more complex world generation changes for the Caves 
 -   Worlds created in snapshot 21w05b or any earlier version can now once again be opened
 -   Worlds created in any version between snapshot 21w06a and 21w14a can no longer be opened
 
-## The Caves & Cliffs Prototype Data Pack
+### The Caves & Cliffs Prototype Data Pack
 
 You can still try out the world generation for the later update using a datapack which activates the changes as an experimental custom world:
 
@@ -29,11 +31,11 @@ You can still try out the world generation for the later update using a datapack
 
 Keep in mind that the world you create with the data pack will be flagged as experimental by the game, and such worlds are not guaranteed to work in future versions. Also, please note that you can’t add data packs that change the world generation to existing worlds, so you must create a new world to access the experimental features.
 
-# New Features in 21w15a
+## New Features in 21w15a
 
 -   Goats will ram anything that moves... and also armor stands
 
-# Changes in 21w15a
+## Changes in 21w15a
 
 -   A crinkly, crunchy sound now plays when Bone Meal is used
 -   Reordered some blocks in the Building Blocks Tab in Creative Menu
@@ -45,19 +47,19 @@ Keep in mind that the world you create with the data pack will be flagged as exp
 
 ![Minecraft Snapshot 21w15a Texture Comparison](https://launchercontent.mojang.com/images/snapshot-21w15a-ore-texture-comparison.png) New raw ore textures in snapshot 21w15a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w15aoretexturecomparisonfull.png) for a link to the full resolution image.
 
-## Building Blocks tab
+### Building Blocks tab
 
 -   All ores have been reordered to be in the same location in the creative inventory.
 -   Compact forms of raw and refined underground materials have been reordered.
 
-# Technical Changes in 21w15a
+## Technical Changes in 21w15a
 
 -   Added the Marker entity
 -   Added `/debug function`
 -   `selector` and `nbt` chat components can now configure separators between elements
 -   Servers can now customize a message to display when prompting players about custom resource packs
 
-## Markers
+### Markers
 
 Markers are a new type of entity meant for custom use cases like map making and data packs.
 
@@ -65,27 +67,27 @@ Markers are a new type of entity meant for custom use cases like map making and 
 -   Do not do any updates of their own
 -   Have a `data` compound field that can contain any data
 
-## `/debug function`
+### `/debug function`
 
 New debug subcommand executes command with same syntax as function
 
 -   Every executed command, message (even if it would be normally invisible), result or error is stored to file
 -   Cannot be run from inside functions
 
-## Chat component separators
+### Chat component separators
 
 -   Components that print lists of names, like `selector` or `nbt` can now override separator (`", "` by default) with `separator` element
 -   Examples:
     -   `{"selector": "@e[type=chicken]", "separator": "|"}`
     -   `{"nbt": "CustomName", "entity": "@e[type=chicken]", "interpret": true, "separator": {"text": "*", "color": "red"}}`
 
-## Custom server resource packs
+### Custom server resource packs
 
 When `require-resource-pack` is used in `server.properties`, there's now an option for servers to add a custom message.
 
 -   A dedicated server can configure additional message to be shown on resource pack prompt (`resource-pack-prompt` in `server.properties`, expects chat component syntax, can contain multiple lines)
 
-# Bugs fixed in 21w15a
+## Bugs fixed in 21w15a
 
 -   [MC-203855](https://bugs.mojang.com/browse/MC-203855) A geode configured\_feature causes a crash when use\_alternate\_layer0\_chance is used with no entries in inner\_placements
 -   [MC-212145](https://bugs.mojang.com/browse/MC-212145) Summoning Glow Lichen using /setblock doesn't place any lichen but creates light until the block is updated

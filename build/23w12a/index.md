@@ -1,6 +1,8 @@
+# 23w12a
+
 Well hello fellow Minecraft lovers! It is time for the first snapshot for 1.20. We know we promised no more major features, so how did we end up with such a big snapshot? You thought the trails were over? NO! In snapshot 23w12a we have even more tales to tell! Our devs apparently could not resist throwing in a few extra additions. Enjoy!
 
-# New Features
+## New Features
 
 -   All features and changes from the "Update 1.20" experimental pack are now part of the game
 -   Vibration resonance functionality has been added to Blocks of Amethyst
@@ -11,20 +13,20 @@ Well hello fellow Minecraft lovers! It is time for the first snapshot for 1.20. 
 -   Added Sniffer Egg
 -   Added Pitcher Plant
 
-## Vibration Resonance
+### Vibration Resonance
 
 -   Blocks of Amethyst have a new behavior when placed adjacent to Sculk Sensors
     -   If that Sculk Sensor receives a vibration, the Block of Amethyst will re-emit its frequency as a separate vibration at its location
 -   This behaviour is called Vibration Resonance, and allows players to move vibration frequencies across long distances without having to recreate the vibration naturally
 
-## Calibrated Sculk Sensors
+### Calibrated Sculk Sensors
 
 -   A new variant of Sculk Sensors which allows you to filter vibrations based on their frequency level
 -   They are not found naturally and can only be crafted with 1 Sculk Sensor and 3 Amethyst Shards in the Crafting Table
 -   One side of the Calibrated Sculk Sensor can receive a redstone signal as input
     -   The strength of that redstone signal is the only vibration frequency the Sculk Sensor will listen to
 
-## Archaeology
+### Archaeology
 
 -   Added Suspicious Gravel block
     -   It has the same characteristics as Suspicious Sand
@@ -36,7 +38,7 @@ Well hello fellow Minecraft lovers! It is time for the first snapshot for 1.20. 
 -   Added 16 Pottery Shards (so there are now 20 Pottery Shards in total)
     -   These have been distributed between the 5 Archaeology sites: Desert Wells, Desert Temples, Cold Ocean Ruins, Warm Ocean Ruins, and Trail Ruins
 
-## Armor Trims
+### Armor Trims
 
 New armor trim Smithing Templates have been added to the following structures:
 
@@ -48,7 +50,7 @@ New armor trim Smithing Templates have been added to the following structures:
 -   Ancient City
     -   Silence Armor Trim
 
-## Signs
+### Signs
 
 -   Sign text can now be edited after being placed in the world
     -   This can be done by interacting with the Sign
@@ -59,7 +61,7 @@ New armor trim Smithing Templates have been added to the following structures:
     -   Click commands on Signs can only be invoked when the Sign is waxed
     -   If a Sign with a click command is not waxed, interacting with it will not invoke the command and instead open up the edit screen as usual
 
-## Sniffer Egg
+### Sniffer Egg
 
 -   Can be found in the Suspicious Sand of Warm Ocean Ruins
 -   When two Sniffers breed they do not immediately spawn a Snifflet; instead, a Sniffer Egg is dropped
@@ -67,20 +69,20 @@ New armor trim Smithing Templates have been added to the following structures:
     -   When placed on Moss, the Egg will hatch after approximately 10 minutes
     -   On all other blocks, it will hatch in approximately 20 minutes
 
-## Pitcher Plant
+### Pitcher Plant
 
 -   The Sniffer can now occasionally Sniff up a Pitcher Pod item
     -   This Pod, when planted in Farmland, grows into a Pitcher Crop, which has five growth stages
     -   Once fully grown, the Pitcher Crop can be harvested, yielding a two-block-tall Pitcher Plant
 
-# Changes
+## Changes
 
 -   Vibration frequencies of many actions in the game have been tweaked
 -   Wither effect particle color has been adjusted to make it more distinguishable
 -   Potion of Slow Falling color has been adjusted to make it more distinguishable
 -   Step sounds can now combine for blocks walked through and stepped on
 
-## Vibration Frequencies
+### Vibration Frequencies
 
 In preparation for the Calibrated Sculk Sensor, vibration frequencies have been greatly simplified to prevent unwanted interference. The following are category descriptions for each frequency and the expected events that they correspond to:
 
@@ -100,21 +102,21 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 14.  Mobs and players teleporting or spawning
 15.  Mobs and players dying or an explosion
 
-## Combination Step Sounds
+### Combination Step Sounds
 
 -   Combines two different step sounds
 -   Occurs for carpets, snow, nether sprouts, as well as warped and crimson roots
     -   The top-most block you are walking on is played as normal
     -   The block underneath is played at a lower volume and pitch
 
-## Armor Trims
+### Armor Trims
 
 -   The Dune Armor Trim now has a brand-new pattern and Smithing Template icon
 -   The Dune Armor Trim's old pattern is now used by the Sentry Armor Trim
     -   A new icon has been made for the Sentry Armor Trim Smithing Template to fit this pattern
 -   The Sentry Armor Trim's old pattern is now used by the new Shaper Armor Trim
 
-# Technical Changes
+## Technical Changes
 
 -   The data pack version is now 13, accounting for sign data format changes
 -   Added a `capped` rule structure processor that limits the number of replaced blocks for a structure piece to a configured maximum
@@ -123,9 +125,9 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 -   Tweaked display entity interpolation
 -   Removed `update_1_20` feature flag and built-in datapack - features are no longer experimental
 
-## Structure post-processors
+### Structure post-processors
 
-### Capped post-processor
+#### Capped post-processor
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -135,7 +137,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-### Rule post-processor block entity configuration
+#### Rule post-processor block entity configuration
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -149,7 +151,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
         -   `loot_table` Referenced loot table to add to block entity as `LootTable` field
         -   Field `LootTableSeed` is also added to the block entity using random seeded by block position
 
-## Game Events
+### Game Events
 
 -   `piston_contract` game event has been removed in favor of `block_deactivate`
 -   `piston_extend` and `dispense_fail` game events have been removed in favor of `block_activate`
@@ -170,22 +172,22 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
     -   14: `entity_place`, `lightning_strike`, `teleport`
     -   15: `entity_die`, `explode`
 
-## Tags
+### Tags
 
-### Step Sounds
+#### Step Sounds
 
 -   The blocks that can produce a combination of step sounds is controlled by `combination_step_sound_blocks`
 
-## Display entity
+### Display entity
 
-### Interpolation changes
+#### Interpolation changes
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at next tick after receiving update)
 -   Entities are not rendered unless initial data is received. That means display entities might not show on the first tick.
 -   Note: due to how game handles updates, changes to entities made after summoning might be delivered to clients with later tick
 
-# Fixed bugs in Snapshot 23w12a
+## Fixed bugs in Snapshot 23w12a
 
 -   [MC-157727](https://bugs.mojang.com/browse/MC-157727) The small cube in honey/slime blocks isn't displayed in inventory
 -   [MC-165221](https://bugs.mojang.com/browse/MC-165221) 3D Modeled Potions are not rendered correctly in the "GUI Display"

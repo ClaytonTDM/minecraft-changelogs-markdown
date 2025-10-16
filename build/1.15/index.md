@@ -1,4 +1,6 @@
-# Features
+# 1.15
+
+## Features
 
 -   Added advancements for bees and honey!
 -   Added bees!
@@ -10,19 +12,19 @@
 -   Added honeycomb!
 -   Added honeycomb blocks!
 
-## Accessibility
+### Accessibility
 
 -   Sneak and sprint inputs can now be switched between hold and toggle mode in the accessibility options
 -   Descriptions under buttons on the create world screen are now narrated
 -   Changed the button highlight to make it easier to distinguish which button is selected
 
-## Advancements
+### Advancements
 
 -   Added "Sticky Situation" for jumping into a honey block to break your fall
 -   Added "Bee Our Guest" for safely collecting honey from a beehive using a campfire
 -   Added "Total Beelocation" for moving a bee nest with 3 bees inside using silk touch
 
-## Bee
+### Bee
 
 We're buzzing with excitement! Can someone tell Cory to stop making bee puns now?
 
@@ -41,7 +43,7 @@ We're buzzing with excitement! Can someone tell Cory to stop making bee puns now
 -   Bees go inside if it's raining at all in the world, not just where the bee is located
 -   Bees will search up to 10 blocks away from itself in all directions to find a nest/hive to call home
 
-## Bee Nests / Bee Hives
+### Bee Nests / Bee Hives
 
 In real life, bees dance in their nests to show other bees where flowers are!
 
@@ -61,13 +63,13 @@ In real life, bees dance in their nests to show other bees where flowers are!
 -   Bees like bee nests and bee hives the same amount! They don't play favorites :)
 -   Bees only exit through the front of the nest/hive
 
-## Dispensers
+### Dispensers
 
 -   Dispensers can now fill bottles with water and honey
 -   Dispensers can now shear honey combs from bee nests and hives
 -   Dispensers now eject empty bottles properly when not facing water
 
-## Honey Block
+### Honey Block
 
 Sticky. Very sticky!
 
@@ -80,7 +82,7 @@ Sticky. Very sticky!
 -   Mobs and animals dislike walking on honey blocks unless they really need to as it's too sticky for their comfort
 -   Honey blocks are crafted from four honey bottles
 
-## Honey Bottle
+### Honey Bottle
 
 Organic, gluten-free, delicious locally-farmed honey!
 
@@ -92,27 +94,27 @@ Organic, gluten-free, delicious locally-farmed honey!
 -   Or craft four bottles into a honey block!
 -   Drinking honey also cures poison
 
-## Honeycomb
+### Honeycomb
 
 Disclaimer: Cannot be used to comb your hair
 
 -   Shear a full-honey hive or nest to obtain
 -   Craft with wood planks to create a bee hive
 
-## Honeycomb Block
+### Honeycomb Block
 
 BYOH - Build Your Own Honeycomb
 
 -   Craft 2x2 Honeycomb to get a honeycomb block
 -   Purely decorative!
 
-## Iron Golems
+### Iron Golems
 
 -   Iron golems start cracking when badly damaged
 -   Repair them with iron ingots!
 -   Damage progress is based on ratio of current health to max health
 
-## Parity
+### Parity
 
 Things from other editions of Minecraft have arrived to Java Edition!
 
@@ -134,7 +136,7 @@ Things from other editions of Minecraft have arrived to Java Edition!
 -   Increased scaffolding burn time when used as fuel in a furnace
 -   Added stats for anvil and grindstone interaction counts
 
-# Technical
+## Technical
 
 -   Item predicate in advancements now makes distinction between actual enchantments and stored enchantments (like ones stored in enchanted books)
 -   Added general-purpose storage for data commands
@@ -143,19 +145,19 @@ Things from other editions of Minecraft have arrived to Java Edition!
 -   Extended advancement and loot table predicates
 -   Extended `schedule` command to allow scheduling function multiple times
 
-## Advancements
+### Advancements
 
 -   Changes in item predicate:
     -   `enchantments` now only matches enchantments on item itself - it can no longer be used for enchanted books
     -   to match contents enchanted book, use `stored_enchantments`
 
-### Entity Predicate
+#### Entity Predicate
 
-#### `player`
+##### `player`
 
 Entity predicate now accepts `player` field, which checks player properties. Fails when entity is not player.
 
-##### Fields:
+###### Fields:
 
 -   `level` - range of allowed player levels
 -   `gamemode` - same values as `/gamemode` command
@@ -163,13 +165,13 @@ Entity predicate now accepts `player` field, which checks player properties. Fai
 -   `recipes` - map of recipe ids. Boolean value tells if it should or should not be known to player
 -   `advancements` - map of advancement ids. If value is boolean, checks if advancement is done. If value is object, checks completion of critera
 
-#### `team`
+##### `team`
 
 Entity predicate now accepts `team` field, which matches team name.
 
-### Location predicate
+#### Location predicate
 
-#### `block` and `fluid`
+##### `block` and `fluid`
 
 Predicate also accepts `block` and `fluid` sub-predicate. Available fields:
 
@@ -178,127 +180,127 @@ Predicate also accepts `block` and `fluid` sub-predicate. Available fields:
 -   `nbt` - matcher for block entity NBT (only for blocks)
 -   `state` - map of name-value properties. Value can be integer, boolean or string or object with optional `min` and `max` properties
 
-#### `light`
+##### `light`
 
 Predicate now accepts `light` sub-predicate. Object has one integer range - `light` that matches visible light (`max(sky-darkening,block)`).
 
-## Chat components
+### Chat components
 
-### Click action
+#### Click action
 
 -   Added `copy_to_clipboard` action to `clickEvent`
 
-### NBT chat component
+#### NBT chat component
 
 -   Added variant for NBT storage: `{"nbt": <path>, "storage":"<resource id>"}`. NBT storage can be manipulated with commands like `/data merge storage <resource id> ...`
 
-## Commands
+### Commands
 
-### `data`
+#### `data`
 
 -   Data commands can now use `storage` as target. This is general-purpose, key-value storage
     -   Storage is shared between all dimensions in level
     -   Data in storage persist between reloads
 
-### `execute if predicate`
+#### `execute if predicate`
 
 New subcommand evaluates custom predicates (defined in `predicates` directory of datapack).
 
-### `schedule`
+#### `schedule`
 
 -   Added new syntax `/schedule ... [append|replace]` (`/schedule ...` defaults to `replace`)
 -   Added new syntax `/schedule clear <id>` to remove existing schedules (returns number of removed schedules)
 
-### effect
+#### effect
 
 The `effect clear` command now defaults to `@s` if no target argument is given.
 
-### Entity selectors
+#### Entity selectors
 
 New selector parameter `predicate` allows to apply custom custom predicate (defined in `predicates` directory of datapack).
 
-### kill
+#### kill
 
 The `kill` command now defaults to `@s` if no target argument is given.
 
-### Spectate
+#### Spectate
 
 New command that makes a player in spectator mode spectate an entity. Syntax: `spectate [target] [player]` Parameters:
 
 -   `player` - The player that should spectate the target. Must be in spectator mode. If omitted, `@s` is used
 -   `target` - The target to spectate. If omitted, makes the player stop spectating
 
-## Custom predicates
+### Custom predicates
 
 Condition part of loot tables can now be defined as separate data pack resource in `predicates` directory.
 
-## Loot tables
+### Loot tables
 
-### `location_check`
+#### `location_check`
 
 New parameters added:
 
 -   `offsetX`, `offsetY`, `offsetZ` - optional offsets to location
 
-### `time_check` condition
+#### `time_check` condition
 
 New condition that checks day time.
 
-#### Parameters
+##### Parameters
 
 -   `value` - range of accepted values
 -   `period` - if present, time will be modulo-divided by this value (for example, if set to 24000, `value` will operate on time of day)
 
-### New conditions
+#### New conditions
 
-#### `reference`
+##### `reference`
 
 Includes condition defined in `predicates` directory of datapack, selected with `name` parameter.
 
-### New functions
+#### New functions
 
-#### `copy_state`
+##### `copy_state`
 
 Copies state properties from dropped block to `BlockStateTag` in dropped item.
 
-##### Parameters
+###### Parameters
 
 -   `block` - source of properties (block id)
 -   `properties` - list of property names. All must be present on `block`
 
-## Modding
+### Modding
 
 In an effort to help make modding the game easier, we have decided to publish our game obfuscation maps with all future releases of the game. This means that anyone who is interested may deobfuscate the game and find their way around the code without needing to spend a few months figuring out what's what. It is our hope that mod authors and mod framework authors use these files to augment their updating processes that they have today. These mappings will always be available, instantly and immediately as part of every newly released version. This does not, however, change the existing restrictions on what you may or may not do with our game code or assets. The links to the obfuscation mappings are included as part of the version manifest json, and may be automatically pulled for any given version. Prefixed to every obfuscation map is the following legal disclaimer:
 
 > (c) 2019 Microsoft Corporation. All rights reserved. This information is provided "as-is" and you bear the risk of using it. This information does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this information for your internal, reference purposes. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-## Particle Performance
+### Particle Performance
 
 -   Vertically moving particles are performing better when they collide with blocks
 
-## Pistons
+### Pistons
 
-### Bug fix
+#### Bug fix
 
 -   Blocks that can be manually placed on farmland can now also be pushed onto it by a piston without destroying the farmland
 
-## Resource Packs
+### Resource Packs
 
 -   The resource pack version is now 5
 -   The game now tries to make out of date resource packs work as much as possible
 -   Increased sizelimit for client downloading resource packs from 50MB to 100MB
 
-## State matching
+### State matching
 
 Few advancements and loot table predicates that used block state properties (`location`, `block_state_property`, `enter_block`, `placed_block`) can now match ranges (by replacing single value with `{"min": ..., "max": ...}`). Also, block type is now optional in those predicates - so for example it is not possible to match any crop with `age` property in certain range.
 
-## Textures
+### Textures
 
 -   Changed texture map for all chests
 -   Banner and shield patterns are now using alpha channel instead of brightness
 -   Ender Dragon does not have separate texture for the bottom of the wing anymore
 -   Enchanted item glint texture is now like it looks in the game
 
-### Command used to change the patterns
+#### Command used to change the patterns
 
 -   `for f in *.png; do convert "$f" -alpha copy tmp.png && composite tmp.png -compose copy-opacity ../shield_base.png tmp2.png && convert tmp2.png -fill "rgba(0,1,0,1)" -draw "rectangle 0,0 1,63" -draw "rectangle 2,0 63,1" -draw "rectangle 2,22 64,64" -draw "rectangle 12,2 64,64" -fill none -draw "matte 0,0 floodfill" tmp3.png && mv tmp3.png "$f" && rm tmp.png tmp2.png; done`

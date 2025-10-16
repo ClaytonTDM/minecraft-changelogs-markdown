@@ -1,17 +1,19 @@
+# 23w40a
+
 We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapshot contains improvements for shields, changes to chat component serialization and bug fixes.
 
-# Changes
+## Changes
 
 -   When a player is blocking with a shield, the arm with the shield now follows the direction the player is looking at, when viewed from third person perspective
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 19
 -   A few minor changes to chat component serialization
 
-## Chat components
+### Chat components
 
-### Serialization
+#### Serialization
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as string instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network
@@ -28,14 +30,14 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
     -   `hoverEvent[action=show_entity].contents.name`
     -   `hoverEvent[action=show_item].contents.tag`
 
-# Data Pack Version 19
+## Data Pack Version 19
 
-## Tags
+### Tags
 
 -   Added `can_breathe_under_water` entity type tag which disables drowning
 -   Added `can_break_armor_stands` damage type tag for damage types that can incrementally knock down armor stands
 
-# Fixed bugs in 23w40a
+## Fixed bugs in 23w40a
 
 -   [MC-47607](https://bugs.mojang.com/browse/MC-47607) Barrier particles aren't shown if particles are set to minimal
 -   [MC-50647](https://bugs.mojang.com/browse/MC-50647) Slime mob spawners spawn slimes only in slime chunks

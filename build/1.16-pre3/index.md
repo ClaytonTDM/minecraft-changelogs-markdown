@@ -1,6 +1,8 @@
+# 1.16-pre3
+
 Another pre-release is now available for Minecraft: Java Edition! This pre-release fixes a bunch of bugs, but we also made a few minor tweaks. The Nether Update is closing in and we aim to release the update within a couple of weeks.
 
-# Changes in 1.16 Pre-release 3
+## Changes in 1.16 Pre-release 3
 
 ​
 
@@ -14,14 +16,14 @@ Another pre-release is now available for Minecraft: Java Edition! This pre-relea
 
 ​
 
-# Technical changes in 1.16 Pre-release 3
+## Technical changes in 1.16 Pre-release 3
 
 ​ Region files are now only opened in synchronous mode on Windows, not on other operating systems. Status of this feature can be manually controlled by following options:
 
 -   For dedicated servers: `sync-chunk-writes` within `server.properties`
 -   For clients: `syncChunkWrites` within `options.txt`
 
-# Fixed Bugs in 1.16 Pre-Release 3
+## Fixed Bugs in 1.16 Pre-Release 3
 
 -   [MC-13823](https://bugs.mojang.com/browse/MC-13823) Leads are incorrectly positioned on certain entities
 -   [MC-14680](https://bugs.mojang.com/browse/MC-14680) Lead is shifted upwards or downwards based on leashed entity height

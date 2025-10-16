@@ -1,6 +1,8 @@
+# 1.19.3-pre2
+
 We're now releasing 1.19.3 pre-release 2 which fixes a few bugs.
 
-# Changes in 1.19.3 Pre-release 2
+## Changes in 1.19.3 Pre-release 2
 
 ​
 
@@ -11,7 +13,7 @@ We're now releasing 1.19.3 pre-release 2 which fixes a few bugs.
 
 ​
 
-# Fixed bugs in 1.19.3 Pre-release 2
+## Fixed bugs in 1.19.3 Pre-release 2
 
 ​
 

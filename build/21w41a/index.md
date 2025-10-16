@@ -1,3 +1,5 @@
+# 21w41a
+
 Have a random snapshot! In this snapshot, we've replaced the random number generator used for world generation, which makes more seeds come out as different... but it also moves everything around in the world, so expect all worlds to look different in this snapshot.
 
 Another thing that we've replaced is the cubemap - the spinning image that you see behind the main menu. It's pretty sweet!
@@ -6,21 +8,21 @@ Also, in case you missed it, we're having our [annual Minecraft Live event](http
 
 **We still highly recommend backing up your world before loading it in this snapshot.**
 
-# Changes in 21w41a
+## Changes in 21w41a
 
 -   The main menu backdrop now shows a Caves & Cliffs: Part II scene
 -   Badlands mineshafts generate higher up
 -   Geodes now only generate up to height 30 and their rarity has been adjusted to match 1.17 levels
 -   The angle at which sprinting against a block does not break your sprint has been increased a bit
 
-# Technical Changes in 21w41a
+## Technical Changes in 21w41a
 
 -   Changed the prioritization order of the chunk rendering pipeline
     -   Unrendered chunk holes in the world should not appear anymore while flying fast with high render distance
 -   Server classes are now signed
 -   New random number generator for Overworld generation
 
-# Fixed bugs in 21w41a
+## Fixed bugs in 21w41a
 
 -   [MC-118134](https://bugs.mojang.com/browse/MC-118134) Item frame texture as an item uses texture of oak planks
 -   [MC-137950](https://bugs.mojang.com/browse/MC-137950) Signs textures does not correspond to the actual texture of their handle

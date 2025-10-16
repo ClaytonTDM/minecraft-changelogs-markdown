@@ -1,14 +1,16 @@
+# 1.17-pre4
+
 The fourth pre-release for 1.17 is now available, and this one fixes a few additional bugs and crashes.
 
-# Changes in 1.17 Pre-Release 4
+## Changes in 1.17 Pre-Release 4
 
 -   Holding down control while holding down space now makes the credits scroll even faster
 
-# The Caves & Cliffs Preview
+## The Caves & Cliffs Preview
 
 Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
 
-# Fixed bugs in 1.17 Pre-Release 4
+## Fixed bugs in 1.17 Pre-Release 4
 
 -   [MC-223552](https://bugs.mojang.com/browse/MC-223552) Credits not alphabetically ordered
 -   [MC-226690](https://bugs.mojang.com/browse/MC-226690) In the credits, "EXPERIS" is in all capital letters for two employees

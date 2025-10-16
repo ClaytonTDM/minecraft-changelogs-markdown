@@ -1,12 +1,14 @@
+# 22w05a
+
 While we work on some larger changes that aren't quite ready yet, here's snapshot 22w05a which contains a small squishing (that's a word, right?) of bugs.
 
 Happy mining!
 
-# Changes in 22w05a
+## Changes in 22w05a
 
 -   A change in 22w03a that re-arranged Badlands biome layouts has been reverted to avoid causing generation changes and chunk borders. This change will be re-introduced later.
 
-# Fixed bugs in 22w05a
+## Fixed bugs in 22w05a
 
 -   [MC-4533](https://bugs.mojang.com/browse/MC-4533) Water graphical glitch when connecting diagonally
 -   [MC-70848](https://bugs.mojang.com/browse/MC-70848) Water looks like it flows up

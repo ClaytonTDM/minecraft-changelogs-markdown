@@ -1,8 +1,10 @@
+# 1.19.4-rc1
+
 Here is the first (and hopefully last) release candidate for 1.19.4. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
 
 Happy mining!
 
-# Technical Changes
+## Technical Changes
 
 Changes to display entity interpolation:
 
@@ -13,6 +15,6 @@ Changes to display entity interpolation:
 -   `start_interpolation` is not stored in entity data
     -   when using data commands, if interpolated value is updated, but `start_interpolation` is not present in modified tag, interpolation will continue from the time of previous update, but with new values
 
-# Fixed bugs in 1.19.4-rc1
+## Fixed bugs in 1.19.4-rc1
 
 -   [MC-260857](https://bugs.mojang.com/browse/MC-260857) Display entities summoned with initial transformation interpolate incorrectly from default transformation during next transformation

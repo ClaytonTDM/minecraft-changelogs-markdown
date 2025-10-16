@@ -1,13 +1,15 @@
+# 25w19a
+
 Take aim for this snapshot! It's a bit smaller this week, and you might want to train a bit more to learn the new projectile mechanics! And while you are here, why not enjoy some misty peaks at a distance!
 
-# Changes
+## Changes
 
 -   Projectiles target tolerance margin now changes over time
 -   Fog was tweaked for improved atmospheric perspective
 -   It now becomes foggier when it rains
 -   The test framework will no longer try to restart running tests after a server restart
 
-## Projectile Targeting
+### Projectile Targeting
 
 -   Projectiles now have a target tolerance margin that changes over time
     -   Previously, all projectiles had a fixed 0.3 blocks target tolerance margin
@@ -15,38 +17,38 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
     -   After that, the target margin will expand by 0.05 blocks per tick until it reaches the previous 0.3 blocks margin
     -   This allows for better precision close to the shooting player or entity, while still allowing for some collision leeway when the projectile is further away
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 76
 -   `--quickPlaySingleplayer` command line argument can now be used without an identifier to launch into the last played world
 
-# Data Pack Version 76
+## Data Pack Version 76
 
 -   The scale attribute for the Happy Ghast now has a limit of `1.0`
 
-## Entity Data
+### Entity Data
 
-### `tnt`
+#### `tnt`
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-### `vex`
+#### `vex`
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of Mob)
 
-# Resource Pack Version 60
+## Resource Pack Version 60
 
 -   Panorama textures must now all be the same size, and square
 -   Sounds for the Dried Ghast Block have been changed
 
-## UI Sprites
+### UI Sprites
 
 -   The Mob Effect atlas has been removed, and sprites in the `textures/mob_effect/` folder are now included within the GUI atlas
     -   This means Mob Effect sprites now support GUI sprite scaling properties
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
-### Shader fog changes
+#### Shader fog changes
 
 -   The fog is now split into environmental and render-distance-based
 -   Previously both those concepts were mixed in the same uniforms
@@ -55,7 +57,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   Environmental fog uses spherical distance to determine its intensity, render distance fog uses cylindrical distance
 -   The resulting fog value for any given vertex is the maximum of both
 
-### `Fog` Uniform Block
+#### `Fog` Uniform Block
 
 -   `FogStart` was renamed to `FogRenderDistanceStart` and now represents the render distance fog start
 -   `FogEnd` was renamed to `FogRenderDistanceEnd` and now represents the render distance fog end
@@ -63,11 +65,11 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   `FogEnvironmentalEnd` is new and represents the end of environment-based fog
 -   `FogShape` was removed. Render distance fog is now cylindrical and environmental for is spherical
 
-## Sound Events
+### Sound Events
 
 -   `block.dried_ghast.hit` has been removed
 
-# Fixed bugs in 25w19a
+## Fixed bugs in 25w19a
 
 -   [MC-69821](https://bugs.mojang.com/browse/MC-69821) TNT "forgets" the player that ignited it when the world is reloaded
 -   [MC-118430](https://bugs.mojang.com/browse/MC-118430) Vex summoner is not stored in NBT despite being used for AI task

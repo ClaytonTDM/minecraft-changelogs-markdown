@@ -1,3 +1,5 @@
+# 22w24a
+
 New snapshot! We're now heading towards 1.19.1, which will add Allay duplication, the ability to report chat, and, of course, fix a few bugs.
 
 On the topic of chat reporting, we want everyone to feel safe and welcome in Minecraft, which is why we have community guidelines in place. If you feel unsafe, uncomfortable, or concerned that someone is breaking our [Community Guidelines](https://www.minecraft.net/community-standards) or the [Xbox Community Standards](https://www.xbox.com/legal/community-standards), you can soon report this in-game. Of course, it will also be possible to report incidents over at the [Report a Concern](https://help.minecraft.net/hc/requests/new?ticket_form_id=4416074743565) page.
@@ -6,18 +8,18 @@ We are looking for feedback regarding the Chat Reporting feature. For now, any r
 
 Enjoy!
 
-# New Features in 22w24a
+## New Features in 22w24a
 
 -   Added Allay duplication
 -   Added Player Chat Reporting
 
-## Allay
+### Allay
 
 -   Allays will dance to a Record playing in a Jukebox
 -   If the Allay is handed an Amethyst Shard while dancing it will duplicate
     -   Duplication has a 2.5 minute cooldown
 
-## Player Chat Reporting
+### Player Chat Reporting
 
 It is now possible to report a player for sending abusive messages in the game chat.
 
@@ -30,7 +32,7 @@ Accessed via the social interactions screen (default keybind is P).
 -   The category of the chat report can be selected from a list of Chat Report Categories
 -   Additional comments can be entered to provide more details and information regarding the report
 
-# Fixed bugs in 22w24a
+## Fixed bugs in 22w24a
 
 -   [MC-144043](https://bugs.mojang.com/browse/MC-144043) Trader llamas continue to spit after their target died
 -   [MC-146891](https://bugs.mojang.com/browse/MC-146891) Nitwit villager can have a profession

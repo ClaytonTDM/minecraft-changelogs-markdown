@@ -1,32 +1,34 @@
+# 22w16a
+
 A chance to re-live the good old times appears in snapshot 22w16a with the ability to de-fragment a Disc - a new Music Disc, to be precise! This snapshot also comes with even more new music, tweaks to the Allay and to top it off it makes some random gameplay events slightly more predictable.
 
 Enjoy!
 
-# New Features in 22w16a
+## New Features in 22w16a
 
 -   Added new music
 -   Added Disc Fragment 5 and Music Disc 5
 
-## Four new music tracks
+### Four new music tracks
 
 -   The new music tracks are called Ancestry, Aerie, Firebugs and Labyrinthine
 -   They play in certain biomes and in the main menu
 
-## Music Disc 5
+### Music Disc 5
 
 A new music disc has been added to the game.
 
 -   Unlike other discs, it can only be obtained by finding and crafting 9 Disc Fragments together
 -   These Disc Fragments can be found rarely in Ancient City chests
 
-# Changes in 22w16a
+## Changes in 22w16a
 
 -   Allay tweaks
 -   Improved the predictability a number of gameplay elements
 -   Frogs can now spawn on Grass, Mud, Moss Carpet, Mangrove Roots and Muddy Mangrove Roots
 -   Froglights are now movable by pistons
 
-## Allay tweaks
+### Allay tweaks
 
 -   Allay health raised from 10 to 20
 -   Delay after item throw lowered from 5 secs to 3 secs
@@ -36,7 +38,7 @@ A new music disc has been added to the game.
     -   Allay is now faster when collecting items, going to the player or going to a noteblock
 -   Throw arc has changed following community feedback
 
-## Predictability of randomized events
+### Predictability of randomized events
 
 Some randomized events are now more predictable and no longer have a possibility of extreme behaviors.
 
@@ -49,20 +51,20 @@ Some randomized events are now more predictable and no longer have a possibility
 -   Randomized flight pattern of Fireworks
 -   Bobbing patterns and time until a fish for Fishing Rods
 
-# Technical Changes in 22w16a
+## Technical Changes in 22w16a
 
 -   `LWJGL` library has been updated to version 3.3.1
 -   Added a heap memory allocation metric to the F3 debug screen
 -   Added doWardenSpawning game rule
 -   Updates to paintings
 
-## Painting
+### Painting
 
 -   Paintings that are placeable in survival can now be controlled with the `painting_variant/placeable` tag
 -   Added unused paintings from Bedrock edition (`earth`, `wind`, `fire`, `water`)
     -   These paintings are not placeable by default, but can be added through a datapack
 
-# Fixed bugs in 22w16a
+## Fixed bugs in 22w16a
 
 -   [MC-81870](https://bugs.mojang.com/browse/MC-81870) Editing entitydata of Painting does not reflect ingame until chunk reload
 -   [MC-111809](https://bugs.mojang.com/browse/MC-111809) Paintings unrender when entity data is updated rapidly

@@ -1,6 +1,8 @@
+# 20w15a
+
 It's a wonderful day here in Sweden today! The sun is shining and spring is in the air, and when I say "spring" I mean **pollen**. Let's remedy that by 1) Staying indoors and 2) Introduce an all new biome with a grain of basalt, blackstone, and magma cubes! To spice it up, we also have some new fine tunes for you to listen to while traversing the Nether. Enjoy the snapshot!
 
-# New Features in 20w15a
+## New Features in 20w15a
 
 -   Accessibility improvements
 -   Added a piglin banner pattern
@@ -12,12 +14,12 @@ It's a wonderful day here in Sweden today! The sun is shining and spring is in t
 -   Added Gilded Blackstone - Blackstone which has been imbued with gold and has a chance of dropping gold nuggets when broken
 -   Blackstone can be used to craft furnaces and stone tools
 
-## Accessibility
+### Accessibility
 
 -   Added "Line Spacing" chat and accessibility option
 -   Added "Chat Delay" accessibility option
 
-## Basalt Deltas
+### Basalt Deltas
 
 Basalt Deltas can now be found in the Nether!
 
@@ -26,7 +28,7 @@ Basalt Deltas can now be found in the Nether!
 -   Magma Cubes finally have a place to call home, spawning very frequently
 -   A new block, Blackstone, can be found in large patches here
 
-## Nether Music
+### Nether Music
 
 We're happy to announce that we've added three new tracks for the upcoming Nether Update, all composed by the very talented Lena Raine.
 
@@ -41,7 +43,7 @@ Some words from Lena:
 
 Take a portal to the Nether, and stay awhile and listen...
 
-# Changes in 20w15a
+## Changes in 20w15a
 
 -   Dispenser changes
 -   Soul sand can now be used to craft soul torches
@@ -50,7 +52,7 @@ Take a portal to the Nether, and stay awhile and listen...
 -   Hoes are now the appropriate tool for mining leaves
 -   Mobs now avoid walking on magma blocks and lit campfires
 
-## Dispensers
+### Dispensers
 
 -   Dispensers can now saddle pigs and horses
 -   Dispensers can now put horse armor on horses
@@ -59,12 +61,12 @@ Take a portal to the Nether, and stay awhile and listen...
 -   Dispensers can now shear a Mooshroom
 -   Dispensers can shear snow golems
 
-# Technical Changes in 20w15a
+## Technical Changes in 20w15a
 
 -   Tab completion for resource location will match any part after an `_`
 -   Mob and pathfinding-related optimizations
 
-# Fixed bugs in 20w15a
+## Fixed bugs in 20w15a
 
 -   [MC-171463](https://bugs.mojang.com/browse/MC-171463) Iron Bars don't fully connect to walls
 -   [MC-172120](https://bugs.mojang.com/browse/MC-172120) Hoglins don't try to avoid fire

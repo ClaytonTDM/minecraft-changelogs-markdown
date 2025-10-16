@@ -1,23 +1,25 @@
+# 1.21-pre2
+
 We're rounding out the week with the second Pre-Release of 1.21, with a lot of bug fixes. In case you did not catch the news, the full release of 1.21 is planned for the 13th of June!
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   End Crystals are now immune to fire damage
 -   Added an attestation checkbox when submitting a player report
 -   Heavy Core, Trident and Mace are now considered of Epic rarity, giving their hover text a purple color
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 47
 
-# Data Pack Version 47
+## Data Pack Version 47
 
 -   Added new placement modifier type `fixed_placement` to place features in a set of fixed positions
 -   Added new feature type `end_platform` for the obsidian platform in the end
 
-# Fixed bugs in 1.21 Pre-Release 2
+## Fixed bugs in 1.21 Pre-Release 2
 
 -   [MC-223165](https://bugs.mojang.com/browse/MC-223165) The Snout Banner Pattern is treated as common in the game.
 -   [MC-269359](https://bugs.mojang.com/browse/MC-269359) "Field Masoned", "Skull Charge", "Flow", and "Guster" banner patterns are not mirrored on the backside

@@ -1,13 +1,15 @@
+# 25w02a
+
 It's the first snapshot Wednesday of 2025, and we have some fun new features to kick off the new year. This snapshot adds new ambient features to the game, including wildflowers, leaf litter, and falling leaves. Pigs are getting two new variants: you may venture into the colder biomes to find the cold pig, or head for sunnier spots to meet its counterpart – the warm pig! Lodestones are also becoming easier to craft, making them more accessible in the early game. Now you'll only need an iron ingot with your chiseled stone bricks.
 
-# New Features
+## New Features
 
 -   Added new falling leaves particles to Leaf blocks without particles
 -   Added cold and warm variants for the Pig
 -   Added Wildflowers block
 -   Added Leaf Litter block
 
-## Leaves block particles
+### Leaves block particles
 
 -   All Leaves blocks now have chance of spawning falling leaf particles
 -   These blocks are affected by this change:
@@ -21,7 +23,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   Azalea Leaves
     -   Flowering Azalea Leaves
 
-## Pig Variants
+### Pig Variants
 
 -   New Pig variants have been added, the variant is determined by the biome they spawn in
 -   Temperate Pig - The Pig we are all familiar with
@@ -46,7 +48,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   Badlands
 -   When bred by a player, a baby Pig variant will not be chosen by the current biome, but instead randomly selected from one of the parents' variants
 
-## Wildflowers
+### Wildflowers
 
 -   Wildflowers are a new type of flower which grow in Birch Forests, Old Growth Birch Forests and Meadows
 -   Wildflowers can have different amounts of flowers in one block space
@@ -56,7 +58,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Wildflowers can be placed in four orientations
 -   Wildflowers can be crafted into Yellow Dye
 
-## Leaf Litter
+### Leaf Litter
 
 -   Leaf Litter is a new type of decorative block which can be found in the Forests, Dark Forests and Wooded Badlands
 -   Leaf Litter can have different amounts of leaves in one block space
@@ -67,7 +69,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Leaf Litter can be used as fuel for smelting
 -   Leaf Litter has unique block sounds
 
-# Changes
+## Changes
 
 -   Lodestones have a new crafting recipe and can now be found in Ruined Portals
 -   Added new break, place, step, fall and hit sounds for Iron Blocks, Iron Bars, Iron Trapdoors, Iron Doors and Heavy Weighted Pressure Plates
@@ -82,7 +84,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Bubble columns produce less particles and sounds when entities that are unaffected by them are inside them
 -   If the game detects that the last startup did not complete normally, the fullscreen option will now be reset
 
-## Garden Awakens Changes
+### Garden Awakens Changes
 
 -   Pale Garden biome now occupies more space that was previously taken by Dark Forest
 -   Woodland Mansions can now generate in Pale Garden biome
@@ -96,17 +98,17 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Transition between the awake and dormant states for Creaking Hearts and transition of Eye Blossoms is now based on the fixed day time
     -   All these behaviors are no longer affected by weather or dimension brightness
 
-## Lodestone Changes
+### Lodestone Changes
 
 -   The Lodestone is now crafted from 1 Iron Ingot surrounded by 8 Chiseled Stone Bricks
 -   Lodestones can now be found as loot at Ruined Portals in the Overworld or Nether
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 62
 -   The Resource Pack version is now 47
 
-# Data Pack Version 62
+## Data Pack Version 62
 
 -   Changes to commands
 -   Updated data format of Text Components
@@ -117,7 +119,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Added data-driven registry for pig variants
 -   Added `pig` entity sub-predicate for matching pig variants
 
-## Commands
+### Commands
 
 -   Text Components in commands such as `/tellraw` or `/title` are now specified with SNBT instead of JSON
 -   Text Style in the `/scoreboard` command when specifying the `styled` number format is also now specified with SNBT instead of JSON
@@ -136,7 +138,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   `setblock <pos> <block> [destroy|keep|replace|strict]?`
     -   `place template <template> [<pos> [<rotation> [<mirror> [<integrity> [<seed> [strict]?]?]?]?]?]?`
 
-## Text Component Data Format
+### Text Component Data Format
 
 -   Text Components are no longer stored as JSON wrapped by a string
 -   The format itself is the same as before, but inlined directly into the outer structure
@@ -148,7 +150,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   For Text Components with the `nbt` type and `interpret` set to `true`, Text Components will be parsed from the given NBT directly rather than converting to string and parsing as JSON
 -   The format of hover and click events has been updated
 
-### Hover Events
+#### Hover Events
 
 -   The `hoverEvent` field has been renamed to `hover_event`
 -   The legacy `value` field (which was parsed from a rendered text component) is no longer supported
@@ -166,7 +168,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   The `type` field has been renamed to `id`
     -   e.g. `{action:'show_entity',contents:{id:[I;0,0,0,0],type:'minecraft:pig'}}` becomes `{action:'show_entity',uuid:[I;0,0,0,0],id:'minecraft:pig'}`
 
-### Click Events
+#### Click Events
 
 -   The `clickEvent` field has been renamed to `click_event`
 -   For the `open_url` action:
@@ -188,23 +190,23 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   e.g. `{action:'change_page',value:'1'}` becomes `{action:'change_page',page:1}`
 -   The `copy_to_clipboard` format is unchanged
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#replaceable_by_mushrooms` - exhaustive list of all bocks that can be replaced as a mushroom is placed or grows
 -   Added `#sword_instantly_mines` - blocks that are instantly mined by Swords
 
-### Item Tags
+#### Item Tags
 
 -   Added `#book_cloning_target` - item that can be crafted together with a Written Book to clone it
 
-### Biome Tags
+#### Biome Tags
 
 -   Added `#spawns_cold_variant_farm_animals` - all biomes where cold variant of farm animals spawn
 -   Added `#spawns_warm_variant_farm_animals` - all biomes where warm variants of farm animals spawn
 
-## Entity Data
+### Entity Data
 
 -   The `ArmorDropChances`, `HandDropChances`, and `body_armor_drop_chance` fields have been merged into a `drop_chances` field
     -   Format: map between equipment slot type and chance value
@@ -217,7 +219,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   The duration of the potion effect applied is scaled by this factor
     -   Area Effect Clouds created by Lingering Potions will have a scale of `0.25`
 
-## Pig Variants
+### Pig Variants
 
 -   Pig variants can be data-driven by adding entries to `data/<namespace>/pig_variant/<id>.json`
 -   This feature is experimental
@@ -227,9 +229,9 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   `biome` - single entry, list or a tag describing biomes in which this variant natually spawns
         -   If not specified, this variant will only be selected if no other variant matches the current biome
 
-## Recipes
+### Recipes
 
-### `crafting_transmute` Recipe Type
+#### `crafting_transmute` Recipe Type
 
 -   The `result` field now supports specifying a count and a components patch to apply to the result
 -   The components patch is applied to the final transmuted item
@@ -240,9 +242,9 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   e.g. `"result": {"id": "minecraft:stick", "count": 3, "components": {"!minecraft:damage": {}, "minecraft:enchantment_glint_override": {}}}`
 -   The field can still be defined as before as an inline item id (e.g. `"result": "minecraft:stick"`)
 
-## Item Components
+### Item Components
 
-### New `weapon` component
+#### New `weapon` component
 
 -   When present, the 'Item Used' statistic will be incremented for each attack with the item
 -   The specified amount of damage can be done to the item with each attack
@@ -253,7 +255,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
         -   If `true`, will disable a blocking Shield on successful attack
     -   e.g. `weapon={damage_per_attack:2}`
 
-### New `potion_duration_scale` component
+#### New `potion_duration_scale` component
 
 -   When present, for items that have the `potion_contents` component, the duration of the applied effects will be scaled by this factor
 -   This also applies to `custom_effects` in the `potion_contents` component, unlike the previous hardcoded scaling factor
@@ -261,27 +263,27 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Format: non-negative float
     -   e.g. `potion_duration_scale=0.25`
 
-### `tool` Component
+#### `tool` Component
 
 -   Added new optional field: `can_destroy_blocks_in_creative` (bool)
     -   If `false`, players cannot break blocks while holding this tool in Creative Mode
     -   If not specified, defaults to `true`
 
-# Resource Pack Version 47
+## Resource Pack Version 47
 
 -   Added textures for new falling leaves particles
 -   New and updated Pig textures
 -   Added textures for new Wildflowers block
 -   Added break, place, step, fall and hit sounds for Iron Blocks, Iron Bars, Iron Trapdoors, Iron Doors and Heavy Weighted Pressure Plates
 
-## New and updated Pig textures
+### New and updated Pig textures
 
 -   Added new textures for Pig variants:
     -   `cold_pig`
     -   `warm_pig`
 -   Changed the size of `pig` texture
 
-# Fixed bugs in 25w02a
+## Fixed bugs in 25w02a
 
 -   [MC-7697](https://bugs.mojang.com/browse/MC-7697) Tridents or arrows shot through lava sometimes don't catch fire
 -   [MC-55800](https://bugs.mojang.com/browse/MC-55800) Successful "/fill air destroy" commands give error message and return 0 for result/success

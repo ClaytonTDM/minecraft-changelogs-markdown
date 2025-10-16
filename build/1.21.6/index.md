@@ -1,10 +1,12 @@
+# 1.21.6
+
 Experience the joy of soaring above the Overworld with our Chase the Skies drop! This drop not only brings an exciting flying mount to Minecraft but opens up the skies for exploring, building – and more. Raise your ghastling with care and it'll let you soar with friends above the clouds once fully grown.
 
 With 1.21.6 we are also taking steps towards adding Vibrant Visuals to Java. In this release, there are new fog improvements and clouds will extend all the way to the horizon.
 
 Go out and explore the Overworld, build high into the sky, leash a caravan of camels together, uncover new music, and find wandering friends with the Player Locator bar.
 
-# New Features
+## New Features
 
 -   Added Happy Ghast mob
 -   Added Dried Ghast block
@@ -15,11 +17,11 @@ Go out and explore the Overworld, build high into the sky, leash a caravan of ca
 -   Added new advancements
 -   Added Old Spelling Indonesian (Indonesian pre-reform) and Cantabrian language support
 
-## Happy Ghast
+### Happy Ghast
 
 The Happy Ghast is a new mountable flying mob.
 
-### Dried Ghast Block
+#### Dried Ghast Block
 
 -   The Dried Ghast block is found in Nether Fossil structures and is the first stage of the Happy Ghast mob
 -   Can be crafted with 1 Soul Sand block and 8 Ghast Tears
@@ -31,7 +33,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![A Dried Ghast block underneath a Nether Fossil in a Soul Sand Valley. In the background two players are battling angry Ghasts.](https://launchercontent.mojang.com/v2/images/1.21.6hydrationscaled.jpg)
 
-### Ghastling Mob
+#### Ghastling Mob
 
 -   The Ghastling is a young version of the Happy Ghast mob
 -   Spawns from a Dried Ghast block that has continuously been waterlogged for about 20 minutes
@@ -45,7 +47,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![In a Savanna village, a baby Happy Ghast is being lured with a Snowball by Efe. A stay cat is also quite curious of what Efe is holding in their hands.](https://launchercontent.mojang.com/v2/images/1.21.6ghastlingscaled.jpg)
 
-### Happy Ghast Mob
+#### Happy Ghast Mob
 
 -   Can be equipped with a Harness and then be mounted by up to four players
 -   Tempted by Snowballs and Harness
@@ -70,7 +72,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![Ari and Efe building a castle. Ari is standing on a Happy Ghast, using it to place blocks under the balcony.](https://launchercontent.mojang.com/v2/images/1.21.6buildfromhappyghastscaled.jpg)
 
-### Harness Item
+#### Harness Item
 
 -   The Harness is a new item that can be equipped on a Happy Ghast to allow players to ride it
 -   The Harness comes in 16 different colors
@@ -81,7 +83,7 @@ The Happy Ghast is a new mountable flying mob.
 -   Allows up to 4 players to mount the Happy Ghast
 -   Can be removed from the Happy Ghast using Shears when no players are mounted
 
-## Locator Bar
+### Locator Bar
 
 The Locator Bar is a new UI element that displays the direction of other players in the world.
 
@@ -102,7 +104,7 @@ The Locator Bar is a new UI element that displays the direction of other players
 
 ![Player using the locator bar to find their friends in a large cave with skeletons onlooking.](https://launchercontent.mojang.com/v2/images/1.21.6locatorbarscaled.jpg)
 
-## Music and Sound
+### Music and Sound
 
 -   Added a new music disc:
     -   "Tears" by Amos Roddy
@@ -124,12 +126,12 @@ The Locator Bar is a new UI element that displays the direction of other players
 
 ![Player harmoniously fishing in the open ocean. A Music Toast shows them listening to "Amos Roddy - Lilypad".](https://launchercontent.mojang.com/v2/images/1.21.6musictoastscaled.jpg)
 
-## Advancements
+### Advancements
 
 -   Added new "Stay Hydrated!" Husbandry Advancement when a Dried Ghast block is placed into Water
 -   Added "Heart Transplanter" Adventure Advancement that is unlocked when a player places a Creaking Heart with the correct alignment between two Pale Oak Log blocks
 
-# Changes
+## Changes
 
 -   Changed leash mechanics and updated recipe for Lead
 -   Saddles are now craftable and shearable
@@ -155,7 +157,7 @@ The Locator Bar is a new UI element that displays the direction of other players
 
 ![A tamed Wolf is leading a small heard of Sheep with leads. They are being led into a small Cherry Blossom pen.](https://launchercontent.mojang.com/v2/images/1.21.6sheepleashedtowolfscaled.jpg)
 
-## Leash Changes
+### Leash Changes
 
 -   The Slime Ball in the Lead recipe has been replaced with a String
 -   Improved leash mechanics, with reworked leash physics, allowing for more stable leash connection, especially when leashed entities are not on ground
@@ -186,16 +188,16 @@ The Locator Bar is a new UI element that displays the direction of other players
 
 ![Player crafting two Leads using the new changed recipe using only five Strings.](https://launchercontent.mojang.com/v2/images/1.21.6leashcraftscaled.jpg)
 
-## Saddle Changes
+### Saddle Changes
 
-### Crafting Saddles
+#### Crafting Saddles
 
 -   Saddles can now be crafted with 3 Leather and 1 Iron Ingot
 -   The recipe is unlocked when a player picks up their first Leather
 
 ![Player crafting a Saddle using the new recipe using three Leather and one Iron Ingot.](https://launchercontent.mojang.com/v2/images/1.21.6saddlecraftscaled.jpg)
 
-### Removing Saddles and Equipment
+#### Removing Saddles and Equipment
 
 -   Saddles, Horse Armor, Harnesses and Carpets can now be removed from the mobs by using Shears
     -   This does not work in case the mob has a rider, or if the player is crouching
@@ -203,7 +205,7 @@ The Locator Bar is a new UI element that displays the direction of other players
 -   Dispensers with Shears cannot remove Saddles, Horse Armor, Harnesses or Carpets equipped on mobs
 -   Shearing Saddles, Horse Armor, and Carpets will emit a vibration frequency of 6, along with the Unequip frequency of 4
 
-### Loot Table Changes
+#### Loot Table Changes
 
 The following loot tables have had Saddles removed from them and replaced with 1-5 Leather:
 
@@ -213,7 +215,7 @@ The following loot tables have had Saddles removed from them and replaced with 1
 -   Jungle Pyramid chests
 -   Stronghold altar chests
 
-## Fog
+### Fog
 
 -   Fog was tweaked for improved atmospheric perspective
 -   It now becomes foggier when it rains
@@ -221,7 +223,7 @@ The following loot tables have had Saddles removed from them and replaced with 1
 
 ![Standing in a rainy Forest with a Jungle far in the distance. Clouds stretching as far as the eye can see.](https://launchercontent.mojang.com/v2/images/1.21.6rainfogscaled.jpg)
 
-## Ambient Desert Block Sounds Changes
+### Ambient Desert Block Sounds Changes
 
 -   Ambient sand sounds no longer require sky access to play
 -   Ambient sand sounds now have a slightly decreased chance to play
@@ -231,14 +233,14 @@ The following loot tables have had Saddles removed from them and replaced with 1
 -   Short Dry Grass and Tall Dry Grass can now trigger ambient wind sounds when above 2 Sand, Red Sand or Terracotta blocks
 -   Dead Bush ambient sounds now have a slightly increased chance of playing
 
-## Music and Sound
+### Music and Sound
 
 -   The following sound categories have been renamed:
     -   Friendly Creatures -> Friendly Mobs
     -   Hostile Creatures -> Hostile Mobs
 -   Rules for when ambient desert blocks sounds play have been tweaked
 
-## Realms
+### Realms
 
 -   Changed the layout of the Realms configuration screen to use tabs
     -   The Worlds tab allows changes to any of the world slots, creating new worlds and changing their settings
@@ -252,7 +254,7 @@ The following loot tables have had Saddles removed from them and replaced with 1
 
 ![A new user interface for configuring your Realm.](https://launchercontent.mojang.com/v2/images/1.21.6realmsscaled.jpg)
 
-## Projectile Targeting
+### Projectile Targeting
 
 -   The target tolerance margin of projectiles now changes over time
     -   Previously, all projectiles had a target tolerance margin of 0.3 blocks
@@ -260,13 +262,13 @@ The following loot tables have had Saddles removed from them and replaced with 1
     -   After that, the target margin will expand by 0.05 blocks per tick until it reaches the previous 0.3 blocks margin
     -   This allows for better precision close to the shooting player or entity, while still allowing for some collision leeway when the projectile is further away
 
-## Splash Potions
+### Splash Potions
 
 -   Splash Potions distance to affected entities now depends on the closest distance between the entity hitbox and the splash potion hitbox where it landed
     -   This means that if an entity is hit directly by the splash potion, it will receive the full effect of the potion
     -   If the entities are grouped together, they will receive the same effect strength
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 80
 -   The Resource Pack version is now 63
@@ -275,7 +277,7 @@ The following loot tables have had Saddles removed from them and replaced with 1
 -   "Command Syntax" report now contains information about required permission level
 -   `--quickPlaySingleplayer` command line argument can now be used without an identifier to launch into the last played world
 
-# Data Pack Versions 72 Through 80
+## Data Pack Versions 72 Through 80
 
 -   Dimension Type definitions have a new optional field, `cloud_height` that indicates on what y-level the clouds start in the dimension
 -   New `version` command has been added
@@ -286,16 +288,16 @@ The following loot tables have had Saddles removed from them and replaced with 1
 -   New optional fields `can_be_sheared` and `shearing_sound` have been added to the `equippable` item component
 -   Added `player_sheared_equipment` advancement trigger
 
-## Commands
+### Commands
 
-### Added `version`
+#### Added `version`
 
 Prints the current version information on the server side.
 
 -   Takes no arguments
 -   Available in singleplayer or for server operators
 
-### Added `datapack create`
+#### Added `datapack create`
 
 Creates a new empty directory data pack for the current world.
 
@@ -305,12 +307,12 @@ Creates a new empty directory data pack for the current world.
     -   `id` - new pack name, must be a valid directory name
     -   `name` - text component to be placed in `description` in `pack.mcmeta`
 
-### Modified `playsound`
+#### Modified `playsound`
 
 -   Added new category `ui`
     -   Sounds in this category will continue playing when paused, similarly to `music`
 
-### Added `waypoint`
+#### Added `waypoint`
 
 This is a new command for querying and modifying waypoints.
 
@@ -334,14 +336,14 @@ Arguments:
     -   `set <waypoint_style/resource>` changes the style to a specific asset under `waypoint_style/` (see Waypoint Styles section below)
     -   `reset` will restore the default icon behavior of the Locator Bar
 
-## Waypoint Broadcasting
+### Waypoint Broadcasting
 
 The Locator Bar works through a server-controlled Waypoint system. Waypoints are received by Players, and connections between Waypoints and Players are managed by the multiplayer server.
 
 -   By default, all Players transmit a Waypoint from themselves, and all Players receive all Waypoints
 -   Individual Players can have their transmission and receive ranges controlled by the `waypoint_transmit_range` and `waypoint_receive_range` attributes
 
-## Dialogs
+### Dialogs
 
 -   Added a way to display simple modal dialogs to a user
 -   Dialogs are stored in a `minecraft:dialog` registry, but can also be defined inline
@@ -373,7 +375,7 @@ The Locator Bar works through a server-controlled Waypoint system. Waypoints are
 
 ![An example of a custom Dialog screen.](https://launchercontent.mojang.com/v2/images/1.21.6customdialogscaled.jpg)
 
-### Dialog Description Format
+#### Dialog Description Format
 
 -   Dialogs are stored in `minecraft:dialog` registry that can be provided by a datapack
 
@@ -382,7 +384,7 @@ Fields:
 -   `type` - one of dialog types from `minecraft:dialog_type` registry
 -   `<type-specific>` - see below
 
-#### Common Dialog Fields
+##### Common Dialog Fields
 
 -   Most dialog types share some fields. To avoid duplication, they are listed in this section
 
@@ -407,9 +409,9 @@ Fields:
             -   clicking this button will continue as if the dialog was closed (i.e., game returns to the previous non-dialog screen, if any)
         -   "Waiting for Response" screen will unpause the game in single-player mode to avoid locking the game
 
-#### Dialog Types
+##### Dialog Types
 
-##### `minecraft:notice`
+###### `minecraft:notice`
 
 -   A simple screen with one action in footer
 -   Exit action: same as `action`
@@ -419,7 +421,7 @@ Fields:
 -   Common dialog fields (see above)
 -   `action` - main action (see below), defaults to a button with `gui.ok` label and no action or tooltip
 
-##### `minecraft:confirmation`
+###### `minecraft:confirmation`
 
 -   A simple screen with two actions in footer
 -   Exit action: same as `no` action
@@ -430,7 +432,7 @@ Fields:
 -   `yes` - action (see below) for positive outcome
 -   `no` - action (see below) for negative outcome
 
-##### `minecraft:multi_action`
+###### `minecraft:multi_action`
 
 -   A scrollable list of actions arranged in columns
 -   Screen can have optional exit action that will appear in footer
@@ -443,7 +445,7 @@ Fields:
 -   `exit_action` - optional action (see below) in footer
 -   `columns` - positive integer describing number of columns, default: `2`
 
-##### `minecraft:server_links`
+###### `minecraft:server_links`
 
 -   A scrollable list of links received from server in `minecraft:server_links` packet, arranged in columns
 -   Note: this is a replacement for the previous Server Links screen, but now with an additional body
@@ -456,7 +458,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, integer from `1` to `1024` (inclusive) with default `150`
 
-##### `minecraft:dialog_list`
+###### `minecraft:dialog_list`
 
 -   A scrollable list of buttons leading directly to other dialogs, arranged in columns
     -   Titles of those buttons will be taken from `external_title` fields of targeted dialogs
@@ -470,7 +472,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, integer from `1` to `1024` (inclusive) with default `150`
 
-#### Dialog Body Types
+##### Dialog Body Types
 
 -   All dialogs have a list of body elements describing contents between title and actions or inputs
 -   Hover and click events on text components within bodies function as expected
@@ -481,7 +483,7 @@ Fields:
 -   `type` - one of dialog body types from `minecraft:dialog_body_type` registry
 -   `<type-specific>` - see below
 
-##### `minecraft:plain_message`
+###### `minecraft:plain_message`
 
 -   A multiline label
 
@@ -490,7 +492,7 @@ Fields:
 -   `contents` - text component
 -   `width` - maximum width of message, integer from `1` to `1024` (inclusive) with default `200`
 
-##### `minecraft:item`
+###### `minecraft:item`
 
 -   Item with optional description
     -   If a description is present, it will be rendered to the right of item
@@ -509,7 +511,7 @@ Fields:
 -   `width` - horizontal size of element, integer from `1` to `256` (inclusive) with default: `16`
 -   `height` - vertical size of element, integer from `1` to `256` (inclusive) with default: `16`
 
-#### Input Control Types
+##### Input Control Types
 
 -   Dialog can contain a set of controls that accept user input
 -   When submitted, the current value of the input will be used to build response to the server according to action selected by user (see below)
@@ -522,7 +524,7 @@ Fields:
 -   `key` - string identifier of value used when submitting data, must be a valid template argument (letters, digits and `_`)
 -   `<type-specific>` - see below
 
-##### `minecraft:text`
+###### `minecraft:text`
 
 -   A simple text input
 -   Output values:
@@ -542,7 +544,7 @@ Fields:
         -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines (but can't exceed `512`)
         -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
 
-##### `minecraft:boolean`
+###### `minecraft:boolean`
 
 -   A plain checkbox with a label
 -   Output values:
@@ -556,7 +558,7 @@ Fields:
 -   `on_true` - a string value to send when control is checked, default: `true`
 -   `on_false` - a string value to send when control is unchecked, default: `false`
 
-##### `minecraft:single_option`
+###### `minecraft:single_option`
 
 -   A button that cycles between a set of options when clicked
 -   Output values:
@@ -574,7 +576,7 @@ Fields:
     -   `initial` - an optional boolean flag that selects initial option (only one option can have this be set to `true`)
     -   Additionally, the list might also contain a plain string - in that case it's equivalent to a single entry with field `id` set to that string and other fields set to default
 
-##### `minecraft:number_range`
+###### `minecraft:number_range`
 
 -   A slider for picking a numeric value out of some range
 -   Sends currently selected value
@@ -595,7 +597,7 @@ Fields:
     -   If present, only values of `initial + <any integer> * step` will be allowed
     -   If absent, any value from range the is allowed
 
-### Actions
+#### Actions
 
 Dialogs have at least one action, presented to the user as a button. After every action dialog will always evaluate contents of `after_action` field (see above).
 
@@ -608,7 +610,7 @@ Fields:
     -   `type` - value from `minecraft:dialog_action_type` registry
     -   `<type-specific>` - see below, depends on `type`
 
-#### Static Dialog Action Types
+##### Static Dialog Action Types
 
 All existing `click_event` actions (except for `open_file`) are included as dialog action types.
 
@@ -623,7 +625,7 @@ Uses same format as `click_event` on text components (but with `action` replaced
     }
     
 
-#### `minecraft:dynamic/run_command` Action Type
+##### `minecraft:dynamic/run_command` Action Type
 
 -   This action will build a `run_command` event using a provided macro template
 -   The macro will be expanded with string values from inputs
@@ -634,7 +636,7 @@ Fields:
 
 -   `template` - a string with a macro template to be interpreted as a command
 
-##### `minecraft:dynamic/custom` Action Type
+###### `minecraft:dynamic/custom` Action Type
 
 -   This method will build a `minecraft:custom` event using all input values
 -   All input contents will be sent together inside a compound tag, with tag value of each input put under id from `key` field of that input
@@ -645,22 +647,22 @@ Fields:
 -   `additions` - fields to be added to payload, optional compound tag
 -   `id` - namespaced ID
 
-#### Built-in Dialogs
+##### Built-in Dialogs
 
 The built-in datapack contains some custom dialogs to provide customization of specific screens used by the client.
 
-##### `minecraft:server_links`
+###### `minecraft:server_links`
 
 -   Replacement for the previously existing "Server Links" screen
 -   Meant to simplify migration for servers that previously used this feature
 
-##### `minecraft:custom_options`
+###### `minecraft:custom_options`
 
 -   Shows contents of `minecraft:pause_screen_additions` tag (see below)
 -   Allows the user to select a specific dialog if this tag contains multiple entries
 -   Note: Since this tag is meant for interoperability, any content that replaces this dialog should be careful not to hide other dialog providers
 
-### Dialog Command
+#### Dialog Command
 
 -   New command has been added to show dialog to clients
 
@@ -674,7 +676,7 @@ Syntax:
     -   `<targets>` - player name, UUID or a player selector
     -   Returns the number of players in `targets` argument
 
-### Pause Screen Configuration
+#### Pause Screen Configuration
 
 -   A data pack can request some of the available dialogs to be accessible from Pause screen
 -   This feature replaces the "Server Links" button and is placed on Pause screen according to the same rules
@@ -688,7 +690,7 @@ Syntax:
     -   If this tag has multiple elements, the pause screen button will lead to a `minecraft:custom_options` dialog which (by default) lets user select one of the tag elements
         -   If this dialog is removed, the button is will not be visible
 
-### Quick Actions Key Bind
+#### Quick Actions Key Bind
 
 -   A new key bind has been added that allows users to access a set of dialogs
 -   Default key: `G`
@@ -699,13 +701,13 @@ Syntax:
         -   If this dialog is removed, the key bind will do nothing
 -   This option is intended for use in custom content and by servers, so this tag is empty in the Vanilla pack
 
-## Text Components
+### Text Components
 
-### Click Events
+#### Click Events
 
 -   Users will now be prompted for confirmation before executing a command from the `run_command` click action in books and chat if the command can't be parsed or requires elevated permissions (i.e., higher than 0)
 
-#### Added `minecraft:custom`
+##### Added `minecraft:custom`
 
 -   A new click action called `minecraft:custom` has been added
     -   When user clicks a component with this click action, the client will send a dedicated packet `minecraft:custom_click_action` to a server
@@ -715,30 +717,30 @@ Syntax:
         -   `id` - namespaced ID
         -   `payload` - optional tag field
 
-#### Added `minecraft:show_dialog`
+##### Added `minecraft:show_dialog`
 
 -   A new action called `show_dialog` has been added
     -   When user clicks this component, a dialog will be opened for them
     -   Fields:
         -   `dialog` - a namespaced ID from `minecraft:dialog` registry or inline dialog value as described above
 
-## Game Rules
+### Game Rules
 
-### Added `locatorBar`
+#### Added `locatorBar`
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 
-## Attributes
+### Attributes
 
-### Added `camera_distance`
+#### Added `camera_distance`
 
 -   Default value: `4.0`
 -   Modifies the distance at which the camera is placed away from the player or spectated entity when in a third-person view
 -   If the entity being ridden has a larger `camera_distance` attribute, that distance will be used
 -   This distance is multiplied by the `scale` attribute to get a final target camera distance
 
-### Added `waypoint_transmit_range` and `waypoint_receive_range`
+#### Added `waypoint_transmit_range` and `waypoint_receive_range`
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
     
@@ -757,13 +759,13 @@ Syntax:
 -   `/attribute @s minecraft:waypoint_receive_range base set 120` will only let a player see Locator Bar dots that are within 120 blocks (hiding all players further than that)
     
 
-### Changed `flying_speed`
+#### Changed `flying_speed`
 
 -   The `flying_speed` attribute now also applies to Ghasts and Happy Ghasts
 
-## Data Components
+### Data Components
 
-### `equippable` Item Component
+#### `equippable` Item Component
 
 -   Added a new optional field: `can_be_sheared` (boolean)
     -   If `true`, players can use Shears to remove this equippable item from a target mob by right-clicking, provided all other shearing conditions are satisfied
@@ -772,7 +774,7 @@ Syntax:
     -   It's a sound event that plays when the equippable item is sheared
     -   If not specified, it defaults to the `item.shears.snip` sound event
 
-### `attribute_modifiers` Item Component
+#### `attribute_modifiers` Item Component
 
 -   Added an optional `display` field to `attribute_modifiers` entries
     -   There are 3 `display` types:
@@ -781,32 +783,32 @@ Syntax:
         -   `override` - Replaces the shown attribute modifier text
             -   Contains a single field `value` for the text contents to show for this attribute modifier entry
 
-### `painting/variant` Item Component
+#### `painting/variant` Item Component
 
 -   No longer accepts inline variants
 
-## Entity Data
+### Entity Data
 
 -   Added the `home_pos` and `home_radius` fields to all mobs
     -   Mobs with set home position will limit their pathfinding to stay within the indicated area
     -   Some mobs, such as Bats, Slimes, Magma Cubes, Phantoms and Ender Dragons may ignore it
     -   Interacting with leashes or riding may change the home position of the mob
 
-### `area_effect_cloud`
+#### `area_effect_cloud`
 
 -   The `Particle` field has been renamed to `custom_particle`, and now always functions as an exact override for the default colored `entity_effect` particle
     -   The field will not be written if no override is specified
     -   The color will no longer be inherited from the potion contents when specifying the `entity_effect` or `tinted_leaves` particle types
 
-### `tnt`
+#### `tnt`
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-### `vex`
+#### `vex`
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of mob)
 
-## Advancements
+### Advancements
 
 Added `minecraft:player_sheared_equipment` trigger
 
@@ -815,26 +817,26 @@ Added `minecraft:player_sheared_equipment` trigger
     -   `item` - Item that is sheared
     -   `entity` - The entity that was sheared
 
-## Tags
+### Tags
 
-### Block Tags
+#### Block Tags
 
 -   Added `#triggers_ambient_desert_dry_vegetation_block_sounds` - blocks that can trigger ambient desert dry vegetation sounds to play from blocks above
 -   Added `#happy_ghast_avoids` - blocks that Happy Ghasts avoid getting close to
 -   `#plays_ambient_desert_block_sounds` has been renamed to `#triggers_ambient_desert_sand_block_sounds`
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
 
-### Item Tags
+#### Item Tags
 
 -   Added `#happy_ghast_food` - items that can be used to feed Happy Ghasts
 -   Added `#happy_ghast_tempt_items` - items that can be used to tempt Happy Ghasts
 
-### Entity Tags
+#### Entity Tags
 
 -   Added `#can_equip_harness` - entities that can equip the Harness items
 -   Added `#followable_friendly_mobs` - non-baby entities that will be followed by Baby Happy Ghasts
 
-# Resource Pack Versions 56 Through 63
+## Resource Pack Versions 56 Through 63
 
 -   The game will now consistently respect the `blur` texture parameter in `.png.mcmeta` files
 -   All core shader uniforms are now uniform blocks
@@ -845,7 +847,7 @@ Added `minecraft:player_sheared_equipment` trigger
 -   Added `oversized_in_gui` item model field
 -   Added new player head special model type
 
-## Waypoint Styles
+### Waypoint Styles
 
 These define custom icons to be displayed on the Locator Bar and are within the `waypoint_style/` asset directory.
 
@@ -858,7 +860,7 @@ These define custom icons to be displayed on the Locator Bar and are within the 
 -   When the distance to the waypoint is greater than `far_distance`, the last sprite in the list will be selected
 -   Between this range, sprites will be selected based on the linear progress between the near and far distances
 
-## Sounds
+### Sounds
 
 -   Changed location on the sounds for Glow Squid, Squid, Guardian, Horse, Rabbit and Pufferfish from `entity` folder to the `mob` folder
 -   Added `entity/leashknot/break` for when a Lead snaps
@@ -874,7 +876,7 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   `mob/horse/saddle_unequip`
     -   `mob/llama/unequip`
 
-### Sound Events
+#### Sound Events
 
 -   `block.sand.wind` has been renamed to `block.dry_grass.ambient`
 -   `entity.leash_knot.break` had been replaced with `item.lead.break` and `item.lead.untied`
@@ -905,30 +907,30 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   `item.shears.snip`
     -   `item.saddle.unequip`
 
-## UI Sprites
+### UI Sprites
 
 -   The mob effect atlas has been removed, and sprites in the `textures/mob_effect/` folder are now included within the GUI atlas
     -   This means mob effect sprites now support GUI sprite scaling properties
 -   Added `icon/music_notes` and `toast/now_playing` sprites
 
-## Font
+### Font
 
-### Unifont
+#### Unifont
 
 -   Updated Unifont to 16.0.03
 -   Added previously omitted Unifont glyphs for Private Use Areas
     -   Those glyphs are loaded as a separate sub-font `minecraft:include/unifont_pua` and are not included in any normally used font
     -   Characters in those areas are managed by Under-CSUR (Under-ConScript Unicode Registry), which adds various scripts not present in official Unicode set, like Tengwar or Sitelen Pona
 
-### `unihex` Font Provider
+#### `unihex` Font Provider
 
 -   The `size_overrides` field is now optional (defaults to empty list)
 
-## Equipment Assets
+### Equipment Assets
 
 -   Added new `happy_ghast_body` layer type, rendering in the body slot of the Happy Ghast
 
-## Item Models
+### Item Models
 
 -   Item model definitions now have a boolean field `oversized_in_gui` which is `false` by default
     -   If `true`, the item model will be allowed to be bigger than its item slot
@@ -938,23 +940,23 @@ These define custom icons to be displayed on the Locator Bar and are within the 
 -   Introduced new item model `minecraft:player_head` to handle player profile texture loading and rendering
 -   Removed support for `minecraft:profile` from `minecraft:head`
 
-### `minecraft:player_head` Special Model Type
+#### `minecraft:player_head` Special Model Type
 
 -   Renders a player head
 -   Uses profile from `minecraft:profile` component to load a texture. Renders a default texture until the profile texture is fully loaded
 -   No fields
 
-### `minecraft:head` Special Model Type
+#### `minecraft:head` Special Model Type
 
 -   No longer supports profile from `minecraft:profile` component to load a player texture
 -   Renders a default player texture when `kind` is `player` and no texture override is supplied
 -   Fields remain unchanged
 
-## Block Models
+### Block Models
 
 -   `elements[].rotation.angle` value in block models is no longer limited to multiplies of `22.5` degrees and can now be any angle from `-45` to `+45`
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
@@ -962,7 +964,7 @@ These define custom icons to be displayed on the Locator Bar and are within the 
 -   Custom uniforms provided to post-process shaders are now uniform blocks
 -   Uniform definitions inside json files are now per-block
 
-### Post-process Effect Definitions
+#### Post-process Effect Definitions
 
 -   Entries in the `targets` map have been expanded to support new properties
     -   New optional boolean field: `persistent` (default: `false`)
@@ -987,7 +989,7 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   `"type": "matrix4x4"` needs `"value": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0]` (four rows of four columns of floats)
 -   We do not validate that the uniform block is valid for a given shader, giving incorrect information will cause undefined and funky behavior
 
-### Post-process Effect Shaders
+#### Post-process Effect Shaders
 
 -   Instead of every uniform being an individual opaque type, they are now grouped in uniform blocks
     -   They will be set according to the pass definition in the json file, and may be shared across both vertex and fragment shaders
@@ -997,35 +999,35 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   For most post chains this is just `OutSize` and `InSize` as before
     -   All sizes are `vec2`
 
-#### `post/bits.fsh`
+##### `post/bits.fsh`
 
 -   Expects a `BitsConfig` of `float Resolution` and `float MosaicSize`
 
-#### `post/blit.fsh`
+##### `post/blit.fsh`
 
 -   Expects a `BlitConfig` of `vec4 ColorModulate`
 
-#### `post/blur.vsh` and `post/box_blur.fsh`
+##### `post/blur.vsh` and `post/box_blur.fsh`
 
 -   Expects a `BlurConfig` of `vec2 BlurDir` and `float Radius`
 
-#### `post/color_convolve.fsh`
+##### `post/color_convolve.fsh`
 
 -   Expects a `ColorConfig` of `vec3 RedMatrix`, `vec3 GreenMatrix` and `vec3 BlueMatrix`
 
-#### `post/invert.fsh`
+##### `post/invert.fsh`
 
 -   Expects a `InvertConfig` of `float InverseAmount`
 
-#### `post/rotscale.vsh`
+##### `post/rotscale.vsh`
 
 -   Expects a `RotScaleConfig` of `vec2 InScale`, `vec2 InOffset` and `float InRotation`
 
-#### `post/spiderclip.fsh`
+##### `post/spiderclip.fsh`
 
 -   Expects a `SpiderConfig` of `vec4 Scissor` and `vec4 Vignette`
 
-### Shader Fog Changes
+#### Shader Fog Changes
 
 -   The fog is now split into environmental and render-distance-based fog
 -   Previously both those concepts were mixed in the same uniforms
@@ -1035,14 +1037,14 @@ These define custom icons to be displayed on the Locator Bar and are within the 
 -   Environmental fog uses spherical distance to determine its intensity, render distance fog uses cylindrical distance
 -   The resulting fog value for any given vertex is the maximum of both
 
-### `Globals` Uniform Block
+#### `Globals` Uniform Block
 
 -   Available through `#moj_import <minecraft:globals.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ScreenSize`, `GlintAlpha`, `GameTime` and `MenuBlurRadius` (new)
     -   `MenuBlurRadius` is the blur radius of the background when a menu is open
 
-### `Fog` Uniform Block
+#### `Fog` Uniform Block
 
 -   Available through `#moj_import <minecraft:fog.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
@@ -1055,13 +1057,13 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   `FogEnvironmentalEnd` is new and represents the end of environment-based fog
     -   `FogShape` was removed. Render distance fog is now cylindrical and environmental fog is spherical
 
-### `Projection` Uniform Block
+#### `Projection` Uniform Block
 
 -   Available through `#moj_import <minecraft:projection.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ProjMat` with no changes
 
-### `DynamicTransforms` Uniform Block
+#### `DynamicTransforms` Uniform Block
 
 -   Available through `#moj_import <minecraft:dynamictransforms.glsl>` for convenience
 -   Is no longer available to shaders that do not normally use it
@@ -1069,25 +1071,25 @@ These define custom icons to be displayed on the Locator Bar and are within the 
     -   These are very likely to change in the near future
     -   The values of some of these are often hard coded and may not make sense for a given shader, i.e., `LineWidth` in any non-line based pipeline
 
-### `Lighting` Uniform Block
+#### `Lighting` Uniform Block
 
 -   Available through `#moj_import <minecraft:light.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
     -   The values may not make sense if the shader wouldn't normally expect it, however
 -   Contains `Light0_Direction` and `Light1_Direction`
 
-### `CloudInfo` Uniform Block
+#### `CloudInfo` Uniform Block
 
 -   Only available to the cloud shaders (`rendertype_clouds.vsh`/`rendertype_clouds.fsh`)
     -   Contains `CloudColor`, `CloudOffset` and `CellSize` (new)
         -   `CellSize` contains the size of an individual cloud cell
 
-### `LightmapInfo` Uniform Block
+#### `LightmapInfo` Uniform Block
 
 -   Only available to the lightmap shader (`lightmap.fsh`)
 -   Contains `AmbientLightFactor`, `SkyFactor`, `BlockFactor`, `UseBrightLightmap`, `NightVisionFactor`, `DarknessScale`, `DarkenWorldFactor`, `BrightnessFactor`, `SkyLightColor` with no change in behavior
 
-# Fixed bugs in 1.21.6
+## Fixed bugs in 1.21.6
 
 -   [MC-36696](https://bugs.mojang.com/browse/MC-36696) Clicking on the statistics button on the menu screen advances the game by 1 tick
 -   [MC-69821](https://bugs.mojang.com/browse/MC-69821) TNT "forgets" the player that ignited it when the world is reloaded

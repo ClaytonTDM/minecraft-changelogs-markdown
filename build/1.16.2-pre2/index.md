@@ -1,16 +1,18 @@
+# 1.16.2-pre2
+
 We have now released the second pre-release for Minecraft 1.16.2, in which another round of bugs have been squished!
 
-# Changes in 1.16.2 Pre-release 2
+## Changes in 1.16.2 Pre-release 2
 
 -   Crimson and Warped Roots no longer require shears when mined
 
-# Technical Changes in 1.16.2 Pre-release 2
+## Technical Changes in 1.16.2 Pre-release 2
 
-## Execute Command
+### Execute Command
 
 -   `execute in` now respects dimension scaling
 
-# Fixed bugs in 1.16.2 Pre-release 2
+## Fixed bugs in 1.16.2 Pre-release 2
 
 -   [MC-69876](https://bugs.mojang.com/browse/MC-69876) Pistons at Y=1 do not push downwards / at Y=254 do not push upwards
 -   [MC-124320](https://bugs.mojang.com/browse/MC-124320) Endermen can pick up and place snowless snowy grass blocks

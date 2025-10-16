@@ -1,6 +1,8 @@
+# 25w16a
+
 In this week’s snapshot leads are getting new mechanics making it possible to leash mobs together or leash them to entities like boats! Now you can travel the desert with your own camel caravan or airlift your treasures in a boat with chest attached to your happy ghast. Moving villagers have never been easier! As you are soaring through the skies you will see that the clouds render infinitely.
 
-# Changes
+## Changes
 
 -   Changed leash mechanics
 -   Changed Elytra so that while gliding, using a firework will only be used as a boost even if placed on a block
@@ -9,7 +11,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 
 > **Developer's Note**: _After consideration, we have decided to revert this change as it came in quite late in the snapshot cycle and unintentionally broke some functionality that our community were relying on. We'd like to revisit this at some point when we have time to deal with the issues that showed up due to this change_
 
-## Leash changes
+### Leash changes
 
 -   Leashes are now rendered twice as thick, to match bedrock
 -   Leashes can now be used to leash two mobs together
@@ -37,30 +39,30 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   The distance between centers of entities bounding boxes, rather than their feet is used to determine the distance between two leashed entities
     -   Happy Ghast leash is now longer - with free roaming distance of 10 blocks and leash snapping at 16 blocks
 
-# Technical Changes
+## Technical Changes
 
 -   The Data Pack version is now 73
 -   The Resource Pack version is now 57
 
-# Data Pack Version 73
+## Data Pack Version 73
 
-## Data Components
+### Data Components
 
-### `painting/variant` Item Component
+#### `painting/variant` Item Component
 
 -   No longer accepts inline variants
 
-# Resource Pack Version 57
+## Resource Pack Version 57
 
 -   All core shader uniforms are now uniform blocks
 -   The cloud texture (`clouds.png`) can no longer be colored
 -   Block Model rotations are no longer limited to multiplies of `22.5`
 
-## Block Models
+### Block Models
 
 -   `elements[].rotation.angle` value in block models is no longer limited to multiplies of `22.5` degrees and can now be any angle from `-45` to `+45`
 
-## Shaders & Post-process Effects
+### Shaders & Post-process Effects
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
@@ -68,7 +70,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 -   Custom uniforms provided to post-process shaders are now uniform blocks
 -   Uniform definitions inside json files are now per-block
 
-### Post-process Effect Definitions
+#### Post-process Effect Definitions
 
 -   Entries in the `targets` map have been expanded to support new properties
     -   New optional boolean field: `persistent` (default: `false`)
@@ -93,7 +95,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `"type": "matrix4x4"` needs `"value": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0]` (four rows of four columns of floats)
 -   We do not validate that the uniform block is valid for a given shader, giving incorrect information will cause undefined and funky behavior
 
-### Post-process Effect Shaders
+#### Post-process Effect Shaders
 
 -   Instead of every uniform being an individual opaque type, they are now grouped in uniform blocks
     -   They will be set according to the pass definition in the json file, and may be shared across both vertex and fragment shaders
@@ -103,42 +105,42 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   For most post chains this is just `OutSize` and `InSize` as before
     -   All sizes are `vec2`
 
-#### `post/bits.fsh`
+##### `post/bits.fsh`
 
 -   Expects a `BitsConfig` of `float Resolution` and `float MosaicSize`
 
-#### `post/blit.fsh`
+##### `post/blit.fsh`
 
 -   Expects a `BlitConfig` of `vec4 ColorModulate`
 
-#### `post/blur.vsh` and `post/box_blur.fsh`
+##### `post/blur.vsh` and `post/box_blur.fsh`
 
 -   Expects a `BlurConfig` of `vec2 BlurDir` and `float Radius`
 
-#### `post/color_convolve.fsh`
+##### `post/color_convolve.fsh`
 
 -   Expects a `ColorConfig` of `vec3 RedMatrix`, `vec3 GreenMatrix` and `vec3 BlueMatrix`
 
-#### `post/invert.fsh`
+##### `post/invert.fsh`
 
 -   Expects a `InvertConfig` of `float InverseAmount`
 
-#### `post/rotscale.vsh`
+##### `post/rotscale.vsh`
 
 -   Expects a `RotScaleConfig` of `vec2 InScale`, `vec2 InOffset` and `float InRotation`
 
-#### `post/spiderclip.fsh`
+##### `post/spiderclip.fsh`
 
 -   Expects a `SpiderConfig` of `vec4 Scissor` and `vec4 Vignette`
 
-### `Globals` Uniform Block
+#### `Globals` Uniform Block
 
 -   Available through `#moj_import <minecraft:globals.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ScreenSize`, `GlintAlpha`, `GameTime` and `MenuBlurRadius` (new)
     -   `MenuBlurRadius` is the blur radius of the background when a menu is open
 
-### `Fog` Uniform Block
+#### `Fog` Uniform Block
 
 -   Available through `#moj_import <minecraft:fog.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
@@ -148,13 +150,13 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `FogEnd` is the "normal" fog cutoff as before
 -   `FOG_IS_SKY` is now available to the `position.vsh`/`position.fsh` shaders when they are rendering for the sky
 
-### `Projection` Uniform Block
+#### `Projection` Uniform Block
 
 -   Available through `#moj_import <minecraft:projection.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ProjMat` with no changes
 
-### `DynamicTransforms` Uniform Block
+#### `DynamicTransforms` Uniform Block
 
 -   Available through `#moj_import <minecraft:dynamictransforms.glsl>` for convenience
 -   Is no longer available to shaders that do not normally use it
@@ -162,25 +164,25 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   These are very likely to change in the near future
     -   The values of some of these are often hard coded and may not make sense for a given shader, ie `LineWidth` in any non-line based pipeline
 
-### `Lighting` Uniform Block
+#### `Lighting` Uniform Block
 
 -   Available through `#moj_import <minecraft:light.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
     -   The values may not make sense if the shader wouldn't normally expect it, however
 -   Contains `Light0_Direction` and `Light1_Direction`
 
-### `CloudInfo` Uniform Block
+#### `CloudInfo` Uniform Block
 
 -   Only available to the clouds shaders (`rendertype_clouds.vsh`/`rendertype_clouds.fsh`)
     -   Contains `CloudColor`, `CloudOffset` and `CellSize` (new)
         -   `CellSize` contains the size of an individual cloud cell
 
-### `LightmapInfo` Uniform Block
+#### `LightmapInfo` Uniform Block
 
 -   Only available to the lightmap shader (`lightmap.fsh`)
 -   Contains `AmbientLightFactor`, `SkyFactor`, `BlockFactor`, `UseBrightLightmap`, `NightVisionFactor`, `DarknessScale`, `DarkenWorldFactor`, `BrightnessFactor`, `SkyLightColor` with no change in behavior
 
-# Fixed bugs in 25w16a
+## Fixed bugs in 25w16a
 
 -   [MC-104231](https://bugs.mojang.com/browse/MC-104231) Loading a custom structure doesn't load rails correctly
 -   [MC-277369](https://bugs.mojang.com/browse/MC-277369) The draft report icon isn't initially visible when saving a report as a draft

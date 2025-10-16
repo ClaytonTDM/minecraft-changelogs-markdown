@@ -1,8 +1,10 @@
+# 23w14a
+
 We are now releasing Snapshot 23w14a, containing changes to Sculk blocks and Enchanting Tables, a new Quick Play functionality, an updated logo for Java Edition, a new main menu panorama, and lots of bug fixes!
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   Changes to Sculk blocks
 -   Replaceable blocks no longer block the connection between Enchanting Tables and Bookshelves
@@ -10,25 +12,25 @@ Happy mining!
 -   Updated the Minecraft: Java Edition logo
 -   The main menu background is now a Trails & Tales panorama
 
-## Sculk Shrieker
+### Sculk Shrieker
 
 -   Waterlogging them will now silence their shriek sounds
 -   Added to the Redstone Blocks tab in the creative menu
 
-## Sculk Sensor
+### Sculk Sensor
 
 -   For both normal and calibrated Sculk Sensors, the following changes have been made:
     -   Default redstone output has been modified to be more reliable for distance calculations
     -   Now strongly powers the block they are placed on
 
-## Calibrated Sculk Sensor
+### Calibrated Sculk Sensor
 
 -   Has an active cooldown of 1 second instead of 2 seconds
 -   Detects vibrations up to 16 blocks away instead of 8 blocks
 -   Accepts signals into the calibration input side more consistently with other Redstone components
     -   For example, signals can now be received through a block
 
-# Technical Changes
+## Technical Changes
 
 -   Signs with click commands can now be interacted with even if the Sign is not waxed
     -   Signs with non-`text` chat components can no longer be edited
@@ -41,15 +43,15 @@ Happy mining!
     -   Removed the overriding `minecraft.png` from the Programmer Art resource pack
     -   Updated the sprite layout of `invite_icon.png`
 
-## Loot tables
+### Loot tables
 
-### `reference`
+#### `reference`
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition). Fields:
 
 -   `name` - location of function to call
 
-## Quick Play
+### Quick Play
 
 -   Added support for four new command line arguments that allow the game to be launched directly into a world
 -   `quickPlayPath` takes a specified path for logging (relative to the run directory)
@@ -72,13 +74,13 @@ New function `reference` allows functions to call sub-functions (similar to `ref
         -   `--quickPlayMultiplayer "localhost:25565"`
         -   `--quickPlayRealms "1234"`
 
-## Tags
+### Tags
 
 -   Added `replaceable_by_trees`, to better express blocks that are replaced when the tree grows through them
 -   Removed `replaceable_plants` since it was only used as a subset of the blocks for the tag above, and not as universally
 -   Added `sword_efficient`, to represent blocks that are broken slightly faster by a sword than normal
 
-# Fixed bugs in 23w14a
+## Fixed bugs in 23w14a
 
 -   [MC-2474](https://bugs.mojang.com/browse/MC-2474) Transparent blocks placed between bookshelves and enchanting tables negate bonuses received from bookshelves
 -   [MC-138358](https://bugs.mojang.com/browse/MC-138358) Levers on top of item frames Z-fighting with blocks in item frames

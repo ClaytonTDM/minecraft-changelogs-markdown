@@ -1,8 +1,10 @@
+# 24w20a
+
 After some recent irregularities in our Snapshot schedule (public holidays, we're looking at you!) we're back to shipping on a Wednesday! Among other things, 24w20a includes a buff to the amount of Redstone Dust dropped by Witches, as well as a long requested change to make Piston sounds a tad more pleasing to the ear. We're also throwing 41 new bug fixes into the mix, because we like squashing bugs.
 
 Happy mining!
 
-# Changes
+## Changes
 
 -   Witches now always drop 4-8 redstone dust on death
     -   This is to improve the viability of farms that utilize Witch Huts to obtain Redstone Dust
@@ -11,16 +13,16 @@ Happy mining!
     -   Active effects and modifiers are kept when changing dimension or winning the game
 -   Updated credits
 
-## Sounds
+### Sounds
 
 -   Updated Piston sounds to lower volume and attenuation
     -   This was done to address the long-received feedback on the old sounds being too harsh and loud, creating very noisy redstone builds
 
-# Technical Changes
+## Technical Changes
 
 -   Data Pack version is now 44
 
-# Data Pack Version 44
+## Data Pack Version 44
 
 -   `dimension_padding` jigsaw structure NBT tag was changed
     -   Now it is an object with fields:
@@ -31,14 +33,14 @@ Happy mining!
 -   Data-driven enchantment field `weight` now has an upper bound of 1024
 -   Data-driven enchantment field `max_level` now has an upper bound of 255
 
-## Predicates
+### Predicates
 
-### Entity Predicate
+#### Entity Predicate
 
 -   New option: `movement_affected_by` - optional Location Predicate
     -   When present, adds requirements on a block at most 0.5 blocks below the entity which can affect its movement
 
-# Fixed bugs in 24w20a
+## Fixed bugs in 24w20a
 
 -   [MC-6431](https://bugs.mojang.com/browse/MC-6431) Status effects are lost when returning to the overworld from the exit end portal
 -   [MC-83590](https://bugs.mojang.com/browse/MC-83590) Armor attributes list can be too long

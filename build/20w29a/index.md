@@ -1,14 +1,16 @@
+# 20w29a
+
 Today we're releasing Snapshot 20w29a for Minecraft Java Edition. We found some bugs to squash, but also snuck in a technical change or two!
 
-# Changes in 20w29a
+## Changes in 20w29a
 
 -   Tools are now sorted based on material in the creative inventory
 
-# Technical Changes in 20w29a
+## Technical Changes in 20w29a
 
-## Commands
+### Commands
 
-### spawnpoint & setworldspawn
+#### spawnpoint & setworldspawn
 
 Added angle parameter for setting the default facing angle of a respawning player.  
 Syntax: `spawnpoint [targets] [pos] [angle]`  
@@ -16,11 +18,11 @@ Syntax: `setworldspawn [pos] [angle]` New parameters:
 
 -   `angle`: Floating point angle in degrees. Supports the relative `~` modifier
 
-## Customized world generation
+### Customized world generation
 
 -   `worldgen/noise_settings` can now contain noise configurations
 
-# Fixed bugs in 20w29a
+## Fixed bugs in 20w29a
 
 -   [MC-194464](https://bugs.mojang.com/browse/MC-194464) "large\_oak\_foliage\_placer" incorrectly serializes to "blob\_foliage\_placer"
 -   [MC-194298](https://bugs.mojang.com/browse/MC-194298) Bone meal can't create flowers

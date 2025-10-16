@@ -1,21 +1,23 @@
+# 21w11a
+
 An absolutely shocking snapshot arrives! This snapshot adds some new functionality to Copper, some general tweaks, a fancy new way of getting performance metrics, and a bunch of bugfixes.
 
 Happy mining!
 
-# New Features in 21w11a
+## New Features in 21w11a
 
 -   Lightning rods can now, for the very first time ever, be waterlogged
 -   New functionality for applying and removing wax from copper
 -   Bonemealing rooted dirt now grows hanging roots underneath
 
-## Waxing Copper and Oxidization
+### Waxing Copper and Oxidization
 
 -   Right click with honeycomb on copper blocks to wax them
 -   Use honeycomb in a dispenser to wax copper blocks
 -   Axes can scrape off wax and oxidation of copper blocks
 -   Lightning strike hitting copper will clean its oxidation
 
-# Changes in 21w11a
+## Changes in 21w11a
 
 -   Waxed copper blocks can be crafted into 4 copper ingots
 -   Tweaked the cave sizes
@@ -26,17 +28,17 @@ Happy mining!
 -   The facing direction of Small Dripleaf blocks is now determined by which direction the player is facing when placing it
 -   Fully-grown Amethyst Clusters now drop 4 Amethyst Shards (or more with Fortune) when mined with a pickaxe, and drop 2 Amethyst Shards when broken by hand, piston, or other means
 
-# Technical Changes in 21w11a
+## Technical Changes in 21w11a
 
 -   Added F3+L shortcut to generate and persist performance metrics from in-game
 
-## In-game client metrics reporting
+### In-game client metrics reporting
 
 Pressing F3+L while in the game will start a recording for 10 seconds capturing metrics such as tick durations, used heap sizes and other more detailed stats. These will be saved to a zip file in `debug/profiling/<yyyy-MM-dd_HH.mm.ss>.zip` and could be used for performance regression analysis if included in bug reports.
 
 The exact metrics, output format and names are susceptible to change between versions, and our plan is to continue iterating on which metrics to capture.
 
-# Fixed Bugs in 21w11a
+## Fixed Bugs in 21w11a
 
 -   [MC-1483](https://bugs.mojang.com/browse/MC-1483) Snow covered grass/podzol/mycelium block side texture does not match original block
 -   [MC-12363](https://bugs.mojang.com/browse/MC-12363) Lava / water / powder snow bucket desync when using it while rapidly turning

@@ -1,24 +1,26 @@
+# 1.19.1-rc1
+
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.1. We have also now created a help article on chat reporting, available [here](https://help.minecraft.net/hc/articles/7149823936781).
 
 If there are no major issues following this release, no further changes will be done before the full release on Tuesday.
 
 Happy mining!
 
-# Changes in 1.19.1 Release Candidate 1
+## Changes in 1.19.1 Release Candidate 1
 
 -   Updated the categories for chat reporting
     -   The "Profanity", "Nudity or pornography" and "Extreme violence or gore" categories have been removed
     -   The description for the "Drugs and alcohol" category has been updated to "Someone is encouraging others to partake in illegal drug related activities or encouraging underage drinking"
     -   The description of the "Harassment and bullying" category has been extended with the following: or posting private personal information about you or someone else without consent ("doxing").
 
-# Technical changes in 1.19.1 Release Candidate 1
+## Technical changes in 1.19.1 Release Candidate 1
 
 -   The `run_command` click event for text components no longer supports sending chat messages directly
     -   Only commands are supported, so a command such as `/say` should be used instead
     -   This means values now always need to be '/'-prefixed
 -   Increased the amount of chat context sent with each chat report
 
-# Fixed bugs in 1.19 Release Candidate 1
+## Fixed bugs in 1.19 Release Candidate 1
 
 -   [MC-250020](https://bugs.mojang.com/browse/MC-250020) Allay doesn't ignore items when mobGriefing is set to false
 -   [MC-252511](https://bugs.mojang.com/browse/MC-252511) Bedrock not generating on the new blending border between old and new blending

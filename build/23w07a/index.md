@@ -1,32 +1,34 @@
+# 23w07a
+
 This week we're bringing you the Sniffer, Archaeology, and the Cherry Blossom biome as experimental features for the 1.20 update.
 
 Changes for the 1.19.4 release include Interaction Entities, and updates to jukeboxes and horse breeding.
 
 Happy brushing!
 
-# Changes
+## Changes
 
 -   Jukeboxes have changed to be at parity with Bedrock
 -   Horse breeding has been updated
 -   Updated the Realms screen to be more in line with the Singleplayer and Multiplayer screens
 
-## Recipe unlocking
+### Recipe unlocking
 
 -   The Crafting Table recipe is unlocked immediately on creating a new world
 -   The Crossbow recipe is no longer unlocked by sticks
 -   The Soul Campfire recipe is no longer unlocked by sticks
 
-## Jukebox
+### Jukebox
 
 -   While playing a music disc, it will emit a redstone signal of 15
 -   Droppers and hoppers can now interact with it
 
-## Horses
+### Horses
 
 -   When breeding horses and the like, the babies' speed, jump height and health are no longer biased toward the average
 -   This change is intended to make horse breeding a viable way of getting great horses, if a player starts with good parents and puts in enough time and Golden Carrots
 
-# Technical Changes
+## Technical Changes
 
 -   The vanilla resource pack en\_us language file is now sorted alphanumerically by key
 -   A new recipe serializer `crafting_decorated_pot` has been added for the new Decorated Pot recipe
@@ -34,7 +36,7 @@ Happy brushing!
     -   Accepts a boolean which determines if a notification is shown when unlocking this recipe
     -   defaults to `true` if isn't specified
 
-## Interaction Entities
+### Interaction Entities
 
 A new type of entity that records attacks ("left clicks") and interactions ("right clicks"). Interactions are invisible and of a custom size.
 
@@ -46,32 +48,32 @@ Fields:
 -   `interaction`: Records the last interaction action on the entity
 -   `response`: Boolean specifying if interacting should trigger a response (arm swing, sound effects, etc - default `false`)
 
-### Action Format
+#### Action Format
 
 When an action is stored, it always has two fields:
 
 -   `player`: The UUID (in standard integer array format) of the player performing the action
 -   `timestamp`: The timestamp of the game tick when the event happened (stored as a long)
 
-### Advancement Triggers
+#### Advancement Triggers
 
 -   Interacting with an Interaction entity triggers `player_interacted_with_entity`
 -   Attacking an Interaction entity triggers `player_hurt_entity`
 
-### `execute on` with Interactions
+#### `execute on` with Interactions
 
 The Interaction entity targets the player who last interacted with it. That makes the following possible:
 
 -   `execute on attacker`: execute as the last player who attacked the entity
 -   `execute on target`: execute as the last player who interacted with the entity
 
-# Experimental Features
+## Experimental Features
 
 -   Added Sniffer mob
 -   Added a Cherry Grove biome
 -   Added Archaeology
 
-## Sniffer
+### Sniffer
 
 -   Sniffer Mob now available as an experimental feature
     -   The Sniffer is the mob vote winner of Minecraft Live 2022 and the first "ancient" mob added to the game
@@ -83,36 +85,36 @@ The Interaction entity targets the player who last interacted with it. That make
     -   The seed can be used to breed two Sniffers
     -   The full-grown flower can be harvested and replanted but can also be crafted into a dye
 
-## Cherry Grove biome
+### Cherry Grove biome
 
 -   Added a new Cherry Grove biome, with pretty cherry blossom trees
 -   You can find it in the mountains, like Meadows
 
-### Pink Petals block
+#### Pink Petals block
 
 -   Added a new Pink Petals block with lots of pink flowers on the ground
 
-### Cherry Wood Set
+#### Cherry Wood Set
 
 -   Added a new Cherry wood set, with all the corresponding wooden things you can make from it. You need to have the Update 1.20 experimental features enabled to see it in game.
 
-## Archaeology
+### Archaeology
 
-### The brush
+#### The brush
 
 -   The brush is a craftable item you can use to brush things
 
-### Suspicious Sand
+#### Suspicious Sand
 
 -   Desert Temples and Desert Wells now contain Suspicious Sand. This fragile block is hard to spot and easy to destroy, so be careful!
 -   Brushing the Suspicious Sand with a Brush will extract objects that were buried long ago
 
-### Pottery Shards
+#### Pottery Shards
 
 -   Pottery Shards have pictures on them
 -   They cannot be crafted and are only found by brushing Suspicious Sand
 
-### Decorated Pots
+#### Decorated Pots
 
 -   Crafting four Pottery Shards together will create a Decorated Pot with a picture on each side
 -   You can also use Brick items instead of Pottery Shards in the Decorated Pot recipe
@@ -120,7 +122,7 @@ The Interaction entity targets the player who last interacted with it. That make
 -   Smash a Decorated Pot with any block-breaking tool to break it apart and get the Pottery Shards back
     -   Or hit it with your fist to pick up the pot without breaking it
 
-# Fixed bugs in Snapshot 23w07a
+## Fixed bugs in Snapshot 23w07a
 
 -   [MC-16533](https://bugs.mojang.com/browse/MC-16533) Horse Breeding never exceeds egg/spawn horse attributes
 -   [MC-64522](https://bugs.mojang.com/browse/MC-64522) Server shows as "Old" in server list while starting

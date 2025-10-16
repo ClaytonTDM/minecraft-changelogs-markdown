@@ -1,3 +1,5 @@
+# 21w43a
+
 Here's a snapshot from the blender! In this snapshot, world generation around the edges of an old world will now be adjusted for a smoother transition! This is the first iteration of this system which we expect to keep improving. Keep in mind that if you try it out now, the result will be saved to your world forever - which, as we know, is quite a long time. Better be safe than sorry. Make a backup before you try it!
 
 Also - the space underneath existing chunks is now filled in, but only with deepslate. We will later be adding full cave generation in this place, so if you want that in your world, make a backup before you try it!
@@ -6,11 +8,11 @@ Due to some updates to terrain generation in this snapshot, seeds have shuffled 
 
 Oh yeah, did we mention that it's a good idea to make a backup?
 
-# New Features in 21w43a
+## New Features in 21w43a
 
 -   The edge between old and new world generation is now adjusted when you upgrade a world
 
-## Upgrading of old worlds
+### Upgrading of old worlds
 
 -   When generating close to old chunks hew terrain is adjusted to better match the existing terrain at the borders
 -   In old chunks, if there is Bedrock at y=0, the column below will be filled with Deepslate
@@ -18,7 +20,7 @@ Oh yeah, did we mention that it's a good idea to make a backup?
 -   The old Bedrock between y=0 and y=4 in old chunks gets replaced with Deepslate
 -   A new Bedrock layer is placed at y=-64
 
-# Changes in 21w43a
+## Changes in 21w43a
 
 -   The Priority Updates video setting has been renamed to Chunk Builder
 -   Reduced the amount of flooded caves near river and ocean coastlines
@@ -26,12 +28,12 @@ Oh yeah, did we mention that it's a good idea to make a backup?
 -   Lava aquifers are slightly less common
 -   Restricted Big Dripleaf placement to Clay, Grass, Dirt, Farmland, Moss, Rooted Dirt, Podzol and Mycelium
 
-# Technical Changes in 21w43a
+## Technical Changes in 21w43a
 
 -   Some internal details of block and fluid ticking have been changed to improve save times. While it should behave exactly as it was, it might be a good time to test your redstone contraptions (on a copy of a world or with a backup, of course)
 -   The Chunk format has been updated
 
-## World Data: Chunk Format
+### World Data: Chunk Format
 
 -   Removed chunk's `Level` and moved everything it contained up
 -   Chunk's `Level.Entities` has moved to `entities`
@@ -47,7 +49,7 @@ Oh yeah, did we mention that it's a good idea to make a backup?
 -   Added `below_zero_retrogen` containing data to support below zero generation
 -   Added `blending_data` containing data to support blending new world generation with existing chunks
 
-# Fixed bugs in 21w43a
+## Fixed bugs in 21w43a
 
 -   [MC-131930](https://bugs.mojang.com/browse/MC-131930) Deep warm ocean generates without coral and sea pickles
 -   [MC-156616](https://bugs.mojang.com/browse/MC-156616) Badlands layers not generating properly

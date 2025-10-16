@@ -1,32 +1,34 @@
+# 21w19a
+
 Now with twice as much Java version.
 
 Starting with this snapshot, Candles, Bundles, and Sculk Sensors are only accessible through commands. We do not feel that they are at the quality we want for Part 1 of the Caves & Cliffs release. To keep trying these features out in survival mode, use the Preview data pack!
 
-# Changes in 21w19a
+## Changes in 21w19a
 
 -   The maximum length of item names in the anvil UI has been increased from 35 to 50
 -   Made geodes significantly rarer
 -   Unfinished items (Sculk Sensor, Bundle and Candles) have been removed from the creative inventory
 -   Recipes for unfinished items (Bundle, Candles) have been removed
 
-# Changes to the Caves & Cliffs Preview
+## Changes to the Caves & Cliffs Preview
 
 Download the [updated datapack](https://launcher.mojang.com/v1/objects/a6b56d6f14869646eb8d399e99a0149bdd954490/CavesAndCliffsPreview.zip).
 
 -   The pack now includes recipes related to bundles and candles
 
-# Technical changes in 21w19a
+## Technical changes in 21w19a
 
 -   Upgraded to Java 16
 -   Added `mineable/axe`, `mineable/hoe`, `mineable/pickaxe` and `mineable/shovel` block tags. Blocks with these tags can be destroyed more quickly with the matching tool.
 -   Added `needs_stone_tool`, `needs_iron_tool` and `needs_diamond_tool` block tags. If a block requires the correct tool to drop, these tags determine which tier of that tool is required.
 -   Changed the syntax of the `/item` command
 
-## Java 16
+### Java 16
 
 Minecraft now uses a more recent version of Java. If you are using a default setup the Launcher will download and install the correct version. If you are using a custom Java setup or a third-party launcher, you will need to ensure that your Java installation is version 16 or above.
 
-## Item command
+### Item command
 
 New syntax:
 
@@ -36,7 +38,7 @@ New syntax:
 
 For example, `/item replace block ~ ~ ~ container.0 from entity @s enderchest.0` will copy first item from player's enderchest to first slot of container player is currently standing on.
 
-# Bugs fixed in 21w19a
+## Bugs fixed in 21w19a
 
 -   [MC-105080](https://bugs.mojang.com/browse/MC-105080) Ender Dragon is respawned if all Exit End Portal blocks are removed / legacy scanning is done for worlds with new dragon fight
 -   [MC-136647](https://bugs.mojang.com/browse/MC-136647) Leads don't work with Squids

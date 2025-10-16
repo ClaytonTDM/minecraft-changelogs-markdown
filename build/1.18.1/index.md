@@ -1,16 +1,18 @@
+# 1.18.1
+
 We’re now releasing Minecraft: Java Edition 1.18.1. This release fixes a critical security issue for multiplayer servers, changes how the world fog works to make more of the world visible, and fixes a couple of other bugs.
 
 If you are running a multiplayer server, we highly encourage you to upgrade to this version as soon as possible.
 
 Enjoy!
 
-# Technical Changes in 1.18.1
+## Technical Changes in 1.18.1
 
 -   Fixed an issue that would cause players on low-bandwidth connections to get timeout errors when connecting to a server
 -   World fog now starts further away from the player, to make distant terrain more visible
 -   Instead of applying fog as a spherical volume it is now applied as a cylindrical volume
 
-# Fixed Bugs in 1.18.1
+## Fixed Bugs in 1.18.1
 
 -   [MC-152198](https://bugs.mojang.com/browse/MC-152198) Actual render distance is 2 chunks lower than render distance setting
 -   [MC-219507](https://bugs.mojang.com/browse/MC-219507) Beacon's power reverts back to previous one on world reload

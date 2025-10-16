@@ -1,12 +1,14 @@
+# 20w46a
+
 The snow is snowier than before.
 
 For today’s snapshot, we’ve changed most of the textures introduced in the previous snapshot. This is simply to test if these textures give a better experience in exploring and building. We’re interested to hear what you think. Keep in mind, that some textures might be reverted or changed again in the future
 
-# New Features in 20w46a
+## New Features in 20w46a
 
 -   Added Powder Snow!
 
-## Powder Snow
+### Powder Snow
 
 Snowier snow!
 
@@ -15,14 +17,14 @@ Snowier snow!
 -   Wear leather boots to prevent yourself from sinking into Powder Snow blocks
 -   Leave a Cauldron outside in falling snow and it will fill with Powder Snow
 
-### Freezing
+#### Freezing
 
 -   Standing in Powder Snow will slowly freeze an entity
 -   Once frozen, freeze damage is done every few seconds to the frozen entity
 -   Each piece of leather armor warn causes an entity to freeze more slowly
 -   Wearing a full set of leather armor prevents freezing entirely
 
-# Changes in 20w46a
+## Changes in 20w46a
 
 -   The range in which a lightning rod attracts lightning has been doubled
 -   Copper blocks are now crafted from 4 copper ingots
@@ -31,7 +33,7 @@ Snowier snow!
 -   Clicking on button that changes value while holding shift key changes to previous value
 -   "Debug" world type can now be accessed while holding alt key (was shift)
 
-## Textures
+### Textures
 
 Changed a number of the textures for blocks and items introduced in the previous snapshot:
 
@@ -46,7 +48,7 @@ Changed a number of the textures for blocks and items introduced in the previous
 -   Amethyst Shard Item Icon
 -   Bundle Item Icon
 
-# Technical Changes in 20w46a
+## Technical Changes in 20w46a
 
 -   Removed `/replaceitem` command
 -   Added `/item` command
@@ -56,13 +58,13 @@ Changed a number of the textures for blocks and items introduced in the previous
 -   Loot table values inside random number generators can now be nested.
 -   Default mode of structure blocks is now `Load`. `Data` is now hidden (but can be accessed by clicking mode button while holding alt key)
 
-## Item modifiers
+### Item modifiers
 
 The function part of loot tables can now be defined as separate data pack resource in `item_modifiers` directory. Such files can contain a single function (i.e single JSON object) or an array of functions.
 
-## Commands
+### Commands
 
-### `item`
+#### `item`
 
 Modifies item or block inventory.
 
@@ -79,11 +81,11 @@ Possible sources and targets:
 
 For example, `/item block ~ ~ ~ container.0 copy entity @s enderchest.0` will copy first item from player's enderchest to first slot of container player is currently standing on.
 
-## Loot tables
+### Loot tables
 
-### New conditions
+#### New conditions
 
-#### `value_check`
+##### `value_check`
 
 Checks range of value.
 
@@ -92,66 +94,66 @@ Parameters:
 -   `value` - see "New value providers" section (currently combination of random generators and score)
 -   `range` - min/max range
 
-### Changed conditions
+#### Changed conditions
 
-#### `score`
+##### `score`
 
 `entity` parameter has now been replaced with `target`. It can either contain value from old `entity` field (like `this`) or be an score holder name in form `{"name": "..."}`.
 
-### Changed functions
+#### Changed functions
 
-#### `set_damage`
+##### `set_damage`
 
 This function now has `add` parameter. If `true`, change will be relative to current damage. If `false`, damage will be replaced with current value (default behavior)
 
-#### `set_count`
+##### `set_count`
 
 This function now has `add` parameter. If `true`, change will be relative to current item count. If `false`, item count will be replaced with current value (default behavior)
 
-#### `copy_nbt`
+##### `copy_nbt`
 
 `source` parameter can now be set to `{"storage": <namespaced id>}`, to access command storage.
 
-### New functions
+#### New functions
 
-#### `set_enchantments`
+##### `set_enchantments`
 
 Modifies enchantments on item
 
-##### Parameters
+###### Parameters
 
 -   `enchantments` - map of enchantment id to level value (can be score or random number)
 -   `add` - if `true`, change will be relative to current level. If `false`, level will be replaced with current value (default behavior)
 
-### New value providers
+#### New value providers
 
 Note: value providers can be used in same places as random number generators.
 
-#### `score`
+##### `score`
 
 Returns scaled scoreboard value.
 
-##### Parameters
+###### Parameters
 
 -   `score` - scoreboard name
 -   `target` - same as `target` in `score` predicate
 -   `scale` - scaling factor (float)
 
-## Data Packs
+### Data Packs
 
 Changes to data packs for version 7:
 
 -   Removal of `/replaceitem` (replaced with `/item replace`)
 -   `score` loot table condition: `entity` parameter has been replaced with `target`
 
-# Resource Packs
+## Resource Packs
 
 Changes to resource packs for version 7:
 
 -   Drowned texture mirroring has changed (see MC-174685)
 -   slots for the game mode selector are now 26 pixels instead of 25
 
-# Fixed bugs in 20w46a
+## Fixed bugs in 20w46a
 
 -   [MC-2490](https://bugs.mojang.com/browse/MC-2490) TNT animation ends at 80 ticks, ignores fuse length changes
 -   [MC-53518](https://bugs.mojang.com/browse/MC-53518) Endermen don't attack endermites spawned using spawn eggs or /summon
