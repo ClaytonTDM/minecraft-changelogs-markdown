@@ -108,7 +108,7 @@ async function createFromVersionFolder(
 	let markdown = "";
 
 	if (type === "release") {
-		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 5)];
+		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 1)];
 		markdown = await combineMarkdown(versionsToInclude, allVersions);
 
 		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
@@ -124,7 +124,7 @@ async function createFromVersionFolder(
 			}
 		}
 	} else {
-		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 10)];
+		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 3)];
 		markdown = await combineMarkdown(versionsToInclude, allVersions);
 
 		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
