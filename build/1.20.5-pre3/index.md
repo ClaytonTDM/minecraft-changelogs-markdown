@@ -1,4 +1,4 @@
-# 1.20.5-pre3
+# Minecraft 1.20.5 Pre-Release 3
 
 Back-to-back! Releasing yesterday was so much fun that we decided to ship another Pre-Release for Minecraft: Java Edition 1.20.5 today as well. This one is coming in hot with important bug & crash fixes.
 

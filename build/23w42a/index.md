@@ -1,4 +1,4 @@
-# 23w42a
+# Minecraft Snapshot 23w42a
 
 Hey! Today we bring you the first of the features we've shown you during Minecraft Live last weekend: the Crafter!
 

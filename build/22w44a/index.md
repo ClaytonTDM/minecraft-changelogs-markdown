@@ -1,4 +1,4 @@
-# 22w44a
+# Minecraft Snapshot 22w44a
 
 Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
 

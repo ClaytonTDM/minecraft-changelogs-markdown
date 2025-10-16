@@ -1,4 +1,4 @@
-# 23w32a
+# Minecraft Snapshot 23w32a
 
 Hello! This very technical snapshot contains vibration changes, data pack and resource pack changes, some network optimizations, new debug tools, and a some bug fixes. Enjoy!
 

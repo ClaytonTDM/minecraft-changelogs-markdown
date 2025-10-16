@@ -1,4 +1,4 @@
-# 1.17-pre3
+# Minecraft 1.17 Pre-Release 3
 
 Time for another pre-release, this time with some final tweaks to candles and more fixes for bugs and crashes!
 

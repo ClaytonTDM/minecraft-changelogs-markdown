@@ -1,4 +1,4 @@
-# 1.19.1-rc3
+# Minecraft 1.19.1 Release Candidate 3
 
 We are now releasing Release Candidate 3 for Minecraft 1.19.1. We still expect to release the full version of 1.19.1 this week.
 

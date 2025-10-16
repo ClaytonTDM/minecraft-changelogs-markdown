@@ -1,4 +1,4 @@
-# 1.16.5
+# Minecraft: Java Edition 1.16.5
 
 Happy Friday! We're now releasing 1.16.5, which fixes two critical stability issues. We are not releasing more information about these issues at this time to protect servers that have not yet updated.
 

@@ -1,4 +1,4 @@
-# 25w21a
+# Minecraft Snapshot 25w21a
 
 Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems some of our developers missed those beautiful, gray, rainy skies far too much and absolutely insisted on giving the clouds in Minecraft a new look. What a de-light!
 

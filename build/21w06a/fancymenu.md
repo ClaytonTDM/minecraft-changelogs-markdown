@@ -1,4 +1,4 @@
-# 21w06a
+# Minecraft Snapshot 21w06a
 
 Hello, new snapshot! Hello, new cave generation!
 

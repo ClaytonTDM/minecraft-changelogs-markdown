@@ -1,4 +1,4 @@
-# 1.18-pre1
+# Minecraft 1.18 Pre-Release 1
 
 The first 1.18 pre-release is here!
 

@@ -1,4 +1,4 @@
-# 22w24a
+# Minecraft Snapshot 22w24a
 
 New snapshot! We're now heading towards 1.19.1, which will add Allay duplication, the ability to report chat, and, of course, fix a few bugs.
 

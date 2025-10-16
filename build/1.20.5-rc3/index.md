@@ -1,4 +1,4 @@
-# 1.20.5-rc3
+# Minecraft: 1.20.5 Release Candidate 3
 
 Oh look, it's finally Monday! Since we haven't shipped something for several hours, we thought we'd kick the week off with a third and (fingers crossed!) final Release Candidate for Minecraft: Java Edition 1.20.5.
 

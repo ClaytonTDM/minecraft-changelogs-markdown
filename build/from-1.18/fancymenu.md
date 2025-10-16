@@ -447,6 +447,8 @@ About 250 bugs were fixed in this release. [View the entire list on the issue tr
 
 ---
 
+# Minecraft: Java Edition 1.17.1
+
 We're now releasing Minecraft: Java Edition 1.17.1. This release changes some behaviours of the features added in Caves & Cliffs: Part I, and it also fixes a few bugs and critical issues.
 
 ## Changes in 1.17.1

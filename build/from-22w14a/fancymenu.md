@@ -168,6 +168,8 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 
 ---
 
+# Minecraft Snapshot 22w13a
+
 **Allay**, the mob that nobody is really sure how to pronounce, is now entering the latest Minecraft: Java Edition snapshot. Along with our new shiny blue friend, we've added the **ancient** **cities**, which have seen some pretty drastic changes since the experimental snapshot a few weeks ago, so make sure you check them out.
 
 Happy mining!
@@ -277,6 +279,8 @@ Other miscellaneous changes to game events:
 
 ---
 
+# Minecraft Snapshot 22w12a
+
 Waaaaaaaaaaah! It's Wal... wait that's not it. It's the warden! The spooky, unfriendly (maybe it just wants a hug?) mob is making its way into our latest snapshot.
 
 Additionally, you'll be seeing some functionality for the sculk shriekers and some fancy new boats (they have chests).
@@ -385,6 +389,8 @@ Imbue your leggings with this shiny new enchantment to move as fast while crouch
 -   [MC-249316](https://bugs.mojang.com/browse/MC-249316) Mangrove fence, fence gate and boat cannot be used for fuel
 
 ---
+
+# Minecraft Snapshot 22w11a
 
 Minecraft: Java Edition is jumping on the Wild Update train! The first snapshot for 1.19 is now available. It contains frogs, the Deep Dark, and a bunch of new blocks. We've also entered the era of 3D directional audio. Keeping up with the times!
 
@@ -567,6 +573,109 @@ they find a valid substrate they can feed of off - The charge from souls in the 
 -   [MC-238070](https://bugs.mojang.com/browse/MC-238070) Brewing stand arms do not connect with their bases
 -   [MC-238807](https://bugs.mojang.com/browse/MC-238807) "Out of memory!" message is untranslatable
 -   [MC-248936](https://bugs.mojang.com/browse/MC-248936) Minecraft icon on MacOS is not showing correct icon
+
+---
+
+# Minecraft Snapshot 22w07a
+
+Another snapshot is now available for Minecraft: Java Edition. If you're into custom worlds, you might want to try out biome tags.
+
+Enjoy!
+
+## Technical Changes in 22w07a
+
+-   Biome tags are now used to determine which biomes a structure can generate in
+
+## Fixed bugs in 22w07a
+
+-   [MC-237110](https://bugs.mojang.com/browse/MC-237110) Grass blocks can generate underwater
+-   [MC-238977](https://bugs.mojang.com/browse/MC-238977) Glow squids spawn in villager farms and wells in superflat worlds
+-   [MC-243190](https://bugs.mojang.com/browse/MC-243190) Rooted dirt can replace cave vines
+-   [MC-244683](https://bugs.mojang.com/browse/MC-244683) Tropical Fish in lush caves spawn in bubble columns
+-   [MC-245857](https://bugs.mojang.com/browse/MC-245857) Enchanting table registers block diagonally above the bookshelves as blocking said bookshelf
+-   [MC-245925](https://bugs.mojang.com/browse/MC-245925) Falling block visual glitch when dying with doImmediateRespawn
+-   [MC-246465](https://bugs.mojang.com/browse/MC-246465) Lava can burn, damage, and destroy entities client-side and lead to de-sync
+-   [MC-248095](https://bugs.mojang.com/browse/MC-248095) Active repeating command blocks stop running after world conversion to 1.18
+-   [MC-248523](https://bugs.mojang.com/browse/MC-248523) The game crashes when attempting to open the beacon GUI
+
+---
+
+# Minecraft Snapshot 22w06a
+
+Today we're happy to share snapshot 22w06a with you. It contains compliance updates for South Korean players and is Totally Teeming with Technical Tag Tastiness.
+
+Happy Mining (in moderation)!
+
+## Changes in 22w06a
+
+If you’re playing in South Korea, we added gameplay timers and notices in compliance with gaming laws to help remind players to take occasional breaks from gameplay. For more information, please see [the FAQ](https://help.minecraft.net/hc/articles/360052763631).
+
+## Technical Changes in 22w06a
+
+-   Any type present in registries (blocks, items, biomes, etc.) can now have tags
+
+### Universal tags
+
+-   Tags can now be defined for any registry (blocks, items, biomes, etc. - see `registries.json` in report)
+-   New tags are stored in datapacks under `tags` directory (same as old ones)
+    -   Names of new tag directories are the same as registry names (so `/data/[namespace]/tags/potion` and `/data/[namespace]/tags/worldgen/biome`)
+    -   Existing tags (`blocks`, `items`, `fluids`, `entity_types`, `game_events` and `functions`) keep their name (for now)
+-   Some fields in worldgen structures that previously only lists of element ids now accept tags
+    -   Those entries now accept `[id, ...]`, `id` (shortcut for `[id]`) and `#tag`
+    -   Changed fields are:
+        -   `feature.glow_lichen` configuration: `can_be_placed_on`
+        -   `feature.spring_feature` configuration: `valid_blocks`
+        -   `feature.simple_random_selector` configuration: `features`
+        -   `block_predicate_type.matching_blocks`: `blocks`
+        -   `block_predicate_type.matching_fluids`: `fluids`
+        -   `biome`: inner list in `features`, map value in `carvers`
+        -   `biome_source.checkerboard`: `biomes`
+-   Some tag fields now require id to be prepended with `#` (however they are not yet accepting element list)
+    -   `dimension_type`: `infiniburn`
+    -   `feature.geode` configration: `blocks.cannot_replace`, `blocks.invalid_blocks`
+    -   `feature.vegetation_patch`, `feature.waterlogged_vegetation_patch` configuration: `replaceable`
+    -   `feature.root_system` configuration: `root_replaceable`
+    -   `structure_processor.protected_blocks`: `value`
+
+## Fixed bugs in 22w06a
+
+-   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
+-   [MC-239708](https://bugs.mojang.com/browse/MC-239708) Superflat world "Water World" preset settings are obsolete for the 1.18 update
+-   [MC-245937](https://bugs.mojang.com/browse/MC-245937) Flashing particles when boosting upwards with firework rockets
+-   [MC-248106](https://bugs.mojang.com/browse/MC-248106) Parrot dying while using Riptide enchantment
+
+---
+
+# Minecraft Snapshot 22w05a
+
+While we work on some larger changes that aren't quite ready yet, here's snapshot 22w05a which contains a small squishing (that's a word, right?) of bugs.
+
+Happy mining!
+
+## Changes in 22w05a
+
+-   A change in 22w03a that re-arranged Badlands biome layouts has been reverted to avoid causing generation changes and chunk borders. This change will be re-introduced later.
+
+## Fixed bugs in 22w05a
+
+-   [MC-4533](https://bugs.mojang.com/browse/MC-4533) Water graphical glitch when connecting diagonally
+-   [MC-70848](https://bugs.mojang.com/browse/MC-70848) Water looks like it flows up
+-   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
+-   [MC-214289](https://bugs.mojang.com/browse/MC-214289) Pointed dripstone can replace blocks when generating
+-   [MC-216004](https://bugs.mojang.com/browse/MC-216004) Wood pillars from mineshafts are generating on pointed dripstones
+-   [MC-216589](https://bugs.mojang.com/browse/MC-216589) Abandoned Mineshafts don't delete dripstone in certain situations
+-   [MC-232290](https://bugs.mojang.com/browse/MC-232290) Foxes will lay down in powder snow and not try to escape even when taking damage
+-   [MC-236775](https://bugs.mojang.com/browse/MC-236775) Biome Selector is disordered in other languages
+-   [MC-243152](https://bugs.mojang.com/browse/MC-243152) Slimes spawn in "Redstone Ready" superflat worlds
+-   [MC-245772](https://bugs.mojang.com/browse/MC-245772) Outdated chests' loot tables get deleted when updating to 1.18.1
+-   [MC-245910](https://bugs.mojang.com/browse/MC-245910) Campfires and hoppers cause constant chunk saving
+-   [MC-247636](https://bugs.mojang.com/browse/MC-247636) Deleting a world no longer logs that a world is being deleted
+-   [MC-248181](https://bugs.mojang.com/browse/MC-248181) The player disappears at certain heights
+-   [MC-248189](https://bugs.mojang.com/browse/MC-248189) Teleporting below level 0 from the overworld to another dimension freezes the game on the loading screen until player dies
+-   [MC-248195](https://bugs.mojang.com/browse/MC-248195) Typing /placefeature crashes client when connected to a server
+-   [MC-248210](https://bugs.mojang.com/browse/MC-248210) Harsh chunk borders appear when upgrading to 22w03a
+-   [MC-248225](https://bugs.mojang.com/browse/MC-248225) Incorrect BlockPos getSquaredDistance() calculation
+-   [MC-248230](https://bugs.mojang.com/browse/MC-248230) Players get stuck on the "Loading terrain..." screen after rejoining the world whilst above or below the build limit
 
 ---
 

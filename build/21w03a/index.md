@@ -1,4 +1,4 @@
-# 21w03a
+# Minecraft Snapshot 21w03a
 
 Today's Caves & Cliffs snapshot is particularly shiny! You could almost say it's glowing... Oh wait, that's a squid.
 

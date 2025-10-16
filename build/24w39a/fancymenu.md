@@ -1,4 +1,4 @@
-# 24w39a
+# Minecraft Snapshot 24w39a
 
 Happy Wednesday miners! With this snapshot we're now bundling Bundles into the game for real - Bundles are no longer experimental!
 

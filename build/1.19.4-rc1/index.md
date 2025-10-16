@@ -1,4 +1,4 @@
-# 1.19.4-rc1
+# Minecraft 1.19.4 Release Candidate 1
 
 Here is the first (and hopefully last) release candidate for 1.19.4. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
 

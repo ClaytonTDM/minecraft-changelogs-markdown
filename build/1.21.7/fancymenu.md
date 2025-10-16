@@ -1,4 +1,4 @@
-# 1.21.7
+# Minecraft: Java Edition 1.21.7
 
 A hot-as-lava hotfix. It's Minecraft 1.21.7, bringing updates to your disco, plus a fresco and some crash and bug fixes. We've added a new 3x3 painting to honor everyone's best friend, as well as refreshed the loot dropped by an iconic mob. The Baby Zombie riding a Chicken (Chicken Jockey) will drop the “Lava Chicken” music disc when defeated.
 

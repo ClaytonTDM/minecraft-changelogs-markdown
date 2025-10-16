@@ -1,4 +1,4 @@
-# 23w07a
+# Minecraft Snapshot 23w07a
 
 This week we're bringing you the Sniffer, Archaeology, and the Cherry Blossom biome as experimental features for the 1.20 update.
 

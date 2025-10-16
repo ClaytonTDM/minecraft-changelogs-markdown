@@ -1,4 +1,4 @@
-# 1.21.4-pre2
+# 1.21.4 Pre-Release 2
 
 We are starting off this week with the second 1.21.4 Pre-Release, including even more bug fixes!
 

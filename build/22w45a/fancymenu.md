@@ -1,4 +1,4 @@
-# 22w45a
+# Minecraft Snapshot 22w45a
 
 Minecraft Snapshot 22w45a is now out and about. This snapshot introduces the [new default skins](https://www.minecraft.net/article/introducing-new-default-skins) for offline players, bamboo blocks, and a visual refresh for the Vex. On top of that, there’s some additional creative inventory tweaks.
 

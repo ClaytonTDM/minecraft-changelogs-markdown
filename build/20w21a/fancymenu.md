@@ -1,4 +1,4 @@
-# 20w21a
+# Minecraft Snapshot 20w21a
 
 In this snapshot, we're adding support for custom world settings and custom dimensions. This is an early release to hear your feedback about this feature - do note that this support is considered experimental and unsupported. Any custom world settings may change from one snapshot to the next, and worlds using custom settings will be clearly marked as experimental in your worlds list. ​
 

@@ -1,4 +1,4 @@
-# 21w08a
+# Minecraft Snapshot 21w08a
 
 In this snapshot, our new beloved stone type has suffered a grim fate and has been renamed to Deepslate. How mysterious!
 

@@ -1,4 +1,4 @@
-# 1.16.2-rc2
+# Minecraft 1.16.2 Release Candidate 2
 
 We have now released 1.16.2 Release Candidate 2, fixing a few critical issues. If no further critical issues are found, we expect this version to be the full release of 1.16.2 tomorrow.
 

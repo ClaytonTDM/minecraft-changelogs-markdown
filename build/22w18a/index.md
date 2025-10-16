@@ -1,4 +1,4 @@
-# 22w18a
+# Minecraft Snapshot 22w18a
 
 Another snapshot is now available for Minecraft: Java Edition. This snapshot brings a few gameplay changes and some technical tidbits, such as the place command and cryptographically signed chat commands.
 

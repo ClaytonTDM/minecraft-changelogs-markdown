@@ -1,4 +1,4 @@
-# 20w09a
+# Minecraft Snapshot 20w09a
 
 Today is a sad day for Obsidian... It's crying. If you're not into crying you could always take aim at the new Target that we've added.
 

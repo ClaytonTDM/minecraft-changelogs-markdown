@@ -1,4 +1,4 @@
-# 1.13
+# Minecraft: Java Edition 1.13 Aquatic
 
 ## Aquatic changelog
 

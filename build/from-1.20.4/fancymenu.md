@@ -10,6 +10,8 @@ Happy Pot Smashing!
 
 ---
 
+# Minecraft 1.20.3
+
 We're now releasing 1.20.3 for Minecraft: Java Edition. This release comes with new functionality for Decorated Pots, a new look for the Bat and improvements to Shields.
 
 This release also includes new features for map makers and pack creators like Scoreboard Display Names and extensions for the `execute` and `return` commands and a new administrative tool: the `tick` command.

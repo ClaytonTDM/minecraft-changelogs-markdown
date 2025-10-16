@@ -1,4 +1,4 @@
-# 1.20.3-pre1
+# Minecraft 1.20.3 Pre-Release 1
 
 We're bringing you the first Pre-Release of 1.20.3 with updates to server resource pack handling and bug fixes!
 

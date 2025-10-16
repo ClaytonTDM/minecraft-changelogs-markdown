@@ -1,4 +1,4 @@
-# 1.21.2-pre3
+# 1.21.2 Pre-Release 3
 
 We are rounding off this week with the third 1.21.2 Pre-Release, including even more bug fixes!
 

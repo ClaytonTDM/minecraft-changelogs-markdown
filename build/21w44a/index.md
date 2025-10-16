@@ -1,4 +1,4 @@
-# 21w44a
+# Minecraft Snapshot 21w44a
 
 Another snapshot is now available. We've added new world generation below existing chunks, and blocks and fluids are now also part of the simulation distance setting. We also fixed a few bugs.
 

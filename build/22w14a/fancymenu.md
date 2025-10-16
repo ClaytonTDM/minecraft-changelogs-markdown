@@ -1,4 +1,4 @@
-# 22w14a
+# Minecraft Snapshot 22w14a
 
 Mangrove trees! Warm frogs! Mud blocks! More mangrove trees! Today, we’re happy to bring you the most mud-tastic Java snapshot to date!
 

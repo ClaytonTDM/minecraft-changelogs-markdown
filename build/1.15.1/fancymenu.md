@@ -1,4 +1,4 @@
-# 1.15.1
+# Minecraft: Java Edition 1.15.1
 
 ## Changes in 1.15.1
 

@@ -1,4 +1,4 @@
-# 24w33a
+# Minecraft 24w33a
 
 We know you have been waiting long for the next update, and we are finally kicking off the new snapshot cycle with Snapshot 24w33a!
 

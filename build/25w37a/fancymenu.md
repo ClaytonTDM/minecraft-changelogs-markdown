@@ -1,4 +1,4 @@
-# 25w37a
+# Minecraft Snapshot 25w37a
 
 A new week, and a new snapshot. This one includes another big batch of bug fixes, copper golem polishing and our beloved friend can now open doors.
 

@@ -698,11 +698,226 @@ Changes to resource packs for version 7:
 
 ---
 
+# Minecraft: Java Edition 1.16.5
+
 Happy Friday! We're now releasing 1.16.5, which fixes two critical stability issues. We are not releasing more information about these issues at this time to protect servers that have not yet updated.
 
 This release is network compatible with 1.16.4 - this means you do not need to upgrade your game right away to play on an upgraded server. However, we highly encourage all server owners to update as soon as possible to apply the stability fixes.
 
 Next week, we aim to release the next snapshot of Caves & Cliffs. Stay tuned!
+
+---
+
+# Minecraft: Java Edition 1.16.4
+
+It's time for the 1.16.4 release! This release adds the new social interactions screen and fixes a few crashes.
+
+If you missed it, we recently announced that Mojang accounts will be migrating into Microsoft accounts. This release prepares for that by having the game understand the settings and block-list of Microsoft accounts. You can read more about it over [here](https://www.minecraft.net/article/java-edition-moving-house), and you can find answers to questions you might have in the [FAQ](https://help.minecraft.net/hc/en-us/articles/360050865492), which will be continuously updated.
+
+## Features in 1.16.4
+
+-   New UI called Social Interactions Screen
+-   A button to open a link to the Accessibility Guide can now be found in the Accessibility Options screen
+
+### Social Interactions Screen
+
+A new screen available in Multiplayer which shows a list of all players on a server so you can hide chat from any player.
+
+-   Opens with a configurable key binding, by default P
+-   Which players are hidden resets when you disconnect from a server
+
+### Blocked Players
+
+-   When logging in with a Microsoft account, players blocked in your account are now also blocked in the game, and account restrictions are now respected
+-   Chat from blocked players is always hidden
+-   Realms invites from blocked players are hidden
+
+## Bugs fixed in 1.16.4
+
+-   [MC-192434](https://bugs.mojang.com/browse/MC-192434) Netherite Leggings are textured weirdly
+-   [MC-199487](https://bugs.mojang.com/browse/MC-199487) WorldGen Deadlock
+-   [MC-201885](https://bugs.mojang.com/browse/MC-201885) Divide by zero error in the Ender dragon entity class can cause a server crash and infinite velocity
+-   [MC-202147](https://bugs.mojang.com/browse/MC-202147) Cursor in Social Interactions & Recipe Book & Anvil menu doesn’t blink
+
+---
+
+# Minecraft: Java Edition 1.16.3
+
+The 1.16.3 release is now going live! This release fixes two(!) bugs.
+
+Just in case you missed it, we'll be announcing a bunch of new stuff on October 3rd at [Minecraft Live](https://www.minecraft.net/article/announcing-minecraft-live). Make sure to mark your calendar!
+
+## Fixed bugs in 1.16.3 Release Candidate 1
+
+-   [MC-198678](https://bugs.mojang.com/browse/MC-198678) Giving an item and a gold ingot to a baby piglin and killing it duplicates the item
+-   [MC-196449](https://bugs.mojang.com/browse/MC-196449) Piglins, Piglin Brutes, Hoglins and Zoglins have trouble pathfinding to the player when attacking
+
+---
+
+# Minecraft: Java Edition 1.16.2
+
+Ever since the [Nether Update](https://www.minecraft.net/en-us/article/nether-update-java), the Piglins have seen players sneaking in and having a peek in their chests - well no more! With 1.16.2, we’re introducing the Piglin Brute – a Piglin so focused on guarding the Bastion Remnants' chests that even gold can’t distract them.
+
+## Features in 1.16.2
+
+### Accessibility
+
+Two new accessibility settings have been added to help with visual comfort
+
+-   Distortion effects such as nausea and the Nether portal overlay can now be reduced
+-   At lower values, the nausea effect is replaced with a green overlay as an alternative visualization
+-   Field of view effects, shown after speed modifiers are applied, can now be reduced
+
+#### Chat Delay
+
+-   Chat delay has been added to the Chat Settings screen
+-   Pressing F3+D now clears the pending chat messages
+
+### Bastion Remnants
+
+-   Tweaked the Bastion Remnant chest loot
+-   Chests in Bastion Remnants are now more likely to be positioned on top of gilded blackstone
+
+### Blocks
+
+-   Brewing stands can now be crafted with blackstone
+-   Lanterns and Soul Lanterns can now be waterlogged
+-   Crimson and warped fungus can now be placed on mycelium
+-   Chains can now be placed in all orientations
+
+### Items
+
+-   Tools are now sorted based on material in the creative inventory
+-   Totems of undying now give the fire resistance status affect for 40 seconds when activated
+
+### Mobs
+
+-   Endermen will no longer place their held block onto bedrock blocks
+-   Zoglins can now be leashed
+-   When a Zombified Piglin is spawned riding a Strider, it will now be holding a Warped Fungi on a Stick
+-   Removed Herobrine
+
+### Piglins
+
+-   Added Piglin Brutes!
+-   Piglins now become angry with players who open or destroy a Chest Minecart
+-   Tweaked bartering loot
+
+#### Piglin Brute
+
+-   Piglin Brutes are stronger versions of Piglins that live in bastions and protect the treasures there
+-   Unlike the their cowardly and greedy counterparts, the Piglin Brutes cannot be distracted by gold and aren't afraid of anything
+-   Piglin Brutes attack players on sight, no matter how the player is dressed
+-   Piglin Brutes wield axes and don't need any armor, because they're just that tough
+
+### Respawn Block Positions
+
+-   Modified how respawn positions are chosen for beds and respawn anchors
+-   Respawn anchors will prioritize cardinal directions over corners
+-   Beds will prioritize the side of the bed the player entered from and then spaces circling around the foot of the bed up to the head of the bed
+-   Respawning players will now face the block that they respawned at
+-   Placing players onto dangerous blocks is now avoided when possible
+
+### Villagers
+
+-   Villagers now emit green particles when joining a village, setting a home bed, or acquiring a job site / profession
+-   Villagers now lose their job sites when changing dimension
+
+## Technical Changes in 1.16.2
+
+-   Custom worlds now support custom biomes
+-   Sign edit screen will now intialize from existing sign text (should have no noticeable impact on vanilla)
+-   Small improvements to data and resource pack selection screens
+-   Tags can now have optional entries
+
+### Commands
+
+#### Execute
+
+-   `execute in` now respects dimension scaling
+
+#### spawnpoint & setworldspawn
+
+Added an angle parameter for setting the default facing angle of a respawning player Syntax: `spawnpoint [<targets>] [<pos>] [<angle>]`  
+Syntax: `setworldspawn [<pos>] [<angle>]` New parameters:
+
+-   `angle` - Floating point angle in degrees. Supports the relative `~` modifier
+
+### Customized world generation
+
+-   Custom world generation and dimension settings now use the same folder pattern in data packs as other resources (`namespace/<type>/resource.json`)
+-   There is now experimental support for a `worldgen` folder in data packs
+-   `worldgen/biome` can contain biome definitions
+-   `worldgen/configured_carver` can contain definitions for world carver settings
+-   `worldgen/configured_feature` can contain definitions for feature placements
+-   `worldgen/configured_structure_feature` can contain definitions for structure placements
+-   `worldgen/configured_surface_builder` can contain definitions for surfaces
+-   `worldgen/noise_settings` can now contain noise configurations
+-   `worldgen/processor_list` can contain sets of block processors
+-   `worldgen/template_pool` can contain pool definitions for jigsaw structures
+-   Custom biomes can now be used in the single biome/caves/floating islands world types (add the data pack containing the biome first)
+-   Custom biomes can now be used in custom dimension generators
+
+### Dedicated server packet limit
+
+-   Dedicated servers can now kick clients that consistently send too many packets within a second
+-   Controlled with the `rate-limit` settings in `server.properties`
+-   The default rate limit of 0 means "no limit"
+
+### Pack selection screens
+
+-   While screen is open, it will automatically update when pack directory contents change
+-   Both pack selection screen will now display contents of `pack.png` as pack icon
+
+### Pack version
+
+-   Resource pack version raised to 6
+
+### Tags
+
+#### Optional entries
+
+Entries in tags can now be marked as optional. Failure to resolve optional entries does not prevent the whole tag from loading. Example:
+
+    {
+      "replace": false,
+      "values": [
+        "#minecraft:beds", // existing syntax
+        { "id":"#missing:tag", "required": false }, // optional sub-tag entry
+        "minecraft:anvil", // existing syntax
+        { "id":"minecraft:stone_button", "required": true }, // new syntax for required tags
+        { "id":"missing:block", "required": false } // optional single-element entry
+      ]
+    }
+    
+
+## Bugs
+
+A total of more than [150 bugs](https://bugs.mojang.com/issues/?filter=25075) have also been fixed in this release!
+
+---
+
+# Minecraft: Java Edition 1.16.1
+
+We're now releasing 1.16.1 for Minecraft: Java Edition. This version fixes stability issues with Realms.
+
+Looking for all the new stuff in the Nether Update release? You can check out [this post](https://www.minecraft.net/en-us/article/nether-update-java) to read about all the new things!
+
+## Get the Release
+
+To install the release, open up the [Minecraft Launcher](https://www.minecraft.net/download) and click play! Make sure your Launcher is set to the "Latest Release" option.
+
+Cross-platform server jar:
+
+-   [Minecraft server jar](https://launcher.mojang.com/v1/objects/a412fd69db1f81db3f511c1463fd304675244077/server.jar)
+
+Report bugs here:
+
+-   [Minecraft issue tracker!](https://bugs.mojang.com/projects/MC/summary)
+
+Want to give feedback?
+
+-   Head over to our [feedback website](https://feedback.minecraft.net/) or come chat with us about it on the [official Minecraft Discord](https://discord.gg/Minecraft).
 
 ---
 

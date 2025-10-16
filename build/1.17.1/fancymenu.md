@@ -1,4 +1,4 @@
-# 1.17.1
+# Minecraft: Java Edition 1.17.1
 
 We're now releasing Minecraft: Java Edition 1.17.1. This release changes some behaviours of the features added in Caves & Cliffs: Part I, and it also fixes a few bugs and critical issues.
 

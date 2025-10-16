@@ -1,4 +1,4 @@
-# 25w34a
+# Minecraft Snapshot 25w34a
 
 This week it's time for a smaller snapshot with a new main menu panorama, code of conducts for servers and much tinkering and fixing with our new friends, the Copper Golems. Happy mining!
 

@@ -14,6 +14,8 @@
 
 ---
 
+# Minecraft: Java Edition 1.15.2 Pre-release 1
+
 ## CHANGES IN 1.15.2 PRE-RELEASE 1
 
 -   Bees no longer anger when a nearby nest/hive is destroyed using a silk touch tool

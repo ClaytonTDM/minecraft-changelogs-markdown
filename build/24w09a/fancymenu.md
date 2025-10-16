@@ -1,4 +1,4 @@
-# 24w09a
+# Minecraft Snapshot 24w09a
 
 Hello! Here is a slightly bigger than usual snapshot with a lot of technical changes, refreshed UI, another iteration of Wolf Armor, and tweaks to new features.
 

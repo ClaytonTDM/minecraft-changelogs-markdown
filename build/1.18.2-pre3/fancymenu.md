@@ -1,4 +1,4 @@
-# 1.18.2-pre3
+# Minecraft 1.18.2 Pre-Release 3
 
 The third pre-release for 1.18.2 is now out, fixing more bugs!
 

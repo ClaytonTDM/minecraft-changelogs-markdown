@@ -1,4 +1,4 @@
-# 20w08a
+# Minecraft Snapshot 20w08a
 
 A wild snapshot appears! To tell you the truth, we hadn't actually planned to do a snapshot this week, but the Villagers were in dire need of neurosurgery.
 

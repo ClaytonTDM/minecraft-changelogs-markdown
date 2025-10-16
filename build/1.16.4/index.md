@@ -1,4 +1,4 @@
-# 1.16.4
+# Minecraft: Java Edition 1.16.4
 
 It's time for the 1.16.4 release! This release adds the new social interactions screen and fixes a few crashes.
 

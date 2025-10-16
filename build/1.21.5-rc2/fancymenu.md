@@ -1,4 +1,4 @@
-# 1.21.5-rc2
+# Minecraft 1.21.5 Release Candidate 2
 
 Second time's the charm! We're shipping 1.21.5 Release Candidate 2, fixing some final issues before releasing the Spring To Life drop tomorrow!
 

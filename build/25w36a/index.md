@@ -1,4 +1,4 @@
-# 25w36a
+# Minecraft Snapshot 25w36a
 
 Snapshot 25w36a is out and it includes mannequins, a new technical entity that is spawned with commands and can be used as an NPC. Conflicting key binds will now function together allowing you to bind a key to multiple actions. And as always, this snapshot also includes technical tweaks and bug fixes.
 

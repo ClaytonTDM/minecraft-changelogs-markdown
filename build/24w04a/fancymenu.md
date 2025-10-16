@@ -1,4 +1,4 @@
-# 24w04a
+# Minecraft Snapshot 24w04a
 
 Hello again! Here is another snapshot bringing you some Armadillo changes, experimental feature changes, and a bunch of technical changes. We have some server-side performance improvements and improved debug tools along with a new `transfer` command. Enjoy!
 

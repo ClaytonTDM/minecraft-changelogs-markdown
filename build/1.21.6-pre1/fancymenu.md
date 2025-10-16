@@ -1,4 +1,4 @@
-# 1.21.6-pre1
+# 1.21.6 Pre-Release 1
 
 Hey! This is the first pre-release of 1.21.6. From now on, you will mostly see us fixing bugs and the release schedule might include more than one pre-release per week. We are on the finish line for the second drop of the year!
 

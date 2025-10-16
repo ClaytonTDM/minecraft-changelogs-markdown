@@ -1,4 +1,4 @@
-# 1.21.9-pre1
+# Minecraft 1.21.9 Pre-Release 1
 
 The copper age is approaching and it's time for this drop's first pre-release. Today's release includes more copper golem improvements, some changes to the mannequins and several bug fixes. Pre-releases don't follow the regular Tuesday release schedule, so keep an eye out for the next one.
 

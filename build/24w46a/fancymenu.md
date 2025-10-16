@@ -1,4 +1,4 @@
-# 24w46a
+# Minecraft Snapshot 24w46a
 
 Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a bunch of component improvements coming your way, Resin Clumps can be waterlogged now, and Rabbits can finally roam free again. Furthermore, there's a whole swarm of other bug fixes.
 

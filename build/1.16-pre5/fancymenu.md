@@ -1,4 +1,4 @@
-# 1.16-pre5
+# Minecraft 1.16 Pre-Release 5
 
 Spend your weekend with this brand new fifth pre-release for Minecraft Java Edition 1.16 - it has a check to warn you not to try to run with too high graphics settings for your system and a bunch of bug fixes.
 

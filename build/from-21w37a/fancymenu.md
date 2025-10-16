@@ -303,6 +303,8 @@ Example:
 
 ---
 
+# Minecraft Snapshot 21w20a
+
 Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
 
 ## Changes in 21w20a
@@ -396,6 +398,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
 
 ---
 
+# Minecraft Snapshot 21w19a
+
 Now with twice as much Java version.
 
 Starting with this snapshot, Candles, Bundles, and Sculk Sensors are only accessible through commands. We do not feel that they are at the quality we want for Part 1 of the Caves & Cliffs release. To keep trying these features out in survival mode, use the Preview data pack!
@@ -480,6 +484,8 @@ For example, `/item replace block ~ ~ ~ container.0 from entity @s enderchest.0`
 -   [MC-225025](https://bugs.mojang.com/browse/MC-225025) Server side performance drop with dragon's breath area effect clouds
 
 ---
+
+# Minecraft Snapshot 21w18a
 
 Hey-hoo! Will you look at that! It's Wednesday once again, which means we get to share updates about all the Minecraft bits and bobs. This week, we're distributing an ore distribution Snapshot for all you lovely Snapshot connoisseurs to feast upon. Enjoy!
 

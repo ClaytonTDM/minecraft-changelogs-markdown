@@ -1,4 +1,4 @@
-# 1.20.5-pre1
+# Minecraft 1.20.5 Pre-Release 1
 
 It is now time for the first Pre-release of Minecraft 1.20.5, featuring some tweaks to Trial Chambers and Ominous Trials, as well as new advancements, a big set of technical tweaks and changes, and lots of bug fixes.
 

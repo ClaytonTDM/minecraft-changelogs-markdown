@@ -1,4 +1,4 @@
-# 24w19a
+# Minecraft Snapshot 24w19a
 
 The weekend is right around the corner, and what better way to celebrate that fact than by bringing you a serving of Snapshot Friday? This one rounds off the week by introducing performance improvements to chunk loading, alongside the usual assortment of technical improvements and bug fixes.
 

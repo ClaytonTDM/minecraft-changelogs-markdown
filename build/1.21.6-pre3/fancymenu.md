@@ -1,4 +1,4 @@
-# 1.21.6-pre3
+# Minecraft 1.21.6 Pre-Release 3
 
 We've got another pre-release coming in hot! This time with a new advancement trigger and sound category but most importantly some much needed bug fixes.
 

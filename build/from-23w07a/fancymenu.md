@@ -161,6 +161,8 @@ The Interaction entity targets the player who last interacted with it. That make
 
 ---
 
+# Minecraft Snapshot 23w06a
+
 Today we are bringing you the `damage` command and new display entities.
 
 Damage safely!
@@ -433,6 +435,8 @@ A new `tags` array has been added. Each entry has two fields:
 
 ---
 
+# Minecraft Snapshot 23w05a
+
 In this snapshot we've tweaked the armor trim feature and redefined the Create New World user experience flow.
 
 Happy world creating!
@@ -521,6 +525,8 @@ Happy world creating!
 -   [MC-259420](https://bugs.mojang.com/browse/MC-259420) Pixels not present in the palettes get erased, not kept
 
 ---
+
+# Minecraft Snapshot 23w04a
 
 Tuesday is the new Wednesday, did you know? Here is snapshot 23w04a with a new experimental Armor Trim Smithing feature in the Update;;_;;1;;_;;20 experimental pack.
 

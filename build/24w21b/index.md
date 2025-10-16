@@ -1,4 +1,4 @@
-# 24w21b
+# Minecraft Snapshot 24w21b
 
 We are now releasing snapshot 24w21b to fix a frequent crash which happened when Zombies spawned in areas of high local difficulty.
 

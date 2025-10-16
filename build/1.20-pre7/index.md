@@ -1,4 +1,4 @@
-# 1.20-pre7
+# Minecraft 1.20 Pre-release 7
 
 Pre-release 7 for Minecraft 1.20 is now available in the Minecraft Launcher. This pre-release adds validation of symbolic links and fixes a bug.
 

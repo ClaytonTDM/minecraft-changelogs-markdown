@@ -1,4 +1,4 @@
-# 23w40a
+# Minecraft Snapshot 23w40a
 
 We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapshot contains improvements for shields, changes to chat component serialization and bug fixes.
 

@@ -1,4 +1,4 @@
-# 1.18-pre4
+# Minecraft 1.18 Pre-Release 4
 
 We've now released Pre-release 4, which fixes a few crashes.
 

@@ -1,4 +1,4 @@
-# 1.19-pre3
+# Minecraft 1.19 Pre-Release 3
 
 It is now time for pre-release 3 for Minecraft 1.19, which will be our last pre-release for this week. In this pre-release we've tweaked the sonic boom attack and fixed more bugs.
 

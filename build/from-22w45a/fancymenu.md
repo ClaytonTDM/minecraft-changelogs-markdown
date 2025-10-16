@@ -109,6 +109,8 @@ Happy mining!
 
 ---
 
+# Minecraft Snapshot 22w44a
+
 Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
 
 Happy Mining!
@@ -231,6 +233,8 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
 -   [MC-257060](https://bugs.mojang.com/browse/MC-257060) Bee nest is absent from Functional Blocks
 
 ---
+
+# Minecraft Snapshot 22w43a
 
 Did you know that Camels walk by lifting both legs on one side at the same time? Yes, in snapshot 22w43a, Minecraft knows too! This snapshot also contains another round of tweaks to the Creative Inventory.
 
@@ -358,6 +362,8 @@ Player Reports can now be kept temporarily as a draft while connected to a serve
 -   [MC-256848](https://bugs.mojang.com/browse/MC-256848) String isn't in the Redstone Blocks Tab in the creative inventory
 
 ---
+
+# Minecraft Snapshot 22w42a
 
 Hello there! We are now releasing the first snapshot for 1.19.3! You might have been thinking that this snapshot would be for 1.20, but times are changing. Going forward, we are taking a bit of a different approach to how we release minor and major versions for Minecraft: Java Edition. Essentially, we will be releasing minor versions more often. You can find out more details about this in a post over [here](https://help.minecraft.net/hc/articles/9971900758413).
 

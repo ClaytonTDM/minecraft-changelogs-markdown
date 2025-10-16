@@ -1,4 +1,4 @@
-# 24w34a
+# Minecraft Snapshot 24w34a
 
 Hello! Here is the next snapshot for 1.21.2! It contains some much-requested tweaks to experimental features, as well as some technical changes and optimizations.
 

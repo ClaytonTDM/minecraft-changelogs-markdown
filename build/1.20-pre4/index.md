@@ -1,3 +1,3 @@
-# 1.20-pre4
+# Minecraft 1.20 Pre-Release 4
 
 We've now released 1.20 Pre-release 4, resolving a crash in the Multiplayer screen introduced in the last pre-release.

@@ -1,4 +1,4 @@
-# 22w46a
+# Minecraft Snapshot 22w46a
 
 We are now releasing snapshot 22w46a for Minecraft 1.19.3 with [playable mob sounds](https://www.minecraft.net/article/playable-mob-sounds-coming-minecraft-1-20) added as an experimental feature, improvements for telemetry data and several technical improvements.
 

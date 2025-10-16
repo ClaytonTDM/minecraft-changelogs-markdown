@@ -135,6 +135,8 @@ New function `reference` allows functions to call sub-functions (similar to `ref
 
 ---
 
+# Minecraft Snapshot 23w13a
+
 In this week's snapshot 23w13a we're following up on all the new things in last week's snapshot with a big round of bug fixes. Happy mining!
 
 ## Changes
@@ -187,6 +189,8 @@ In this week's snapshot 23w13a we're following up on all the new things in last 
 -   [MC-261275](https://bugs.mojang.com/browse/MC-261275) Sniffers drop moss blocks when killed
 
 ---
+
+# Minecraft Snapshot 23w12a
 
 Well hello fellow Minecraft lovers! It is time for the first snapshot for 1.20. We know we promised no more major features, so how did we end up with such a big snapshot? You thought the trails were over? NO! In snapshot 23w12a we have even more tales to tell! Our devs apparently could not resist throwing in a few extra additions. Enjoy!
 
@@ -413,6 +417,8 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 -   [MC-260897](https://bugs.mojang.com/browse/MC-260897) Display entity's previous state of interpolation doesn't work as expected
 
 ---
+
+# Minecraft Snapshot 23w07a
 
 This week we're bringing you the Sniffer, Archaeology, and the Cherry Blossom biome as experimental features for the 1.20 update.
 

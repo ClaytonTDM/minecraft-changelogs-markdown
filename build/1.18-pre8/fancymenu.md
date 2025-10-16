@@ -1,4 +1,4 @@
-# 1.18-pre8
+# Minecraft 1.18 Pre-Release 8
 
 It is now time for pre-release 8 for Minecraft 1.18 which contains more fixes for crashes and bugs.
 

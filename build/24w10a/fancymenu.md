@@ -1,4 +1,4 @@
-# 24w10a
+# Minecraft Snapshot 24w10a
 
 Woah, another snapshot day of the Wednesday variant! Today we are releasing 24w10a, featuring new Wolf Variants, some new Data Pack features, and lots of bug fixes.
 

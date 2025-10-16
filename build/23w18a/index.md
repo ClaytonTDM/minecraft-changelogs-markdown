@@ -1,4 +1,4 @@
-# 23w18a
+# Minecraft Snapshot 23w18a
 
 In this snapshot we're bringing you an additional advancement, updates to telemetry, as well as a fix for an 11 year old bug!
 

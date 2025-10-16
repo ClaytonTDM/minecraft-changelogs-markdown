@@ -1,4 +1,4 @@
-# 20w12a
+# Minecraft Snapshot 20w12a
 
 In this snapshot you can be on your merry way across the beautiful Soulsand Valleys with your freshly enchanted boots. It's a bit scary to be fair, so these boots will help you out with that bit...
 

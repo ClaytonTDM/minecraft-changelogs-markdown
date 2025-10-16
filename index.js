@@ -44,7 +44,7 @@ function convertToFancyMenu(markdown) {
 	return markdown.replace(/\\(.)/g, (match, char) => `;;${char};;`);
 }
 
-async function createVersionFolder(version, type, imageUrl, body) {
+async function createVersionFolder(version, type, imageUrl, body, title) {
 	const folderName = path.join("build", `${version}`);
 
 	try {
@@ -56,13 +56,19 @@ async function createVersionFolder(version, type, imageUrl, body) {
 	await fs.mkdir(folderName, { recursive: true });
 
 	let markdown = htmlToMarkdown(body);
+	// Shift all headers down by one level (h1->h2, h2->h3, etc)
 	markdown = markdown.replace(/^(#{1,5}) /gm, (match, hashes) => `#${hashes} `);
 
-	markdown = `# ${version}\n\n${markdown}`;
+	// Use title from API if provided, otherwise fall back to version number
+	const headerTitle = title || version;
+	markdown = `# ${headerTitle}\n\n${markdown}`;
 
 	await fs.writeFile(path.join(folderName, "index.md"), markdown);
 
-	const fancyMenuContent = convertToFancyMenu(markdown);
+	let fancyMenuContent = convertToFancyMenu(markdown);
+	if (fancyMenuContent.length > 45000) {
+		fancyMenuContent = fancyMenuContent.substring(0, 45000);
+	}
 	await fs.writeFile(path.join(folderName, "fancymenu.md"), fancyMenuContent);
 
 	const htmlPath = path.join(folderName, "index.html");
@@ -105,46 +111,51 @@ async function createFromVersionFolder(
 	await fs.mkdir(folderName, { recursive: true });
 
 	const currentVersion = allVersions.find((v) => v.version === version);
-	let markdown = "";
-
-	if (type === "release") {
-		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 1)];
-		markdown = await combineMarkdown(versionsToInclude, allVersions);
-
-		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
-			const v = versionsToInclude[i];
-			const imagePath = path.join(folderName, `${v.version}.png`);
-			const targetImagePath = path.join("..", `${v.version}`, `${v.version}.jpg`);
-			try {
-				await fs.symlink(targetImagePath, imagePath);
-			} catch (error) {
-				if (error.code !== "EEXIST") {
-					console.error(`Error creating image symlink for ${v.version}:`, error.message);
-				}
+	
+	const allVersionsToInclude = [currentVersion, ...previousVersions];
+	const fullMarkdown = await combineMarkdown(allVersionsToInclude, allVersions);
+	
+	let fancyMenuMarkdown = fullMarkdown;
+	const fancyMenuContent = convertToFancyMenu(fullMarkdown);
+	
+	if (fancyMenuContent.length > 45000) {
+		let versionsToInclude = [currentVersion];
+		let lastGoodMarkdown = await combineMarkdown(versionsToInclude, allVersions);
+		
+		for (let i = 0; i < previousVersions.length; i++) {
+			versionsToInclude = [currentVersion, ...previousVersions.slice(0, i + 1)];
+			const testMarkdown = await combineMarkdown(versionsToInclude, allVersions);
+			const testFancyMenu = convertToFancyMenu(testMarkdown);
+			
+			if (testFancyMenu.length <= 45000) {
+				lastGoodMarkdown = testMarkdown;
+			} else {
+				break;
 			}
 		}
-	} else {
-		const versionsToInclude = [currentVersion, ...previousVersions.slice(0, 3)];
-		markdown = await combineMarkdown(versionsToInclude, allVersions);
+		fancyMenuMarkdown = lastGoodMarkdown;
+	}
 
-		for (let i = 0; i < Math.min(versionsToInclude.length, 6); i++) {
-			const v = versionsToInclude[i];
-			const imagePath = path.join(folderName, `${v.version}.png`);
-			const targetImagePath = path.join("..", `${v.version}`, `${v.version}.jpg`);
-			try {
-				await fs.symlink(targetImagePath, imagePath);
-			} catch (error) {
-				if (error.code !== "EEXIST") {
-					console.error(`Error creating image symlink for ${v.version}:`, error.message);
-				}
+	for (let i = 0; i < allVersionsToInclude.length; i++) {
+		const v = allVersionsToInclude[i];
+		const imagePath = path.join(folderName, `${v.version}.jpg`);
+		const targetImagePath = path.join("..", `${v.version}`, `${v.version}.jpg`);
+		try {
+			await fs.symlink(targetImagePath, imagePath);
+		} catch (error) {
+			if (error.code !== "EEXIST") {
+				console.error(`Error creating image symlink for ${v.version}:`, error.message);
 			}
 		}
 	}
 
-	await fs.writeFile(path.join(folderName, "index.md"), markdown);
+	await fs.writeFile(path.join(folderName, "index.md"), fullMarkdown);
 
-	const fancyMenuContent = convertToFancyMenu(markdown);
-	await fs.writeFile(path.join(folderName, "fancymenu.md"), fancyMenuContent);
+	let finalFancyMenuContent = convertToFancyMenu(fancyMenuMarkdown);
+	if (finalFancyMenuContent.length > 45000) {
+		finalFancyMenuContent = finalFancyMenuContent.substring(0, 45000);
+	}
+	await fs.writeFile(path.join(folderName, "fancymenu.md"), finalFancyMenuContent);
 
 	const htmlPath = path.join(folderName, "index.html");
 	try {
@@ -169,11 +180,7 @@ async function combineMarkdown(versions, allVersions) {
 
 				markdown = markdown.replace(/^(#{1,5}) /gm, (match, hashes) => `#${hashes} `);
 
-				if (version === versions[0]) {
-					combined += `# ${versionData.title}\n\n${markdown}\n\n---\n\n`;
-				} else {
-					combined += `${markdown}\n\n---\n\n`;
-				}
+				combined += `# ${versionData.title}\n\n${markdown}\n\n---\n\n`;
 			} catch (error) {
 				console.error(`Failed to fetch version data for ${version.version}`);
 			}
@@ -206,7 +213,8 @@ async function main() {
 						release.version,
 						"release",
 						versionData.image ? versionData.image.url : release.image?.url,
-						versionData.body || ""
+						versionData.body || "",
+						versionData.title
 					);
 				} catch (error) {
 					console.error(`Failed to fetch version data for ${release.version}`);
@@ -233,7 +241,8 @@ async function main() {
 						snapshot.version,
 						"snapshot",
 						versionData.image ? versionData.image.url : snapshot.image?.url,
-						versionData.body || ""
+						versionData.body || "",
+						versionData.title
 					);
 				} catch (error) {
 					console.error(`Failed to fetch version data for ${snapshot.version}`);
@@ -255,7 +264,11 @@ async function main() {
 			await fs.writeFile(path.join("build", "index.md"), indexContent);
 			console.log(`Created index.md from from-${latestRelease}`);
 
-			const fancyMenuContent = convertToFancyMenu(indexContent);
+			const fancyMenuFromLatest = path.join("build", `from-${latestRelease}`, "fancymenu.md");
+			let fancyMenuContent = await fs.readFile(fancyMenuFromLatest, "utf-8");
+			if (fancyMenuContent.length > 45000) {
+				fancyMenuContent = fancyMenuContent.substring(0, 45000);
+			}
 			await fs.writeFile(path.join("build", "fancymenu.md"), fancyMenuContent);
 
 			const buildHtmlPath = path.join("build", "index.html");

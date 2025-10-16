@@ -1,4 +1,4 @@
-# 1.16-rc1
+# Minecraft 1.16 Release Candidate
 
 Out with the old, and in with the new! Today we're introducing a new naming convention (well, it's been a while) for Minecraft Java Edition. Previously, the last pre-release was, in fact, the release candidate, but we're now making that more clear by changing the name to be "release candidate". This means that if there are no major issues following this release, no further changes will be done before the full release.
 

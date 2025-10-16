@@ -1,4 +1,4 @@
-# 20w07a
+# Minecraft Snapshot 20w07a
 
 Ahh, a freshly baked snapshot! It undoubtedly smells better than the piglins that we just added...
 

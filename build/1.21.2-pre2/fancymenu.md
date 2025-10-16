@@ -1,4 +1,4 @@
-# 1.21.2-pre2
+# Minecraft 1.21.2 Pre-Release 2
 
 Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes and Pale Hanging Moss changes. During this stabilization phase before the full release of Minecraft Java Edition 1.21.2 we are focusing on fixing bugs and don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
 

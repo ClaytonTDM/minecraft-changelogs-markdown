@@ -1,4 +1,4 @@
-# 1.16-pre1
+# Minecraft 1.16 Pre-Release 1
 
 It's time for 1.16 pre-releases!
 

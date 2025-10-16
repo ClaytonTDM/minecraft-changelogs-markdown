@@ -1,4 +1,4 @@
-# 1.19.3-pre2
+# Minecraft 1.19.3 Pre-Release 2
 
 We're now releasing 1.19.3 pre-release 2 which fixes a few bugs.
 

@@ -1,4 +1,4 @@
-# 1.16-pre2
+# Minecraft 1.16 Pre-Release 2
 
 We've now released 1.16 pre-release 2, fixing some crashes. Note that worlds opened in 1.16 pre-release 1 are corrupt and will not work in any way in 1.16 pre-release 2 (this includes using the re-create world button). Please restore an older backup or create a brand new world to play in this pre-release.
 

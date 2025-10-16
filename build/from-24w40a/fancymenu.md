@@ -202,6 +202,8 @@ Increased to support the new experimental changes
 
 ---
 
+# Minecraft Snapshot 24w39a
+
 Happy Wednesday miners! With this snapshot we're now bundling Bundles into the game for real - Bundles are no longer experimental!
 
 Happy mining!
@@ -294,6 +296,8 @@ Happy mining!
 
 ---
 
+# Minecraft Snapshot 24w38a
+
 Hey! This snapshot brings you dyable Bundles in the Bundles experiment and fully-featured world creation for Realms, including Hardcore mode.
 
 Happy dyeing!
@@ -378,6 +382,8 @@ Hardcore mode is now available in Realms and is accessible by creating a new wor
 -   [MC-276722](https://bugs.mojang.com/browse/MC-276722) Teleporting to your current position every tick sometimes doesn't let you move properly
 
 ---
+
+# Minecraft Snapshot 24w37a
 
 Hi everyone! In this snapshot we have fixed the bug with Ender Pearls not teleporting the player to the point of impact. Ender Pearls will now also load chunks when thrown. Happy mining!
 

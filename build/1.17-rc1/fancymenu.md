@@ -1,4 +1,4 @@
-# 1.17-rc1
+# Minecraft 1.17 Release Candidate 1
 
 We're now releasing the first (and hopefully only) release candidate for Caves & Cliffs: Part I. If there are no major issues following this release, no further changes will be done before the full release.
 

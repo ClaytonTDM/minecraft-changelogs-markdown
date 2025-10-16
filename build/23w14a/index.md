@@ -1,4 +1,4 @@
-# 23w14a
+# Minecraft Snapshot 23w14a
 
 We are now releasing Snapshot 23w14a, containing changes to Sculk blocks and Enchanting Tables, a new Quick Play functionality, an updated logo for Java Edition, a new main menu panorama, and lots of bug fixes!
 

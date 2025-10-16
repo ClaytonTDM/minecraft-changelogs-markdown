@@ -1,4 +1,4 @@
-# 1.17-pre2
+# Minecraft 1.17 Pre-Release 2
 
 It's Monday and it's time for another pre-release! This one fixed a few bugs and crashes.
 

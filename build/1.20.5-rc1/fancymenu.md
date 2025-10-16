@@ -1,4 +1,4 @@
-# 1.20.5-rc1
+# Minecraft 1.20.5 Release Candidate 1
 
 This week's shipping frenzy continues with our very first Release Candidate for 1.20.5! Barring any significant or critical issues found within it, this is the version we are planning to ship as Minecraft: Java Edition 1.20.5 next week.
 

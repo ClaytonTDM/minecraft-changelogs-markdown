@@ -1,4 +1,4 @@
-# 1.21.5
+# Minecraft: Java Edition 1.21.5
 
 It's time to experience new wonders of the Overworld as we release the Spring to Life drop, the first Minecraft game drop of 2025.
 

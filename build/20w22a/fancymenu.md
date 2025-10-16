@@ -1,4 +1,4 @@
-# 20w22a
+# Minecraft Snapshot 20w22a
 
 It has been a busy week for us but we still wanted to squeeze out a snapshot as we've been busy squashing a bunch of bugs.
 

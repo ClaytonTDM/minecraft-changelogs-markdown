@@ -1,4 +1,4 @@
-# 1.20-pre6
+# Minecraft 1.20 Pre-Release 6
 
 The sixth pre-release of the 1.20 update is here, yet again containing more bug fixes.
 

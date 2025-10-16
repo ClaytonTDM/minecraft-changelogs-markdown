@@ -1,4 +1,4 @@
-# 1.21.6-rc1
+# Minecraft 1.21.6 Release Candidate 1
 
 As we get ready to Chase the Skies, here comes the first test flight of 1.21.6 - Release Candidate 1!
 

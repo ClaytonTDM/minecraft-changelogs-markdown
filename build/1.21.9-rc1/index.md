@@ -1,4 +1,4 @@
-# 1.21.9-rc1
+# Minecraft 1.21.9 Release Candidate 1
 
 We are now releasing the first, and hopefully only, release-candidate for 1.21.9. If all goes well, no further changes will be made before the full release. Happy mining!
 

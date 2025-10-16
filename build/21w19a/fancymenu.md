@@ -1,4 +1,4 @@
-# 21w19a
+# Minecraft Snapshot 21w19a
 
 Now with twice as much Java version.
 

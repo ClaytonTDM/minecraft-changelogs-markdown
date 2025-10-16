@@ -1,4 +1,4 @@
-# 1.16.4-rc1
+# Minecraft 1.16.4 Release Candidate 1
 
 We have now released 1.16.4 Release Candidate 1. If no further critical issues are found, we expect this version to be the full release of 1.16.4 on Thursday.
 

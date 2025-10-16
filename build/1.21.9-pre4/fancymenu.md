@@ -1,4 +1,4 @@
-# 1.21.9-pre4
+# Minecraft 1.21.9 Pre-Release 4
 
 Here is another Pre-Release for 1.21.9 with more bugfixes!
 

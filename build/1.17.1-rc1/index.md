@@ -1,4 +1,4 @@
-# 1.17.1-rc1
+# Minecraft 1.17.1 Release Candidate 1
 
 A first and hopefully only Release Candidate for Minecraft: Java Edition 1.17.1 is now available in the launcher, fixing a few more crashes and bugs. If nothing critical is found, we expect this to be released as the full version of 1.17.1 on Tuesday, July 6th.
 

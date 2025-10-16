@@ -1,4 +1,4 @@
-# 1.19.3-pre3
+# Minecraft 1.19.3 Pre-release 3
 
 We're now releasing pre-release 3 for Minecraft 1.19.3 with more bug fixes. Happy mining!
 

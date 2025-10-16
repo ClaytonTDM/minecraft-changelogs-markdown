@@ -1,4 +1,4 @@
-# 1.16-pre7
+# Minecraft 1.16 Pre-Release 7
 
 We've now released pre-release 7 to fix a few more bugs.
 

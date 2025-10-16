@@ -187,6 +187,8 @@ Changes to resource packs for version 7:
 
 ---
 
+# Minecraft Snapshot 20w45a
+
 Good things come to those who wait, and we've believe you've waited long enough. The first Caves & Cliffs snapshot is finally here and ready to enter the Java Edition of Minecraft! We hope that you're as excited about this as we are, because this snapshot brings you a variety of features, some changes to existing features, and a few technical changes. All of it is listed in this blog post, and we can't wait to see you experiment with it all.
 
 Happy mining!
@@ -391,6 +393,8 @@ Sets tags needed for banner patterns. Parameters:
 
 ---
 
+# Minecraft Snapshot 20w30a
+
 Today we're releasing Snapshot 20w30a for Minecraft Java Edition in which we've tweaked Bastion Remnants, and given you the ability to have lanterns under water.
 
 ## Changes in 20w30a
@@ -463,6 +467,8 @@ Example:
 
 ---
 
+# Minecraft Snapshot 20w29a
+
 Today we're releasing Snapshot 20w29a for Minecraft Java Edition. We found some bugs to squash, but also snuck in a technical change or two!
 
 ## Changes in 20w29a
@@ -506,6 +512,171 @@ Syntax: `setworldspawn [pos] [angle]` New parameters:
 -   [MC-166718](https://bugs.mojang.com/browse/MC-166718) Mobs no longer suffocate inside of soul sand, farmland or grass paths
 -   [MC-158735](https://bugs.mojang.com/browse/MC-158735) Pillagers without crossbows hold their arm up, in a way that may be offensive to some people
 -   [MC-153230](https://bugs.mojang.com/browse/MC-153230) Players in spectator mode can stop minecarts
+
+---
+
+# Minecraft Snapshot 20w28a
+
+This week's snapshot introduces experimental support for custom biomes in data packs. This work has involved redoing some of the internal plumbing of things behind the scene, so it might be a bit leaky. We hope no important parts drip out, but if they do, pick them back up for us, please.
+
+As always, make sure to make backups if you try a world in a snapshot.
+
+## Changes in 20w28a
+
+​
+
+-   Villagers now emit green particles when joining a village, setting a home bed, or acquiring a job site/profession
+-   Brewing stands can now be crafted with blackstone
+-   Tweaked bartering loot
+-   Totems of undying now give the fire resistance status affect for 40 seconds when activated
+
+​
+
+## Technical Changes in 20w28a
+
+​
+
+-   Custom worlds now support custom biomes
+-   Dedicated servers can now rate limit clients
+
+​
+
+### Customized world generation
+
+​
+
+-   There is now experimental support for a `worldgen` folder in data packs
+-   `worldgen/biome` can contain biome definitions
+-   `worldgen/configured_carver` can contain definitions for world carver settings
+-   `worldgen/configured_feature` can contain definitions for feature placements
+-   `worldgen/configured_structure_feature` can contain definitions for structure placements
+-   `worldgen/configured_surface_builder` can contain definitions for surfaces
+-   `worldgen/processor_list` can contain sets of block processors
+-   `worldgen/template_pool` can contain pool definitions for jigsaw structures
+-   Custom biomes can now be used in the single biome/caves/floating islands world types (add the data pack containing the biome first)
+-   Custom biomes can now be used in custom dimension generators
+
+​
+
+### Dedicated server packet limit
+
+​
+
+-   Dedicated servers can now kick clients that consistently send too many packets within a second
+-   Controlled with the `rate-limit` settings in `server.properties`
+-   The default rate limit of 0 means "no limit"
+
+​
+
+## Fixed bugs in 20w28a
+
+​
+
+-   [MC-34661](https://bugs.mojang.com/browse/MC-34661) Thorns enchantment causes double armor decay
+-   [MC-65953](https://bugs.mojang.com/browse/MC-65953) Tags IsBaby and IsVillager can't be changed from true to false with /entitydata
+-   [MC-171363](https://bugs.mojang.com/browse/MC-171363) Nether forest biomes: Large fungi and small plants only generate on the topmost layer of nylium, leaving all lower layers devoid of flora
+-   [MC-172221](https://bugs.mojang.com/browse/MC-172221) Hoglins, zoglins, ravagers, iron golems, and polar bears won't walk down a block if they are partially walking on air
+-   [MC-173526](https://bugs.mojang.com/browse/MC-173526) All Minecarts can survive in lava
+-   [MC-174479](https://bugs.mojang.com/browse/MC-174479) Cannot place sea pickles on soul sand
+-   [MC-174520](https://bugs.mojang.com/browse/MC-174520) Soul particle texture is incorrect for the first frame
+-   [MC-176753](https://bugs.mojang.com/browse/MC-176753) Piglins stand around dropped golden items if their "CanPickUpLoot" tag is set to "0b"
+-   [MC-179369](https://bugs.mojang.com/browse/MC-179369) Wandering Traders are always invisible in the Nether and the End
+-   [MC-181204](https://bugs.mojang.com/browse/MC-181204) doDaylightCycle button slightly incorrectly labeled
+-   [MC-181233](https://bugs.mojang.com/browse/MC-181233) Mobs cannot spawn on wooden trapdoors, but can on iron and nether fungus trapdoors
+-   [MC-182430](https://bugs.mojang.com/browse/MC-182430) Piglins continuously try and fail to pick up gold ingots if they can't reach them
+-   [MC-182868](https://bugs.mojang.com/browse/MC-182868) Rail updates are 4-5x times laggier since 1.14 if the rail is on top of a non-full cube
+-   [MC-185684](https://bugs.mojang.com/browse/MC-185684) Enderman can teleport when hit in cases where they previously would not teleport
+-   [MC-185925](https://bugs.mojang.com/browse/MC-185925) Casting issue: Mineral vein generation uses 32-bit floats, leading to precision loss and potential crashes
+-   [MC-187112](https://bugs.mojang.com/browse/MC-187112) Extra space in "Keep Jigsaws" button in jigsaw block
+-   [MC-187126](https://bugs.mojang.com/browse/MC-187126) Jigsaw block UI is not closed when pressing "Generate"
+-   [MC-187129](https://bugs.mojang.com/browse/MC-187129) Jigsaw blocks do not generate the correct structure until "Done" is pressed and the UI is reopened
+-   [MC-188459](https://bugs.mojang.com/browse/MC-188459) Potted cactus still missing cullface argument for top
+-   [MC-188534](https://bugs.mojang.com/browse/MC-188534) Potted cactus missing bottom face
+-   [MC-189769](https://bugs.mojang.com/browse/MC-189769) Fungi grows through fire
+-   [MC-190098](https://bugs.mojang.com/browse/MC-190098) Structure size and offset still limited to 32 for dedicated servers
+-   [MC-190852](https://bugs.mojang.com/browse/MC-190852) Advancement announcement message has switched brackets for right-to-left languages
+-   [MC-190856](https://bugs.mojang.com/browse/MC-190856) '/list uuids' shows parentheses incorrectly for right-to-left languages
+-   [MC-190860](https://bugs.mojang.com/browse/MC-190860) '/' (slash) in chat and command block shows legacy formatting symbol for right-to-left languages
+-   [MC-190891](https://bugs.mojang.com/browse/MC-190891) Certain redstone circuits causing lag
+-   [MC-190892](https://bugs.mojang.com/browse/MC-190892) Brackets in potion effects are reversed in right-to-left languages
+-   [MC-191501](https://bugs.mojang.com/browse/MC-191501) Opening a world from earlier 1.14 releases in 1.16 causes villagers to vanish
+-   [MC-191571](https://bugs.mojang.com/browse/MC-191571) Switched square brackets for right-to-left languages
+-   [MC-191579](https://bugs.mojang.com/browse/MC-191579) Book signing GUI has broken formatting for right-to-left languages
+-   [MC-191656](https://bugs.mojang.com/browse/MC-191656) Right-to-left languages don't perform as expected in creative search menu
+-   [MC-192306](https://bugs.mojang.com/browse/MC-192306) Crimson and warped slabs use incorrect colors on maps
+-   [MC-193073](https://bugs.mojang.com/browse/MC-193073) Game crashes when Piglins or Piglin Brutes convert to Zombified Piglins
+-   [MC-193089](https://bugs.mojang.com/browse/MC-193089) Mobs do not get damaged anymore if they're in lava and water at the same time
+-   [MC-193125](https://bugs.mojang.com/browse/MC-193125) Cannot use "Inventory" key to write in recipe book, it closes GUI instead (Default: "E")
+
+---
+
+# Minecraft Snapshot 20w27a
+
+It's time for another snapshot cycle as we make our way towards 1.16.2! This snapshot introduces the Piglin Brutes, and you might have heard about them in a [Bedrock beta](https://feedback.minecraft.net/hc/en-us/articles/360045006632-Minecraft-Beta-1-16-20-50-Xbox-One-Windows-10-Android-) already.
+
+The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these snapshots will be focused on fixing bugs.
+
+## New Features in 20w27a
+
+-   Added Piglin Brutes!
+
+### Piglin Brute
+
+-   Piglin Brutes are stronger versions of Piglins that live in bastions and protect the treasures there
+-   Unlike their cowardly and greedy counterparts, the Piglin Brutes cannot be distracted by gold and aren't afraid of anything
+-   Piglin Brutes attack players on sight, no matter how the player is dressed
+-   Piglin Brutes wield axes and don't need any armor, because they're just that tough
+
+## Changes in 20w27a
+
+-   Zoglins can now be leashed
+-   Crimson and warped fungus can now be placed on mycelium
+
+## Technical Changes in 20w27a
+
+-   Small improvements to data and resource pack selection screens
+
+### Pack selection screens
+
+-   While screen is open, it will automatically update when pack directory contents change
+-   Both pack selection screen will now display contents of `pack.png` as pack icon
+
+## Fixed bugs in 20w27a
+
+-   [MC-1058](https://bugs.mojang.com/browse/MC-1058) A dragon head is invisible if the entity wearing it is not in view
+-   [MC-2404](https://bugs.mojang.com/browse/MC-2404) Stepping down while sneaking allows falling off of blocks
+-   [MC-49476](https://bugs.mojang.com/browse/MC-49476) NBT "HideFlags" does not hide "Dyed" on leather armor
+-   [MC-68487](https://bugs.mojang.com/browse/MC-68487) Player heads of the same player always have the same skin texture, even if the saved texture data is different
+-   [MC-97507](https://bugs.mojang.com/browse/MC-97507) Using item which modifies the held item shows "Gear equips" subtitle
+-   [MC-145691](https://bugs.mojang.com/browse/MC-145691) Binding "Open/Close Inventory" to Tab only opens inventory
+-   [MC-150417](https://bugs.mojang.com/browse/MC-150417) Some items get stuck in soul sand when there is liquid above the soul sand
+-   [MC-167285](https://bugs.mojang.com/browse/MC-167285) Travelling into an end gateway with a platform on the other side while on a boat would instantly teleport you back
+-   [MC-171739](https://bugs.mojang.com/browse/MC-171739) Weeping and twisting vines, bamboo, and kelp can be replaced by "saplings" by breaking and placing the block at the same time
+-   [MC-173526](https://bugs.mojang.com/browse/MC-173526) All Minecarts can survive in lava
+-   [MC-178729](https://bugs.mojang.com/browse/MC-178729) Inconsistency: Red and brown mushrooms can't be grown into huge mushrooms on nylium, while they can on all other "grass" blocks
+-   [MC-182652](https://bugs.mojang.com/browse/MC-182652) Ruined portals don't always spawn with chest
+-   [MC-183663](https://bugs.mojang.com/browse/MC-183663) Farmer villagers don't compost correctly
+-   [MC-183743](https://bugs.mojang.com/browse/MC-183743) Iron golem overpopulation
+-   [MC-185274](https://bugs.mojang.com/browse/MC-185274) Subtitles are still showing ''Gear equips'' when eating in snapshot 20w21a or newer.
+-   [MC-188473](https://bugs.mojang.com/browse/MC-188473) Resource pack screen no longer updates when adding or removing resource packs
+-   [MC-188969](https://bugs.mojang.com/browse/MC-188969) Having a suspicious stew in inventory prevents all types of suspicious stew from going into your inventory when milking brown mooshroom
+-   [MC-189909](https://bugs.mojang.com/browse/MC-189909) player;;_;;interacted;;_;;with;;_;;entity does not trigger if there is only one item and the item gets consumed
+-   [MC-190021](https://bugs.mojang.com/browse/MC-190021) Trying to mount a pig or strider while sneaking plays hand animation
+-   [MC-190266](https://bugs.mojang.com/browse/MC-190266) Players and other entities can catch on fire after logging on while riding a Strider in lava
+-   [MC-190274](https://bugs.mojang.com/browse/MC-190274) Collecting liquids in bottles on Creative mode is inconsistent with the new creative bucket mechanics
+-   [MC-190849](https://bugs.mojang.com/browse/MC-190849) Slime blocks can only push entities 5 blocks high instead of 6 blocks high as in 1.15.2
+-   [MC-191915](https://bugs.mojang.com/browse/MC-191915) While in a boat the elytra does not show as enchanted
+-   [MC-192894](https://bugs.mojang.com/browse/MC-192894) Transparency layers lose their auxiliary depth buffer ID when resized
+
+## Get the Snapshot
+
+Snapshots are available for Minecraft Java Edition. To install the snapshot, open up the Minecraft Launcher and enable snapshots in the "Installations" tab.
+
+Testing versions can corrupt your world, please backup and/or run them in a different folder from your main worlds.
+
+Cross-platform server jar:
+
+-   [Minecraft server jar](https://launcher.mojang.com/v1/objects/40efae0a2412154f44a99f158752b8417b384f06/server.jar)
 
 ---
 

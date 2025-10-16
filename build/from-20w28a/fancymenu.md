@@ -93,6 +93,8 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ---
 
+# Minecraft Snapshot 20w27a
+
 It's time for another snapshot cycle as we make our way towards 1.16.2! This snapshot introduces the Piglin Brutes, and you might have heard about them in a [Bedrock beta](https://feedback.minecraft.net/hc/en-us/articles/360045006632-Minecraft-Beta-1-16-20-50-Xbox-One-Windows-10-Android-) already.
 
 The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these snapshots will be focused on fixing bugs.
@@ -160,6 +162,8 @@ Cross-platform server jar:
 -   [Minecraft server jar](https://launcher.mojang.com/v1/objects/40efae0a2412154f44a99f158752b8417b384f06/server.jar)
 
 ---
+
+# Minecraft Snapshot 20w22a
 
 It has been a busy week for us but we still wanted to squeeze out a snapshot as we've been busy squashing a bunch of bugs.
 
@@ -314,6 +318,8 @@ If do you find any new graphical bugs then please report them to the bug tracker
 
 ---
 
+# Minecraft Snapshot 20w21a
+
 In this snapshot, we're adding support for custom world settings and custom dimensions. This is an early release to hear your feedback about this feature - do note that this support is considered experimental and unsupported. Any custom world settings may change from one snapshot to the next, and worlds using custom settings will be clearly marked as experimental in your worlds list. ​
 
 ## New Features in 20w21a
@@ -426,6 +432,191 @@ In this snapshot, we're adding support for custom world settings and custom dime
 -   [MC-182912](https://bugs.mojang.com/browse/MC-182912) Piglins still do not change their current crossbow for a new enchanted one
 -   [MC-183249](https://bugs.mojang.com/browse/MC-183249) Carving Mask BitSets created for lower chunk statuses
 -   [MC-183786](https://bugs.mojang.com/browse/MC-183786) Named seeds that are not numbers are not being recognized
+
+---
+
+# Minecraft Snapshot 20w20b
+
+This week we are releasing a bit of a smaller snapshot. However, if you're into switching game modes and completing advancements, this is right up your alley!
+
+**Edit:** We've now released 20w20b to fix a bug
+
+## Fixed Bug in 20w20b
+
+-   [MC-183769](https://bugs.mojang.com/browse/MC-183769) NPE in server initialization
+
+## New Features in 20w20a
+
+-   Added new Game Mode Switcher debug menu
+-   Added new Nether Advancements
+
+​
+
+### Game Mode Switcher
+
+New F3 debug feature which allows you to switch game modes with traditional "tabbing" functionality. ​
+
+-   Hold F3 and tap F4 to open the menu
+-   Tapping F4 will cycle the game mode, or you can use the mouse
+-   Release F3 to apply
+-   Your last game mode is remembered and will be the first selected option, so you can quickly toggle between two game modes with a single press of F3 + F4!
+
+​
+
+#### F3 + N (Toggle Spectator)
+
+A small change has been made to this debug combination. ​
+
+-   By default, using this key would return to Creative after toggling from Spectator. It now will toggle back to the previous game mode you had.
+-   As an example, if you were in Survival, then toggled to Spectator and back, you would be set back to Survival.
+
+​
+
+### New Advancements
+
+-   `Hidden in the Depths` unlocks when obtaining Ancient Debris
+-   `Cover Me in Debris` unlocks when obtaining full Netherite armor
+-   `Country Lode, Take Me Home` unlocks when using a Compass on a Lodestone
+-   `Who Is Cutting Onions?` unlocks when obtaining Crying Obsidian
+-   `Not Quite "Nine" Lives` unlocks when setting a Respawn Anchor to the maximum
+-   `This Boat Has Legs` unlocks when riding a Strider with a Fungus on a Stick
+-   `Hot Tourist Destinations` unlocks when visiting all Biomes in the Nether
+-   `Those Were the Days` unlocks when entering a Bastion
+-   `War Pigs` unlocks when looting a chest in a Bastion
+-   `Oh Shiny` unlocks when distracting an angry Piglin with gold
+
+​
+
+## Changes in 20w20a
+
+-   The `Bullseye` advancement now unlocks when hitting the bullseye of a target block from at least 30 meters away
+-   The `Serious Dedication` advancement is now awarded for obtaining a Netherite Hoe
+-   Obtaining Blackstone now also counts for the `Stone Age` advancement
+-   Breeding Striders now counts for `The Parrots and the Bats` and is now required for `Two by Two`
+
+​
+
+## Technical Changes in 20w20a
+
+-   Shulkers with "NoAI" can now be summoned with rotation.
+-   Added `thrown_item_picked_up_by_entity` advancement trigger
+-   Added `player_generates_container_loot` advancement trigger
+-   Added `item_used_on_block` advancement trigger
+-   Removed `safely_harvest_honey` advancement trigger
+
+​
+
+### Advancements
+
+#### `item_used_on_block` trigger type
+
+Properties:
+
+-   `item` matches the thrown item which was picked up
+-   `entity` matches the entity which picked up the item
+
+​
+
+#### `player_generates_container_loot` trigger type
+
+Properties:
+
+-   `loot_table` matches the resource location of the generated loot table
+
+​
+
+#### `item_used_on_block` trigger type
+
+Properties:
+
+-   `location` matches the location at the center of the block the item was used on
+-   `item` matches the item used on the block
+
+​
+
+### Miscellaneous trigger changes
+
+-   `location` got a new property `smokey` which checks if the location is closely above a campfire
+-   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
+
+​
+
+## Fixed bugs in 20w20a
+
+-   [MC-182967](https://bugs.mojang.com/browse/MC-182967) Throwing ender pearl whilst mounted doesn't teleport you
+-   [MC-179481](https://bugs.mojang.com/browse/MC-179481) Structure block offset can't be bigger than 32
+-   [MC-175992](https://bugs.mojang.com/browse/MC-175992) Striders are not part of the "Two by Two" advancement challenge
+-   [MC-173756](https://bugs.mojang.com/browse/MC-173756) Ice Bucket Challenge advancement can be obtained by collecting obsidian from bartering
+-   [MC-173207](https://bugs.mojang.com/browse/MC-173207) Bullseye advancement can be made when using a non-arrow projectile, even though the description explicitly mentions arrows
+-   [MC-118234](https://bugs.mojang.com/browse/MC-118234) Advancement 'Not Today, Thank You' can be triggered by non-arrow projectiles
+
+---
+
+# Minecraft Snapshot 20w19a
+
+This snapshot contains another round of tweaks and bugfixes, but also quality of life features such as **strider distancing**. It might not be as important as social distancing, but we hope you'll like it. Stay safe and wash your hands!
+
+## New Features in 20w19a
+
+-   Added "distance by strider" statistic
+-   Patches of blackstone and gravel now generate in all Nether biomes, and patches of soul sand now generate in Soul Sand Valleys
+
+​
+
+## Changes in 20w19a
+
+-   Villagers can now spawn iron golems regardless of their profession status or latest working time
+-   Bastions are now a bit less common
+-   Lowered the amount that Weeping and Twisting vines grow when bonemealed
+-   You now need to use shears to get an item when breaking Nether Sprouts
+-   Tweaked spawning of mobs to more closely adhere to mob caps
+-   Biome distribution in the Nether has been tweaked
+
+## Technical Changes in 20w19a
+
+-   Fish now have their own mob category and mob cap
+
+​
+
+## Fixed bugs in 20w19a
+
+-   [MC-87949](https://bugs.mojang.com/browse/MC-87949) The shield use statistic is not working
+-   [MC-89956](https://bugs.mojang.com/browse/MC-89956) Levitation has no effect if gliding with elytra
+-   [MC-116293](https://bugs.mojang.com/browse/MC-116293) Functioning clock and compass in recipe book
+-   [MC-125613](https://bugs.mojang.com/browse/MC-125613) Datapack tag "stairs" does not use #wooden;;_;;stairs
+-   [MC-145862](https://bugs.mojang.com/browse/MC-145862) Villagers try to sleep in occupied beds
+-   [MC-152084](https://bugs.mojang.com/browse/MC-152084) Villagers occasionally stand up out of beds at night, then can never sleep in that bed again
+-   [MC-152170](https://bugs.mojang.com/browse/MC-152170) When a villager takes the bed of another villager then the bed's previous owner will not look for a new bed
+-   [MC-157077](https://bugs.mojang.com/browse/MC-157077) Villagers will not sleep in beds at night
+-   [MC-158542](https://bugs.mojang.com/browse/MC-158542) Iron Golems don't stop spawning
+-   [MC-160250](https://bugs.mojang.com/browse/MC-160250) Naturally generated villagers are not pathfinding towards their POI; POI detection range is too small
+-   [MC-166764](https://bugs.mojang.com/browse/MC-166764) Villagers spawned on world generation have a lower follow range than villagers spawned by other means
+-   [MC-170612](https://bugs.mojang.com/browse/MC-170612) Villagers spawned by meeting points have frozen AI and do not move when that chunk is freshly generated
+-   [MC-172107](https://bugs.mojang.com/browse/MC-172107) Piglins and Hoglins don't get zombified in the end
+-   [MC-172524](https://bugs.mojang.com/browse/MC-172524) Letters of name tag render inconsistently when sneaking (within the same name tag)
+-   [MC-172899](https://bugs.mojang.com/browse/MC-172899) Piglins with blocks (pumpkins) equipped on their heads show z-fighting
+-   [MC-173015](https://bugs.mojang.com/browse/MC-173015) Crimson roots, Warped roots, and Nether sprouts are not randomly offset
+-   [MC-173115](https://bugs.mojang.com/browse/MC-173115) Mobs can spawn inside of wither roses
+-   [MC-174568](https://bugs.mojang.com/browse/MC-174568) Rail updates are 3-4x times laggier since 1.13
+-   [MC-174909](https://bugs.mojang.com/browse/MC-174909) Endermen don't teleport when on magma blocks
+-   [MC-175251](https://bugs.mojang.com/browse/MC-175251) Fish are spawning in with extremely high numbers. Over 200 different entities of cod every five minutes
+-   [MC-177839](https://bugs.mojang.com/browse/MC-177839) Blackstone and blackstone walls use the blackstone side face on the bottom, while blackstone stairs and slabs use the blackstone top face on the bottom
+-   [MC-178487](https://bugs.mojang.com/browse/MC-178487) Saddles on untamed horses no longer render
+-   [MC-179989](https://bugs.mojang.com/browse/MC-179989) Smithing Table and Anvil UI does not have "Inventory" title above player inventory
+-   [MC-180064](https://bugs.mojang.com/browse/MC-180064) Piglins would rather use an unenchanted crossbow instead of an enchanted crossbow
+-   [MC-180297](https://bugs.mojang.com/browse/MC-180297) Player name color in list appears too dark
+-   [MC-180407](https://bugs.mojang.com/browse/MC-180407) Piglin bartering is limited to dropping a single item stack from the loot table
+-   [MC-180410](https://bugs.mojang.com/browse/MC-180410) Enderman spawn rate seems very low on upgraded worlds
+-   [MC-180575](https://bugs.mojang.com/browse/MC-180575) Dispensers now always plays "dispenser failed" when dispensing glowstone
+-   [MC-181353](https://bugs.mojang.com/browse/MC-181353) Warped and Crimson Doors have no hinges
+-   [MC-181418](https://bugs.mojang.com/browse/MC-181418) Entity names can no longer be colored
+-   [MC-181424](https://bugs.mojang.com/browse/MC-181424) Fish (and other items from fishing) cannot be caught with a fishing rod
+-   [MC-181461](https://bugs.mojang.com/browse/MC-181461) Enchantement glint doesn't render on shields, tridents and elytra
+-   [MC-181479](https://bugs.mojang.com/browse/MC-181479) Map marker labels do not render properly
+-   [MC-181524](https://bugs.mojang.com/browse/MC-181524) Redstone does not visually connect when going up soul sand
+-   [MC-181566](https://bugs.mojang.com/browse/MC-181566) Powered redstone dust only generates particles at the center of the block
+-   [MC-181944](https://bugs.mojang.com/browse/MC-181944) Font of category/section text in creative mode item selection screen is much thicker than in 1.15.2
+-   [MC-182595](https://bugs.mojang.com/browse/MC-182595) Parity issue: Blackstone doesn't generate in ore veins in nether wastes
 
 ---
 

@@ -1,4 +1,4 @@
-# 1.19.3-pre1
+# Minecraft 1.19.3 Pre-Release 1
 
 We’re now releasing the first pre-release for Minecraft 1.19.3. This pre-release fixes a few bugs, contains a few tweaks, and it has some technical changes.
 

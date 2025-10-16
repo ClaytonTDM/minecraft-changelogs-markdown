@@ -1,4 +1,4 @@
-# 1.17.1-pre1
+# Minecraft 1.17.1 Pre-Release 1
 
 Happy Friday! The first pre-release for 1.17.1 is now available for download. This pre-release introduces a few changes to some gameplay mechanics, and it also fixes a bunch of bugs.
 

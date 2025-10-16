@@ -1,4 +1,4 @@
-# 25w42a
+# Minecraft Snapshot 25w42a
 
 A fresh new snapshot is out with some changes to the features introduced in last week’s snapshot and bug fixes, like that you can now use the lunge and mending enchantments together on the same item. We have also added environment attributes which can be used to control various visual and gameplay effects. Happy mining!
 

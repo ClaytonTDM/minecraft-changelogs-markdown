@@ -1,4 +1,4 @@
-# 20w30a
+# Minecraft Snapshot 20w30a
 
 Today we're releasing Snapshot 20w30a for Minecraft Java Edition in which we've tweaked Bastion Remnants, and given you the ability to have lanterns under water.
 

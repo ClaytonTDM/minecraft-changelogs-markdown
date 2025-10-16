@@ -1,4 +1,4 @@
-# 1.20-pre3
+# Minecraft 1.20 Pre-Release 3
 
 We are now releasing 1.20 Pre-release 3, containing even more bug fixes.
 

@@ -1,4 +1,4 @@
-# 1.21-pre1
+# Minecraft 1.21 Pre-Release 1
 
 We're bringing you the first Pre-Release of 1.21 with leashable boats, portal-able Ender Pearls and bug fixes!
 

@@ -1,4 +1,4 @@
-# 25w09a
+# Minecraft Snapshot 25w09a
 
 In this week's snapshot, we are bringing a long-awaited feature into parity as fallen trees are making their debut in Java Edition. Additionally, firefly bushes can now generate in mangrove swamps and rarely in badlands.
 

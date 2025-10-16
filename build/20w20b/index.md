@@ -1,4 +1,4 @@
-# 20w20b
+# Minecraft Snapshot 20w20b
 
 This week we are releasing a bit of a smaller snapshot. However, if you're into switching game modes and completing advancements, this is right up your alley!
 

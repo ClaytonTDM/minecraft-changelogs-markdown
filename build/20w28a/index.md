@@ -1,4 +1,4 @@
-# 20w28a
+# Minecraft Snapshot 20w28a
 
 This week's snapshot introduces experimental support for custom biomes in data packs. This work has involved redoing some of the internal plumbing of things behind the scene, so it might be a bit leaky. We hope no important parts drip out, but if they do, pick them back up for us, please.
 

@@ -99,6 +99,8 @@ This is the first step in a process to provide more security and player safety f
 
 ---
 
+# Minecraft Snapshot 22w16b
+
 We've now released snapshot 22w16b to fix a crash.
 
 ## Fixed Bugs in 22w16b
@@ -106,6 +108,8 @@ We've now released snapshot 22w16b to fix a crash.
 -   [MC-250312](https://bugs.mojang.com/browse/MC-250312) - Game crashing when clicking singleplayer || java.lang.NullPointerException: Cannot invoke "java.lang.Comparable.compareTo(Object)" because "pivot" is null
 
 ---
+
+# Minecraft Snapshot 22w16a
 
 A chance to re-live the good old times appears in snapshot 22w16a with the ability to de-fragment a Disc - a new Music Disc, to be precise! This snapshot also comes with even more new music, tweaks to the Allay and to top it off it makes some random gameplay events slightly more predictable.
 
@@ -209,6 +213,8 @@ Some randomized events are now more predictable and no longer have a possibility
 -   [MC-250294](https://bugs.mojang.com/browse/MC-250294) Parity Issue: Allays item detection range is significantly smaller than in Bedrock
 
 ---
+
+# Minecraft Snapshot 22w15a
 
 Let me tell you a little story about hubris. Well, not so much a story as a lament. Because some of you have been thinking that the warden was a little too easy. I won’t name names, but I know you’re out there. Why else would we be adding ranged attacks for this already terrifying mob? Was the sniffing not enough? When will it end? Not today, apparently. Enjoy a new terrifying warden along with more advancements and technical changes.
 
@@ -326,6 +332,287 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 -   [MC-250103](https://bugs.mojang.com/browse/MC-250103) Can't plant bamboo on mud
 -   [MC-250104](https://bugs.mojang.com/browse/MC-250104) Can't plant big dripleaf on mud
 -   [MC-250106](https://bugs.mojang.com/browse/MC-250106) Overworld vegetation cannot be placed on muddy mangrove roots
+
+---
+
+# Minecraft Snapshot 22w14a
+
+Mangrove trees! Warm frogs! Mud blocks! More mangrove trees! Today, we’re happy to bring you the most mud-tastic Java snapshot to date!
+
+Sure, it might be our only mud-tastic snapshot to date – but the important thing is that our new biome, mangrove swamp, now is available for testing, along with nitty-gritty features like the recovery compass and other, more technical tidbits.
+
+Enjoy!
+
+## New Features in 22w14a
+
+-   Added Clay renewability
+-   Added Mangrove Trees
+-   Added Mangrove Swamp biome
+-   Added Echo Shard and Recovery Compass
+
+### Clay renewability
+
+-   Placing Mud above a block that has Pointed Dripstone underneath will eventually turn the mud block into Clay
+
+### Mangrove trees
+
+Introducing a new type of water-adapted tree that spawns propped up on roots
+
+-   Have a chance of spawning a Bee Nest
+-   Grows from Mangrove Propagules
+
+### Mangrove Swamp
+
+Muddy! Murky! Magnificent! Welcome to the newest biome - the Mangrove Swamp
+
+-   Located in warmer, more humid places where you'd normally find the Swamp biome in Minecraft
+-   Here you can find Bees and Warm Frogs
+-   The floor of this biome is coated with a thick layer of Mud, so be sure to pack your best boots
+-   Have a nice boat ride under and around the larger-than-life roots of mangrove trees
+
+### Recovery Compass
+
+A new Recovery Compass can be crafted with Echo Shards which can only be found and are unique to Ancient City chests
+
+-   Unlike a normal Compass, the Recovery Compass will point to the last place you died
+-   If you are not in the dimension you last died, or you haven't died yet in your world, it will randomly spin
+-   It can be crafted with 1 Compass surrounded by 8 Echo Shards, which can be found in Ancient Cities
+
+## Changes in 22w14a
+
+-   The Warden will now get angry at ALL living mobs that bump into it, not just players
+
+## Technical Changes in 22w14a
+
+-   `CatType` fields on enitites with type `minecraft:cat` have been replaced with `variant`, with numeric values being replaced with string ids (so, for example, `5` becomes `minecraft:calico`)
+-   Some mutually exclusive tests in entity predicate (`player`, `fishing_hook`, `lightning_bolt` and `catType`) have been collapsed to `type_specific` field
+-   Added `item_delivered_to_player` advancement trigger
+-   Added `allay_drop_item_on_block` advancement trigger
+
+### Predicates
+
+#### Entity predicate
+
+-   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
+-   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
+-   Example:
+    
+    -   Before:
+    
+         "lightning_bolt": {
+           "blocks_set_on_fire": 0
+         }
+        
+    
+    -   After
+    
+          "type_specific": {
+            "type": "lightning",
+            "blocks_set_on_fire": 0
+          }
+        
+    
+-   `catType` has been wrapped to match new format and now uses new cat variant names instead of texture names:
+    
+    -   Before
+    
+         "catType": "minecraft:textures/entity/cat/british_shorthair.png"
+        
+    
+    -   After
+    
+         "type_specific": {
+            "type": "cat",
+            "variant": "minecraft:british"
+         }
+        
+    
+-   New `type_specific` options:
+    -   `frog` has `variant` field matching frog variant (`minecraft:warm`, `minecraft:temperate` or `minecraft:cold`)
+    -   `slime` applies for slimes and magma creams, has `size` field matching slime size (smallest is `1`)
+
+### Advancements
+
+-   Removed field `location` from triggers `location`, `slept_in_bed`, `hero_of_the_village` and `voluntary_exile` - it was handled exactly the same as `player.location`
+
+#### New triggers
+
+##### `item_delivered_to_player`
+
+-   Triggered when an allay delivers an item to a player
+-   Conditions:
+    -   `player` - a player for which this trigger runs
+
+##### `allay_drop_item_on_block`
+
+-   Triggered when an allay drops an item on a block
+-   Conditions:
+    -   `player` - a player for which this trigger runs
+    -   `location` - a predicate for the block that the item was dropped on
+    -   `item` - a predicate for the item that was dropped
+
+## Fixed bugs in 22w14a
+
+-   [MC-207289](https://bugs.mojang.com/browse/MC-207289) Sculk sensor wool occlusion has directional bias
+-   [MC-207635](https://bugs.mojang.com/browse/MC-207635) Sculk sensors react differently to wool occlusion depending on the global direction.
+-   [MC-249075](https://bugs.mojang.com/browse/MC-249075) Sculk shrieker isn't grouped with other sculk related blocks in the decorations tab of creative inventory
+-   [MC-249122](https://bugs.mojang.com/browse/MC-249122) block.sculk;;_;;catalyst.bloom has no subtitle
+-   [MC-249254](https://bugs.mojang.com/browse/MC-249254) Frogs eating named slimes or magma cubes isn't logged in console
+-   [MC-249384](https://bugs.mojang.com/browse/MC-249384) Warden can create Light, barriers or structure voids particles when digging
+-   [MC-249386](https://bugs.mojang.com/browse/MC-249386) The entity shadows of wardens are too small in relation to the size of their models
+-   [MC-249387](https://bugs.mojang.com/browse/MC-249387) Warden's digging sound is the same as its emerging sound
+-   [MC-249400](https://bugs.mojang.com/browse/MC-249400) The vertical movement of wardens when they're in liquids is too sensitive
+-   [MC-249401](https://bugs.mojang.com/browse/MC-249401) Warden spawn egg isn't alphabetized correctly
+-   [MC-249415](https://bugs.mojang.com/browse/MC-249415) Wardens won't pathfind through lava even though they're immune to it
+-   [MC-249422](https://bugs.mojang.com/browse/MC-249422) Some subtitles relating to the warden don't contain possessive apostrophes where appropriate
+-   [MC-249426](https://bugs.mojang.com/browse/MC-249426) Angered wardens play the "warden takes notice angrily" sound when hit in survival on top of their hurt sound
+-   [MC-249430](https://bugs.mojang.com/browse/MC-249430) Wardens remember players in creative mode
+-   [MC-249434](https://bugs.mojang.com/browse/MC-249434) The warden indefinitely roars when attacked by multiple entities
+-   [MC-249445](https://bugs.mojang.com/browse/MC-249445) Activated sculk shriekers fail to summon the warden when broken
+-   [MC-249447](https://bugs.mojang.com/browse/MC-249447) Activated sculk shriekers fail to summon the warden if you run away
+-   [MC-249451](https://bugs.mojang.com/browse/MC-249451) Warden doesn't appear in spawner
+-   [MC-249455](https://bugs.mojang.com/browse/MC-249455) "Not a string" appears in log when serializing angered Warden
+-   [MC-249473](https://bugs.mojang.com/browse/MC-249473) Some Warden sounds play in Peaceful difficulty
+-   [MC-249476](https://bugs.mojang.com/browse/MC-249476) Warden can spawn in water
+-   [MC-249479](https://bugs.mojang.com/browse/MC-249479) Wardens will attack their teammates
+-   [MC-249499](https://bugs.mojang.com/browse/MC-249499) Warden summoned with 'Silent' tag still plays heartbeat sounds
+-   [MC-249504](https://bugs.mojang.com/browse/MC-249504) The sounds of wardens groaning angrily aren't controlled by the "Hostile Creatures" sound slider
+-   [MC-249509](https://bugs.mojang.com/browse/MC-249509) Warden is invisible for a split second when spawned in by spawner or spawn egg
+-   [MC-249517](https://bugs.mojang.com/browse/MC-249517) Warden doesn't detect non-player mobs colliding with them
+-   [MC-249526](https://bugs.mojang.com/browse/MC-249526) Sculk shriekers are not activated when the player is riding something
+-   [MC-249530](https://bugs.mojang.com/browse/MC-249530) Warden's hitbox shows up in peaceful difficulty
+-   [MC-249531](https://bugs.mojang.com/browse/MC-249531) Warden indefinitely roars when the attack target is invulnerable
+-   [MC-249646](https://bugs.mojang.com/browse/MC-249646) The warden sniffs excessively after killing a mob
+-   [MC-249659](https://bugs.mojang.com/browse/MC-249659) Sculk Catalyst and Sculk Veins only drop when broken by Silk Touch hoe
+-   [MC-249664](https://bugs.mojang.com/browse/MC-249664) Warden despawns when far away
+-   [MC-249674](https://bugs.mojang.com/browse/MC-249674) Wardens forget their targets on world reload
+-   [MC-249712](https://bugs.mojang.com/browse/MC-249712) Server hangs and game stops responding when loading a chunk containing a structure with an allay
+-   [MC-249714](https://bugs.mojang.com/browse/MC-249714) Z-fighting can be seen on the wings of allays during their death animation
+-   [MC-249720](https://bugs.mojang.com/browse/MC-249720) Allay's wings are not attached to its body
+-   [MC-249727](https://bugs.mojang.com/browse/MC-249727) Wardens stop sensing vibrations after world reload
+-   [MC-249728](https://bugs.mojang.com/browse/MC-249728) Lava can generate in ancient cities and burn wool/make structures fly
+-   [MC-249729](https://bugs.mojang.com/browse/MC-249729) Z-fighting can be seen on the underside of allays' heads
+-   [MC-249751](https://bugs.mojang.com/browse/MC-249751) Warden UV overlapping
+-   [MC-249758](https://bugs.mojang.com/browse/MC-249758) Z-fighting can be seen when the arms of allays intersect their bodies
+-   [MC-249761](https://bugs.mojang.com/browse/MC-249761) Trapdoor of Ice Box in Ancient Cities is by default open
+-   [MC-249764](https://bugs.mojang.com/browse/MC-249764) Second lamp in the centres of ancient cities is missing its sculk sensor
+-   [MC-249768](https://bugs.mojang.com/browse/MC-249768) entrance;;_;;path;;_;;5 can never generate
+-   [MC-249769](https://bugs.mojang.com/browse/MC-249769) Unused structures in ancient cities
+-   [MC-249780](https://bugs.mojang.com/browse/MC-249780) Blocks that require support can generate floating in ancient cities
+-   [MC-249785](https://bugs.mojang.com/browse/MC-249785) Warden can be pushed when emerging and digging
+-   [MC-249800](https://bugs.mojang.com/browse/MC-249800) Eating doesn't activate redstone door in the Ancient City center
+-   [MC-249816](https://bugs.mojang.com/browse/MC-249816) Wardens hitbox doesn't adjust when emerging and digging
+
+---
+
+# Minecraft Snapshot 22w13a
+
+**Allay**, the mob that nobody is really sure how to pronounce, is now entering the latest Minecraft: Java Edition snapshot. Along with our new shiny blue friend, we've added the **ancient** **cities**, which have seen some pretty drastic changes since the experimental snapshot a few weeks ago, so make sure you check them out.
+
+Happy mining!
+
+## New Features in 22w13a
+
+-   Added Allay mob
+-   Added Ancient Cities
+
+### Allay
+
+-   Allays will collect all the surrounding items that match the item they are holding
+-   Allays will like a player who hands them an item and will bring the items they collect to their liked player
+-   If the Allay hears a noteblock play, that noteblock becomes the Allay's favorite noteblock for 30 seconds. The Allay will stay near that noteblock for that duration and bring its collected items to the noteblock instead of to the player
+-   Interacting with an Allay with an empty hand will remove the item the Allay is holding
+-   Allays can be found in Pillager Outposts and Woodland Mansions
+
+### Ancient City
+
+Wander the halls of these long-abandoned structures in the Deep Dark depths to uncover some relics long forgotten.
+
+-   Ancient City structures spawn in the Deep Dark biome
+-   In chests, guarded by sculk sensors and shriekers, you can find the new Swift Sneaking enchantment
+-   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
+-   Mobs cannot spawn in Ancient Cities
+
+#### Differences compared to the Experimental Deep Dark snapshot
+
+-   Many adjustments have been made to Ancient Cities, with new and tweaked structures
+-   Loot tables have been adjusted for Ancient Cities, including a separate loot table for the "ice box" structures
+
+## Changes in 22w13a
+
+-   The recipes for minecart with chest/furnace/tnt/hopper are now shapeless
+-   When broken each minecart variant drops itself as item, instead of splitting into two items (such as chest and minecart)
+-   Only wool and wool carpets now block the sounds coming from noteblocks
+
+## Technical Changes in 22w13a
+
+-   Added `kill_mob_near_sculk_catalyst` advancement trigger
+-   Sculk shrieker block state changes
+-   Renamed some game events
+
+### Advancements
+
+#### New triggers
+
+##### `kill_mob_near_sculk_catalyst`
+
+-   Triggered when a player kills an entity next to Sculk Catalyst
+-   Conditions:
+    -   `player` - a player for which this trigger runs
+    -   `entity` - a predicate for the entity that was killed
+    -   `killing_blow` - a predicate for how the entity was killed
+
+### Sculk Shrieker
+
+-   Added `can_summon` blockstate to the Sculk Shrieker that determines whether a Shrieker can summon a Warden or not
+-   Shriekers placed via worldgen will have `can_summon` set to true
+-   When a Shrieker is placed or generated via Sculk spread, `can_summon` is set to false
+
+### Game Events
+
+Some game events have been renamed, with some of those changes to make them more gramatically consistent:
+
+-   `drinking_finish` -> `drink`
+-   `entity_killed` -> `entity_die`
+-   `entity_damaged` -> `entity_damage`
+-   `elytra_free_fall` -> `elytra_glide`
+-   `mob_interact` -> `entity_interact`
+-   `ravager_roar` -> `entity_roar`
+-   `wolf_shaking` -> `entity_shake`
+
+The following events have been collapsed into `block_activate` and `block_deactivate`:
+
+-   `block_press`
+-   `block_unpress`
+-   `block_switch`
+-   `block_unswitch`
+
+Other miscellaneous changes to game events:
+
+-   `ring_bell` has been removed and replaced with `block_change`
+-   Both `shulker_open` and `shulker_close` have been removed in favour of using `container_open` and `container_close`
+-   `fishing_rod_cast` and `fishing_rod_reel_in` have been renamed to `item_interact_start` and `item_interact_finish`
+-   Added `ignore_vibrations_on_occluding_block` game event tag with subsequent logic
+-   `entity_interact` should be dispatched more often when interacting with various mobs
+
+## Fixed bugs in 22w13a
+
+-   [MC-249103](https://bugs.mojang.com/browse/MC-249103) Z-fighting can be seen on the underside of frogs' feet
+-   [MC-249110](https://bugs.mojang.com/browse/MC-249110) Z-fighting textures inside the frog's mouth
+-   [MC-249115](https://bugs.mojang.com/browse/MC-249115) Frogs spawn with wrong color in some biomes
+-   [MC-249132](https://bugs.mojang.com/browse/MC-249132) Frogs are not required to be bred for the Two by Two advancement
+-   [MC-249349](https://bugs.mojang.com/browse/MC-249349) Dispensing a Bucket of Tadpole dispenses the item, instead of water with a tadpole
+-   [MC-249380](https://bugs.mojang.com/browse/MC-249380) The locks of chests within chest boats are positioned slightly too high
+-   [MC-249382](https://bugs.mojang.com/browse/MC-249382) Boats with chest do not drop items contained in chest when destroyed in Creative
+-   [MC-249389](https://bugs.mojang.com/browse/MC-249389) GUI Scale is a slider instead of a button
+-   [MC-249392](https://bugs.mojang.com/browse/MC-249392) Options have missing or untranslated names
+-   [MC-249397](https://bugs.mojang.com/browse/MC-249397) Bottom face of Warden's right arm missing in 'warden;;_;;bioluminescent;;_;;layer' texture
+-   [MC-249398](https://bugs.mojang.com/browse/MC-249398) Game crash regarding warden
+-   [MC-249404](https://bugs.mojang.com/browse/MC-249404) Boats with Chest aren't grouped in the recipe book
+-   [MC-249405](https://bugs.mojang.com/browse/MC-249405) chatScale option defaults to 0.0 instead of 1.0, causing chat to disappear
+-   [MC-249409](https://bugs.mojang.com/browse/MC-249409) Furnaces, blast furnaces and smokers don't cook without fuel in the bottom slot, even if they are already fired up
+-   [MC-249474](https://bugs.mojang.com/browse/MC-249474) Four-legged mobs do not sit correctly in a boat with a chest
+-   [MC-249642](https://bugs.mojang.com/browse/MC-249642) Wardens can't pass over rails
 
 ---
 

@@ -1,4 +1,4 @@
-# 21w14a
+# Minecraft Snapshot 21w14a
 
 A new snapshot is ready to be served, although somewhat… raw. Gordon Ramsey would be furious. Please don’t tell him, we don’t want to be called donuts. :(
 

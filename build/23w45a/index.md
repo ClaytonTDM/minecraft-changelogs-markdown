@@ -1,4 +1,4 @@
-# 23w45a
+# Minecraft Snapshot 23w45a
 
 We're happy to share another snapshot, this time offering an early look at some exciting new adventures waiting for you underground in the form of Trial Chambers!
 

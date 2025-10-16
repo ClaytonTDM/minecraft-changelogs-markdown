@@ -1,4 +1,4 @@
-# 25w17a
+# Minecraft Snapshot 25w17a
 
 After a long weekend we are back with another snapshot! This week we are moving the locator bar out of experiments, try it out and continue to give us your feedback over at [feedback.minecraft.net](http://feedback.minecraft.net/). We have also made some improvements to the Realms UI including region selection for your world. Happy Mining!
 

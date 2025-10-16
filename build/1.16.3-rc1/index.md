@@ -1,4 +1,4 @@
-# 1.16.3-rc1
+# Minecraft 1.16.3 Release Candidate 1
 
 What better way to start the week than with a new release candidate that fixes two bugs? 1.16.3 addresses a duplication exploit, along with a pathfinding issue.
 

@@ -1,4 +1,4 @@
-# 21w17a
+# Minecraft Snapshot 21w17a
 
 A delicious snapshot appears! This snapshot introduces some tweaks to the raw ore textures, a few copper changes, and the introduction of noodle caves in the Caves & Cliffs Preview datapack.
 

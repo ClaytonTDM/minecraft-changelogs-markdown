@@ -1,4 +1,4 @@
-# 25w36b
+# Minecraft Snapshot 25w36b
 
 Here is Snapshot 25w36b to fix some common crashes.
 

@@ -1,4 +1,4 @@
-# 21w16a
+# Minecraft Snapshot 21w16a
 
 Snapshot 21w16a introduces some changes to azaleas and dripstone. On top of that, we've tweaked the textures of raw ores. There are also a few additions to the Caves & Cliffs preview datapack.
 

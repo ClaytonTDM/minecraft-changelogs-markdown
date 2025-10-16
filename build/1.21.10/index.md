@@ -1,4 +1,4 @@
-# 1.21.10
+# Minecraft: Java Edition 1.21.10
 
 It's hotfixin' time in the shipping room this week! Today we are releasing 1.21.10 to address some important issues that have been reported for 1.21.9.
 

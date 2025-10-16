@@ -228,6 +228,8 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 
 ---
 
+# Minecraft Snapshot 25w15a
+
 Snapshot on a Tuesday? Yes! From now on we will be moving snapshots to the same weekday as full releases, Tuesdays.
 
 This week we are releasing the first snapshot of the second game drop of 2025, including the happy ghast, ghastling, dried ghast and ghast harness. Experience soaring new gameplay thanks to the happy ghast, and discover how to raise one of your own – from retrieving a dried ghast block from the Nether to submerging it in water in the Overworld to spawn a ghastling. We are also adding the locator bar to Java this week, you can finally easily find your friends when you are out adventuring.
@@ -523,6 +525,8 @@ Parameters:
 
 ---
 
+# Minecraft Snapshot 25w10a
+
 It's time for a new Minecraft snapshot! We've got some more under-the-hood updates including a `tntExplodes` game rule previously found in Bedrock edition, new features in SNBT syntax, and allowing all entities to store custom data. We also have some more bug fixes coming your way.
 
 You can now also enjoy a new main menu background, happy mining!
@@ -616,6 +620,8 @@ You can now also enjoy a new main menu background, happy mining!
 -   [MC-280439](https://bugs.mojang.com/browse/MC-280439) Values out of bounds for float and double parse successfully in SNBT resulting in storing the value Infinity
 
 ---
+
+# Minecraft Snapshot 25w09b
 
 Back so soon! We're releasing a second snapshot this week, following frequently occurring issues in yesterday's snapshot.
 

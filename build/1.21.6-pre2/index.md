@@ -1,4 +1,4 @@
-# 1.21.6-pre2
+# Minecraft 1.21.6 Pre-Release 2
 
 We're kicking the week off with another pre-release, including some music and happy ghast bug fixes. The Chase the Skies drop is getting closer and the pre-release schedule might include more than one pre-release per week.
 

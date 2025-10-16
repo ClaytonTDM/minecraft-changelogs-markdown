@@ -1,4 +1,4 @@
-# 22w11a
+# Minecraft Snapshot 22w11a
 
 Minecraft: Java Edition is jumping on the Wild Update train! The first snapshot for 1.19 is now available. It contains frogs, the Deep Dark, and a bunch of new blocks. We've also entered the era of 3D directional audio. Keeping up with the times!
 

@@ -60,6 +60,8 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ---
 
+# Minecraft Snapshot 23w35a
+
 We are releasing a new snapshot that contains updates to support libraries, and a whole bundle of bug fixes!
 
 ## Technical Changes
@@ -93,6 +95,8 @@ We are releasing a new snapshot that contains updates to support libraries, and 
 -   [MC-264947](https://bugs.mojang.com/browse/MC-264947) Torches generated on end fountain don't emit light
 
 ---
+
+# Minecraft Snapshot 23w33a
 
 We are making some important updates to our Player Reporting Tool in this Snapshot to better protect the online safety of our players.
 
@@ -178,6 +182,8 @@ This change does not affect the reach of players, and mobs still need to see the
 -   [MC-264773](https://bugs.mojang.com/browse/MC-264773) There's a misplaced label in the network traffic graph, overlapping minimum B/s rate text
 
 ---
+
+# Minecraft Snapshot 23w32a
 
 Hello! This very technical snapshot contains vibration changes, data pack and resource pack changes, some network optimizations, new debug tools, and a some bug fixes. Enjoy!
 

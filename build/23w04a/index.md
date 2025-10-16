@@ -1,4 +1,4 @@
-# 23w04a
+# Minecraft Snapshot 23w04a
 
 Tuesday is the new Wednesday, did you know? Here is snapshot 23w04a with a new experimental Armor Trim Smithing feature in the Update\_1\_20 experimental pack.
 

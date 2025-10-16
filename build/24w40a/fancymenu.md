@@ -1,4 +1,4 @@
-# 24w40a
+# Minecraft Snapshot 24w40a
 
 Hello!
 

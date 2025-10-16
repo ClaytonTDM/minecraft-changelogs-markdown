@@ -1,4 +1,4 @@
-# 1.20
+# Minecraft: Java Edition 1.20
 
 What, is there something special happening today? Hold on, let me grab my calendar book from my chiseled bookshelf.
 

@@ -89,6 +89,8 @@ Happy world creating!
 
 ---
 
+# Minecraft Snapshot 23w04a
+
 Tuesday is the new Wednesday, did you know? Here is snapshot 23w04a with a new experimental Armor Trim Smithing feature in the Update;;_;;1;;_;;20 experimental pack.
 
 Happy trimming!
@@ -277,6 +279,8 @@ Happy trimming!
 -   [MC-259211](https://bugs.mojang.com/browse/MC-259211) You cannot select incompatible resource packs within the resource packs menu via keyboard navigation
 
 ---
+
+# Minecraft Snapshot 23w03a
 
 We're now releasing the first snapshot for Minecraft 1.19.4. This release contains new accessibility functionality, new commands and plenty of bug fixes!
 
@@ -475,6 +479,8 @@ Added an optional `fallback` field to `translate` text components.
 -   [MC-258953](https://bugs.mojang.com/browse/MC-258953) Out of memory screen has raw message in the title
 
 ---
+
+# Minecraft Snapshot 22w46a
 
 We are now releasing snapshot 22w46a for Minecraft 1.19.3 with [playable mob sounds](https://www.minecraft.net/article/playable-mob-sounds-coming-minecraft-1-20) added as an experimental feature, improvements for telemetry data and several technical improvements.
 

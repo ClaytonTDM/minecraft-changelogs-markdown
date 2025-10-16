@@ -1,4 +1,4 @@
-# 1.21.2-rc1
+# Minecraft 1.21.2 Release Candidate 1
 
 We missed you so much since the previous pre-release so today we're releasing Release Candidate 1. If no critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.2, the Bundles of Bravery drop.
 

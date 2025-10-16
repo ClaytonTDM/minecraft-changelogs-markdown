@@ -1,4 +1,4 @@
-# 21w11a
+# Minecraft Snapshot 21w11a
 
 An absolutely shocking snapshot arrives! This snapshot adds some new functionality to Copper, some general tweaks, a fancy new way of getting performance metrics, and a bunch of bugfixes.
 

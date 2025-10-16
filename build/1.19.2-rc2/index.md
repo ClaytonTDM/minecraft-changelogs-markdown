@@ -1,4 +1,4 @@
-# 1.19.2-rc2
+# Minecraft 1.19.2 Release Candidate 2
 
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.2. This release candidate fixes a critical issue related to server connectivity with secure chat. If there are no major issues following this release, no further changes will be done before the full release.
 

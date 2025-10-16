@@ -1,4 +1,4 @@
-# 1.21.9-pre3
+# Minecraft 1.21.9 Pre-Release 3
 
 We'll kick the week off with a third pre-release for the Copper Age Drop. This pre-release includes a performance update and bug fix for the copper golem.
 

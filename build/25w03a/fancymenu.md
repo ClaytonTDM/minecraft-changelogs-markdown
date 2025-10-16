@@ -1,4 +1,4 @@
-# 25w03a
+# Minecraft Snapshot 25w03a
 
 This week's snapshot comes with a huge update to game tests! The game tests system is now accessible through data packs with the new test command. You can now run block based tests with the new test block or set up even more versatile test from code in mods.
 

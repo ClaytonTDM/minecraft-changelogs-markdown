@@ -1,4 +1,4 @@
-# 1.21.4-pre1
+# Minecraft 1.21.4 Pre-Release 1
 
 The first pre-release of Minecraft 1.21.4 is now available. Today's update and for the remainder of the 1.21.4 cycle, you will mostly see bug fixes and tweaks. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing only on Wednesdays, so keep an eye out for the next pre-release.
 

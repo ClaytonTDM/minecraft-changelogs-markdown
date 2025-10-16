@@ -1,4 +1,4 @@
-# 1.20-pre1
+# Minecraft 1.20 Pre-release 1 
 
 It is now time for the first Pre-release for Minecraft 1.20: The Trails and Tales update!
 

@@ -1,4 +1,4 @@
-# 25w06a
+# Minecraft Snapshot 25w06a
 
 This week we have been contemplating existential questions like "What came first; the cold chicken or the blue egg?". It's time for the cold chicken and the warm chicken to make their way into snapshot 25w06a together with their respective colorful egg. In addition, pink cactus flowers and dry grass will now decorate deserts and badlands.
 

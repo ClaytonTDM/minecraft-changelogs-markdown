@@ -107,6 +107,8 @@ Have fun exploring!
 
 ---
 
+# Minecraft Snapshot 25w07a
+
 Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updating trades for wandering traders and cartographers. We have also introduced new, biome-based spawn rules for sheep. It's time to go out and explore the world! Mojang's bug-tracker Mojira is migrating to the cloud and during the process bug reporting is unavailable. The new platform will soon be up and running, ready for players to log in, create accounts, and most importantly – report bugs! During the downtime, try to keep the bug alive and report it once Mojira is back!
 
 ## New Features
@@ -403,6 +405,8 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ---
 
+# Minecraft Snapshot 25w06a
+
 This week we have been contemplating existential questions like "What came first; the cold chicken or the blue egg?". It's time for the cold chicken and the warm chicken to make their way into snapshot 25w06a together with their respective colorful egg. In addition, pink cactus flowers and dry grass will now decorate deserts and badlands.
 
 ## New Features
@@ -538,6 +542,8 @@ Conditions for The Firefly Bush playing ambient sounds have changed. It now play
 -   [MC-279972](https://bugs.mojang.com/browse/MC-279972) Using /setblock & /fill with fluids of levels at a non-full-block no longer updates the fluid
 
 ---
+
+# Minecraft Snapshot 25w05a
 
 Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snapshot is filled with new features: Say hello the cold and warm cow variants roaming cold and warm biomes across the Overworld, treat your ears to new ambient desert sounds and spruce up your builds with the bush block and sparkling firefly bush! And of course, we're also bringing you a fresh collection of bug fixes and technical updates. Happy mining!
 

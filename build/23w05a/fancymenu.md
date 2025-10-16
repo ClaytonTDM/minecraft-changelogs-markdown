@@ -1,4 +1,4 @@
-# 23w05a
+# Minecraft Snapshot 23w05a
 
 In this snapshot we've tweaked the armor trim feature and redefined the Create New World user experience flow.
 

@@ -1,4 +1,4 @@
-# 1.21.9-pre2
+# Minecraft 1.21.9 Pre-Release 2
 
 We heard Friday would be a Pre-tty cool day to release the second Pre-Release for Minecraft: Java Edition 1.21.9, so here we are! This pre-release contains fixes to various issues introduced in previous snapshots, as well as a missed bump to the Data Pack major version.
 

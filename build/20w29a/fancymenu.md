@@ -1,4 +1,4 @@
-# 20w29a
+# Minecraft Snapshot 20w29a
 
 Today we're releasing Snapshot 20w29a for Minecraft Java Edition. We found some bugs to squash, but also snuck in a technical change or two!
 

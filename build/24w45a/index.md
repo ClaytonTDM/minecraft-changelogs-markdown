@@ -1,4 +1,4 @@
-# 24w45a
+# Minecraft Snapshot 24w45a
 
 With the spooky season behind us, we are entering November with the release of Snapshot 24w45a. This update comes with a bunch of bug fixes, changes to how mobs interact with equipable items on the ground, improvements to item models by adding more functionality and much more. It's a hefty update for resource packs! Enjoy!
 

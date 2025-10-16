@@ -1,4 +1,4 @@
-# 1.21.4-rc3
+# Minecraft 1.21.4 Release Candidate 3
 
 What's better than shipping on a Friday? How about shipping twice on a Friday?!
 

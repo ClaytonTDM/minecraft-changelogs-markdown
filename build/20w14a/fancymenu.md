@@ -1,4 +1,4 @@
-# 20w14a
+# Minecraft Snapshot 20w14a
 
 Even though we just added [every update imaginable to Minecraft](https://www.minecraft.net/article/every-update-imaginable-coming-minecraft), we thought that it might be good to pick up the Nether Update snapshots from where we left off. This snapshot introduces the Zoglins!
 

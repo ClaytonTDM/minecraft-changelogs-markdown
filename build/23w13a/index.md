@@ -1,4 +1,4 @@
-# 23w13a
+# Minecraft Snapshot 23w13a
 
 In this week's snapshot 23w13a we're following up on all the new things in last week's snapshot with a big round of bug fixes. Happy mining!
 

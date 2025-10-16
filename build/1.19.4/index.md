@@ -1,4 +1,4 @@
-# 1.19.4
+# Minecraft: Java Edition 1.19.4
 
 We're now releasing 1.19.4 for Minecraft: Java Edition. This release comes with improvements to horse breeding and jukeboxes, new visuals for potions, new accessibility features and many new technical capabilities like the damage and ride commands and display and interaction entities.
 

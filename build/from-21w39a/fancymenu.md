@@ -114,6 +114,8 @@ Sets `Potion` tag on any item
 
 ---
 
+# Minecraft Snapshot 21w38a
+
 The second Caves & Cliffs: Part II snapshot is here! This snapshot mostly contains tweaks and bug fixes, but there are also some new technical additions such as a separate simulation distance slider and an increased thread count (no I'm not talking about the fancy sheets you're thinking about buying).
 
 Oh, and you also seemed to enjoy Strongholds quite a lot, so we decided to add them back into the game. Enjoy!
@@ -199,6 +201,8 @@ At this point the only implemented event is world load.
 -   [MC-237109](https://bugs.mojang.com/browse/MC-237109) Aquifers often generate with harsh straight borders
 
 ---
+
+# Minecraft Snapshot 21w37a
 
 Marvellous mountains and colossal caves, this snapshot has it all! Today we're bringing the Overworld revamp to regular snapshots. If you've been playing or checking out the experimental snapshots that we've been releasing, you should be familiar with what you're seeing. If not, you're in for a treat!
 
@@ -502,6 +506,8 @@ Example:
 -   [MC-231863](https://bugs.mojang.com/browse/MC-231863) Game crashes when trying to access the realms settings
 
 ---
+
+# Minecraft Snapshot 21w20a
 
 Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
 

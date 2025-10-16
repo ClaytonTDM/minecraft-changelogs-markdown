@@ -1,4 +1,4 @@
-# 24w05a
+# Minecraft Snapshot 24w05a
 
 Hi everyone! We're back with yet another snapshot for 1.20.5, which includes a collection of technical changes, bug fixes and a new experimental feature for Trial Chambers, the Vault Block!
 

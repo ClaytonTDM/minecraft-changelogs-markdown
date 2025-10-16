@@ -1,4 +1,4 @@
-# 23w31a
+# Minecraft Snapshot 23w31a
 
 I was personally quite convinced that the game was already perfect, but it seems that our developers disagree. We are now releasing the first snapshot for Minecraft 1.20.2!
 

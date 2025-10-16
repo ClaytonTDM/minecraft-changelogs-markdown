@@ -1,4 +1,4 @@
-# 24w07a
+# Minecraft Snapshot 24w07a
 
 We are now releasing 24w07a, containing bug fixes and a new skeleton variant called Bogged.
 

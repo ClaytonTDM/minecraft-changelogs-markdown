@@ -1,4 +1,4 @@
-# 22w17a
+# Minecraft Snapshot 22w17a
 
 Prepare to drop some sick bleats in the latest Minecraft: Java Edition snapshot! We're bringing in the sweet sounds of the goat horn. There are also some changes to the warden and the allay.
 

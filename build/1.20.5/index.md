@@ -1,4 +1,4 @@
-# 1.20.5
+# Minecraft: Java Edition 1.20.5
 
 Do you smell that? Ah yes, it's the magical, tell-tale scent of release day Tuesday - and what a release day it is!
 

@@ -1,4 +1,4 @@
-# 1.18-pre2
+# Minecraft 1.18 Pre-Release 2
 
 The second pre-release for Minecraft Java is now available. In this pre-release, we've upgraded the Java version that is bundled with the game, and the game now uses Java 17. Other than this, we've mostly been busy fixing bugs.
 

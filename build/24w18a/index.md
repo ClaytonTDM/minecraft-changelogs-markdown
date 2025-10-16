@@ -1,4 +1,4 @@
-# 24w18a
+# Minecraft Snapshot 24w18a
 
 Because it's the month of May, may we tempt you with the first Snapshot for Java Edition 1.21? This one looks as excellent as it sounds, thanks to the 20 new paintings and 3 new music discs it adds to the game. And we're not stopping there, data-driven enchantments are also being thrown into the fray with this Snapshot (hence the 900+ line changelog). We also included a batch of new bug fixes for good measure.
 

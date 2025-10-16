@@ -1,4 +1,4 @@
-# 1.15
+# Minecraft: Java Edition 1.15
 
 ## Features
 

@@ -1,4 +1,4 @@
-# 24w12a
+# Minecraft Snapshot 24w12a
 
 Here's snapshot 24w12a with new advancements and several tweaks.
 

@@ -1,4 +1,4 @@
-# 21w20a
+# Minecraft Snapshot 21w20a
 
 Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
 

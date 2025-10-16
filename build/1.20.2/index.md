@@ -1,4 +1,4 @@
-# 1.20.2
+# Minecraft: Java Edition 1.20.2
 
 We're now releasing 1.20.2 for Minecraft: Java Edition. This release comes with more diamond ore in the deep regions of the world and changes to mob attack reach as well as optimizations to the game's networking performance enabling smoother online play even on low-bandwidth connections.
 

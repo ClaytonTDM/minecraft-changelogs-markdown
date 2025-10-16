@@ -1,4 +1,4 @@
-# 21w38a
+# Minecraft Snapshot 21w38a
 
 The second Caves & Cliffs: Part II snapshot is here! This snapshot mostly contains tweaks and bug fixes, but there are also some new technical additions such as a separate simulation distance slider and an increased thread count (no I'm not talking about the fancy sheets you're thinking about buying).
 

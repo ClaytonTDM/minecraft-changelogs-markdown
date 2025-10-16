@@ -1,4 +1,4 @@
-# 1.21.5-pre1
+# Minecraft 1.21.5 Pre-Release 1
 
 Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you will mostly see bug fixes and technical tweaks until the start of the next snapshot cycle. As we enter the pre-release phase we will be releasing more frequently than our regular cadence on Wednesdays, so keep an eye out for the next pre-release!
 

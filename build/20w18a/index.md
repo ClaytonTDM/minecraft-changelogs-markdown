@@ -1,4 +1,4 @@
-# 20w18a
+# Minecraft Snapshot 20w18a
 
 In this snapshot we made some changes to Redstone wire and we fixed a bunch of bugs.
 

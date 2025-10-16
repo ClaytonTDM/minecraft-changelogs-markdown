@@ -1,4 +1,4 @@
-# 1.20.5-rc2
+# Minecraft 1.20.5 Release Candidate 2
 
 We're honestly starting to lose count at this point. Anyways! Here's 1.20.5 Release Candidate 2 coming in clutch with some bona fide bug fixes to round off the week.
 

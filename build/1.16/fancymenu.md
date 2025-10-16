@@ -1,4 +1,4 @@
-# 1.16
+# Minecraft: Java Edition 1.16
 
 One does not simply walk into the Nether, but it seems that's what everyone is about to do anyway...
 

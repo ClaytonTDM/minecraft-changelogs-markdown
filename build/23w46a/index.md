@@ -1,4 +1,4 @@
-# 23w46a
+# Minecraft Snapshot 23w46a
 
 This snapshot brings about a few redstone-focused changes. Notably, we’re tweaking the tick delay behavior of the crafter and the copper bulb while they’re still in experimental development.
 

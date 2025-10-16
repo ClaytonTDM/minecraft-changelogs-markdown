@@ -94,6 +94,8 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ---
 
+# Minecraft Snapshot 25w18a
+
 Leads have become a hot commodity in the recent snapshots and this week they are getting an updated recipe, making it much easier to craft leads for all your leashing needs. The dried ghast is also getting a new recipe, based on soul sand and ghast tears. We have updated Unifont to 16.0.03 and this time we included glyphs from Unifont's Private Use Areas. That means creators will now be able to use scripts in the Under-ConScript Unicode Registry like Tengwar or Sitelen Pona.
 
 ## Changes
@@ -171,6 +173,8 @@ Leads have become a hot commodity in the recent snapshots and this week they are
 -   [MC-297184](https://bugs.mojang.com/browse/MC-297184) 'Realms' is lowercase in `mco.errorMessage.realmsService.configurationError`.
 
 ---
+
+# Minecraft Snapshot 25w17a
 
 After a long weekend we are back with another snapshot! This week we are moving the locator bar out of experiments, try it out and continue to give us your feedback over at [feedback.minecraft.net](http://feedback.minecraft.net/). We have also made some improvements to the Realms UI including region selection for your world. Happy Mining!
 
@@ -365,6 +369,8 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 -   [MC-296984](https://bugs.mojang.com/browse/MC-296984) The "No pending invites!" text within the realms invitation menu is rendered behind the background
 
 ---
+
+# Minecraft Snapshot 25w16a
 
 In this week’s snapshot leads are getting new mechanics making it possible to leash mobs together or leash them to entities like boats! Now you can travel the desert with your own camel caravan or airlift your treasures in a boat with chest attached to your happy ghast. Moving villagers have never been easier! As you are soaring through the skies you will see that the clouds render infinitely.
 

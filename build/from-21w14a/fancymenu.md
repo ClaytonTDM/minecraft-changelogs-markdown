@@ -37,6 +37,8 @@ Most of us have just gotten back from being off for a few days during Easter, so
 
 ---
 
+# Minecraft Snapshot 21w13a
+
 Another snapshot hits the streets, and it's dropping some sick bleats. That's right, Goats are leaping into this snapshot!
 
 ## New Features in 21w13a
@@ -234,6 +236,8 @@ Added an alternative solid black background color for the Mojang Studios loading
 
 ---
 
+# Minecraft Snapshot 21w11a
+
 An absolutely shocking snapshot arrives! This snapshot adds some new functionality to Copper, some general tweaks, a fancy new way of getting performance metrics, and a bunch of bugfixes.
 
 Happy mining!
@@ -387,6 +391,8 @@ The exact metrics, output format and names are susceptible to change between ver
 
 ---
 
+# Minecraft Snapshot 21w10a
+
 A truly fabulous snapshot enters the arena! This snapshot brings fundamental changes to our rendering pipeline with the introduction of the brand new tech that is OpenGL Core 3.2. On top of that, we're finally introducing the Lush Caves biome. However, as with the Dripstone Caves, this is only available through creating a custom world.
 
 There's an important note about this snapshot for those of you with older computers: With the introduction of OpenGL Core 3.2 there is a chance Minecraft Java will no longer run on computers that do not meet the [minimum system requirements](https://help.minecraft.net/hc/en-us/articles/360035131371-Minecraft-Java-Edition-system-requirements-). Computers that meet the [minimum system requirements](https://help.minecraft.net/hc/en-us/articles/360035131371-Minecraft-Java-Edition-system-requirements-) should not be affected.
@@ -491,6 +497,19 @@ The current rendering engine uses a system similar to the post processing shader
 -   [MC-216765](https://bugs.mojang.com/browse/MC-216765) Coal ore can generate below Y=0 when attached to a fossil
 -   [MC-216817](https://bugs.mojang.com/browse/MC-216817) Inconsistency: Cobbled deepslate cannot be smelted back into deepslate
 -   [MC-218139](https://bugs.mojang.com/browse/MC-218139) Spectator vision bug
+
+---
+
+# Minecraft Snapshot 21w08b
+
+Snapshot 21w08b is a small hotfix to fix two issues with ore distribution.
+
+Happy mining!
+
+## Fixed Bugs in 21w08b
+
+-   [MC-216744](https://bugs.mojang.com/browse/MC-216744) Iron ore doesn't generate (only iron ore in deepslate is generated)
+-   [MC-216101](https://bugs.mojang.com/browse/MC-216101) Redstone ore generates with a flat distribution below y=12
 
 ---
 

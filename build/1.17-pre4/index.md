@@ -1,4 +1,4 @@
-# 1.17-pre4
+# Minecraft 1.17 Pre-Release 4
 
 The fourth pre-release for 1.17 is now available, and this one fixes a few additional bugs and crashes.
 

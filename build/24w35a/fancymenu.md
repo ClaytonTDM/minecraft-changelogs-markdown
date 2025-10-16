@@ -1,4 +1,4 @@
-# 24w35a
+# Minecraft Snapshot 24w35a
 
 Hello! In this week's snapshot we have addressed some important bugs related to village raid spawns, Bundles and Redstone.
 

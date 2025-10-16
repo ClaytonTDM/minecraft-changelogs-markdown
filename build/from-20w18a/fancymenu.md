@@ -175,6 +175,8 @@ is now equivalent to:
 
 ---
 
+# Minecraft Snapshot 20w17a
+
 This week's snapshot brings you some tweaks, bugfixes, and technical changes!
 
 We also have a survey up so that you can tell us what you think about the Nether Update. You can find it by clicking [here](https://www.surveymonkey.com/r/SF65G2F). We would very much appreciate if you could take the time and fill it out.
@@ -290,6 +292,8 @@ Chat component style now supports `font` property, which is resource location fo
 
 ---
 
+# Minecraft Snapshot 20w16a
+
 Bastion remnants, or "home sweet home" as Piglins would call them, are finally here! This snapshot introduces the home of the Piglins. If you scour the world you might also find ruins of some old portals.
 
 ## New Features in 20w16a
@@ -350,6 +354,8 @@ This enables server admins to hook alerts and graphing tools using ordinary JMX 
 -   [MC-178368](https://bugs.mojang.com/browse/MC-178368) When rotating a lodestone compass is put in the item frame the compass don't work
 
 ---
+
+# Minecraft Snapshot 20w15a
 
 It's a wonderful day here in Sweden today! The sun is shining and spring is in the air, and when I say "spring" I mean **pollen**. Let's remedy that by 1) Staying indoors and 2) Introduce an all new biome with a grain of basalt, blackstone, and magma cubes! To spice it up, we also have some new fine tunes for you to listen to while traversing the Nether. Enjoy the snapshot!
 
@@ -442,6 +448,116 @@ Take a portal to the Nether, and stay awhile and listen...
 -   [MC-177085](https://bugs.mojang.com/browse/MC-177085) Missing UUID field in attributes crash the game
 -   [MC-177102](https://bugs.mojang.com/browse/MC-177102) Zoglins aren't considered an undead mob
 -   [MC-177225](https://bugs.mojang.com/browse/MC-177225) Tag minecraft:water used before it was bound
+
+---
+
+# Minecraft Snapshot 20w14a
+
+Even though we just added [every update imaginable to Minecraft](https://www.minecraft.net/article/every-update-imaginable-coming-minecraft), we thought that it might be good to pick up the Nether Update snapshots from where we left off. This snapshot introduces the Zoglins!
+
+## New Features in 20w14a
+
+-   Hoglins that somehow end up in the Overworld become Zoglins fairly quickly - but who would ever bring a Hoglin to the Overworld?
+-   Compasses can now be enchanted with Curse of Vanishing
+
+​
+
+### Zoglins
+
+​
+
+-   Zoglins are zombified hoglins - the result of bringing a hoglin into the overworld
+-   Unlike hoglins they can't be bred or fed, and they don't care about warped fungus
+-   Beware - these beasts are raving mad and attack just about everything they see!
+
+## Changes in 20w14a
+
+-   The main menu background is now in the Nether
+-   The General statistics list is now alphabetically sorted
+-   Strider balancing
+
+### Strider Balancing
+
+-   Strider speed while mounted has been significantly increased to more closely resemble boat speeds
+-   Warped Fungus on a Stick now has 100 max item damage, and only takes 1 damage per Strider consume
+-   When Warped Fungus on a Stick is used with Striders, the boost is a great way to traverse the lava seas
+
+​
+
+## Technical Changes in 20w14a
+
+-   The compass now has `LodestonePos`, `LodestoneDimension` and `LodestoneTracked` data fields. If `LodestoneTracked` is zero, the game will skip checking for a Lodestone in the specified position.
+-   Attributes are now added to game registry, similar to items, sound events, etc.
+-   Region files are now opened in synchronous mode to increase reliability
+
+​
+
+### Attributes
+
+Attributes have been moved to game registry. That means few changes: ​
+
+-   Items and entities will no longer keep unknown attributes
+-   Names of some attributes have been renamed to meet resource location requirements
+
+#### Renames:
+
+-   `generic.maxHealth` 🡆 `generic.max_health`
+-   `zombie.spawnReinforcements` 🡆 `zombie.spawn_reinforcements`
+-   `horse.jumpStrength` 🡆 `horse.jump_strength`
+-   `generic.followRange` 🡆 `generic.follow_range`
+-   `generic.knockbackResistance` 🡆 `generic.knockback_resistance`
+-   `generic.movementSpeed` 🡆 `generic.movement_speed`
+-   `generic.flyingSpeed` 🡆 `generic.flying_speed`
+-   `generic.attackDamage` 🡆 `generic.attack_damage`
+-   `generic.attackKnockback` 🡆 `generic.attack_knockback`
+-   `generic.attackSpeed` 🡆 `generic.attack_speed`
+-   `generic.armorToughness` 🡆 `generic.armor_toughness`
+
+## Fixed bugs in 20w14a
+
+-   [MC-83039](https://bugs.mojang.com/browse/MC-83039) End City chests generate destroyed, items on the ground
+-   [MC-91893](https://bugs.mojang.com/browse/MC-91893) Missing subtitles for various sounds
+-   [MC-109248](https://bugs.mojang.com/browse/MC-109248) Extended piston head not removed when /setblock is used to place a different piston base.
+-   [MC-115750](https://bugs.mojang.com/browse/MC-115750) Advancement "Monster Hunter" (kill;;_;;a;;_;;mob) is not granted for killing certain hostile mobs
+-   [MC-116756](https://bugs.mojang.com/browse/MC-116756) Reversed and inconsistent subtitles for iron trapdoor
+-   [MC-124428](https://bugs.mojang.com/browse/MC-124428) Firework star crashes game if there's an int array but no colors
+-   [MC-125055](https://bugs.mojang.com/browse/MC-125055) Igloo generates with brewing stand and flower pot contents dropped (and placed)
+-   [MC-127316](https://bugs.mojang.com/browse/MC-127316) General statistics out of order
+-   [MC-133049](https://bugs.mojang.com/browse/MC-133049) Compasses don't point to the correct location when in an item frame on the ground or on the ceiling
+-   [MC-154427](https://bugs.mojang.com/browse/MC-154427) Villagers only pick up four stacks of items
+-   [MC-164129](https://bugs.mojang.com/browse/MC-164129) Ender dragon inner hitboxes are rendered offset by approximately 200 blocks
+-   [MC-164446](https://bugs.mojang.com/browse/MC-164446) Tags don't load if one of their values is invalid, causing all data packs to unload
+-   [MC-169975](https://bugs.mojang.com/browse/MC-169975) Highlight players (spectators) key doesn't affect any players other than yourself
+-   [MC-171020](https://bugs.mojang.com/browse/MC-171020) New nether biomes don't work properly in buffet worlds
+-   [MC-172069](https://bugs.mojang.com/browse/MC-172069) Piston arms are not deleted when the base of a pulsing piston is replaced with another piston
+-   [MC-173192](https://bugs.mojang.com/browse/MC-173192) Fluid collision is too high
+-   [MC-173684](https://bugs.mojang.com/browse/MC-173684) Spawning under the portal when using a nether portal
+-   [MC-173774](https://bugs.mojang.com/browse/MC-173774) Shulker bullets do not act as a projectile
+-   [MC-173875](https://bugs.mojang.com/browse/MC-173875) Item frames cannot be interacted with after unloading and reloading the chunk
+-   [MC-174231](https://bugs.mojang.com/browse/MC-174231) Ocelots are no longer spawning
+-   [MC-174838](https://bugs.mojang.com/browse/MC-174838) Target detection of fireworks is unreliable
+-   [MC-175201](https://bugs.mojang.com/browse/MC-175201) Misrotated floor block in savanna;;_;;small;;_;;house;;_;;1, savanna;;_;;small;;_;;house;;_;;2, savanna;;_;;small;;_;;house;;_;;3 and savanna;;_;;small;;_;;house;;_;;7
+-   [MC-175434](https://bugs.mojang.com/browse/MC-175434) Fireworks launched from upwards-facing dispensers explode inside of the dispenser block
+-   [MC-175985](https://bugs.mojang.com/browse/MC-175985) Lodestone compass needle doesn't have an animation
+-   [MC-175990](https://bugs.mojang.com/browse/MC-175990) Lodestone compass needle spins around quickly when the lodestone has been destroyed or is not in the same dimension
+-   [MC-176052](https://bugs.mojang.com/browse/MC-176052) Using a compass on a lodestone plays no hand animation
+-   [MC-176195](https://bugs.mojang.com/browse/MC-176195) Many mountable mobs and vehicles can still be shot by the rider's arrows
+-   [MC-176231](https://bugs.mojang.com/browse/MC-176231) Compasses with custom enchantments does not display enchanted glint
+-   [MC-176269](https://bugs.mojang.com/browse/MC-176269) Right-clicking Lodestone with Compass also uses offhand item
+-   [MC-176420](https://bugs.mojang.com/browse/MC-176420) Lodestone compass sound is in friendly creatures option
+-   [MC-176644](https://bugs.mojang.com/browse/MC-176644) Observers don't trigger when a fence connects to a newly grown tree
+
+---
+
+# Minecraft Snapshot 20w13b
+
+A small release to fix a few critical bugs.
+
+## Fixed bugs in 20w13b
+
+-   [MC-175177](https://bugs.mojang.com/browse/MC-175177) Exhausting, breaking or obstructing the respawn anchor creates ghost blocks in the overworld when breaking blocks
+-   [MC-175988](https://bugs.mojang.com/browse/MC-175988) Dying without a valid spawnpoint causes a softlock
+-   [MC-176004](https://bugs.mojang.com/browse/MC-176004) Cannot interact with the world after dying in the end or the nether without a valid spawn point
 
 ---
 

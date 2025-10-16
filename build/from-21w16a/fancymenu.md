@@ -98,6 +98,8 @@ Download the updated [datapack here](https://launcher.mojang.com/v1/objects/ebe5
 
 ---
 
+# Minecraft Snapshot 21w15a
+
 In today’s snapshot, we’re making a few needed changes that directly relate to our [recent announcement](https://www.minecraft.net/article/a-caves---cliffs-announcement). If you haven’t yet read it, we strongly recommend you do. You can also check out [this Caves & Cliffs video](https://youtu.be/6YgKUZnUyak) from Agnes and Henrik to learn more about our plans for the update.
 
 Even though some features will be released later than we’d planned, you can still try them out through a separate data pack. More information, as well as our latest tweaks, can be found here below.
@@ -208,6 +210,8 @@ When `require-resource-pack` is used in `server.properties`, there's now an opti
 
 ---
 
+# Minecraft Snapshot 21w14a
+
 A new snapshot is ready to be served, although somewhat… raw. Gordon Ramsey would be furious. Please don’t tell him, we don’t want to be called donuts. :(
 
 Most of us have just gotten back from being off for a few days during Easter, so this snapshot is a bit on the smaller side.
@@ -244,6 +248,8 @@ Most of us have just gotten back from being off for a few days during Easter, so
 -   [MC-221673](https://bugs.mojang.com/browse/MC-221673) Ocean monuments are completely empty
 
 ---
+
+# Minecraft Snapshot 21w13a
 
 Another snapshot hits the streets, and it's dropping some sick bleats. That's right, Goats are leaping into this snapshot!
 

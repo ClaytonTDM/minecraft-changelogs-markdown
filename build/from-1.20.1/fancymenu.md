@@ -14,6 +14,8 @@ Happy mining!
 
 ---
 
+# Minecraft: Java Edition 1.20
+
 What, is there something special happening today? Hold on, let me grab my calendar book from my chiseled bookshelf.
 
 Oh, it's time for Trails & Tales! How could I forget? Time to equip your new brush and ride your camel off to new adventures!

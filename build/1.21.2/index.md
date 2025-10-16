@@ -1,4 +1,4 @@
-# 1.21.2
+# Minecraft: Java Edition 1.21.2
 
 We're now releasing the Bundles of Bravery game drop for Java Edition, featuring space-saving Bundles and the addition of Hardcore Mode to Realms!
 

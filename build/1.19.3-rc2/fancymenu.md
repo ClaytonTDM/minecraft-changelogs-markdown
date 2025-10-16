@@ -1,4 +1,4 @@
-# 1.19.3-rc2
+# Minecraft 1.19.3 Release Candidate 2
 
 We're now releasing the second (and hopefully last) release candidate for Minecraft 1.19.3, fixing a few critical bugs. If there are no major issues following this release candidate, no further changes will be done before the full release.
 

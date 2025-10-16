@@ -1,4 +1,4 @@
-# 1.16-pre6
+# Minecraft 1.16 Pre-Release 6
 
 Start your new week by not slipping and sliding on blocks that should not be slippy or slidey - we've now released pre-release 6 for Minecraft Java Edition 1.16.
 

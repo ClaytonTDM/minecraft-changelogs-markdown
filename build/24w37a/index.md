@@ -1,4 +1,4 @@
-# 24w37a
+# Minecraft Snapshot 24w37a
 
 Hi everyone! In this snapshot we have fixed the bug with Ender Pearls not teleporting the player to the point of impact. Ender Pearls will now also load chunks when thrown. Happy mining!
 

@@ -1,4 +1,4 @@
-# 24w03a
+# Minecraft Snapshot 24w03a
 
 New year, new Snapshot - we're now releasing the third Snapshot of Minecraft 1.20.5. This time around, we're bringing some updates to the Armadillo, the Breeze, as well as accessibility improvements.
 

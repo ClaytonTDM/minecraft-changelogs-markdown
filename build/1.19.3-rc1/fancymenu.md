@@ -1,4 +1,4 @@
-# 1.19.3-rc1
+# Minecraft 1.19.3 Release Candidate 1
 
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.3. If there are no major issues following this release candidate, no further changes will be done before the full release.
 

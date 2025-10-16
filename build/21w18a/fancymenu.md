@@ -1,4 +1,4 @@
-# 21w18a
+# Minecraft Snapshot 21w18a
 
 Hey-hoo! Will you look at that! It's Wednesday once again, which means we get to share updates about all the Minecraft bits and bobs. This week, we're distributing an ore distribution Snapshot for all you lovely Snapshot connoisseurs to feast upon. Enjoy!
 

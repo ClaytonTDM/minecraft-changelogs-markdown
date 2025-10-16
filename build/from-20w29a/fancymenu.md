@@ -46,6 +46,8 @@ Syntax: `setworldspawn [pos] [angle]` New parameters:
 
 ---
 
+# Minecraft Snapshot 20w28a
+
 This week's snapshot introduces experimental support for custom biomes in data packs. This work has involved redoing some of the internal plumbing of things behind the scene, so it might be a bit leaky. We hope no important parts drip out, but if they do, pick them back up for us, please.
 
 As always, make sure to make backups if you try a world in a snapshot.
@@ -139,6 +141,8 @@ As always, make sure to make backups if you try a world in a snapshot.
 
 ---
 
+# Minecraft Snapshot 20w27a
+
 It's time for another snapshot cycle as we make our way towards 1.16.2! This snapshot introduces the Piglin Brutes, and you might have heard about them in a [Bedrock beta](https://feedback.minecraft.net/hc/en-us/articles/360045006632-Minecraft-Beta-1-16-20-50-Xbox-One-Windows-10-Android-) already.
 
 The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these snapshots will be focused on fixing bugs.
@@ -206,6 +210,8 @@ Cross-platform server jar:
 -   [Minecraft server jar](https://launcher.mojang.com/v1/objects/40efae0a2412154f44a99f158752b8417b384f06/server.jar)
 
 ---
+
+# Minecraft Snapshot 20w22a
 
 It has been a busy week for us but we still wanted to squeeze out a snapshot as we've been busy squashing a bunch of bugs.
 
@@ -357,6 +363,240 @@ If do you find any new graphical bugs then please report them to the bug tracker
 -   [MC-184778](https://bugs.mojang.com/browse/MC-184778) Redstone dust can be toggled between cross and dot in adventure mode
 -   [MC-184936](https://bugs.mojang.com/browse/MC-184936) Old Minecraft logo in the end poem/credits
 -   [MC-185156](https://bugs.mojang.com/browse/MC-185156) Worldgen settings are not validated and can cause crashes
+
+---
+
+# Minecraft Snapshot 20w21a
+
+In this snapshot, we're adding support for custom world settings and custom dimensions. This is an early release to hear your feedback about this feature - do note that this support is considered experimental and unsupported. Any custom world settings may change from one snapshot to the next, and worlds using custom settings will be clearly marked as experimental in your worlds list. ​
+
+## New Features in 20w21a
+
+​
+
+-   Added the ability to toggle redstone wire between a cross and a dot
+-   Added import/export world settings functionality
+-   Added a new disableMultiplayer command line option - when used, the Multiplayer button is disabled
+-   Added a new disableChat command line option - when used, receiving and sending online chat is disabled
+
+​
+
+### Redstone Toggle
+
+​
+
+-   When right clicking a single piece of redstone, it toggles between a the cross and the dot
+-   A dot of redstone will not power its surrounding blocks
+
+​
+
+## Changes in 20w21a
+
+​
+
+-   Piglins no longer walk around when admiring gold
+-   If you hurt a piglin while it is admiring an ingot, the ingot will now disappear
+-   Increased the chance of ores to generate in the Basalt Deltas to balance against the reduced amount of Netherrack in this biome
+-   Lily pads are now considered junk fishing loot rather than treasure
+-   Updated logos for Mojang Studios and Minecraft
+-   Temporarily removed structure settings from flat level preset strings (workaround: use import/export settings functionality)
+
+​
+
+## Technical Changes in 20w21a
+
+​
+
+-   Added the ability to control the height of the `spreadplayers` command
+-   Added custom worlds and custom dimensions
+
+​
+
+### Commands
+
+​
+
+#### `spreadplayers`
+
+​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
+
+-   `maxHeight` - Specifies the maximum height for resulting positions
+
+​
+
+#### `locate`
+
+​
+
+-   Structure names are now specified as lowercase
+
+​
+
+### Custom Worlds
+
+​
+
+-   Added experimental support for new custom worlds
+-   Edit world screen now has an option to export world settings to a JSON file
+-   During world creation you can import previously exported world settings
+-   A bunch of new parameters are exposed, but marked as experimental, meaning you can play with them, but there is no guarantee that any of them will continue working (even in the next snapshot!)
+-   Flat level preset string lost structure settings (they are now stored in a common format for all worlds), we will restore some form of this functionality soon
+-   Buffet world can no longer be created from server.properties, flat level settings changed a bit; better support for custom world creation on the server is coming soon
+
+​
+
+## Fixed bugs in 20w21a
+
+-   [MC-97247](https://bugs.mojang.com/browse/MC-97247) Map making sound uses equipment sound subtitle
+-   [MC-97507](https://bugs.mojang.com/browse/MC-97507) Using item which modifies the held item shows "Gear equips" subtitle
+-   [MC-107103](https://bugs.mojang.com/browse/MC-107103) Trying to interact with entity 3 or more blocks away without seeing its eyes only interacts client-side
+-   [MC-113068](https://bugs.mojang.com/browse/MC-113068) Zombie banging on door subtitle is called "Block broken"
+-   [MC-123155](https://bugs.mojang.com/browse/MC-123155) When any non-player entity enters an End portal the obsidian platform is not regenerated and the entity can fall into the void
+-   [MC-147516](https://bugs.mojang.com/browse/MC-147516) Hostile mobs will sometimes stop attacking/following their target when directly next to it
+-   [MC-166292](https://bugs.mojang.com/browse/MC-166292) Subtitle from foxes eating chorus fruit: "Player teleports"
+-   [MC-169764](https://bugs.mojang.com/browse/MC-169764) Fish flopping sound shows 'Footsteps' subtitles
+-   [MC-170930](https://bugs.mojang.com/browse/MC-170930) Nether Sprouts item not visible when held in the hand in first person
+-   [MC-172090](https://bugs.mojang.com/browse/MC-172090) Piglins would rather hold a golden item instead of a crossbow
+-   [MC-172207](https://bugs.mojang.com/browse/MC-172207) Parrots don't imitate hoglins, zoglins and piglins
+-   [MC-172255](https://bugs.mojang.com/browse/MC-172255) Piglins immediately dismount any entity that they are riding
+-   [MC-177075](https://bugs.mojang.com/browse/MC-177075) Taking product out of stonecutter produces no subtitle
+-   [MC-177088](https://bugs.mojang.com/browse/MC-177088) Polar bear step sound does not have subtitles
+-   [MC-177438](https://bugs.mojang.com/browse/MC-177438) Turtle egg's name inconsistently capitalized across different subtitles
+-   [MC-177830](https://bugs.mojang.com/browse/MC-177830) Blackstone and basalt prevent Ancient Debris and other Nether ores from generating
+-   [MC-178130](https://bugs.mojang.com/browse/MC-178130) Zombie Villagers are called "Zombie" in some subtitles
+-   [MC-178212](https://bugs.mojang.com/browse/MC-178212) Nether planks, their variants, and hyphae are harder than stems
+-   [MC-178298](https://bugs.mojang.com/browse/MC-178298) Ancient debris and nether gold ore can't generate in Basalt Deltas
+-   [MC-180257](https://bugs.mojang.com/browse/MC-180257) Crash when setting LodestonePos of compass to something other than NBT compound
+-   [MC-180852](https://bugs.mojang.com/browse/MC-180852) There is no space on the beacon's secondary power effects in the UI
+-   [MC-181270](https://bugs.mojang.com/browse/MC-181270) Trying to open old worlds (in Region format?) without version information in snapshots does not show warning screen
+-   [MC-181298](https://bugs.mojang.com/browse/MC-181298) Game crashes when trying to generate a nether biome superflat world with ruined portals
+-   [MC-181463](https://bugs.mojang.com/browse/MC-181463) The buttons are not selected in the right order using Tab in the new world creation menus
+-   [MC-181499](https://bugs.mojang.com/browse/MC-181499) Buckets cannot be emptied into a source block, but still produce a sound when trying
+-   [MC-181511](https://bugs.mojang.com/browse/MC-181511) Chunks with redstone are removed
+-   [MC-181522](https://bugs.mojang.com/browse/MC-181522) Chunks that haven't been explored since 1.13 are resetting
+-   [MC-181611](https://bugs.mojang.com/browse/MC-181611) Vindicators stop attacking you when they are standing really close to you
+-   [MC-182514](https://bugs.mojang.com/browse/MC-182514) 15 Block States per SubChunk Limit during World Upgrade
+-   [MC-182743](https://bugs.mojang.com/browse/MC-182743) Wither skeletons don't spawn inside of wither roses
+-   [MC-182912](https://bugs.mojang.com/browse/MC-182912) Piglins still do not change their current crossbow for a new enchanted one
+-   [MC-183249](https://bugs.mojang.com/browse/MC-183249) Carving Mask BitSets created for lower chunk statuses
+-   [MC-183786](https://bugs.mojang.com/browse/MC-183786) Named seeds that are not numbers are not being recognized
+
+---
+
+# Minecraft Snapshot 20w20b
+
+This week we are releasing a bit of a smaller snapshot. However, if you're into switching game modes and completing advancements, this is right up your alley!
+
+**Edit:** We've now released 20w20b to fix a bug
+
+## Fixed Bug in 20w20b
+
+-   [MC-183769](https://bugs.mojang.com/browse/MC-183769) NPE in server initialization
+
+## New Features in 20w20a
+
+-   Added new Game Mode Switcher debug menu
+-   Added new Nether Advancements
+
+​
+
+### Game Mode Switcher
+
+New F3 debug feature which allows you to switch game modes with traditional "tabbing" functionality. ​
+
+-   Hold F3 and tap F4 to open the menu
+-   Tapping F4 will cycle the game mode, or you can use the mouse
+-   Release F3 to apply
+-   Your last game mode is remembered and will be the first selected option, so you can quickly toggle between two game modes with a single press of F3 + F4!
+
+​
+
+#### F3 + N (Toggle Spectator)
+
+A small change has been made to this debug combination. ​
+
+-   By default, using this key would return to Creative after toggling from Spectator. It now will toggle back to the previous game mode you had.
+-   As an example, if you were in Survival, then toggled to Spectator and back, you would be set back to Survival.
+
+​
+
+### New Advancements
+
+-   `Hidden in the Depths` unlocks when obtaining Ancient Debris
+-   `Cover Me in Debris` unlocks when obtaining full Netherite armor
+-   `Country Lode, Take Me Home` unlocks when using a Compass on a Lodestone
+-   `Who Is Cutting Onions?` unlocks when obtaining Crying Obsidian
+-   `Not Quite "Nine" Lives` unlocks when setting a Respawn Anchor to the maximum
+-   `This Boat Has Legs` unlocks when riding a Strider with a Fungus on a Stick
+-   `Hot Tourist Destinations` unlocks when visiting all Biomes in the Nether
+-   `Those Were the Days` unlocks when entering a Bastion
+-   `War Pigs` unlocks when looting a chest in a Bastion
+-   `Oh Shiny` unlocks when distracting an angry Piglin with gold
+
+​
+
+## Changes in 20w20a
+
+-   The `Bullseye` advancement now unlocks when hitting the bullseye of a target block from at least 30 meters away
+-   The `Serious Dedication` advancement is now awarded for obtaining a Netherite Hoe
+-   Obtaining Blackstone now also counts for the `Stone Age` advancement
+-   Breeding Striders now counts for `The Parrots and the Bats` and is now required for `Two by Two`
+
+​
+
+## Technical Changes in 20w20a
+
+-   Shulkers with "NoAI" can now be summoned with rotation.
+-   Added `thrown_item_picked_up_by_entity` advancement trigger
+-   Added `player_generates_container_loot` advancement trigger
+-   Added `item_used_on_block` advancement trigger
+-   Removed `safely_harvest_honey` advancement trigger
+
+​
+
+### Advancements
+
+#### `item_used_on_block` trigger type
+
+Properties:
+
+-   `item` matches the thrown item which was picked up
+-   `entity` matches the entity which picked up the item
+
+​
+
+#### `player_generates_container_loot` trigger type
+
+Properties:
+
+-   `loot_table` matches the resource location of the generated loot table
+
+​
+
+#### `item_used_on_block` trigger type
+
+Properties:
+
+-   `location` matches the location at the center of the block the item was used on
+-   `item` matches the item used on the block
+
+​
+
+### Miscellaneous trigger changes
+
+-   `location` got a new property `smokey` which checks if the location is closely above a campfire
+-   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
+
+​
+
+## Fixed bugs in 20w20a
+
+-   [MC-182967](https://bugs.mojang.com/browse/MC-182967) Throwing ender pearl whilst mounted doesn't teleport you
+-   [MC-179481](https://bugs.mojang.com/browse/MC-179481) Structure block offset can't be bigger than 32
+-   [MC-175992](https://bugs.mojang.com/browse/MC-175992) Striders are not part of the "Two by Two" advancement challenge
+-   [MC-173756](https://bugs.mojang.com/browse/MC-173756) Ice Bucket Challenge advancement can be obtained by collecting obsidian from bartering
+-   [MC-173207](https://bugs.mojang.com/browse/MC-173207) Bullseye advancement can be made when using a non-arrow projectile, even though the description explicitly mentions arrows
+-   [MC-118234](https://bugs.mojang.com/browse/MC-118234) Advancement 'Not Today, Thank You' can be triggered by non-arrow projectiles
 
 ---
 

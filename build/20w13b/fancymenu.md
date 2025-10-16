@@ -1,4 +1,4 @@
-# 20w13b
+# Minecraft Snapshot 20w13b
 
 A small release to fix a few critical bugs.
 

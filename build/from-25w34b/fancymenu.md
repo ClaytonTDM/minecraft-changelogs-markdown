@@ -8,6 +8,8 @@ Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 
 
 ---
 
+# Minecraft Snapshot 25w34a
+
 This week it's time for a smaller snapshot with a new main menu panorama, code of conducts for servers and much tinkering and fixing with our new friends, the Copper Golems. Happy mining!
 
 > **Developer's Note**: _The rendering changes introduced in 25w31a for entities are now expanded to affect block entities and items. Please report any issues you encounter in these areas._
@@ -183,6 +185,8 @@ Syntax:
 
 ---
 
+# Minecraft Snapshot 25w33a
+
 In this week's snapshot we've got a nice quality of life improvement for all the chatters out there. Now your unsent messages will be saved as drafts, check out the details below. Items on shelves will now be positioned in the middle of the shelf as default. Before we move our focus onto technical tweaks and bug fixes for this drop, we have one final feature to announce – and it involves a very cute interaction between the copper golem and the iron golem! With this, all features for our third game drop of 2025 are now in testing, and we'll start working our next game drop, which we are excited to tell you about soon!
 
 ## New Features
@@ -328,6 +332,8 @@ Format: List of entries:
 -   [MC-300747](https://bugs.mojang.com/browse/MC-300747) Cannot see villager's profession layer behind slime
 
 ---
+
+# Minecraft Snapshot 25w32a
 
 Another Tuesday, another Snapshot release! Alongside technical updates and bug fixes, this week we're introducing a copper-y collection of goodies from our third game drop of the year: Build with copper torches, lanterns, chains, and bars – and watch them develop that stunning signature patina. With this week's release, you'll also find that items displayed in shelves have learned the noble art of sitting down.
 

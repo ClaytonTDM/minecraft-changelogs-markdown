@@ -138,6 +138,8 @@ Please break it in all possible ways and report bugs!
 
 ---
 
+# Minecraft Snapshot 23w16a
+
 In this weeks Snapshot we're bringing you tweaks to the Trail Ruins, new command functionality, a new advancement trigger, and more!
 
 Happy mining!
@@ -251,6 +253,8 @@ Parameters:
 -   [MC-261857](https://bugs.mojang.com/browse/MC-261857) Using the "/setblock", "/fill", or "/clone" commands to create little amounts of blocks in completely isolated areas causes large client-side stutters
 
 ---
+
+# Minecraft Snapshot 23w14a
 
 We are now releasing Snapshot 23w14a, containing changes to Sculk blocks and Enchanting Tables, a new Quick Play functionality, an updated logo for Java Edition, a new main menu panorama, and lots of bug fixes!
 
@@ -386,6 +390,8 @@ New function `reference` allows functions to call sub-functions (similar to `ref
 -   [MC-261189](https://bugs.mojang.com/browse/MC-261189) Inconsistent naming of block states for sniffer and turtle eggs
 
 ---
+
+# Minecraft Snapshot 23w13a
 
 In this week's snapshot 23w13a we're following up on all the new things in last week's snapshot with a big round of bug fixes. Happy mining!
 

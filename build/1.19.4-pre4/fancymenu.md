@@ -1,4 +1,4 @@
-# 1.19.4-pre4
+# Minecraft 1.19.4 Pre-Release 4
 
 We are now releasing the fourth pre-release for Minecraft 1.19.4. This pre-release contains bug fixes, some cherry texture tweaks, and a button in the options menu to view the game credits.
 

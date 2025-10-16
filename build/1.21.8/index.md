@@ -1,4 +1,4 @@
-# 1.21.8
+# Minecraft: Java Edition 1.21.8
 
 Nothing beats graphical corruption and freeze issues like a blazing, steamy hotfix. Today we are releasing 1.21.8 fixing various issues experienced on certain graphics devices.
 

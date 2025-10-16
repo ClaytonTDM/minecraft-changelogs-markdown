@@ -1,4 +1,4 @@
-# 23w33a
+# Minecraft Snapshot 23w33a
 
 We are making some important updates to our Player Reporting Tool in this Snapshot to better protect the online safety of our players.
 

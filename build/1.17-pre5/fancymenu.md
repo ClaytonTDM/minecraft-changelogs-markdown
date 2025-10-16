@@ -1,4 +1,4 @@
-# 1.17-pre5
+# Minecraft 1.17 Pre-Release 5
 
 The fifth pre-release for 1.17 is now available, fixing another round of bugs and crashes.
 

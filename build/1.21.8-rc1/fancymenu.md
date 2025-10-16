@@ -1,4 +1,4 @@
-# 1.21.8-rc1
+# 1.21.8 Release Candidate 1
 
 Hotfix coming in ho-... very cold? Today we're releasing 1.21.8 Release Candidate 1, addressing various graphical corruption and freeze issues on certain graphics devices.
 

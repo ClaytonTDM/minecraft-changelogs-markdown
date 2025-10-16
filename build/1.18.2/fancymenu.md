@@ -1,4 +1,4 @@
-# 1.18.2
+# Minecraft: Java Edition 1.18.2
 
 We're now releasing 1.18.2 for Minecraft: Java Edition. This release adds universal tags and the placefeature command. It also introduces the possibility for experimental data packs to customize cave generation and to add new custom structures to worlds.
 

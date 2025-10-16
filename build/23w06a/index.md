@@ -1,4 +1,4 @@
-# 23w06a
+# Minecraft Snapshot 23w06a
 
 Today we are bringing you the `damage` command and new display entities.
 

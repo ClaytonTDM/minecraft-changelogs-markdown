@@ -1,4 +1,4 @@
-# 22w16b
+# Minecraft Snapshot 22w16b
 
 We've now released snapshot 22w16b to fix a crash.
 

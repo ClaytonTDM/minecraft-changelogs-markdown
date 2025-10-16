@@ -1,4 +1,4 @@
-# 1.19.1
+# Minecraft: Java Edition 1.19.1
 
 We're now releasing 1.19.1 for Minecraft: Java Edition. This release adds Allay duplication and new Player Safety functionality.
 

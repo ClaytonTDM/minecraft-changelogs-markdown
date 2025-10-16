@@ -1,4 +1,4 @@
-# 1.16.1
+# Minecraft: Java Edition 1.16.1
 
 We're now releasing 1.16.1 for Minecraft: Java Edition. This version fixes stability issues with Realms.
 

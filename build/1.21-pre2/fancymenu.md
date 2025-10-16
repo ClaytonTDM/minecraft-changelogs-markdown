@@ -1,4 +1,4 @@
-# 1.21-pre2
+# Minecraft 1.21 Pre-Release 2
 
 We're rounding out the week with the second Pre-Release of 1.21, with a lot of bug fixes. In case you did not catch the news, the full release of 1.21 is planned for the 13th of June!
 

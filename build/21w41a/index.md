@@ -1,4 +1,4 @@
-# 21w41a
+# Minecraft Snapshot 21w41a
 
 Have a random snapshot! In this snapshot, we've replaced the random number generator used for world generation, which makes more seeds come out as different... but it also moves everything around in the world, so expect all worlds to look different in this snapshot.
 

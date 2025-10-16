@@ -1,4 +1,4 @@
-# 20w48a
+# Minecraft Snapshot 20w48a
 
 Did someone ask for a snapshot full of tasty Caves & Cliffs features? Then you came to the right place! This particular snapshot adds blocks for dripstone – stalagmites and stalactites. Or is it stalactites and stalagmites? Anyway, you can’t find them in the world just yet… but try out the functionality of the new blocks!
 

@@ -1,4 +1,4 @@
-# 1.17.1-pre2
+# Minecraft 1.17.1 Pre-Release 2
 
 The second pre-release for 1.17.1 is now available in your launcher. This pre-release fixes a few more bugs.
 

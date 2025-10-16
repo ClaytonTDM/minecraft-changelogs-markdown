@@ -115,6 +115,8 @@ Properties:
 
 ---
 
+# Minecraft Snapshot 20w19a
+
 This snapshot contains another round of tweaks and bugfixes, but also quality of life features such as **strider distancing**. It might not be as important as social distancing, but we hope you'll like it. Stay safe and wash your hands!
 
 ## New Features in 20w19a
@@ -180,6 +182,8 @@ This snapshot contains another round of tweaks and bugfixes, but also quality of
 -   [MC-182595](https://bugs.mojang.com/browse/MC-182595) Parity issue: Blackstone doesn't generate in ore veins in nether wastes
 
 ---
+
+# Minecraft Snapshot 20w18a
 
 In this snapshot we made some changes to Redstone wire and we fixed a bunch of bugs.
 
@@ -356,6 +360,8 @@ is now equivalent to:
 
 ---
 
+# Minecraft Snapshot 20w17a
+
 This week's snapshot brings you some tweaks, bugfixes, and technical changes!
 
 We also have a survey up so that you can tell us what you think about the Nether Update. You can find it by clicking [here](https://www.surveymonkey.com/r/SF65G2F). We would very much appreciate if you could take the time and fill it out.
@@ -468,6 +474,165 @@ Chat component style now supports `font` property, which is resource location fo
 -   [MC-178797](https://bugs.mojang.com/browse/MC-178797) Barrier blocks generate in bastion remnant
 -   [MC-178955](https://bugs.mojang.com/browse/MC-178955) Badlands are viewed as a mountainous biome for Ruined Portals
 -   [MC-179542](https://bugs.mojang.com/browse/MC-179542) Basalt Delta Blocks Override Nether Bricks in Fortresses
+
+---
+
+# Minecraft Snapshot 20w16a
+
+Bastion remnants, or "home sweet home" as Piglins would call them, are finally here! This snapshot introduces the home of the Piglins. If you scour the world you might also find ruins of some old portals.
+
+## New Features in 20w16a
+
+-   Added Bastion Remnants!
+-   Added Ruined Portals
+-   Added chain blocks
+-   Added a new music disc titled "Pigstep" by Lena Raine which can only be found in Bastions Remnants
+
+### Bastion Remnants
+
+What's made of Blackstone and full of piglins and hoglins? Bastion Remnants!
+
+-   Added 4 separate Bastion Remnant types: Bridge, Hoglin Stable, Housing Units, and Treasure Room
+-   You can find these sizable structures in all biomes in the Nether except the treacherous ash-dusted towers of Basalt Deltas
+-   Explore, loot, and conquer a Bastion Remnant to call it your home...but beware, Piglins don't take kindly to intruders stealing their things
+
+### Ruined Portals
+
+Shattered remains of ancient nether portals. Wonder who built them?
+
+-   They can be found in any overworld or nether biome
+-   Some are hidden underground, under the sea, or buried in sand
+
+## Changes in 20w16a
+
+-   The piglin banner pattern can now be found in Bastion Remnants
+-   Increased the amount of lava pools to make the deltas more "deltary"
+
+## Technical Changes in 20w16a
+
+-   Added a button in the GUI that generates a jigsaw structure starting from the jigsaw block, using given generation depth.
+-   Expanded the max size per axis of Structure Blocks from 32 to 48
+-   Added a JMX MBean to monitor dedicated server tick times
+
+### JMX Monitoring
+
+It is now possible to monitor the server tick times though JMX. The rationale for this is that JMX is a well known and supported monitoring technology with existing integrations and tools.
+
+This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
+
+#### Enabling JMX Monitoring
+
+-   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds.
+-   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html).
+
+## Fixed bugs in 20w16a
+
+-   [MC-37557](https://bugs.mojang.com/browse/MC-37557) Sometimes a minecart sound plays/subtitle shown when loading a world
+-   [MC-91163](https://bugs.mojang.com/browse/MC-91163) Certain subtitles show up when the player is too far away to hear the sound
+-   [MC-154617](https://bugs.mojang.com/browse/MC-154617) Server hangs on stop due to rcon
+-   [MC-171020](https://bugs.mojang.com/browse/MC-171020) New nether biomes don't work properly in buffet worlds
+-   [MC-175919](https://bugs.mojang.com/browse/MC-175919) Villagers sometimes stop farming
+-   [MC-177136](https://bugs.mojang.com/browse/MC-177136) All compasses and lodestone compasses point to the same target, regardless of what type of compass it is
+-   [MC-177238](https://bugs.mojang.com/browse/MC-177238) Windows symbolic link in saves/ is no longer followed as of 20w14a
+-   [MC-177253](https://bugs.mojang.com/browse/MC-177253) Running a set;;_;;attributes function throws java.lang.NullPointerException if it contains an undefined attribute
+-   [MC-177316](https://bugs.mojang.com/browse/MC-177316) Lodestone compass in item frame does not update after turning
+-   [MC-178368](https://bugs.mojang.com/browse/MC-178368) When rotating a lodestone compass is put in the item frame the compass don't work
+
+---
+
+# Minecraft Snapshot 20w15a
+
+It's a wonderful day here in Sweden today! The sun is shining and spring is in the air, and when I say "spring" I mean **pollen**. Let's remedy that by 1) Staying indoors and 2) Introduce an all new biome with a grain of basalt, blackstone, and magma cubes! To spice it up, we also have some new fine tunes for you to listen to while traversing the Nether. Enjoy the snapshot!
+
+## New Features in 20w15a
+
+-   Accessibility improvements
+-   Added a piglin banner pattern
+-   Added Basalt Deltas biome to the Nether
+-   Added soul campfires. Warm your buns with the heat of one thousand souls!
+-   Added three new tracks of Nether music
+-   Added chiseled nether bricks, cracked nether bricks, and quartz bricks!
+-   Added a new set of stone blocks called Blackstone with regular, polished, and polished brick variants!
+-   Added Gilded Blackstone - Blackstone which has been imbued with gold and has a chance of dropping gold nuggets when broken
+-   Blackstone can be used to craft furnaces and stone tools
+
+### Accessibility
+
+-   Added "Line Spacing" chat and accessibility option
+-   Added "Chat Delay" accessibility option
+
+### Basalt Deltas
+
+Basalt Deltas can now be found in the Nether!
+
+-   Remnants of volcanic eruptions, this biome sports a high concentration of Basalt columns and lava deltas
+-   Walking through, you will be surrounded by flakes of flowing white ash
+-   Magma Cubes finally have a place to call home, spawning very frequently
+-   A new block, Blackstone, can be found in large patches here
+
+### Nether Music
+
+We're happy to announce that we've added three new tracks for the upcoming Nether Update, all composed by the very talented Lena Raine.
+
+-   Rubedo will be played in the Nether Wastes
+-   So Below will be played in Soul Sand Valleys and in Basalt Deltas
+-   Chrysopoeia will be played in Crimson Forests
+
+Some words from Lena:
+
+-   "One of the primary instruments in Minecraft is the piano, and so one of my challenges to myself was to see how far I could push the sound of the piano until it resembled other things entirely–again, that alchemical process."
+-   "I wanted each piece to feel like a progression of emotions, or a journey from place to place within this other world. There's a degree of beauty to the Nether, but it is also terrifying in both its details and scale."
+
+Take a portal to the Nether, and stay awhile and listen...
+
+## Changes in 20w15a
+
+-   Dispenser changes
+-   Soul sand can now be used to craft soul torches
+-   Nether vegetation blocks (sprouts, roots, vines, fungus, wart and wart blocks) are now compostable
+-   Walls will now connect to more things! (like iron bars, panes and even pickles!)
+-   Hoes are now the appropriate tool for mining leaves
+-   Mobs now avoid walking on magma blocks and lit campfires
+
+### Dispensers
+
+-   Dispensers can now saddle pigs and horses
+-   Dispensers can now put horse armor on horses
+-   Dispensers can now put carpets on llamas
+-   Dispensers can now put chests on llamas, donkeys and mules
+-   Dispensers can now shear a Mooshroom
+-   Dispensers can shear snow golems
+
+## Technical Changes in 20w15a
+
+-   Tab completion for resource location will match any part after an `_`
+-   Mob and pathfinding-related optimizations
+
+## Fixed bugs in 20w15a
+
+-   [MC-171463](https://bugs.mojang.com/browse/MC-171463) Iron Bars don't fully connect to walls
+-   [MC-172120](https://bugs.mojang.com/browse/MC-172120) Hoglins don't try to avoid fire
+-   [MC-172209](https://bugs.mojang.com/browse/MC-172209) Non-fire resistant mobs don't try to avoid walking into fire
+-   [MC-172226](https://bugs.mojang.com/browse/MC-172226) Baby animals, villagers, and zombie villagers spawned with a spawn egg on an adult entity always are of the same variant
+-   [MC-172268](https://bugs.mojang.com/browse/MC-172268) Bartering with a piglin by right-clicking does not display hand animation
+-   [MC-174542](https://bugs.mojang.com/browse/MC-174542) Killing baby hoglins drops leather and porkchop
+-   [MC-174559](https://bugs.mojang.com/browse/MC-174559) Baby hoglins/zoglins uses the same attack damage as an adult when spawned in some cases
+-   [MC-175030](https://bugs.mojang.com/browse/MC-175030) Curse of Binding doesn't affect Piglins
+-   [MC-175169](https://bugs.mojang.com/browse/MC-175169) Respawn Anchor can create ghost blocks when it explodes
+-   [MC-175176](https://bugs.mojang.com/browse/MC-175176) Using return portal in The End softlocks the game if /spawnpoint was used in The End
+-   [MC-175256](https://bugs.mojang.com/browse/MC-175256) Screen is overlayed with a grey opaque texture when inside of a transparent block
+-   [MC-175274](https://bugs.mojang.com/browse/MC-175274) "Quartz pillar" is translated as "White wool" ("Lana blanca" instead of "Pilar de cuarzo") in Spanish (Spain)
+-   [MC-175356](https://bugs.mojang.com/browse/MC-175356) Piglins and hoglins do not avoid magma blocks
+-   [MC-175538](https://bugs.mojang.com/browse/MC-175538) Fish/Swimming sounds are louder than they should be
+-   [MC-175566](https://bugs.mojang.com/browse/MC-175566) Piglins with full inventories drop the items they received
+-   [MC-176095](https://bugs.mojang.com/browse/MC-176095) Striders have an unused fin in the strider.png texture file
+-   [MC-176384](https://bugs.mojang.com/browse/MC-176384) CompassItem checks twice if LodestonePos tag exists
+-   [MC-176517](https://bugs.mojang.com/browse/MC-176517) striders spawn in underground lava pockets
+-   [MC-176633](https://bugs.mojang.com/browse/MC-176633) Lime carpets are named "acacia slab" in Spanish (Spain)
+-   [MC-177069](https://bugs.mojang.com/browse/MC-177069) Dispenser will not drop glowstone as item when not connected to a respawn anchor
+-   [MC-177085](https://bugs.mojang.com/browse/MC-177085) Missing UUID field in attributes crash the game
+-   [MC-177102](https://bugs.mojang.com/browse/MC-177102) Zoglins aren't considered an undead mob
+-   [MC-177225](https://bugs.mojang.com/browse/MC-177225) Tag minecraft:water used before it was bound
 
 ---
 

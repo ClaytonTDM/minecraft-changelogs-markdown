@@ -1,4 +1,4 @@
-# 1.21.3
+# Minecraft: Java Edition 1.21.3
 
 Coming in hot with a hotfix, here's Minecraft 1.21.3 with a fix for a critical issue affecting Realms with Resource Packs enabled.
 

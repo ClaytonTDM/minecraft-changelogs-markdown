@@ -1,4 +1,4 @@
-# 1.21-rc1
+# Minecraft 1.21 Release Candidate 1
 
 Here is the first Release Candidate for 1.21, addressing some critical issues. Apart from that we decided to revert the changes made in Pre-Release 4 to armor enchantments based on your feedback.
 

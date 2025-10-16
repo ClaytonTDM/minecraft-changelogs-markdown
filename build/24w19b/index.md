@@ -1,4 +1,4 @@
-# 24w19b
+# Minecraft Snapshot 24w19b
 
 Oh wow, we never could have guessed you all were so violent! Here's a 24w19b, fixing a crash when a Villager died.
 

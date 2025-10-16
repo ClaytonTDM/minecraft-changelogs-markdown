@@ -1,4 +1,4 @@
-# 25w15a
+# Minecraft Snapshot 25w15a
 
 Snapshot on a Tuesday? Yes! From now on we will be moving snapshots to the same weekday as full releases, Tuesdays.
 

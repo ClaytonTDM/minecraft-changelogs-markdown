@@ -1,4 +1,4 @@
-# 23w03a
+# Minecraft Snapshot 23w03a
 
 We're now releasing the first snapshot for Minecraft 1.19.4. This release contains new accessibility functionality, new commands and plenty of bug fixes!
 

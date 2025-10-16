@@ -1,4 +1,4 @@
-# 1.20-rc1
+# Minecraft 1.20 Release Candidate 1
 
 We are now releasing the first, and hopefully only, release-candidate for 1.20, containing two bug fixes. If all goes well, no further changes will be made before the full release of Minecraft 1.20 on Wednesday next week.
 

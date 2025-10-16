@@ -1,4 +1,4 @@
-# 1.21.2-pre4
+# 1.21.2 Pre-Release 4
 
 Hello! Another day, another Pre-Release. We're releasing the fourth Pre-Release of 1.21.2, further stabilizing this version.
 

@@ -1,4 +1,4 @@
-# 1.19-pre2
+# Minecraft 1.19 Pre-Release 2
 
 A recent change made it possible for more types of mobs to spawn inside Nether Portals, which caused them to instantly change dimensions after spawning. We will not be making any further changes to this before the release of 1.19, but our intent for the future is to prevent most mobs from spawning in Nether Portals and the ones that do will not immediately travel through the portal. Expect to see these changes in a coming version.
 

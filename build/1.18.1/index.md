@@ -1,4 +1,4 @@
-# 1.18.1
+# Minecraft: Java Edition 1.18.1
 
 We’re now releasing Minecraft: Java Edition 1.18.1. This release fixes a critical security issue for multiplayer servers, changes how the world fog works to make more of the world visible, and fixes a couple of other bugs.
 

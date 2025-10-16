@@ -1,4 +1,4 @@
-# 1.18-pre5
+# Minecraft 1.18 Pre-Release 5
 
 We're now releasing pre-release 5 for Minecraft 1.18. This pre-release contains more bug fixes and a tweak to new cave generation under existing chunks.
 

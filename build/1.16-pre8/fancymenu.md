@@ -1,4 +1,4 @@
-# 1.16-pre8
+# Minecraft 1.16 Pre-Release 8
 
 Squish, squash is the sound bugs make when you squish them. Or was it squash them? Anyway, here's pre-release 8 with more bug fixes.
 

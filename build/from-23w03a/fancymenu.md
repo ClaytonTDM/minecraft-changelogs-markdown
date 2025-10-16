@@ -198,6 +198,8 @@ Added an optional `fallback` field to `translate` text components.
 
 ---
 
+# Minecraft Snapshot 22w46a
+
 We are now releasing snapshot 22w46a for Minecraft 1.19.3 with [playable mob sounds](https://www.minecraft.net/article/playable-mob-sounds-coming-minecraft-1-20) added as an experimental feature, improvements for telemetry data and several technical improvements.
 
 Happy mining!
@@ -407,6 +409,8 @@ Syntax:
 
 ---
 
+# Minecraft Snapshot 22w45a
+
 Minecraft Snapshot 22w45a is now out and about. This snapshot introduces the [new default skins](https://www.minecraft.net/article/introducing-new-default-skins) for offline players, bamboo blocks, and a visual refresh for the Vex. On top of that, there’s some additional creative inventory tweaks.
 
 Happy mining!
@@ -515,6 +519,8 @@ Happy mining!
 -   [MC-257234](https://bugs.mojang.com/browse/MC-257234) Applying bone meal to warped or crimson fungus crashes client on multiplayer
 
 ---
+
+# Minecraft Snapshot 22w44a
 
 Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
 

@@ -1,4 +1,4 @@
-# 1.20.3-pre3
+# Minecraft 1.20.3 Pre-Release 3
 
 We are now releasing the third Pre-Release for Minecraft 1.20.3, containing mostly bug fixes, as well as changes to server resource pack handling.
 

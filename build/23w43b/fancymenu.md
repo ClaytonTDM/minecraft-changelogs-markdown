@@ -1,4 +1,4 @@
-# 23w43b
+# Minecraft Snapshot 23w43b
 
 We're now releasing a second snapshot for the week to fix some crashes.
 

@@ -510,6 +510,8 @@ Around 200 bugs were fixed in this release. View the [list on the issue tracker]
 
 ---
 
+# Minecraft: Java Edition 1.20.1
+
 It's barely been a week, and we're already releasing 1.20.1 for Minecraft: Java Edition. This hotfix update contains fixes for critical issues found in the 1.20 release.
 
 Happy mining!

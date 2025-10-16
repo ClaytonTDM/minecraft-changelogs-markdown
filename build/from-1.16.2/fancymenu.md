@@ -141,6 +141,8 @@ A total of more than [150 bugs](https://bugs.mojang.com/issues/?filter=25075) ha
 
 ---
 
+# Minecraft: Java Edition 1.16.1
+
 We're now releasing 1.16.1 for Minecraft: Java Edition. This version fixes stability issues with Realms.
 
 Looking for all the new stuff in the Nether Update release? You can check out [this post](https://www.minecraft.net/en-us/article/nether-update-java) to read about all the new things!

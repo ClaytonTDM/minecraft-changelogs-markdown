@@ -1,4 +1,4 @@
-# 1.21.5-pre2
+# Minecraft 1.21.5 Pre Release 2
 
 We're shipping some crash fixes in today's pre-release.
 

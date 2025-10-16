@@ -1,4 +1,4 @@
-# 1.21.4-rc2
+# 1.21.4 Release Candidate 2
 
 Today we are releasing 1.21.4 Release Candidate 2 to activate Blending around the Pale Garden Biome.
 

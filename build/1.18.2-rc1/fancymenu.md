@@ -1,4 +1,4 @@
-# 1.18.2-rc1
+# Minecraft 1.18.2 Release Candidate
 
 We’re now releasing the first (and hopefully only) release candidate for Minecraft 1.18.2. This release candidate fixes two world generation bugs that could cause a server to stop running. If there are no major issues following this release, no further changes will be done before the full release, which is planned for February 28th. ​ Happy mining!
 

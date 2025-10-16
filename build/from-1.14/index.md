@@ -829,6 +829,8 @@ Adds or replaces lore lines.
 
 ---
 
+# Minecraft: Java Edition 1.13 Aquatic
+
 ## Aquatic changelog
 
 ### General

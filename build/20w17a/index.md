@@ -1,4 +1,4 @@
-# 20w17a
+# Minecraft Snapshot 20w17a
 
 This week's snapshot brings you some tweaks, bugfixes, and technical changes!
 

@@ -1,4 +1,4 @@
-# 25w04a
+# Minecraft Snapshot 25w04a
 
 It's time for another snapshot! To kick things off, we are reverting the fixes for [MC-271065](https://bugs.mojang.com/browse/MC-271065) and [MC-152728](https://bugs.mojang.com/browse/MC-152728).
 

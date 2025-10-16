@@ -1,4 +1,4 @@
-# 1.20.4-rc1
+# Minecraft 1.20.4 Release Candidate 1
 
 We're releasing a Release Candidate for Minecraft 1.20.4. This Release Candidate fixes a critical issue found after the release of Minecraft 1.20.3
 

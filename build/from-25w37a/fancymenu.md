@@ -174,6 +174,8 @@ Happy mining!
 
 ---
 
+# Minecraft Snapshot 25w36b
+
 Here is Snapshot 25w36b to fix some common crashes.
 
 ## Fixed bugs in 25w36b
@@ -182,6 +184,8 @@ Here is Snapshot 25w36b to fix some common crashes.
 -   [MC-301749](https://bugs.mojang.com/browse/MC-301749) Multiplayer Crash.
 
 ---
+
+# Minecraft Snapshot 25w36a
 
 Snapshot 25w36a is out and it includes mannequins, a new technical entity that is spawned with commands and can be used as an NPC. Conflicting key binds will now function together allowing you to bind a key to multiple actions. And as always, this snapshot also includes technical tweaks and bug fixes.
 
@@ -342,6 +346,8 @@ Data Fields:
 -   [MC-301619](https://bugs.mojang.com/browse/MC-301619) Game mode translation key is used in the console message sent when a player tries to switch their game mode without permission
 
 ---
+
+# Minecraft Snapshot 25w35a
 
 In this week's snapshot we are adding a Minecraft Server Management Protocol which lets servers query players, tweak game rules, update server settings, and listen for real-time server event notifications. Some server properties have been moved to game rules, allowing them to be updated while the server is running. Additionally, player icons can now be used in chat, the copper golem has received some improvements and we are shipping a bunch of bug fixes.
 
@@ -532,6 +538,16 @@ Renamed the following item sprites:
 -   [MC-301295](https://bugs.mojang.com/browse/MC-301295) TTF font provider oversample increases width of characters
 -   [MC-301328](https://bugs.mojang.com/browse/MC-301328) Glowing item entities briefly turn white upon pickup
 -   [MC-301339](https://bugs.mojang.com/browse/MC-301339) Miniature mobs inside spawners always render fully lit
+
+---
+
+# Minecraft Snapshot 25w34b
+
+Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 25w34a.
+
+## Fixed bugs in 25w34b
+
+-   [MC-300911](https://bugs.mojang.com/browse/MC-300911) Glowing item & block displays no longer glow
 
 ---
 

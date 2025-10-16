@@ -1,4 +1,4 @@
-# 1.16.2-pre2
+# Minecraft 1.16.2 Pre-Release 2
 
 We have now released the second pre-release for Minecraft 1.16.2, in which another round of bugs have been squished!
 

@@ -1,4 +1,4 @@
-# 24w38a
+# Minecraft Snapshot 24w38a
 
 Hey! This snapshot brings you dyable Bundles in the Bundles experiment and fully-featured world creation for Realms, including Hardcore mode.
 

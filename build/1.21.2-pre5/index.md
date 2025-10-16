@@ -1,4 +1,4 @@
-# 1.21.2-pre5
+# Minecraft 1.21.2 Pre-Release 5
 
 Did we have a Pre-Release yesterday? We don't remember. But here is one anyway, fixing more bugs.
 

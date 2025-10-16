@@ -266,6 +266,8 @@ New item sub-predicate available as `jukebox_playable`.
 
 ---
 
+# Minecraft Snapshot 24w20a
+
 After some recent irregularities in our Snapshot schedule (public holidays, we're looking at you!) we're back to shipping on a Wednesday! Among other things, 24w20a includes a buff to the amount of Redstone Dust dropped by Witches, as well as a long requested change to make Piston sounds a tad more pleasing to the ear. We're also throwing 41 new bug fixes into the mix, because we like squashing bugs.
 
 Happy mining!
@@ -352,6 +354,8 @@ Happy mining!
 
 ---
 
+# Minecraft Snapshot 24w19b
+
 Oh wow, we never could have guessed you all were so violent! Here's a 24w19b, fixing a crash when a Villager died.
 
 ## Fixed bugs in 24w19b
@@ -359,6 +363,8 @@ Oh wow, we never could have guessed you all were so violent! Here's a 24w19b, fi
 -   [MC-271843](https://bugs.mojang.com/browse/MC-271843) Crash when a villager dies
 
 ---
+
+# Minecraft Snapshot 24w19a
 
 The weekend is right around the corner, and what better way to celebrate that fact than by bringing you a serving of Snapshot Friday? This one rounds off the week by introducing performance improvements to chunk loading, alongside the usual assortment of technical improvements and bug fixes.
 

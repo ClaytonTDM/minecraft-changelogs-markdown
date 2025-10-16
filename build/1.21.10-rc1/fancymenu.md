@@ -1,4 +1,4 @@
-# 1.21.10-rc1
+# Minecraft 1.21.10 Release Candidate 1
 
 Today we are shipping Release Candidate 1 for 1.21.10, a hotfix release fixing a couple of issues that have bubbled up to the surface following the release of The Copper Age drop.
 

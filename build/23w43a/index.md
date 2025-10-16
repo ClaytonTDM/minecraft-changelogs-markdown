@@ -1,4 +1,4 @@
-# 23w43a
+# Minecraft Snapshot 23w43a
 
 In this week's snapshot we're extending the Update 1.21 experiment with ALL the new blocks! And how about a bat makeover just in time for spooky fall? Happy crafting!
 

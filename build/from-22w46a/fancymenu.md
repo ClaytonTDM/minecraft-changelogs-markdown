@@ -209,6 +209,8 @@ Syntax:
 
 ---
 
+# Minecraft Snapshot 22w45a
+
 Minecraft Snapshot 22w45a is now out and about. This snapshot introduces the [new default skins](https://www.minecraft.net/article/introducing-new-default-skins) for offline players, bamboo blocks, and a visual refresh for the Vex. On top of that, there’s some additional creative inventory tweaks.
 
 Happy mining!
@@ -317,6 +319,8 @@ Happy mining!
 -   [MC-257234](https://bugs.mojang.com/browse/MC-257234) Applying bone meal to warped or crimson fungus crashes client on multiplayer
 
 ---
+
+# Minecraft Snapshot 22w44a
 
 Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
 
@@ -440,6 +444,8 @@ A (hopefully) final round of changes have been made to the Creative Tab ordering
 -   [MC-257060](https://bugs.mojang.com/browse/MC-257060) Bee nest is absent from Functional Blocks
 
 ---
+
+# Minecraft Snapshot 22w43a
 
 Did you know that Camels walk by lifting both legs on one side at the same time? Yes, in snapshot 22w43a, Minecraft knows too! This snapshot also contains another round of tweaks to the Creative Inventory.
 

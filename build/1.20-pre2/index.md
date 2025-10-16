@@ -1,4 +1,4 @@
-# 1.20-pre2
+# Minecraft 1.20 Pre-Release 2
 
 We are now releasing the second pre-release for Minecraft 1.20. This pre-release contains bug fixes.
 

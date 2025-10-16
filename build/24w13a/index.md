@@ -1,4 +1,4 @@
-# 24w13a
+# Minecraft Snapshot 24w13a
 
 This fine Wednesday brings 24w13a, a snapshot containing changes to the Mace, Trial Chambers, and introduces the new Ominous Trials!
 

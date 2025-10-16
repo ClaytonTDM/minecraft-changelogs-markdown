@@ -1,4 +1,4 @@
-# 22w06a
+# Minecraft Snapshot 22w06a
 
 Today we're happy to share snapshot 22w06a with you. It contains compliance updates for South Korean players and is Totally Teeming with Technical Tag Tastiness.
 

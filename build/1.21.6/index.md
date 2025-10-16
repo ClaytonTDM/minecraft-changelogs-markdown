@@ -1,4 +1,4 @@
-# 1.21.6
+# Minecraft: Java Edition 1.21.6
 
 Experience the joy of soaring above the Overworld with our Chase the Skies drop! This drop not only brings an exciting flying mount to Minecraft but opens up the skies for exploring, building – and more. Raise your ghastling with care and it'll let you soar with friends above the clouds once fully grown.
 

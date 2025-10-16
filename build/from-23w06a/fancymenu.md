@@ -272,6 +272,8 @@ A new `tags` array has been added. Each entry has two fields:
 
 ---
 
+# Minecraft Snapshot 23w05a
+
 In this snapshot we've tweaked the armor trim feature and redefined the Create New World user experience flow.
 
 Happy world creating!
@@ -360,6 +362,8 @@ Happy world creating!
 -   [MC-259420](https://bugs.mojang.com/browse/MC-259420) Pixels not present in the palettes get erased, not kept
 
 ---
+
+# Minecraft Snapshot 23w04a
 
 Tuesday is the new Wednesday, did you know? Here is snapshot 23w04a with a new experimental Armor Trim Smithing feature in the Update;;_;;1;;_;;20 experimental pack.
 
@@ -549,6 +553,8 @@ Happy trimming!
 -   [MC-259211](https://bugs.mojang.com/browse/MC-259211) You cannot select incompatible resource packs within the resource packs menu via keyboard navigation
 
 ---
+
+# Minecraft Snapshot 23w03a
 
 We're now releasing the first snapshot for Minecraft 1.19.4. This release contains new accessibility functionality, new commands and plenty of bug fixes!
 

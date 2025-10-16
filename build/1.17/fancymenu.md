@@ -1,4 +1,4 @@
-# 1.17
+# Minecraft: Java Edition 1.17
 
 It’s here. The Cave Update, with a side of cliffs. That’s right, The Caves & Cliffs Update: Part I is launching today!
 

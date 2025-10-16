@@ -1,4 +1,4 @@
-# 25w09b
+# Minecraft Snapshot 25w09b
 
 Back so soon! We're releasing a second snapshot this week, following frequently occurring issues in yesterday's snapshot.
 

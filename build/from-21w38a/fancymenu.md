@@ -86,6 +86,8 @@ At this point the only implemented event is world load.
 
 ---
 
+# Minecraft Snapshot 21w37a
+
 Marvellous mountains and colossal caves, this snapshot has it all! Today we're bringing the Overworld revamp to regular snapshots. If you've been playing or checking out the experimental snapshots that we've been releasing, you should be familiar with what you're seeing. If not, you're in for a treat!
 
 Since we're extending the world height, and there are quite a few under-the-hood changes, we've been keeping an eye on how the game is running, and there are still improvements to be made. However, we would still appreciate it if you would be able to take this survey so that we can understand how you perceive the performance of this snapshot.
@@ -389,6 +391,8 @@ Example:
 
 ---
 
+# Minecraft Snapshot 21w20a
+
 Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
 
 ## Changes in 21w20a
@@ -481,6 +485,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
 -   [MC-225360](https://bugs.mojang.com/browse/MC-225360) Cannot resolve SRV records: unknown host
 
 ---
+
+# Minecraft Snapshot 21w19a
 
 Now with twice as much Java version.
 

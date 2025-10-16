@@ -1,4 +1,4 @@
-# 1.19.1-rc1
+# Minecraft 1.19.1 Release Candidate 1
 
 We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.1. We have also now created a help article on chat reporting, available [here](https://help.minecraft.net/hc/articles/7149823936781).
 

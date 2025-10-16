@@ -1,4 +1,4 @@
-# 20w13a
+# Minecraft Snapshot 20w13a
 
 Ever felt that you want to take a ride across fields of lava? Yeah? Me too! This snapshot introduces the adorable(?) strider. It might need some help with directions...
 

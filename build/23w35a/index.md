@@ -1,4 +1,4 @@
-# 23w35a
+# Minecraft Snapshot 23w35a
 
 We are releasing a new snapshot that contains updates to support libraries, and a whole bundle of bug fixes!
 

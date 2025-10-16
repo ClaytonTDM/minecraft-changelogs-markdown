@@ -1,4 +1,4 @@
-# 1.16.2-pre3
+# Minecraft 1.16.2 Pre-Release 3
 
 We have now released 1.16.2 Pre-release 3, fixing some stability issues.
 

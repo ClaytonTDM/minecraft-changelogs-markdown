@@ -85,6 +85,8 @@ Hardcore mode is now available in Realms and is accessible by creating a new wor
 
 ---
 
+# Minecraft Snapshot 24w37a
+
 Hi everyone! In this snapshot we have fixed the bug with Ender Pearls not teleporting the player to the point of impact. Ender Pearls will now also load chunks when thrown. Happy mining!
 
 ## New Features
@@ -338,6 +340,8 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 
 ---
 
+# Minecraft Snapshot 24w36a
+
 Hi everyone! In the most exciting Minecraft-related news of the day, we have a new movi- I mean snapshot coming your way! This week we are adding support for custom equipment with Data Packs and Resource Packs. We have also tweaked the Bundle so that you can empty a group of items when it's used in the hotbar. And as usual, we have included a bunch of bug fixes!
 
 Happy mining!
@@ -566,6 +570,8 @@ A model definition specifying both player and horse armor layers might look like
 -   [MC-276204](https://bugs.mojang.com/browse/MC-276204) Dolphins and axolotls keep trying to swim into the seabed
 
 ---
+
+# Minecraft Snapshot 24w35a
 
 Hello! In this week's snapshot we have addressed some important bugs related to village raid spawns, Bundles and Redstone.
 

@@ -1,4 +1,4 @@
-# 1.20.2-rc1
+# Minecraft 1.20.2 Release Candidate 1
 
 Here is the first (and hopefully last) release candidate for 1.20.2. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
 

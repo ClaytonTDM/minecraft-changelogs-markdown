@@ -1,4 +1,4 @@
-# 1.20.3-rc1
+# Minecraft 1.20.3 Release Candidate 1
 
 We're now releasing the first (and hopefully last) release candidate for 1.20.3. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
 

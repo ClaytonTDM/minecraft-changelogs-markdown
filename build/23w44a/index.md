@@ -1,4 +1,4 @@
-# 23w44a
+# Minecraft Snapshot 23w44a
 
 In this week's Snapshot we're taking a break from new features to improve ones we've already added, including fixes to Commands and the ability to use Loot Tables with Decorated Pots.
 

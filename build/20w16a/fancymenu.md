@@ -1,4 +1,4 @@
-# 20w16a
+# Minecraft Snapshot 20w16a
 
 Bastion remnants, or "home sweet home" as Piglins would call them, are finally here! This snapshot introduces the home of the Piglins. If you scour the world you might also find ruins of some old portals.
 

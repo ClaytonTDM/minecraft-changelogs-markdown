@@ -1,4 +1,4 @@
-# 1.20.3-pre2
+# Minecraft 1.20.3 Pre-Release 2
 
 Hello again! The stabilization phase for 1.20.3 release continues. This Pre-Release brings more bug fixes.
 

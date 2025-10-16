@@ -1,4 +1,4 @@
-# 20w10a
+# Minecraft Snapshot 20w10a
 
 Today's snapshot is loud! It comes with a bunch of new ambient sound that adds some really nice flavour to the Nether biomes. Apart from this, you now have to use the smithing table to craft Netherite. Happy mining!
 

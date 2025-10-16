@@ -1,4 +1,4 @@
-# 1.19.3-rc3
+# Minecraft 1.19.3 Release Candidate 3
 
 In order to secure the quality of the Minecraft 1.19.3 release, we have decided to fix a few more critical issues and to delay the release until tomorrow. To that end we are now releasing Minecraft 1.19.3 Release Candidate 3.
 

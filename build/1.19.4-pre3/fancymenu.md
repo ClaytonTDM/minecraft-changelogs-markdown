@@ -1,4 +1,4 @@
-# 1.19.4-pre3
+# Minecraft 1.19.4 Pre-Release 3
 
 We're back again with the third pre-release for Minecraft 1.19.4. This pre-release contains more bug fixes, as well as color adjustments for potions. The archer pottery shard texture has also been updated. ​ Happy mining! ​
 

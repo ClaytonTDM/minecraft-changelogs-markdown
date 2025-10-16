@@ -1,4 +1,4 @@
-# 25w34b
+# Minecraft Snapshot 25w34b
 
 Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 25w34a.
 

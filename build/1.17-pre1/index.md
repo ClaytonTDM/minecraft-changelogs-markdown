@@ -1,4 +1,4 @@
-# 1.17-pre1
+# Minecraft 1.17 Pre-Release 1
 
 The first 1.17 pre-release is here!
 

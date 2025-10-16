@@ -1,4 +1,4 @@
-# 24w05b
+# Minecraft Snapshot 24w05b
 
 We are now releasing 24w05b to address a crash and bug introduced in yesterday's snapshot.
 

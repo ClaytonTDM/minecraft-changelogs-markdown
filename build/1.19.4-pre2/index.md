@@ -1,4 +1,4 @@
-# 1.19.4-pre2
+# Minecraft 1.19.4 Pre-Release 2
 
 We are now releasing the second pre-release for Minecraft 1.19.4. This pre-release contains bug fixes, as well as an updated model for the decorated pot.
 

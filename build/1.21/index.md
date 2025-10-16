@@ -1,4 +1,4 @@
-# 1.21
+# Minecraft: Java Edition 1.21
 
 It's a fantastic day today, because it's release day Thursday! And not just any old release day. This one is extra special because today we're shipping Minecraft: Java Edition 1.21, also known as the Tricky Trials Update!
 

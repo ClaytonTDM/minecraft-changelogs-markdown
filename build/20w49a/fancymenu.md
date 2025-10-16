@@ -1,4 +1,4 @@
-# 20w49a
+# Minecraft Snapshot 20w49a
 
 Another snapshot is going out, and this one introduces the Sculk. They're a bit creepy, but don't let that put you off. Pick up some good vibrations!
 

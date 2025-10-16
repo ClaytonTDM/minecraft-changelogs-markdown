@@ -1,4 +1,4 @@
-# 1.21-pre3
+# Minecraft 1.21 Pre-Release 3
 
 The third pre-release for 1.21 is now available and it comes with even more bugfixes!
 

@@ -1,4 +1,4 @@
-# 1.21.5-pre3
+# Minecraft 1.21.5 Pre Release 3
 
 It's Tuesday, and today we're bringing you a third pre-release for Minecraft 1.21.5, with some fixes to recently introduced issues.
 

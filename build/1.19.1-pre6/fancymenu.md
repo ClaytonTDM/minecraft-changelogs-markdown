@@ -1,4 +1,4 @@
-# 1.19.1-pre6
+# Minecraft 1.19.1 Pre-Release 6
 
 We are now releasing pre-release 6 for Minecraft 1.19.1 with some small tweaks to sculk sensors and catalysts as well as bug fixes and improvements to the chat signing system.
 

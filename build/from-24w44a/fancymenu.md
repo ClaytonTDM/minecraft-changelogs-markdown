@@ -318,6 +318,8 @@ Added optional `shadow_color` style field to Text Components, which overrides th
 
 ---
 
+# Minecraft Snapshot 24w40a
+
 Hello!
 
 In this week's snapshot we are adding a new experiment which will allow you to experience the Pale Garden, a new eerie biome filled with Pale Oak Trees and Hanging Moss. Beware of its sole inhabitant, the Creaking, and don't blink!
@@ -520,6 +522,8 @@ Increased to support the new experimental changes
 
 ---
 
+# Minecraft Snapshot 24w39a
+
 Happy Wednesday miners! With this snapshot we're now bundling Bundles into the game for real - Bundles are no longer experimental!
 
 Happy mining!
@@ -611,6 +615,8 @@ Happy mining!
 -   [MC-276919](https://bugs.mojang.com/browse/MC-276919) /tp teleports twice the relative distance if there's a block on the teleport point
 
 ---
+
+# Minecraft Snapshot 24w38a
 
 Hey! This snapshot brings you dyable Bundles in the Bundles experiment and fully-featured world creation for Realms, including Hardcore mode.
 

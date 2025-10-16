@@ -160,6 +160,8 @@ Data Fields:
 
 ---
 
+# Minecraft Snapshot 25w35a
+
 In this week's snapshot we are adding a Minecraft Server Management Protocol which lets servers query players, tweak game rules, update server settings, and listen for real-time server event notifications. Some server properties have been moved to game rules, allowing them to be updated while the server is running. Additionally, player icons can now be used in chat, the copper golem has received some improvements and we are shipping a bunch of bug fixes.
 
 Happy mining!
@@ -352,6 +354,8 @@ Renamed the following item sprites:
 
 ---
 
+# Minecraft Snapshot 25w34b
+
 Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 25w34a.
 
 ## Fixed bugs in 25w34b
@@ -359,6 +363,8 @@ Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 
 -   [MC-300911](https://bugs.mojang.com/browse/MC-300911) Glowing item & block displays no longer glow
 
 ---
+
+# Minecraft Snapshot 25w34a
 
 This week it's time for a smaller snapshot with a new main menu panorama, code of conducts for servers and much tinkering and fixing with our new friends, the Copper Golems. Happy mining!
 

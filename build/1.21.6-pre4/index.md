@@ -1,4 +1,4 @@
-# 1.21.6-pre4
+# Minecraft 1.21.6 Pre-Release 4
 
 We are now releasing Pre-Release 4 for Minecraft 1.21.6, with a few minor bug fixes.
 

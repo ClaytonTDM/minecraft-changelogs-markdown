@@ -1,4 +1,4 @@
-# 1.16-pre3
+# Minecraft 1.16 Pre-Release 3
 
 Another pre-release is now available for Minecraft: Java Edition! This pre-release fixes a bunch of bugs, but we also made a few minor tweaks. The Nether Update is closing in and we aim to release the update within a couple of weeks.
 

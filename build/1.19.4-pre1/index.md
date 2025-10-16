@@ -1,4 +1,4 @@
-# 1.19.4-pre1
+# Minecraft 1.19.4 Pre-Release 1
 
 We are now releasing the first pre-release for Minecraft 1.19.4. This pre-release contains a new high contrast accessibility setting, some updates to the Create World tab visuals, a new execute subcommand, improvements to startup performance, and lots of bug fixes!
 

@@ -1,4 +1,4 @@
-# 20w06a
+# Minecraft Snapshot 20w06a
 
 ## Features in 20w06a
 

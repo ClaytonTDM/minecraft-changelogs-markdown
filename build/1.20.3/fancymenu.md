@@ -1,4 +1,4 @@
-# 1.20.3
+# Minecraft 1.20.3
 
 We're now releasing 1.20.3 for Minecraft: Java Edition. This release comes with new functionality for Decorated Pots, a new look for the Bat and improvements to Shields.
 

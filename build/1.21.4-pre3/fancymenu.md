@@ -1,4 +1,4 @@
-# 1.21.4-pre3
+# 1.21.4 Pre-Release 3
 
 We are now releasing a third Pre-Release for Minecraft 1.21.4 to fix a crash and a few bugs. Watch your step before jumping!
 

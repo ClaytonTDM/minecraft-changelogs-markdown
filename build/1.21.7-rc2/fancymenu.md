@@ -1,4 +1,4 @@
-# 1.21.7-rc2
+# Minecraft 1.21.7 Release Candidate 2
 
 Hey! We had to fix some more bugs today! Here is Release Candidate 2 for Minecraft: Java Edition 1.21.7.
 

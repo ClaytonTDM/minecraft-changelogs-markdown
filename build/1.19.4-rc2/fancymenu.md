@@ -1,4 +1,4 @@
-# 1.19.4-rc2
+# Minecraft 1.19.4 Release Candidate 2
 
 We are releasing a second Release Candidate for 1.19.4 to fix a few critical issues.
 

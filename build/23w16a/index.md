@@ -1,4 +1,4 @@
-# 23w16a
+# Minecraft Snapshot 23w16a
 
 In this weeks Snapshot we're bringing you tweaks to the Trail Ruins, new command functionality, a new advancement trigger, and more!
 

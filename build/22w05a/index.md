@@ -1,4 +1,4 @@
-# 22w05a
+# Minecraft Snapshot 22w05a
 
 While we work on some larger changes that aren't quite ready yet, here's snapshot 22w05a which contains a small squishing (that's a word, right?) of bugs.
 

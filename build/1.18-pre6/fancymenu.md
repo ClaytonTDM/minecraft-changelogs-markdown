@@ -1,4 +1,4 @@
-# 1.18-pre6
+# Minecraft 1.18 Pre-Release 6
 
 The sixth pre-release for 1.18 is now available. This pre-releases squashes some more bugs. Additionally, we now save the game more often, similar how to you should remember to save backups more often.
 

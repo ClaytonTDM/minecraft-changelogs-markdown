@@ -98,6 +98,8 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
 
 ---
 
+# Minecraft Snapshot 25w20a
+
 This week we’re releasing the final features from this year’s second drop. Today’s snapshot brings craftable saddles as well as some stunning tracks, courtesy of Amos Roddy. We have also added an option to show which song is currently playing in the in-game pause menu.
 
 ## New Features
@@ -594,6 +596,8 @@ Syntax:
 
 ---
 
+# Minecraft Snapshot 25w19a
+
 Take aim for this snapshot! It's a bit smaller this week, and you might want to train a bit more to learn the new projectile mechanics! And while you are here, why not enjoy some misty peaks at a distance!
 
 ## Changes
@@ -687,6 +691,8 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   [MC-297461](https://bugs.mojang.com/browse/MC-297461) Equipment and sleeping pos data cannot be loaded in 1.21.4, but can be loaded in 1.21.5 to bees spawned from bee nest and bee hive
 
 ---
+
+# Minecraft Snapshot 25w18a
 
 Leads have become a hot commodity in the recent snapshots and this week they are getting an updated recipe, making it much easier to craft leads for all your leashing needs. The dried ghast is also getting a new recipe, based on soul sand and ghast tears. We have updated Unifont to 16.0.03 and this time we included glyphs from Unifont's Private Use Areas. That means creators will now be able to use scripts in the Under-ConScript Unicode Registry like Tengwar or Sitelen Pona.
 

@@ -1,4 +1,4 @@
-# 25w19a
+# Minecraft Snapshot 25w19a
 
 Take aim for this snapshot! It's a bit smaller this week, and you might want to train a bit more to learn the new projectile mechanics! And while you are here, why not enjoy some misty peaks at a distance!
 

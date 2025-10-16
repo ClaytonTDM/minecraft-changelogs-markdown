@@ -1,4 +1,4 @@
-# 1.18.2-pre1
+# Minecraft 1.18.2 Pre-Release 1
 
 We're now releasing the first pre-release for Minecraft 1.18.2. This pre-release introduces the possibility for data packs to customize cave generation and to add new custom structures to worlds.
 

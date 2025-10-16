@@ -1,4 +1,4 @@
-# 1.17.1-pre3
+# Minecraft 1.17.1 Pre-Release 3
 
 A third pre-release for 1.17.1 is now available in your launcher, fixing a few more crashes and bugs.
 

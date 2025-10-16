@@ -1,4 +1,4 @@
-# 25w20a
+# Minecraft Snapshot 25w20a
 
 This week we’re releasing the final features from this year’s second drop. Today’s snapshot brings craftable saddles as well as some stunning tracks, courtesy of Amos Roddy. We have also added an option to show which song is currently playing in the in-game pause menu.
 

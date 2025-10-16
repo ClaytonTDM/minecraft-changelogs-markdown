@@ -1,4 +1,4 @@
-# 24w14a
+# Minecraft Snapshot 24w14a
 
 Hello Minecraft players! Today we have a Snapshot with some technical changes and bug fixes for you.
 

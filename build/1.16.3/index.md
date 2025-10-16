@@ -1,4 +1,4 @@
-# 1.16.3
+# Minecraft: Java Edition 1.16.3
 
 The 1.16.3 release is now going live! This release fixes two(!) bugs.
 

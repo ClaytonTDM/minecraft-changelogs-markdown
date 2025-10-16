@@ -1,4 +1,4 @@
-# 1.20.5-pre2
+# Minecraft 1.20.5 Pre-Release 2
 
 It's the start of a new week and we're coming right out of the gate with another pre-release for Minecraft: Java Edition 1.20.5! Apart from upping our pun-game in the Advancements department, this pre-release also fixes a slew of bugs and crashes.
 

@@ -1,4 +1,4 @@
-# 1.21.7-rc1
+# Minecraft 1.21.7 Release Candidate 1
 
 Today we are shipping Release Candidate 1 for 1.21.7, a hotfix release that takes care of some critical issues that managed to sneak their way into the Chase the Skies drop (1.21.6). The hotfix also includes a new music disc and a painting of the good boy Dennis. If no other critical issues are found, this will be the version for 1.21.7 that can be expected to be released soon. Happy mining!
 

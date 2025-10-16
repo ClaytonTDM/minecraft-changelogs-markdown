@@ -192,6 +192,8 @@ Renamed the following item sprites:
 
 ---
 
+# Minecraft Snapshot 25w34b
+
 Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 25w34a.
 
 ## Fixed bugs in 25w34b
@@ -199,6 +201,8 @@ Here is snapshot 25w34b to fix a connectivity error with Realms that snuck into 
 -   [MC-300911](https://bugs.mojang.com/browse/MC-300911) Glowing item & block displays no longer glow
 
 ---
+
+# Minecraft Snapshot 25w34a
 
 This week it's time for a smaller snapshot with a new main menu panorama, code of conducts for servers and much tinkering and fixing with our new friends, the Copper Golems. Happy mining!
 
@@ -374,6 +378,8 @@ Syntax:
 -   [MC-301032](https://bugs.mojang.com/browse/MC-301032) Bees in the End now hide in their hive when it's raining in the Overworld
 
 ---
+
+# Minecraft Snapshot 25w33a
 
 In this week's snapshot we've got a nice quality of life improvement for all the chatters out there. Now your unsent messages will be saved as drafts, check out the details below. Items on shelves will now be positioned in the middle of the shelf as default. Before we move our focus onto technical tweaks and bug fixes for this drop, we have one final feature to announce – and it involves a very cute interaction between the copper golem and the iron golem! With this, all features for our third game drop of 2025 are now in testing, and we'll start working our next game drop, which we are excited to tell you about soon!
 

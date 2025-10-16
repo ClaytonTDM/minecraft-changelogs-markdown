@@ -1,4 +1,4 @@
-# 1.19-pre1
+# Minecraft 1.19 Pre-release 1
 
 Presenting the first pre-release of 1.19: The Wild Update!
 

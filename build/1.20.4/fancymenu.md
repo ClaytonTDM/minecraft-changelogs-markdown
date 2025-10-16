@@ -1,4 +1,4 @@
-# 1.20.4
+# Minecraft 1.20.4
 
 Minecraft 1.20.4 is a hotfix release for Java Edition which fixes a critical bug that could cause items to vanish after being stored in a Decorated Pot.
 

@@ -65,6 +65,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6b510a715
 
 ---
 
+# Minecraft Snapshot 21w17a
+
 A delicious snapshot appears! This snapshot introduces some tweaks to the raw ore textures, a few copper changes, and the introduction of noodle caves in the Caves & Cliffs Preview datapack.
 
 If you have any [feedback](https://feedback.minecraft.net/), a penne for your thoughts...
@@ -116,6 +118,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6d37f3c37
 -   [MC-223792](https://bugs.mojang.com/browse/MC-223792) Shrinking world border with center past x/z 29999983 crashes the game
 
 ---
+
+# Minecraft Snapshot 21w16a
 
 Snapshot 21w16a introduces some changes to azaleas and dripstone. On top of that, we've tweaked the textures of raw ores. There are also a few additions to the Caves & Cliffs preview datapack.
 
@@ -214,6 +218,8 @@ Download the updated [datapack here](https://launcher.mojang.com/v1/objects/ebe5
 -   [MC-223757](https://bugs.mojang.com/browse/MC-223757) minecraft.used:minecraft.lava;;_;;bucket doesn't increase when filling a cauldron with a lava bucket
 
 ---
+
+# Minecraft Snapshot 21w15a
 
 In today’s snapshot, we’re making a few needed changes that directly relate to our [recent announcement](https://www.minecraft.net/article/a-caves---cliffs-announcement). If you haven’t yet read it, we strongly recommend you do. You can also check out [this Caves & Cliffs video](https://youtu.be/6YgKUZnUyak) from Agnes and Henrik to learn more about our plans for the update.
 
@@ -322,6 +328,45 @@ When `require-resource-pack` is used in `server.properties`, there's now an opti
 -   [MC-222104](https://bugs.mojang.com/browse/MC-222104) Beacon beam fog is incorrectly computed
 -   [MC-222266](https://bugs.mojang.com/browse/MC-222266) Goats don't attack
 -   [MC-222522](https://bugs.mojang.com/browse/MC-222522) Nether Gold Ore is no longer smeltable
+
+---
+
+# Minecraft Snapshot 21w14a
+
+A new snapshot is ready to be served, although somewhat… raw. Gordon Ramsey would be furious. Please don’t tell him, we don’t want to be called donuts. :(
+
+Most of us have just gotten back from being off for a few days during Easter, so this snapshot is a bit on the smaller side.
+
+## New Features in 21w14a
+
+-   Added Raw Copper, Raw Iron and Raw Gold items
+-   Tuff blobs can now be found between heights 0 and 16
+
+### Smeltable Ore Drops
+
+-   Ores that are smeltable now drop raw item forms of the ore instead of the ore block, and these can be smelted just like before
+-   This is to prevent cluttering the inventory, and have consistency with Fortune on all ores
+-   Ore blocks from old worlds and silk-touched ore blocks will continue to be smeltable
+
+## Changes in 21w14a
+
+-   Fully oxidized copper can now be waxed
+
+## Bugs fixed in 21w14a
+
+-   [MC-203854](https://bugs.mojang.com/browse/MC-203854) Fishing rod texture always looks like it has been cast when in the player's hand
+-   [MC-207173](https://bugs.mojang.com/browse/MC-207173) Entering only colons into multiplayer Direct Connection & pressing enter crashes the game
+-   [MC-210155](https://bugs.mojang.com/browse/MC-210155) Command block output no longer is displayed immediately after running a command
+-   [MC-213665](https://bugs.mojang.com/browse/MC-213665) Crash upon attempting to generate a world with a height of 0 blocks
+-   [MC-214287](https://bugs.mojang.com/browse/MC-214287) Crash upon entering a nether portal when logical;;_;;height is set to 0 and min;;_;;y is set to 80 or greater
+-   [MC-215120](https://bugs.mojang.com/browse/MC-215120) World-gen datapacks can cause crashes when first generating world
+-   [MC-216697](https://bugs.mojang.com/browse/MC-216697) Having 'min;;_;;y' set to lower than -64 causes either a crash or the world not to behave correctly if the height limit wasn't modified
+-   [MC-217702](https://bugs.mojang.com/browse/MC-217702) Game crashes (ArrayIndexOutOfBoundsException) during world feature placement / decoration
+-   [MC-219849](https://bugs.mojang.com/browse/MC-219849) Fishing doesn't animate or render the rod, line or bobber anymore
+-   [MC-220652](https://bugs.mojang.com/browse/MC-220652) IndexOutOfBound exception hard crash when loading a simple custom dimension datapack
+-   [MC-221553](https://bugs.mojang.com/browse/MC-221553) The end dimension generates differently than it did previously
+-   [MC-221586](https://bugs.mojang.com/browse/MC-221586) Excessive pillager spawning in pillager outposts
+-   [MC-221673](https://bugs.mojang.com/browse/MC-221673) Ocean monuments are completely empty
 
 ---
 

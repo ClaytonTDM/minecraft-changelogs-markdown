@@ -1,4 +1,4 @@
-# 23w51a
+# Minecraft Snapshot 23w51a
 
 We're now releasing Snapshot 23w51a, the first snapshot for Minecraft 1.20.5. This one comes with a present for your pet Wolf in time for the holidays - and the Armadillo.
 

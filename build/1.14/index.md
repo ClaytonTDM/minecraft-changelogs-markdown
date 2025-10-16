@@ -1,4 +1,4 @@
-# 1.14
+# Minecraft: Java Edition 1.14
 
 ## Features
 

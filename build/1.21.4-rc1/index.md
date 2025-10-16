@@ -1,4 +1,4 @@
-# 1.21.4-rc1
+# Minecraft 1.21.4 Release Candidate 1
 
 After yesterday's [announcement](https://www.minecraft.net/en-us/article/the-garden-awakens-drop-date) that the The Garden Awakens drop comes out on December 3rd, today we're releasing the first release candidate!
 

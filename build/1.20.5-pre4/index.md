@@ -1,4 +1,4 @@
-# 1.20.5-pre4
+# Minecraft 1.20.5 Pre-Release 4
 
 And back again! Here comes the fourth Pre-Release of 1.20.5. Similar story this time around, fixing some important issues.
 

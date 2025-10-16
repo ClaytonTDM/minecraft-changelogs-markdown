@@ -8,6 +8,8 @@ Coming in hot, here is Snapshot 23w51b, fixing a crash in 23w51a.
 
 ---
 
+# Minecraft Snapshot 23w51a
+
 We're now releasing Snapshot 23w51a, the first snapshot for Minecraft 1.20.5. This one comes with a present for your pet Wolf in time for the holidays - and the Armadillo.
 
 Happy brushing!
@@ -144,6 +146,8 @@ Happy brushing!
 
 ---
 
+# Minecraft Snapshot 23w46a
+
 This snapshot brings about a few redstone-focused changes. Notably, we’re tweaking the tick delay behavior of the crafter and the copper bulb while they’re still in experimental development.
 
 With these changes, we aim to make the crafter more consistent with other blocks that drop or eject items, and the copper bulb with other blocks that react or change state when a connected redstone signal changes. As a result of this, some contraptions built during the last few snapshots may no longer work properly.
@@ -224,6 +228,8 @@ Formats:
 -   [MC-266622](https://bugs.mojang.com/browse/MC-266622) Wind Charges can't switch levers off
 
 ---
+
+# Minecraft Snapshot 23w45a
 
 We're happy to share another snapshot, this time offering an early look at some exciting new adventures waiting for you underground in the form of Trial Chambers!
 
@@ -350,6 +356,254 @@ Happy Mining!
 -   [MC-266256](https://bugs.mojang.com/browse/MC-266256) Accessibility button in the Welcome screen still needs its own string
 -   [MC-266287](https://bugs.mojang.com/browse/MC-266287) Can't load .dat and .nbt files (server list & saved hotbar)
 -   [MC-266289](https://bugs.mojang.com/browse/MC-266289) Could not save data raids.dat and random;;_;;sequences.dat
+
+---
+
+# Minecraft Snapshot 23w44a
+
+In this week's Snapshot we're taking a break from new features to improve ones we've already added, including fixes to Commands and the ability to use Loot Tables with Decorated Pots.
+
+## Changes
+
+-   Copper Doors & Copper Trapdoors has updated textures
+
+## Technical Changes
+
+-   The Data Pack version is now 23
+
+## Data Pack Version 23
+
+-   Decorated Pots can now utilize loot tables and will read from the `LootTable` tag key
+-   Additional changes to command functions
+
+### Commands
+
+#### `tick`
+
+-   The `<time>` parameter in the `tick step` command is now optional. The default value is 1
+
+#### `return`
+
+-   `return run` will now always return
+    -   If there are no valid results from returned command, function containing `return run` will fail (i.e. `success=0` and `result=0`)
+-   `return run` will now propagate success value together with results value (previously it always set success to `1`)
+-   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store value and return it outside function
+-   New subcommand `return fail` is added to make whole function fail (i.e. return `success=0` and `result=0`)
+
+#### `function`
+
+-   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
+-   A single call to the `function` command will always have return when run with `return run`
+    -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
+
+#### `execute if|unless function`
+
+-   `execute if|unless function` will no longer always fail if all functions had no return
+    -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
+    -   First `return` in any of called functions will return (for a single context)
+
+## Fixed bugs in Snapshot 23w44a
+
+-   [MC-219293](https://bugs.mojang.com/browse/MC-219293) When teleporting via Chorus Fruit, the burping and teleporting sounds play at the wrong location
+-   [MC-265805](https://bugs.mojang.com/browse/MC-265805) Executing a tail-recursive function consumes memory resources linearly with recursion depth
+-   [MC-266052](https://bugs.mojang.com/browse/MC-266052) Subtitles for turning copper bulb on or off display raw translation string
+-   [MC-266053](https://bugs.mojang.com/browse/MC-266053) Subtitles for opening or closing a copper trapdoor display raw translation string
+-   [MC-266064](https://bugs.mojang.com/browse/MC-266064) Footsteps on Polished Tuff create missing subtitle
+-   [MC-266084](https://bugs.mojang.com/browse/MC-266084) Top of copper doors include an open part of the window
+-   [MC-266086](https://bugs.mojang.com/browse/MC-266086) Tuff bricks do not properly align with other bricks
+-   [MC-266105](https://bugs.mojang.com/browse/MC-266105) Bat head upside down when spawned while ticks are frozen
+-   [MC-266112](https://bugs.mojang.com/browse/MC-266112) New Bat's ears are lower than the official render and Bedrock's
+-   [MC-266117](https://bugs.mojang.com/browse/MC-266117) Chiseled copper cannot be stonecut from cut copper blocks
+-   [MC-266147](https://bugs.mojang.com/browse/MC-266147) Copper Door item texture is inconsistent with the block
+-   [MC-266197](https://bugs.mojang.com/browse/MC-266197) The "Transfer Now" button in the realms menu cannot be selected via keyboard navigation
+-   [MC-266215](https://bugs.mojang.com/browse/MC-266215) The pivot point of the head of the new bats is different from that of Bedrock's
+
+---
+
+# Minecraft Snapshot 23w43b
+
+We're now releasing a second snapshot for the week to fix some crashes.
+
+## Bug Fixes
+
+-   Fixed a crash on server startup
+-   Fixed a crash when leaving the "Configure Realm" screen
+
+---
+
+# Minecraft Snapshot 23w43a
+
+In this week's snapshot we're extending the Update 1.21 experiment with ALL the new blocks! And how about a bat makeover just in time for spooky fall? Happy crafting!
+
+## Experimental Features
+
+### Copper Family
+
+-   The Copper family of blocks has been expanded, including:
+    -   Chiseled Copper
+    -   Copper Grate
+    -   Copper Bulb
+    -   Copper Door
+    -   Copper Trapdoor
+    -   Oxidized and waxed variants of all of the above
+
+#### Chiseled Copper
+
+-   Crafted with 2 Cut Copper Slabs of a shared oxidation level
+-   Can be crafted in the Stonecutter
+
+#### Copper Grate
+
+-   A new type of decorative block unique to the Copper family
+-   Crafted with 4 Copper Blocks of a shared oxidation level
+    -   Can be crafted in the Stonecutter
+-   Properties:
+    -   Transparent and allows light to pass through
+    -   Mobs cannot suffocate inside them
+    -   Cannot conduct redstone
+    -   Hostile mobs cannot naturally spawn on them
+
+#### Copper Bulb
+
+-   A light-emitting block that can toggle its light emission through redstone pulses
+-   Oxidizes like other Copper blocks, and emits less light the more oxidized they are
+    -   Copper Bulb: Light level 15
+    -   Exposed Copper Bulb: Light level 12
+    -   Weathered Copper Bulb: Light level 8
+    -   Oxidized Copper Bulb: Light level 4
+-   When placed, its light is off by default
+    -   While the Copper Bulb is unpowered, it will toggle its light on or off when it receives a redstone pulse
+    -   Copper Bulb light will stay on even when the redstone source is removed until it receives another redstone pulse to toggle it off
+-   A redstone crystal will glow in the center of Copper Bulbs while it is powered by a redstone signal
+-   Comparators will read a signal strength of 15 if the Copper Bulb's light is on
+-   Does not conduct redstone power
+-   Can craft 4 Copper Bulbs with:
+    -   3 Copper Blocks of a shared oxidation level
+    -   1 Blaze Rod
+    -   1 Redstone Dust
+
+#### Copper Doors and Trapdoors
+
+-   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
+-   Works like wooden doors in that they can be opened and closed with interaction as well as redstone
+-   Crafted with Copper Blocks of a shared oxidation level
+
+### Tuff Family
+
+-   Tuff has been expanded to have its own family of blocks, including:
+    -   Stair, Slab, Wall and Chiseled variants
+    -   Tuff Bricks with Stair, Slab, Wall and Chiseled variants
+    -   Polished Tuff with Stair, Slab and Wall variants
+-   All Tuff variants can be crafted in the Stonecutter
+
+## Changes
+
+-   The Bat now has a new look
+-   Thrown Ender Pearls produce a teleportation sound on impact
+-   Small tweaks to the Telemetry Data Collection screen
+
+### Bat
+
+-   The Bat has an updated model, animations and texture
+
+## Technical Changes
+
+-   The Data Pack version is now 22
+-   The Resource Pack version is now 20
+
+## Data Pack Version 22
+
+-   Added `tick` command
+-   Added two new input fields for Selection Priority and Placement Priority in the Jigsaw block edit screen
+-   Added `item` to `minecraft:arrow` and `minecraft:spectral_arrow`, this is the item that will be picked up
+-   Renamed `Trident` to `item` in `minecraft:trident`
+
+### `tick` command
+
+Added a new `tick` command. This is an adminstative and debugging command that allows to control the ticking flow and measure the performance of the game. The command requires elevated permissions (admins and above) and so it is not by default available in command blocks and datapacks.
+
+Syntax:
+
+`tick query` - outputs the current target ticking rate, with information about the tick times performance.
+
+`tick rate <rate>` - sets a custom target ticking rate to the specified value. The value must be greater than 1.0 and lower than 10000.0. Setting a very low tick rate can cause the game to feel unresponsive and setting too high tick rate for your system can cause the game to crash as the game now assumes, it is constantly falling behind the ticking target. Please use `tick query` or `<F3> + 2` (Integrated server only) debug screen to measure the performance of the game and adjust the tick rate accordingly. Setting a tick target lower than the default `20.0` will also cause the players to be simulated at a lower rate (including player movement and input controls), while setting a higher tick rate will cause the players to be simulated at the default rate of `20` ticks per second to maintain the expected responsiveness of the game, but can cause artifacts in entities interpolation.
+
+`tick freeze` - freezes all gameplay elements, except for players and any entity a player is riding. This is useful for debugging and isolating issues with the game allowing the player to move around freely and inspect the world.
+
+`tick step <time>` - Only works when the game is frozen. It runs the game for the specified number of ticks and then freezes the game again. This allows to step through the game a set amount of ticks at a time.
+
+`tick step stop` - stops the current stepping process, and re-freezes the game.
+
+`tick unfreeze` - unfreezes the game and resumes all gameplay elements.
+
+`tick sprint <time>` - runs the game while ignoring the set ticking target rate (meaning that the game will run as fast as possible) for the specified number of ticks. At the end of the sprint, the game will resume the previous ticking target and display performance information about the tick times while sprinting. This is especially useful for testing gameplay elements that are time dependent, such as redstone contraptions, or mob behaviour in isolated environments that allow for much faster simulation.
+
+`tick sprint stop` - stops the current tick sprint, and resumes the previous ticking target.
+
+### Jigsaw Selection & Placement Priority
+
+-   Selection Priority
+    -   When the parent piece is being processed for connections, this controls the order in which this Jigsaw block attempts to connect to its target piece
+    -   Jigsaws will be processed in descending priority order and randomly within the same priority
+-   Placement Priority
+    -   When this Jigsaw block connects to a piece, this is the order in which that piece is processed for connections in the wider structure
+    -   Pieces will be processed in descending priority order with the default insertion order breaking ties within the same priority
+-   This functionality has been added to support the ability for Jigsaw structures to generate branches in a depth-first order, as well as give finer control over ordering of connections
+-   All existing Jigsaw blocks will default their Selection and Placement Priority to 0, resulting in the same behaviour as before these two configurable values were introduced
+
+## Resource Pack Version 20
+
+-   `bat.png` has been updated for the new Bat model
+-   Added block models, items models and block state definitions for the following blocks:
+    -   `chiseled_copper`, `exposed_chiseled_copper`, `weathered_chiseled_copper`, `oxidized_chiseled_copper`
+    -   `copper_grate`, `expxosed_copper_grate`, `weathered_copper_grate`, `oxidized_copper_grate`
+    -   `copper_bulb`, `exposed_copper_bulb`, `weathered_copper_bulb`, `oxidized_copper_bulb`
+    -   `copper_door`, `exposed_copper_door`, `weathered_copper_door`, `oxidized_copper_door`
+    -   `copper_trapdoor`, `exposed_copper_trapdoor`, `weathered_copper_trapdoor`, `oxidized_copper_trapdoor`
+    -   `tuff_stairs`
+    -   `tuff_slab`
+    -   `tuff_wall`
+    -   `chiseled_tuff`
+    -   `polished_tuff`
+    -   `polished_tuff_stairs`
+    -   `polished_tuff_slab`
+    -   `polished_tuff_wall`
+    -   `tuff_bricks`
+    -   `tuff_brick_stairs`
+    -   `tuff_brick_slab`
+    -   `tuff_brick_wall`
+    -   `chiseled_tuff_bricks`
+-   Added unique sprites for the following blocks:
+    -   `chiseled_copper`, `exposed_chiseled_copper`, `weathered_chiseled_copper`, `oxidized_chiseled_copper`
+    -   `copper_grate`, `expxosed_copper_grate`, `weathered_copper_grate`, `oxidized_copper_grate`
+    -   `copper_bulb`, `exposed_copper_bulb`, `weathered_copper_bulb`, `oxidized_copper_bulb`
+    -   `copper_door`, `exposed_copper_door`, `weathered_copper_door`, `oxidized_copper_door`
+    -   `copper_trapdoor`, `exposed_copper_trapdoor`, `weathered_copper_trapdoor`, `oxidized_copper_trapdoor`
+    -   `chiseled_tuff`
+    -   `polished_tuff`
+    -   `tuff_bricks`
+    -   `chiseled_tuff_bricks`
+
+## Fixed bugs in Snapshot 23w43a
+
+-   [MC-1981](https://bugs.mojang.com/browse/MC-1981) All arrow types lose their name/NBT data when shot and picked up
+-   [MC-257786](https://bugs.mojang.com/browse/MC-257786) The game takes a long time to process players leaving realms groups or accepting or declining realms invitations
+-   [MC-263263](https://bugs.mojang.com/browse/MC-263263) The operator buttons intersect the scroll bar within the realms player menu
+-   [MC-263272](https://bugs.mojang.com/browse/MC-263272) You cannot click on an area to set a value within the spawn protection slider in the realms world options menu
+-   [MC-263309](https://bugs.mojang.com/browse/MC-263309) You can configure your realm before it has been created by using the TAB key
+-   [MC-265872](https://bugs.mojang.com/browse/MC-265872) The word "available" is misspelled as "availible" within the "recover;;_;;world.no;;_;;fallback" string
+-   [MC-265874](https://bugs.mojang.com/browse/MC-265874) Right-clicking and keyboard input can disable or enable slots in the crafter
+-   [MC-265880](https://bugs.mojang.com/browse/MC-265880) The subtitle for Crafters crafting something uses inconsistent tense
+-   [MC-265884](https://bugs.mojang.com/browse/MC-265884) The word "occurred" is misspelled as "occured" within the "recover;;_;;world.message" string
+-   [MC-265885](https://bugs.mojang.com/browse/MC-265885) Extra space in the word "cannot" in selectWorld.incompatible.description
+-   [MC-265886](https://bugs.mojang.com/browse/MC-265886) The built-in update;;_;;1;;_;;21 pack contains duplicate files from the vanilla pack
+-   [MC-265891](https://bugs.mojang.com/browse/MC-265891) Placing items into the crafter output slot deletes them
+-   [MC-265896](https://bugs.mojang.com/browse/MC-265896) Additional lines appear on the crafter's face when it crafts
+-   [MC-265899](https://bugs.mojang.com/browse/MC-265899) The translation for "gamerule.commandModificationBlockLimit" is in title case instead of sentence case
+-   [MC-265901](https://bugs.mojang.com/browse/MC-265901) Comparator sometimes doesn't update when crafting with the Crafter
+-   [MC-265938](https://bugs.mojang.com/browse/MC-265938) Elements within the list in the "Changes From Last Backup" realms menu cannot be selected via the mouse cursor
+-   [MC-265939](https://bugs.mojang.com/browse/MC-265939) The "No pending invites!" text within the realms invitation menu cannot be narrated or selected
+-   [MC-265961](https://bugs.mojang.com/browse/MC-265961) Inconsistent pixels near light on the crafter's side
 
 ---
 

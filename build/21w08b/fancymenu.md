@@ -1,4 +1,4 @@
-# 21w08b
+# Minecraft Snapshot 21w08b
 
 Snapshot 21w08b is a small hotfix to fix two issues with ore distribution.
 

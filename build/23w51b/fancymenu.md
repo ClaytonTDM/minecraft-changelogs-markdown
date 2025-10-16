@@ -1,4 +1,4 @@
-# 23w51b
+# Minecraft Snapshot 23w51b
 
 Coming in hot, here is Snapshot 23w51b, fixing a crash in 23w51a.
 

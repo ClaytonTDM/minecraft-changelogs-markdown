@@ -1,4 +1,4 @@
-# 1.20.2-pre4
+# Minecraft 1.20.2 Pre-Release 4
 
 Here comes the fourth pre-release for 1.20.2. Much like the previous one, this pre-release contains some bug and crash fixes.
 

@@ -1,4 +1,4 @@
-# 22w07a
+# Minecraft Snapshot 22w07a
 
 Another snapshot is now available for Minecraft: Java Edition. If you're into custom worlds, you might want to try out biome tags.
 

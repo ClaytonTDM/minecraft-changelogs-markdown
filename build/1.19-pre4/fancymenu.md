@@ -1,4 +1,4 @@
-# 1.19-pre4
+# Minecraft 1.19 Pre-Release 4
 
 The fourth pre-release for 1.19 is now available with a few bugfixes.
 

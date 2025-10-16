@@ -1,4 +1,4 @@
-# 1.19.3
+# Minecraft: Java Edition 1.19.3
 
 We're now releasing 1.19.3 for Minecraft: Java Edition. This release gives the Vex a brand new look as well as containing technical improvements and bug fixes.
 

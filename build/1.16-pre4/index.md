@@ -1,4 +1,4 @@
-# 1.16-pre4
+# Minecraft 1.16 Pre-Release 4
 
 We've now released Minecraft 1.16 Pre-release 4, with tweaked spawn rates and another round of bug fixes.
 

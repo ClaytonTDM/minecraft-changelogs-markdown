@@ -1,4 +1,4 @@
-# 22w43a
+# Minecraft Snapshot 22w43a
 
 Did you know that Camels walk by lifting both legs on one side at the same time? Yes, in snapshot 22w43a, Minecraft knows too! This snapshot also contains another round of tweaks to the Creative Inventory.
 

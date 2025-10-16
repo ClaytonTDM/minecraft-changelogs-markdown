@@ -1,4 +1,4 @@
-# 1.21.2-rc2
+# Minecraft 1.21.2 Release Candidate 2
 
 We were so worried that you had forgotten all about us over the weekend, so we're kicking this week off with a surprise second Release Candidate for 1.21.2! Let's hope this is (fingers crossed) the last one before the full release of Bundles of Bravery.
 

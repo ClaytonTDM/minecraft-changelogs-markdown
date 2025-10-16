@@ -1,4 +1,4 @@
-# 1.18.1-pre1
+# Minecraft 1.18.1 Pre-Release 1
 
 We're now releasing the first pre-release for Minecraft 1.18.1. This will be a fairly small release that will fix a few stability issues and a few bugs. We aim to release this version at the end of next week.
 

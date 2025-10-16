@@ -1,4 +1,4 @@
-# 1.20.2-pre3
+# Minecraft 1.20.2 Pre-Release 3
 
 We are now releasing the third pre-release for 1.20.2. As we are now on the final stabilisation stretch of 1.20.2, this pre-release contains some bug and crash fixes.
 

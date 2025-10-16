@@ -1,4 +1,4 @@
-# 21w05b
+# Minecraft Snapshot 21w05b
 
 Snapshot 21w05b is a small snapshot to address a couple of bugs.
 

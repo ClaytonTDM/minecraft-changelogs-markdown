@@ -1,4 +1,4 @@
-# 1.20.3-pre4
+# Minecraft 1.20.3 Pre-Release 4
 
 We're now releasing Pre-release 4 for 1.20.3 with a few more bug fixes.
 

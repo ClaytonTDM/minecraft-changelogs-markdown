@@ -1,4 +1,4 @@
-# 1.18-rc2
+# Minecraft 1.18 Release Candidate 2
 
 We're now releasing the second (and hopefully last) release candidate for Caves & Cliffs: Part II. If there are no major issues following this release, no further changes will be done before the full release.
 

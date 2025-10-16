@@ -1,4 +1,4 @@
-# 1.19.1-rc2
+# Minecraft 1.19.1 Release Candidate 2
 
 We are now releasing Release Candidate 2 for Minecraft 1.19.1. If no critical issues are found, we expect to release the full version next week.
 

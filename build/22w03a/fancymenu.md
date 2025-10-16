@@ -1,4 +1,4 @@
-# 22w03a
+# Minecraft Snapshot 22w03a
 
 Happy New Year! It's time for the first snapshot of 2022 to hit the shelves. This snapshot series will be leading up to the release of 1.18.2. With this release we aim to address a few issues before moving on and starting with the Wild Update snapshots.
 

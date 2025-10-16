@@ -1,4 +1,4 @@
-# 1.20-pre5
+# Minecraft 1.20 Pre-Release 5
 
 Summer is around the corner here at the office, and what better time to stay inside and try out the new pre-release?!
 

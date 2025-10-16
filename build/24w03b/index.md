@@ -1,4 +1,4 @@
-# 24w03b
+# Minecraft Snapshot 24w03b
 
 We are releasing Snapshot 24w03b to fix a crash, along with some bug fixes and minor changes.
 

@@ -8,6 +8,8 @@ We've now released snapshot 22w16b to fix a crash.
 
 ---
 
+# Minecraft Snapshot 22w16a
+
 A chance to re-live the good old times appears in snapshot 22w16a with the ability to de-fragment a Disc - a new Music Disc, to be precise! This snapshot also comes with even more new music, tweaks to the Allay and to top it off it makes some random gameplay events slightly more predictable.
 
 Enjoy!
@@ -110,6 +112,8 @@ Some randomized events are now more predictable and no longer have a possibility
 -   [MC-250294](https://bugs.mojang.com/browse/MC-250294) Parity Issue: Allays item detection range is significantly smaller than in Bedrock
 
 ---
+
+# Minecraft Snapshot 22w15a
 
 Let me tell you a little story about hubris. Well, not so much a story as a lament. Because some of you have been thinking that the warden was a little too easy. I won’t name names, but I know you’re out there. Why else would we be adding ranged attacks for this already terrifying mob? Was the sniffing not enough? When will it end? Not today, apparently. Enjoy a new terrifying warden along with more advancements and technical changes.
 
@@ -229,6 +233,8 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 -   [MC-250106](https://bugs.mojang.com/browse/MC-250106) Overworld vegetation cannot be placed on muddy mangrove roots
 
 ---
+
+# Minecraft Snapshot 22w14a
 
 Mangrove trees! Warm frogs! Mud blocks! More mangrove trees! Today, we’re happy to bring you the most mud-tastic Java snapshot to date!
 
@@ -395,6 +401,228 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 -   [MC-249785](https://bugs.mojang.com/browse/MC-249785) Warden can be pushed when emerging and digging
 -   [MC-249800](https://bugs.mojang.com/browse/MC-249800) Eating doesn't activate redstone door in the Ancient City center
 -   [MC-249816](https://bugs.mojang.com/browse/MC-249816) Wardens hitbox doesn't adjust when emerging and digging
+
+---
+
+# Minecraft Snapshot 22w13a
+
+**Allay**, the mob that nobody is really sure how to pronounce, is now entering the latest Minecraft: Java Edition snapshot. Along with our new shiny blue friend, we've added the **ancient** **cities**, which have seen some pretty drastic changes since the experimental snapshot a few weeks ago, so make sure you check them out.
+
+Happy mining!
+
+## New Features in 22w13a
+
+-   Added Allay mob
+-   Added Ancient Cities
+
+### Allay
+
+-   Allays will collect all the surrounding items that match the item they are holding
+-   Allays will like a player who hands them an item and will bring the items they collect to their liked player
+-   If the Allay hears a noteblock play, that noteblock becomes the Allay's favorite noteblock for 30 seconds. The Allay will stay near that noteblock for that duration and bring its collected items to the noteblock instead of to the player
+-   Interacting with an Allay with an empty hand will remove the item the Allay is holding
+-   Allays can be found in Pillager Outposts and Woodland Mansions
+
+### Ancient City
+
+Wander the halls of these long-abandoned structures in the Deep Dark depths to uncover some relics long forgotten.
+
+-   Ancient City structures spawn in the Deep Dark biome
+-   In chests, guarded by sculk sensors and shriekers, you can find the new Swift Sneaking enchantment
+-   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
+-   Mobs cannot spawn in Ancient Cities
+
+#### Differences compared to the Experimental Deep Dark snapshot
+
+-   Many adjustments have been made to Ancient Cities, with new and tweaked structures
+-   Loot tables have been adjusted for Ancient Cities, including a separate loot table for the "ice box" structures
+
+## Changes in 22w13a
+
+-   The recipes for minecart with chest/furnace/tnt/hopper are now shapeless
+-   When broken each minecart variant drops itself as item, instead of splitting into two items (such as chest and minecart)
+-   Only wool and wool carpets now block the sounds coming from noteblocks
+
+## Technical Changes in 22w13a
+
+-   Added `kill_mob_near_sculk_catalyst` advancement trigger
+-   Sculk shrieker block state changes
+-   Renamed some game events
+
+### Advancements
+
+#### New triggers
+
+##### `kill_mob_near_sculk_catalyst`
+
+-   Triggered when a player kills an entity next to Sculk Catalyst
+-   Conditions:
+    -   `player` - a player for which this trigger runs
+    -   `entity` - a predicate for the entity that was killed
+    -   `killing_blow` - a predicate for how the entity was killed
+
+### Sculk Shrieker
+
+-   Added `can_summon` blockstate to the Sculk Shrieker that determines whether a Shrieker can summon a Warden or not
+-   Shriekers placed via worldgen will have `can_summon` set to true
+-   When a Shrieker is placed or generated via Sculk spread, `can_summon` is set to false
+
+### Game Events
+
+Some game events have been renamed, with some of those changes to make them more gramatically consistent:
+
+-   `drinking_finish` -> `drink`
+-   `entity_killed` -> `entity_die`
+-   `entity_damaged` -> `entity_damage`
+-   `elytra_free_fall` -> `elytra_glide`
+-   `mob_interact` -> `entity_interact`
+-   `ravager_roar` -> `entity_roar`
+-   `wolf_shaking` -> `entity_shake`
+
+The following events have been collapsed into `block_activate` and `block_deactivate`:
+
+-   `block_press`
+-   `block_unpress`
+-   `block_switch`
+-   `block_unswitch`
+
+Other miscellaneous changes to game events:
+
+-   `ring_bell` has been removed and replaced with `block_change`
+-   Both `shulker_open` and `shulker_close` have been removed in favour of using `container_open` and `container_close`
+-   `fishing_rod_cast` and `fishing_rod_reel_in` have been renamed to `item_interact_start` and `item_interact_finish`
+-   Added `ignore_vibrations_on_occluding_block` game event tag with subsequent logic
+-   `entity_interact` should be dispatched more often when interacting with various mobs
+
+## Fixed bugs in 22w13a
+
+-   [MC-249103](https://bugs.mojang.com/browse/MC-249103) Z-fighting can be seen on the underside of frogs' feet
+-   [MC-249110](https://bugs.mojang.com/browse/MC-249110) Z-fighting textures inside the frog's mouth
+-   [MC-249115](https://bugs.mojang.com/browse/MC-249115) Frogs spawn with wrong color in some biomes
+-   [MC-249132](https://bugs.mojang.com/browse/MC-249132) Frogs are not required to be bred for the Two by Two advancement
+-   [MC-249349](https://bugs.mojang.com/browse/MC-249349) Dispensing a Bucket of Tadpole dispenses the item, instead of water with a tadpole
+-   [MC-249380](https://bugs.mojang.com/browse/MC-249380) The locks of chests within chest boats are positioned slightly too high
+-   [MC-249382](https://bugs.mojang.com/browse/MC-249382) Boats with chest do not drop items contained in chest when destroyed in Creative
+-   [MC-249389](https://bugs.mojang.com/browse/MC-249389) GUI Scale is a slider instead of a button
+-   [MC-249392](https://bugs.mojang.com/browse/MC-249392) Options have missing or untranslated names
+-   [MC-249397](https://bugs.mojang.com/browse/MC-249397) Bottom face of Warden's right arm missing in 'warden;;_;;bioluminescent;;_;;layer' texture
+-   [MC-249398](https://bugs.mojang.com/browse/MC-249398) Game crash regarding warden
+-   [MC-249404](https://bugs.mojang.com/browse/MC-249404) Boats with Chest aren't grouped in the recipe book
+-   [MC-249405](https://bugs.mojang.com/browse/MC-249405) chatScale option defaults to 0.0 instead of 1.0, causing chat to disappear
+-   [MC-249409](https://bugs.mojang.com/browse/MC-249409) Furnaces, blast furnaces and smokers don't cook without fuel in the bottom slot, even if they are already fired up
+-   [MC-249474](https://bugs.mojang.com/browse/MC-249474) Four-legged mobs do not sit correctly in a boat with a chest
+-   [MC-249642](https://bugs.mojang.com/browse/MC-249642) Wardens can't pass over rails
+
+---
+
+# Minecraft Snapshot 22w12a
+
+Waaaaaaaaaaah! It's Wal... wait that's not it. It's the warden! The spooky, unfriendly (maybe it just wants a hug?) mob is making its way into our latest snapshot.
+
+Additionally, you'll be seeing some functionality for the sculk shriekers and some fancy new boats (they have chests).
+
+Enjoy!
+
+## New Features in 22w12a
+
+-   Added Darkness mob effect
+-   Added Sculk Shrieker functionality
+-   Added the Warden mob
+-   Added boat with chest
+-   Added the Swift Sneak enchantment
+
+### Sculk Shrieker
+
+-   Added functionality to the Sculk Shrieker: Notable for its boney appendages, this block responds to Sculk Sensors detecting vibrations by sending out a warning call to distant Wardens
+    -   Watch out when stepping on them, as they will feel that too and send out a call!
+-   Initially it may take some time for a Warden to arrive, but you'll hear it responding in the distance...
+-   Once it's close enough, a call from the Sculk Shrieker will summon the Warden nearby - be prepared!
+
+Added Warden mob
+
+### Warden
+
+The horror of the Deep Dark! A creature with no eyes, roughly resembling the Sculk that can be found throughout the Deep Dark, the Warden is an unstoppable force of nature that inhabits this biome
+
+-   Just like Sculk Sensors, these terrifying creatures use vibrations as a means to navigate their environment
+-   When vibrations aren't enough, they will also use a sense of smell to track down their prey - you can observe them sniffing their surroundings to get closer to unsuspecting players and mobs
+-   To add to their myriad of ways to detect you, try not to get too close! If you collide with a Warden, it will notice you
+-   In the Deep Dark, Wardens are everywhere - you just can't see them. They slumber beneath your feet, and only dig out when enough Sculk Shriekers have alerted them of your presence
+-   Watch your step: the more vibrations a Warden detects, the more angry it will get. You can hear and see this from how fast the souls in its chest are beating
+-   Once a mob has pushed beyond the Warden's anger threshold, it will face its prey and roar before charging
+-   If, however, you keep the Warden from noticing you or getting angry for 60 seconds, it will dig back underground and despawn
+-   They have a special interaction with thrown projectiles
+    -   If the Warden receives two projectile vibrations within 5 seconds of one another, it will grow angrier at the shooter
+    -   If the Warden receives a projectile vibration more than 5 seconds from the last projectile, it will not grow angrier at the shooter
+    -   This allows you to strategically distract the Warden without it getting angry while you take loot from nearby chests
+-   Unfortunately for all players, Wardens will also disable shields when they hit them with their fists
+-   They do not drop any loot
+-   Wardens are powerful creatures, and it is often better to sneak around one that has emerged instead of taking it head on - you've been warned
+
+### Darkness
+
+-   A new mob effect unique to the Warden and Sculk Shrieker, which will afflict you with it when nearby
+-   Lowers the gamma down at an equivalent of "Moody" while having this effect
+-   In periodic pulses, will lower the overall brightness of the world so that the darkness creeps up against light sources
+-   When the Warden is around, torches will be more important than ever!
+-   A new Accessibility slider has been added in your Options menu called “Darkness Pulsing”
+    -   Controls how dark the Darkness effect gets when a Warden or Sculk Shrieker gives it to you, but will not affect the fog distance
+
+### Boat with chest
+
+-   Lets you bring more stuff on your boat adventures
+-   If you are in the boat, press the open inventory key to access the chest contents
+-   If you are not in the boat, shift-right click to access the chest contents
+-   If you break the boat the chest contents will spill out, like with other chests
+-   Also works with hoppers, droppers, and other blocks that interact with chests
+-   Like other chests, opening a boat chest or breaking the boat will anger piglins, since they think all chests belong to them
+
+### Swift Sneak
+
+Imbue your leggings with this shiny new enchantment to move as fast while crouching as you would normally walk!
+
+-   When applied, it will increase your movement speed while sneaking
+-   Has 3 different levels with different speed increases
+-   It is the first enchantment unique to leggings equipment!
+
+## Changes in 22w12a
+
+-   The Deep Dark biome is now less flooded than surrounding areas
+-   Leaves are now waterloggable
+-   Removed debug hotkey cycling render distance
+
+## Fixed bugs in 22w12a
+
+-   [MC-149805](https://bugs.mojang.com/browse/MC-149805) While editing a book, you cannot use Ctrl+Home or Ctrl+End to jump to the beginning or end of the text
+-   [MC-165503](https://bugs.mojang.com/browse/MC-165503) Fence gates (between walls) aren't affected by ambient occlusion/smooth lighting
+-   [MC-176081](https://bugs.mojang.com/browse/MC-176081) Striders with NoAI still get cold
+-   [MC-177321](https://bugs.mojang.com/browse/MC-177321) Soul sand doesn't have smooth lighting / ambient occlusion
+-   [MC-179916](https://bugs.mojang.com/browse/MC-179916) Foxes path towards origin (0,0) during a thunderstorm
+-   [MC-190661](https://bugs.mojang.com/browse/MC-190661) Pressing Esc or using the Cancel button in the "Experimental Settings" warning returns to main menu
+-   [MC-197854](https://bugs.mojang.com/browse/MC-197854) Cannot use Ctrl+Backspace to delete entire words in Edit sign GUI
+-   [MC-236149](https://bugs.mojang.com/browse/MC-236149) You cannot use CTRL+BACKSPACE to delete words in the book and quill GUI
+-   [MC-236212](https://bugs.mojang.com/browse/MC-236212) You cannot use CTRL+ARROW KEY to navigate the cursor between words in the book and quill GUI
+-   [MC-238009](https://bugs.mojang.com/browse/MC-238009) Some end cities can generate floating above the ground
+-   [MC-239019](https://bugs.mojang.com/browse/MC-239019) /locatebiome command doesn't consistently locate the nearest cave biome
+-   [MC-248621](https://bugs.mojang.com/browse/MC-248621) TagKey creation leads to memory leak
+-   [MC-249073](https://bugs.mojang.com/browse/MC-249073) Mangrove Fence Gate & Mangrove Fence are in the wrong tab in the creative inventory
+-   [MC-249081](https://bugs.mojang.com/browse/MC-249081) Placing water inside the mangrove propagule breaks it
+-   [MC-249098](https://bugs.mojang.com/browse/MC-249098) Mud brick slabs use generic stone sound
+-   [MC-249112](https://bugs.mojang.com/browse/MC-249112) Ender dragon fight is not triggered upon entering the End
+-   [MC-249134](https://bugs.mojang.com/browse/MC-249134) Subtitle "Frog hatches" should be "Tadpole hatches"
+-   [MC-249143](https://bugs.mojang.com/browse/MC-249143) Mud, Mangrove Roots, and their variants are too loud in comparison with other blocks
+-   [MC-249171](https://bugs.mojang.com/browse/MC-249171) Map color for mangrove log is incorrect
+-   [MC-249172](https://bugs.mojang.com/browse/MC-249172) Map color for mangrove slab is incorrect
+-   [MC-249173](https://bugs.mojang.com/browse/MC-249173) Map color for mangrove trapdoor is incorrect
+-   [MC-249174](https://bugs.mojang.com/browse/MC-249174) Map color for mud bricks, mud brick stairs, and mud brick walls is incorrect
+-   [MC-249181](https://bugs.mojang.com/browse/MC-249181) Powered rail / activator rail update order is reversed
+-   [MC-249184](https://bugs.mojang.com/browse/MC-249184) The mangrove fence recipe is not grouped with the fence recipes of other wood types
+-   [MC-249195](https://bugs.mojang.com/browse/MC-249195) Some Mangrove Propagules float after leaves decayed
+-   [MC-249253](https://bugs.mojang.com/browse/MC-249253) Bee tries to pollinate a waterlogged mangrove propagule and dies
+-   [MC-249270](https://bugs.mojang.com/browse/MC-249270) Mangrove leaves do not have a hoe as their preferred tool
+-   [MC-249303](https://bugs.mojang.com/browse/MC-249303) Mangrove Leaves cannot be composted
+-   [MC-249312](https://bugs.mojang.com/browse/MC-249312) Mud Brick Slab has a slower mining speed then other mud bricks
+-   [MC-249316](https://bugs.mojang.com/browse/MC-249316) Mangrove fence, fence gate and boat cannot be used for fuel
 
 ---
 

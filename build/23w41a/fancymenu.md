@@ -1,4 +1,4 @@
-# 23w41a
+# Minecraft Snapshot 23w41a
 
 For this week's Snapshot, we've made improvements to the Decorated Pots!
 

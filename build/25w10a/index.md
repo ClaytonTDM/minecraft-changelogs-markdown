@@ -1,4 +1,4 @@
-# 25w10a
+# Minecraft Snapshot 25w10a
 
 It's time for a new Minecraft snapshot! We've got some more under-the-hood updates including a `tntExplodes` game rule previously found in Bedrock edition, new features in SNBT syntax, and allowing all entities to store custom data. We also have some more bug fixes coming your way.
 

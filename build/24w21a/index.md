@@ -1,4 +1,4 @@
-# 24w21a
+# Minecraft Snapshot 24w21a
 
 This week we're bringing a Snapshot you can vibe out to! This time around we're bringing data-driven jukeboxes, a new gamerule, and a bunch of fixes.
 

@@ -1,4 +1,4 @@
-# 21w10a
+# Minecraft Snapshot 21w10a
 
 A truly fabulous snapshot enters the arena! This snapshot brings fundamental changes to our rendering pipeline with the introduction of the brand new tech that is OpenGL Core 3.2. On top of that, we're finally introducing the Lush Caves biome. However, as with the Dripstone Caves, this is only available through creating a custom world.
 

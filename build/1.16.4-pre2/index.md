@@ -1,4 +1,4 @@
-# 1.16.4-pre2
+# Minecraft 1.16.4 Pre-Release 2
 
 Time for another pre-release! This time around we've fixed some issues with the new social interactions screen and we've also fixed some crashes.
 

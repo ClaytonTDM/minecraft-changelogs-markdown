@@ -1,4 +1,4 @@
-# 1.15.2-pre2
+# Minecraft: Java Edition 1.15.2 Pre-release 2
 
 ## CHANGES IN 1.15.2 PRE-RELEASE 2
 

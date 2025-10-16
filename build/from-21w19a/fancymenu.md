@@ -85,6 +85,8 @@ For example, `/item replace block ~ ~ ~ container.0 from entity @s enderchest.0`
 
 ---
 
+# Minecraft Snapshot 21w18a
+
 Hey-hoo! Will you look at that! It's Wednesday once again, which means we get to share updates about all the Minecraft bits and bobs. This week, we're distributing an ore distribution Snapshot for all you lovely Snapshot connoisseurs to feast upon. Enjoy!
 
 ## Changes in 21w18a
@@ -150,6 +152,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6b510a715
 
 ---
 
+# Minecraft Snapshot 21w17a
+
 A delicious snapshot appears! This snapshot introduces some tweaks to the raw ore textures, a few copper changes, and the introduction of noodle caves in the Caves & Cliffs Preview datapack.
 
 If you have any [feedback](https://feedback.minecraft.net/), a penne for your thoughts...
@@ -201,6 +205,8 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/6d37f3c37
 -   [MC-223792](https://bugs.mojang.com/browse/MC-223792) Shrinking world border with center past x/z 29999983 crashes the game
 
 ---
+
+# Minecraft Snapshot 21w16a
 
 Snapshot 21w16a introduces some changes to azaleas and dripstone. On top of that, we've tweaked the textures of raw ores. There are also a few additions to the Caves & Cliffs preview datapack.
 
@@ -297,6 +303,157 @@ Download the updated [datapack here](https://launcher.mojang.com/v1/objects/ebe5
 -   [MC-223639](https://bugs.mojang.com/browse/MC-223639) minecraft.used:minecraft.shears doesn't increase when collecting honeycombs from a beehive or bee nest
 -   [MC-223756](https://bugs.mojang.com/browse/MC-223756) minecraft.used:minecraft.powder;;_;;snow;;_;;bucket doesn't increase when filling a cauldron with a powder snow bucket
 -   [MC-223757](https://bugs.mojang.com/browse/MC-223757) minecraft.used:minecraft.lava;;_;;bucket doesn't increase when filling a cauldron with a lava bucket
+
+---
+
+# Minecraft Snapshot 21w15a
+
+In today’s snapshot, we’re making a few needed changes that directly relate to our [recent announcement](https://www.minecraft.net/article/a-caves---cliffs-announcement). If you haven’t yet read it, we strongly recommend you do. You can also check out [this Caves & Cliffs video](https://youtu.be/6YgKUZnUyak) from Agnes and Henrik to learn more about our plans for the update.
+
+Even though some features will be released later than we’d planned, you can still try them out through a separate data pack. More information, as well as our latest tweaks, can be found here below.
+
+## Caves & Cliffs World Generation
+
+The riskier and technically more complex world generation changes for the Caves & Cliffs update will be shipped in a later update and have been switched off in this snapshot. This means:
+
+-   World height has been switched back to the 1.16 levels
+-   Noise caves and aquifers have been switched off
+-   Cave and ravine carvers have been returned to their old settings
+-   Crack carvers have been switched off
+-   Ore distribution has been returned to the 1.16 setup
+-   Copper now generates between the bottom of the world and height 192, being most common around height 96
+-   Tuff now generates in blobs between heights 0 and 16
+-   Worlds created in snapshot 21w05b or any earlier version can now once again be opened
+-   Worlds created in any version between snapshot 21w06a and 21w14a can no longer be opened
+
+### The Caves & Cliffs Prototype Data Pack
+
+You can still try out the world generation for the later update using a datapack which activates the changes as an experimental custom world:
+
+-   [Download the data pack](https://launcher.mojang.com/v1/objects/643b1f8f7f71c74ffc913e8572f52fd5bca88282/CavesAndCliffsPreview.zip)
+-   Launch the game, go to the "Create New World" screen, and click the “Data Packs” button
+-   Drag the downloaded zip file onto the Minecraft window
+-   The game will ask you if you want to add the data pack – click “Yes”
+-   Click the play arrow on the data pack that just appeared in the list – this will move it to the list on the right-hand side of the screen
+-   Click the "Done" button and continue creating your world as normal
+
+Keep in mind that the world you create with the data pack will be flagged as experimental by the game, and such worlds are not guaranteed to work in future versions. Also, please note that you can’t add data packs that change the world generation to existing worlds, so you must create a new world to access the experimental features.
+
+## New Features in 21w15a
+
+-   Goats will ram anything that moves... and also armor stands
+
+## Changes in 21w15a
+
+-   A crinkly, crunchy sound now plays when Bone Meal is used
+-   Reordered some blocks in the Building Blocks Tab in Creative Menu
+-   Goats will avoid walking on powder snow
+-   Creepers know not to mess with goats
+-   The main menu background has been updated
+-   Tweaked the textures of raw ore items
+-   Just like other ore materials, you can craft a compact version with raw ore items in order to save inventory space
+
+![Minecraft Snapshot 21w15a Texture Comparison](https://launchercontent.mojang.com/images/snapshot-21w15a-ore-texture-comparison.png) New raw ore textures in snapshot 21w15a. [Click here](https://launchercontent.mojang.com/v2/images/snapshot21w15aoretexturecomparisonfull.png) for a link to the full resolution image.
+
+### Building Blocks tab
+
+-   All ores have been reordered to be in the same location in the creative inventory.
+-   Compact forms of raw and refined underground materials have been reordered.
+
+## Technical Changes in 21w15a
+
+-   Added the Marker entity
+-   Added `/debug function`
+-   `selector` and `nbt` chat components can now configure separators between elements
+-   Servers can now customize a message to display when prompting players about custom resource packs
+
+### Markers
+
+Markers are a new type of entity meant for custom use cases like map making and data packs.
+
+-   Only exist on the server side, are never sent to clients
+-   Do not do any updates of their own
+-   Have a `data` compound field that can contain any data
+
+### `/debug function`
+
+New debug subcommand executes command with same syntax as function
+
+-   Every executed command, message (even if it would be normally invisible), result or error is stored to file
+-   Cannot be run from inside functions
+
+### Chat component separators
+
+-   Components that print lists of names, like `selector` or `nbt` can now override separator (`", "` by default) with `separator` element
+-   Examples:
+    -   `{"selector": "@e[type=chicken]", "separator": "|"}`
+    -   `{"nbt": "CustomName", "entity": "@e[type=chicken]", "interpret": true, "separator": {"text": "*", "color": "red"}}`
+
+### Custom server resource packs
+
+When `require-resource-pack` is used in `server.properties`, there's now an option for servers to add a custom message.
+
+-   A dedicated server can configure additional message to be shown on resource pack prompt (`resource-pack-prompt` in `server.properties`, expects chat component syntax, can contain multiple lines)
+
+## Bugs fixed in 21w15a
+
+-   [MC-203855](https://bugs.mojang.com/browse/MC-203855) A geode configured;;_;;feature causes a crash when use;;_;;alternate;;_;;layer0;;_;;chance is used with no entries in inner;;_;;placements
+-   [MC-212145](https://bugs.mojang.com/browse/MC-212145) Summoning Glow Lichen using /setblock doesn't place any lichen but creates light until the block is updated
+-   [MC-212273](https://bugs.mojang.com/browse/MC-212273) Glow Lichen doesn't render when being held by an Enderman
+-   [MC-215836](https://bugs.mojang.com/browse/MC-215836) Deepslate uses the same color as stone on maps
+-   [MC-215844](https://bugs.mojang.com/browse/MC-215844) Stone still generates around lava pools at low levels
+-   [MC-216588](https://bugs.mojang.com/browse/MC-216588) Feature placement - java.lang.IllegalArgumentException: bound must be positive
+-   [MC-218588](https://bugs.mojang.com/browse/MC-218588) Cracked deepslate bricks & tiles are in the incorrect position in the creative inventory
+-   [MC-218698](https://bugs.mojang.com/browse/MC-218698) Infested deepslate makes the old "stone" sounds
+-   [MC-218705](https://bugs.mojang.com/browse/MC-218705) Deepslate emerald ore is separated from other deepslate ores in the creative inventory
+-   [MC-218749](https://bugs.mojang.com/browse/MC-218749) Deepslate coal ore doesn't drop experience
+-   [MC-218944](https://bugs.mojang.com/browse/MC-218944) Copper ore and deepslate copper ore have inconsistent textures
+-   [MC-219972](https://bugs.mojang.com/browse/MC-219972) Deepslate gold ore has an inconsistent pixel
+-   [MC-221501](https://bugs.mojang.com/browse/MC-221501) Water splash potions don't give the axolotl 1.5 minutes of moisture
+-   [MC-221718](https://bugs.mojang.com/browse/MC-221718) Lava fog repeatedly fails to render each block at certain y-levels
+-   [MC-221798](https://bugs.mojang.com/browse/MC-221798) Blindness doesn't render correctly
+-   [MC-222104](https://bugs.mojang.com/browse/MC-222104) Beacon beam fog is incorrectly computed
+-   [MC-222266](https://bugs.mojang.com/browse/MC-222266) Goats don't attack
+-   [MC-222522](https://bugs.mojang.com/browse/MC-222522) Nether Gold Ore is no longer smeltable
+
+---
+
+# Minecraft Snapshot 21w14a
+
+A new snapshot is ready to be served, although somewhat… raw. Gordon Ramsey would be furious. Please don’t tell him, we don’t want to be called donuts. :(
+
+Most of us have just gotten back from being off for a few days during Easter, so this snapshot is a bit on the smaller side.
+
+## New Features in 21w14a
+
+-   Added Raw Copper, Raw Iron and Raw Gold items
+-   Tuff blobs can now be found between heights 0 and 16
+
+### Smeltable Ore Drops
+
+-   Ores that are smeltable now drop raw item forms of the ore instead of the ore block, and these can be smelted just like before
+-   This is to prevent cluttering the inventory, and have consistency with Fortune on all ores
+-   Ore blocks from old worlds and silk-touched ore blocks will continue to be smeltable
+
+## Changes in 21w14a
+
+-   Fully oxidized copper can now be waxed
+
+## Bugs fixed in 21w14a
+
+-   [MC-203854](https://bugs.mojang.com/browse/MC-203854) Fishing rod texture always looks like it has been cast when in the player's hand
+-   [MC-207173](https://bugs.mojang.com/browse/MC-207173) Entering only colons into multiplayer Direct Connection & pressing enter crashes the game
+-   [MC-210155](https://bugs.mojang.com/browse/MC-210155) Command block output no longer is displayed immediately after running a command
+-   [MC-213665](https://bugs.mojang.com/browse/MC-213665) Crash upon attempting to generate a world with a height of 0 blocks
+-   [MC-214287](https://bugs.mojang.com/browse/MC-214287) Crash upon entering a nether portal when logical;;_;;height is set to 0 and min;;_;;y is set to 80 or greater
+-   [MC-215120](https://bugs.mojang.com/browse/MC-215120) World-gen datapacks can cause crashes when first generating world
+-   [MC-216697](https://bugs.mojang.com/browse/MC-216697) Having 'min;;_;;y' set to lower than -64 causes either a crash or the world not to behave correctly if the height limit wasn't modified
+-   [MC-217702](https://bugs.mojang.com/browse/MC-217702) Game crashes (ArrayIndexOutOfBoundsException) during world feature placement / decoration
+-   [MC-219849](https://bugs.mojang.com/browse/MC-219849) Fishing doesn't animate or render the rod, line or bobber anymore
+-   [MC-220652](https://bugs.mojang.com/browse/MC-220652) IndexOutOfBound exception hard crash when loading a simple custom dimension datapack
+-   [MC-221553](https://bugs.mojang.com/browse/MC-221553) The end dimension generates differently than it did previously
+-   [MC-221586](https://bugs.mojang.com/browse/MC-221586) Excessive pillager spawning in pillager outposts
+-   [MC-221673](https://bugs.mojang.com/browse/MC-221673) Ocean monuments are completely empty
 
 ---
 

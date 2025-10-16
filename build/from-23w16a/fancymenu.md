@@ -114,6 +114,8 @@ Parameters:
 
 ---
 
+# Minecraft Snapshot 23w14a
+
 We are now releasing Snapshot 23w14a, containing changes to Sculk blocks and Enchanting Tables, a new Quick Play functionality, an updated logo for Java Edition, a new main menu panorama, and lots of bug fixes!
 
 Happy mining!
@@ -249,6 +251,8 @@ New function `reference` allows functions to call sub-functions (similar to `ref
 
 ---
 
+# Minecraft Snapshot 23w13a
+
 In this week's snapshot 23w13a we're following up on all the new things in last week's snapshot with a big round of bug fixes. Happy mining!
 
 ## Changes
@@ -301,6 +305,8 @@ In this week's snapshot 23w13a we're following up on all the new things in last 
 -   [MC-261275](https://bugs.mojang.com/browse/MC-261275) Sniffers drop moss blocks when killed
 
 ---
+
+# Minecraft Snapshot 23w12a
 
 Well hello fellow Minecraft lovers! It is time for the first snapshot for 1.20. We know we promised no more major features, so how did we end up with such a big snapshot? You thought the trails were over? NO! In snapshot 23w12a we have even more tales to tell! Our devs apparently could not resist throwing in a few extra additions. Enjoy!
 

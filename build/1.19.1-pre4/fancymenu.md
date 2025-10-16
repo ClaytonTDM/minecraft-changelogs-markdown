@@ -1,4 +1,4 @@
-# 1.19.1-pre4
+# Minecraft 1.19.1 Pre-Release 4
 
 This pre-release fixes an exploit found regarding contextual chat evidence when creating a Player Report.
 

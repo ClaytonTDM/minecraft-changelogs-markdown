@@ -1,4 +1,4 @@
-# 1.18.2-pre2
+# Minecraft 1.18.2 Pre-Release 2
 
 The second pre-release for 1.18.2 is now out! This pre-release adds a spline density function and fixes a few bugs.
 

@@ -1,4 +1,4 @@
-# 1.19.2
+# Minecraft: Java Edition 1.19.2
 
 We're now releasing 1.19.2 for Minecraft: Java Edition. This release fixes a critical issue related to server connectivity with secure chat.
 

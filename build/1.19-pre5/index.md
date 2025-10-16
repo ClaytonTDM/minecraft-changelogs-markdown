@@ -1,4 +1,4 @@
-# 1.19-pre5
+# Minecraft 1.19 Pre-Release 5
 
 The fifth pre-release for 1.19 is now available with more bug fixes.
 

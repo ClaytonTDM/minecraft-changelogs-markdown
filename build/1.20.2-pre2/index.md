@@ -1,4 +1,4 @@
-# 1.20.2-pre2
+# Minecraft 1.20.2 Pre-Release 2
 
 Another pre-release this week with minor changes and some bug fixes.
 

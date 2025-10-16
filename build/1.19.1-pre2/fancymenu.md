@@ -1,4 +1,4 @@
-# 1.19.1-pre2
+# Minecraft 1.19.1 Pre-Release 2
 
 Hey everyone! As a few of you might have noticed, we’ve made the decision to postpone the release of 1.19.1 and we're now going back into pre-release mode. This is in order to address a few of our more noticeable issues. We've yet to fully decide on a new release date, but it won't be too far in the future.
 

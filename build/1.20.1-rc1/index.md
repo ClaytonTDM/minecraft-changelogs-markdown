@@ -1,4 +1,4 @@
-# 1.20.1-rc1
+# Minecraft 1.20.1 Release Candidate 1
 
 We're now releasing a Release Candidate for a first minor update for Minecraft 1.20. This minor update will be a stability issue to fix some critical issues found after the release of Minecraft 1.20.
 

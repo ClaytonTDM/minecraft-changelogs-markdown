@@ -1,4 +1,4 @@
-# 20w19a
+# Minecraft Snapshot 20w19a
 
 This snapshot contains another round of tweaks and bugfixes, but also quality of life features such as **strider distancing**. It might not be as important as social distancing, but we hope you'll like it. Stay safe and wash your hands!
 

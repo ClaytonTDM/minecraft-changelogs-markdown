@@ -1,4 +1,4 @@
-# 24w06a
+# Minecraft Snapshot 24w06a
 
 Poof! Here's snapshot 24w06a with the new experimental Wind Charge item and optimizations for Hoppers... among other changes!
 

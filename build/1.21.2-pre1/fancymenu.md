@@ -1,4 +1,4 @@
-# 1.21.2-pre1
+# Minecraft 1.21.2 Pre-Release 1
 
 ## Experimental Features
 

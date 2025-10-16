@@ -13,6 +13,8 @@ We've now released 1.16 pre-release 2, fixing some crashes. Note that worlds ope
 
 ---
 
+# Minecraft 1.16 Pre-Release 1
+
 It's time for 1.16 pre-releases!
 
 Going forward you should mostly see bugs being fixed. Additionally, pre-releases doesn't necessarily tend to our usual cadence of releasing on Wednesdays, so keep an eye out!
@@ -153,6 +155,8 @@ There's now a `smithing` recipe type. Recipes of this type are used in the smith
 
 ---
 
+# Minecraft: Java Edition 1.15.2 Pre-release 2
+
 ## CHANGES IN 1.15.2 PRE-RELEASE 2
 
 -   Fixed bugs
@@ -166,6 +170,8 @@ There's now a `smithing` recipe type. Recipes of this type are used in the smith
 -   [MC-169886](https://bugs.mojang.com/browse/MC-169886) - No older world protection in 1.15.2 PR 1
 
 ---
+
+# Minecraft: Java Edition 1.15.2 Pre-release 1
 
 ## CHANGES IN 1.15.2 PRE-RELEASE 1
 

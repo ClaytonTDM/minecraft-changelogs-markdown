@@ -1,4 +1,4 @@
-# 1.16.2-pre1
+# Minecraft 1.16.2 Pre-Release 1
 
 It's time for pre-releases for Minecraft Java Edition 1.16.2!
 

@@ -1,4 +1,4 @@
-# 20w46a
+# Minecraft Snapshot 20w46a
 
 The snow is snowier than before.
 
