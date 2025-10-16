@@ -134,7 +134,7 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-#### Vibration Frequency Changes
+**Vibration Frequency Changes**
 
 As we continue to consider feedback from the community, some changes to the frequency ranges have been made. We expect this to change quite heavily up until release to figure out the most interesting ranges for gameplay, and as always feedback is extremely welcome! Here is the newest table in this snapshot.
 
@@ -255,14 +255,14 @@ This biome doesn't generate naturally yet, since it is designed for the upcoming
 -   The efficient tool to mine Sculk Sensors is the Hoe.
 -   They can be waterlogged.
 
-#### Redstone Emission
+**Redstone Emission**
 
 -   Sculk Sensors emit a redstone signal when they are activated.
 -   The strength of the redstone signal is inversely proportional to the distance the vibration signal travelled.
     -   This means that the closer the vibration is, the stronger the redstone signal is.
     -   The output is also scaled based on the Sculk Sensor's radius, so it can reach the max redstone signal strength when the vibration is 0 distance away (directly on top of the sensor).
 
-#### Vibration Frequencies
+**Vibration Frequencies**
 
 -   Sculk Sensors have a unique interaction with comparators.
 -   Each vibration in the game falls under a certain frequency value, and this value can be measured with a comparator.
@@ -412,12 +412,12 @@ Lightning Strike
 
 15
 
-#### Wool Occlusion
+**Wool Occlusion**
 
 -   Wool has a special interaction with Sculk Sensors.
 -   If a wool block is in the way of a vibration source, the sensor will not be able to detect it.
 
-#### Technical Tidbits
+**Technical Tidbits**
 
 -   Sculk Sensors have a cooldown period of 1 tick after being placed or after deactivating.
 -   During this short cooldown period, it cannot detect vibrations. This is to prevent it from activating itself when a contraption it is powering is being unpowered. Feedback is welcome on this point!
@@ -478,7 +478,7 @@ The following is a list of the initial game events:
 -   `minecraft:eating_finish`
 -   `minecraft:lightning_strike`
 
-#### Tags
+**Tags**
 
 There are also game event tags that come with this, and can be modified by data packs. They can be found under `data/minecraft/tags/game_events`.
 
@@ -603,7 +603,7 @@ Snowier snow!
 -   Wear leather boots to prevent yourself from sinking into Powder Snow blocks
 -   Leave a Cauldron outside in falling snow and it will fill with Powder Snow
 
-#### Freezing
+**Freezing**
 
 -   Standing in Powder Snow will slowly freeze an entity
 -   Once frozen, freeze damage is done every few seconds to the frozen entity
@@ -650,7 +650,7 @@ The function part of loot tables can now be defined as separate data pack resour
 
 ### Commands
 
-#### `item`
+**`item`**
 
 Modifies item or block inventory.
 
@@ -669,9 +669,9 @@ For example, `/item block ~ ~ ~ container.0 copy entity @s enderchest.0` will co
 
 ### Loot tables
 
-#### New conditions
+**New conditions**
 
-##### `value_check`
+**`value_check`**
 
 Checks range of value.
 
@@ -680,46 +680,46 @@ Parameters:
 -   `value` - see "New value providers" section (currently combination of random generators and score)
 -   `range` - min/max range
 
-#### Changed conditions
+**Changed conditions**
 
-##### `score`
+**`score`**
 
 `entity` parameter has now been replaced with `target`. It can either contain value from old `entity` field (like `this`) or be an score holder name in form `{"name": "..."}`.
 
-#### Changed functions
+**Changed functions**
 
-##### `set_damage`
+**`set_damage`**
 
 This function now has `add` parameter. If `true`, change will be relative to current damage. If `false`, damage will be replaced with current value (default behavior)
 
-##### `set_count`
+**`set_count`**
 
 This function now has `add` parameter. If `true`, change will be relative to current item count. If `false`, item count will be replaced with current value (default behavior)
 
-##### `copy_nbt`
+**`copy_nbt`**
 
 `source` parameter can now be set to `{"storage": <namespaced id>}`, to access command storage.
 
-#### New functions
+**New functions**
 
-##### `set_enchantments`
+**`set_enchantments`**
 
 Modifies enchantments on item
 
-###### Parameters
+**Parameters**
 
 -   `enchantments` - map of enchantment id to level value (can be score or random number)
 -   `add` - if `true`, change will be relative to current level. If `false`, level will be replaced with current value (default behavior)
 
-#### New value providers
+**New value providers**
 
 Note: value providers can be used in same places as random number generators.
 
-##### `score`
+**`score`**
 
 Returns scaled scoreboard value.
 
-###### Parameters
+**Parameters**
 
 -   `score` - scoreboard name
 -   `target` - same as `target` in `score` predicate

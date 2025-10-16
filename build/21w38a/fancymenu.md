@@ -52,7 +52,7 @@ In practice, this can mean identifying technical pain points in the game, like h
 
 At this point the only implemented event is world load.
 
-#### World Load event
+**World Load event**
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:

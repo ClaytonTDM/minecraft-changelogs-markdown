@@ -41,7 +41,7 @@ It is now possible to monitor the server tick times though JMX. The rationale fo
 
 This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
 
-#### Enabling JMX Monitoring
+**Enabling JMX Monitoring**
 
 -   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds.
 -   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html).

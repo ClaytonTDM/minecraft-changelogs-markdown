@@ -36,7 +36,7 @@ We also have a survey up so that you can tell us what you think about the Nether
 
 ### Commands
 
-#### `attribute`
+**`attribute`**
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -53,7 +53,7 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 
 ### Chat components
 
-#### Hover event argument
+**Hover event argument**
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -61,11 +61,11 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
     -   For `show_entity` - object with fields: `id` (UUID), `name` (chat component) and `type` (entity type resource location)
 -   Old style `value` argument is now deprecated (but still supported)
 
-#### Colors
+**Colors**
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`.
 
-#### Custom fonts
+**Custom fonts**
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`.
 

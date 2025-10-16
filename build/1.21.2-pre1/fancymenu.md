@@ -4,12 +4,12 @@
 
 ### Winter Drop
 
-#### Creaking mob
+**Creaking mob**
 
 -   Creaking will not activate or freeze around players in Creative mode
 -   Creaking summoned from the Creaking Heart cannot be named with a Nametag
 
-#### Creaking Heart
+**Creaking Heart**
 
 -   Comparators attached to the Creaking Heart block will output a signal strength dependent on the distance to the connected Creaking
 
@@ -31,7 +31,7 @@
 
 ### Item Components
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   Added field `camera_overlay` (optional): namespaced ID of the overlay texture to use when equipped
     -   If not specified, no overlay is used

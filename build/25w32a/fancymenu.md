@@ -48,7 +48,7 @@ Happy mining!
 
 ### Entity Data
 
-#### `copper_golem`
+**`copper_golem`**
 
 -   The `weather_state` field now expects a string id instead of integer id
     -   `0` -> `unaffected`
@@ -58,7 +58,7 @@ Happy mining!
 
 ### Text rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   New text component with type `object` has been added
 -   This component will display a single sprite from sprite atlas as a character
@@ -79,13 +79,13 @@ General note about atlas contents:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#chains` - all Chain blocks
 -   Added `#lanterns` - all Lantern blocks
 -   Added `#bars` - all Bar blocks
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#chains` - all Chain block items
 -   Added `#lanterns` - all Lantern block items

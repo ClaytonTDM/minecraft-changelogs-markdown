@@ -30,7 +30,7 @@ A fresh new snapshot is out with some changes to the features introduced in last
 
 -   Resource suggestions now show results in any namespace instead of just within `minecraft`
 
-#### Changed `stopwatch`
+**Changed `stopwatch`**
 
 -   Switched the order of the id argument
     -   Example: `/stopwatch foo:bar create` is now `/stopwatch create foo:bar`
@@ -47,7 +47,7 @@ Each Environment Attribute controls a specific visual or gameplay effect: for ex
 
 > **Developer’s Note:** _This system and many of the introduced attributes should be considered very experimental, and may still change significantly in coming snapshots and releases. In the meantime, we would as always love to hear any feedback or suggestions you may have!_
 
-#### Sources
+**Sources**
 
 Environment Attribute values can be provided by the following Environment Attribute sources (in order of low to high priority):
 
@@ -68,7 +68,7 @@ When an Environment Attribute source provides an Environment Attribute, it can:
 -   Override the value, such as the `plains` biome overriding the `overworld`'s `sky_color` in the above scenario
 -   Apply a modifier to a previous value (see section on Modifiers below)
 
-#### Modifiers
+**Modifiers**
 
 As described in the above example, an Environment Attribute source may simply override the value of a particular attribute. However, it is sometimes also desirable to rather apply a modifier to a value provided by a source with lower priority.
 
@@ -83,13 +83,13 @@ The kinds of modifiers available depends on the type of Environment Attribute. T
 
 Full descriptions of the available modifiers and their behaviors can be found in the Common Modifiers section below.
 
-#### Interpolation
+**Interpolation**
 
 While modifiers describe how a value provided by one source is applied on the value from a preceding source, interpolation describes the combination of values within a source. Interpolation is performed on values from a source after modifiers have been applied.
 
 Only some Environment Attributes support interpolation. This allows for the smooth transition between two or more values, such as when moving between two biomes.
 
-##### Biomes
+**Biomes**
 
 For example, in the following scenario:
 
@@ -100,7 +100,7 @@ For example, in the following scenario:
 
 Smooth transitions between biomes are based on the biomes within an 8 block radius of the camera. Biomes that occupy a larger portion of that radius and are closer to the camera will have a stronger influence on the final interpolated value.
 
-#### Environment Attribute Map
+**Environment Attribute Map**
 
 Dimension Type and Biome definitions contain a new `attributes` field, enabling them to define Environment Attributes.
 
@@ -131,11 +131,11 @@ For example, the following definition describes multiplying `water_fog_radius` b
     }
     
 
-#### Common Data Types
+**Common Data Types**
 
 The following data types are reused in various parts of the Environment Attributes system and will be referenced in sections below.
 
-##### RGB Color
+**RGB Color**
 
 Format can be one of the following:
 
@@ -143,7 +143,7 @@ Format can be one of the following:
 -   A float array with 3 components, between `0` and `1`, in the form `[r, g, b]`
 -   An integer in packed RGB form
 
-##### ARGB Color
+**ARGB Color**
 
 Format can be one of the following:
 
@@ -151,7 +151,7 @@ Format can be one of the following:
 -   A float array with 4 components, between `0` and `1`, in the form `[a, r, g, b]`
 -   An integer in packed ARGB form
 
-##### Particle Options
+**Particle Options**
 
 A full definition of a particle, including any type-specific properties (as in the `/particle` command).
 
@@ -165,13 +165,13 @@ For example:
     }
     
 
-#### Common Modifiers
+**Common Modifiers**
 
 Every Environment Attribute has a specific value type, which describes how values must be defined as well as what modifiers are available and how they are interpolated. Some are very specific, while others are reused across many attributes.
 
 Although this is not an exhaustive list, the following Attribute Types are used commonly across many Environment Attributes:
 
-##### Modifiers on Boolean Values
+**Modifiers on Boolean Values**
 
 Argument format: boolean
 
@@ -183,7 +183,7 @@ Argument format: boolean
 -   `xor`
 -   `xnor`
 
-##### Modifiers on Float Values
+**Modifiers on Float Values**
 
 Argument format: float
 
@@ -194,7 +194,7 @@ Argument format: float
 -   `minimum`
 -   `maximum`
 
-##### Modifiers on Color Values
+**Modifiers on Color Values**
 
 Argument format: RGB color (except `alpha_blend`)
 
@@ -206,9 +206,9 @@ Argument format: RGB color (except `alpha_blend`)
     -   Argument format: ARGB Color
     -   When the argument alpha is `1`, it will behave as an override with no blending
 
-#### New Environment Attributes
+**New Environment Attributes**
 
-##### `minecraft:visual/fog_color`
+**`minecraft:visual/fog_color`**
 
 The color of fog (when the camera is not submerged in another substance). Note: the final value is also affected by the time of day, weather, and potion effects.
 
@@ -219,7 +219,7 @@ The color of fog (when the camera is not submerged in another substance). Note: 
 -   Resolved at the camera's position
 -   Replaces Biome `effects.fog_color` field
 
-##### `minecraft:visual/extra_fog`
+**`minecraft:visual/extra_fog`**
 
 Controls whether dense fog (like that of the Nether) should be used (when the camera is not submerged in another substance).
 
@@ -229,7 +229,7 @@ Controls whether dense fog (like that of the Nether) should be used (when the ca
 -   Interpolated: no
 -   Resolved at the camera's position
 
-##### `minecraft:visual/water_fog_color`
+**`minecraft:visual/water_fog_color`**
 
 The color of fog when submerged in water. Note: the final value is also affected by the time of day, weather, and potion effects.
 
@@ -240,7 +240,7 @@ The color of fog when submerged in water. Note: the final value is also affected
 -   Resolved at the camera's position
 -   Replaces Biome `effects.water_fog_color` field
 
-##### `minecraft:visual/water_fog_radius`
+**`minecraft:visual/water_fog_radius`**
 
 The distance in blocks from the camera at which underwater fog reaches its maximum density.  
 Note: the final value is also modified by how long the player has been underwater.
@@ -252,7 +252,7 @@ Note: the final value is also modified by how long the player has been underwate
 -   Resolved at the camera's position
 -   Replaces `#has_closer_water_fog` Biome Tag
 
-##### `minecraft:visual/sky_color`
+**`minecraft:visual/sky_color`**
 
 The color of the sky. This color is only visible for the overworld sky. Note: the final value is also affected by the time of day and weather.
 
@@ -263,7 +263,7 @@ The color of the sky. This color is only visible for the overworld sky. Note: th
 -   Resolved at the camera's position
 -   Replaces Biome `effects.sky_color` field
 
-##### `minecraft:visual/cloud_opacity`
+**`minecraft:visual/cloud_opacity`**
 
 The opacity of clouds. If `0`, clouds are entirely disabled and Happy Ghasts will not regenerate health faster when at cloud height.
 
@@ -273,7 +273,7 @@ The opacity of clouds. If `0`, clouds are entirely disabled and Happy Ghasts wil
 -   Interpolated: yes
 -   Resolved at the camera's position for rendering, or at the position of a Happy Ghast for regeneration
 
-##### `minecraft:visual/cloud_height`
+**`minecraft:visual/cloud_height`**
 
 The height at which all clouds appear.
 
@@ -284,7 +284,7 @@ The height at which all clouds appear.
 -   Resolved at the camera's position for rendering, or at the position of a Happy Ghast for regeneration
 -   Replaces Dimension Type `cloud_height` field
 
-##### `minecraft:visual/default_dripstone_particle`
+**`minecraft:visual/default_dripstone_particle`**
 
 The default particle to be dripped from Dripstone blocks when no fluid is placed above.
 
@@ -295,7 +295,7 @@ The default particle to be dripped from Dripstone blocks when no fluid is placed
 -   Resolved at the position of the Dripstone block
 -   Replaces Dimension Type `ultrawarm` field
 
-##### `minecraft:visual/ambient_particles`
+**`minecraft:visual/ambient_particles`**
 
 Controls ambient particles that randomly spawn around the camera.
 
@@ -308,7 +308,7 @@ Controls ambient particles that randomly spawn around the camera.
 -   Resolved at the camera's position
 -   Replaces Biome `effects.particle` field
 
-##### `minecraft:audio/background_music`
+**`minecraft:audio/background_music`**
 
 Controls how and which background music is played.
 
@@ -328,7 +328,7 @@ Controls how and which background music is played.
 -   Resolved at the camera's position
 -   Replaces Biome `effects.music` field
 
-##### `minecraft:audio/music_volume`
+**`minecraft:audio/music_volume`**
 
 The volume at which music should play. Any music playing will fade over time to this value.
 
@@ -339,7 +339,7 @@ The volume at which music should play. Any music playing will fade over time to 
 -   Resolved at the camera's position
 -   Replaces Biome `effects.music_volume` field
 
-##### `minecraft:audio/ambient_sounds`
+**`minecraft:audio/ambient_sounds`**
 
 Controls which ambient sounds are played around the camera, and when.
 
@@ -359,7 +359,7 @@ Controls which ambient sounds are played around the camera, and when.
 -   Resolved at the camera's position
 -   Replaces Biome `effects.ambient_sound`, `effects.mood_sound`, and `effects.additions_sound` fields
 
-##### `minecraft:gameplay/can_start_raid`
+**`minecraft:gameplay/can_start_raid`**
 
 If `false`, a Raid cannot be started by a player with Raid Omen.
 
@@ -370,7 +370,7 @@ If `false`, a Raid cannot be started by a player with Raid Omen.
 -   Resolved at the position that the Raid would be started
 -   Replaces Dimension Type `has_raids` field
 
-##### `minecraft:gameplay/water_evaporates`
+**`minecraft:gameplay/water_evaporates`**
 
 If `true`, Water cannot be placed with a Bucket, melting Ice will not produce water, Wet Sponge will dry out when placed, and Dripstone will not produce water from Mud blocks.
 
@@ -381,7 +381,7 @@ If `true`, Water cannot be placed with a Bucket, melting Ice will not produce wa
 -   Resolved at the position of the interaction
 -   Replaces Dimension Type `ultrawarm` field
 
-##### `minecraft:gameplay/bed_rule`
+**`minecraft:gameplay/bed_rule`**
 
 Controls whether a Bed can be used to sleep, and whether it can be used to set a respawn point.
 
@@ -400,7 +400,7 @@ Controls whether a Bed can be used to sleep, and whether it can be used to set a
 -   Resolved at the head position of the Bed block
 -   Replaces Dimension Type `bed_works` field
 
-##### `minecraft:gameplay/respawn_anchor_works`
+**`minecraft:gameplay/respawn_anchor_works`**
 
 Controls whether Respawn Anchors can be used to set spawn (or respawn). If `false`, the Respawn Anchor will explode once charged.
 
@@ -411,7 +411,7 @@ Controls whether Respawn Anchors can be used to set spawn (or respawn). If `fals
 -   Resolved at the position of the Respawn Anchor block
 -   Replaces Dimension Type `respawn_anchor_works` field
 
-##### `minecraft:gameplay/nether_portal_spawns_piglin`
+**`minecraft:gameplay/nether_portal_spawns_piglin`**
 
 Controls whether Nether Portal blocks can spawn Piglins.
 
@@ -422,7 +422,7 @@ Controls whether Nether Portal blocks can spawn Piglins.
 -   Resolved at the position of a random Nether Portal block
 -   Replaces Dimension Type `natural` field
 
-##### `minecraft:gameplay/fast_lava`
+**`minecraft:gameplay/fast_lava`**
 
 Controls whether Lava should spread faster and further, as well as have a stronger pushing force on entities when flowing.
 
@@ -433,7 +433,7 @@ Controls whether Lava should spread faster and further, as well as have a strong
 -   Resolved for a whole dimension (cannot be specified on a Biome)
 -   Replaces Dimension Type `ultrawarm` field
 
-##### `minecraft:gameplay/increased_fire_burnout`
+**`minecraft:gameplay/increased_fire_burnout`**
 
 Controls whether Fire blocks burn out more rapidly than normal.
 
@@ -444,7 +444,7 @@ Controls whether Fire blocks burn out more rapidly than normal.
 -   Resolved at the position of the burning Fire block
 -   Replaces `#increased_fire_burnout` Biome Tag
 
-##### `minecraft:gameplay/piglins_zombify`
+**`minecraft:gameplay/piglins_zombify`**
 
 Controls whether Piglins and Hoglins should zombify.
 
@@ -455,7 +455,7 @@ Controls whether Piglins and Hoglins should zombify.
 -   Resolved at the position of the zombifying entity
 -   Replaces Dimension Type `piglin_safe` field
 
-##### `minecraft:gameplay/snow_golem_melts`
+**`minecraft:gameplay/snow_golem_melts`**
 
 Controls whether a Snow Golem should be damaged.
 
@@ -466,7 +466,7 @@ Controls whether a Snow Golem should be damaged.
 -   Resolved at the position of the Snow Golem
 -   Replaces `#snow_golem_melts` Biome Tag
 
-#### Dimension Types
+**Dimension Types**
 
 -   Added new `attributes` field for dimensions to specify Environment Attributes
     -   Refer to the Environment Attributes section for information about the format of this field
@@ -480,7 +480,7 @@ Controls whether a Snow Golem should be damaged.
     -   `has_raids` -> `minecraft:gameplay/can_start_raid`
     -   `natural` (note: not removed) -> `minecraft:gameplay/nether_portal_spawns_piglin`
 
-#### Biomes
+**Biomes**
 
 -   Added new `attributes` field for biomes to specify Environment Attributes
     -   Refer to the Environment Attributes section for information about the format of this field
@@ -497,13 +497,13 @@ Controls whether a Snow Golem should be damaged.
 
 ### Item Components
 
-#### `minecraft:kinetic_weapon`
+**`minecraft:kinetic_weapon`**
 
 -   Added new field:
     -   `contact_cooldown_ticks`: integer, the cooldown in ticks after hitting, and loosing contact with an entity before being able to hit it again
         -   Default value: `10`
 
-#### Biome Tags
+**Biome Tags**
 
 -   Removed `#snow_golem_melts` and `#increased_fire_burnout` - replaced by `gameplay/snow_golem_melts` and `gameplay/increased_fire_burnout` Environment Attributes
 -   Removed `#plays_underwater_music` - replaced by `only_underwater` field in the `audio/background_music` Environment Attribute

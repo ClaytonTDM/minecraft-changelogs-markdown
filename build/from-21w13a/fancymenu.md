@@ -417,7 +417,7 @@ Ore distribution in snapshot 21w10a. [Click here](https://launchercontent.mojang
 
 Rendering is now using OpenGL 3.2 core profile. All fixed function rendering has been replaced with shader based rendering.
 
-#### Shaders
+**Shaders**
 
 Shaders are now included for all supported render states. Any shader except for the `blit` shader can also be replaced in resource packs. For now replacing these shaders is **not officially supported** and the way it works may change in the future.
 

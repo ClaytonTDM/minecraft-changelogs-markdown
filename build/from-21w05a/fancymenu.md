@@ -314,7 +314,7 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-#### Vibration Frequency Changes
+**Vibration Frequency Changes**
 
 As we continue to consider feedback from the community, some changes to the frequency ranges have been made. We expect this to change quite heavily up until release to figure out the most interesting ranges for gameplay, and as always feedback is extremely welcome! Here is the newest table in this snapshot.
 
@@ -435,14 +435,14 @@ This biome doesn't generate naturally yet, since it is designed for the upcoming
 -   The efficient tool to mine Sculk Sensors is the Hoe.
 -   They can be waterlogged.
 
-#### Redstone Emission
+**Redstone Emission**
 
 -   Sculk Sensors emit a redstone signal when they are activated.
 -   The strength of the redstone signal is inversely proportional to the distance the vibration signal travelled.
     -   This means that the closer the vibration is, the stronger the redstone signal is.
     -   The output is also scaled based on the Sculk Sensor's radius, so it can reach the max redstone signal strength when the vibration is 0 distance away (directly on top of the sensor).
 
-#### Vibration Frequencies
+**Vibration Frequencies**
 
 -   Sculk Sensors have a unique interaction with comparators.
 -   Each vibration in the game falls under a certain frequency value, and this value can be measured with a comparator.
@@ -592,12 +592,12 @@ Lightning Strike
 
 15
 
-#### Wool Occlusion
+**Wool Occlusion**
 
 -   Wool has a special interaction with Sculk Sensors.
 -   If a wool block is in the way of a vibration source, the sensor will not be able to detect it.
 
-#### Technical Tidbits
+**Technical Tidbits**
 
 -   Sculk Sensors have a cooldown period of 1 tick after being placed or after deactivating.
 -   During this short cooldown period, it cannot detect vibrations. This is to prevent it from activating itself when a contraption it is powering is being unpowered. Feedback is welcome on this point!
@@ -658,7 +658,7 @@ The following is a list of the initial game events:
 -   `minecraft:eating_finish`
 -   `minecraft:lightning_strike`
 
-#### Tags
+**Tags**
 
 There are also game event tags that come with this, and can be modified by data packs. They can be found under `data/minecraft/tags/game_events`.
 

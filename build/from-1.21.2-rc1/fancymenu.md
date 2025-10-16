@@ -83,7 +83,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Pale Moss
+**Pale Moss**
 
 -   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
 -   Pale Moss Carpet is now more efficient to destroy with Sword
@@ -138,12 +138,12 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Creaking mob
+**Creaking mob**
 
 -   Creaking will not activate or freeze around players in Creative mode
 -   Creaking summoned from the Creaking Heart cannot be named with a Nametag
 
-#### Creaking Heart
+**Creaking Heart**
 
 -   Comparators attached to the Creaking Heart block will output a signal strength dependent on the distance to the connected Creaking
 
@@ -165,7 +165,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Item Components
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   Added field `camera_overlay` (optional): namespaced ID of the overlay texture to use when equipped
     -   If not specified, no overlay is used
@@ -436,31 +436,31 @@ Happy portaling! ;)
 
 ### Enchantments
 
-#### Level-Based Values
+**Level-Based Values**
 
-##### `lookup`
+**`lookup`**
 
 A Level-Based Value type that maps a list of values to specific levels, and applies a fallback if the level is greater than the number of values supplied. Fields:
 
 -   `values` - A list of values indexed by `level - 1` to apply, if present
 -   `fallback` - A fallback Level-Based Value to apply if the level is greater than the size of `values`
 
-#### Effect Conditions
+**Effect Conditions**
 
 Unlike with loot tables, all effect conditions need to be inline objects and cannot be references.
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   `fire_aspect_lightable` has been removed
     -   With this snapshot, we are temporarily removing the functionality of lighting blocks on fire using the Fire Aspect enchantment, as we want to refine it further. This functionality will be reintroduced in a later release.
 
 ### Loot tables
 
-#### Conditions
+**Conditions**
 
-##### `random_chance_with_enchanted_bonus`
+**`random_chance_with_enchanted_bonus`**
 
 -   `chance`: field has been removed
 -   `unenchanted_chance`: new field for the chance for an unenchanted item

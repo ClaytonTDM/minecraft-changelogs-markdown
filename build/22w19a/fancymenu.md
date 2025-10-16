@@ -34,7 +34,7 @@ Enjoy!
 -   Servers will now also send an additional icon and MOTD packet after a player has connected
     -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
 
-#### Place template
+**Place template**
 
 The `place`;;-;;command can now also place templates at a given location. Syntax: `place template <template> [pos] [rotation] [mirror] [integrity] [seed]`
 

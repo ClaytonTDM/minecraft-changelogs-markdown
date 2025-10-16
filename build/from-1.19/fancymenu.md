@@ -345,9 +345,9 @@ Some randomized events are now more predictable and no longer have a possibility
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `allay_drop_item_on_block`
+**`allay_drop_item_on_block`**
 
 -   Triggered when an Allay drops an item on a block
 -   Conditions:
@@ -355,13 +355,13 @@ Some randomized events are now more predictable and no longer have a possibility
     -   `location` - a predicate for the block that the item was dropped on
     -   `item` - a predicate for the item that was dropped
 
-##### `avoid_vibration`
+**`avoid_vibration`**
 
 -   Triggered when a vibration event is ignored because the source player is holding the sneak key
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-##### `kill_mob_near_sculk_catalyst`
+**`kill_mob_near_sculk_catalyst`**
 
 -   Triggered when a player kills an entity next to a Sculk Catalyst
 -   Conditions:
@@ -369,7 +369,7 @@ Some randomized events are now more predictable and no longer have a possibility
     -   `entity` - a predicate for the entity that was killed
     -   `killing_blow` - a predicate for how the entity was killed
 
-##### `thrown_item_picked_up_by_player`
+**`thrown_item_picked_up_by_player`**
 
 -   Triggered when a player picks up an item that was thrown by an entity
 -   Conditions:
@@ -405,7 +405,7 @@ Some randomized events are now more predictable and no longer have a possibility
 
 ### Commands
 
-#### `place`
+**`place`**
 
 New command that replaces `placefeature` and can place features, jigsaws, structures, and templates at a given location. Syntax:
 
@@ -442,13 +442,13 @@ Parameters:
 
 ### Game Events
 
-#### Added Events
+**Added Events**
 
 -   `teleport` with a vibration frequency of 5
 -   `note_block_play` with a vibration frequency of 6
 -   `instrument_play` with a vibration frequency of 15
 
-#### Combined Events
+**Combined Events**
 
 The following events have been collapsed into `block_activate` and `block_deactivate`:
 
@@ -457,7 +457,7 @@ The following events have been collapsed into `block_activate` and `block_deacti
 -   `block_switch`
 -   `block_unswitch`
 
-#### Other Changes
+**Other Changes**
 
 Other miscellaneous changes to game events:
 
@@ -469,7 +469,7 @@ Other miscellaneous changes to game events:
 -   Added the `dampens_vibrations` block tag that that includes all Wool and Wool Carpet blocks, to indicate blocks that will not trigger when placed, broken, or stepped on
 -   Renamed item tag `occludes_vibration_signals` to `dampens_vibrations` item tag as well
 
-#### Renamed Events
+**Renamed Events**
 
 Some game events have been renamed, with some of those changes to make them more gramatically consistent:
 
@@ -487,9 +487,9 @@ Some game events have been renamed, with some of those changes to make them more
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_instrument`
+**`set_instrument`**
 
 Sets the item tags needed for instrument items to a randomly selected instrument from a tag Parameters:
 
@@ -520,7 +520,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     -   Missing field matches every value
 -   For example, adding a pack with this section in `pack.mcmeta` after the vanilla pack will hide all the recipes and advancements defined by the vanilla pack
 
-#### Example
+**Example**
 
     "filter": {
         "block": [
@@ -553,7 +553,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
 
 -   The `feature` field in location predicates is now called `structure`
 
-#### Entity predicate
+**Entity predicate**
 
 -   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
 -   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
@@ -562,7 +562,7 @@ Sets the item tags needed for instrument items to a randomly selected instrument
     -   `frog` has `variant` field matching Frog variant (`minecraft:warm`, `minecraft:temperate` or `minecraft:cold`)
     -   `slime` applies for Slimes and Magma Cubes, has `size` field matching Slime size (smallest is `1`)
 
-##### `catType` Example
+**`catType` Example**
 
 Before:
 
@@ -577,7 +577,7 @@ After:
      }
     
 
-##### `type_specific` Example
+**`type_specific` Example**
 
 Before:
 

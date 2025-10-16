@@ -24,7 +24,7 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 
 ### Happy Ghast mob
 
-#### Ghastling
+**Ghastling**
 
 -   Ghastling is a young version of the Happy Ghast mob
 -   Spawns from a Dried Ghast block that has continuously been waterlogged for about 20 minutes
@@ -36,7 +36,7 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 -   Can be tempted and fed using Snowballs
 -   Will grow up into a Happy Ghast after about 20 minutes (or faster if fed Snowballs)
 
-#### Happy Ghast
+**Happy Ghast**
 
 -   The adult Happy Ghast is a new flying mount that can carry up to four players
 -   Grows up from a Ghastling after about 20 minutes (or faster if the Ghastling is fed Snowballs)
@@ -97,12 +97,12 @@ The Locator Bar is an experimental new UI element for players that displays the 
 -   The Locator Bar will display colored indicators when the camera is facing within 120 degrees towards a Waypoint. If a Waypoint is above/below the camera's viewport (the screen) an up/down arrow will display
 -   Any Waypoint that is determined to be a Player or Mob that belongs to a Team then the color indicator will match the Team color
 
-#### Player Changes
+**Player Changes**
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-#### Item Changes
+**Item Changes**
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -114,27 +114,27 @@ The Locator Bar is an experimental new UI element for players that displays the 
     -   Dragon Head
     -   Piglin Head
 
-#### Potion Changes
+**Potion Changes**
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
-#### Game Rules
+**Game Rules**
 
-##### Added `useLocatorBar`
+**Added `useLocatorBar`**
 
 -   Default is enabled for servers running the Locator Bar experiment
 -   Toggling to off will remove all existing Waypoints from all players
 
-#### Attributes
+**Attributes**
 
-##### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
 -   Mobs with a transmission range above zero will send waypoint packets to nearby receivers
 -   Similarly, receivers only receive with a range above zero, and cannot receive waypoints outside of this range
 
-#### `waypoint` command
+**`waypoint` command**
 
 This is a new command for querying and modifying waypoints.
 
@@ -194,13 +194,13 @@ Parameters:
 
 ### Commands
 
-#### Added `version`
+**Added `version`**
 
 -   No arguments
 -   Prints current version information on server side
 -   Available in singleplayer or for server operators
 
-#### Added `datapack create`
+**Added `datapack create`**
 
 -   Creates new empty directory data pack for current world
 -   Supported pack version is always equal to one supported by game
@@ -211,7 +211,7 @@ Parameters:
 
 ### Attributes
 
-#### Added `camera_distance`
+**Added `camera_distance`**
 
 -   Default value: `4.0`
 -   Modifies the distance at which the camera is placed away from the player or spectated entity when in a third-person view
@@ -220,7 +220,7 @@ Parameters:
 
 ### Data Components
 
-#### `attribute_modifiers` Item Component
+**`attribute_modifiers` Item Component**
 
 -   Added optional `display` field to `attributes_modifiers` entries
     -   There are 3 `display` types:
@@ -231,7 +231,7 @@ Parameters:
 
 ### Entity Data
 
-#### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   The `Particle` field has been renamed to `custom_particle`, and now always functions as an exact override for the default colored `entity_effect` particle
     -   The field will not be written if no override is specified
@@ -239,17 +239,17 @@ Parameters:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#triggers_ambient_desert_dry_vegetation_block_sounds` - blocks that can trigger ambient desert dry vegetation sounds to play from blocks above
 -   `#plays_ambient_desert_block_sounds` has been renamed to `#triggers_ambient_desert_sand_block_sounds`
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#happy_ghast_food` - items that can be used to feed Happy Ghasts
 -   Added `#happy_ghast_tempt_items` - items that can be used to tempt Happy Ghasts
 
-#### Entity Tags
+**Entity Tags**
 
 -   Added `#can_equip_harness` - entities that can equip the Harness items
 -   Added `#followable_friendly_mobs` - non-baby entities that will be followed by Baby Happy Ghasts

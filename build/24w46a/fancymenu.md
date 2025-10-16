@@ -32,15 +32,15 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 
 ### Item models
 
-#### `minecraft:special` item model type
+**`minecraft:special` item model type**
 
-##### Changed `minecraft:head` special model type
+**Changed `minecraft:head` special model type**
 
 -   Added field `texture` - optional namespaced ID for texture, without `textures/entity/` prefix and `.png` suffix
     -   If absent, default texture will be used, depending on `kind` field
     -   Additionally, if present, `minecraft:profile` component is ignored
 
-##### Added `minecraft:standing_sign` special model type
+**Added `minecraft:standing_sign` special model type**
 
 -   Renders a standing sign
 -   Fields:
@@ -48,7 +48,7 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-##### Added `minecraft:hanging_sign` special model type
+**Added `minecraft:hanging_sign` special model type**
 
 -   Renders a hanging sign
 -   Fields:
@@ -56,30 +56,30 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/hanging/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-#### `minecraft:condition` item model type
+**`minecraft:condition` item model type**
 
 -   Removed `minecraft:xmas` boolean property, replaced by `minecraft:local_time`
 -   Removed `minecraft:shift_down` boolean property, replaced by `minecraft:extended_view`
 
-##### Changed `minecraft:has_component` boolean property
+**Changed `minecraft:has_component` boolean property**
 
 -   Added field: `ignore_default` - if default component value should be handled as "no component", default: `false`
 
-##### Added `minecraft:extended_view` boolean property
+**Added `minecraft:extended_view` boolean property**
 
 -   Returns true if player has requested extended details by holding shift key down
     -   Note: not a keybind, can't be rebound
 -   Only works when item is displayed in UI
 -   No fields
 
-##### Added `minecraft:keybind_down` boolean property
+**Added `minecraft:keybind_down` boolean property**
 
 -   Returns true if keybind is currently active
 -   Fields:
     -   `keybind` - keybind ID, same as value in `keybind` text component
         -   Examples: `key.use`, `key.left`
 
-##### Added `minecraft:local_time` property
+**Added `minecraft:local_time` property**
 
 -   Returns the current time formatted according to a given pattern
 -   The value is updated every second
@@ -103,7 +103,7 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 
 > **Developer's Note**: _There is no "use locale set on client" option to avoid unexpected issues when the user's locale does not match the pack developer's one. Also, time is complicated, be careful._
 
-##### Added `minecraft:holder_type` property
+**Added `minecraft:holder_type` property**
 
 -   Returns holding entity type, if present
 -   No fields

@@ -60,7 +60,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   A total of 20 sherd have been distributed between the 5 Archaeology sites: Desert Wells, Desert Temples, Cold Ocean Ruins, Warm Ocean Ruins, and Trail Ruins
     -   They cannot be crafted, and are only found by brushing Suspicious Sand or Suspicious Gravel
 
-#### Decorated Pots
+**Decorated Pots**
 
 -   Crafting four Pottery Sherds together will create a Decorated Pot with a picture on each side
 -   Brick items can be used instead of Pottery Sherds in the Decorated Pot recipe
@@ -77,7 +77,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Sniffers can only dig grass and dirt-like blocks
 -   Sniffers can be tempted by, and bred with Torchflowers Seeds
 
-#### Sniffer Egg
+**Sniffer Egg**
 
 -   Can be found by brushing the Suspicious Sand of Warm Ocean Ruins
 -   When two Sniffers breed they do not immediately spawn a Snifflet; instead, a Sniffer Egg is dropped
@@ -85,14 +85,14 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   When placed on Moss, the Egg will hatch in approximately 10 minutes
     -   On all other blocks, it will hatch in approximately 20 minutes
 
-#### Torchflowers
+**Torchflowers**
 
 -   The Sniffer can occasionally sniff up a Torchflowers seed, and it can be used to breed two Sniffers
 -   The Torchflower seed can be planted on Farmland and grows into a Torchflower
 -   The full-grown flower can be harvested and replanted
 -   The Torchflower can be crafted into Orange Dye
 
-#### Pitcher Plant
+**Pitcher Plant**
 
 -   The Sniffer can occasionally sniff up a Pitcher Pod item
 -   The Pitcher Pod, when planted on Farmland, grows into a Pitcher Crop
@@ -124,7 +124,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
 -   Smithing Templates are consumed when used to upgrade an item in the Smithing Table
 -   You can craft a copy of a Smithing Template in the Crafting Table with 7 diamonds + 1 block of material that the template is made out of + 1 smithing template, which will output 2 of the same Smithing Template
 
-#### Netherite Equipment
+**Netherite Equipment**
 
 -   Netherite equipment crafting now also requires a Netherite Upgrade Smithing Template
 -   Netherite Upgrade Smithing Templates can be found randomly in all Bastion Remnant chests
@@ -134,7 +134,7 @@ Oh, it's time for Trails & Tales! How could I forget? Time to equip your new bru
     -   Make Netherite equipment more significant achievement in the game's progression
     -   Adapt Netherite more naturally into the new Smithing Table crafting system
 
-#### Armor Trims
+**Armor Trims**
 
 -   You can now visually customize your armor with a variety of unique trims at the Smithing Table
 -   Armor trims are purely visual with no gameplay benefits
@@ -266,13 +266,13 @@ The following changes have been made for both Signs and Hanging Signs.
 
 ### Advancements
 
-#### New Husbandry Advancements
+**New Husbandry Advancements**
 
 -   `Smells Interesting` : Obtain a Sniffer Egg
 -   `Little Sniffs` : Feed a Snifflet (requires `Smells interesting`)
 -   `Planting the Past` : Plant any Sniffer seed (requires `Little sniffs`)
 
-#### New Adventure Advancements
+**New Adventure Advancements**
 
 -   `Respecting the Remnants` : Brush a Suspicious block to obtain a Pottery Sherd
 -   `Careful Restoration` : Make a Decorated Pot out of 4 Pottery Sherds (requires `Respecting the Remnants`)
@@ -309,7 +309,7 @@ The following changes have been made for both Signs and Hanging Signs.
 -   Sculk Sensors and Calibrated Sculk Sensors now strongly power the block they are placed on
 -   Both types of Sculk Sensors now stay in their Cooldown phase for 10 ticks, with other phase timings being adjusted to compensate
 
-#### Sculk Sensor Phases
+**Sculk Sensor Phases**
 
 -   Sculk Sensors and Calibrated Sculk Sensors have three phases: Inactive, Active and Cooldown
 -   The default phase is Inactive
@@ -327,7 +327,7 @@ The following changes have been made for both Signs and Hanging Signs.
     -   Cooldown: 1 game tick for both types of Sculk Sensors
 -   These phase timings were tweaked so that it is less common for activated contraptions to recursively activate the Sculk Sensor that powered them
 
-#### Vibration Frequencies
+**Vibration Frequencies**
 
 In preparation for the Calibrated Sculk Sensor, vibration frequencies have been greatly simplified to prevent unwanted interference. The following are category descriptions for each frequency and the expected events that they correspond to:
 
@@ -412,7 +412,7 @@ The light engine is responsible for calculating the brightness of each block in 
 
 ### Commands
 
-#### `return`
+**`return`**
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -428,27 +428,27 @@ Parameters:
 
 -   `value`: An integer return value
 
-#### `data`
+**`data`**
 
 -   `string` data sources now accept negative boundaries, which are interpreted as index counted from the end of the string
 
 ### Display Entity
 
-#### Interpolation Changes
+**Interpolation Changes**
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at the next tick after receiving an update)
 -   Display entities are not rendered until their initial data is received. That means display entities might not be shown on the first tick.
 -   Note: due to how the game handles updates, changes to entities made after summoning might be delivered to clients within a later tick
 
-#### Rendering Changes
+**Rendering Changes**
 
 -   `item_display` items have been rotated 180 degrees around the Y axis to better match the transformation that is applied when rendering items on an Armor Stand head and in Item Frames
     -   For reference, the order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)
 
 ### Structure post-processors
 
-#### Capped post-processor
+**Capped post-processor**
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -458,7 +458,7 @@ Parameters:
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-#### Rule post-processor block entity configuration
+**Rule post-processor block entity configuration**
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -474,13 +474,13 @@ Parameters:
 
 ### Loot Tables
 
-#### Random Sequences
+**Random Sequences**
 
 The game now uses named random sequences to deterministically produce loot for loot tables. Each random sequence produces a unique sequence based on the world seed and sequence ID, which means a loot table will produce the same results when ran with the same parameters in the same world.
 
 The ID of the random sequence to use for a loot table is specified in a new optional field called `random_sequence`. If no sequence name is given, loot is drawn using a non-deterministic random source.
 
-#### `reference`
+**`reference`**
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition).
 
@@ -488,7 +488,7 @@ Fields:
 
 -   `name` - location of function to call
 
-#### `any_of`/`all_of`
+**`any_of`/`all_of`**
 
 -   Loot condition `alternative` has been renamed to `any_of`
 -   Added new loot condition `all_of` that passes only when all sub-conditions pass
@@ -496,9 +496,9 @@ Fields:
 
 ### Advancements
 
-#### New Triggers
+**New Triggers**
 
-##### `recipe_crafted`
+**`recipe_crafted`**
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -508,7 +508,7 @@ Fields:
         -   Each predicate needs to be fulfilled to trigger the advancement. This allows for separation between recipes that have same identifier but use different ingredients.
         -   This field is optional. When not provided, or left empty, only the `recipe_id` will dictate the success of the trigger
 
-#### Changed Triggers
+**Changed Triggers**
 
 -   All fields in `placed_block`, `item_used_on_block` and `allay_drop_item_on_block` have been collapsed into a single `location` field
 -   The new `location` is similar to the `player` field - it is a list of loot conditions/predicates
@@ -578,7 +578,7 @@ After:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Removed `replaceable_plants` since it was only used as a subset of the blocks for the tag above, and not as universally
 -   Added `replaceable_by_trees` to better express blocks that are replaced when the tree grows through them
@@ -600,7 +600,7 @@ After:
 -   Added `cherry_logs` block tag
 -   Added `bamboo_blocks` block tag
 
-#### Item Tags
+**Item Tags**
 
 -   Added `villager_plantable_seeds` to represent which kind of seeds Villagers can farm
 -   Added `noteblock_top_instruments` to control which blocks can be placed on top of Note Blocks without sneaking
@@ -615,7 +615,7 @@ After:
 -   Added `cherry_logs` item tag
 -   Added `bamboo_blocks` item tag
 
-#### Biome Tags
+**Biome Tags**
 
 -   Added `has_structure/trail_ruins`
 
@@ -642,7 +642,7 @@ After:
 
 ### Fonts
 
-#### New `unihex` Glyph Provider
+**New `unihex` Glyph Provider**
 
 -   New glyph provider for reading Unifont HEX files
     -   HEX format describes font glyphs using a bitmap
@@ -660,14 +660,14 @@ After:
         -   `left`, `right` - integers describing the position of the left-most and right-most columns of the glyph in range
             -   Any bits in columns outside of this range will be discarded
 
-#### New `reference` Glyph Provider
+**New `reference` Glyph Provider**
 
 -   New glyph provider that can be used to include providers from other fonts
     -   Providers are guaranteed to be loaded only once, no matter how many times they are included
 -   Provider has one field `id`, that describes another font to be included in the currently loaded one
     -   Inclusion is performed after all fonts are loaded, so it will include all providers for a given font defined in all datapacks
 
-#### Removed `legacy_unicode` Glyph Provider
+**Removed `legacy_unicode` Glyph Provider**
 
 -   The `legacy_unicode` glyph provider has been removed
 -   This functionality has been replaced by the `unihex` provider
@@ -697,20 +697,20 @@ After:
 
 ### Telemetry
 
-#### All Events
+**All Events**
 
 -   Added new property: `launcher_name`
     -   This is set based on the `minecraft.launcher.brand` system property
     -   This will help us troubleshoot game launch related bugs more effectively, as we will be able to see whether the issue originated in the Minecraft launcher or a third-party program
 
-#### Updated Required Events
+**Updated Required Events**
 
 -   `world_loaded`
     -   Added new property: `realms_map_content`
         -   When loading into a Realms Map Content world (Minigame), the `world_loaded` event will receive the name of that map
         -   This is to help us understand how Java Realms players interact with Java Realms adventure or minimap content
 
-#### New Optional Events
+**New Optional Events**
 
 -   `advancement_made`
     -   This event is triggered when a player completes an advancement, and allows us to see the advancement ID and the time when the advancement was completed

@@ -182,7 +182,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Structure post-processors
 
-#### Capped post-processor
+**Capped post-processor**
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -192,7 +192,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-#### Rule post-processor block entity configuration
+**Rule post-processor block entity configuration**
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -229,13 +229,13 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Tags
 
-#### Step Sounds
+**Step Sounds**
 
 -   The blocks that can produce a combination of step sounds is controlled by `combination_step_sound_blocks`
 
 ### Display entity
 
-#### Interpolation changes
+**Interpolation changes**
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at next tick after receiving update)
@@ -331,19 +331,19 @@ Fields:
 -   `interaction`: Records the last interaction action on the entity
 -   `response`: Boolean specifying if interacting should trigger a response (arm swing, sound effects, etc - default `false`)
 
-#### Action Format
+**Action Format**
 
 When an action is stored, it always has two fields:
 
 -   `player`: The UUID (in standard integer array format) of the player performing the action
 -   `timestamp`: The timestamp of the game tick when the event happened (stored as a long)
 
-#### Advancement Triggers
+**Advancement Triggers**
 
 -   Interacting with an Interaction entity triggers `player_interacted_with_entity`
 -   Attacking an Interaction entity triggers `player_hurt_entity`
 
-#### `execute on` with Interactions
+**`execute on` with Interactions**
 
 The Interaction entity targets the player who last interacted with it. That makes the following possible:
 
@@ -373,31 +373,31 @@ The Interaction entity targets the player who last interacted with it. That make
 -   Added a new Cherry Grove biome, with pretty cherry blossom trees
 -   You can find it in the mountains, like Meadows
 
-#### Pink Petals block
+**Pink Petals block**
 
 -   Added a new Pink Petals block with lots of pink flowers on the ground
 
-#### Cherry Wood Set
+**Cherry Wood Set**
 
 -   Added a new Cherry wood set, with all the corresponding wooden things you can make from it. You need to have the Update 1.20 experimental features enabled to see it in game.
 
 ### Archaeology
 
-#### The brush
+**The brush**
 
 -   The brush is a craftable item you can use to brush things
 
-#### Suspicious Sand
+**Suspicious Sand**
 
 -   Desert Temples and Desert Wells now contain Suspicious Sand. This fragile block is hard to spot and easy to destroy, so be careful!
 -   Brushing the Suspicious Sand with a Brush will extract objects that were buried long ago
 
-#### Pottery Shards
+**Pottery Shards**
 
 -   Pottery Shards have pictures on them
 -   They cannot be crafted and are only found by brushing Suspicious Sand
 
-#### Decorated Pots
+**Decorated Pots**
 
 -   Crafting four Pottery Shards together will create a Decorated Pot with a picture on each side
 -   You can also use Brick items instead of Pottery Shards in the Decorated Pot recipe

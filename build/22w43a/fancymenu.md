@@ -17,7 +17,7 @@ Happy Mining!
 
 A lot of feedback has come pouring in as a result of the creative inventory ordering changes.
 
-#### Changes
+**Changes**
 
 -   Change the icons of creative tabs for better color coding as well as show most iconic visuals
 -   Nature Blocks tab has been renamed to Natural Blocks
@@ -35,7 +35,7 @@ A lot of feedback has come pouring in as a result of the creative inventory orde
 -   Basalt blocks are now found after Nether Brick blocks in the Building Blocks tab, next to Blackstone
 -   Generally reordered the plants of the Natural Blocks tab
 
-#### Additions
+**Additions**
 
 -   Added to Redstone Blocks tab
     -   Boat with Chests

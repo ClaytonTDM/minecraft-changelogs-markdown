@@ -95,7 +95,7 @@ Happy mining!
 
 ### Modified loot functions
 
-#### `set_fireworks`
+**`set_fireworks`**
 
 Fields `explosions` and `mode` have been grouped together as a sub-object
 
@@ -245,7 +245,7 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
 
 ### Modified loot functions
 
-#### `set_contents`
+**`set_contents`**
 
 -   Unused field `type` has been removed
 -   Added new mandatory field `component`:
@@ -254,13 +254,13 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
     -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `bundle_contents` and `charged_projectiles` will ignore empty stacks
 
-#### `set_custom_data`
+**`set_custom_data`**
 
 Field `tag` now accepts both SNBT data written as a string (existing format) and unflattened tags
 
 ### New Loot Functions
 
-#### `modify_contents`
+**`modify_contents`**
 
 -   Apply modifier function to every item inside a component
 -   If component does not exist, it will not be added
@@ -270,14 +270,14 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
         -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `modifier` - function or list of functions to be applied to every item inside container
 
-#### `set_item`
+**`set_item`**
 
 -   Replaces item type of item stack without changing count and components
 -   Fields:
     -   `conditions` - list of conditions to filter this function
     -   `item` - new item type
 
-#### `filtered`
+**`filtered`**
 
 -   Applies sub-function only to items that match item predicate
 -   Fields:
@@ -285,7 +285,7 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
     -   `item_filter` - item predicate used to match items
     -   `modifier` - functions to apply to matching items
 
-#### `set_custom_model_data`
+**`set_custom_model_data`**
 
 -   Sets `custom_model_data` component
 -   Fields:
@@ -303,7 +303,7 @@ General rules of component predicates:
     -   Integer and float fields will be replaced with ranges
     -   Registry ids will be replaced with a type that accepts id, list of ids or a tag
 
-#### Collection matcher
+**Collection matcher**
 
 Collection matcher is a shared part of predicate used for matching collections. Every instance of this matcher will have same fields with same functionality, with only difference being type of matched element Fields:
 
@@ -323,7 +323,7 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   Examples (when matching item stacks):
         -   `{count:[{count:3,test:{items:diamond}}]}}` will match only when there are exactly 3 stacks of diamonds (no matter the stack size)
 
-#### `container`
+**`container`**
 
 -   Matcher for `container` component (like shulker box)
 -   Fields:
@@ -518,11 +518,11 @@ Happy Mining!
 
 ### World resource packs
 
-#### Local storage
+**Local storage**
 
 -   Only up to 20 server resource packs are cached
 
-#### Packets
+**Packets**
 
 -   Client now sends additional updates about packs (like download success)
 
@@ -582,19 +582,19 @@ We're bringing you the first Pre-Release of 1.20.3 with updates to server resour
 
 Changes apply to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
 
-#### UI
+**UI**
 
 -   Download screen has been replaced with a toast
 -   World resource pack application will start together with chunk loading
 
-#### Local storage
+**Local storage**
 
 Downloaded packs are now stored in `downloads` directory (with different file organization than old `server-resource-packs`)
 
 -   Files in this directory are no longer automatically cleaned (previously only up 10 packs were kept)
 -   Additionally, inside this directory there is also log file `log.json` that stores information about downloaded files for debug purposes
 
-#### Server config
+**Server config**
 
 Downloaded packs now have unique id (GUID/UUID) that can be used to differentiate them
 
@@ -603,7 +603,7 @@ Downloaded packs now have unique id (GUID/UUID) that can be used to differentiat
 -   If hash of a pack is not set, this pack will be redownloaded before every application
     -   Previously, if hash was missing, latest downloaded version of pack was applied
 
-#### Packets
+**Packets**
 
 Some additional options are added for 3rd-party servers software:
 

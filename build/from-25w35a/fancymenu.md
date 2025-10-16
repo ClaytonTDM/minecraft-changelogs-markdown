@@ -19,7 +19,7 @@ Happy mining!
 -   When adding a new server to the server list, the name is no longer prefilled. When left empty the default name is used.
 -   More text inputs now support selecting text by mouse dragging
 
-#### Mouse cursor
+**Mouse cursor**
 
 -   Some UI components will now change shape of mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
@@ -101,7 +101,7 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 
 ### Text rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   This component has been updated to support displaying other non-character objects as a part of text
 -   New format:
@@ -110,12 +110,12 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Similarly to `nbt` text component `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-##### `atlas` Object Type
+**`atlas` Object Type**
 
 -   Behaves the same way as the `object` component did previously, but is now a separate object type
 -   Uses the same format as before
 
-##### `player` Object Type
+**`player` Object Type**
 
 -   Renders player head
 -   If partial profile is given, skin is resolved in the same way as `minecraft:profile` component on player head
@@ -220,7 +220,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-#### Server Setup
+**Server Setup**
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for code of conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -269,7 +269,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 
 ### Commands
 
-#### Added `fetchprofile`
+**Added `fetchprofile`**
 
 -   New command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously
@@ -284,7 +284,7 @@ Syntax:
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
 -   Previously contents of this component would permanently change when profile was resolved, i.e. downloaded from Minecraft service
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -307,7 +307,7 @@ Syntax:
 
 ### Block Entity Data
 
-#### Modified `minecraft:skull`
+**Modified `minecraft:skull`**
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary
@@ -424,7 +424,7 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### Blocks
 
-#### Shelf
+**Shelf**
 
 -   Items in the Shelf will render in the middle of the Shelf
 -   Updated the sizes of many items in the Shelf to better fit the Shelf
@@ -433,7 +433,7 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### UI
 
-#### Chat
+**Chat**
 
 -   It is now possible to start chatting while standing inside a Nether Portal
 -   The chat will now remain open and unchanged if the player was chatting before being transferred to another dimension
@@ -456,14 +456,14 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### Attributes
 
-#### `run_command` Click Event
+**`run_command` Click Event**
 
 -   Previously, if the `command` field contained a command that required a signed message (`/say`, `/me`, `/msg`, `/tell`, `/w`, `/teammsg`, `/tm`), it would be silently discarded
 -   Instead, a screen will be shown that lets the user insert the command into the chat window or copy the command to their clipboard if the chat window can't be opened
 
 ### Enchantments
 
-#### `explode` Effects
+**`explode` Effects**
 
 New field: `block_effects` - specifies per-block particles. Each block particle is randomly chosen according to weights. A set limit of block particles is spawned each tick from all explosions that tick.
 
@@ -476,7 +476,7 @@ Format: List of entries:
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#shearable_from_copper_golem` - all items that can be removed from the Copper Golem's head slot via Shears
 
@@ -489,7 +489,7 @@ Format: List of entries:
 
 ### Sounds
 
-#### Sound Events
+**Sound Events**
 
 -   Added new sound event:
     -   `weather.end_flash`

@@ -20,7 +20,7 @@ In this snapshot you’ll be seeing [the features that we talked about during Mi
 -   Worlds that are using experimental features will be marked as "Experimental" in world selection list
 -   Experimental features cannot be toggled for existing worlds
 
-#### Added Camel
+**Added Camel**
 
 Camels are now available when Update 1.20 experimental features are enabled.
 
@@ -35,7 +35,7 @@ Camels are now available when Update 1.20 experimental features are enabled.
 -   Camels can either walk slowly or sprint quickly
 -   They can also dash forward but will lose stamina for a while when doing so
 
-#### Bamboo Wood Set
+**Bamboo Wood Set**
 
 A new set of Bamboo wood blocks are now available when Update 1.20 experimental features are enabled.
 
@@ -57,7 +57,7 @@ A new set of Bamboo wood blocks are now available when Update 1.20 experimental 
 -   Added a unique Bamboo Raft and Bamboo Chest Raft which can be crafted like normal boats, but with Bamboo Planks
     -   They function the same as ordinary boats, but have a unique look to them
 
-#### Chiseled Bookshelf
+**Chiseled Bookshelf**
 
 A new, chiseled variation of the Bookshelf is now available when Update 1.20 experimental features are enabled.
 
@@ -68,7 +68,7 @@ A new, chiseled variation of the Bookshelf is now available when Update 1.20 exp
 -   Comparators can detect the last book placed/removed
     -   Perfect for hiding secrets in your spooky library
 
-#### Hanging Signs
+**Hanging Signs**
 
 Ever wanted to hang up your signs? Fetch a few chains, strip some logs, and now you can! Hanging signs are now available when Update 1.20 experimental features are enabled.
 
@@ -129,13 +129,13 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 
 ### Feature flags
 
-#### General notes
+**General notes**
 
 -   Feature flags are options that enable or disable certain groups of game elements (like blocks, entities and items), later called "features"
 -   Game elements controlled by flags are hardcoded
 -   Feature flags are stored in world
 
-#### Configuration and datapack changes
+**Configuration and datapack changes**
 
 -   Feature flags are enabled by datapacks
     -   New pack metadata section called `features` is added, containing enabled feature flags in list named `enabled`
@@ -145,9 +145,9 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
     -   `initial-disabled-packs` - comma-separated list of packs to not auto-enable
 -   Datapacks discovered after world creation will be disabled if they require features that are not enabled for loaded world
 
-#### Effects of feature flags
+**Effects of feature flags**
 
-##### Blocks
+**Blocks**
 
 -   Disabled block ids are not recognized by commands that can create new blocks
 -   Block items for disabled blocks are disabled
@@ -155,13 +155,13 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 -   Disabled blocks won't be loaded as part of entities (for example as falling sand or blocks carried by Endermen)
 -   Players can't interact with disabled blocks
 
-##### Entities
+**Entities**
 
 -   Disabled entity ids are not recognized by commands that can summon new entities
 -   Disabled entities will not spawn or load
 -   Spawn egg items for disabled entities are disabled
 
-##### Items
+**Items**
 
 -   Disabled items are hidden from creative menu
 -   Recipes and loot tables are prevented from creating disabled items
@@ -177,7 +177,7 @@ The ordering of tabs and the contents in the Creative Inventory have been tweake
 
 ### Recipes
 
-#### Crafting book categories
+**Crafting book categories**
 
 -   Crafting book categories/tabs can now be controlled by recipe definitions
 -   Categories available for `shaped`/`shapeless` and various special crafting recipes:
@@ -365,7 +365,7 @@ Enjoy!
 -   Servers will now also send an additional icon and MOTD packet after a player has connected
     -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
 
-#### Place template
+**Place template**
 
 The `place`;;-;;command can now also place templates at a given location. Syntax: `place template <template> [pos] [rotation] [mirror] [integrity] [seed]`
 
@@ -468,9 +468,9 @@ Parameters:
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_instrument`
+**`set_instrument`**
 
 Sets item tags needed for instrument items to a random value selected from a tag.
 

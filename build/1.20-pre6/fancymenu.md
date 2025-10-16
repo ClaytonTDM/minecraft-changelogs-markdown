@@ -12,7 +12,7 @@ Happy mining!
 
 ### Loot tables
 
-#### Random sequences
+**Random sequences**
 
 The ID of the random sequence is now an optional field. If no sequence name is given, loot is drawn using a non-deterministic random source.
 

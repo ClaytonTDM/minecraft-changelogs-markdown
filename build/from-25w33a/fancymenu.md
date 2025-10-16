@@ -43,7 +43,7 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### Blocks
 
-#### Shelf
+**Shelf**
 
 -   Items in the Shelf will render in the middle of the Shelf
 -   Updated the sizes of many items in the Shelf to better fit the Shelf
@@ -52,7 +52,7 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### UI
 
-#### Chat
+**Chat**
 
 -   It is now possible to start chatting while standing inside a Nether Portal
 -   The chat will now remain open and unchanged if the player was chatting before being transferred to another dimension
@@ -75,14 +75,14 @@ In this week's snapshot we've got a nice quality of life improvement for all the
 
 ### Attributes
 
-#### `run_command` Click Event
+**`run_command` Click Event**
 
 -   Previously, if the `command` field contained a command that required a signed message (`/say`, `/me`, `/msg`, `/tell`, `/w`, `/teammsg`, `/tm`), it would be silently discarded
 -   Instead, a screen will be shown that lets the user insert the command into the chat window or copy the command to their clipboard if the chat window can't be opened
 
 ### Enchantments
 
-#### `explode` Effects
+**`explode` Effects**
 
 New field: `block_effects` - specifies per-block particles. Each block particle is randomly chosen according to weights. A set limit of block particles is spawned each tick from all explosions that tick.
 
@@ -95,7 +95,7 @@ Format: List of entries:
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#shearable_from_copper_golem` - all items that can be removed from the Copper Golem's head slot via Shears
 
@@ -108,7 +108,7 @@ Format: List of entries:
 
 ### Sounds
 
-#### Sound Events
+**Sound Events**
 
 -   Added new sound event:
     -   `weather.end_flash`
@@ -196,7 +196,7 @@ Happy mining!
 
 ### Entity Data
 
-#### `copper_golem`
+**`copper_golem`**
 
 -   The `weather_state` field now expects a string id instead of integer id
     -   `0` -> `unaffected`
@@ -206,7 +206,7 @@ Happy mining!
 
 ### Text rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   New text component with type `object` has been added
 -   This component will display a single sprite from sprite atlas as a character
@@ -227,13 +227,13 @@ General note about atlas contents:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#chains` - all Chain blocks
 -   Added `#lanterns` - all Lantern blocks
 -   Added `#bars` - all Bar blocks
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#chains` - all Chain block items
 -   Added `#lanterns` - all Lantern block items

@@ -38,7 +38,7 @@ Edit: We have published a fix for a crash issue in this Snapshot. If you are exp
 
 ### Commands
 
-#### `return`
+**`return`**
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -56,9 +56,9 @@ Parameters:
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `recipe_crafted`
+**`recipe_crafted`**
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -75,7 +75,7 @@ Parameters:
 
 ### Display entity
 
-#### Rendering changes
+**Rendering changes**
 
 -   `item_display` items have been rotated 180 degrees around Y axis to better match transformation applied when rendering items on armor stand head and in item frames
     -   For reference, order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)
@@ -161,7 +161,7 @@ Happy mining!
 
 ### Loot tables
 
-#### `reference`
+**`reference`**
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition). Fields:
 
@@ -435,7 +435,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Structure post-processors
 
-#### Capped post-processor
+**Capped post-processor**
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -445,7 +445,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-#### Rule post-processor block entity configuration
+**Rule post-processor block entity configuration**
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -482,13 +482,13 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Tags
 
-#### Step Sounds
+**Step Sounds**
 
 -   The blocks that can produce a combination of step sounds is controlled by `combination_step_sound_blocks`
 
 ### Display entity
 
-#### Interpolation changes
+**Interpolation changes**
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at next tick after receiving update)

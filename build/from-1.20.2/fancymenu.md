@@ -135,7 +135,7 @@ The Multiplayer mode of the game has been optimized to enable more fluid online 
 
 New features have been added to datapacks and resource packs to allow creation of packs that are compatible with multiple versions of game.
 
-#### Pack Metadata
+**Pack Metadata**
 
 -   Pack metadata now includes an optional field `supported_formats` which describes a range for pack formats that this pack supports
     -   Examples: `16`, `[16,17]`, `{"min_inclusive": 16, "max_inclusive": 17}`
@@ -143,7 +143,7 @@ New features have been added to datapacks and resource packs to allow creation o
     -   If `supported_formats` is present, it must contain the value declared in `pack_format`
     -   Note: since this new information is ignored by older versions of the game, they will always see a "normal", single-version pack, without any extended compatibility
 
-#### Overlays
+**Overlays**
 
 -   Packs can now contain overlay directories ("overlays")
 -   Overlays are sub-packs applied over the "normal" contents of a pack
@@ -191,7 +191,7 @@ As part of ongoing work towards more data-driven features, the network protocol 
 -   The server will now negotiate resource packs in the configuration phase
     -   This means that the player will no longer be in the world when answering prompts and reloading resources
 
-#### Secure Chat
+**Secure Chat**
 
 -   Clients will no longer disconnect themselves when receiving an invalid chat message
     -   A placeholder message will instead be shown in chat
@@ -226,7 +226,7 @@ As part of ongoing work towards more data-driven features, the network protocol 
 -   Each sprite can now be individually overriden by a resource pack instead of replacing the entire sheet
 -   Sprites are loaded into the `gui` atlas from the `textures/gui/sprites` directory
 
-#### GUI Sprite .mcmeta
+**GUI Sprite .mcmeta**
 
 -   Any sprite used in the GUI can now be animated using `.mcmeta` files, similar to other atlases
     -   `icon/trial_available` and `realm_status/expires_soon` are now animated this way
@@ -268,7 +268,7 @@ As part of ongoing work towards more data-driven features, the network protocol 
 
 ### Commands
 
-#### `random`
+**`random`**
 
 A new command for randomizing values and controlling random sequences. The `value` and `roll` forms can be used to draw a random value. In the case of `roll`, the resulting value is also shown in chat for all players.
 
@@ -300,7 +300,7 @@ Note that `random value|roll <range>` used without a sequence id is available to
 -   A single backslash `;;`;; as the last non-whitespace character of a line now allows a command to be continued on the next line
     -   Leading and trailing whitespace of the following line are stripped before appending
 
-#### Macros
+**Macros**
 
 Functions can now contain macro lines, making them Function Macros.
 
@@ -308,7 +308,7 @@ Functions can now contain macro lines, making them Function Macros.
 -   A macro line also contains one or more substitutions in the form of `$(variable)`
 -   When calling a function macro a compound with data for all argument variables must be provided
 
-##### Calling Function Macros
+**Calling Function Macros**
 
 The `function` command has new forms:
 
@@ -329,7 +329,7 @@ Notes:
 -   When a macro is called, the values provided are substituted in place of the variable specifications and the resulting commands are executed
 -   Any syntax errors in the lines resulting from variable substitution result in the entire function call being skipped
 
-##### Performance Considerations
+**Performance Considerations**
 
 Using a macro means commands must be re-evaulated after variable substitution. This has an extra cost compared to running pre-parsed functions.
 
@@ -381,7 +381,7 @@ This makes repeated calls with the same parameter set cheaper than new calls wit
 -   The game no longer uses numeric values when storing mob effects to a world (so, for example, `4` becomes `minecraft:mining_fatigue`)
 -   Various mob effect fields have been renamed for consistency with new structures
 
-#### Mob Effect Instance
+**Mob Effect Instance**
 
 This structure is used in many places, so its changes are described separately.
 
@@ -394,38 +394,38 @@ This structure is used in many places, so its changes are described separately.
 -   `HiddenEffect` -> `hidden_effect`, also since it's mob effect instance, changes apply recursively
 -   `FactorCalculationData` -> `factor_calculation_data`
 
-#### Items
+**Items**
 
-##### `potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`
+**`potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-##### `suspicous_stew`
+**`suspicous_stew`**
 
 -   `Effects` -> `effects`, for each entry:
     -   `EffectId` -> `id`, also changed from number to string id
     -   `EffectDuration` -> `duration`
 
-#### Entities
+**Entities**
 
-##### `mooshroom`
+**`mooshroom`**
 
 -   Removed `EffectId` and `EffectDuration`
 -   Added `stew_effects` with the same format as `suspicious_stew.effects` tag (i.e. list of effect id and duration)
 
-##### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   `Effects` -> `effects`, contents tranformed as a list of mob effect instances
 
-##### `arrow`
+**`arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-##### Players, Armor Stands and mobs
+**Players, Armor Stands and mobs**
 
 -   `ActiveEffects` -> `active_effects`, contents tranformed as a list of mob effect instances
 
-#### Block Entities
+**Block Entities**
 
 `beacon`
 
@@ -466,7 +466,7 @@ The Experiments screen when creating a world now has an option to enable the Vil
 
 This experiment has no effect on normal worlds. You can find more information about Feature Toggles [here](https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition).
 
-#### Librarian Changes
+**Librarian Changes**
 
 -   Librarians from different biomes now sell different Enchanted Books
 -   Each village biome has one special enchantment that is only available from Master Librarians with full XP
@@ -475,26 +475,26 @@ This experiment has no effect on normal worlds. You can find more information ab
     -   A player must build these villages to access their trades!
 -   Some enchantments have been removed from village trading and must be found in other ways
 
-#### Cartographer Changes
+**Cartographer Changes**
 
 -   Cartographers can now sell seven new Explorer Maps
     -   Five new maps show the way to five different types of village
     -   The other two new maps show the way to a Swamp Hut and a Jungle Temple
 -   Cartographers from different biomes now sell a different range of maps
 
-#### Wandering Trader Changes
+**Wandering Trader Changes**
 
 -   Wandering Traders now have lower prices and have a higher amount of each item in stock
 -   Wandering Traders now sell Logs
 -   Wandering Traders can now buy many items, instead of only selling
 
-#### Armorer Changes
+**Armorer Changes**
 
 -   Armorer from different biomes now sell different Armor with different enchantments
 -   Buying Diamond Armor now requires a small amount of Diamonds as well as Emeralds
 -   Many other Armorer trades have been updated
 
-#### Structure Loot
+**Structure Loot**
 
 Certain Enchanted Books now have a high chance of generating in some structures:
 

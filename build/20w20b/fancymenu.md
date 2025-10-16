@@ -26,7 +26,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 
 ​
 
-#### F3 + N (Toggle Spectator)
+**F3 + N (Toggle Spectator)**
 
 A small change has been made to this debug combination. ​
 
@@ -71,7 +71,7 @@ A small change has been made to this debug combination. ​
 
 ### Advancements
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -80,7 +80,7 @@ Properties:
 
 ​
 
-#### `player_generates_container_loot` trigger type
+**`player_generates_container_loot` trigger type**
 
 Properties:
 
@@ -88,7 +88,7 @@ Properties:
 
 ​
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 

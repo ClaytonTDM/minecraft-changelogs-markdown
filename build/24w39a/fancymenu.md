@@ -59,7 +59,7 @@ Happy mining!
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   `map_invisibility_equipment`: Items that can be equipped to hide the player marker on other players maps
 

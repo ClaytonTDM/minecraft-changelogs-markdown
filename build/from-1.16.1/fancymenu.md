@@ -88,7 +88,7 @@ Enjoy the update!
 -   Obtaining blackstone now also counts for the `Stone Age` advancement
 -   Breeding Striders now counts for `The Parrots and the Bats` and is now required for `Two by Two`
 
-#### New Advancements
+**New Advancements**
 
 -   `Bullseye` unlocks when hitting the bullseye of a target block from at least 30 meters away
 -   `Hidden in the Depths` unlocks when obtaining ancient debris
@@ -245,13 +245,13 @@ A new block that can help you get your bearings!
 -   Added gamerule universalAnger (disabled by default), which makes angered neutral mobs attack any nearby player – not just the player that angered them. Works best if you disable forgiveDeadPlayers
 -   Added gamerule forgiveDeadPlayers (enabled by default), which makes angered neutral mobs stop being angry when the targeted player dies nearby
 
-#### Forgive dead players
+**Forgive dead players**
 
 -   If this gamerule is disabled, then angered mobs will stay angry even if the targeted player dies
 -   If both forgiveDeadPlayers and universalAnger are enabled, an angered neutral mob will stop being angry when their target dies. They won't seek any new targets after that
     -   Notable exception: Angered Zombified Piglins continuously spread anger. So even if one Zombified Piglin stops being angry because its target died, other angered Zombified Piglins nearby are likely to make it angry again. The only way to stop the anger is if none of the angered Zombified Piglins see a player for a while
 
-#### Neutral mob anger
+**Neutral mob anger**
 
 Updated anger management for most neutral mobs (polar bear, wolf, bee, Enderman, Piglin, Zombified Piglin).
 
@@ -264,7 +264,7 @@ Updated anger management for most neutral mobs (polar bear, wolf, bee, Enderman,
     -   Notable exception: If a beehive or nest is broken, the bees will be angry at all nearby players
 -   Some mobs spread anger (wolf, Zombified Piglin, Piglin, bee). If a player attacks one, all nearby mobs of the same type will get angry at that player
 
-#### Universal anger
+**Universal anger**
 
 Universal anger is basically guilt by association. A neutral mob attacked by players will be angry at players in general, regardless of who attacked them. More specifically:
 
@@ -276,7 +276,7 @@ Universal anger is basically guilt by association. A neutral mob attacked by pla
 -   Mobs that spread anger will also spread universal anger. So if a player attacks a Zombified Piglin, all other Zombified Piglins within sight will be universally angry and attack their nearest player
 -   An angered neutral mob will stop being angry if it can't see any eligible target for a while
 
-#### Zombified Piglins
+**Zombified Piglins**
 
 -   Zombie Pigmen are now known as Zombified Piglins, and they now have ears. Well, at least one ear
 -   Zombified Piglins no longer attack innocent bystanders (unless you enable gamerule universalAnger)
@@ -291,14 +291,14 @@ Universal anger is basically guilt by association. A neutral mob attacked by pla
 
 -   A new high level material found in the Nether. Use it to upgrade your diamond gear!
 
-#### How to make Netherite
+**How to make Netherite**
 
 1.  Mine ancient debris in the lower depths of the Nether. At your own risk though. No insurance coverage for that
 2.  Refine it into Netherite scrap in a furnace or blast furnace
 3.  Combine four Netherite scrap with four gold ingots in a crafting table to make a Netherite ingot
 4.  Use a smithing table to fuse the Netherite ingot with your diamond weapon, tool, or armor
 
-#### Netherite effects
+**Netherite effects**
 
 -   Netherite items float in lava – just so you don't lose all your gear after that unplanned lava bath
 -   Netherite items have higher enchantment value than diamond (but not as high as gold)
@@ -348,7 +348,7 @@ The blockstate, rendering, and behavior of redstone wire are more in line with e
 -   A wire that is redirected to go over a block will now always provide power to the block. This is most noticeable when the wire has signal strength 1
 -   When right-clicking a single piece of redstone, it will toggle between a the cross and the dot
 
-#### Target block
+**Target block**
 
 -   The target block now conducts redstone signals
 
@@ -474,7 +474,7 @@ Warped Forests can now be found in the Nether!
 
 ### Advancements
 
-#### Extended entity checks
+**Extended entity checks**
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -523,13 +523,13 @@ Full list of extended triggers:
 -   `target_hit` - `projectile`
 -   `villager_trade` - `villager`
 
-#### Miscellaneous trigger changes
+**Miscellaneous trigger changes**
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 -   `location` got a new property `smokey` which checks if the location is closely above a campfire
 -   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
 
-#### New trigger
+**New trigger**
 
 -   `target_hit` trigger type
     -   `signal_strength` matches the signal strength output from the block on hit
@@ -579,7 +579,7 @@ Attributes have been moved to game registry. That means few changes: Renames:
 
 ### Chat components
 
-#### Hover event argument
+**Hover event argument**
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -589,7 +589,7 @@ Attributes have been moved to game registry. That means few changes: Renames:
 
 ### Commands
 
-#### attribute
+**attribute**
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -604,23 +604,23 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 -   `name` - string (in optional quotes) describing human-readable name of modifier
 -   `value` - floating point value (note: certain attributes have limits on final value, so your change might not be noticeable)
 
-#### locatebiome
+**locatebiome**
 
 New command that locates a specified biome. Useful in creative mode when you're looking for a specific biome and don't want to fly around randomly searching for it. Syntax: `locatebiome <biome>` Parameters:
 
 -   `biome` - The id of the biome to find
 
-#### spawnpoint
+**spawnpoint**
 
 The spawnpoint command now supports being run in any dimension.
 
-#### spreadplayers
+**spreadplayers**
 
 Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>`
 
 -   `maxHeight` - Specifies the maximum height for resulting positions
 
-#### UUIDs in NBT
+**UUIDs in NBT**
 
 UUIDs stored in NBT are now represented as an array of four integers. Example: `{UUID:[I;1498693494,1027158888,1898994005,860320107]}` Along with that a couple of fields have been renamed:
 
@@ -666,21 +666,21 @@ It is now possible to control at what range the server sends data about entities
 
 ### IO operations
 
-#### Synchronous writes
+**Synchronous writes**
 
 Region files are now opened in synchronous mode to prevent data loss and corruption after crash. For performance reasons this feature is disabled by default on non-Windows clients. Status of this feature can be manually controlled by following options:
 
 -   For dedicated servers: `sync-chunk-writes` within `server.properties`
 -   For clients: `syncChunkWrites` within `options.txt`
 
-#### World save format
+**World save format**
 
 -   Saving `level.dat` now uses randomly-named temporary files (instead of using `level.dat_new` every time)
 -   `player/*.dat` are now saved in a way similar to `level.dat` (including leaving `.dat_old` files)
 
 ### Item frames
 
-#### New tags
+**New tags**
 
 -   `Invisible` - makes item frame invisible (item inside frame remains visible)
 -   `Fixed` - prevents item frame from being broken and item inside from being removed
@@ -697,22 +697,22 @@ Region files are now opened in synchronous mode to prevent data loss and corrupt
 
 It is now possible to monitor the server tick times though JMX. The rationale for this is that JMX is a well known and supported monitoring technology with existing integrations and tools. This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
 
-#### Enabling JMX Monitoring
+**Enabling JMX Monitoring**
 
 -   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds
 -   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html)
 
 ### Loot Tables
 
-#### Entity Predicate
+**Entity Predicate**
 
 -   Added `fishing_hook` sub-predicate
 
-##### fishing;;_;;hook
+**fishing;;_;;hook**
 
 Check properties of the fishing hook
 
-###### Parameters
+**Parameters**
 
 -   `in_open_water` - Matches whether the fishing location is open water fishing or not. A fishing location is considered to be open water if the fishing hook is in water, there are no blocks besides lily pads above water and all water blocks are source blocks with no solid underwater blocks around
 
@@ -745,11 +745,11 @@ There's now a `smithing` recipe type. Recipes of this type are used in the smith
 
 ### Text style
 
-#### Colors
+**Colors**
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`
 
-#### Custom fonts
+**Custom fonts**
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`
 

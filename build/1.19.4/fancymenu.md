@@ -72,12 +72,12 @@ This change makes horse breeding a viable way of getting great horses, if a play
 -   Added two new options in the accessibility menu for adjusting the speed and transparency of enchantment glints
 -   Added a "Notification Time" accessibility option that changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-#### Arrow key navigation
+**Arrow key navigation**
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
 
-#### High contrast resource pack
+**High contrast resource pack**
 
 -   Added a built-in resource pack that enhances the contrast of UI elements
 -   Added a new option in the Accessibility menu that enables the high contrast resource pack
@@ -130,7 +130,7 @@ This change makes horse breeding a viable way of getting great horses, if a play
 
 ### Commands
 
-#### `clone`
+**`clone`**
 
 The clone command now supports specifying the source and target dimensions.
 
@@ -143,7 +143,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-#### `damage`
+**`damage`**
 
 New command to apply damage to entities.
 
@@ -164,7 +164,7 @@ Parameters:
 -   `location`: The location the damage originated at (when no entity caused the damage)
     -   For instance, `location` might represent the location of a Bed exploding in the Nether
 
-#### `data`
+**`data`**
 
 New source available:
 
@@ -175,14 +175,14 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-#### `effect`
+**`effect`**
 
 -   `infinite` is now a valid option for effect durations
     -   Infinite effect durations show up as "∞" in the player inventory view
 
-#### `execute`
+**`execute`**
 
-##### `execute if|unless`
+**`execute if|unless`**
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -194,7 +194,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-##### `execute on`
+**`execute on`**
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -218,7 +218,7 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, the selector returns zero elements.
 
-##### `execute positioned over`
+**`execute positioned over`**
 
 New `execute` sub-command for finding positions on top of a heightmap. Changes the height of the execution position to be on top of the given heightmap.
 
@@ -226,7 +226,7 @@ Syntax:
 
 -   `execute positioned over <heightmap>`
 
-###### Heightmaps
+**Heightmaps**
 
 A heightmap records the highest position in a column of blocks according to some criteria. Available options:
 
@@ -235,7 +235,7 @@ A heightmap records the highest position in a column of blocks according to some
 -   `motion_blocking_no_leaves`: Any non-leaf motion blocking material
 -   `ocean_floor`: Any non-fluid motion blocking material
 
-##### `execute summon`
+**`execute summon`**
 
 New `execute` sub-command for summoning a new entity and binding the context (`@s`) to it. Meant to simplify entity setup and reduce the need for raw NBT editing.
 
@@ -243,7 +243,7 @@ Syntax:
 
 -   `execute summon <entity id>`
 
-#### `fillbiome`
+**`fillbiome`**
 
 -   The amount of network data transmitted when using the `fillbiome` command has been optimized
 
@@ -251,13 +251,13 @@ Syntax:
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-#### `weather`
+**`weather`**
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-#### `ride`
+**`ride`**
 
 New command to allow entities to start or stop riding other entities.
 
@@ -312,7 +312,7 @@ Damage type tags control many aspects of how damage from different sources are i
 
 ### Predicates
 
-#### Damage Type Predicates
+**Damage Type Predicates**
 
 The following fields have been removed from damage type predicates: `is_projectile`, `is_explosion`, `bypasses_armor`, `bypasses_invulnerability`, `bypasses_magic`, `is_fire`, `is_magic`, `is_lightning`.
 
@@ -341,11 +341,11 @@ Three new entities have been added for flexible display of items, blocks and tex
 -   Those entities, similarily to `marker`, don't tick and have no collisions or physics
 -   Models render at entity position, with normal rotation around X and Y axis (so it can be controlled by teleport commands), but also with additional arbitrary model transform
 
-#### Common data types
+**Common data types**
 
 Tag contents for display entities include some new data types with a complex structure. Any form can be used for modifying data, but only one form is used for saving.
 
-##### Transformations
+**Transformations**
 
 Arbitrary affine transform.
 
@@ -356,14 +356,14 @@ Arbitrary affine transform.
     -   `scale` - 3d vector
     -   Transforms are composed in order `translation`, `left_rotation`, `scale`, `right_rotation`
 
-##### Rotations
+**Rotations**
 
 -   Quaternion form (used for saving): array of 4 numbers, describing components (x, y, z, w)
 -   Axis-angle form: object with following fields:
     -   `axis` - unit 3d vector
     -   `angle` - in radians
 
-#### Interpolation
+**Interpolation**
 
 Some properties of display entities can be interpolated. That means that clients will see gradual changes over time instead of instantaneous jumps.
 
@@ -383,7 +383,7 @@ Display entities keep track of current and previous values of interpolated value
 -   The interpolation target can be updated without setting `start_interpolation`, but it will still behave as if it was started at the moment of the last update to `start_interpolation`
     -   That means that if the value is updated, but more than `interpolation_duration` ticks have passed since last `start_interpolation` update, the entity will immediately jump to new values
 
-#### Common properties
+**Common properties**
 
 All display entity types have the following fields:
 
@@ -405,7 +405,7 @@ All display entity types have the following fields:
     -   Both default to `0`
 -   `glow_color_override` - override glow border color. Defaults to `-1` (use team color). Alpha component is ignored
 
-#### `item_display`
+**`item_display`**
 
 Displays a single item stack.
 
@@ -417,7 +417,7 @@ Fields:
 -   `item_display` - describes item model transform applied to item (as defined in `display` section in model JSON)
     -   Values: `none` (default), `thirdperson_lefthand`, `thirdperson_righthand`, `firstperson_lefthand`, `firstperson_righthand`, `head`, `gui`, `ground`, `fixed`
 
-#### `block_display`
+**`block_display`**
 
 Displays a block state.
 
@@ -427,7 +427,7 @@ Fields:
 
 -   `block_state` - block state to display. Same format as item held by endermen (example `{Name:"minecraft:dirt"}`)
 
-#### `text_display`
+**`text_display`**
 
 Displays a text component.
 
@@ -457,19 +457,19 @@ Fields:
 -   `interaction`: Records the last interaction action on the entity
 -   `response`: Boolean specifying if interacting should trigger a response (arm swing, sound effects, etc - default `false`)
 
-#### Action Format
+**Action Format**
 
 When an action is stored, it always has two fields:
 
 -   `player`: The UUID (in standard integer array format) of the player performing the action
 -   `timestamp`: The timestamp of the game tick when the event happened (stored as a long)
 
-#### Advancement Triggers
+**Advancement Triggers**
 
 -   Interacting with an Interaction entity triggers `player_interacted_with_entity`
 -   Attacking an Interaction entity triggers `player_hurt_entity`
 
-#### `execute on` with Interactions
+**`execute on` with Interactions**
 
 The Interaction entity targets the player who last interacted with it. That makes the following possible:
 
@@ -478,17 +478,17 @@ The Interaction entity targets the player who last interacted with it. That make
 
 ### Tags
 
-#### Block Behavior
+**Block Behavior**
 
 -   Fire burns out faster in certain biomes, and this is now controlled by the `increased_fire_burnout` biome tag
 
-#### Mob Spawning
+**Mob Spawning**
 
 -   The `only_allows_snow_and_gold_rabbits` biome tag has been renamed to `spawns_gold_rabbits` to match its behavior
 -   White Rabbit variants are now controlled by the `spawns_white_rabbits` biome tag
 -   Fox variants are now controlled by the `spawns_snow_foxes` biome tag
 
-#### Mob Behavior
+**Mob Behavior**
 
 -   Snow Golems melting in warm biomes is now controlled by the `snow_golem_melts` biome tag
 -   Only mobs in the `dismounts_underwater` entity tag will now force the rider to dismount when underwater
@@ -497,7 +497,7 @@ The Interaction entity targets the player who last interacted with it. That make
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-#### Packet bundles
+**Packet bundles**
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
@@ -661,22 +661,22 @@ The following changes only apply when one or more Experiments is turned on, eith
 
 ### Archaeology
 
-#### The Brush
+**The Brush**
 
 -   The brush is a craftable item you can use to brush things
 
-#### Suspicious Sand
+**Suspicious Sand**
 
 -   Can be found in Desert Temples and Desert Wells
 -   This fragile block is hard to spot and easy to destroy, so be careful!
 -   Brushing the Suspicious Sand with a Brush will extract objects that were buried long ago
 
-#### Pottery Shards
+**Pottery Shards**
 
 -   Pottery Shards have pictures on them
 -   They cannot be crafted and are only found by brushing Suspicious Sand
 
-#### Decorated Pots
+**Decorated Pots**
 
 -   Crafting four Pottery Shards together will create a Decorated Pot with a picture on each side
 -   Brick items can be used instead of Pottery Shards in the Decorated Pot recipe

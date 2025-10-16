@@ -75,15 +75,15 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `started_riding`
+**`started_riding`**
 
 -   Triggered when player starts riding a vehicle or entity starts riding vehicle currently ridden by player
 -   Conditions:
     -   `player` - either a player that started riding or one of boat passengers
 
-##### `lightning_strike`
+**`lightning_strike`**
 
 -   Triggered when lighting finishes (i.e. entity disappears)
 -   Triggers for any player on server
@@ -92,16 +92,16 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
     -   `lightning` - predicate for lightning entity
     -   `bystander` - predicate for one of the entities in certain area around strike not hurt by it
 
-##### `using_item`
+**`using_item`**
 
 -   Triggered for every tick of using items (like crossbows, spyglass, fishing rods, etc)
 -   Conditions
     -   `player` - players that uses item
     -   `item` - item being used
 
-#### Changed triggers
+**Changed triggers**
 
-##### `effects_changed`
+**`effects_changed`**
 
 -   Added `source` triggers that matches entity that triggered the change
 -   Might be empty when:
@@ -109,29 +109,29 @@ Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6
     -   the effect is self-applied
     -   effect is removed
 
-#### Changed predicates
+**Changed predicates**
 
-##### Item predicate
+**Item predicate**
 
 -   `item` field expended to `items`, now accepting array of item types
 
-##### Block predicate
+**Block predicate**
 
 -   `block` field expended to `blocks`, now accepting array of block types
 
-##### Entity predicate
+**Entity predicate**
 
 -   `passenger` - new sub-predicate for passenger directly riding this vehicle (if present, must match one or more)
 -   `stepping_on` - location predicate for block entity is currently standing on
 -   `lightning_bolt` - sub-predicate valid only for lightning bolt entity
 
-##### Player predicate
+**Player predicate**
 
 -   `looking_at` - entity currently viewed by player
     -   uses same line-of-sight rules as attacking mobs
     -   actual detection radius might be changed in future
 
-#### Lightning bolt
+**Lightning bolt**
 
 -   `blocks_set_on_fire` - range check for of blocks set on fire by this entity
 -   `entity_struck` - predicate for entities struck by this lightning (if present, must match one or more)
@@ -142,7 +142,7 @@ These will be saved to a zip file in `debug/profiling/<yyyy-MM-dd_HH.mm.ss-[leve
 
 The exact metrics, output format, and names are susceptible to change between versions. Our plan is to continue iterating on which metrics to capture.
 
-#### Client F3+L shortcut
+**Client F3+L shortcut**
 
 Pressing F3+L while in the game will start a recording for 10 seconds capturing metrics such as tick durations, used heap sizes and other more detailed stats.
 
@@ -150,7 +150,7 @@ Pressing F3+L before the 10-second limit will end the recording early.
 
 This shortcut is always available to clients, even on multi-player servers where it will record client-side performance.
 
-#### Dedicated Server perf start/stop command
+**Dedicated Server perf start/stop command**
 
 `perf start` will start a recording for 10 seconds capturing metrics such as tick durations, used heap sizes and other more detailed stats.
 

@@ -36,7 +36,7 @@ Happy world creating!
 
 ### Commands
 
-#### `effect`
+**`effect`**
 
 -   `infinite` is now a valid option for effect durations
     -   Infinite effect durations show up as "∞" in the player inventory view

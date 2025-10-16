@@ -171,26 +171,26 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
 -   The `FallFlying` field will no longer be preserved if removed
 -   The `Health` and `Air` fields now default to their respective maximum value if not specified
 
-#### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   The `Duration` field now defaults to `-1` if not specified
 -   If the `Duration` field is `-1`, the Area Effect Cloud will never run out
 -   This means that an Area Effect Cloud summoned with no duration specified will no longer immediately disappear
 
-#### `creeper`
+**`creeper`**
 
 -   The `Fuse` field now defaults to `30` if not specified
 -   The `ExplosionRadius` field now defaults to `3` if not specified
 
-#### `dolphin`
+**`dolphin`**
 
 -   The `Moistness` field now defaults to `2400` if not specified
 
-#### `ender_dragon`
+**`ender_dragon`**
 
 -   The `DragonDeathTime` field now defaults to `0` if not specified
 
-#### `falling_block`
+**`falling_block`**
 
 -   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
 -   The `HurtEntities` field now defaults to `false` if not specified (or `true` if `BlockState` is `anvil`)
@@ -199,99 +199,99 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
 -   The `DropItem` field now defaults to `true` if not specified
 -   The `TileEntityData` field will no longer be preserved if removed
 
-#### `firework_rocket`
+**`firework_rocket`**
 
 -   The `ShotAtAngle` field now defaults to `false` if not specified
 
-#### `fox`
+**`fox`**
 
 -   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
 
-#### `ghast`
+**`ghast`**
 
 -   The `ExplosionPower` field now defaults to `1` if not specified
 
-#### `goat`
+**`goat`**
 
 -   The `HasLeftHorn` and `HasRightHorn` fields now default to `true` if not specified
 
-#### `interaction`
+**`interaction`**
 
 -   The `width` and `height` fields now default to `1` if not specified
 
-#### `item`
+**`item`**
 
 -   The `Health` field now defaults to `5` if not specified
 -   The `PickupDelay` field now defaults to `0` if not specified
 -   The `Age` field now defaults to `0` if not specified
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-#### `item_frame` and `glow_item_frame`
+**`item_frame` and `glow_item_frame`**
 
 -   The `ItemDropChance` field now defaults to `1.0` if not specified
 
-#### `primed_tnt`
+**`primed_tnt`**
 
 -   The `fuse` field now defaults to `80` if not specified
 -   The `explosion_power` field now defaults to `4` if not specified
 
-#### `shulker`
+**`shulker`**
 
 -   The `Color` field now defaults to `16` (no color) if not specified
 
-#### `skeleton`
+**`skeleton`**
 
 -   The `StrayConversionTime` field will no longer be preserved when removed
 
-#### `spectral_arrow`
+**`spectral_arrow`**
 
 -   The `Duration` field now defaults to `200` if not specified
 
-#### `snow_golem`
+**`snow_golem`**
 
 -   The `Pumpkin` field now defaults to `true` if not specified
 
-#### `tnt_minecart`
+**`tnt_minecart`**
 
 -   The `fuse` field now defaults to `80` if not specified
 -   The `explosion_power` field now defaults to `4` if not specified
 -   The `explosion_speed_factor` field now defaults to `1` if not specified
 
-#### `trader_llama`
+**`trader_llama`**
 
 -   The `DespawnDelay` field now defaults to `47999`
 
-#### `villager`
+**`villager`**
 
 -   The `FoodLevel` and `Xp` fields now default to `0` if not specified
 -   The `ConversionTime` field will no longer be preserved when removed
 
-#### `wandering_trader`
+**`wandering_trader`**
 
 -   The `DespawnDelay` field now defaults to `0` if not specified
 
-#### `zombie`
+**`zombie`**
 
 -   The `DrownedConversionTime` field will no longer be preserved when removed
 
-#### `zombie_villager`
+**`zombie_villager`**
 
 -   The `Xp` field now defaults to `0` if not specified
 -   The `ConversionTime` field will no longer be preserved when removed
 
-#### `arrow`, `spectral_arrow`, `trident`
+**`arrow`, `spectral_arrow`, `trident`**
 
 -   The `damage` field now defaults to `2` if not specified
 
-#### `dragon_fireball`, `wind_charge`, `breeze_wind_charge`, `wither_skull`, `small_fireball`, and `large_fireball`
+**`dragon_fireball`, `wind_charge`, `breeze_wind_charge`, `wither_skull`, `small_fireball`, and `large_fireball`**
 
 -   The `acceleration_power` field now defaults to `0.1` if not specified
 
-#### `small_fireball` and `large_fireball`
+**`small_fireball` and `large_fireball`**
 
 -   The `ExplosionPower` field now defaults to `1` if not specified
 
-#### `block_display`, `item_display`, and `text_display`
+**`block_display`, `item_display`, and `text_display`**
 
 -   The `interpolation_duration`, `teleport_duration`, and `start_interpolation` fields now default to `0` if not specified
 -   The `view_range` field now defaults to `1` if not specified
@@ -301,28 +301,28 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
 
 ### Block Entity Data
 
-#### `campfire`
+**`campfire`**
 
 -   The `CookingTimes` and `CookingTotalTimes` fields will no longer be preserved when removed
 
-#### `chiseled_bookshelf`
+**`chiseled_bookshelf`**
 
 -   The `last_interacted_slot` field now defaults to `-1` if not specified
 
-#### `hopper`
+**`hopper`**
 
 -   The `TransferCooldown` field now default to `-1` if not specified
 
-#### `jigsaw`
+**`jigsaw`**
 
 -   The `name`, `target`, and `pool` fields now default to `minecraft:empty` if not specified
 -   The `final_state` field now defaults to `minecraft:air` if not specified
 
-#### `sculk_shrieker`
+**`sculk_shrieker`**
 
 -   The `warning_level` field now defaults to `0` if not specified
 
-#### `structure_block`
+**`structure_block`**
 
 -   The `ignoreEntities` and `showboundingbox` fields now default to `true` if not specified
 -   The `posY` field now defaults to `1` if not specified
@@ -345,7 +345,7 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
 
 -   The text format for describing object-like data in commands (like NBT, text components, predicates, etc.) has been extended
 
-#### Number Format
+**Number Format**
 
 -   Either whole or fraction parts of a float number can be omitted
     -   Examples: `.1` and `1.` are valid now
@@ -365,7 +365,7 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
     -   When a suffix is used without `u` or `s`, it defaults to signed for decimal numbers and unsigned for binary and hexadecimal numbers
     -   Note: since `b` is also a valid hexadecimal digit, byte sized hexadecimal values can only be written with a signed suffix, like `0x11ub` or `0x11sb`
 
-#### Strings
+**Strings**
 
 -   Quoted strings can now use escape sequences beyond `;;';;`, `;;";;` and `;;\;;`:
     -   Unicode escapes:
@@ -382,20 +382,20 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
         -   `;;r;;` - carriage return, Unicode `;;u;;0d`
 -   Unquoted strings now can't start with `0-9`, `.`, `+`, `-` to avoid accidental collision with numbers
 
-#### Number arrays
+**Number arrays**
 
 -   Values in arrays (`[B;]`, `[I;]`, `[L;]`) without a suffix are now assumed to have suffix matching the type of the array
     -   Example: `[B;1,2]` is equivalent to `[B; 1b, 2b]`
 -   Arrays can now also accept types smaller than the array type
     -   Example: `[I;1b,2s,3]` is valid and equivalent to `[I;1i,2i,3i]`
 
-#### Lists
+**Lists**
 
 -   Lists now accept trailing commas
     -   Example: `[1,2,]` is valid and equivalent to `[1,2]`
     -   Only one trailing comma is allowed, and it must come after a valid element - both `[,]` and `[1,,]` are invalid
 
-#### Compounds
+**Compounds**
 
 -   Compounds (maps) now accept trailing commas
     -   Example: `{a:b,}`
@@ -438,7 +438,7 @@ Have fun exploring!
 
 ### Farm Animal variants
 
-#### Sheep wool color in warm and cold biomes
+**Sheep wool color in warm and cold biomes**
 
 -   Reverted the change from last week that allowed Blue, Light Blue, Cyan, Yellow, Orange and Red Sheep to spawn naturally in different biomes
 -   Black Sheep will still be the most common type to spawn in cold biomes, and Brown Sheep will be the most common type in warm biomes
@@ -492,11 +492,11 @@ Have fun exploring!
 
 ### Item Components
 
-#### `blocks_attacks` component
+**`blocks_attacks` component**
 
 -   If the blocked damage has no position, the compared angle will be assumed to be the maximum `180` for `horizontal_blocking_angle` field of `damage_reductions`
 
-#### Entity components
+**Entity components**
 
 -   New component
     -   `wolf/sound_variant` - namespaced id from `wolf_sound_variant` registry
@@ -544,7 +544,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ### Farm Animal variants
 
-#### Sheep wool color in warm and cold biomes
+**Sheep wool color in warm and cold biomes**
 
 -   Sheep have updated rules for which color of wool they have based on which biome they spawn in:
     -   Temperate Biomes: (these colors are unchanged from current behavior)
@@ -618,11 +618,11 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ## Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#camels_spawnable_on` - blocks that Camels can spawn on
 
-#### Structure Tags
+**Structure Tags**
 
 -   Added `#on_savanna_village_maps` - structures that can appear on Savanna Village Maps
 -   Added `#on_desert_village_maps` - structures that can appear on Desert Village Maps
@@ -640,36 +640,36 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   Block States in the entity data of Arrows, Minecarts, Block Displays, Endermen, Falling Blocks, Primed TNT, or Piston Moving Blocks are no longer allowed to be specified as an empty object
 -   The `Tags` field will no longer be preserved if removed
 
-#### `allay`
+**`allay`**
 
 -   Removed redundant `CanDuplicate` field (controlled by `DuplicationCooldown`)
 
-#### `cat`
+**`cat`**
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-#### `dolphin`
+**`dolphin`**
 
 -   Removed `TreasurePosX`, `TreasurePosY`, `TreasurePosZ` fields
 
-#### `falling_block`
+**`falling_block`**
 
 -   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
 
-#### `fox`
+**`fox`**
 
 -   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
 
-#### `item`
+**`item`**
 
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-#### `phantom`
+**`phantom`**
 
 -   The `Size` field has been renamed to `size`
 -   The `AX`, `AY`, and `AZ` fields have been collected into a single `anchor_pos` field
 
-#### `player`
+**`player`**
 
 -   The `SpawnX`, `SpawnY`, `SpawnZ`, `SpawnAngle`, `SpawnDimension`, and `SpawnForced` fields have been collected into a single `respawn` field
     -   Format: object with fields
@@ -680,64 +680,64 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The `enteredNetherPosition` field has been renamed to `entered_nether_pos`, and is now formatted as a list of doubles
     -   e.g. `entered_nether_pos: [1.0, 2.0, 3.0]`
 
-#### `primed_tnt`
+**`primed_tnt`**
 
 -   The `block_state` field now defaults to `tnt` if not specified
 
-#### `shulker_bullet`
+**`shulker_bullet`**
 
 -   The `Dir` and `Target` fields will no longer be preserved when removed
 
-#### `turtle`
+**`turtle`**
 
 -   The `HomePosX`, `HomePosY`, and `HomePosZ` fields have been collected into a single `home_pos` field
 -   Removed `TravelPosX`, `TravelPosY`, and `TravelPosZ` fields
 -   The `HasEgg` field has been renamed to `has_egg`
 
-#### `vex`
+**`vex`**
 
 -   The `LifeTicks` field has been renamed to `life_ticks`
 -   The `BoundX`, `BoundY`, and `BoundZ` fields have been collected into a single `bound_pos` field
 
-#### `villager`
+**`villager`**
 
 -   The `Gossips` field will no longer be preserved when removed
 
-#### `wandering_trader`
+**`wandering_trader`**
 
 -   The `wander_target` field will no longer be preserved when removed
 
-#### `wolf`
+**`wolf`**
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-#### `zombie_villager`
+**`zombie_villager`**
 
 -   The `Gossips` field will no longer be preserved when removed
 
-#### `evoker_fangs`, `area_effect_cloud`, and all projectiles
+**`evoker_fangs`, `area_effect_cloud`, and all projectiles**
 
 -   The `Owner` field will no longer be preserved when removed
 
-#### `item_frame`, `glow_item_frame`, `painting`, and `leash_knot`
+**`item_frame`, `glow_item_frame`, `painting`, and `leash_knot`**
 
 -   The `TileX`, `TileY`, and `TileZ` fields have been collected into a single `block_pos` field
 
-#### `arrow`, `spectral_arrow`, `trident`
+**`arrow`, `spectral_arrow`, `trident`**
 
 -   The `inBlockState` and `SoundEvent` fields will no longer be preserved when removed
 
-#### `minecart`, `*_minecart`
+**`minecart`, `*_minecart`**
 
 -   The `CustomDisplayTile` field has been removed
 -   `DisplayState` will now always override the default displayed block state if specified
 -   `DisplayOffset` may now be specified to override the default offset even without a custom display block state set
 
-#### `block_display`, `item_display`, and `text_display`
+**`block_display`, `item_display`, and `text_display`**
 
 -   The `glow_color_override` field will no longer be preserved when removed
 
-#### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
+**`witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`**
 
 -   The `patrol_target` field will no longer be preserved when removed
 
@@ -746,15 +746,15 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The `CustomName` field will no longer be preserved when removed
 -   The `LootTable` field will no longer be preserved when removed
 
-#### `end_gateway`
+**`end_gateway`**
 
 -   The `exit_portal` field will no longer be preserved when removed
 
-#### `furnace`, `smoker`, `blast_furnace`
+**`furnace`, `smoker`, `blast_furnace`**
 
 -   The `RecipesUsed` field will no longer be preserved when removed
 
-#### `skull`
+**`skull`**
 
 -   The `note_block_sound` field will no longer be preserved when removed
 
@@ -776,7 +776,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The shader programs themselves are still available and can be overridden
 -   The post-processing effects are still configurable as JSON
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   The field `program` was replaced with `vertex_shader` and `fragment_shader`
     -   `<namespace>:<path>` will resolve to `assets/<namespace>/shaders/<path>.<vsh|fsh>`
@@ -788,11 +788,11 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ### Item rendering
 
-#### Item Display
+**Item Display**
 
 -   `firstperson_lefthand` and `thirdperson_lefthand` transforms are now rendered the same as when held in hand
 
-#### Item Entity
+**Item Entity**
 
 -   When on ground, model size is now taken into account when determining hovering motion
     -   That means that models should never clip into the block below, no matter what size they are

@@ -58,14 +58,14 @@ Happy mining!
 
 ### Enchantments
 
-#### Entity Effect Types
+**Entity Effect Types**
 
 -   Added field `trigger_game_event` for effect types `replace_block`, `replace_disc` and `set_block_properties`
     -   Format: Optional Game Event ID for a game event to trigger when a block has been replaced
 
 ### Tags
 
-#### Directory renames
+**Directory renames**
 
 -   Some types that used legacy directory names (based on plural name of element) have been renamed to match registry name
 -   Affected directories:
@@ -75,11 +75,11 @@ Happy mining!
     -   `tags/fluids` -> `tags/fluid`
     -   `tags/game_events` -> `tags/game_event`
 
-#### Block Tags
+**Block Tags**
 
 -   `fire_aspect_lightable`: All blocks that should be possible to light by hitting with Fire Aspect enchanted tools
 
-#### Damage Type Predicate
+**Damage Type Predicate**
 
 -   New option: `is_direct` - optional boolean
     -   When present, requires the damage to be direct (`true`) or indirect (`false`)

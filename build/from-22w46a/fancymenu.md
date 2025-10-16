@@ -50,7 +50,7 @@ The rest of the current telemetry events are opt-in, which means that you can ch
 
 Just like all the thoughts and comments we get from you on our feedback site, this is something that greatly helps us improve Minecraft. We want to make a game that you want to play, so we want to know what that game needs. Even if it’s more lava.
 
-#### Telemetry transparency
+**Telemetry transparency**
 
 -   Added Telemetry Data Collection Screen
     -   This screen displays information about the type of data that is sent
@@ -63,22 +63,22 @@ Just like all the thoughts and comments we get from you on our feedback site, th
     -   These can be found under the `logs/telemetry` directory
         -   A shortcut to this directory is available via the "Open My Data" button on the Telemetry Data Collection screen
 
-#### Required telemetry events
+**Required telemetry events**
 
 -   Added WorldUnloaded event
 -   Removed client Java version from the WorldLoaded event
 
-##### WorldLoaded & WorldUnloaded
+**WorldLoaded & WorldUnloaded**
 
 Understanding how Minecraft is played allows us to focus game updates and improvements on the areas that are most relevant to players. The data that tells us this includes game mode, client or server modded status, and game version.
 
 WorldLoaded & WorldUnloaded are two paired events that calculate how long the world session has lasted (in seconds and ticks). Data from WorldLoaded is sent when a world is launched, and data from WorldUnloaded is sent when a world is shut down (quitting to title, disconnecting from a server).
 
-#### Optional telemetry events
+**Optional telemetry events**
 
 -   Added PerformanceMetrics and WorldLoadTimes events
 
-##### PerformanceMetrics
+**PerformanceMetrics**
 
 Knowing the overall performance profile of Minecraft helps us tune and optimize the game for a wide range of machine specifications and operating systems.
 
@@ -86,7 +86,7 @@ The periodic performance metrics includes data such as frame-rates, rendering pe
 
 Game version is included to help us compare the performance profile for new versions of Minecraft.
 
-##### WorldLoadTimes
+**WorldLoadTimes**
 
 It’s important for us to understand how long it takes to join a world, and how that changes over time. For example, when we add new features or do larger technical changes, we need to see what impact that had on load times.
 
@@ -100,7 +100,7 @@ This event includes the total time in milliseconds for the world to load, whethe
     -   By default, textures not in the `textures/item` and `textures/block` directories will no longer be automatically recognized and will fail to load
 -   Resource packs can now have configuration files, located in `atlases` directory, that control which images are included in the atlases
 
-#### Atlas configuration files
+**Atlas configuration files**
 
 -   New directory `atlases` is now present for resource packs
 -   This directory contains JSON entries for configuring atlases:
@@ -137,7 +137,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   New command: `fillbiome`
 -   New execute sub-command: `execute if|unless biome`
 
-#### `fillbiome`
+**`fillbiome`**
 
 Changes biome entries for an area. Note that biomes are not stored per-block, so affected positions may not match input precisely.
 
@@ -151,7 +151,7 @@ Parameters:
 -   `to`: The other corner of the area to fill
 -   `biome`: The biome to set
 
-#### `execute`
+**`execute`**
 
 Execute commands can now be conditional on biomes.
 
@@ -464,7 +464,7 @@ Happy Mining!
 
 A lot of feedback has come pouring in as a result of the creative inventory ordering changes.
 
-#### Changes
+**Changes**
 
 -   Change the icons of creative tabs for better color coding as well as show most iconic visuals
 -   Nature Blocks tab has been renamed to Natural Blocks
@@ -482,7 +482,7 @@ A lot of feedback has come pouring in as a result of the creative inventory orde
 -   Basalt blocks are now found after Nether Brick blocks in the Building Blocks tab, next to Blackstone
 -   Generally reordered the plants of the Natural Blocks tab
 
-#### Additions
+**Additions**
 
 -   Added to Redstone Blocks tab
     -   Boat with Chests

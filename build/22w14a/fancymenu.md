@@ -54,7 +54,7 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 
 ### Predicates
 
-#### Entity predicate
+**Entity predicate**
 
 -   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
 -   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
@@ -98,15 +98,15 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 
 -   Removed field `location` from triggers `location`, `slept_in_bed`, `hero_of_the_village` and `voluntary_exile` - it was handled exactly the same as `player.location`
 
-#### New triggers
+**New triggers**
 
-##### `item_delivered_to_player`
+**`item_delivered_to_player`**
 
 -   Triggered when an allay delivers an item to a player
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-##### `allay_drop_item_on_block`
+**`allay_drop_item_on_block`**
 
 -   Triggered when an allay drops an item on a block
 -   Conditions:

@@ -28,7 +28,7 @@ Happy mining!
 
 ### Modified loot functions
 
-#### `set_fireworks`
+**`set_fireworks`**
 
 Fields `explosions` and `mode` have been grouped together as a sub-object
 

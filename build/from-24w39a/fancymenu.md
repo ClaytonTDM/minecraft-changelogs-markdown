@@ -59,7 +59,7 @@ Happy mining!
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   `map_invisibility_equipment`: Items that can be equipped to hide the player marker on other players maps
 
@@ -117,7 +117,7 @@ Happy dyeing!
     -   Enables game rule customization
     -   Enables datapack customization
 
-#### Hardcore mode
+**Hardcore mode**
 
 Hardcore mode is now available in Realms and is accessible by creating a new world or recreating an existing one
 
@@ -133,7 +133,7 @@ Hardcore mode is now available in Realms and is accessible by creating a new wor
 
 ### New Recipe Type
 
-#### `crafting_transmute` recipe type
+**`crafting_transmute` recipe type**
 
 -   New crafting recipe type has been introduced: `crafting_transmute`
 -   When matched, output will copy the input item stack, changing the item type but preserving all stack components
@@ -288,7 +288,7 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 -   Chickens laying eggs is now controlled by a loot table found at `gameplay/chicken_lay`
 -   Armadillos randomly dropping scutes is now controlled by a loot table found at `gameplay/armadillo_shed`
 
-#### Hero of the Village Gift Loot Tables
+**Hero of the Village Gift Loot Tables**
 
 -   The loot given by Villagers is now controlled by two additional loot tables:
     -   `gameplay/hero_of_the_village/unemployed_gift` - used if the Villager is unemployed
@@ -296,7 +296,7 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   `duplicates_allays`: Items that can be used to duplicate Allays when dancing
 -   `panda_eats_from_ground`: Items that a Panda will pick up from the ground and eat
@@ -304,30 +304,30 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 
 ### Item Component Changes
 
-#### `minecraft:fire_resistant` -> `minecraft:damage_resistant`
+**`minecraft:fire_resistant` -> `minecraft:damage_resistant`**
 
 -   Has a new field: `types`, hash-prefixed damage type tag
     -   Items with this component, when in entity form, will be resistant to the damage types included in the tag
     -   This component also affects whether the equipped item will be damaged when the wearer is hurt by a given damage type
 
-#### `minecraft:item_name`
+**`minecraft:item_name`**
 
 -   Name provided by this component always has the lowest priority
     -   That means it will be overriden by components like `minecraft:potion_contents`
 
-#### `minecraft:potion_contents`
+**`minecraft:potion_contents`**
 
 -   Added optional string field `custom_name`
     -   When present, it will be used to generate containing stack name
     -   For example, if value is `foo` and item is `minecraft:lingering_potion`, the name of item will be translation of `item.minecraft.lingering_potion.effect.foo`
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   Added the following fields
     -   `swappable`: boolean (default: `true`), whether the item can be equipped into the relevant slot by right-clicking
     -   `damage_on_hurt`: boolean (default: `true`), whether this item will be damaged when the wearing entity is damaged
 
-#### Added `minecraft:death_protection`
+**Added `minecraft:death_protection`**
 
 -   If present, this item will protect the holder from dying by restoring a single health point
 -   Format: object with fields
@@ -336,7 +336,7 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 
 ### Predicates
 
-#### `salmon` entity sub-predicate
+**`salmon` entity sub-predicate**
 
 -   Added `minecraft:salmon` entity sub-predicate
 -   Fields:
@@ -344,9 +344,9 @@ In last week's snapshot, we fixed a bug related to which data gets transferred b
 
 ### Advancements
 
-#### Triggers
+**Triggers**
 
-##### `minecraft:killed_by_crossbow` -> `minecraft:killed_by_arrow`
+**`minecraft:killed_by_crossbow` -> `minecraft:killed_by_arrow`**
 
 -   Will now trigger whenever an Arrow kills an entity, not just when fired from a Crossbow
 -   Has a new optional Item Predicate field, `fired_from_weapon`
@@ -465,11 +465,11 @@ Happy mining!
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   `bats_spawnable_on`: Blocks that bats can spawn on
 
-#### Item Tags
+**Item Tags**
 
 -   Added new tags to control which items can be used to repair various armor sets:
     -   `repairs_leather_armor`
@@ -484,20 +484,20 @@ Happy mining!
 
 ### Changed Item Components
 
-#### `minecraft:item_name`
+**`minecraft:item_name`**
 
 This component is now always present on every item
 
 ### New Item Components
 
-#### `minecraft:item_model`
+**`minecraft:item_model`**
 
 -   Controls item model
 -   Present on every item
 -   Format: namespaced id
     -   `namespace:id` will reference model `/assets/<namespace>/models/item/<id>`
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   If present, this item can be equipped by players in the selected slot
 -   When right-clicking with an item with this component, it will be swapped into the appropriate slot
@@ -514,13 +514,13 @@ This component is now always present on every item
         -   If the item type has special dispenser behavior, this will have no effect
     -   e.g. `equippable={slot:'chest',equip_sound:'item.armor.equip_chain'}`
 
-#### `minecraft:glider`
+**`minecraft:glider`**
 
 -   If present, this item will allow players to glide (as with Elytra) when equipped
 -   Format: empty object
     -   e.g. `glider={}`
 
-#### `minecraft:tooltip_style`
+**`minecraft:tooltip_style`**
 
 -   If present, this item can use custom sprites for its tooltip background and frame
 -   Format: namespaced ID for a tooltip style

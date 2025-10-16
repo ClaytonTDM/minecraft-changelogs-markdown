@@ -33,7 +33,7 @@ This snapshot also includes a few additional tweaks, bug fixes, and performance 
 
 ### Particles
 
-#### `block_marker`
+**`block_marker`**
 
 -   Renders with texture declared in `particle` slot for model assigned to configured block state
 -   Summoned with same syntax as `block` particle (i.e. `block_marker wheat[age=2]`)

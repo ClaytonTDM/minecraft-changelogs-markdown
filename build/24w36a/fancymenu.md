@@ -29,11 +29,11 @@ Happy mining!
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   `bats_spawnable_on`: Blocks that bats can spawn on
 
-#### Item Tags
+**Item Tags**
 
 -   Added new tags to control which items can be used to repair various armor sets:
     -   `repairs_leather_armor`
@@ -48,20 +48,20 @@ Happy mining!
 
 ### Changed Item Components
 
-#### `minecraft:item_name`
+**`minecraft:item_name`**
 
 This component is now always present on every item
 
 ### New Item Components
 
-#### `minecraft:item_model`
+**`minecraft:item_model`**
 
 -   Controls item model
 -   Present on every item
 -   Format: namespaced id
     -   `namespace:id` will reference model `/assets/<namespace>/models/item/<id>`
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   If present, this item can be equipped by players in the selected slot
 -   When right-clicking with an item with this component, it will be swapped into the appropriate slot
@@ -78,13 +78,13 @@ This component is now always present on every item
         -   If the item type has special dispenser behavior, this will have no effect
     -   e.g. `equippable={slot:'chest',equip_sound:'item.armor.equip_chain'}`
 
-#### `minecraft:glider`
+**`minecraft:glider`**
 
 -   If present, this item will allow players to glide (as with Elytra) when equipped
 -   Format: empty object
     -   e.g. `glider={}`
 
-#### `minecraft:tooltip_style`
+**`minecraft:tooltip_style`**
 
 -   If present, this item can use custom sprites for its tooltip background and frame
 -   Format: namespaced ID for a tooltip style

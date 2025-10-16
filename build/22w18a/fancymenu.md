@@ -50,9 +50,9 @@ Parameters:
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_instrument`
+**`set_instrument`**
 
 Sets item tags needed for instrument items to a random value selected from a tag.
 

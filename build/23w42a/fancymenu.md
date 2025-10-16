@@ -12,7 +12,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   If the output result has multiple type of items all the result items will be ejected together
 -   The Crafter can be oriented in any direction when placed
 
-#### Crafter UI
+**Crafter UI**
 
 -   The Crafter has a 3x3 interactable crafting grid
 -   The Crafter’s crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by clicking or pressing on a slot with an empty hand
@@ -20,7 +20,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   Unlike the Crafting Table, the Crafter displays a preview of the crafted item which will be crafted and ejected on the next Redstone pulse but cannot be manually taken out by the player
 -   The Crafter UI is shared between all players interacting with the Crafter, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-#### Crafter interaction with other blocks
+**Crafter interaction with other blocks**
 
 -   The Comparator signal strength is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers can be used to both insert and pull out items from the Crafter
@@ -46,7 +46,7 @@ We want to hear your feedback on the Crafter, so please let us know what you thi
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   The optional `type` field has a new allowed value: `selector`
 -   Components of type `nbt` now have `source` field with allowed values `entity`, `block`, `storage`

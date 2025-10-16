@@ -12,13 +12,13 @@ Please break it in all possible ways and report bugs!
 
 ### New advancements
 
-#### Husbandry advancements
+**Husbandry advancements**
 
 -   `Smells interesting` : Obtain a Sniffer Egg
 -   `Little sniffs` : Feed a Snifflet (requires `Smells interesting`)
 -   `Planting the past` : Plant any Sniffer seed (requires `Little sniffs`)
 
-#### Adventure advancements
+**Adventure advancements**
 
 -   `Respecting the remnants` : Brush a Suspicious block to obtain a Pottery Sherd
 -   `Careful restoration` : Make a Decorated Pot out of 4 Pottery Sherds (requires `Respecting the remnants`)
@@ -78,7 +78,7 @@ Please break it in all possible ways and report bugs!
 
 ### Fonts
 
-#### New `unihex` glyph provider
+**New `unihex` glyph provider**
 
 -   New glyph provider for reading Unifont HEX files
     -   HEX format describes bitmap font glyphs
@@ -96,14 +96,14 @@ Please break it in all possible ways and report bugs!
         -   `left`, `right` - integers describing position of left-most and right-most columns of glyph in range
             -   any bits in columns outside this range will be discarded
 
-#### New `reference` glyph provider
+**New `reference` glyph provider**
 
 -   New glyph provider can be used to include providers from other fonts
     -   Providers are guaranteed to be loaded only once, no matter how many times they are included
 -   Provider has one field `id`, that describes other font to be included in currently loaded one
     -   Inclusion is performed after all fonts are loaded, so it will include all providers for a given font defined in all datapacks
 
-#### Removed `legacy_unicode` glyph provider
+**Removed `legacy_unicode` glyph provider**
 
 -   `legacy_unicode` glyph provider has been removed
 -   This functionality has been replaced by `unihex` provider
@@ -178,7 +178,7 @@ Edit: We have published a fix for a crash issue in this Snapshot. If you are exp
 
 ### Commands
 
-#### `return`
+**`return`**
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -196,9 +196,9 @@ Parameters:
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `recipe_crafted`
+**`recipe_crafted`**
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -215,7 +215,7 @@ Parameters:
 
 ### Display entity
 
-#### Rendering changes
+**Rendering changes**
 
 -   `item_display` items have been rotated 180 degrees around Y axis to better match transformation applied when rendering items on armor stand head and in item frames
     -   For reference, order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)
@@ -301,7 +301,7 @@ Happy mining!
 
 ### Loot tables
 
-#### `reference`
+**`reference`**
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition). Fields:
 

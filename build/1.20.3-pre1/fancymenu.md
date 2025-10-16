@@ -12,19 +12,19 @@ We're bringing you the first Pre-Release of 1.20.3 with updates to server resour
 
 Changes apply to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
 
-#### UI
+**UI**
 
 -   Download screen has been replaced with a toast
 -   World resource pack application will start together with chunk loading
 
-#### Local storage
+**Local storage**
 
 Downloaded packs are now stored in `downloads` directory (with different file organization than old `server-resource-packs`)
 
 -   Files in this directory are no longer automatically cleaned (previously only up 10 packs were kept)
 -   Additionally, inside this directory there is also log file `log.json` that stores information about downloaded files for debug purposes
 
-#### Server config
+**Server config**
 
 Downloaded packs now have unique id (GUID/UUID) that can be used to differentiate them
 
@@ -33,7 +33,7 @@ Downloaded packs now have unique id (GUID/UUID) that can be used to differentiat
 -   If hash of a pack is not set, this pack will be redownloaded before every application
     -   Previously, if hash was missing, latest downloaded version of pack was applied
 
-#### Packets
+**Packets**
 
 Some additional options are added for 3rd-party servers software:
 

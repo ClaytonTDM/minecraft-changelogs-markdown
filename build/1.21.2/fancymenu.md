@@ -72,7 +72,7 @@ Goodness, that was a lot, wasn't it? Perhaps we should've stuffed it all into a 
     -   Enables data pack customization
 -   The game mode for the last active world on a Realm will now be visible on the main Realms screen if applicable
 
-#### Hardcore Mode
+**Hardcore Mode**
 
 -   Hardcore mode is now available in Realms
 -   It is accessible when creating a new world or recreating an existing one
@@ -171,12 +171,12 @@ Goodness, that was a lot, wasn't it? Perhaps we should've stuffed it all into a 
         -   Likewise, any crafted item which has only Common crafting ingredients must also be Common
 -   The lists below detail the items and blocks which have changed to that rarity category
 
-#### Common
+**Common**
 
 -   End Crystal
 -   Golden Apple
 
-#### Uncommon
+**Uncommon**
 
 -   Sniffer Egg
 -   Chainmail Helmet
@@ -223,7 +223,7 @@ Goodness, that was a lot, wasn't it? Perhaps we should've stuffed it all into a 
     -   5
     -   Precipice
 
-#### Rare
+**Rare**
 
 -   Enchanted Golden Apple
     -   Enchanted Golden Apples have become more common in recent years due to being accessible in both Ancient Cities and Trial Chambers, warranting a demotion to Rare instead of Epic
@@ -244,7 +244,7 @@ Goodness, that was a lot, wasn't it? Perhaps we should've stuffed it all into a 
     -   otherside
     -   Creator
 
-#### Epic
+**Epic**
 
 -   Elytra
 -   Dragon Head
@@ -254,7 +254,7 @@ Goodness, that was a lot, wasn't it? Perhaps we should've stuffed it all into a 
 
 -   Added an accessibility option to make targeted block's outlines more visible
 
-#### High Contrast Resource Pack
+**High Contrast Resource Pack**
 
 Added the following high contrast textures:
 
@@ -283,14 +283,14 @@ Added the following high contrast textures:
 
 ### Player Safety
 
-#### Skin Reporting
+**Skin Reporting**
 
 -   Added reporting reason "Sexually inappropriate"
     -   This is intended for skins that are graphic in nature relating to sexual acts, sexual organs, and sexual violence
 -   Removed reason "Defamation" for skins due to lack of relevance
 -   Removed reason "Threat of harm to others" due to already being covered by "Harassment or bullying" reporting reason
 
-#### Name Reporting
+**Name Reporting**
 
 -   Added a text label above the description box to clarify that only the name of the player is subject to the report
 
@@ -344,11 +344,11 @@ Added the following high contrast textures:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   `bats_spawnable_on`: Blocks that Bats can spawn on
 
-#### Item Tags
+**Item Tags**
 
 -   `furnace_minecart_fuel`: Items that can be used to refuel a Furnace Minecart
 -   `villager_picks_up`: Items that a Villager will try to pick up from the ground
@@ -382,7 +382,7 @@ Added the following high contrast textures:
 -   You can no longer ride Leash Knots, Lighting Bolts and Fishing Bobbers with the `ride` command
 -   Added the `rotate` command
 
-#### `rotate` Command
+**`rotate` Command**
 
 New command to rotate an entity.
 
@@ -406,7 +406,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ### Game Rules
 
-#### `disablePlayerMovementCheck`
+**`disablePlayerMovementCheck`**
 
 -   When true, disables player movement speed restriction
     -   Default value: `false`
@@ -414,7 +414,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ### Changed Item Components
 
-#### `minecraft:food`
+**`minecraft:food`**
 
 -   The food component has been changed to become a data container which only holds the food stats applied when the item is consumed
     -   This component no longer gives the item the ability to be consumed, and must be done instead with the new `consumable` component
@@ -424,19 +424,19 @@ Note: parameters have the same meaning as in the `teleport` command.
     -   `can_always_eat`: Boolean, whether it can be consumed even when the user is not hungry
         -   Default value: `false`
 
-#### `minecraft:fire_resistant` -> `minecraft:damage_resistant`
+**`minecraft:fire_resistant` -> `minecraft:damage_resistant`**
 
 -   Has a new field: `types`, hash-prefixed damage type tag
     -   Items with this component, when in entity form, will be resistant to the damage types included in the tag
     -   This component also affects whether the equipped item will be damaged when the wearer is hurt by a given damage type
 
-#### `minecraft:item_name`
+**`minecraft:item_name`**
 
 -   This component is now always present on every item
 -   Name provided by this component always has the lowest priority
     -   That means it will be overriden by components such as `minecraft:potion_contents` or `minecraft:written_book_content`
 
-#### `minecraft:potion_contents`
+**`minecraft:potion_contents`**
 
 -   Added an optional string field: `custom_name`
     -   When present, it will be used to generate containing stack name
@@ -444,7 +444,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ### New Item Components
 
-#### `minecraft:consumable`
+**`minecraft:consumable`**
 
 -   If present, this item can be consumed on use
     -   If `food`, `potion_contents`, `ominous_bottle_amplifier` or `suspicious_stew_contents` are also present on this item, consuming this will apply the stats and effects of those components
@@ -485,7 +485,7 @@ Note: parameters have the same meaning as in the `teleport` command.
             -   `sound`: Sound event, played once consumed
     -   e.g. `consumable={consume_seconds:3.0, animation:'eat', sound:'entity.generic.eat', has_consume_particles:true, on_consume_effects:[{type:'minecraft:clear_all_effects'}]}`
 
-#### `minecraft:use_remainder`
+**`minecraft:use_remainder`**
 
 -   If present, will replace the item with a remainder if its stack count has decreased after use
     -   If the item has a stack count higher than 0 after use, the remainder item will be added to the inventory
@@ -493,7 +493,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 -   Format: single value as an item stack
     -   e.g. `use_remainder={id:'minecraft:stick',count:1}`
 
-#### `minecraft:use_cooldown`
+**`minecraft:use_cooldown`**
 
 -   If present, this item will apply a cooldown to all items of the same type or "cooldown group" once used
 -   Format: object with fields
@@ -503,14 +503,14 @@ Note: parameters have the same meaning as in the `teleport` command.
         -   If not specified, the cooldown group defaults to the base item type's ID
     -   e.g. `use_cooldown={seconds:1.5,cooldown_group:"minecraft:custom_weapon"}`
 
-#### `minecraft:item_model`
+**`minecraft:item_model`**
 
 -   Controls item model
 -   Present on every item
 -   Format: namespaced ID
     -   `namespace:id` will reference model `/assets/<namespace>/models/item/<id>`
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   If present, this item can be equipped by players in the selected slot
 -   Format: object with fields
@@ -534,7 +534,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ![A player is looking at two Creepers through a custom UI overlay in a shape of a Creeper face.](https://launchercontent.mojang.com/v2/images/1.21.2customcreeperoverlay.jpg)
 
-#### `minecraft:glider`
+**`minecraft:glider`**
 
 -   If present, this item will allow players to glide (as with Elytra) when equipped
 -   Format: empty object
@@ -542,7 +542,7 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ![Zuri and Efe flying by some polar bears just above the Ice with fireworks in their hands. Zuri and Eve are both wearing custom items on their heads that enable them to fly, a potato and a feather. ](https://launchercontent.mojang.com/v2/images/1.21.2customglider.jpg)
 
-#### `minecraft:tooltip_style`
+**`minecraft:tooltip_style`**
 
 -   If present, this item can use custom sprites for its tooltip background and frame
 -   Format: namespaced ID for a tooltip style
@@ -550,7 +550,7 @@ Note: parameters have the same meaning as in the `teleport` command.
         -   `<namespace>:tooltip/<path>_background` and `<namespace>:tooltip/<path>_frame`
     -   e.g. `tooltip_style='minecraft:special_sword'`
 
-#### `minecraft:death_protection`
+**`minecraft:death_protection`**
 
 -   If present, this item will protect the holder from dying by restoring a single health point
 -   Format: object with fields
@@ -559,14 +559,14 @@ Note: parameters have the same meaning as in the `teleport` command.
 
 ![With a custom poisonous potato in the offhand and a sword in the main hand, the player is taking fatal damage. The equipped potato saves them with the totem animation playing, but with the totem being replaced by the poisonous potato.](https://launchercontent.mojang.com/v2/images/1.21.2customtotem.jpg)
 
-#### `minecraft:repairable`
+**`minecraft:repairable`**
 
 -   If present, and this item is damageable, this item can be repaired in an Anvil using the specified ingredient
 -   Format: object with fields
     -   `items`: Item, list of Items, or hash-prefixed Item Tag matching what can be used to repair this item
     -   e.g. `repairable={items:'stick'}`
 
-#### `minecraft:enchantable`
+**`minecraft:enchantable`**
 
 -   If present (and any enchantments are applicable), this item can be enchanted in an Enchanting Table
 -   Format: object with fields
@@ -624,7 +624,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
     -   Ingredients must have at least one tag or item
 -   The fields `template`, `base` and `addition` in `smithing_transform` and `smithing_trim` recipes are now optional instead of accepting empty list
 
-#### `crafting_transmute` Recipe Type
+**`crafting_transmute` Recipe Type**
 
 -   New crafting recipe type has been introduced: `crafting_transmute`
 -   When matched, the output will copy the input item stack, changing the item type but preserving all stack components
@@ -647,7 +647,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
 -   Chickens laying eggs is now controlled by a loot table found at `gameplay/chicken_lay`
 -   Armadillos randomly dropping scutes is now controlled by a loot table found at `gameplay/armadillo_shed`
 
-#### Sheep Loot Tables
+**Sheep Loot Tables**
 
 -   Sheep now always uses a single loot table `entities/sheep`
 -   Wool drops are still defined in sub-tables in `entities/sheep/<color>`, but are just dispatched from the main table
@@ -655,12 +655,12 @@ The format used for recipe ingredients has been simplified and aligned with othe
 -   Sheep shearing is now controlled by loot table found as `shearing/sheep`
     -   This loot table also has dispatches to sub-tables for specific wool colors, which are found as `shearing/sheep/<color>`
 
-#### Mooshroom shearing Loot Table
+**Mooshroom shearing Loot Table**
 
 -   Mooshroom shearing is now controlled by loot table found as `shearing/mooshroom`
 -   Sub-tables for specific variants are found as `shearing/mooshroom/<variant>`
 
-#### Hero of the Village Gift Loot Tables
+**Hero of the Village Gift Loot Tables**
 
 -   The loot given by Villagers is now controlled by two additional loot tables:
     -   `gameplay/hero_of_the_village/unemployed_gift` - used if the Villager is unemployed
@@ -670,20 +670,20 @@ The format used for recipe ingredients has been simplified and aligned with othe
 
 -   `minecraft:boat` entity sub-predicate has been removed, since Boats no longer have variants
 
-#### `sheep` Entity Sub-predicate
+**`sheep` Entity Sub-predicate**
 
 -   Added `minecraft:sheep` entity sub-predicate
 -   Fields:
     -   `sheared` - optional boolean
     -   `color` - optional wool dye color
 
-#### `salmon` Entity Sub-predicate
+**`salmon` Entity Sub-predicate**
 
 -   Added `minecraft:salmon` entity sub-predicate
 -   Fields:
     -   `variant`: one of `small`, `medium`, `large`
 
-#### `player` Entity Sub-predicate
+**`player` Entity Sub-predicate**
 
 -   Added a new field in the `minecraft:player` entity sub-predicate, `input`
     -   Can be used to detect which movement keys the player is pressing
@@ -699,9 +699,9 @@ The format used for recipe ingredients has been simplified and aligned with othe
 
 ### Advancements
 
-#### Triggers
+**Triggers**
 
-##### `minecraft:killed_by_crossbow` -> `minecraft:killed_by_arrow`
+**`minecraft:killed_by_crossbow` -> `minecraft:killed_by_arrow`**
 
 -   Will now trigger whenever an Arrow kills an entity, not just when fired from a Crossbow
 -   Has a new optional Item Predicate field, `fired_from_weapon`
@@ -866,4 +866,4 @@ A model definition specifying both player and horse armor layers might look like
         -   `<material>_layer_1` textures have been renamed to `<material>`, and moved into the `humanoid` subdirectory
         -   `<material>_layer_2` textures have been renamed to `<material>`, and moved into the `humanoid_leggings` subdirectory
         -   `leather_layer_1_overlay` and `leather_layer_2_overlay` textures have been renamed to `leather_overlay` in their respective subdirectories
-    -   `wolf_armor` and `wolf_armor_overlay` textures have moved to `textures/entity/equipment/wolf_body/` and have been renamed to `armad
+    -   `wolf_armor` and `wolf_armor_overlay` textures have moved to `textures/entity/equipment/wolf_body/` and have been renamed to `armadillo_scute` and `armadillo_scute_ove

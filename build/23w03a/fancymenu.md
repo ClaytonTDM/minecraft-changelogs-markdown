@@ -18,7 +18,7 @@ Happy mining!
 -   Added a new "Notification Display Time" accessibility option
     -   Changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-#### Arrow key navigation
+**Arrow key navigation**
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
@@ -37,7 +37,7 @@ Happy mining!
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-#### Packet bundles
+**Packet bundles**
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
@@ -59,7 +59,7 @@ Happy mining!
 
 ### Commands
 
-#### `clone`
+**`clone`**
 
 The clone command now supports specifying the source and target dimensions. New syntax:
 
@@ -70,7 +70,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-#### `data`
+**`data`**
 
 New source available:
 
@@ -81,9 +81,9 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-#### `execute`
+**`execute`**
 
-##### `execute if|unless`
+**`execute if|unless`**
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -95,7 +95,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-##### `execute on`
+**`execute on`**
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -113,17 +113,17 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, selector returns zero elements.
 
-#### `title`
+**`title`**
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-#### `weather`
+**`weather`**
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-#### `ride`
+**`ride`**
 
 New command to allow entities to start or stop riding other entities
 
@@ -146,7 +146,7 @@ Syntax:
 
 ### Chat components
 
-#### Translation fallback
+**Translation fallback**
 
 Added an optional `fallback` field to `translate` text components.
 

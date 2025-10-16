@@ -69,7 +69,7 @@ Conditions for The Firefly Bush playing ambient sounds have changed. It now play
 
 ### Game Rule
 
-#### `allowFireTicksAwayFromPlayer`
+**`allowFireTicksAwayFromPlayer`**
 
 -   When true, Fire and Lava ticks can occur ouside of an 8 chunk range of a player
 -   Default value: `false`

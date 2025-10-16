@@ -14,7 +14,7 @@ This snapshot introduces a new experimental Feature Toggle that updates the Wand
 
 As this is an experiment, we would really appreciate your feedback as work continues and to help us decide on the future direction for Villager trades. Visit [this link](https://aka.ms/VillagerTradingFeedback) to share your thoughts!
 
-#### Librarian Changes
+**Librarian Changes**
 
 Before these changes, players could get any village enchantment from any Librarian. A novice Librarian could sell the best enchantment in the game! For some players, this felt too random and made trading feel overpowered when compared to using the Enchanting Table or searching for Enchanted Books in structures.
 
@@ -29,7 +29,7 @@ Players will have to work towards getting the best trades instead of relying on 
     -   A player must build these villages to access their trades!
 -   Some enchantments have been removed from village trading and must be found in other ways
 
-#### Wandering Trader Changes
+**Wandering Trader Changes**
 
 Some players felt that the Wandering Trader had unfair prices and didn't sell many useful items. We have lowered their prices, added more trades and increased the amounts available. The Wandering Trader will also now buy useful items from players, so it's possible to help them on their journey by giving them supplies even if you don't feel like buying anything.
 
@@ -82,7 +82,7 @@ In this snapshot, we have increased the amount of Diamond Ore found in the deepe
 
 New features have been added to datapacks and resource packs to allow creation of packs that are compatible with multiple versions of game.
 
-#### Pack Metadata
+**Pack Metadata**
 
 -   Pack metadata now includes an optional field `supported_formats` which describes a range for pack formats that this pack supports
     -   Examples: `16`, `[16,17]`, `{"min_inclusive": 16, "max_inclusive": 17}`
@@ -90,7 +90,7 @@ New features have been added to datapacks and resource packs to allow creation o
     -   If `supported_formats` is present, it must contain the value declared in `pack_format`
     -   Note: since this new information is ignored by older versions of the game, they will always see a "normal", single-version pack, without any extended compatibility
 
-#### Overlays
+**Overlays**
 
 -   Packs can now contain overlay directories ("overlays")
 -   Overlays are sub-packs applied over the "normal" contents of a pack
@@ -160,14 +160,14 @@ To improve safety, the game will now also detect symbolic links used inside data
 -   The highlighted states for Realms invitation number icons have been removed
 -   The exclamation marks on the `notification;;m;;ore.png` have been removed
 
-#### GUI Sprite Sheet
+**GUI Sprite Sheet**
 
 -   Sprites used in GUI drawing have been split into individual sprite files instead of larger sprite sheets
     -   For example, `widgets/button.png` and `widgets/button_highlighted.png` have been split from `widgets.png`
 -   Each sprite can now be individually overriden by a resource pack instead of replacing the entire sheet
 -   Sprites are loaded into the `gui` atlas from the `textures/gui/sprites` directory
 
-##### GUI Sprite .mcmeta
+**GUI Sprite .mcmeta**
 
 -   Any sprite can now be animated using `.mcmeta` files, similar to other atlases
     -   `icon/trial_available` and `realm_status/expires_soon` are now animated this way
@@ -200,9 +200,9 @@ To improve safety, the game will now also detect symbolic links used inside data
 -   Game event changes
 -   New tags
 
-#### Commands
+**Commands**
 
-##### `random`
+**`random`**
 
 A new command for randomizing values and controlling random sequences. The `value` and `roll` forms can be used to draw a random value. In the case of `roll`, the resulting value is also shown in chat for all players.
 
@@ -229,7 +229,7 @@ If no seed is specified, the sequence resets to the default parameters.
 
 Note that `random value|roll <range>` used without a sequence id is available to non-operator players.
 
-##### `execute if function`
+**`execute if function`**
 
 A new execute sub-command that runs a function or function tag and matches the return value(s). If a tag is given, all functions run regardless of the results of prior functions. Syntax:
 
@@ -239,7 +239,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-###### Matching
+**Matching**
 
 The matching of the result value of the function(s) that run:
 
@@ -248,7 +248,7 @@ The matching of the result value of the function(s) that run:
     -   Uses the `return` command to return a value
     -   The return value is not 0
 
-##### `return run`
+**`return run`**
 
 A new form of the `return` command is now available, `return run`. Syntax:
 
@@ -256,12 +256,12 @@ A new form of the `return` command is now available, `return run`. Syntax:
 
 This takes the `result` value from running the specified `command` and returns that as the return value of the function. In all other aspects, it works like `return` with a specified return value. If the given command fails, the return value is `0`.
 
-#### Functions
+**Functions**
 
 -   A single backslash `;;`;; as the last non-whitespace character of a line now allows a command to be continued on the next line
     -   Leading and trailing whitespace of the following line are stripped before appending
 
-##### Macros
+**Macros**
 
 Functions can now contain macro lines, making them Function Macros.
 
@@ -269,7 +269,7 @@ Functions can now contain macro lines, making them Function Macros.
 -   A macro line also contains one or more substitutions in the form of `$(variable)`
 -   When calling a function macro a compound with data for all argument variables must be provided
 
-###### Calling Function Macros
+**Calling Function Macros**
 
 The `function` command has new forms:
 
@@ -290,7 +290,7 @@ Notes:
 -   When a macro is called, the values provided are substituted in place of the variable specifications and the resulting commands are executed
 -   Any syntax errors in the lines resulting from variable substitution result in the entire function call being skipped
 
-###### Performance Considerations
+**Performance Considerations**
 
 Using a macro means commands must be re-evaulated after variable substitution. This has an extra cost compared to running pre-parsed functions.
 
@@ -298,7 +298,7 @@ Regular commands (non-macro lines) are still pre-parsed. Only commands with vari
 
 This makes repeated calls with the same parameter set cheaper than new calls with different parameters, but an overhead still remains compared to regular functions. Note that only the values references by macro as parameters are included in this cache, so any extra data in the provided compound is ignored.
 
-#### Display Entity Interpolation
+**Display Entity Interpolation**
 
 -   Display entities now start updating their client-side position and rotation on the first tick after an update
     -   In previous versions, updates were applied in the same tick, causing uneven motion
@@ -313,17 +313,17 @@ This makes repeated calls with the same parameter set cheaper than new calls wit
         -   That means any current movement will continue unchanged
 -   Note: behavior while riding remains unchanged from previous versions
 
-#### Attributes
+**Attributes**
 
 -   Added new attribute `generic.max_absorption`
     -   `generic.max_absorption` acts similar to `generic.max_health`, but instead of being the upper bound for `Health`, it is the upper bound for `AbsorptionAmount`
     -   The mob effect `absorption` increases `generic.max_absorption` as well as fills the `AbsorptionAmount` to the max when applied
 
-#### Game Events
+**Game Events**
 
 -   `entity_roar` and `entity_shake` game events have been removed and replaced with `entity_action` game event
 
-#### Tags
+**Tags**
 
 -   Added `no_knockback` damage type tag which causes knockback to not be caused by the damage itself
     -   Used in Vanilla for damage that is caused by events, such as explosions, which apply knockback separately

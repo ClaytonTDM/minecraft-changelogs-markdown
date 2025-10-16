@@ -12,13 +12,13 @@ Please break it in all possible ways and report bugs!
 
 ### New advancements
 
-#### Husbandry advancements
+**Husbandry advancements**
 
 -   `Smells interesting` : Obtain a Sniffer Egg
 -   `Little sniffs` : Feed a Snifflet (requires `Smells interesting`)
 -   `Planting the past` : Plant any Sniffer seed (requires `Little sniffs`)
 
-#### Adventure advancements
+**Adventure advancements**
 
 -   `Respecting the remnants` : Brush a Suspicious block to obtain a Pottery Sherd
 -   `Careful restoration` : Make a Decorated Pot out of 4 Pottery Sherds (requires `Respecting the remnants`)
@@ -78,7 +78,7 @@ Please break it in all possible ways and report bugs!
 
 ### Fonts
 
-#### New `unihex` glyph provider
+**New `unihex` glyph provider**
 
 -   New glyph provider for reading Unifont HEX files
     -   HEX format describes bitmap font glyphs
@@ -96,14 +96,14 @@ Please break it in all possible ways and report bugs!
         -   `left`, `right` - integers describing position of left-most and right-most columns of glyph in range
             -   any bits in columns outside this range will be discarded
 
-#### New `reference` glyph provider
+**New `reference` glyph provider**
 
 -   New glyph provider can be used to include providers from other fonts
     -   Providers are guaranteed to be loaded only once, no matter how many times they are included
 -   Provider has one field `id`, that describes other font to be included in currently loaded one
     -   Inclusion is performed after all fonts are loaded, so it will include all providers for a given font defined in all datapacks
 
-#### Removed `legacy_unicode` glyph provider
+**Removed `legacy_unicode` glyph provider**
 
 -   `legacy_unicode` glyph provider has been removed
 -   This functionality has been replaced by `unihex` provider

@@ -265,7 +265,7 @@ The game now generates and stores data-driven configured structures.
 -   The `exploration_map` loot table function `destination` field is now a configured feature tag id
 -   The `exploration_map` loot table function no longer automatically sets the display name of the map
 
-#### Side effects
+**Side effects**
 
 Some gameplay oddities have been affected by this change.
 

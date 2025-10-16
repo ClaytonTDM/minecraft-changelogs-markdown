@@ -53,7 +53,7 @@ Happy mining!
 
 ### Predicates
 
-#### `slots` entity sub-predicate
+**`slots` entity sub-predicate**
 
 -   New entity field `slots` allows to check single or multiple slots on any entity
 -   The field contains a map of slot names (same as ones used in `item` commands) to item predicate
@@ -92,7 +92,7 @@ Example:
     -   `player.crafting.0` - `player.crafting.3`, `player.crafting.*` - player's crafting slots
         -   Note: this includes only player's inventory crafting slots. Crafting table (or any other slots on other screens) are not included
 
-#### `execute if|unless items`
+**`execute if|unless items`**
 
 -   `execute if|unless items <source> <slots> <item_predicate>` command can be used to count items
     -   `<source>` is the same as one used in `item` command, i.e.

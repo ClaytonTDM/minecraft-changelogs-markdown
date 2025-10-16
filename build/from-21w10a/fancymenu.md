@@ -63,7 +63,7 @@ Ore distribution in snapshot 21w10a. [Click here](https://launchercontent.mojang
 
 Rendering is now using OpenGL 3.2 core profile. All fixed function rendering has been replaced with shader based rendering.
 
-#### Shaders
+**Shaders**
 
 Shaders are now included for all supported render states. Any shader except for the `blit` shader can also be replaced in resource packs. For now replacing these shaders is **not officially supported** and the way it works may change in the future.
 
@@ -630,7 +630,7 @@ We hope you'll end the year on a good note, and the entirety of the Java team wi
 
 ​
 
-#### Vibration Frequency Changes
+**Vibration Frequency Changes**
 
 As we continue to consider feedback from the community, some changes to the frequency ranges have been made. We expect this to change quite heavily up until release to figure out the most interesting ranges for gameplay, and as always feedback is extremely welcome! Here is the newest table in this snapshot.
 

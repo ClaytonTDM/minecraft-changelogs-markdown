@@ -42,7 +42,7 @@ Happy scute brushing!
 
 ![A rolled-up Armadillo is peeking to check if a Zombie is gone, but the Zombie is still close. It happens in Savanna during twilight.](https://launchercontent.mojang.com/v2/images/1.20.52thumbnail.jpg)
 
-#### Armadillo Scutes
+**Armadillo Scutes**
 
 -   Armadillo Scutes are dropped by Armadillos periodically or when an Armadillo is brushed
 -   Armadillo Scutes can be used to craft Wolf Armor
@@ -212,7 +212,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   The `chat_command_signed` packet has been split from `chat_command`
     -   Commands that do not accept any signed arguments will use the unsigned packet, and will not pass any 'last seen' chat updates
 
-#### Transfer Packets
+**Transfer Packets**
 
 -   Custom servers can now request that clients connect to another server with a new packet
 -   When a client is transferred, it will connect to the target server with a new transfer intent (id 3)
@@ -221,7 +221,7 @@ The UI has been updated to sport a fresher look and to be more consistent when i
 -   Resource packs are maintained across transfers
 -   In the case of a transfer, custom servers can skip authenticating again with a new flag in the clientbound `hello` packet
 
-#### Cookie Packets
+**Cookie Packets**
 
 -   Cookie packets allow custom servers to request and store data on a client
     -   Each cookie may be up to 5 KiB in size
@@ -316,11 +316,11 @@ The current NBT 'tag' has existed for quite some time, and we are aware that a l
 -   Default component values for items are now listed in `items.json` generated in `reports` directory
 -   Block definitions are now added to `blocks.json` report (note: those definitions are not used yet and present only for informational purposes)
 
-#### Migrated Item Stack Components
+**Migrated Item Stack Components**
 
 These are item stack components that replace existing functionality that was formerly specified in item NBT. All commands and data definitions will need to be upgraded to use these formats. Items in-world will however be automatically upgraded.
 
-##### `minecraft:custom_data`
+**`minecraft:custom_data`**
 
 -   Can be used for custom data storage on an item
 -   When upgrading a world, any non-game data in the item `tag` will be moved into here
@@ -328,7 +328,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_data={some:'data'}`
 -   Can be modified with the `set_custom_data` and `copy_custom_data` loot functions
 
-##### `minecraft:damage`
+**`minecraft:damage`**
 
 -   The amount of durability removed from an item
 -   If removed, the item will not be damageable
@@ -338,7 +338,7 @@ These are item stack components that replace existing functionality that was for
 -   For damageable items (with the `max_damage` component), has an implicit default value of: `0`
 -   Can be modified with the `set_damage` loot function
 
-##### `minecraft:repair_cost`
+**`minecraft:repair_cost`**
 
 -   The additional experience cost required to modify an item in an Anvil
 -   Replaces `RepairCost` tag
@@ -346,7 +346,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `repair_cost=12`
 -   If not set, has an implicit default value of: `0`
 
-##### `minecraft:unbreakable`
+**`minecraft:unbreakable`**
 
 -   If set, the item will not lose any durability when used
 -   Replaces `Unbreakable` boolean tag
@@ -356,7 +356,7 @@ These are item stack components that replace existing functionality that was for
         -   Replaces 3rd bit of `HideFlags` tag
     -   e.g. `unbreakable={}`, `unbreakable={show_in_tooltip:false}`
 
-##### `minecraft:enchantments`
+**`minecraft:enchantments`**
 
 -   Stores a list of enchantments and their levels on an item
 -   Replaces `Enchantments` tag
@@ -371,7 +371,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value of: `{levels:{}}`
 -   Can be modified with the `set_enchantments`, `enchant_randomly`, and `enchant_with_levels` loot functions
 
-##### `minecraft:stored_enchantments`
+**`minecraft:stored_enchantments`**
 
 -   Stores list of enchantments and their levels for an Enchanted Book
 -   Unlike `minecraft:enchantments`, the effects provided by enchantments do not apply from this component
@@ -380,7 +380,7 @@ These are item stack components that replace existing functionality that was for
     -   `show_in_tooltip` value replaces 6th bit of `HideFlags` tag
 -   On Enchanted Books, has an implicit default value of: `{levels:{}}`
 
-##### `minecraft:custom_name`
+**`minecraft:custom_name`**
 
 -   Custom name override for an item (as set by renaming with an Anvil)
 -   Replaces `display.Name` tag
@@ -388,7 +388,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_name='{"text": "This item is renamed!", "color": "red"}'`
 -   Can be modified with the `set_name` loot function
 
-##### `minecraft:lore`
+**`minecraft:lore`**
 
 -   Additional lines to include in an item's tooltip
 -   Replaces `display.Lore` tag
@@ -397,7 +397,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value of: `[]`
 -   Can be modified with the `set_lore` loot function
 
-##### `minecraft:can_break`
+**`minecraft:can_break`**
 
 -   Controls which blocks a player in Adventure mode can break with this item
 -   Replaces `CanDestroy` tag
@@ -413,7 +413,7 @@ These are item stack components that replace existing functionality that was for
     -   Alternatively, can be defined as a single block predicate
         -   e.g. `can_break={blocks:'minecraft:stone'}`
 
-##### `minecraft:can_place_on`
+**`minecraft:can_place_on`**
 
 -   Controls which blocks a player in Adventure mode can place on with this item
 -   Replaces `CanPlaceOn` tag
@@ -426,7 +426,7 @@ These are item stack components that replace existing functionality that was for
     -   Alternatively, can be defined as a single block predicate
         -   e.g. `can_place_on={blocks:'minecraft:stone'}`
 
-##### `minecraft:dyed_color`
+**`minecraft:dyed_color`**
 
 -   Represents a color applied to a dyeable item (in the `#minecraft:dyeable` item tag)
 -   Replaces `display.color` tag
@@ -440,7 +440,7 @@ These are item stack components that replace existing functionality that was for
 
 ![A very large Sunny is walking up 3-block-tall steps in a Cherry Grove biome, making use of the step height and scale attributes.](https://launchercontent.mojang.com/v2/images/1.20.5tech6thumbnail.jpg)
 
-##### `minecraft:attribute_modifiers`
+**`minecraft:attribute_modifiers`**
 
 -   Holds attribute modifiers applied to any item
 -   Replaces `AttributeModifiers` tag
@@ -481,7 +481,7 @@ These are item stack components that replace existing functionality that was for
 -   If not set, has an implicit default value based on the item type's default attributes (e.g. attack damage for weapons)
 -   Can be modified with the `set_attributes` loot function
 
-##### `minecraft:charged_projectiles`
+**`minecraft:charged_projectiles`**
 
 -   Holds all projectiles that have been loaded into a Crossbow
 -   If not present, the Crossbow is not charged
@@ -492,14 +492,14 @@ These are item stack components that replace existing functionality that was for
     -   No longer restricted to 3 entries
 -   Can be modified with the `modify_contents` and `set_contents` loot functions
 
-##### `minecraft:intangible_projectile`
+**`minecraft:intangible_projectile`**
 
 -   Marks that a projectile item would be intangible when fired (i.e. can only be picked up by a creative mode player)
 -   Only set when items are inside a Crossbow's `charged_projectiles` component
 -   Format: empty object
     -   e.g. `intangible_projectile={}`
 
-##### `minecraft:bundle_contents`
+**`minecraft:bundle_contents`**
 
 -   Holds all items stored inside of a Bundle
 -   If removed, items cannot be added to the Bundle
@@ -510,7 +510,7 @@ These are item stack components that replace existing functionality that was for
 -   On Bundles, has an implicit default value of: `[]`
 -   Can be modified with the `modify_contents` and `set_contents` loot functions
 
-##### `minecraft:map_color`
+**`minecraft:map_color`**
 
 -   Represents the tint of the decorations on the Filled Map item
 -   Replaces `display.MapColor` tag
@@ -518,7 +518,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `map_color=16711680`
 -   On Filled Maps, has an implicit default value of: `4603950`
 
-##### `minecraft:map_decorations`
+**`minecraft:map_decorations`**
 
 -   Holds a list of markers to be placed on a Filled Map (used for Explorer Maps)
 -   Replaces `Decorations` tag
@@ -567,14 +567,14 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `map_decorations={'Some marker':{type:'target_x',x:123.0,z:-45.0,rotation:0.0f}}`
 -   On Filled Maps, has an implicit default value of: `{}`
 
-##### `minecraft:map_id`
+**`minecraft:map_id`**
 
 -   References the shared map state holding map contents and markers for a Filled Map
 -   Replaces `map` tag
 -   Format: integer id
     -   e.g. `map_id=1`
 
-##### `minecraft:custom_model_data`
+**`minecraft:custom_model_data`**
 
 -   Can be used to replace the models of items by selecting for the `minecraft:custom_model_data` property in the item model
 -   Replaces `CustomModelData` tag
@@ -582,7 +582,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `custom_model_data=43`
 -   Can be modified with the `set_custom_model_data` loot function
 
-##### `minecraft:potion_contents`
+**`minecraft:potion_contents`**
 
 -   Holds the contents of a potion (Potion, Splash Potion, Lingering Potion), or potion applied to an item (Tipped Arrow)
 -   Replaces `Potion`, `CustomPotionColor`, and `custom_potion_effects` tags
@@ -599,7 +599,7 @@ These are item stack components that replace existing functionality that was for
 -   On Potion or Tipped Arrow items, has an implicit default value of: `{}`
 -   Can be modified with the `set_potion` loot function
 
-##### `minecraft:writable_book_content`
+**`minecraft:writable_book_content`**
 
 -   Holds the contents in a Book and Quill
 -   Replaces `pages` and `filtered_pages` tags
@@ -616,7 +616,7 @@ These are item stack components that replace existing functionality that was for
 -   On Book and Quill, has an implicit default value of: `{pages:[]}`
 -   Can be modified with the `set_writable_book_pages` loot function
 
-##### `minecraft:written_book_content`
+**`minecraft:written_book_content`**
 
 -   Holds the contents and metadata of a Written Book
 -   Replaces `pages`, `filtered_pages`, `title`, `filtered_title`, `author`, `generation`, and `resolved` tags
@@ -633,7 +633,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `written_book_content={pages:['"Hello world!"'],title:{raw:'"A delightful read"'},author:'Herobrine',generation:1,resolved:true}`
 -   Can be modified with the `set_written_book_pages` and `set_book_cover` loot functions
 
-##### `minecraft:trim`
+**`minecraft:trim`**
 
 -   Holds the trims applied to an item
     -   Presence of the component is no longer restricted by the `#minecraft:trimmable_armor` item tag (although, this tag is still used for recipes)
@@ -645,7 +645,7 @@ These are item stack components that replace existing functionality that was for
         -   Replaces 8th bit of `HideFlags` tag
     -   e.g. `trim={pattern:'minecraft:silence',material:'minecraft:redstone'}`
 
-##### `minecraft:suspicious_stew`
+**`minecraft:suspicious_stew`**
 
 -   Holds the effects that will be applied when consuming Suspicious Stew
 -   Replaces `effects` tag of the same format
@@ -656,14 +656,14 @@ These are item stack components that replace existing functionality that was for
 -   On Suspicious Stew, has an implicit default value of: `[]`
 -   Can be modified with the `set_stew_effect` loot function
 
-##### `minecraft:hide_additional_tooltip`
+**`minecraft:hide_additional_tooltip`**
 
 -   If present, disables 'additional' tooltip part which comes from the item type
 -   Replaces 6th bit of `HideFlags` tag
 -   Format: empty object
     -   e.g. `hide_additional_tooltip={}`
 
-##### `minecraft:debug_stick_state`
+**`minecraft:debug_stick_state`**
 
 -   Stores the selected block state properties used by a Debug Stick
 -   Replaces `DebugProperty` tag
@@ -671,7 +671,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `debug_stick_state={'minecraft:turtle_egg':'eggs','minecraft:furnace':'facing'}`
 -   On Debug Stick, has an implicit default value of: `{}`
 
-##### `minecraft:entity_data`
+**`minecraft:entity_data`**
 
 -   Stores unstructured NBT data to apply to an entity when using an item that spawns an entity, such as a Spawn Egg or Armor Stand
 -   Replaces previous `EntityTag` tag, with same behavior
@@ -680,7 +680,7 @@ These are item stack components that replace existing functionality that was for
     -   Any additional fields will be merged into the entity when spawned
     -   e.g. `entity_data={id:'minecraft:pig',Health:1.0f}`
 
-##### `minecraft:bucket_entity_data`
+**`minecraft:bucket_entity_data`**
 
 -   Stores unstructured NBT data to apply to an entity when placed from a bucket
 -   Replaces `NoAI`, `Silent`, `NoGravity`, `Glowing`, `Invulnerable`, `Health`, `Age`, `Variant`, `HuntingCooldown`, and `BucketVariantTag` tags
@@ -689,7 +689,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `bucket_entity_data={NoAI:1,Age:43}`
 -   On bucketed mob items, has an implicit default value of: `{}`
 
-##### `minecraft:instrument`
+**`minecraft:instrument`**
 
 -   Holds the instrument type used by a Goat Horn
 -   Replaces `instrument` tag of same format
@@ -697,7 +697,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `instrument='minecraft:ponder_goat_horn'`
 -   Can be modified with the `set_instrument` loot function
 
-##### `minecraft:recipes`
+**`minecraft:recipes`**
 
 -   List of recipes that should be unlocked when using the Knowledge Book item
 -   Replaces `Recipes` tag of same format
@@ -705,7 +705,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `recipes=['minecraft:acacia_boat','minecraft:anvil']`
 -   On Knowledge Book, has an implicit default value of: `[]`
 
-##### `minecraft:lodestone_tracker`
+**`minecraft:lodestone_tracker`**
 
 -   If present, specifies that the Compass is a Lodestone Compass
 -   Replaces `LodestonePos`, `LodestoneDimension`, and `LodestoneTracked` tags
@@ -718,7 +718,7 @@ These are item stack components that replace existing functionality that was for
         -   If `true`, when the Lodestone at the target position is removed, the `target` field will be removed
     -   e.g. `lodestone_tracker={target:{pos:[13,64,-43],dimension:'minecraft:the_nether'}}`
 
-##### `minecraft:firework_explosion`
+**`minecraft:firework_explosion`**
 
 -   Stores the explosion crafted in a Firework Star
 -   Replaces `Explosion.Type`, `Explosion.Colors`, `Explosion.FadeColors`, `Explosion.Trail`, and `Explosion.Flicker` tags
@@ -740,7 +740,7 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `firework_explosion={shape:'large_ball',colors:[16711680],has_trail:true}`
 -   Can be modified with the `set_firework_explosion` loot function
 
-##### `minecraft:fireworks`
+**`minecraft:fireworks`**
 
 -   Stores all explosions crafted into a Firework Rocket, as well as flight duration
 -   Replaces `Fireworks.Explosions` and `Fireworks.Flight` tags
@@ -752,7 +752,7 @@ These are item stack components that replace existing functionality that was for
 -   On Firework Rocket, has an implicit default value of: `{explosions:[],flight_duration:1}`
 -   Can be modified with the `set_fireworks` loot function
 
-##### `minecraft:profile`
+**`minecraft:profile`**
 
 -   Controls the skin displayed on a Player Head
 -   Copied to Player Head block when placed
@@ -773,7 +773,7 @@ These are item stack components that replace existing functionality that was for
         -   e.g. `profile='MHF_Sheep'`
 -   Can be modified with the `fill_player_head` loot function
 
-##### `minecraft:note_block_sound`
+**`minecraft:note_block_sound`**
 
 -   Controls the sound played by a Player Head when placed on a Note Block
 -   Copied to Player Head block when placed
@@ -781,7 +781,7 @@ These are item stack components that replace existing functionality that was for
 -   Format: sound event id
     -   e.g. `note_block_sound='minecraft:ambient.cave'`
 
-##### `minecraft:base_color`
+**`minecraft:base_color`**
 
 -   Stores the base color for a Shield
 -   Replaces `BlockEntityTag.Base` tag
@@ -804,7 +804,7 @@ These are item stack components that replace existing functionality that was for
     -   `black` (was `15`)
     -   e.g. `base_color='magenta'`
 
-##### `minecraft:banner_patterns`
+**`minecraft:banner_patterns`**
 
 -   Stores the additional patterns applied to a Banner or Shield
 -   Copied to Banner block when placed
@@ -818,7 +818,7 @@ These are item stack components that replace existing functionality that was for
 -   On Banners and Shields, has an implicit default value of: `[]`
 -   Can be modified with the `set_banner_pattern` loot function
 
-##### `minecraft:pot_decorations`
+**`minecraft:pot_decorations`**
 
 -   Stores the Sherds applied to each side of a Decorated Pot
 -   Copied to Decorated Pot block when placed
@@ -827,6 +827,8 @@ These are item stack components that replace existing functionality that was for
     -   e.g. `['arms_up_pottery_sherd','angler_pottery_sherd','danger_pottery_sherd','shelter_pottery_sherd']`
 -   On Decorated Pots, has an implicit default value of: `['minecraft:brick','minecraft:brick','minecraft:brick','minecraft:brick']`
 
-##### `minecraft:container`
+**`minecraft:container`**
 
--   Holds the contents of container blocks (Chests, Shulker Box
+-   Holds the contents of container blocks (Chests, Shulker Boxes) in item form
+-   Copied into container block when placed
+-   Replaces `BlockEn

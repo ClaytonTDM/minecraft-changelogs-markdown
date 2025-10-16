@@ -36,7 +36,7 @@ We also have a survey up so that you can tell us what you think about the Nether
 
 ### Commands
 
-#### `attribute`
+**`attribute`**
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -53,7 +53,7 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 
 ### Chat components
 
-#### Hover event argument
+**Hover event argument**
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -61,11 +61,11 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
     -   For `show_entity` - object with fields: `id` (UUID), `name` (chat component) and `type` (entity type resource location)
 -   Old style `value` argument is now deprecated (but still supported)
 
-#### Colors
+**Colors**
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`.
 
-#### Custom fonts
+**Custom fonts**
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`.
 
@@ -158,7 +158,7 @@ It is now possible to monitor the server tick times though JMX. The rationale fo
 
 This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
 
-#### Enabling JMX Monitoring
+**Enabling JMX Monitoring**
 
 -   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds.
 -   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html).
@@ -322,7 +322,7 @@ Attributes have been moved to game registry. That means few changes: ​
 -   Items and entities will no longer keep unknown attributes
 -   Names of some attributes have been renamed to meet resource location requirements
 
-#### Renames:
+**Renames:**
 
 -   `generic.maxHealth` 🡆 `generic.max_health`
 -   `zombie.spawnReinforcements` 🡆 `zombie.spawn_reinforcements`
@@ -515,11 +515,11 @@ If you find any bugs, please report them on the official [Minecraft Issue Tracke
 
 ### Commands
 
-#### spawnpoint
+**spawnpoint**
 
 The spawnpoint command now supports being run in any dimension.
 
-#### UUIDs in NBT
+**UUIDs in NBT**
 
 UUIDs stored in NBT are now represented as an array of four integers. Example: `{UUID:[I;1498693494,1027158888,1898994005,860320107]}` Along with that a couple of fields have been renamed:
 
@@ -529,15 +529,15 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 
 ### Loot Tables
 
-#### Entity Predicate
+**Entity Predicate**
 
 -   Added `fishing_hook` sub-predicate
 
-##### `fishing_hook`
+**`fishing_hook`**
 
 Check properties of the fishing hook
 
-###### Parameters
+**Parameters**
 
 to be open water if there are no blocks above water and no solid underwater blocks around, all water blocks are source blocks and there are no bubble columns.
 

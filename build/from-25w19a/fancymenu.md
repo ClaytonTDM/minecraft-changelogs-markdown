@@ -28,11 +28,11 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Entity Data
 
-#### `tnt`
+**`tnt`**
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-#### `vex`
+**`vex`**
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of Mob)
 
@@ -48,7 +48,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Shaders & Post-process Effects
 
-#### Shader fog changes
+**Shader fog changes**
 
 -   The fog is now split into environmental and render-distance-based
 -   Previously both those concepts were mixed in the same uniforms
@@ -57,7 +57,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   Environmental fog uses spherical distance to determine its intensity, render distance fog uses cylindrical distance
 -   The resulting fog value for any given vertex is the maximum of both
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FogStart` was renamed to `FogRenderDistanceStart` and now represents the render distance fog start
 -   `FogEnd` was renamed to `FogRenderDistanceEnd` and now represents the render distance fog end
@@ -126,7 +126,7 @@ Leads have become a hot commodity in the recent snapshots and this week they are
     -   Some mobs, like Bats, Slimes, Magma Cubes, Phantoms and Ender Dragons may ignore it
     -   Interacting with leashes or riding may change the home position of the mob
 
-#### Entity Tags
+**Entity Tags**
 
 -   Updated `#followable_friendly_mobs` to include the Happy Ghast
 
@@ -140,14 +140,14 @@ Leads have become a hot commodity in the recent snapshots and this week they are
 
 ### Font
 
-#### Unifont
+**Unifont**
 
 -   Updated Unifont to 16.0.03
 -   Added previously omitted Unifont glyphs for Private Use Areas
     -   Those glyphs are loaded as a separate sub-font `minecraft:include/unifont_pua` and are not included in any normally used font
     -   Characters in those areas are managed by Under-CSUR (Under-ConScript Unicode Registry), which adds various scripts not present in official Unicode set, like Tengwar or Sitelen Pona
 
-#### `unihex` Font Provider
+**`unihex` Font Provider**
 
 -   Field `size_overrides` is now optional (defaults to empty list)
 
@@ -201,12 +201,12 @@ If there are no other players in the world the experience bar will display as no
             -   eg: `/waypoint modify @s color red` to set an indicator to red
         -   Players on a team will override their default indicator color with their team color
 
-#### Player Changes
+**Player Changes**
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-#### Item Changes
+**Item Changes**
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -218,7 +218,7 @@ If there are no other players in the world the experience bar will display as no
     -   Dragon Head
     -   Piglin Head
 
-#### Potion Changes
+**Potion Changes**
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
@@ -247,7 +247,7 @@ If there are no other players in the world the experience bar will display as no
 
 ### Commands
 
-#### Added `waypoint`
+**Added `waypoint`**
 
 This is a new command for querying and modifying waypoints.
 
@@ -271,7 +271,7 @@ Arguments:
     -   `set <waypoint_style/resource>` changes the style to a specific asset under `waypoint_style/`
     -   `reset` will restore the default icon behavior of the Locator Bar
 
-##### Waypoint Styles
+**Waypoint Styles**
 
 These define custom icons to be displayed on the Locator Bar and are within the `waypoint_style/` asset directory.
 
@@ -295,13 +295,13 @@ The default implementation is as such:
 
 ### Game Rules
 
-#### Added `locatorBar`
+**Added `locatorBar`**
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 -   The Game Rule has been renamed from `useLocatorBar` during the experiment. This may break minor command related features in worlds created in the previous snapshot.
 
-#### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
@@ -324,7 +324,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `happy_ghast_avoids` - blocks that happy ghasts avoid getting close to
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
@@ -333,7 +333,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Shaders & Post-process Effects
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FOG_IS_SKY` has been removed in favour of splitting up the sky shader
 
@@ -420,7 +420,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 
 ### Data Components
 
-#### `painting/variant` Item Component
+**`painting/variant` Item Component**
 
 -   No longer accepts inline variants
 
@@ -442,7 +442,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 -   Custom uniforms provided to post-process shaders are now uniform blocks
 -   Uniform definitions inside json files are now per-block
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   Entries in the `targets` map have been expanded to support new properties
     -   New optional boolean field: `persistent` (default: `false`)
@@ -467,7 +467,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `"type": "matrix4x4"` needs `"value": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0]` (four rows of four columns of floats)
 -   We do not validate that the uniform block is valid for a given shader, giving incorrect information will cause undefined and funky behavior
 
-#### Post-process Effect Shaders
+**Post-process Effect Shaders**
 
 -   Instead of every uniform being an individual opaque type, they are now grouped in uniform blocks
     -   They will be set according to the pass definition in the json file, and may be shared across both vertex and fragment shaders
@@ -477,42 +477,42 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   For most post chains this is just `OutSize` and `InSize` as before
     -   All sizes are `vec2`
 
-##### `post/bits.fsh`
+**`post/bits.fsh`**
 
 -   Expects a `BitsConfig` of `float Resolution` and `float MosaicSize`
 
-##### `post/blit.fsh`
+**`post/blit.fsh`**
 
 -   Expects a `BlitConfig` of `vec4 ColorModulate`
 
-##### `post/blur.vsh` and `post/box_blur.fsh`
+**`post/blur.vsh` and `post/box_blur.fsh`**
 
 -   Expects a `BlurConfig` of `vec2 BlurDir` and `float Radius`
 
-##### `post/color_convolve.fsh`
+**`post/color_convolve.fsh`**
 
 -   Expects a `ColorConfig` of `vec3 RedMatrix`, `vec3 GreenMatrix` and `vec3 BlueMatrix`
 
-##### `post/invert.fsh`
+**`post/invert.fsh`**
 
 -   Expects a `InvertConfig` of `float InverseAmount`
 
-##### `post/rotscale.vsh`
+**`post/rotscale.vsh`**
 
 -   Expects a `RotScaleConfig` of `vec2 InScale`, `vec2 InOffset` and `float InRotation`
 
-##### `post/spiderclip.fsh`
+**`post/spiderclip.fsh`**
 
 -   Expects a `SpiderConfig` of `vec4 Scissor` and `vec4 Vignette`
 
-#### `Globals` Uniform Block
+**`Globals` Uniform Block**
 
 -   Available through `#moj_import <minecraft:globals.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ScreenSize`, `GlintAlpha`, `GameTime` and `MenuBlurRadius` (new)
     -   `MenuBlurRadius` is the blur radius of the background when a menu is open
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   Available through `#moj_import <minecraft:fog.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
@@ -522,13 +522,13 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `FogEnd` is the "normal" fog cutoff as before
 -   `FOG_IS_SKY` is now available to the `position.vsh`/`position.fsh` shaders when they are rendering for the sky
 
-#### `Projection` Uniform Block
+**`Projection` Uniform Block**
 
 -   Available through `#moj_import <minecraft:projection.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ProjMat` with no changes
 
-#### `DynamicTransforms` Uniform Block
+**`DynamicTransforms` Uniform Block**
 
 -   Available through `#moj_import <minecraft:dynamictransforms.glsl>` for convenience
 -   Is no longer available to shaders that do not normally use it
@@ -536,20 +536,20 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   These are very likely to change in the near future
     -   The values of some of these are often hard coded and may not make sense for a given shader, ie `LineWidth` in any non-line based pipeline
 
-#### `Lighting` Uniform Block
+**`Lighting` Uniform Block**
 
 -   Available through `#moj_import <minecraft:light.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
     -   The values may not make sense if the shader wouldn't normally expect it, however
 -   Contains `Light0_Direction` and `Light1_Direction`
 
-#### `CloudInfo` Uniform Block
+**`CloudInfo` Uniform Block**
 
 -   Only available to the clouds shaders (`rendertype_clouds.vsh`/`rendertype_clouds.fsh`)
     -   Contains `CloudColor`, `CloudOffset` and `CellSize` (new)
         -   `CellSize` contains the size of an individual cloud cell
 
-#### `LightmapInfo` Uniform Block
+**`LightmapInfo` Uniform Block**
 
 -   Only available to the lightmap shader (`lightmap.fsh`)
 -   Contains `AmbientLightFactor`, `SkyFactor`, `BlockFactor`, `UseBrightLightmap`, `NightVisionFactor`, `DarknessScale`, `DarkenWorldFactor`, `BrightnessFactor`, `SkyLightColor` with no change in behavior

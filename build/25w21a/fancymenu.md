@@ -35,7 +35,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
     -   `minecraft:single_option` input control - between `1` and `1024` (inclusive)
     -   `minecraft:number_range` input control - between `1` and `1024` (inclusive)
 
-#### `minecraft:text` Input Control
+**`minecraft:text` Input Control**
 
 -   `max_length` - maximum length of input, positive integer with default of 32
 -   `multiline` - if present, allows users to input multiple lines, optional object with fields:
@@ -44,7 +44,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines
         -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
 
-#### `minecraft:number_range` Input Control
+**`minecraft:number_range` Input Control**
 
 -   The `steps` field has been replaced with a new field:
     -   `step` - step size, optional positive float
@@ -52,7 +52,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If absent, any value from range the is allowed
 -   `initial` - if not specified, now defaults to the middle of the range
 
-#### `minecraft:multi_action_input_form` Dialog Type
+**`minecraft:multi_action_input_form` Dialog Type**
 
 -   Added new field `columns` - positive integer describing number of columns, default: `2`
 

@@ -17,11 +17,11 @@ In this week's Snapshot we're taking a break from new features to improve ones w
 
 ### Commands
 
-#### `tick`
+**`tick`**
 
 -   The `<time>` parameter in the `tick step` command is now optional. The default value is 1
 
-#### `return`
+**`return`**
 
 -   `return run` will now always return
     -   If there are no valid results from returned command, function containing `return run` will fail (i.e. `success=0` and `result=0`)
@@ -29,13 +29,13 @@ In this week's Snapshot we're taking a break from new features to improve ones w
 -   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store value and return it outside function
 -   New subcommand `return fail` is added to make whole function fail (i.e. return `success=0` and `result=0`)
 
-#### `function`
+**`function`**
 
 -   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
 -   A single call to the `function` command will always have return when run with `return run`
     -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
 
-#### `execute if|unless function`
+**`execute if|unless function`**
 
 -   `execute if|unless function` will no longer always fail if all functions had no return
     -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
@@ -86,12 +86,12 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Copper Trapdoor
     -   Oxidized and waxed variants of all of the above
 
-#### Chiseled Copper
+**Chiseled Copper**
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-#### Copper Grate
+**Copper Grate**
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -102,7 +102,7 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Cannot conduct redstone
     -   Hostile mobs cannot naturally spawn on them
 
-#### Copper Bulb
+**Copper Bulb**
 
 -   A light-emitting block that can toggle its light emission through redstone pulses
 -   Oxidizes like other Copper blocks, and emits less light the more oxidized they are
@@ -121,7 +121,7 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-#### Copper Doors and Trapdoors
+**Copper Doors and Trapdoors**
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Works like wooden doors in that they can be opened and closed with interaction as well as redstone
@@ -260,7 +260,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   If the output result has multiple type of items all the result items will be ejected together
 -   The Crafter can be oriented in any direction when placed
 
-#### Crafter UI
+**Crafter UI**
 
 -   The Crafter has a 3x3 interactable crafting grid
 -   The Crafter’s crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by clicking or pressing on a slot with an empty hand
@@ -268,7 +268,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   Unlike the Crafting Table, the Crafter displays a preview of the crafted item which will be crafted and ejected on the next Redstone pulse but cannot be manually taken out by the player
 -   The Crafter UI is shared between all players interacting with the Crafter, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-#### Crafter interaction with other blocks
+**Crafter interaction with other blocks**
 
 -   The Comparator signal strength is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers can be used to both insert and pull out items from the Crafter
@@ -294,7 +294,7 @@ We want to hear your feedback on the Crafter, so please let us know what you thi
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   The optional `type` field has a new allowed value: `selector`
 -   Components of type `nbt` now have `source` field with allowed values `entity`, `block`, `storage`
@@ -401,7 +401,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
 
 ### Commands
 
-#### Functions
+**Functions**
 
 -   `function` command has been changed to better accomodate new `return` command
 -   Functions no longer have any result unless they use `return` or there was error during lookup or instantiation
@@ -415,7 +415,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
     -   That means that a single call to `function` will store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-##### Limits
+**Limits**
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -429,7 +429,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   New limit with game rule `maxCommandForkCount` now restricts total amount of context that can be created by single state of functions like `execute`
     -   Example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5;;*;;5 = 25 contexts
 
-#### `execute if function`
+**`execute if function`**
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -439,7 +439,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-##### Matching
+**Matching**
 
 The matching of the result value of the function(s) that run:
 
@@ -449,7 +449,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-#### `return run`
+**`return run`**
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in previous version.
 
@@ -508,7 +508,7 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as string instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network

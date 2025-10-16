@@ -114,7 +114,7 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
 
 ### Predicates
 
-#### Item sub-predicate
+**Item sub-predicate**
 
 -   Some fields from item predicate have been moved to a map in an optional field `predicates`
 -   The new field is similar to the `components` field on item stacks
@@ -135,7 +135,7 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
     -   That means that, for example, matching for empty enchantment list will not pass on items without `minecraft:damage` component
     -   Note: some components, like `minecraft:enchantments` have default values, so they will always match
 
-##### Example:
+**Example:**
 
 Before:
 
@@ -169,7 +169,7 @@ After:
 
 ### Loot Functions
 
-#### `set_fireworks`
+**`set_fireworks`**
 
 New function for setting the details of the `minecraft:fireworks` component.
 
@@ -197,7 +197,7 @@ Fields:
             -   If omitted, `0` (before first explosion) is used
     -   `append`: append explosions at the end of the list
 
-#### `set_firework_explosion`
+**`set_firework_explosion`**
 
 New function for setting the details of the `minecraft:firework_explosion` component.
 
@@ -221,7 +221,7 @@ Fields:
     -   Set whether the explosion should have a twinkle or not
     -   If omitted, the original `has_twinkle` value is kept (or `false` is used if there was no component)
 
-#### `set_book_cover`
+**`set_book_cover`**
 
 New function for setting the cover details of the `minecraft:written_book_content` component. If present, any pages in the book are left untouched.
 
@@ -239,7 +239,7 @@ Fields:
     -   The generation value to set
     -   If omitted, the original generation is kept (or `0` is used if there was no component)
 
-#### `set_writable_book_pages`
+**`set_writable_book_pages`**
 
 New function for manipulating the pages of the `minecraft:writable_book_content` component.
 
@@ -264,7 +264,7 @@ Fields:
             -   If omitted, `0` (before first page) is used
     -   `append`: append pages at the end of the book
 
-#### `set_written_book_pages`
+**`set_written_book_pages`**
 
 New function for manipulating the pages of the `minecraft:written_book_content` component. Same format as `set_writable_book_content` but the `pages` field contains filterable Components instead of Strings (same format as `pages` on the `minecraft:writable_book_content` component).
 

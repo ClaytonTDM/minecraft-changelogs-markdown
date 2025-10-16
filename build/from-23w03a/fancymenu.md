@@ -18,7 +18,7 @@ Happy mining!
 -   Added a new "Notification Display Time" accessibility option
     -   Changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-#### Arrow key navigation
+**Arrow key navigation**
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
@@ -37,7 +37,7 @@ Happy mining!
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-#### Packet bundles
+**Packet bundles**
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
@@ -59,7 +59,7 @@ Happy mining!
 
 ### Commands
 
-#### `clone`
+**`clone`**
 
 The clone command now supports specifying the source and target dimensions. New syntax:
 
@@ -70,7 +70,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-#### `data`
+**`data`**
 
 New source available:
 
@@ -81,9 +81,9 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-#### `execute`
+**`execute`**
 
-##### `execute if|unless`
+**`execute if|unless`**
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -95,7 +95,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-##### `execute on`
+**`execute on`**
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -113,17 +113,17 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, selector returns zero elements.
 
-#### `title`
+**`title`**
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-#### `weather`
+**`weather`**
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-#### `ride`
+**`ride`**
 
 New command to allow entities to start or stop riding other entities
 
@@ -146,7 +146,7 @@ Syntax:
 
 ### Chat components
 
-#### Translation fallback
+**Translation fallback**
 
 Added an optional `fallback` field to `translate` text components.
 
@@ -250,7 +250,7 @@ The rest of the current telemetry events are opt-in, which means that you can ch
 
 Just like all the thoughts and comments we get from you on our feedback site, this is something that greatly helps us improve Minecraft. We want to make a game that you want to play, so we want to know what that game needs. Even if it’s more lava.
 
-#### Telemetry transparency
+**Telemetry transparency**
 
 -   Added Telemetry Data Collection Screen
     -   This screen displays information about the type of data that is sent
@@ -263,22 +263,22 @@ Just like all the thoughts and comments we get from you on our feedback site, th
     -   These can be found under the `logs/telemetry` directory
         -   A shortcut to this directory is available via the "Open My Data" button on the Telemetry Data Collection screen
 
-#### Required telemetry events
+**Required telemetry events**
 
 -   Added WorldUnloaded event
 -   Removed client Java version from the WorldLoaded event
 
-##### WorldLoaded & WorldUnloaded
+**WorldLoaded & WorldUnloaded**
 
 Understanding how Minecraft is played allows us to focus game updates and improvements on the areas that are most relevant to players. The data that tells us this includes game mode, client or server modded status, and game version.
 
 WorldLoaded & WorldUnloaded are two paired events that calculate how long the world session has lasted (in seconds and ticks). Data from WorldLoaded is sent when a world is launched, and data from WorldUnloaded is sent when a world is shut down (quitting to title, disconnecting from a server).
 
-#### Optional telemetry events
+**Optional telemetry events**
 
 -   Added PerformanceMetrics and WorldLoadTimes events
 
-##### PerformanceMetrics
+**PerformanceMetrics**
 
 Knowing the overall performance profile of Minecraft helps us tune and optimize the game for a wide range of machine specifications and operating systems.
 
@@ -286,7 +286,7 @@ The periodic performance metrics includes data such as frame-rates, rendering pe
 
 Game version is included to help us compare the performance profile for new versions of Minecraft.
 
-##### WorldLoadTimes
+**WorldLoadTimes**
 
 It’s important for us to understand how long it takes to join a world, and how that changes over time. For example, when we add new features or do larger technical changes, we need to see what impact that had on load times.
 
@@ -300,7 +300,7 @@ This event includes the total time in milliseconds for the world to load, whethe
     -   By default, textures not in the `textures/item` and `textures/block` directories will no longer be automatically recognized and will fail to load
 -   Resource packs can now have configuration files, located in `atlases` directory, that control which images are included in the atlases
 
-#### Atlas configuration files
+**Atlas configuration files**
 
 -   New directory `atlases` is now present for resource packs
 -   This directory contains JSON entries for configuring atlases:
@@ -337,7 +337,7 @@ This event includes the total time in milliseconds for the world to load, whethe
 -   New command: `fillbiome`
 -   New execute sub-command: `execute if|unless biome`
 
-#### `fillbiome`
+**`fillbiome`**
 
 Changes biome entries for an area. Note that biomes are not stored per-block, so affected positions may not match input precisely.
 
@@ -351,7 +351,7 @@ Parameters:
 -   `to`: The other corner of the area to fill
 -   `biome`: The biome to set
 
-#### `execute`
+**`execute`**
 
 Execute commands can now be conditional on biomes.
 

@@ -17,7 +17,7 @@ Snowier snow!
 -   Wear leather boots to prevent yourself from sinking into Powder Snow blocks
 -   Leave a Cauldron outside in falling snow and it will fill with Powder Snow
 
-#### Freezing
+**Freezing**
 
 -   Standing in Powder Snow will slowly freeze an entity
 -   Once frozen, freeze damage is done every few seconds to the frozen entity
@@ -64,7 +64,7 @@ The function part of loot tables can now be defined as separate data pack resour
 
 ### Commands
 
-#### `item`
+**`item`**
 
 Modifies item or block inventory.
 
@@ -83,9 +83,9 @@ For example, `/item block ~ ~ ~ container.0 copy entity @s enderchest.0` will co
 
 ### Loot tables
 
-#### New conditions
+**New conditions**
 
-##### `value_check`
+**`value_check`**
 
 Checks range of value.
 
@@ -94,46 +94,46 @@ Parameters:
 -   `value` - see "New value providers" section (currently combination of random generators and score)
 -   `range` - min/max range
 
-#### Changed conditions
+**Changed conditions**
 
-##### `score`
+**`score`**
 
 `entity` parameter has now been replaced with `target`. It can either contain value from old `entity` field (like `this`) or be an score holder name in form `{"name": "..."}`.
 
-#### Changed functions
+**Changed functions**
 
-##### `set_damage`
+**`set_damage`**
 
 This function now has `add` parameter. If `true`, change will be relative to current damage. If `false`, damage will be replaced with current value (default behavior)
 
-##### `set_count`
+**`set_count`**
 
 This function now has `add` parameter. If `true`, change will be relative to current item count. If `false`, item count will be replaced with current value (default behavior)
 
-##### `copy_nbt`
+**`copy_nbt`**
 
 `source` parameter can now be set to `{"storage": <namespaced id>}`, to access command storage.
 
-#### New functions
+**New functions**
 
-##### `set_enchantments`
+**`set_enchantments`**
 
 Modifies enchantments on item
 
-###### Parameters
+**Parameters**
 
 -   `enchantments` - map of enchantment id to level value (can be score or random number)
 -   `add` - if `true`, change will be relative to current level. If `false`, level will be replaced with current value (default behavior)
 
-#### New value providers
+**New value providers**
 
 Note: value providers can be used in same places as random number generators.
 
-##### `score`
+**`score`**
 
 Returns scaled scoreboard value.
 
-###### Parameters
+**Parameters**
 
 -   `score` - scoreboard name
 -   `target` - same as `target` in `score` predicate
@@ -207,12 +207,12 @@ Happy mining!
 
 ### Amethysts
 
-#### Amethyst Blocks
+**Amethyst Blocks**
 
 -   Amethyst comes in block form inside the geodes in two ways: Block of Amethyst and Budding Amethyst
 -   All types of Amethyst blocks (clusters included) create beautiful sounds when you walk on them, break them, place them, or hit them with a projectile - go make some music!
 
-#### Amethyst Clusters
+**Amethyst Clusters**
 
 -   Amethyst Clusters grow from Budding Amethyst, which can be found inside geodes
 -   Clusters have 4 growth stages: Small Amethyst Bud, Medium Amethyst Bud, Large Amethyst Bud, and Amethyst Cluster
@@ -220,18 +220,18 @@ Happy mining!
 -   Fully-grown Amethyst Clusters drop 4 Amethyst Shards (or more with Fortune) when an Iron Pickaxe or higher is used, and drop nothing otherwise when broken
 -   Clusters can be Silk Touched at any stage
 
-#### Amethyst Geodes
+**Amethyst Geodes**
 
 -   These huge geodes can be found anywhere underground in the overworld
 -   Amethyst geodes have an outer layer of a new stone called Tuff
 -   Amethyst geodes have a second layer of another new block called Calcite
 -   Amethyst geodes have an inner layer of various Amethyst blocks
 
-#### Amethyst Shards
+**Amethyst Shards**
 
 -   Amethyst Clusters drop 4 Amethyst Shards (or more with Fortune)
 
-#### Budding Amethyst
+**Budding Amethyst**
 
 -   On any side of a Budding Amethyst block where there is air, or a water source block, a Small Amethyst Bud will eventually grow
 -   Amethyst Buds can only grow when attached to Budding Amethyst, and will grow until they become Amethyst Clusters
@@ -264,25 +264,25 @@ Happy mining!
 
 ### Copper
 
-#### Copper blocks
+**Copper blocks**
 
 -   Craft 9 copper ingots to a copper block
 -   Craft cut copper, cut copper stairs and cut copper slabs
 -   Use honeycomb to craft waxed copper blocks
 
-#### Copper ore
+**Copper ore**
 
 -   Copper ore can be found in ore blobs across Overworld, similar to iron and coal (this is not the final generation for copper…)
 -   Smelt copper ore to get a copper ingot
 
-#### Lightning Rod
+**Lightning Rod**
 
 -   The Lightning Rod is crafted from three copper ingots
 -   Keep your builds safe (well, as long as the closest area around the lightning rod is fire proof) during thunderstorms!
 -   The lightning rod will protect an area of 4 ;;*;; 16 blocks around it from the, sometimes devastating, lightning strikes!
 -   Lightning rods give off a redstone signal when struck by lightning
 
-#### Oxidation
+**Oxidation**
 
 -   Copper will oxidize over time
 -   There are for stages: copper, lightly weathered copper, semi-weathered copper and weathered copper
@@ -335,9 +335,9 @@ Entities have been extracted from main (terrain) chunks and are now stored in se
 
 ### Loot tables
 
-#### New functions
+**New functions**
 
-##### `set_banner_pattern`
+**`set_banner_pattern`**
 
 Sets tags needed for banner patterns. Parameters:
 
@@ -479,7 +479,7 @@ Today we're releasing Snapshot 20w29a for Minecraft Java Edition. We found some 
 
 ### Commands
 
-#### spawnpoint & setworldspawn
+**spawnpoint & setworldspawn**
 
 Added angle parameter for setting the default facing angle of a respawning player.  
 Syntax: `spawnpoint [targets] [pos] [angle]`  

@@ -21,7 +21,7 @@ Go out and explore the Overworld, build high into the sky, leash a caravan of ca
 
 The Happy Ghast is a new mountable flying mob.
 
-#### Dried Ghast Block
+**Dried Ghast Block**
 
 -   The Dried Ghast block is found in Nether Fossil structures and is the first stage of the Happy Ghast mob
 -   Can be crafted with 1 Soul Sand block and 8 Ghast Tears
@@ -33,7 +33,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![A Dried Ghast block underneath a Nether Fossil in a Soul Sand Valley. In the background two players are battling angry Ghasts.](https://launchercontent.mojang.com/v2/images/1.21.6hydrationscaled.jpg)
 
-#### Ghastling Mob
+**Ghastling Mob**
 
 -   The Ghastling is a young version of the Happy Ghast mob
 -   Spawns from a Dried Ghast block that has continuously been waterlogged for about 20 minutes
@@ -47,7 +47,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![In a Savanna village, a baby Happy Ghast is being lured with a Snowball by Efe. A stay cat is also quite curious of what Efe is holding in their hands.](https://launchercontent.mojang.com/v2/images/1.21.6ghastlingscaled.jpg)
 
-#### Happy Ghast Mob
+**Happy Ghast Mob**
 
 -   Can be equipped with a Harness and then be mounted by up to four players
 -   Tempted by Snowballs and Harness
@@ -72,7 +72,7 @@ The Happy Ghast is a new mountable flying mob.
 
 ![Ari and Efe building a castle. Ari is standing on a Happy Ghast, using it to place blocks under the balcony.](https://launchercontent.mojang.com/v2/images/1.21.6buildfromhappyghastscaled.jpg)
 
-#### Harness Item
+**Harness Item**
 
 -   The Harness is a new item that can be equipped on a Happy Ghast to allow players to ride it
 -   The Harness comes in 16 different colors
@@ -190,14 +190,14 @@ The Locator Bar is a new UI element that displays the direction of other players
 
 ### Saddle Changes
 
-#### Crafting Saddles
+**Crafting Saddles**
 
 -   Saddles can now be crafted with 3 Leather and 1 Iron Ingot
 -   The recipe is unlocked when a player picks up their first Leather
 
 ![Player crafting a Saddle using the new recipe using three Leather and one Iron Ingot.](https://launchercontent.mojang.com/v2/images/1.21.6saddlecraftscaled.jpg)
 
-#### Removing Saddles and Equipment
+**Removing Saddles and Equipment**
 
 -   Saddles, Horse Armor, Harnesses and Carpets can now be removed from the mobs by using Shears
     -   This does not work in case the mob has a rider, or if the player is crouching
@@ -205,7 +205,7 @@ The Locator Bar is a new UI element that displays the direction of other players
 -   Dispensers with Shears cannot remove Saddles, Horse Armor, Harnesses or Carpets equipped on mobs
 -   Shearing Saddles, Horse Armor, and Carpets will emit a vibration frequency of 6, along with the Unequip frequency of 4
 
-#### Loot Table Changes
+**Loot Table Changes**
 
 The following loot tables have had Saddles removed from them and replaced with 1-5 Leather:
 
@@ -290,14 +290,14 @@ The following loot tables have had Saddles removed from them and replaced with 1
 
 ### Commands
 
-#### Added `version`
+**Added `version`**
 
 Prints the current version information on the server side.
 
 -   Takes no arguments
 -   Available in singleplayer or for server operators
 
-#### Added `datapack create`
+**Added `datapack create`**
 
 Creates a new empty directory data pack for the current world.
 
@@ -307,12 +307,12 @@ Creates a new empty directory data pack for the current world.
     -   `id` - new pack name, must be a valid directory name
     -   `name` - text component to be placed in `description` in `pack.mcmeta`
 
-#### Modified `playsound`
+**Modified `playsound`**
 
 -   Added new category `ui`
     -   Sounds in this category will continue playing when paused, similarly to `music`
 
-#### Added `waypoint`
+**Added `waypoint`**
 
 This is a new command for querying and modifying waypoints.
 
@@ -375,7 +375,7 @@ The Locator Bar works through a server-controlled Waypoint system. Waypoints are
 
 ![An example of a custom Dialog screen.](https://launchercontent.mojang.com/v2/images/1.21.6customdialogscaled.jpg)
 
-#### Dialog Description Format
+**Dialog Description Format**
 
 -   Dialogs are stored in `minecraft:dialog` registry that can be provided by a datapack
 
@@ -384,7 +384,7 @@ Fields:
 -   `type` - one of dialog types from `minecraft:dialog_type` registry
 -   `<type-specific>` - see below
 
-##### Common Dialog Fields
+**Common Dialog Fields**
 
 -   Most dialog types share some fields. To avoid duplication, they are listed in this section
 
@@ -409,9 +409,9 @@ Fields:
             -   clicking this button will continue as if the dialog was closed (i.e., game returns to the previous non-dialog screen, if any)
         -   "Waiting for Response" screen will unpause the game in single-player mode to avoid locking the game
 
-##### Dialog Types
+**Dialog Types**
 
-###### `minecraft:notice`
+**`minecraft:notice`**
 
 -   A simple screen with one action in footer
 -   Exit action: same as `action`
@@ -421,7 +421,7 @@ Fields:
 -   Common dialog fields (see above)
 -   `action` - main action (see below), defaults to a button with `gui.ok` label and no action or tooltip
 
-###### `minecraft:confirmation`
+**`minecraft:confirmation`**
 
 -   A simple screen with two actions in footer
 -   Exit action: same as `no` action
@@ -432,7 +432,7 @@ Fields:
 -   `yes` - action (see below) for positive outcome
 -   `no` - action (see below) for negative outcome
 
-###### `minecraft:multi_action`
+**`minecraft:multi_action`**
 
 -   A scrollable list of actions arranged in columns
 -   Screen can have optional exit action that will appear in footer
@@ -445,7 +445,7 @@ Fields:
 -   `exit_action` - optional action (see below) in footer
 -   `columns` - positive integer describing number of columns, default: `2`
 
-###### `minecraft:server_links`
+**`minecraft:server_links`**
 
 -   A scrollable list of links received from server in `minecraft:server_links` packet, arranged in columns
 -   Note: this is a replacement for the previous Server Links screen, but now with an additional body
@@ -458,7 +458,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, integer from `1` to `1024` (inclusive) with default `150`
 
-###### `minecraft:dialog_list`
+**`minecraft:dialog_list`**
 
 -   A scrollable list of buttons leading directly to other dialogs, arranged in columns
     -   Titles of those buttons will be taken from `external_title` fields of targeted dialogs
@@ -472,7 +472,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, integer from `1` to `1024` (inclusive) with default `150`
 
-##### Dialog Body Types
+**Dialog Body Types**
 
 -   All dialogs have a list of body elements describing contents between title and actions or inputs
 -   Hover and click events on text components within bodies function as expected
@@ -483,7 +483,7 @@ Fields:
 -   `type` - one of dialog body types from `minecraft:dialog_body_type` registry
 -   `<type-specific>` - see below
 
-###### `minecraft:plain_message`
+**`minecraft:plain_message`**
 
 -   A multiline label
 
@@ -492,7 +492,7 @@ Fields:
 -   `contents` - text component
 -   `width` - maximum width of message, integer from `1` to `1024` (inclusive) with default `200`
 
-###### `minecraft:item`
+**`minecraft:item`**
 
 -   Item with optional description
     -   If a description is present, it will be rendered to the right of item
@@ -511,7 +511,7 @@ Fields:
 -   `width` - horizontal size of element, integer from `1` to `256` (inclusive) with default: `16`
 -   `height` - vertical size of element, integer from `1` to `256` (inclusive) with default: `16`
 
-##### Input Control Types
+**Input Control Types**
 
 -   Dialog can contain a set of controls that accept user input
 -   When submitted, the current value of the input will be used to build response to the server according to action selected by user (see below)
@@ -524,7 +524,7 @@ Fields:
 -   `key` - string identifier of value used when submitting data, must be a valid template argument (letters, digits and `_`)
 -   `<type-specific>` - see below
 
-###### `minecraft:text`
+**`minecraft:text`**
 
 -   A simple text input
 -   Output values:
@@ -544,7 +544,7 @@ Fields:
         -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines (but can't exceed `512`)
         -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
 
-###### `minecraft:boolean`
+**`minecraft:boolean`**
 
 -   A plain checkbox with a label
 -   Output values:
@@ -558,7 +558,7 @@ Fields:
 -   `on_true` - a string value to send when control is checked, default: `true`
 -   `on_false` - a string value to send when control is unchecked, default: `false`
 
-###### `minecraft:single_option`
+**`minecraft:single_option`**
 
 -   A button that cycles between a set of options when clicked
 -   Output values:
@@ -576,7 +576,7 @@ Fields:
     -   `initial` - an optional boolean flag that selects initial option (only one option can have this be set to `true`)
     -   Additionally, the list might also contain a plain string - in that case it's equivalent to a single entry with field `id` set to that string and other fields set to default
 
-###### `minecraft:number_range`
+**`minecraft:number_range`**
 
 -   A slider for picking a numeric value out of some range
 -   Sends currently selected value
@@ -597,7 +597,7 @@ Fields:
     -   If present, only values of `initial + <any integer> * step` will be allowed
     -   If absent, any value from range the is allowed
 
-#### Actions
+**Actions**
 
 Dialogs have at least one action, presented to the user as a button. After every action dialog will always evaluate contents of `after_action` field (see above).
 
@@ -610,7 +610,7 @@ Fields:
     -   `type` - value from `minecraft:dialog_action_type` registry
     -   `<type-specific>` - see below, depends on `type`
 
-##### Static Dialog Action Types
+**Static Dialog Action Types**
 
 All existing `click_event` actions (except for `open_file`) are included as dialog action types.
 
@@ -625,7 +625,7 @@ Uses same format as `click_event` on text components (but with `action` replaced
     }
     
 
-##### `minecraft:dynamic/run_command` Action Type
+**`minecraft:dynamic/run_command` Action Type**
 
 -   This action will build a `run_command` event using a provided macro template
 -   The macro will be expanded with string values from inputs
@@ -636,7 +636,7 @@ Fields:
 
 -   `template` - a string with a macro template to be interpreted as a command
 
-###### `minecraft:dynamic/custom` Action Type
+**`minecraft:dynamic/custom` Action Type**
 
 -   This method will build a `minecraft:custom` event using all input values
 -   All input contents will be sent together inside a compound tag, with tag value of each input put under id from `key` field of that input
@@ -647,22 +647,22 @@ Fields:
 -   `additions` - fields to be added to payload, optional compound tag
 -   `id` - namespaced ID
 
-##### Built-in Dialogs
+**Built-in Dialogs**
 
 The built-in datapack contains some custom dialogs to provide customization of specific screens used by the client.
 
-###### `minecraft:server_links`
+**`minecraft:server_links`**
 
 -   Replacement for the previously existing "Server Links" screen
 -   Meant to simplify migration for servers that previously used this feature
 
-###### `minecraft:custom_options`
+**`minecraft:custom_options`**
 
 -   Shows contents of `minecraft:pause_screen_additions` tag (see below)
 -   Allows the user to select a specific dialog if this tag contains multiple entries
 -   Note: Since this tag is meant for interoperability, any content that replaces this dialog should be careful not to hide other dialog providers
 
-#### Dialog Command
+**Dialog Command**
 
 -   New command has been added to show dialog to clients
 
@@ -676,7 +676,7 @@ Syntax:
     -   `<targets>` - player name, UUID or a player selector
     -   Returns the number of players in `targets` argument
 
-#### Pause Screen Configuration
+**Pause Screen Configuration**
 
 -   A data pack can request some of the available dialogs to be accessible from Pause screen
 -   This feature replaces the "Server Links" button and is placed on Pause screen according to the same rules
@@ -690,7 +690,7 @@ Syntax:
     -   If this tag has multiple elements, the pause screen button will lead to a `minecraft:custom_options` dialog which (by default) lets user select one of the tag elements
         -   If this dialog is removed, the button is will not be visible
 
-#### Quick Actions Key Bind
+**Quick Actions Key Bind**
 
 -   A new key bind has been added that allows users to access a set of dialogs
 -   Default key: `G`
@@ -703,11 +703,11 @@ Syntax:
 
 ### Text Components
 
-#### Click Events
+**Click Events**
 
 -   Users will now be prompted for confirmation before executing a command from the `run_command` click action in books and chat if the command can't be parsed or requires elevated permissions (i.e., higher than 0)
 
-##### Added `minecraft:custom`
+**Added `minecraft:custom`**
 
 -   A new click action called `minecraft:custom` has been added
     -   When user clicks a component with this click action, the client will send a dedicated packet `minecraft:custom_click_action` to a server
@@ -717,7 +717,7 @@ Syntax:
         -   `id` - namespaced ID
         -   `payload` - optional tag field
 
-##### Added `minecraft:show_dialog`
+**Added `minecraft:show_dialog`**
 
 -   A new action called `show_dialog` has been added
     -   When user clicks this component, a dialog will be opened for them
@@ -726,21 +726,21 @@ Syntax:
 
 ### Game Rules
 
-#### Added `locatorBar`
+**Added `locatorBar`**
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 
 ### Attributes
 
-#### Added `camera_distance`
+**Added `camera_distance`**
 
 -   Default value: `4.0`
 -   Modifies the distance at which the camera is placed away from the player or spectated entity when in a third-person view
 -   If the entity being ridden has a larger `camera_distance` attribute, that distance will be used
 -   This distance is multiplied by the `scale` attribute to get a final target camera distance
 
-#### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
     
@@ -759,13 +759,13 @@ Syntax:
 -   `/attribute @s minecraft:waypoint_receive_range base set 120` will only let a player see Locator Bar dots that are within 120 blocks (hiding all players further than that)
     
 
-#### Changed `flying_speed`
+**Changed `flying_speed`**
 
 -   The `flying_speed` attribute now also applies to Ghasts and Happy Ghasts
 
 ### Data Components
 
-#### `equippable` Item Component
+**`equippable` Item Component**
 
 -   Added a new optional field: `can_be_sheared` (boolean)
     -   If `true`, players can use Shears to remove this equippable item from a target mob by right-clicking, provided all other shearing conditions are satisfied
@@ -774,7 +774,7 @@ Syntax:
     -   It's a sound event that plays when the equippable item is sheared
     -   If not specified, it defaults to the `item.shears.snip` sound event
 
-#### `attribute_modifiers` Item Component
+**`attribute_modifiers` Item Component**
 
 -   Added an optional `display` field to `attribute_modifiers` entries
     -   There are 3 `display` types:
@@ -783,7 +783,7 @@ Syntax:
         -   `override` - Replaces the shown attribute modifier text
             -   Contains a single field `value` for the text contents to show for this attribute modifier entry
 
-#### `painting/variant` Item Component
+**`painting/variant` Item Component**
 
 -   No longer accepts inline variants
 
@@ -794,17 +794,17 @@ Syntax:
     -   Some mobs, such as Bats, Slimes, Magma Cubes, Phantoms and Ender Dragons may ignore it
     -   Interacting with leashes or riding may change the home position of the mob
 
-#### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   The `Particle` field has been renamed to `custom_particle`, and now always functions as an exact override for the default colored `entity_effect` particle
     -   The field will not be written if no override is specified
     -   The color will no longer be inherited from the potion contents when specifying the `entity_effect` or `tinted_leaves` particle types
 
-#### `tnt`
+**`tnt`**
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-#### `vex`
+**`vex`**
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of mob)
 
@@ -819,19 +819,19 @@ Added `minecraft:player_sheared_equipment` trigger
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#triggers_ambient_desert_dry_vegetation_block_sounds` - blocks that can trigger ambient desert dry vegetation sounds to play from blocks above
 -   Added `#happy_ghast_avoids` - blocks that Happy Ghasts avoid getting close to
 -   `#plays_ambient_desert_block_sounds` has been renamed to `#triggers_ambient_desert_sand_block_sounds`
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#happy_ghast_food` - items that can be used to feed Happy Ghasts
 -   Added `#happy_ghast_tempt_items` - items that can be used to tempt Happy Ghasts
 
-#### Entity Tags
+**Entity Tags**
 
 -   Added `#can_equip_harness` - entities that can equip the Harness items
 -   Added `#followable_friendly_mobs` - non-baby entities that will be followed by Baby Happy Ghasts
@@ -853,4 +853,4 @@ These define custom icons to be displayed on the Locator Bar and are within the 
 
 -   `near_distance` and `far_distance` are optional and default to the values `128` and `332` respectively
     -   `far_distance` distance must be greater than `near_distance`
--   `sprites` is a list of at least one sprite IDs within the pr
+-   `sprites` is a list of at least one sprite IDs within the prefix of `hud/locator_bar_dot/` (the directory `textures/gui/sprites/hud/locator_bar_dot`)

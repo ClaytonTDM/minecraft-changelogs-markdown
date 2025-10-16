@@ -94,7 +94,7 @@ In this release we are also making the game tests system accessible through data
     -   Blue Egg - The Egg that is laid by and can hatch cold Chicken variants
     -   Brown Egg - The Egg that is laid by and can hatch warm Chicken variants
 
-#### Sheep Wool Color in Warm and Cold Biomes
+**Sheep Wool Color in Warm and Cold Biomes**
 
 -   Sheep now spawn with wool color dependent on the biome in which they spawn:
     -   Temperate biomes: (these colors are unchanged from previous behavior)
@@ -286,13 +286,13 @@ In this release we are also making the game tests system accessible through data
 
 ### Cartographer and Wandering Trader Trade Rebalance
 
-#### Cartographer Trades
+**Cartographer Trades**
 
 -   Cartographers now sell 7 new maps each pointing to a different village or other structures in a different biome
 -   Cartographers from different village types will sell a different range of maps and colored banners
 -   Some prices and quantities have also been adjusted
 
-#### Wandering Trader Trades
+**Wandering Trader Trades**
 
 -   The Wandering Trader now has better prices, more trades and a larger amount of stock for many items
 -   They will also now buy basic supplies from players, so it is possible to get some Emeralds by helping them prepare for their next journey - even if you don't feel like buying anything
@@ -354,7 +354,7 @@ In this release we are also making the game tests system accessible through data
 -   Pale Oak Leaves and Pale Oak Saplings have an updated map color
 -   Improved tooltips for the Crossbow and all container items
 
-#### Item Tooltips
+**Item Tooltips**
 
 -   Crossbows will now show all charged projectiles in their tooltip instead of just the first
     -   All charged projectiles will also add their entire tooltip as a subsection, instead of only Fireworks
@@ -455,7 +455,7 @@ The Game Tests system is a new integrated system for testing aspects of the game
 
 Generally, the test framework expects to run tests in a separate superflat world.
 
-#### Test Instances
+**Test Instances**
 
 ![A game test is running, where a villagers is seen running through a maze to get to their bed.](https://launchercontent.mojang.com/v2/images/1.21.5villagertest.jpg)
 
@@ -477,7 +477,7 @@ Fields:
 -   `required_successes`: Number of attempts that must succeed for the test to be considered successful (default `1`)
 -   `type`: The type of test - one of `block_based` and `function`
 
-##### Function Tests
+**Function Tests**
 
 Function tests rely on built-in functions to run a test and indicate success or failure. They have one additional field:
 
@@ -485,11 +485,11 @@ Function tests rely on built-in functions to run a test and indicate success or 
 
 See the "Using the Game Test Framework from Code" changelog section for more information.
 
-##### Block Based Tests
+**Block Based Tests**
 
 Block based tests use Test Blocks in the test structure to run the test and indicate success or failure.
 
-#### Test Environments
+**Test Environments**
 
 Test Environments are a way to group up tests and give them the right preconditions to run. A Test Environment is an asset in the `test_environment` registry. Each Test Environment definition has a `type` field that determines its setup:
 
@@ -511,7 +511,7 @@ Test Environments are a way to group up tests and give them the right preconditi
 
 The game provides a single, empty Test Environment by default: `minecraft:default`.
 
-#### Test Blocks
+**Test Blocks**
 
 The Test Block is a block used for implementing a block-based tests. It has four modes:
 
@@ -522,7 +522,7 @@ The Test Block is a block used for implementing a block-based tests. It has four
 
 Block-based tests are required to have at least one `start` block and one `accept` block in the structure.
 
-#### The `test` Command
+**The `test` Command**
 
 The `test` command is a new command used to create and run tests.
 
@@ -574,27 +574,27 @@ Parameters:
 -   `rotationSteps`: Number of extra 90 degree steps to apply to the test - if omitted, `0` is used
 -   `testsPerRow`: Number of tests to place per row in a grid layout - if omitted, `8` is used
 
-##### `test clear*`
+**`test clear*`**
 
 These subcommands clear the structures and blocks associated with the selected tests.
 
-##### `test create`
+**`test create`**
 
 This subcommand creates a test setup in the current location for the given test, preparing for a structure of the given size. This gives a starting point for creating the structure for the test.
 
-##### `test locate`
+**`test locate`**
 
 Attempts to locate the given test. Note that only loaded chunks are searched.
 
-##### `test reset*`
+**`test reset*`**
 
 These subcommands reset the structures for the selected tests, removing any surrounding barriers and placing the structure in from scratch.
 
-##### `test pos`
+**`test pos`**
 
 Shows the local coordinates to the block pointed at in the test. If the optional variable name is specified, this variable name is used in a code fragment obtained by clicking on the coordinates in the output message.
 
-##### `test run*`
+**`test run*`**
 
 Runs one or more tests. If multiple tests are run at once, they are placed in a grid and run in parallel, although only up to a certain limit. Beyond that limit, tests are run in rounds where each round completes before any tests from the next round are started.
 
@@ -609,21 +609,21 @@ If a test fails, the error is shown on a lectern book and an overlay.
 
 Note that Game Tests are designed to run on standard superflat worlds. The area around each test is replaced with stone when it runs, and the running test is encased in barrier blocks.
 
-##### `test stop`
+**`test stop`**
 
 This stops all running tests. Note that gameplay events triggered by tests may still remain.
 
-##### `test verify*`
+**`test verify*`**
 
 Verifies one or more tests by running multiple instances of the same test.
 
-#### Test Instance Blocks
+**Test Instance Blocks**
 
 To run a test in a world, a Test Instance Block is used. This type of block represents the test as placed in the world and is used to interact with that test, to save the structure, reset or run the test.
 
 Using the `test` command to run or create a test will also place a Test Instance Block to control that test.
 
-#### Using the Game Test Framework from Code
+**Using the Game Test Framework from Code**
 
 The Game Test Framework can also be used from code in a more versatile manner than block-based tests. For this to work, you need to mod the game to add your test functions to the `test_function` registry (`Registries.TEST_FUNCTION`).
 
@@ -647,13 +647,13 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Game Rules
 
-#### `allowFireTicksAwayFromPlayer`
+**`allowFireTicksAwayFromPlayer`**
 
 -   When `true`, fire and lava can spread fire outside the 8 chunk range of a player
 -   Note: the fire and lava blocks must still be in simulation distance to spread
 -   Default value: `false`
 
-#### `tntExplodes`
+**`tntExplodes`**
 
 -   When `false`, TNT will not explode and cannot be ignited
 -   Default value: `true`
@@ -676,21 +676,21 @@ As opposed to block-based tests, function tests failing will often produce more 
             -   Additional fields are dependent on `type`
         -   If this field is not present, the condition is always true
 
-#### Spawn Conditions
+**Spawn Conditions**
 
-##### `minecraft:biome`
+**`minecraft:biome`**
 
 -   Checks if entity is spawning in specific biomes
 -   Fields:
     -   `biomes` - single entry, list or a tag describing biomes
 
-##### `minecraft:moon_brightness`
+**`minecraft:moon_brightness`**
 
 -   Checks if the current moon brightness is within a certain range
 -   Fields:
     -   `range` - floating point range (a single number or an object like `{"min": 1, "max": 2}`)
 
-##### `minecraft:structures`
+**`minecraft:structures`**
 
 -   Checks if the entity is spawning in specific structures
 -   Fields:
@@ -698,12 +698,12 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Data-driven Mob Variants
 
-#### Wolf Variants
+**Wolf Variants**
 
 -   The fields `angry_texture`, `tame_texture` and `wild_texture` have been grouped in an `assets` field, and renamed to `angry`, `tame`, and `wild`
 -   Added field `spawn_conditions` described in uniform variant selection above
 
-#### Pig Variants
+**Pig Variants**
 
 -   Pig variants can be data-driven by adding entries to `data/<namespace>/pig_variant/<id>.json`
 -   This feature is experimental
@@ -712,7 +712,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-#### Cat Variants
+**Cat Variants**
 
 -   Cat variants can be data-driven by adding entries to `data/<namespace>/cat_variant/<id>.json`
 -   This feature is experimental
@@ -720,7 +720,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-#### Frog Variants
+**Frog Variants**
 
 -   Frog variants can be data-driven by adding entries to `data/<namespace>/frog_variant/<id>.json`
 -   This feature is experimental
@@ -728,7 +728,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-#### Cow Variants
+**Cow Variants**
 
 -   Cow variants can be data-driven by adding entries to `data/<namespace>/cow_variant/<id>.json`
 -   This feature is experimental
@@ -737,7 +737,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-#### Chicken Variants
+**Chicken Variants**
 
 -   Chicken variants can be data-driven by adding entries to `data/<namespace>/chicken_variant/<id>.json`
 -   This feature is experimental
@@ -746,7 +746,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   `asset_id` - namespaced id for this variant asset, resolves to `assets/<namespace>/textures/<path>.png`
     -   `spawn_conditions` - field described in uniform variant selection above
 
-#### Wolf Sound Variants
+**Wolf Sound Variants**
 
 -   Wolf sound variants can be data-driven by adding entries to `data/<namespace>/wolf_sound_variant/<id>.json`
 -   The file contains the following fields which correspond to sound events to use for the specific behaviour:
@@ -768,7 +768,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 -   Text Style in the `/scoreboard` command when specifying the `styled` number format is also now specified with SNBT instead of JSON
 -   Text Component arguments in `/bossbar`, `/scoreboard` and `/team` commands are now resolved before use (in the context of entity the held in `@s`)
 
-#### Changes to `/setblock`, `/fill`, `/clone`, and `/place`
+**Changes to `/setblock`, `/fill`, `/clone`, and `/place`**
 
 -   The behavior of `setblock` and `fill` commands have changed in how they handle block entity data:
     -   If the block entity data is not specified, and the existing block has data, the block entity data will be preserved
@@ -808,7 +808,7 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   if argument is a number value, returns `true` if it is non-zero
     -   `uuid(str)` - converts string representation of UUID to integer array
 
-#### Number Format
+**Number Format**
 
 -   Either whole or fraction parts of a float number can be omitted
     -   Examples: `.1` and `1.` are valid now
@@ -829,7 +829,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   When a suffix is used without `u` or `s`, it defaults to signed for decimal numbers and unsigned for binary and hexadecimal numbers
     -   Note: since `b` is also a valid hexadecimal digit, byte sized hexadecimal values can only be written with a signed suffix, like `0x11ub` or `0x11sb`
 
-#### Strings
+**Strings**
 
 -   Quoted strings can now use escape sequences beyond `;;';;`, `;;";;` and `;;\;;`:
     -   Unicode escapes:
@@ -843,4 +843,5 @@ As opposed to block-based tests, function tests failing will often produce more 
         -   `;;t;;` - horizontal tab, Unicode `;;x;;09`
         -   `;;n;;` - linefeed, Unicode `;;u;;0a`
         -   `;;f;;` - form feed, Unicode `;;u;;0c`
-        - 
+        -   `;;r;;` - carriage return, Unicode `;;u;;0d`
+- 

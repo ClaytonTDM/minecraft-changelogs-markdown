@@ -28,7 +28,7 @@ Happy mining!
 -   Copper Golem can help with sorting items into Chests
 -   Interacting with the Copper Golem with an empty hand will make it drop its carried item
 
-#### Copper Golem Item Sorting
+**Copper Golem Item Sorting**
 
 -   If the Copper Golem is not holding an item, it will look for nearby Copper Chests to try to pick up an item
     -   The Copper Golem will look in any oxidized and waxed Copper Chest variant to pick up items
@@ -141,7 +141,7 @@ Happy mining!
 
 ### UI
 
-#### Debug Screen
+**Debug Screen**
 
 -   The debug screen is accessible by pressing F3, as before
 -   It can now be accessed from everywhere in the game, not only when in a game world
@@ -189,7 +189,7 @@ Happy mining!
     -   A minor version increment of the game's pack version is backwards-compatible, meaning all packs made for previous iterations of the same major version will keep working
 -   Packs can set compatibility requirements on minor versions in case they rely on resources introduced in a minor version
 
-#### Pack Metadata
+**Pack Metadata**
 
 The pack.mcmeta format has been updated:
 
@@ -224,7 +224,7 @@ The pack.mcmeta format has been updated:
 
 ### Data Components
 
-#### `blocks_attacks` Item Component
+**`blocks_attacks` Item Component**
 
 -   If the damage reduced in an attack is `0`, for example by `angle` threshold not matching, the item can no longer get disabled in the attack, nor cause knockback due to blocking
 
@@ -261,9 +261,9 @@ The pack.mcmeta format has been updated:
     -   `preliminary_surface_level` is a 2D density function that should produce the y-level of the approximate surface
     -   The `minecraft:find_top_surface` density function can be used to replicate the previous scanning
 
-#### Density Functions
+**Density Functions**
 
-##### Added `minecraft:find_top_surface`
+**Added `minecraft:find_top_surface`**
 
 -   Approximates the topmost surface of a given density function
 -   It scans from an upper bound to a lower bound to find the point at which the density changes from negative to positive
@@ -277,7 +277,7 @@ Fields:
 -   `lower_bound` - integer, lowest possible y-value
 -   `cell_height` - positive integer defining the grid resolution on which to scan
 
-##### Added `minecraft:invert`
+**Added `minecraft:invert`**
 
 -   Resolves to `1/argument`
 
@@ -285,7 +285,7 @@ Fields:
 
 -   `argument` - density function
 
-#### Jigsaw Structures
+**Jigsaw Structures**
 
 -   The `max_distance_from_center` field may now specify a different restriction on the vertical axis from horizontal
     -   This can be specified by an object with fields:
@@ -296,14 +296,14 @@ Fields:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#copper_chests` - all Copper Chest blocks
 -   Added `#copper` - all Copper blocks
 -   Added `#incorrect_for_copper_tool` - all blocks which will not drop items with a copper tool
 -   Added `#copper_golem_statues` - all Copper Golem Statue blocks
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#copper_chests` - all Copper Chest block items
 -   Added `#copper` - all Copper block items
@@ -368,7 +368,7 @@ Fields:
     -   `copper_shovel`
     -   `copper_sword`
 
-#### Sound Events
+**Sound Events**
 
 -   Added new sound events:
     -   `block.copper_chest.open`
@@ -411,7 +411,7 @@ Fields:
 
 > **Developer's Note**: _Although it is possible in Resource Packs, overriding Core Shaders is considered as unsupported and not an intended Resource Pack feature. These shaders exist as part of the internal implementation of the game, and as such, may change at any time as the game's internals evolve. We understand that overriding Core Shaders is used for very cool Resource Pack features, many of which lack supported alternatives. We would like to provide better, supported alternatives in the future._
 
-#### Changes to Full Screen Passes
+**Changes to Full Screen Passes**
 
 -   The following vertex shaders have been removed, and replaced by `core/screenquad.vsh`:
     -   `core/blit_screen.vsh`

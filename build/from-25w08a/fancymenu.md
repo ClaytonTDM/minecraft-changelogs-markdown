@@ -11,7 +11,7 @@ Have fun exploring!
 
 ### Farm Animal variants
 
-#### Sheep wool color in warm and cold biomes
+**Sheep wool color in warm and cold biomes**
 
 -   Reverted the change from last week that allowed Blue, Light Blue, Cyan, Yellow, Orange and Red Sheep to spawn naturally in different biomes
 -   Black Sheep will still be the most common type to spawn in cold biomes, and Brown Sheep will be the most common type in warm biomes
@@ -65,11 +65,11 @@ Have fun exploring!
 
 ### Item Components
 
-#### `blocks_attacks` component
+**`blocks_attacks` component**
 
 -   If the blocked damage has no position, the compared angle will be assumed to be the maximum `180` for `horizontal_blocking_angle` field of `damage_reductions`
 
-#### Entity components
+**Entity components**
 
 -   New component
     -   `wolf/sound_variant` - namespaced id from `wolf_sound_variant` registry
@@ -117,7 +117,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ### Farm Animal variants
 
-#### Sheep wool color in warm and cold biomes
+**Sheep wool color in warm and cold biomes**
 
 -   Sheep have updated rules for which color of wool they have based on which biome they spawn in:
     -   Temperate Biomes: (these colors are unchanged from current behavior)
@@ -191,11 +191,11 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ## Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#camels_spawnable_on` - blocks that Camels can spawn on
 
-#### Structure Tags
+**Structure Tags**
 
 -   Added `#on_savanna_village_maps` - structures that can appear on Savanna Village Maps
 -   Added `#on_desert_village_maps` - structures that can appear on Desert Village Maps
@@ -213,36 +213,36 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   Block States in the entity data of Arrows, Minecarts, Block Displays, Endermen, Falling Blocks, Primed TNT, or Piston Moving Blocks are no longer allowed to be specified as an empty object
 -   The `Tags` field will no longer be preserved if removed
 
-#### `allay`
+**`allay`**
 
 -   Removed redundant `CanDuplicate` field (controlled by `DuplicationCooldown`)
 
-#### `cat`
+**`cat`**
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-#### `dolphin`
+**`dolphin`**
 
 -   Removed `TreasurePosX`, `TreasurePosY`, `TreasurePosZ` fields
 
-#### `falling_block`
+**`falling_block`**
 
 -   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
 
-#### `fox`
+**`fox`**
 
 -   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
 
-#### `item`
+**`item`**
 
 -   The `Owner` and `Thrower` fields will no longer be preserved when removed
 
-#### `phantom`
+**`phantom`**
 
 -   The `Size` field has been renamed to `size`
 -   The `AX`, `AY`, and `AZ` fields have been collected into a single `anchor_pos` field
 
-#### `player`
+**`player`**
 
 -   The `SpawnX`, `SpawnY`, `SpawnZ`, `SpawnAngle`, `SpawnDimension`, and `SpawnForced` fields have been collected into a single `respawn` field
     -   Format: object with fields
@@ -253,64 +253,64 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The `enteredNetherPosition` field has been renamed to `entered_nether_pos`, and is now formatted as a list of doubles
     -   e.g. `entered_nether_pos: [1.0, 2.0, 3.0]`
 
-#### `primed_tnt`
+**`primed_tnt`**
 
 -   The `block_state` field now defaults to `tnt` if not specified
 
-#### `shulker_bullet`
+**`shulker_bullet`**
 
 -   The `Dir` and `Target` fields will no longer be preserved when removed
 
-#### `turtle`
+**`turtle`**
 
 -   The `HomePosX`, `HomePosY`, and `HomePosZ` fields have been collected into a single `home_pos` field
 -   Removed `TravelPosX`, `TravelPosY`, and `TravelPosZ` fields
 -   The `HasEgg` field has been renamed to `has_egg`
 
-#### `vex`
+**`vex`**
 
 -   The `LifeTicks` field has been renamed to `life_ticks`
 -   The `BoundX`, `BoundY`, and `BoundZ` fields have been collected into a single `bound_pos` field
 
-#### `villager`
+**`villager`**
 
 -   The `Gossips` field will no longer be preserved when removed
 
-#### `wandering_trader`
+**`wandering_trader`**
 
 -   The `wander_target` field will no longer be preserved when removed
 
-#### `wolf`
+**`wolf`**
 
 -   The `CollarColor` field now defaults to `14` (red) if not specified
 
-#### `zombie_villager`
+**`zombie_villager`**
 
 -   The `Gossips` field will no longer be preserved when removed
 
-#### `evoker_fangs`, `area_effect_cloud`, and all projectiles
+**`evoker_fangs`, `area_effect_cloud`, and all projectiles**
 
 -   The `Owner` field will no longer be preserved when removed
 
-#### `item_frame`, `glow_item_frame`, `painting`, and `leash_knot`
+**`item_frame`, `glow_item_frame`, `painting`, and `leash_knot`**
 
 -   The `TileX`, `TileY`, and `TileZ` fields have been collected into a single `block_pos` field
 
-#### `arrow`, `spectral_arrow`, `trident`
+**`arrow`, `spectral_arrow`, `trident`**
 
 -   The `inBlockState` and `SoundEvent` fields will no longer be preserved when removed
 
-#### `minecart`, `*_minecart`
+**`minecart`, `*_minecart`**
 
 -   The `CustomDisplayTile` field has been removed
 -   `DisplayState` will now always override the default displayed block state if specified
 -   `DisplayOffset` may now be specified to override the default offset even without a custom display block state set
 
-#### `block_display`, `item_display`, and `text_display`
+**`block_display`, `item_display`, and `text_display`**
 
 -   The `glow_color_override` field will no longer be preserved when removed
 
-#### `witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`
+**`witch`, `ravager`, `pillager`, `illusioner`, `evoker`, and `vindicator`**
 
 -   The `patrol_target` field will no longer be preserved when removed
 
@@ -319,15 +319,15 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The `CustomName` field will no longer be preserved when removed
 -   The `LootTable` field will no longer be preserved when removed
 
-#### `end_gateway`
+**`end_gateway`**
 
 -   The `exit_portal` field will no longer be preserved when removed
 
-#### `furnace`, `smoker`, `blast_furnace`
+**`furnace`, `smoker`, `blast_furnace`**
 
 -   The `RecipesUsed` field will no longer be preserved when removed
 
-#### `skull`
+**`skull`**
 
 -   The `note_block_sound` field will no longer be preserved when removed
 
@@ -349,7 +349,7 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 -   The shader programs themselves are still available and can be overridden
 -   The post-processing effects are still configurable as JSON
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   The field `program` was replaced with `vertex_shader` and `fragment_shader`
     -   `<namespace>:<path>` will resolve to `assets/<namespace>/shaders/<path>.<vsh|fsh>`
@@ -361,11 +361,11 @@ Frogday on a Thursday, who thinks of that?! In this week's snapshot we are updat
 
 ### Item rendering
 
-#### Item Display
+**Item Display**
 
 -   `firstperson_lefthand` and `thirdperson_lefthand` transforms are now rendered the same as when held in hand
 
-#### Item Entity
+**Item Entity**
 
 -   When on ground, model size is now taken into account when determining hovering motion
     -   That means that models should never clip into the block below, no matter what size they are
@@ -476,7 +476,7 @@ Conditions for The Firefly Bush playing ambient sounds have changed. It now play
 
 ### Game Rule
 
-#### `allowFireTicksAwayFromPlayer`
+**`allowFireTicksAwayFromPlayer`**
 
 -   When true, Fire and Lava ticks can occur ouside of an 8 chunk range of a player
 -   Default value: `false`
@@ -628,11 +628,11 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#plays_ambient_desert_block_sounds` - blocks that will play ambient desert block sounds
 
-#### Damage Type Tags
+**Damage Type Tags**
 
 -   Renamed `#bypasses_blocking` back to `#bypasses_shield`
 
@@ -647,7 +647,7 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
 
 ### Item Components
 
-#### Changes to the `blocks_attacks` component
+**Changes to the `blocks_attacks` component**
 
 -   New `bypassed_by` field - hashtagged damage type tag (optional)
     -   If specified, blocking is bypassed by these damage types

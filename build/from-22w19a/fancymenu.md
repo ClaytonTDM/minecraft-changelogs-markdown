@@ -34,7 +34,7 @@ Enjoy!
 -   Servers will now also send an additional icon and MOTD packet after a player has connected
     -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
 
-#### Place template
+**Place template**
 
 The `place`;;-;;command can now also place templates at a given location. Syntax: `place template <template> [pos] [rotation] [mirror] [integrity] [seed]`
 
@@ -137,9 +137,9 @@ Parameters:
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_instrument`
+**`set_instrument`**
 
 Sets item tags needed for instrument items to a random value selected from a tag.
 
@@ -445,9 +445,9 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `thrown_item_picked_up_by_player`
+**`thrown_item_picked_up_by_player`**
 
 -   Triggered when a player picks up an item that was thrown by an entity
 -   Conditions:
@@ -455,7 +455,7 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
     -   `entity` - a predicate for the entity that threw the item
     -   `item` - a predicate for the item
 
-##### `avoid_vibration`
+**`avoid_vibration`**
 
 -   Triggered when a vibration event is ignored because the source player is holding the sneak key
 -   Conditions:

@@ -70,7 +70,7 @@ Trial Chambers now generate slightly more rarely and a bit more spaced out from 
 
 ### Commands
 
-#### Inline loot values
+**Inline loot values**
 
 Arguments in following commands that previously accepted namespaced ids of loot tables, modifiers and predicates can now also accept inline definitions:
 
@@ -80,7 +80,7 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 
 ### Loot tables
 
-#### `storage` number provider
+**`storage` number provider**
 
 -   This number provider is able to access numeric values from command storage directly
 -   If selected storage does not exist or tag selected by path is not numeric or does not exist, provider returns 0
@@ -88,16 +88,16 @@ Arguments in following commands that previously accepted namespaced ids of loot 
     -   `storage` - namespaced id of command storage
     -   `path` - NBT path to field
 
-#### `set_lore` function
+**`set_lore` function**
 
 -   The `replace` field has been removed
 -   Now has `mode` like `set_fireworks` and `set_written_book_pages`
 
-#### `set_written_book_pages` function
+**`set_written_book_pages` function**
 
 -   `pages` is now a JSON Object rather than a string containing JSON
 
-#### `toggle_tooltips` loot function
+**`toggle_tooltips` loot function**
 
 -   This function can be used to modify item component tooltip visiblity
 -   It works by setting fields like `show_in_tooltip` without changing other values
@@ -107,7 +107,7 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 -   Example:
     -   `{function:"toggle_tooltips","toggles":{"enchantments":false}}` will hide enchantments tooltip
 
-#### Functions
+**Functions**
 
 -   Nested lists are no longer supported in function lists
 
@@ -141,27 +141,27 @@ The item predicate syntax (used in `execute if|unless items` and `clear` command
 
 ### Predicates
 
-#### Item sub-predicates
+**Item sub-predicates**
 
 -   Predicate `minecraft:custom_data` now accepts both SNBT data written as a string (existing format) and unflattened tags
     -   That means that `*[custom_data~{a:1}]` and `*[custom_data~"{a:1}"]` are equivalent
     -   Flattened string format has been kept since NBT type information can't be expressed in JSON
 
-#### Entity sub-predicates
+**Entity sub-predicates**
 
-##### `wolf`
+**`wolf`**
 
 New `wolf` sub-predicate has been added to match wolf variants Fields:
 
 -   `variant` - wolf variant to match (single entry, list of entries or tag)
 
-##### `cat`, `frog`, `painting`
+**`cat`, `frog`, `painting`**
 
 -   Field `variant` now accepts single entries, list of entries or tags
 
 ### New Item Stack Components
 
-#### `minecraft:food`
+**`minecraft:food`**
 
 -   When present, this item will behave as if a food (can be eaten)
 -   Format: object with fields
@@ -179,14 +179,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g: `food={nutrition:4,saturation_modifier:0.1}`
 -   On food items, has an implicit default value for that food type
 
-#### `minecraft:max_stack_size`
+**`minecraft:max_stack_size`**
 
 -   Controls the maximum stacking size of this item
 -   Format: integer between 1 and 99
     -   e.g. `max_stack_size=4`
 -   Has an implicit default value according to the item type (usually `64`)
 
-#### `minecraft:max_damage`
+**`minecraft:max_damage`**
 
 -   Controls the maximum amount of damage than an item can take
 -   If not present, the item cannot be damaged
@@ -194,14 +194,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `max_damage=123`
 -   Has an implicit default value for damageable items
 
-#### `minecraft:fire_resistant`
+**`minecraft:fire_resistant`**
 
 -   If present, this item will not burn in fire
 -   Format: empty object
     -   e.g. `fire_resistant={}`
 -   Has an implicit default value for fire-resistant items such as Netherite
 
-#### `minecraft:rarity`
+**`minecraft:rarity`**
 
 -   Controls the color of the item name
 -   Format: enumerated value, one of:
@@ -212,7 +212,7 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `rarity=rare`
 -   Special items such as Golden Apples have an implicit default value
 
-#### `minecraft:tool`
+**`minecraft:tool`**
 
 -   Controls the behavior of the item as a tool
 -   Format: object with fields
@@ -226,7 +226,7 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `tool={rules:[{blocks:"#mineable/pickaxe",speed:4.0,correct_for_drops:true}]}`
 -   Vanilla tool items will have an implicit default value based on their tier and tool type
 
-#### `hide_tooltip`
+**`hide_tooltip`**
 
 -   If present, it will completely hide whole item tooltip (that includes item name)
 -   Tooltip will be still visible and searchable in creative mode
@@ -399,7 +399,7 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
 
 ### Predicates
 
-#### Item sub-predicate
+**Item sub-predicate**
 
 -   Some fields from item predicate have been moved to a map in an optional field `predicates`
 -   The new field is similar to the `components` field on item stacks
@@ -420,7 +420,7 @@ When summon in other ways (e.g. using the Spawn Egg or using the `summon` comman
     -   That means that, for example, matching for empty enchantment list will not pass on items without `minecraft:damage` component
     -   Note: some components, like `minecraft:enchantments` have default values, so they will always match
 
-##### Example:
+**Example:**
 
 Before:
 
@@ -454,7 +454,7 @@ After:
 
 ### Loot Functions
 
-#### `set_fireworks`
+**`set_fireworks`**
 
 New function for setting the details of the `minecraft:fireworks` component.
 
@@ -482,7 +482,7 @@ Fields:
             -   If omitted, `0` (before first explosion) is used
     -   `append`: append explosions at the end of the list
 
-#### `set_firework_explosion`
+**`set_firework_explosion`**
 
 New function for setting the details of the `minecraft:firework_explosion` component.
 
@@ -506,7 +506,7 @@ Fields:
     -   Set whether the explosion should have a twinkle or not
     -   If omitted, the original `has_twinkle` value is kept (or `false` is used if there was no component)
 
-#### `set_book_cover`
+**`set_book_cover`**
 
 New function for setting the cover details of the `minecraft:written_book_content` component. If present, any pages in the book are left untouched.
 
@@ -524,7 +524,7 @@ Fields:
     -   The generation value to set
     -   If omitted, the original generation is kept (or `0` is used if there was no component)
 
-#### `set_writable_book_pages`
+**`set_writable_book_pages`**
 
 New function for manipulating the pages of the `minecraft:writable_book_content` component.
 
@@ -549,7 +549,7 @@ Fields:
             -   If omitted, `0` (before first page) is used
     -   `append`: append pages at the end of the book
 
-#### `set_written_book_pages`
+**`set_written_book_pages`**
 
 New function for manipulating the pages of the `minecraft:written_book_content` component. Same format as `set_writable_book_content` but the `pages` field contains filterable Components instead of Strings (same format as `pages` on the `minecraft:writable_book_content` component).
 

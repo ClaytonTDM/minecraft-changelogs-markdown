@@ -17,11 +17,11 @@ In this week's Snapshot we're taking a break from new features to improve ones w
 
 ### Commands
 
-#### `tick`
+**`tick`**
 
 -   The `<time>` parameter in the `tick step` command is now optional. The default value is 1
 
-#### `return`
+**`return`**
 
 -   `return run` will now always return
     -   If there are no valid results from returned command, function containing `return run` will fail (i.e. `success=0` and `result=0`)
@@ -29,13 +29,13 @@ In this week's Snapshot we're taking a break from new features to improve ones w
 -   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store value and return it outside function
 -   New subcommand `return fail` is added to make whole function fail (i.e. return `success=0` and `result=0`)
 
-#### `function`
+**`function`**
 
 -   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
 -   A single call to the `function` command will always have return when run with `return run`
     -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
 
-#### `execute if|unless function`
+**`execute if|unless function`**
 
 -   `execute if|unless function` will no longer always fail if all functions had no return
     -   If there were no `returns` in called functions, `if` will fail and `unless` will pass

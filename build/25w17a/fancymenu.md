@@ -25,12 +25,12 @@ If there are no other players in the world the experience bar will display as no
             -   eg: `/waypoint modify @s color red` to set an indicator to red
         -   Players on a team will override their default indicator color with their team color
 
-#### Player Changes
+**Player Changes**
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-#### Item Changes
+**Item Changes**
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -42,7 +42,7 @@ If there are no other players in the world the experience bar will display as no
     -   Dragon Head
     -   Piglin Head
 
-#### Potion Changes
+**Potion Changes**
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
@@ -71,7 +71,7 @@ If there are no other players in the world the experience bar will display as no
 
 ### Commands
 
-#### Added `waypoint`
+**Added `waypoint`**
 
 This is a new command for querying and modifying waypoints.
 
@@ -95,7 +95,7 @@ Arguments:
     -   `set <waypoint_style/resource>` changes the style to a specific asset under `waypoint_style/`
     -   `reset` will restore the default icon behavior of the Locator Bar
 
-##### Waypoint Styles
+**Waypoint Styles**
 
 These define custom icons to be displayed on the Locator Bar and are within the `waypoint_style/` asset directory.
 
@@ -119,13 +119,13 @@ The default implementation is as such:
 
 ### Game Rules
 
-#### Added `locatorBar`
+**Added `locatorBar`**
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 -   The Game Rule has been renamed from `useLocatorBar` during the experiment. This may break minor command related features in worlds created in the previous snapshot.
 
-#### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
@@ -148,7 +148,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `happy_ghast_avoids` - blocks that happy ghasts avoid getting close to
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
@@ -157,7 +157,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Shaders & Post-process Effects
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FOG_IS_SKY` has been removed in favour of splitting up the sky shader
 

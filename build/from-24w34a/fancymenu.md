@@ -70,7 +70,7 @@ The following changes apply to the game regardless of which experiments are turn
 
 ### Changed Item Components
 
-#### `minecraft:food`
+**`minecraft:food`**
 
 -   The food component has been changed to become a data container which only holds the food stats applied when the item is consumed
     -   This component no longer gives it the ability to be consumed, and can be done instead with the new `consumable` component
@@ -81,7 +81,7 @@ The following changes apply to the game regardless of which experiments are turn
 
 ### New Item Components
 
-#### `minecraft:use_remainder`
+**`minecraft:use_remainder`**
 
 -   If present, will replace the item with a remainder item if its stack count has decreased after use
     -   If the item has a stack count higher than 0 after use, the remainder item will be added to the inventory instead
@@ -89,7 +89,7 @@ The following changes apply to the game regardless of which experiments are turn
 -   Format: single value as an item stack
     -   e.g. `use_remainder={id:'minecraft:stick', count:1}`
 
-#### `minecraft:use_cooldown`
+**`minecraft:use_cooldown`**
 
 -   If present, this item will apply a cooldown to all items of the same type when it has been used
 -   Format: object with fields
@@ -99,7 +99,7 @@ The following changes apply to the game regardless of which experiments are turn
         -   Instead, cooldowns applied to this item will only be shared with any other items that are part of the same cooldown group
     -   e.g. `use_cooldown={seconds:1.5, cooldown_group:"minecraft:custom_weapon"}`
 
-#### `minecraft:consumable`
+**`minecraft:consumable`**
 
 -   If present, this item can be consumed on use
     -   If `food`, `potion_contents`, `ominous_bottle_amplifier` or `suspicious_stew_contents` are also present on this item, consuming this will apply the stats and effects of those components
@@ -152,7 +152,7 @@ The following changes apply to the game regardless of which experiments are turn
 -   The `rendertype_entity_glint_direct` shader has been removed (replaced by `rendertype_entity_glint`)
 -   The `rendertype_entity_translucent_cull` shader has been removed (replaced by `rendertype_item_entity_translucent_cull`)
 
-#### Shader Program Definitions
+**Shader Program Definitions**
 
 -   Program definitions for post-processing effects (`assets/<namespace>/shaders/program/<name>.json`) have been made consistent with core shader definitions (`assets/<namespace>/shaders/core/<name>.json`)
     -   The `blend` field has been removed, as it had no use
@@ -170,13 +170,13 @@ The following changes apply to the game regardless of which experiments are turn
     -   `flags` (list of strings)
         -   Will be injected as `#define <key>` at the top of the file
 
-#### Shader Imports
+**Shader Imports**
 
 -   The `#moj_import` directive now supports namespaced includes with absolute paths
     -   For example, `#moj_import <minecraft:fog.glsl>` will import `assets/minecraft/shaders/include/fog.glsl`
 -   Relative imports are not namespaced and behave as before
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   Post-processing effect configuration has been moved out of the `assets/<namespace>/shaders/post` directory to just `assets/<namespace>/post_effect`
 -   Vertex and fragment shaders used by these effects have been moved from `assets/<namespace>/shaders/program` to `assets/<namespace>/shaders/post`

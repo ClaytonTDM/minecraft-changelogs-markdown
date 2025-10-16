@@ -414,13 +414,13 @@ Crimson Forests can now be found in the Nether!
 
 -   A new high level material found in the Nether. Use it to upgrade your diamond gear!
 
-#### How to make Netherite
+**How to make Netherite**
 
 -   Mine Ancient Debris in the lower depths of the Nether. At own risk. No insurance coverage for that.
 -   Refine it into Netherite Scrap in a furnace (although that's kind of slow so you might want a Blast Furnace).
 -   Combine 4 Nether Scrap with 4 Gold Ingots in a crafting table to make a Netherite Ingot.
 
-#### Netherite effects
+**Netherite effects**
 
 -   Netherite items float in lava. So you don't lose all your gear after that unplanned lava bath.
 -   Netherite items have higher enchantment value than diamond (but not as high as gold).
@@ -467,7 +467,7 @@ Warped Forests can now be found in the Nether!
 
 ### Commands
 
-#### locatebiome
+**locatebiome**
 
 New command that locates a specified biome. Useful in creative mode when you're looking for a specific biome and don't want to fly around randomly searching for it. Syntax: `locatebiome <biome>` Parameters:
 

@@ -46,7 +46,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
 
 ### Commands
 
-#### Functions
+**Functions**
 
 -   `function` command has been changed to better accomodate new `return` command
 -   Functions no longer have any result unless they use `return` or there was error during lookup or instantiation
@@ -60,7 +60,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
     -   That means that a single call to `function` will store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-##### Limits
+**Limits**
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -74,7 +74,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   New limit with game rule `maxCommandForkCount` now restricts total amount of context that can be created by single state of functions like `execute`
     -   Example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5;;*;;5 = 25 contexts
 
-#### `execute if function`
+**`execute if function`**
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -84,7 +84,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-##### Matching
+**Matching**
 
 The matching of the result value of the function(s) that run:
 
@@ -94,7 +94,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-#### `return run`
+**`return run`**
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in previous version.
 

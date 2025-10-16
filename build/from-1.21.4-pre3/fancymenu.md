@@ -66,36 +66,36 @@ As always, a big thank you to the community for your feedback, bugs reported, an
         -   only value from new item is taken into account
         -   does not control "pop" animation in GUI when item is picked or changes count
 
-#### `minecraft:model` item model type
+**`minecraft:model` item model type**
 
-##### Added `minecraft:team` tint source type
+**Added `minecraft:team` tint source type**
 
 -   Returns team color of context entity, if any
 -   Fields:
     -   `default` - RGB value to return when there is no context entity, entity is not in a team or team has no color
 
-##### Changed `minecraft:head` special model type
+**Changed `minecraft:head` special model type**
 
 -   Added field `animation` - float controlling head animation (like Piglin ears or Ender Dragon jaw), default: `0.0`
 
-##### Added `minecraft:view_entity` boolean property
+**Added `minecraft:view_entity` boolean property**
 
 -   When not spectating, returns `true` if context entity is the local player entity, i.e. one controlled by client
 -   When spectating, returns `true` if context entity is the spectated entity
 -   If context entity is not present, will return `false`
 -   No fields
 
-##### Renamed property `minecraft:holder_type` to `minecraft:context_entity_type`
+**Renamed property `minecraft:holder_type` to `minecraft:context_entity_type`**
 
 **Developer's Note**: _Context entities were initially used only for compasses and clocks, which means that type is available only in rendering contexts where those items would show correct reading (see MC-186797 and related bugs). The name change has been made to better reflect that._
 
-##### Added `minecraft:context_dimension` property
+**Added `minecraft:context_dimension` property**
 
 -   Returns the ID of the dimension in context, if any
 -   No fields
 -   Values: namespaced dimension ID (like `minecraft:overworld`)
 
-##### Changed `minecraft:time` numeric property
+**Changed `minecraft:time` numeric property**
 
 -   Removed field `natural_only`
 -   Added field `source` - time source, possible values:
@@ -103,11 +103,11 @@ As always, a big thank you to the community for your feedback, bugs reported, an
     -   `moon_phase` - moon phase
     -   `random` - random value
 
-##### Changed `minecraft:compass` numeric property
+**Changed `minecraft:compass` numeric property**
 
 -   Added value `none` to field `target` which always returns an invalid target
 
-#### Added `minecraft:empty` item model type
+**Added `minecraft:empty` item model type**
 
 -   Does not render anything
 -   No fields
@@ -234,7 +234,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Pale Moss
+**Pale Moss**
 
 -   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
 -   Pale Moss Carpet is now more efficient to destroy with Sword
@@ -289,12 +289,12 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Creaking mob
+**Creaking mob**
 
 -   Creaking will not activate or freeze around players in Creative mode
 -   Creaking summoned from the Creaking Heart cannot be named with a Nametag
 
-#### Creaking Heart
+**Creaking Heart**
 
 -   Comparators attached to the Creaking Heart block will output a signal strength dependent on the distance to the connected Creaking
 
@@ -316,7 +316,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Item Components
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   Added field `camera_overlay` (optional): namespaced ID of the overlay texture to use when equipped
     -   If not specified, no overlay is used

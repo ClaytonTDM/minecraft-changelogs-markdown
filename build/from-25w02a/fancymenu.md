@@ -150,7 +150,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   For Text Components with the `nbt` type and `interpret` set to `true`, Text Components will be parsed from the given NBT directly rather than converting to string and parsing as JSON
 -   The format of hover and click events has been updated
 
-#### Hover Events
+**Hover Events**
 
 -   The `hoverEvent` field has been renamed to `hover_event`
 -   The legacy `value` field (which was parsed from a rendered text component) is no longer supported
@@ -168,7 +168,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
     -   The `type` field has been renamed to `id`
     -   e.g. `{action:'show_entity',contents:{id:[I;0,0,0,0],type:'minecraft:pig'}}` becomes `{action:'show_entity',uuid:[I;0,0,0,0],id:'minecraft:pig'}`
 
-#### Click Events
+**Click Events**
 
 -   The `clickEvent` field has been renamed to `click_event`
 -   For the `open_url` action:
@@ -192,16 +192,16 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#replaceable_by_mushrooms` - exhaustive list of all bocks that can be replaced as a mushroom is placed or grows
 -   Added `#sword_instantly_mines` - blocks that are instantly mined by Swords
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#book_cloning_target` - item that can be crafted together with a Written Book to clone it
 
-#### Biome Tags
+**Biome Tags**
 
 -   Added `#spawns_cold_variant_farm_animals` - all biomes where cold variant of farm animals spawn
 -   Added `#spawns_warm_variant_farm_animals` - all biomes where warm variants of farm animals spawn
@@ -231,7 +231,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 
 ### Recipes
 
-#### `crafting_transmute` Recipe Type
+**`crafting_transmute` Recipe Type**
 
 -   The `result` field now supports specifying a count and a components patch to apply to the result
 -   The components patch is applied to the final transmuted item
@@ -244,7 +244,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 
 ### Item Components
 
-#### New `weapon` component
+**New `weapon` component**
 
 -   When present, the 'Item Used' statistic will be incremented for each attack with the item
 -   The specified amount of damage can be done to the item with each attack
@@ -255,7 +255,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
         -   If `true`, will disable a blocking Shield on successful attack
     -   e.g. `weapon={damage_per_attack:2}`
 
-#### New `potion_duration_scale` component
+**New `potion_duration_scale` component**
 
 -   When present, for items that have the `potion_contents` component, the duration of the applied effects will be scaled by this factor
 -   This also applies to `custom_effects` in the `potion_contents` component, unlike the previous hardcoded scaling factor
@@ -263,7 +263,7 @@ It's the first snapshot Wednesday of 2025, and we have some fun new features to 
 -   Format: non-negative float
     -   e.g. `potion_duration_scale=0.25`
 
-#### `tool` Component
+**`tool` Component**
 
 -   Added new optional field: `can_destroy_blocks_in_creative` (bool)
     -   If `false`, players cannot break blocks while holding this tool in Creative Mode
@@ -394,15 +394,15 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 
 ### Item models
 
-#### `minecraft:special` item model type
+**`minecraft:special` item model type**
 
-##### Changed `minecraft:head` special model type
+**Changed `minecraft:head` special model type**
 
 -   Added field `texture` - optional namespaced ID for texture, without `textures/entity/` prefix and `.png` suffix
     -   If absent, default texture will be used, depending on `kind` field
     -   Additionally, if present, `minecraft:profile` component is ignored
 
-##### Added `minecraft:standing_sign` special model type
+**Added `minecraft:standing_sign` special model type**
 
 -   Renders a standing sign
 -   Fields:
@@ -410,7 +410,7 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-##### Added `minecraft:hanging_sign` special model type
+**Added `minecraft:hanging_sign` special model type**
 
 -   Renders a hanging sign
 -   Fields:
@@ -418,30 +418,30 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
     -   `texture` - optional namespaced ID for texture, without `textures/entity/signs/hanging/` prefix and `.png` suffix
         -   if not present, it will be derived from `wood_type`
 
-#### `minecraft:condition` item model type
+**`minecraft:condition` item model type**
 
 -   Removed `minecraft:xmas` boolean property, replaced by `minecraft:local_time`
 -   Removed `minecraft:shift_down` boolean property, replaced by `minecraft:extended_view`
 
-##### Changed `minecraft:has_component` boolean property
+**Changed `minecraft:has_component` boolean property**
 
 -   Added field: `ignore_default` - if default component value should be handled as "no component", default: `false`
 
-##### Added `minecraft:extended_view` boolean property
+**Added `minecraft:extended_view` boolean property**
 
 -   Returns true if player has requested extended details by holding shift key down
     -   Note: not a keybind, can't be rebound
 -   Only works when item is displayed in UI
 -   No fields
 
-##### Added `minecraft:keybind_down` boolean property
+**Added `minecraft:keybind_down` boolean property**
 
 -   Returns true if keybind is currently active
 -   Fields:
     -   `keybind` - keybind ID, same as value in `keybind` text component
         -   Examples: `key.use`, `key.left`
 
-##### Added `minecraft:local_time` property
+**Added `minecraft:local_time` property**
 
 -   Returns the current time formatted according to a given pattern
 -   The value is updated every second
@@ -465,7 +465,7 @@ Sharpen your pickaxes, another snapshot is here! In today's snapshot we have a b
 
 > **Developer's Note**: _There is no "use locale set on client" option to avoid unexpected issues when the user's locale does not match the pack developer's one. Also, time is complicated, be careful._
 
-##### Added `minecraft:holder_type` property
+**Added `minecraft:holder_type` property**
 
 -   Returns holding entity type, if present
 -   No fields

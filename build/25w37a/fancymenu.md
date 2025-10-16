@@ -120,7 +120,7 @@ Happy mining!
 
 ### Shaders & Post-process Effects
 
-#### Shaders
+**Shaders**
 
 -   A new `PER_FACE_LIGHTING` flag has been added to the following shaders:
     -   `core/entity.vsh`

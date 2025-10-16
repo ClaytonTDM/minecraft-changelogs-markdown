@@ -174,26 +174,26 @@ This is such a fearsome weapon that it makes us quiver!
 -   New loading mechanics
 -   Unique load animation
 
-#### Enchantments
+**Enchantments**
 
 -   Choose between the following three enchantments for your crossbow:
 
-##### Multishot (I)
+**Multishot (I)**
 
 -   Ever wanted to shoot more than one arrow at once? Look no further! With multishot, your crossbow splits your arrow into three, shooting the usual arrow straight ahead and two more at angles off to the sides!
 -   Cannot be combined with piercing
 
-##### Piercing (I, II, III, IV)
+**Piercing (I, II, III, IV)**
 
 -   With this pointy enchantment, arrows shot from your crossbow can travel through mobs, hitting more than one per shot
 -   The number of mobs that can be damaged by a single arrow is equal to the level of this enchantment + 1
 -   Cannot be combined with multishot
 
-##### Quick Charge (I, II, III)
+**Quick Charge (I, II, III)**
 
 -   Each level of quick charge decreases the amount of time it takes to fully charge your crossbow by .25 seconds
 
-#### Loading Mechanics
+**Loading Mechanics**
 
 -   To charge the crossbow, hold down the "Use" button
 -   Once the crossbow string has been pulled all the way back, let go
@@ -490,24 +490,24 @@ Hmmmm...
 
 -   Entity type predicates now accept tags (`#baz`)
 
-#### Damage source predicate
+**Damage source predicate**
 
 -   Damage source predicate now has option: `is_lightning`
 
-#### Entity equipment predicate
+**Entity equipment predicate**
 
 -   Entity predicate now accepts `equipment` field
 -   This predicate can contain up to six fields: `head`, `chest`, `legs`, `feet`, `mainhand`, `offhand`
 -   If this predicate is non-null, test will fail for entities that have no equipment (i.e. not mobs, players or armor stands)
 
-#### Entity flags predicate
+**Entity flags predicate**
 
 -   Entity predicate now accepts `flags` field
 -   Available tests: `is_on_fire`, `is_sneaking`, `is_sprinting`, `is_swimming`, `is_baby`
 
 ### Chat components
 
-#### NBT chat component
+**NBT chat component**
 
 -   Block variant `{"nbt": <path>, "block":"<coordinates>"}`, where `<coordinates>` field uses same format as `/setblock`
 -   Entity variant `{"nbt": <path>, "entity":<selector>}`, where `selector` field uses same format as `/kill`
@@ -521,7 +521,7 @@ Hmmmm...
 -   `type` field in `@` selectors now accepts entity type tags (`type=#foo` and `type=!#bar`)
 -   Item frame contents can now be modified with `/replaceitem`
 
-#### `data`
+**`data`**
 
 -   `data modify <block or entity> <path> <operation> <source>`
     -   Apply operation to selected fields
@@ -532,24 +532,24 @@ Hmmmm...
         -   `from <block or entity> <path>` - copies value from existing tag
         -   `value <nbt>` - uses NBT literal
 
-#### `execute`
+**`execute`**
 
 -   `execute if data <block or entity> <path>` (and `execute unless`)
     -   when used as command, return count of matched elements
     -   when used as part of command, continues on non-zero(`if`) or zero(`unless`) count
 
-#### `loot`
+**`loot`**
 
 General syntax: `loot <target> <source>`
 
-##### Sources
+**Sources**
 
 -   `fish <loot table id> <fishing location> [tool <item>|mainhand|offhand]` - uses fishing context
 -   `loot <loot table id>` - uses loot chest context (can be also used for advancement awards and cat gifts)
 -   `kill <entity selector>` - simulates entity drops
 -   `mine <mining location> [tool <item>|mainhand|offhand]` - simulates block drops
 
-##### Targets
+**Targets**
 
 -   `spawn <position>` - drops in world
 -   `replace` - works similar to `/replaceitem`. If `count` is missing, command will try to place all returned items. If `count` is higher than number of items, remaining slots will be cleared.
@@ -558,19 +558,19 @@ General syntax: `loot <target> <source>`
 -   `give <player selector>` - inserts items into player's inventory (similar to `/give`)
 -   `insert <position>` - inserts items into container (similar to shift left-click)
 
-#### `schedule`
+**`schedule`**
 
 Schedules function or tag to run in `<time>` gametime ticks. Returns trigger time. Any tag or function can be scheduled only once. Calling this command for already scheduled function or tag will replace older record.
 
-#### `teammsg`
+**`teammsg`**
 
 General syntax: `teammsg <message>` Sends `<message>` to all players on the team of the player who runs the command. Available to all players on a team.
 
-##### Alias
+**Alias**
 
 -   `tm <message>`
 
-#### NBT paths
+**NBT paths**
 
 -   Can now return multiple values. When used as target, modification will be applied to every element
 -   When setting location and no elements are found, new matching element will be created:
@@ -583,12 +583,12 @@ General syntax: `teammsg <message>` Sends `<message>` to all players on the team
 
 ### Dedicated server
 
-#### `server.properties`
+**`server.properties`**
 
 -   `difficulty` and `gamemode` settings now accept string names (integer values are still allowed as legacy option)
 -   Server will exit faster is `eula.txt` is not set
 
-#### Command line
+**Command line**
 
 -   Added new option `--help`. Not going to tell you what it does.
 -   New command line option `initSettings` initializes `eula.txt` and `server.properties` with defaults, then exits
@@ -620,120 +620,120 @@ We are de-lighted to have a new light engine!
 -   `killer` - primary source of damage
 -   `direct_killer` - direct source of damage (may be different than `killer` - for example, when killing with bow, `killer` will be bow user, while `direct_killer` will be arrow entity)
 
-#### Modified conditions
+**Modified conditions**
 
-##### `entity_properties`
+**`entity_properties`**
 
 Now uses same predicate syntax as advancements (like `player_killed_entity`). Parameters are now described in `predicate` field. If this field is empty object, any entity is accepted (but still has to be present).
 
-#### Modified functions
+**Modified functions**
 
-##### `set_name`
+**`set_name`**
 
 Added new parameter `entity` (see note about entity target parameter for values). If present, name will be resolved with that entity (allows using selector and score components).
 
-#### New conditions
+**New conditions**
 
-##### `alternative`
+**`alternative`**
 
 Joins conditions from parameter `terms` with "or" ("disjunction").
 
-##### `block_state_property`
+**`block_state_property`**
 
 Check properties of block state.
 
-###### Parameters
+**Parameters**
 
 -   `block` - id of block. Test will fail, if broken block does not match
 -   `properties` - map of `property:value` pairs
 
-##### `damage_source_properties`
+**`damage_source_properties`**
 
 Checks damage source. Same syntax as `entity_properties`, but uses damage source predicate (see `player_hurt_entity` advancement trigger).
 
-##### `inverted`
+**`inverted`**
 
 Inverts condition from parameter `term`
 
-##### `location_check`
+**`location_check`**
 
 Applies advancement location predicate.
 
-###### Parameters
+**Parameters**
 
 -   `predicate` - predicate applied to location. Uses same structure as advancements.
 
-##### `match_tool`
+**`match_tool`**
 
 Checks tool (available for block breaking and fishing).
 
-###### Parameters
+**Parameters**
 
 -   `predicate` - predicate applied to item. Uses same structure as advancements.
 
-##### `survives_explosion`
+**`survives_explosion`**
 
 Return true with `1/explosion radius` probability.
 
-##### `table_bonus`
+**`table_bonus`**
 
 Passes with probability picked from table, indexed by enchantment level.
 
-###### Parameters
+**Parameters**
 
 -   `enchantment` - id of enchantment
 -   `chances` - list of probabilities for enchantment level, indexed from 0
 
-##### `weather_check`
+**`weather_check`**
 
 No surprise here.
 
-###### Parameters
+**Parameters**
 
 -   `raining` - optional boolean
 -   `thundering` - optional boolean
 
-#### New entries
+**New entries**
 
-##### `alternatives`
+**`alternatives`**
 
 Tests conditions of child entries and executes first that can run. Has no weight or quality, but may have conditions.
 
-##### `dynamic`
+**`dynamic`**
 
 Gets block specific drops. Currently implemented:
 
 -   `minecraft:contents` - block entity contents, for shulker boxes
 -   `minecraft:self` - for banners and player skulls
 
-##### `group`
+**`group`**
 
 Executes child entries when own conditions pass. Has no weight or quality.
 
-##### `sequence`
+**`sequence`**
 
 Executes child entries until first one that can't run due to conditions. Has no weight or quality, but may have conditions.
 
-##### `tag`
+**`tag`**
 
 Adds contents of item tag. Fields:
 
 -   `name` - id of tag
 -   `expand` - if false, entry will return all contents of tag, otherwise entry will behave as multiple item entries (all with same weight and quality)
 
-#### New functions
+**New functions**
 
-##### `apply_bonus`
+**`apply_bonus`**
 
 Applies one of predefined bonus formulas.
 
-###### Common fields
+**Common fields**
 
 -   `enchantment` - id for enchantment level used for calculation
 -   `formula` - type of used bonus formula
 -   `parameters` - values required for formula (depend on type)
 
-###### Formulas (based on existing fortune bonuses):
+**Formulas (based on existing fortune bonuses):**
 
 -   `binomial_with_bonus_count`:
     -   parameters: `extraRounds : int`, `probability : float`
@@ -745,15 +745,15 @@ Applies one of predefined bonus formulas.
     -   no parameters
     -   applies formula `count * (max(0, random(0..1) - 1) + 1)`
 
-##### `copy_name`
+**`copy_name`**
 
 Copies display name from block entity to item (see enchanting table behaviour)
 
-##### `copy_nbt`
+**`copy_nbt`**
 
 Copies NBT from source to item tags.
 
-###### Parameters
+**Parameters**
 
 -   `source` - may be `this`, `killer`, `killer_player` or `block_entity`
 -   `ops` - list of copy operations:
@@ -761,50 +761,50 @@ Copies NBT from source to item tags.
     -   `target` - target path
     -   `op` - `replace`, `append` (for lists), `merge` - for compound tags
 
-##### `explosion_decay`
+**`explosion_decay`**
 
 Applies flat chance (equal to `1/explosion radius`) for every item to be destroyed (items in stack are processed separately)
 
-##### `fill_player_head`
+**`fill_player_head`**
 
 Copies player profile info to player head item.
 
-###### Parameters
+**Parameters**
 
 -   `entity` - source of profile (see note about entity target parameter for values, will do nothing if it's not player).
 
-##### `limit_count`
+**`limit_count`**
 
 Limits count of every item stack to range.
 
-###### Parameters
+**Parameters**
 
 -   `limit`:
     -   `min` - optional
     -   `max` - optional
 
-##### `set_contents`
+**`set_contents`**
 
 Populates `BlockEntityTag.Items` (works for shulker boxes, chests, etc.) with items from entries.
 
-###### Parameters
+**Parameters**
 
 -   `entries` - list of entries (same as in pool)
 
-##### `set_loot_table`
+**`set_loot_table`**
 
 Sets `BlockEntityTag.LootTable` and `BlockEntityTag.LootPoolSeed` tags.
 
-###### Parameters
+**Parameters**
 
 -   `name` - id of loot table
 -   `seed` - seed (if omitted or 0, `LootPoolSeed` will not be set)
 
-##### `set_lore`
+**`set_lore`**
 
 Adds or replaces lore lines.
 
-###### Parameters
+**Parameters**
 
 -   `lore` - list of lines (in chat component format) to be added
 -   `replace` - if true, previous lore is erased
@@ -818,7 +818,7 @@ Adds or replaces lore lines.
 
 ### Refactoring
 
-#### Changes to render options
+**Changes to render options**
 
 -   Removed option to turn off VBO in the game settings. VBO are now always used.
 

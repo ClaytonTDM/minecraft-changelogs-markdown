@@ -38,7 +38,7 @@ Edit: We have published a fix for a crash issue in this Snapshot. If you are exp
 
 ### Commands
 
-#### `return`
+**`return`**
 
 The `return` command can be used to control execution flow inside functions and change their return value. Effects:
 
@@ -56,9 +56,9 @@ Parameters:
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `recipe_crafted`
+**`recipe_crafted`**
 
 -   Triggered when crafting a recipe
 -   Conditions:
@@ -75,7 +75,7 @@ Parameters:
 
 ### Display entity
 
-#### Rendering changes
+**Rendering changes**
 
 -   `item_display` items have been rotated 180 degrees around Y axis to better match transformation applied when rendering items on armor stand head and in item frames
     -   For reference, order of transformations applied to model (starting from innermost) is `item_transform`, rotate Y 180, `transformation` field, entity orientation (billboard option + `Rotation` field + `Pos` field)

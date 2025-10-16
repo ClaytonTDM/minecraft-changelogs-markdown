@@ -165,14 +165,14 @@ Happy mining!
 
 ### JFR Profiling
 
-#### Custom events
+**Custom events**
 
 -   `minecraft.ServerTickTime`: sampling event exposing average server tick times at one second intervals
 -   `minecraft.ChunkGeneration`: time taken to generate individual chunk stages
 -   `minecraft.PacketRead | minecraft.PacketSent`: network traffic
 -   `minecraft.WorldLoadFinishedEvent`: initial world loading duration
 
-#### Ending a profiling run
+**Ending a profiling run**
 
 The run will then be stopped either by:
 
@@ -180,15 +180,15 @@ The run will then be stopped either by:
 -   `jfr stop` in-game command
 -   `jcmd` CLI tool
 
-#### Overview
+**Overview**
 
 Java Flight Recorder ([https://openjdk.java.net/jeps/328](https://openjdk.java.net/jeps/328)) is the internal JVM profiling tool bundled with the Java Runtime to analyze performance and runtime characteristics. It's a useful tool for exposing internal JVM performance metrics as well as custom metrics that can be monitored or analyzed using any stock Java profiler or monitoring agents.
 
-#### Reports
+**Reports**
 
 A summary JSON report is written both to the log file and in the debug folder accompanied by a `.jfr` recording ready to be analyzed in i.e JMC [https://github.com/openjdk/jmc](https://github.com/openjdk/jmc) or any other profiler tool supporting the format.
 
-#### Starting a profiling run
+**Starting a profiling run**
 
 A profiling run can be started using any of the following alternatives:
 
@@ -198,9 +198,9 @@ A profiling run can be started using any of the following alternatives:
 
 ### Loot tables
 
-#### Changed functions
+**Changed functions**
 
-##### `set_contents`, `set_loot_table`
+**`set_contents`, `set_loot_table`**
 
 Added new mandatory field `type`. This type will be written into `BlockEntityTag.id`, to make sure this tag can be correctly migrated between versions
 

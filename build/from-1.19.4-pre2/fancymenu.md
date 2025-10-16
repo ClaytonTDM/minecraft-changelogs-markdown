@@ -98,13 +98,13 @@ Happy mining!
 
 ### Commands
 
-##### `execute positioned over`
+**`execute positioned over`**
 
 New `execute` sub-command for finding positions on top of a heightmap. Changes the height of the execution position to be on top of the given heightmap. Syntax:
 
 -   `execute positioned over <heightmap>`
 
-###### Heightmaps
+**Heightmaps**
 
 A heightmap records the highest position in a column of blocks according to some criteria. Available options:
 
@@ -305,7 +305,7 @@ Happy mining!
 
 ### Loot tables and Advancements
 
-#### New entity sub-predicate types
+**New entity sub-predicate types**
 
 -   Added new entity sub-predicates for some entity types with variants:
 -   `axolotl`

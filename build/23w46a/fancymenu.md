@@ -22,9 +22,9 @@ Enjoy!
 
 ### Commands
 
-#### `scoreboard`
+**`scoreboard`**
 
-##### Display names
+**Display names**
 
 -   Each entry in a scoreboard can now have a custom display name
 -   Those values are kept separate per objective and score holder
@@ -35,7 +35,7 @@ Enjoy!
     -   `scoreboard players display name <targets> <objective> <text component>` - set display name
     -   `scoreboard players display name <targets> <objective>` - clear display name
 
-##### Display name auto-update
+**Display name auto-update**
 
 -   To make display name management easier, objectives can also be configured to auto-update display names on every score update
 -   This option is disabled by default
@@ -43,7 +43,7 @@ Enjoy!
 -   Command to control auto-update for objective:
     -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
 
-##### Number formatting
+**Number formatting**
 
 -   Scores in numeric form can now be formatted
 -   Formats can be set for both objectives and individual scores

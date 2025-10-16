@@ -46,7 +46,7 @@ Attributes have been moved to game registry. That means few changes: ​
 -   Items and entities will no longer keep unknown attributes
 -   Names of some attributes have been renamed to meet resource location requirements
 
-#### Renames:
+**Renames:**
 
 -   `generic.maxHealth` 🡆 `generic.max_health`
 -   `zombie.spawnReinforcements` 🡆 `zombie.spawn_reinforcements`

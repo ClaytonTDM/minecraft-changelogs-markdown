@@ -12,7 +12,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   If the output result has multiple type of items all the result items will be ejected together
 -   The Crafter can be oriented in any direction when placed
 
-#### Crafter UI
+**Crafter UI**
 
 -   The Crafter has a 3x3 interactable crafting grid
 -   The Crafter’s crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by clicking or pressing on a slot with an empty hand
@@ -20,7 +20,7 @@ Hey! Today we bring you the first of the features we've shown you during Minecra
 -   Unlike the Crafting Table, the Crafter displays a preview of the crafted item which will be crafted and ejected on the next Redstone pulse but cannot be manually taken out by the player
 -   The Crafter UI is shared between all players interacting with the Crafter, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-#### Crafter interaction with other blocks
+**Crafter interaction with other blocks**
 
 -   The Comparator signal strength is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers can be used to both insert and pull out items from the Crafter
@@ -46,7 +46,7 @@ We want to hear your feedback on the Crafter, so please let us know what you thi
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   The optional `type` field has a new allowed value: `selector`
 -   Components of type `nbt` now have `source` field with allowed values `entity`, `block`, `storage`
@@ -153,7 +153,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
 
 ### Commands
 
-#### Functions
+**Functions**
 
 -   `function` command has been changed to better accomodate new `return` command
 -   Functions no longer have any result unless they use `return` or there was error during lookup or instantiation
@@ -167,7 +167,7 @@ We want to hear your feedback on these improvements to Decorated Pots - let us k
     -   That means that a single call to `function` will store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-##### Limits
+**Limits**
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -181,7 +181,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   New limit with game rule `maxCommandForkCount` now restricts total amount of context that can be created by single state of functions like `execute`
     -   Example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5;;*;;5 = 25 contexts
 
-#### `execute if function`
+**`execute if function`**
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -191,7 +191,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-##### Matching
+**Matching**
 
 The matching of the result value of the function(s) that run:
 
@@ -201,7 +201,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-#### `return run`
+**`return run`**
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in previous version.
 
@@ -260,7 +260,7 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as string instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network
@@ -468,12 +468,12 @@ Hello! This very technical snapshot contains vibration changes, data pack and re
 
 -   Changed mob effect storage on items, entities and block entities
 
-#### Mob effect storage changes
+**Mob effect storage changes**
 
 -   Game no longer uses numeric values when storing mob effects to world (so, for example, `4` becomes `minecraft:mining_fatigue`)
 -   Various mob effect fields have been renamed for consistency with new structures
 
-##### Mob Effect Instance
+**Mob Effect Instance**
 
 This structure is used in many places, so changes are described separately.
 
@@ -486,45 +486,45 @@ This structure is used in many places, so changes are described separately.
 -   `HiddenEffect` -> `hidden_effect`, also since it's mob effect instance, changes apply recursively
 -   `FactorCalculationData` -> `factor_calculation_data`
 
-##### Items
+**Items**
 
-###### `potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`
+**`potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-###### `suspicous_stew`
+**`suspicous_stew`**
 
 -   `Effects` -> `effects`, for each entry:
     -   `EffectId` -> `id`, also changed from number to string id
     -   `EffectDuration` -> `duration`
 
-##### Entities
+**Entities**
 
-###### `mooshroom`
+**`mooshroom`**
 
 -   Removed `EffectId` and `EffectDuration`
 -   Added `stew_effects` with the same format as `suspicious_stew.effects` tag (i.e. list of effect id and duration)
 
-###### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   `Effects` -> `effects`, contents tranformed as a list of mob effect instances
 
-###### `arrow`
+**`arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-###### Players, Armor Stands and mobs
+**Players, Armor Stands and mobs**
 
 -   `ActiveEffects` -> `active_effects`, contents tranformed as a list of mob effect instances
 
-##### Block Entities
+**Block Entities**
 
-###### `beacon`
+**`beacon`**
 
 -   `Primary` -> `primary_effect`, also changed from number to string id
 -   `Secondary` -> `secondary_effect`, also changed from number to string id
 
-#### Loot Tables
+**Loot Tables**
 
 -   Added `sequence` loot function
     -   Contains 1 field:

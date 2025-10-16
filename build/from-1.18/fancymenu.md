@@ -77,30 +77,30 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 
 ### New Overworld Biomes
 
-#### Dripstone Caves
+**Dripstone Caves**
 
 -   Contains plenty of Pointed Dripstone and Dripstone Block on the floors and ceilings, as well as within small pools of water
 -   In some places, you'll find larger stalagmites, stalactites, and columns built from Dripstone Blocks
 -   Contains extra Copper Ore
 -   Drowned can spawn in aquifers inside Dripstone Caves
 
-#### Frozen Peaks
+**Frozen Peaks**
 
 -   Smooth mountain peaks with ice and snow
 -   Spawns Goats and Yeti. Wait, no, actually it's just Goats.
 
-#### Grove
+**Grove**
 
 -   Snowy terrain with big Spruce Trees and Powder Snow traps. You might want to wear leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops
 -   Spawns Wolves, Rabbits, and Foxes
 
-#### Jagged Peaks
+**Jagged Peaks**
 
 -   Dramatic jagged mountain peaks with Snow and Stone blocks
 -   Spawns Goats
 
-#### Lush Caves
+**Lush Caves**
 
 -   Moss covers the floors and ceilings
 -   Spore Blossoms grow from the ceiling and drip particles
@@ -109,20 +109,20 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   The Azalea Tree loves to have its roots in Lush Caves, so if you find an Azalea Tree (either overground or in a cave) you know there is a Lush Cave beneath you
 -   Cave Vines with Glow Berries grow from the ceiling and light up the caves
 
-#### Meadow
+**Meadow**
 
 -   Large grassy and flowery biome that tends to generate high up on plateaus or next to large mountain ranges
 -   Sometimes contains a lone, tall Oak or Birch Tree with a Bee Nest
 -   Think Sound of Music!
 -   Spawns Donkeys, Rabbits, and Sheep
 
-#### Snowy Slopes
+**Snowy Slopes**
 
 -   Very snowy terrain that can hide Powder Snow traps. I hope you kept those leather boots!
 -   Tends to generate on high-altitude terrain beneath mountain peaks or on hilltops
 -   Spawns Rabbits and Goats
 
-#### Stony Peaks
+**Stony Peaks**
 
 -   Stony mountain peaks that may be jagged or smooth
 -   These sometimes have large strips of Calcite running through them
@@ -139,7 +139,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 -   Diamond Ore generates below height 16, with more Diamond Ore the lower you go. Diamond Ore have reduced air exposure, so you will find more Diamond Ore buried or underwater than exposed to air.
 -   Emerald Ore generates above height -16 in mountainous biomes, with more Emerald Ore the higher you go. Emerald Ore below height 0 is very rare!
 
-###### Ore Distribution in Minecraft 1.18
+**Ore Distribution in Minecraft 1.18**
 
 ![Minecraft 1.18 Ore Distribution](https://launchercontent.mojang.com/images/1-18-ore-distribution.jpg)
 
@@ -228,16 +228,16 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
 
 ### Advancements
 
-#### Changed triggers
+**Changed triggers**
 
-##### `nether_travel`
+**`nether_travel`**
 
 -   `entered` condition is renamed to `start_position`
 -   `exited` has been removed since it was identical to `player.location`
 
-#### New triggers
+**New triggers**
 
-##### `fall_from_height`
+**`fall_from_height`**
 
 -   Triggered when a player lands after falling
 -   Conditions:
@@ -245,7 +245,7 @@ Where am I? It’s dark down here! It’s almost as if I fell a greater distance
     -   `start_position` - a location predicate for the last position before the falling started
     -   `distance` - a predicate for the distance between `start_position` and the player
 
-##### `ride_entity_in_lava`
+**`ride_entity_in_lava`**
 
 -   Triggered for every tick when a player rides in lava
 -   Conditions
@@ -266,7 +266,7 @@ Minecraft now uses Java version 17. If you are using a default setup, the Launch
 
 ### JFR Profiling
 
-#### Custom events
+**Custom events**
 
 All events are enabled when starting the profiling using either `jfr start` command or `--jfrProfile` startup flag. If profiling is started through any other means for monitoring purposes, only the `ServerTickTime`, `LoadWorld` and `NetworkSummary` are included by default.
 
@@ -276,12 +276,12 @@ All events are enabled when starting the profiling using either `jfr start` comm
 -   `minecraft.ChunkGeneration`: time taken to generate individual chunk stages
 -   `minecraft.LoadWorld`: initial world loading duration
 
-#### Overview
+**Overview**
 
 [Java Flight Recorder](https://openjdk.java.net/jeps/328) is the internal JVM profiling tool bundled with the Java Runtime to analyze performance and runtime characteristics.  
 It's a useful tool for exposing internal JVM performance metrics as well as custom metrics that can be monitored or analyzed using any stock Java profiler or monitoring agents.
 
-#### Profiling lifecycle
+**Profiling lifecycle**
 
 A profiling run can be started using any of the following alternatives:  
 The run will then be stopped either by:
@@ -293,25 +293,25 @@ The run will then be stopped either by:
 -   `jfr stop` in-game command
 -   `jcmd` CLI tool
 
-#### Reports
+**Reports**
 
 A summary JSON report is written both to the log file and in the debug folder accompanied by a `.jfr` recording ready to be analyzed in i.e [JMC](https://github.com/openjdk/jmc) or any other profiler tool supporting the format.
 
 ### Loot tables
 
-#### Changed functions
+**Changed functions**
 
-##### `set_contents`, `set_loot_table`
+**`set_contents`, `set_loot_table`**
 
 Added new mandatory field `type`. This type will be written into `BlockEntityTag.id`, to make sure that this tag can be correctly migrated between versions.
 
-#### New functions
+**New functions**
 
-##### `set_potion`
+**`set_potion`**
 
 -   Sets the `Potion` tag on any item
 
-###### Parameters:
+**Parameters:**
 
 -   `id` - potion id
 
@@ -333,7 +333,7 @@ Added new mandatory field `type`. This type will be written into `BlockEntityTag
 
 ### Particles
 
-#### `block_marker`
+**`block_marker`**
 
 -   Renders with a texture declared in the `particle` slot for a model assigned to the configured block state
 -   Is summoned with same syntax as the `block` particle (i.e. `block_marker wheat[age=2]`)
@@ -404,7 +404,7 @@ In this release, we are re-introducing diagnostic tracking, which was part of Mi
 
 -   At this point, the only implemented event is world load
 
-#### World Load event
+**World Load event**
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:

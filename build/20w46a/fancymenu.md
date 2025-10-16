@@ -17,7 +17,7 @@ Snowier snow!
 -   Wear leather boots to prevent yourself from sinking into Powder Snow blocks
 -   Leave a Cauldron outside in falling snow and it will fill with Powder Snow
 
-#### Freezing
+**Freezing**
 
 -   Standing in Powder Snow will slowly freeze an entity
 -   Once frozen, freeze damage is done every few seconds to the frozen entity
@@ -64,7 +64,7 @@ The function part of loot tables can now be defined as separate data pack resour
 
 ### Commands
 
-#### `item`
+**`item`**
 
 Modifies item or block inventory.
 
@@ -83,9 +83,9 @@ For example, `/item block ~ ~ ~ container.0 copy entity @s enderchest.0` will co
 
 ### Loot tables
 
-#### New conditions
+**New conditions**
 
-##### `value_check`
+**`value_check`**
 
 Checks range of value.
 
@@ -94,46 +94,46 @@ Parameters:
 -   `value` - see "New value providers" section (currently combination of random generators and score)
 -   `range` - min/max range
 
-#### Changed conditions
+**Changed conditions**
 
-##### `score`
+**`score`**
 
 `entity` parameter has now been replaced with `target`. It can either contain value from old `entity` field (like `this`) or be an score holder name in form `{"name": "..."}`.
 
-#### Changed functions
+**Changed functions**
 
-##### `set_damage`
+**`set_damage`**
 
 This function now has `add` parameter. If `true`, change will be relative to current damage. If `false`, damage will be replaced with current value (default behavior)
 
-##### `set_count`
+**`set_count`**
 
 This function now has `add` parameter. If `true`, change will be relative to current item count. If `false`, item count will be replaced with current value (default behavior)
 
-##### `copy_nbt`
+**`copy_nbt`**
 
 `source` parameter can now be set to `{"storage": <namespaced id>}`, to access command storage.
 
-#### New functions
+**New functions**
 
-##### `set_enchantments`
+**`set_enchantments`**
 
 Modifies enchantments on item
 
-###### Parameters
+**Parameters**
 
 -   `enchantments` - map of enchantment id to level value (can be score or random number)
 -   `add` - if `true`, change will be relative to current level. If `false`, level will be replaced with current value (default behavior)
 
-#### New value providers
+**New value providers**
 
 Note: value providers can be used in same places as random number generators.
 
-##### `score`
+**`score`**
 
 Returns scaled scoreboard value.
 
-###### Parameters
+**Parameters**
 
 -   `score` - scoreboard name
 -   `target` - same as `target` in `score` predicate

@@ -120,7 +120,7 @@ Happy mining!
 
 ### Shaders & Post-process Effects
 
-#### Shaders
+**Shaders**
 
 -   A new `PER_FACE_LIGHTING` flag has been added to the following shaders:
     -   `core/entity.vsh`
@@ -275,7 +275,7 @@ Data Fields:
 
 ## Resource Pack Version 68.0
 
-#### Shaders
+**Shaders**
 
 -   The following unused shaders have been removed:
     -   `core/position_color_lightmap.vsh`
@@ -368,7 +368,7 @@ Happy mining!
 -   When adding a new server to the server list, the name is no longer prefilled. When left empty the default name is used.
 -   More text inputs now support selecting text by mouse dragging
 
-#### Mouse cursor
+**Mouse cursor**
 
 -   Some UI components will now change shape of mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
@@ -450,7 +450,7 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 
 ### Text rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   This component has been updated to support displaying other non-character objects as a part of text
 -   New format:
@@ -459,12 +459,12 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Similarly to `nbt` text component `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-##### `atlas` Object Type
+**`atlas` Object Type**
 
 -   Behaves the same way as the `object` component did previously, but is now a separate object type
 -   Uses the same format as before
 
-##### `player` Object Type
+**`player` Object Type**
 
 -   Renders player head
 -   If partial profile is given, skin is resolved in the same way as `minecraft:profile` component on player head

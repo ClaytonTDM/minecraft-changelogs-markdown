@@ -53,7 +53,7 @@ Added a new Experiment containing various Redstone-related changes. This can be 
 Please note that the experimental features behind this toggle are not aimed at any future release at this time. Instead, this is a place for us to try out changes and gather feedback.  
 We are excited to hear what you think about these changes: please share your feedback on the [feedpack page](https://aka.ms/fbredstone).
 
-#### Redstone Wire
+**Redstone Wire**
 
 -   The performance impact of Redstone wire (connected blocks of Redstone Dust) has been improved
 -   Redstone wire now only triggers block updates on blocks that may receive power from the wire
@@ -70,7 +70,7 @@ We are excited to hear what you think about these changes: please share your fee
 
 ![The image shows three Redstone machines. In each of them a lever is powering a Redstone wire leading to two pistons that are trying to push into the same block. In the machine on the left, the wire to the left piston is shorter and the left piston is the one that got to extend. In the machine on the right, the wire to the right piston is shorter and the right piston is the one that got to extend. In the machine in the center, the wire is the same length to both pistons and which piston extended was picked by random choice.](https://launchercontent.mojang.com/v2/images/redstone.jpg)
 
-##### Order in Which a Line of Wire Changes
+**Order in Which a Line of Wire Changes**
 
 -   When a line of wire turns on, the wires closer to the power source will cause block updates first
 -   When a line of wire turns off, the wires closer to where the power source was, will cause block updates first
@@ -79,14 +79,14 @@ We are excited to hear what you think about these changes: please share your fee
     -   This means, when powering a line of wire from the side, it randomly chooses one of two possible update orders
     -   The advantage of having few possible update orders is that the results are more predictable
 
-##### Block Updates Around a Wire
+**Block Updates Around a Wire**
 
 -   The order in which blocks around the wire update is based on the direction the wire received an update from
 -   Currently, the order is: back, front, left, right, down, up
     -   left and right may be swapped, depending on the random choice made by the line of wire
 -   When the updates are further distributed through solid blocks, the same order is applied there
 
-#### Known Issues
+**Known Issues**
 
 As this experiment only changes Redstone wire, interactions with other components may not always act as expected, especially when it comes to update orders.
 
@@ -100,7 +100,7 @@ Please note that the experimental features behind this toggle are not aimed at a
 
 We are excited to hear what you think about these changes: please share your feedback on this [feedback page](https://aka.ms/fbcarts).
 
-#### Movement Changes
+**Movement Changes**
 
 -   Minecarts will articulate their movement better when going fast, riding on the rail all the time
     -   Minecarts will now smoothly turn along with the track and are less likely to halt or derail
@@ -116,13 +116,13 @@ We are excited to hear what you think about these changes: please share your fee
     -   Setting it to a specific value does not guarantee that a minecart will reach that particular max speed - there are built in air resistances and similar effects that the speed added through slopes or powered rails need to overcome
     -   This gamerule only exists in worlds with the experiment enabled
 
-#### Minecart Changes
+**Minecart Changes**
 
 -   Minecarts can no longer be placed within another Minecart by the player or a dispenser
 -   Minecarts can now consistently be placed next to each other along a track
 -   Minecarts now pick up mobs more consistently when moving along a track
 
-#### Known Impact
+**Known Impact**
 
 -   We are aware that these changes will make certain contraptions such as 'piston bolts' not work at all, or have their behavior changed
 -   Very delicate rail networks will have their timings changed due to slight changes in speeds, movement distance, friction etc.
@@ -188,12 +188,12 @@ We are excited to hear what you think about these changes: please share your fee
         -   Likewise, any crafted item which has only Common crafting ingredients must also be Common
 -   The lists below detail the items and blocks which have changed to that rarity category
 
-#### Common
+**Common**
 
 -   End Crystal
 -   Golden Apple
 
-#### Uncommon
+**Uncommon**
 
 -   Sniffer Egg
 -   Chainmail Helmet
@@ -240,7 +240,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   5
     -   Precipice
 
-#### Rare
+**Rare**
 
 -   Enchanted Golden Apple
     -   Enchanted Golden Apples have become more common in recent years due to being accessible in both Ancient Cities and Trial Chambers, warranting a demotion to Rare instead of Epic
@@ -261,7 +261,7 @@ We are excited to hear what you think about these changes: please share your fee
     -   otherside
     -   Creator
 
-#### Epic
+**Epic**
 
 -   Elytra
 -   Dragon Head
@@ -282,18 +282,18 @@ We are excited to hear what you think about these changes: please share your fee
 
 ### Player Safety
 
-#### Skin Reporting
+**Skin Reporting**
 
 -   Added reporting reason "Sexually inappropriate"
     -   This is intended for skins that are graphic in nature relating to sexual acts, sexual organs, and sexual violence
 -   Removed reason "Defamation" due to lack of relevance for skins
 -   Removed reason "Threat of harm to others" due to already being covered by "Harassment or bullying" reporting reason
 
-#### Name Reporting
+**Name Reporting**
 
 -   Added a text label above the description box to clarify that only the name of the player is subject to the report
 
-#### Realms
+**Realms**
 
 -   Extended the `text-filtering-config` in order to support an internal migration for Realms Profanity Filtering
     -   Servers currently utilizing the `text-filtering-config` will be able to continue to do so without any changes
@@ -368,7 +368,7 @@ Fields:
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 -   `furnace_minecart_fuel`: Items that can be used to refuel furnace minecart
 -   `villager_picks_up`: Items that a Villager will try to pick up from the ground
@@ -381,14 +381,14 @@ Fields:
 
 ### New Item Components
 
-#### `minecraft:repairable`
+**`minecraft:repairable`**
 
 -   If present, and this item is damageable, this item can be repaired in an Anvil using the specified ingredient
 -   Format: object with fields
     -   `items`: Item, list of Items, or hash-prefixed Item Tag matching what can be used to repair this item
     -   e.g. `repairable={items:'stick'}`
 
-#### `minecraft:enchantable`
+**`minecraft:enchantable`**
 
 -   If present (and any enchantments are applicable), this item can be enchanted in an Enchanting Table
 -   Format: object with fields
@@ -427,7 +427,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
 -   The format of post-processing effect configurations have been updated
 -   The `ChunkOffset` uniform in terrain shaders has been renamed to `ModelOffset`
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   `intarget` and `auxtargets` have been merged into a single `inputs` list, as specified by the input format below
 -   `outtarget` has been renamed to `output` with the same format
@@ -437,7 +437,7 @@ The format used for recipe ingredients has been simplified and aligned with othe
     -   Target definitions with a specific size remain the same, with the `name` field moved into the map key
         -   For example, `[{"name": "potato", "width": 16, "height": 16}]` becomes `{"potato": {"width": 16, "height": 16}}`
 
-##### Input Format
+**Input Format**
 
 For both render target and texture inputs, the following fields may be specified:
 
@@ -464,7 +464,7 @@ For inputs from a static texture, the following fields may be specified:
 -   `width`: positive integer - width in pixels of the texture
 -   `height`: positive integer - height in pixels of the texture
 
-##### External Targets
+**External Targets**
 
 -   The 'Fabulous' graphics transparency post-processing config no longer specifies the sorted framebuffers as custom targets
     -   These are instead imported in the same way as the `minecraft:main` target
@@ -611,4 +611,4 @@ For inputs from a static texture, the following fields may be specified:
 -   [MC-269937](https://bugs.mojang.com/browse/MC-269937) World list buttons render translucent pixels as opaque
 -   [MC-269996](https://bugs.mojang.com/browse/MC-269996) Custom names of Interaction entities render at wrong location
 -   [MC-270051](https://bugs.mojang.com/browse/MC-270051) Recipe book button renders translucent pixels as opaque
--   [MC-270299](htt
+-   [MC-270299](https://bugs.mojang.com/bro

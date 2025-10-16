@@ -27,7 +27,7 @@ Added `minecraft:player_sheared_equipment`
 
 ### Commands
 
-#### Modified `playsound`
+**Modified `playsound`**
 
 -   Added new category `ui`
     -   Sounds in this category will continue playing when paused, similarly to `music`
@@ -65,11 +65,11 @@ We're kicking the week off with another pre-release, including some music and ha
 
 ### Dialogs
 
-#### Dialog Description Format
+**Dialog Description Format**
 
-##### Input Control Types
+**Input Control Types**
 
-###### `minecraft:text`
+**`minecraft:text`**
 
 -   Output values:
     
@@ -155,17 +155,17 @@ New fields:
 
 ### Dialog Types
 
-#### Changed `minecraft:multi_action`, `minecraft:server_links`, `minecraft:dialog_list`
+**Changed `minecraft:multi_action`, `minecraft:server_links`, `minecraft:dialog_list`**
 
 -   Replaced field `on_cancel` with `exit_action`, holding an optional action
     -   If `exit_action` is present, a button for it will appear in footer, otherwise the footer is not present
     -   `exit_action` is also used for the Escape action
 
-#### Removed `minecraft:simple_input_form`
+**Removed `minecraft:simple_input_form`**
 
 -   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:notice`
 
-#### Removed `minecraft:multi_action_input_form`
+**Removed `minecraft:multi_action_input_form`**
 
 -   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:multi_action` (without any specified `exit_action`)
 
@@ -173,26 +173,26 @@ New fields:
 
 -   To accomodate the new `minecraft:custom` click event, all inputs will now return either a string or an NBT tag, depending on context
 
-#### `minecraft:text`
+**`minecraft:text`**
 
 -   Output values:
     -   As template substitution: contents without modification
     -   As tag: a string tag with contents without modification
 
-#### `minecraft:boolean`
+**`minecraft:boolean`**
 
 -   Output values:
     -   As template substitution: `on_true` when checked, `on_false` when unchecked
     -   As tag: `1b` when checked, `0b` when unchecked
 
-#### `minecraft:number_range`
+**`minecraft:number_range`**
 
 -   Output values:
     -   As template substitution: text representation of current value
         -   Whole numbers will be sent without decimal point
     -   As tag: a float tag with current value
 
-#### Dialog Body Types
+**Dialog Body Types**
 
 Hover and click events on text components within bodies now work as expected
 
@@ -210,7 +210,7 @@ Fields:
     -   `type` - value from `minecraft:dialog_action_type` registry
     -   `<type-specific>` - see below, depends on `type`
 
-##### Static Dialog Action Types
+**Static Dialog Action Types**
 
 All existing `click_event` actions (except for `open_file`) are included as dialog action types.
 
@@ -225,7 +225,7 @@ Uses same format as `click_event` on text components (but with `action` replaced
     }
     
 
-##### `minecraft:dynamic/run_command` Action Type
+**`minecraft:dynamic/run_command` Action Type**
 
 -   This action will build a `run_command` event using a provided macro template
 -   The macro will be expanded with string values from all inputs
@@ -236,7 +236,7 @@ Fields:
 
 -   `template` - a string with a macro template to be interpreted as a command
 
-###### `minecraft:dynamic/custom` Action Type
+**`minecraft:dynamic/custom` Action Type**
 
 -   This method will build a `minecraft:custom` event using all input values
 -   All input contents will be sent together inside a compound tag, with tag value of each input put under id from `key` field of that input
@@ -262,13 +262,13 @@ Fields:
 -   Introduced new item model `minecraft:player_head` to handle player profile texture loading and rendering
 -   Removed support for `minecraft:profile` from `minecraft:head`
 
-##### `minecraft:player_head` special model type
+**`minecraft:player_head` special model type**
 
 -   Renders a player head
 -   Uses profile from the `minecraft:profile` component to load a texture. Renders a default texture until the profile texture is fully loaded
 -   No fields
 
-##### `minecraft:head` special model type
+**`minecraft:head` special model type**
 
 -   No longer supports profile from `minecraft:profile` component to load a player texture
 -   Renders a default player texture when `kind` is `player` and no texture override is supplied
@@ -521,36 +521,36 @@ As always, a big thank you to the community for your feedback, bugs reported, an
         -   only value from new item is taken into account
         -   does not control "pop" animation in GUI when item is picked or changes count
 
-#### `minecraft:model` item model type
+**`minecraft:model` item model type**
 
-##### Added `minecraft:team` tint source type
+**Added `minecraft:team` tint source type**
 
 -   Returns team color of context entity, if any
 -   Fields:
     -   `default` - RGB value to return when there is no context entity, entity is not in a team or team has no color
 
-##### Changed `minecraft:head` special model type
+**Changed `minecraft:head` special model type**
 
 -   Added field `animation` - float controlling head animation (like Piglin ears or Ender Dragon jaw), default: `0.0`
 
-##### Added `minecraft:view_entity` boolean property
+**Added `minecraft:view_entity` boolean property**
 
 -   When not spectating, returns `true` if context entity is the local player entity, i.e. one controlled by client
 -   When spectating, returns `true` if context entity is the spectated entity
 -   If context entity is not present, will return `false`
 -   No fields
 
-##### Renamed property `minecraft:holder_type` to `minecraft:context_entity_type`
+**Renamed property `minecraft:holder_type` to `minecraft:context_entity_type`**
 
 **Developer's Note**: _Context entities were initially used only for compasses and clocks, which means that type is available only in rendering contexts where those items would show correct reading (see MC-186797 and related bugs). The name change has been made to better reflect that._
 
-##### Added `minecraft:context_dimension` property
+**Added `minecraft:context_dimension` property**
 
 -   Returns the ID of the dimension in context, if any
 -   No fields
 -   Values: namespaced dimension ID (like `minecraft:overworld`)
 
-##### Changed `minecraft:time` numeric property
+**Changed `minecraft:time` numeric property**
 
 -   Removed field `natural_only`
 -   Added field `source` - time source, possible values:
@@ -558,11 +558,11 @@ As always, a big thank you to the community for your feedback, bugs reported, an
     -   `moon_phase` - moon phase
     -   `random` - random value
 
-##### Changed `minecraft:compass` numeric property
+**Changed `minecraft:compass` numeric property**
 
 -   Added value `none` to field `target` which always returns an invalid target
 
-#### Added `minecraft:empty` item model type
+**Added `minecraft:empty` item model type**
 
 -   Does not render anything
 -   No fields
@@ -689,7 +689,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Pale Moss
+**Pale Moss**
 
 -   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
 -   Pale Moss Carpet is now more efficient to destroy with Sword

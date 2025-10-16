@@ -31,7 +31,7 @@ We're now releasing 1.19.1 for Minecraft: Java Edition. This release adds Allay 
 -   Added a warning toast when connecting to a server that doesn't enforce secure chat
 -   The list of players on the Social Interactions screen now places entries for players with recently seen messages at the top of the list
 
-#### Chat Trust Status
+**Chat Trust Status**
 
 -   Messages that are not signed with the Secure Chat system, or have been tampered with by the server will now be marked
     -   Messages with missing or invalid signatures are marked as "Not Secure"
@@ -43,7 +43,7 @@ We're now releasing 1.19.1 for Minecraft: Java Edition. This release adds Allay 
     -   For modified messages, the original secure text will also be displayed in the tooltip
 -   System messages (non-player chat, such as command output) are displayed with a gray color indicator
 
-#### Chat Preview
+**Chat Preview**
 
 -   Added "When Sending" Chat Preview option for updating chat previews only when attempting to send a message
     -   To confirm sending a message, a second hit of the Enter/Return key is required
@@ -100,7 +100,7 @@ For more information, see this [article about Player Reporting](https://www.mine
 
 ### Game Events
 
-#### Added Game Events
+**Added Game Events**
 
 -   `jukebox_play`
 -   `jukebox_stop_play`

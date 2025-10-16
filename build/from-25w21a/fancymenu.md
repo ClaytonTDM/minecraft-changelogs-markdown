@@ -35,7 +35,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
     -   `minecraft:single_option` input control - between `1` and `1024` (inclusive)
     -   `minecraft:number_range` input control - between `1` and `1024` (inclusive)
 
-#### `minecraft:text` Input Control
+**`minecraft:text` Input Control**
 
 -   `max_length` - maximum length of input, positive integer with default of 32
 -   `multiline` - if present, allows users to input multiple lines, optional object with fields:
@@ -44,7 +44,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines
         -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
 
-#### `minecraft:number_range` Input Control
+**`minecraft:number_range` Input Control**
 
 -   The `steps` field has been replaced with a new field:
     -   `step` - step size, optional positive float
@@ -52,7 +52,7 @@ Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems
         -   If absent, any value from range the is allowed
 -   `initial` - if not specified, now defaults to the middle of the range
 
-#### `minecraft:multi_action_input_form` Dialog Type
+**`minecraft:multi_action_input_form` Dialog Type**
 
 -   Added new field `columns` - positive integer describing number of columns, default: `2`
 
@@ -120,12 +120,12 @@ This week we’re releasing the final features from this year’s second drop. T
 
 ### Saddles Updates
 
-#### Crafting Saddles
+**Crafting Saddles**
 
 -   Saddles can now be crafted with 3 Leather and 1 Iron Ingot
 -   Recipe unlocks when a player picks up their first Leather
 
-#### Removing Saddles and Equipment
+**Removing Saddles and Equipment**
 
 -   Saddles, Horse Armor, Harnesses and Carpets can now be removed from the mobs they can be equipped on by using Shears
 -   Saddles, Horse Armor, Harnesses and Carpets cannot be removed by using Shears while the mob has a rider
@@ -133,7 +133,7 @@ This week we’re releasing the final features from this year’s second drop. T
 -   Saddles cannot be removed from Ravagers using Shears
 -   Dispensers with Shears cannot remove Saddles, Horse Armor, Harnesses or Carpets equipped on mobs
 
-#### Loot Table Changes
+**Loot Table Changes**
 
 Some loot tables have had saddles removed from them and replaced with 1-5 Leather:
 
@@ -207,7 +207,7 @@ Some loot tables have had saddles removed from them and replaced with 1-5 Leathe
 
 > **Developer's Note**: _Dialogs are not supposed to fully describe any in-game UI, but just to allow custom content to display simple messages and get input from users. This feature is intentionally limited to match that use case._
 
-#### Dialog Description Format
+**Dialog Description Format**
 
 -   Dialogs are stored in `minecraft:dialog` registry that can be provided by a datapack
 
@@ -216,7 +216,7 @@ Fields:
 -   `type` - one of dialog types from `minecraft:dialog_type` registry
 -   `<type-specific>` - see below
 
-##### Common Dialog Fields
+**Common Dialog Fields**
 
 -   Most dialog types share some fields. To avoid duplication, they are listed in this section
 
@@ -229,14 +229,14 @@ Fields:
 -   `body` - optional list of body elements or a single element, see below
 -   `can_close_with_escape` - can dialog be dismissed with Escape key, default `true`
 
-##### Common Button Data
+**Common Button Data**
 
 -   Most actions in dialog types share following fields that describe apperance of a button associated with that action:
 -   `label` - text component
 -   `tooltip` - optional text component to display when button is highlighted or hovered over
 -   `width` - width of the button, positive integer with default `150`
 
-#### Click Action
+**Click Action**
 
 -   Common object used in dialogs to represent clickable action on a dialog
 -   Fields:
@@ -244,9 +244,9 @@ Fields:
     -   `on_click` - optional click event (same format as `click_event` on text components)
         -   If not present, clicking button will simply close screen without any action
 
-##### Dialog Types
+**Dialog Types**
 
-###### `minecraft:notice`
+**`minecraft:notice`**
 
 -   A simple screen with one action in footer
 -   Exit action: same as `action`
@@ -256,7 +256,7 @@ Fields:
 -   Common dialog fields (see above)
 -   `action` - click action (see above), defaults to button with `gui.ok` label and no action or tooltip
 
-###### `minecraft:confirmation`
+**`minecraft:confirmation`**
 
 -   A simple screen with two actions in footer
 -   Exit action: same as `no` action
@@ -267,7 +267,7 @@ Fields:
 -   `yes` - click action (see above) for positive outcome
 -   `no` - click action (see above) for negative outcome
 
-###### `minecraft:multi_action`
+**`minecraft:multi_action`**
 
 -   A scrollable list of actions arranged in columns
 -   Screen also has button in footer that runs exit action and closes the screen
@@ -281,7 +281,7 @@ Fields:
 -   `on_cancel` - optional click event (same format as `click_event` on text components)
 -   `columns` - positive integer describing number of columns, default: `2`
 
-###### `minecraft:server_links`
+**`minecraft:server_links`**
 
 -   A scrollable list of links received from server in `minecraft:server_links` packet, arranged in columns
 -   Screen also has button in footer that runs exit action and closes the screen
@@ -296,7 +296,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, positive integer with default `150`
 
-###### `minecraft:dialog_list`
+**`minecraft:dialog_list`**
 
 -   A scrollable list of buttons leading directly to other dialogs, arranged in columns
     -   Titles of those buttons will be taken from `external_title` fields of targeted dialogs
@@ -312,7 +312,7 @@ Fields:
 -   `columns` - positive integer describing number of columns, default: `2`
 -   `button_width` - width of buttons in the list, positive integer with default `150`
 
-###### `minecraft:simple_input_form`
+**`minecraft:simple_input_form`**
 
 -   A screen that accepts user inputs
 -   Has a single submit action with in a footer
@@ -324,7 +324,7 @@ Fields:
 -   `inputs` - non-empty list of inputs controls, see below
 -   `action` - submit action, see below
 
-###### `minecraft:multi_action_input_form`
+**`minecraft:multi_action_input_form`**
 
 -   A screen that accepts user inputs
 -   Can have multiple submit actions
@@ -337,7 +337,7 @@ Fields:
 -   `inputs` - non-empty list of inputs controls, see below
 -   `actions` - non-empty list of submit actions, see below
 
-##### Dialog Body Types
+**Dialog Body Types**
 
 -   All dialogs have a list of body elements describing contents between title and actions or inputs
 
@@ -346,7 +346,7 @@ Fields:
 -   `type` - one of dialog body types from `minecraft:dialog_body_type` registry
 -   `<type-specific>` - see below
 
-###### `minecraft:plain_message`
+**`minecraft:plain_message`**
 
 -   A multiline label
 
@@ -355,7 +355,7 @@ Fields:
 -   `contents` - text component
 -   `width` - maximum width of message, positive integer with default `200`
 
-###### `minecraft:item`
+**`minecraft:item`**
 
 -   Item with optional description
     -   If description is present, it will be rendered to the right of item
@@ -374,7 +374,7 @@ Fields:
 -   `width` - horizontal size of element, default: `16`
 -   `height` - vertical size of element, default: `16`
 
-##### Input Control Types
+**Input Control Types**
 
 -   Input dialog uses a set of controls to accept user input
 -   When submitted, current value of input will be converted to a string and sent to the server as described by Submit Action section below
@@ -385,7 +385,7 @@ Fields:
 -   `key` - string identifier of value used when submitting data, must be a valid template argument (letters, digits and `_`)
 -   `<type-specific>` - see below
 
-###### `minecraft:text`
+**`minecraft:text`**
 
 -   Simple text input
 -   Sends current contents without modification
@@ -397,7 +397,7 @@ Fields:
 -   `label_visible` - controls label visibility, default: `true`
 -   `initial` - initial contents, default: `""` (empty)
 
-###### `minecraft:boolean`
+**`minecraft:boolean`**
 
 -   A plain checkbox with a label
 
@@ -408,7 +408,7 @@ Fields:
 -   `on_true` - a string value to send when control is checked, default: 'true'
 -   `on_false` - a string value to send when control is unchecked, default: 'false'
 
-###### `minecraft:single_option`
+**`minecraft:single_option`**
 
 -   A button that cycles between a set of options when clicked
 -   Sends value associated with currently selected preset
@@ -424,7 +424,7 @@ Fields:
     -   `initial` - an optional boolean flag that selects initial option (only one option can have it set to `true`)
     -   Additionaly list might also contain plain string - in that case it's equivalent to a single entry with field `id` set to that string and other fields set to default
 
-###### `minecraft:number_range`
+**`minecraft:number_range`**
 
 -   A slider for picking a numeric value out of some range
 -   Sends currently selected value
@@ -441,7 +441,7 @@ Fields:
     -   Note: value of `1` means that slider will have two positions (start and end)
 -   `initial` - initial value of slider, rounded down nearest step, must be within range, defaults to `min`
 
-##### Submit Actions
+**Submit Actions**
 
 -   Every submit action on input dialog has a button associated with it
 -   When one of those buttons is clicked, values of all inputs will be collected and sent to a server using one of methods described below
@@ -454,9 +454,9 @@ Fields:
         -   `<type-specific>` - see below
 -   Note: server does not validate individual values as they arrive as filled commands or custom payloads
 
-##### Submit Method Types
+**Submit Method Types**
 
-###### `minecraft:command_template`
+**`minecraft:command_template`**
 
 -   This method will build a command using a provided macro template and request the server to run it (same as `minecraft:run_command` click event)
 -   If the command requires permission higher than `0` (when any operator permissions are required), a confirmation dialog will be shown
@@ -468,7 +468,7 @@ Fields:
 
 -   `template` - a string with a macro template to be interpreted as a command
 
-###### `minecraft:custom_template`
+**`minecraft:custom_template`**
 
 -   This method will build a custom server click action using a provided macro template and send it to the server (same as `minecraft:custom` click event)
 -   Macro will be expanded with values from input
@@ -479,7 +479,7 @@ Fields:
 -   `template` - a string with a macro template to be used as a payload
 -   `id` - namespaced ID
 
-###### `minecraft:custom_form`
+**`minecraft:custom_form`**
 
 -   This method will build a custom server click action from all values and request the server to run it (same as `minecraft:custom` click event)
 -   Format:
@@ -491,22 +491,22 @@ Fields:
 
 -   `id` - namespaced ID
 
-##### Built-in dialogs
+**Built-in dialogs**
 
 The built-in datapack contains some custom dialogs to provide customization of specific screens used by client
 
-###### `minecraft:server_links`
+**`minecraft:server_links`**
 
 -   Replacement for previously existing "Server Links" screen
 -   Meant to simplify migration for servers that used this feature previously
 
-###### `minecraft:custom_options`
+**`minecraft:custom_options`**
 
 -   Shows contents of `minecraft:pause_screen_additions` tag (see below)
 -   Lets user select a specific dialog if this tag contains multiple entries
 -   Note: Since this tag is meant for interoperability, any content that replaces this dialog should be careful to not hide other dialog providers
 
-#### Dialog Command
+**Dialog Command**
 
 -   New command has been added to show dialog to clients
 
@@ -520,7 +520,7 @@ Syntax:
     -   `<targets>` - player name, UUID or a player selector
     -   Returns number of players in `targets` argument
 
-#### Pause Screen Configuration
+**Pause Screen Configuration**
 
 -   A data pack can request some of the available dialogs to be accessible from Pause screen
 -   This feature replaces "Server Links" button and is placed on Pause screen according to the same rules
@@ -536,7 +536,7 @@ Syntax:
 
 ### Text Components
 
-#### Click Events
+**Click Events**
 
 -   New click action `minecraft:custom` has been added
     -   When user clicks a component with this click action, client will send a dedicated packet `minecraft:custom_click_action` to a server
@@ -546,7 +546,7 @@ Syntax:
         -   `id` - namespaced ID
         -   `payload` - optional string field
 
-#### Dialog Click Event
+**Dialog Click Event**
 
 -   New action `show_dialog` has been added
     -   When user clicks this component, a dialog will be opened for them
@@ -555,13 +555,13 @@ Syntax:
 
 ### Attributes
 
-#### Ghasts `flying_speed` attribute
+**Ghasts `flying_speed` attribute**
 
 -   Ghasts now have a `flying_speed` attribute that affects their flying speed
 
 ### Data Components
 
-#### `equippable` Item Component
+**`equippable` Item Component**
 
 -   Added new optional field: `can_be_sheared` (boolean)
     -   If `true`, players can use Shears to remove this equippable item from a target mob by right-clicking, provided all other shearing conditions are satisfied
@@ -626,11 +626,11 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Entity Data
 
-#### `tnt`
+**`tnt`**
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-#### `vex`
+**`vex`**
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of Mob)
 
@@ -646,7 +646,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Shaders & Post-process Effects
 
-#### Shader fog changes
+**Shader fog changes**
 
 -   The fog is now split into environmental and render-distance-based
 -   Previously both those concepts were mixed in the same uniforms
@@ -655,7 +655,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   Environmental fog uses spherical distance to determine its intensity, render distance fog uses cylindrical distance
 -   The resulting fog value for any given vertex is the maximum of both
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FogStart` was renamed to `FogRenderDistanceStart` and now represents the render distance fog start
 -   `FogEnd` was renamed to `FogRenderDistanceEnd` and now represents the render distance fog end
@@ -724,7 +724,7 @@ Leads have become a hot commodity in the recent snapshots and this week they are
     -   Some mobs, like Bats, Slimes, Magma Cubes, Phantoms and Ender Dragons may ignore it
     -   Interacting with leashes or riding may change the home position of the mob
 
-#### Entity Tags
+**Entity Tags**
 
 -   Updated `#followable_friendly_mobs` to include the Happy Ghast
 
@@ -738,14 +738,14 @@ Leads have become a hot commodity in the recent snapshots and this week they are
 
 ### Font
 
-#### Unifont
+**Unifont**
 
 -   Updated Unifont to 16.0.03
 -   Added previously omitted Unifont glyphs for Private Use Areas
     -   Those glyphs are loaded as a separate sub-font `minecraft:include/unifont_pua` and are not included in any normally used font
     -   Characters in those areas are managed by Under-CSUR (Under-ConScript Unicode Registry), which adds various scripts not present in official Unicode set, like Tengwar or Sitelen Pona
 
-#### `unihex` Font Provider
+**`unihex` Font Provider**
 
 -   Field `size_overrides` is now optional (defaults to empty list)
 

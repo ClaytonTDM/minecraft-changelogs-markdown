@@ -89,7 +89,7 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
 
 ### Modified loot functions
 
-#### `set_contents`
+**`set_contents`**
 
 -   Unused field `type` has been removed
 -   Added new mandatory field `component`:
@@ -98,13 +98,13 @@ From now on, you should mostly see bugs being fixed. In addition to that, pre-re
     -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `bundle_contents` and `charged_projectiles` will ignore empty stacks
 
-#### `set_custom_data`
+**`set_custom_data`**
 
 Field `tag` now accepts both SNBT data written as a string (existing format) and unflattened tags
 
 ### New Loot Functions
 
-#### `modify_contents`
+**`modify_contents`**
 
 -   Apply modifier function to every item inside a component
 -   If component does not exist, it will not be added
@@ -114,14 +114,14 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
         -   Allowed values: `container`, `bundle_contents`, `charged_projectiles`
     -   `modifier` - function or list of functions to be applied to every item inside container
 
-#### `set_item`
+**`set_item`**
 
 -   Replaces item type of item stack without changing count and components
 -   Fields:
     -   `conditions` - list of conditions to filter this function
     -   `item` - new item type
 
-#### `filtered`
+**`filtered`**
 
 -   Applies sub-function only to items that match item predicate
 -   Fields:
@@ -129,7 +129,7 @@ Field `tag` now accepts both SNBT data written as a string (existing format) and
     -   `item_filter` - item predicate used to match items
     -   `modifier` - functions to apply to matching items
 
-#### `set_custom_model_data`
+**`set_custom_model_data`**
 
 -   Sets `custom_model_data` component
 -   Fields:
@@ -147,7 +147,7 @@ General rules of component predicates:
     -   Integer and float fields will be replaced with ranges
     -   Registry ids will be replaced with a type that accepts id, list of ids or a tag
 
-#### Collection matcher
+**Collection matcher**
 
 Collection matcher is a shared part of predicate used for matching collections. Every instance of this matcher will have same fields with same functionality, with only difference being type of matched element Fields:
 
@@ -167,7 +167,7 @@ Collection matcher is a shared part of predicate used for matching collections. 
     -   Examples (when matching item stacks):
         -   `{count:[{count:3,test:{items:diamond}}]}}` will match only when there are exactly 3 stacks of diamonds (no matter the stack size)
 
-#### `container`
+**`container`**
 
 -   Matcher for `container` component (like shulker box)
 -   Fields:

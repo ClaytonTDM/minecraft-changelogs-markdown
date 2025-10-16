@@ -71,7 +71,7 @@ Happy mining!
 
 ### Structures
 
-#### Trial Chambers
+**Trial Chambers**
 
 -   Trial Chambers are a new structure in the Overworld where players can explore and take on combat challenges
     -   Made out of a variety of Copper and Tuff blocks, and can be found in different sizes
@@ -103,7 +103,7 @@ Happy mining!
 
 ### Mobs
 
-#### Breeze
+**Breeze**
 
 -   A cunning hostile mob spawned by some Trial Spawners in Trial Chamber rooms
     -   Drops 1-2 Breeze Rods when killed by a player
@@ -126,7 +126,7 @@ Happy mining!
 -   Will not retaliate against attacks from the following mobs: Skeletons, Strays, Bogged, Zombies, Husks, Spiders, Cave Spiders and Slimes
     -   The same mobs will not retaliate against a Breeze when hurt by its Wind Charge projectile
 
-#### Bogged
+**Bogged**
 
 -   A new variant of Skeletons that shoots poisonous arrows
     -   They're easier to take down with 16 health instead of 20 health
@@ -140,7 +140,7 @@ Happy mining!
 
 ### Weapons
 
-#### Mace
+**Mace**
 
 -   A new heavy weapon to smash your enemies!
     -   Has a base damage of 5
@@ -191,7 +191,7 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ### Blocks
 
-#### Crafter
+**Crafter**
 
 -   A new block that enables the crafting of items and blocks via Redstone
     -   Can be crafted with 5 Iron Ingots, 2 Redstone Dust, 1 Crafting Table and 1 Dropper
@@ -204,7 +204,7 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ![An automated rail Crafter is producing rails. Makena is collecting the rails and Noor is building a railway.](https://launchercontent.mojang.com/v2/images/t1.21newcrafter.jpg)
 
-##### Crafter User Interface
+**Crafter User Interface**
 
 -   Has a 3x3 interactable crafting grid
 -   The crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by interacting with it while not holding an item
@@ -214,7 +214,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   The arrow pointing out from the recipe grid will light up red when the Crafter is currently powered
 -   The Crafter User Interface is shared between all players interacting with it, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-##### Crafter Interaction with Other Blocks
+**Crafter Interaction with Other Blocks**
 
 -   The signal strength of a Comparator reading a Crafter is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers and Minecarts with Hoppers can be used to both insert and extract items from the Crafter
@@ -226,7 +226,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   If the item cannot be moved, it will be ejected into the world
 -   Items are removed from Crafters by Hoppers and Minecarts with Hoppers in the same order as from other containers like Chests
 
-#### Trial Spawner
+**Trial Spawner**
 
 -   A new variant of Monster Spawners that ejects rewards upon defeat
     -   Cannot be crafted nor obtained by players in Survival - instead, they can be found naturally throughout Trial Chambers
@@ -245,7 +245,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   The mob type can be set by interacting with it while holding a Spawn Egg
 -   Has an Ominous Trial Spawner variant, accessible through an Ominous Trial
 
-#### Vault
+**Vault**
 
 -   A block that holds locked treasure and loot - players must find the right key to eject its rewards
     -   Can be found throughout Trial Chambers, containing the structures' most valuable loot
@@ -263,7 +263,7 @@ Three new enchantments have been added which are exclusive to the Mace
 -   The loot it ejects is randomized each time it is unlocked
 -   Has an Ominous Vault variant, unlockable through an Ominous Trial
 
-#### Copper Family
+**Copper Family**
 
 -   The Copper family of blocks has been expanded to add:
     -   Chiseled Copper
@@ -273,12 +273,12 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Copper Trapdoor
     -   Oxidized and waxed variants of all of the above
 
-##### Chiseled Copper
+**Chiseled Copper**
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-##### Copper Grate
+**Copper Grate**
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -290,7 +290,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Hostile mobs cannot naturally spawn on them
     -   Can hold water
 
-##### Copper Bulb
+**Copper Bulb**
 
 -   A light-emitting block that can toggle its light emission through Redstone pulses
 -   Oxidizes like other Copper blocks, and emits light based on oxidation level
@@ -309,14 +309,14 @@ Three new enchantments have been added which are exclusive to the Mace
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-##### Copper Doors and Trapdoors
+**Copper Doors and Trapdoors**
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Behaves like wooden doors, meaning they can be opened and closed with interaction as well as Redstone
     -   Can be opened by mobs that have the ability to open doors
 -   Crafted with Copper Ingots
 
-#### Tuff Family
+**Tuff Family**
 
 -   Tuff has been expanded to have its own family of blocks:
     -   Stair, Slab, Wall and Chiseled variants
@@ -324,7 +324,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Polished Tuff with Stair, Slab and Wall variants
 -   All Tuff variants can be crafted in the Stonecutter
 
-#### Heavy Core
+**Heavy Core**
 
 -   A mysterious, dense block which can be combined with a Breeze Rod to craft the Mace
 -   Can only be obtained from Ominous Vaults
@@ -333,12 +333,12 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ### Items
 
-#### Trial Explorer Map
+**Trial Explorer Map**
 
 -   Used to locate a nearby Trial Chamber
 -   Level up a Cartographer Villager to Journeyman for the opportunity to trade for this map
 
-#### Ominous Bottle
+**Ominous Bottle**
 
 -   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
     -   Comes in 5 variations, one for each Bad Omen level
@@ -346,7 +346,7 @@ Three new enchantments have been added which are exclusive to the Mace
     -   Can be stacked to 64
 -   Ominous Bottles can be found uncommonly in any Vaults, and are dropped by Raid Captains which are defeated outside a Raid
 
-#### Wind Charge
+**Wind Charge**
 
 -   Become the Breeze! Using this item will fire off a Wind Charge projectile similar to the Breeze's
     -   Can be used to launch entities away from the impact of the Wind Burst
@@ -360,26 +360,26 @@ Three new enchantments have been added which are exclusive to the Mace
 
 ![Sunny is using Wind Charges to jump across rocky formations in Badlands. The Wind Charge particles are visible where they jumped up from.](https://launchercontent.mojang.com/v2/images/t1.21newwindcharge.jpg)
 
-#### Trial Key
+**Trial Key**
 
 -   An item that can only be obtained from Trial Spawners
 -   Can be used to unlock Vaults
 
-#### Breeze Rod
+**Breeze Rod**
 
 -   An item dropped by a Breeze that can be crafted into 4 Wind Charges, or used with the Heavy Core to craft a Mace
 
-#### Pottery Sherds
+**Pottery Sherds**
 
 -   Added Flow, Guster, and Scrape Pottery Sherds
 -   These can be obtained by breaking Decorated Pots that display them in Trial Chambers
 
-#### Banner Patterns
+**Banner Patterns**
 
 -   Added Flow Banner Pattern, found in Vaults
 -   Added Guster Banner Pattern, found in Ominous Vaults
 
-#### Armor Trims
+**Armor Trims**
 
 -   Added Bolt Armor Trim and Smithing Template, found in Vaults
     -   Can be duplicated using a Copper Block or Waxed Copper
@@ -434,26 +434,26 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
     -   It is no longer given to players that defeat a Raid Captain outside a Raid
     -   Instead, players can gain access to Bad Omen by consuming the new Ominous Bottle item
 
-#### Raids
+**Raids**
 
 -   Bad Omen no longer triggers a Raid directly when entering a Village
     -   Instead, it will transform into a Raid Omen variant with a duration of 30 seconds
     -   Once the Raid Omen expires, a Raid will start at the location the player gained the Raid Omen
     -   Like any other effect, players can drink a Bucket of Milk to clear the Raid Omen, preventing the Raid from starting
 
-#### Ominous Trials
+**Ominous Trials**
 
 -   A new Ominous Event that can be accessed by exploring a Trial Chamber while Bad Omen is active
 -   This event will have players facing more powerful Ominous Trial Spawners, if they dare
 
-##### Trial Omen
+**Trial Omen**
 
 -   A variant that Bad Omen can transform into
     -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
     -   The Trial Omen will have a duration of 15 minutes multiplied by the transformed Bad Omen's level
 -   Players that have Trial Omen are surrounded by ominous particles
 
-##### Ominous Trial Spawner
+**Ominous Trial Spawner**
 
 -   A more powerful active phase of the Trial Spawner with unique challenges and rewards
     -   Provides a more challenging experience that combat-loving players can opt into for better rewards
@@ -487,13 +487,13 @@ Added fifteen new paintings by artist Kristoffer Zetterstrand:
     -   It will stay Ominous until it has been defeated and its cooldown has finished
 -   When defeated, it will eject a different set of loot to normal Trial Spawners
 
-##### Ominous Vault
+**Ominous Vault**
 
 -   A variant of Vaults that have a more menacing looking and emit soul flames instead of normal flames
 -   These hold a more valuable set of rewards than the standard Vaults that are unlocked by Trial Keys
 -   Can be found throughout Trial Chambers in harder to reach places, and require an Ominous Trial Key to unlock
 
-##### Ominous Trial Key
+**Ominous Trial Key**
 
 -   A variant of the Trial Key which has a 30% chance to eject when defeating an Ominous Trial Spawner
 -   Can be used to unlock Ominous Vaults
@@ -689,7 +689,7 @@ The following have been added to the pool of songs which play in Overworld Biome
     -   `comparator_output` - the redstone signal output by a comparator when played in a Jukebox, between 0 and 15
 -   Added `minecraft:jukebox_playable` item stack component
 
-#### `jukebox_playable` Item Component
+**`jukebox_playable` Item Component**
 
 -   If set, the item can be inserted into Jukeboxes to play a song
 -   Format: object with fields
@@ -711,17 +711,17 @@ The following have been added to the pool of songs which play in Overworld Biome
 -   Existing built-in modifiers will be upgraded to new IDs
 -   Existing custom modifiers will be upgraded to the UUID as an ID in the `minecraft` namespace
 
-#### `attribute` Command
+**`attribute` Command**
 
 -   The `uuid` and `name` arguments have been replaced with a singular `id` argument
 
-#### Item Stack Attribute Modifiers
+**Item Stack Attribute Modifiers**
 
 -   The `uuid` and `name` fields have been removed
 -   Attribute Modifiers now have an `id` (namespaced ID) field
     -   This is a unique identifier per attribute for the modifier
 
-#### Entity Attributes
+**Entity Attributes**
 
 -   Attributes are now stored as `attributes`
 -   Attribute format:
@@ -773,13 +773,13 @@ Fields:
     -   Each entry is one of `any`, `hand`, `mainhand`, `offhand`, `armor`, `feet`, `legs`, `chest`, `head` and `body`
 -   `effects`: A map of effect components, as described below in the Effect Components section
 
-#### Level-Based Values
+**Level-Based Values**
 
 Many effects of Enchantments depend on the level of the Enchantment. For these fields, a type called Level-Based Values is used. In their most basic form, Level-Based Values can be written as floating-point constants, which is interpreted as a value that isn't in fact level-based, the constant is used as-is for all levels.
 
 If a Level-Based value is not a floating-point constant, it is an object with a `type` field, specifying one of the following types.
 
-##### `linear`
+**`linear`**
 
 The most common type of Level-Based Value is a `linear` value. A `linear` Level-Based Value has two fields:
 
@@ -788,7 +788,7 @@ The most common type of Level-Based Value is a `linear` value. A `linear` Level-
 
 In effect, a `linear` Level-Based Value results in `base + per_level_above_first * (level - 1)`.
 
-##### `clamped`
+**`clamped`**
 
 A Level-Based Value type that clamps a value between a min and max. Fields:
 
@@ -796,14 +796,14 @@ A Level-Based Value type that clamps a value between a min and max. Fields:
 -   `min`: A floating point value specifying the minimum value of the output
 -   `max`: A floating point value specifying the maximum value of the output
 
-##### `fraction`
+**`fraction`**
 
 A Level-Based Value type that represents the fraction between two values. Fields:
 
 -   `numerator`: A Level-Based Value used as the numerator
 -   `denominator`: A Level-Based Value used as the denominator
 
-##### `levels_squared`
+**`levels_squared`**
 
 A Level-Based Value type that evaluates to the square of the levels, plus an addition. Fields:
 
@@ -811,18 +811,18 @@ A Level-Based Value type that evaluates to the square of the levels, plus an add
 
 In effect, a `levels_squared` Level-Based Value results in `level ^ 2 + added`
 
-##### `lookup`
+**`lookup`**
 
 A Level-Based Value type that maps a list of values to specific levels, and applies a fallback if the level is greater than the number of values supplied. Fields:
 
 -   `values` - A list of values indexed by `level - 1` to apply, if present
 -   `fallback` - A fallback Level-Based Value to apply if the level is greater than the size of `values`
 
-#### Value Effect Types
+**Value Effect Types**
 
 Value Effects are effects used to manipulate the amount of _something_ in the game.
 
-##### `add`
+**`add`**
 
 A Value Effect that adds a value to the processed results.
 
@@ -831,7 +831,7 @@ Fields:
 -   `value`: A Level-Based Value determining how much to add
     -   Negative values are supported
 
-##### `all_of`
+**`all_of`**
 
 A Value Effect that runs a number of other Value Effects, in order. This can be useful when the same set of conditions apply to a number of Value Effects.
 
@@ -839,7 +839,7 @@ Fields:
 
 -   `effects`: A list of the Value Effects to run
 
-##### `multiply`
+**`multiply`**
 
 A Value Effect that multiplies the processed value by a given factor.
 
@@ -847,6 +847,10 @@ Fields:
 
 -   `factor`: A Level-Based Value determining the factor to multiply in
 
-##### `remove_binomial`
+**`remove_binomial`**
 
-A Value Effect that runs a Binomial series of checks, reducing the input value by 1 for every succ
+A Value Effect that runs a Binomial series of checks, reducing the input value by 1 for every successful check.
+
+Fields:
+
+-   `chance`: A Level-Based Value repres

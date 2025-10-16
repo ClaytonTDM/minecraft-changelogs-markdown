@@ -30,7 +30,7 @@ Leads have become a hot commodity in the recent snapshots and this week they are
     -   Some mobs, like Bats, Slimes, Magma Cubes, Phantoms and Ender Dragons may ignore it
     -   Interacting with leashes or riding may change the home position of the mob
 
-#### Entity Tags
+**Entity Tags**
 
 -   Updated `#followable_friendly_mobs` to include the Happy Ghast
 
@@ -44,14 +44,14 @@ Leads have become a hot commodity in the recent snapshots and this week they are
 
 ### Font
 
-#### Unifont
+**Unifont**
 
 -   Updated Unifont to 16.0.03
 -   Added previously omitted Unifont glyphs for Private Use Areas
     -   Those glyphs are loaded as a separate sub-font `minecraft:include/unifont_pua` and are not included in any normally used font
     -   Characters in those areas are managed by Under-CSUR (Under-ConScript Unicode Registry), which adds various scripts not present in official Unicode set, like Tengwar or Sitelen Pona
 
-#### `unihex` Font Provider
+**`unihex` Font Provider**
 
 -   Field `size_overrides` is now optional (defaults to empty list)
 

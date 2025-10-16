@@ -227,7 +227,7 @@ This snapshot also includes a few additional tweaks, bug fixes, and performance 
 
 ### Particles
 
-#### `block_marker`
+**`block_marker`**
 
 -   Renders with texture declared in `particle` slot for model assigned to configured block state
 -   Summoned with same syntax as `block` particle (i.e. `block_marker wheat[age=2]`)
@@ -411,9 +411,9 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `fall_from_height`
+**`fall_from_height`**
 
 -   Triggered when a player lands after falling
 -   Conditions:
@@ -421,7 +421,7 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
     -   `start_position` - location predicate for last position before falling started
     -   `distance` - predicate for distance between `start_position` and player
 
-##### `ride_entity_in_lava`
+**`ride_entity_in_lava`**
 
 -   Triggered for every tick when player rides in lava
 -   Conditions
@@ -429,22 +429,22 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
     -   `start_position` - position where riding started (first tick on lava)
     -   `distance` - predicate for distance between `start_position` and player
 
-#### Changed triggers
+**Changed triggers**
 
-##### `nether_travel`
+**`nether_travel`**
 
 -   `entered` condition renamed to `start_position`
 -   `exited` has been removed, since it was identical to `player.location`
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_potion`
+**`set_potion`**
 
 Sets `Potion` tag on any item
 
-###### Parameters:
+**Parameters:**
 
 -   `id` - potion id
 
@@ -534,7 +534,7 @@ In practice, this can mean identifying technical pain points in the game, like h
 
 At this point the only implemented event is world load.
 
-#### World Load event
+**World Load event**
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:

@@ -45,7 +45,7 @@ Happy mining!
 
 ### Loot tables
 
-#### `reference`
+**`reference`**
 
 New function `reference` allows functions to call sub-functions (similar to `reference` condition). Fields:
 

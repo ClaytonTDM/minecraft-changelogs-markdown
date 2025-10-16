@@ -230,7 +230,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 
 -   Armadillos now also spawn in Badlands
 
-#### Armadillo Rolling Up Behavior
+**Armadillo Rolling Up Behavior**
 
 -   Spiders and Cave Spiders will run away from Armadillos not in a rolled up state
 
@@ -286,7 +286,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 New item tags controlling what enchantments can be added to what gear:
 
@@ -307,7 +307,7 @@ New item tags controlling what enchantments can be added to what gear:
 -   `minecraft:enchantable/crossbow`
 -   `minecraft:enchantable/vanishing`
 
-#### Entity Type Tags:
+**Entity Type Tags:**
 
 -   Added `minecraft:ignores_poison_and_regen` for entities that cannot be affected by Poison and Regeneration effects
 -   Added `minecraft:illager_friends` for entities that Illagers will consider allies (unless on a different team)
@@ -428,7 +428,7 @@ Happy brushing!
     -   spawns in Savannas
     -   its favorite food is Spider Eye
 
-#### Armadillo Rolling Up Behavior
+**Armadillo Rolling Up Behavior**
 
 -   Armadillo rolls up when it detects a threat such as:
     -   a sprinting player
@@ -442,7 +442,7 @@ Happy brushing!
 -   When an Armadillo is rolled up it does not walk, cannot eat, and will not be tempted by food
     -   It will continue to scan for threats: if none are detected for 3 seconds, it will unroll
 
-#### Armadillo Scutes
+**Armadillo Scutes**
 
 -   Armadillo Scutes can be used to craft Wolf Armor
 -   They are dropped by Armadillos
@@ -572,9 +572,9 @@ Enjoy!
 
 ### Commands
 
-#### `scoreboard`
+**`scoreboard`**
 
-##### Display names
+**Display names**
 
 -   Each entry in a scoreboard can now have a custom display name
 -   Those values are kept separate per objective and score holder
@@ -585,7 +585,7 @@ Enjoy!
     -   `scoreboard players display name <targets> <objective> <text component>` - set display name
     -   `scoreboard players display name <targets> <objective>` - clear display name
 
-##### Display name auto-update
+**Display name auto-update**
 
 -   To make display name management easier, objectives can also be configured to auto-update display names on every score update
 -   This option is disabled by default
@@ -593,7 +593,7 @@ Enjoy!
 -   Command to control auto-update for objective:
     -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
 
-##### Number formatting
+**Number formatting**
 
 -   Scores in numeric form can now be formatted
 -   Formats can be set for both objectives and individual scores

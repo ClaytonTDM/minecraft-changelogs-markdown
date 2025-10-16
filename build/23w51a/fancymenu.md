@@ -16,7 +16,7 @@ Happy brushing!
     -   spawns in Savannas
     -   its favorite food is Spider Eye
 
-#### Armadillo Rolling Up Behavior
+**Armadillo Rolling Up Behavior**
 
 -   Armadillo rolls up when it detects a threat such as:
     -   a sprinting player
@@ -30,7 +30,7 @@ Happy brushing!
 -   When an Armadillo is rolled up it does not walk, cannot eat, and will not be tempted by food
     -   It will continue to scan for threats: if none are detected for 3 seconds, it will unroll
 
-#### Armadillo Scutes
+**Armadillo Scutes**
 
 -   Armadillo Scutes can be used to craft Wolf Armor
 -   They are dropped by Armadillos

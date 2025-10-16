@@ -46,18 +46,18 @@ Three new entities have been added for flexible display of items, blocks and tex
 -   Those entities, similarily to `marker`, don't tick and have no collisions or physics
 -   Models render at entity position, with normal rotation around X and Y axis (so it can be controlled by teleport commands), but also with additional arbitrary model transform
 
-#### Common data types
+**Common data types**
 
 Tag contents for those entities include some new data types with complex structure. Any form can be used for modifying data, but only one form is used for saving.
 
-##### `rotation`
+**`rotation`**
 
 -   Quaternion form (used for saving): array of 4 numbers, describing components (x, y, z, w)
 -   Axis-angle form: object with following fields:
     -   `axis` - 3d vector
     -   `angle` - in radians
 
-#### `transformation`
+**`transformation`**
 
 Arbitrary affine transform
 
@@ -68,7 +68,7 @@ Arbitrary affine transform
     -   `scale` - 3d vector
     -   Transforms are composed in order `translation`, `left_rotation`, `scale`, `right_rotation`
 
-#### Interpolation
+**Interpolation**
 
 Some properties of display entites can be interpolated. That means that clients will see gradual changes over time instead of instantenous jumps.
 
@@ -84,7 +84,7 @@ Display entities keep track of current and previous values of interpolated value
     -   Set to `-1` to load current game time instead)
 -   End of interpolation (entity fully in "current" state) is defined as `interpolation_start` + `interpolation_duration` (in ticks)
 
-#### Common properties
+**Common properties**
 
 Every entity in family has the following fields:
 
@@ -103,7 +103,7 @@ Every entity in family has the following fields:
 -   `width`, `height` - describe size of culling bounding box. Bounding box spans vertically `y` to `y+height` and horizontally `width/2` in all directions from entity position. If either field is set to 0, culling is disabled. Both default to 0
 -   `glow_color_override` - override glow border color. Defaults to 0 (use team color)
 
-#### `item_display`
+**`item_display`**
 
 Displays a single item stack.
 
@@ -115,7 +115,7 @@ Fields:
 -   `item_display` - describes item model transform applied to item (as defined in `display` section in model JSON)
     -   Values: `none` (default), `thirdperson_lefthand`, `thirdperson_righthand`, `firstperson_lefthand`, `firstperson_righthand`, `head`, `gui`, `ground`, `fixed`
 
-#### `block_display`
+**`block_display`**
 
 Displays a block state.
 
@@ -125,7 +125,7 @@ Fields:
 
 -   `block_state` - block state to display. Same format as item held by endermen (example `{Name:"minecraft:dirt"}`)
 
-#### `text_display`
+**`text_display`**
 
 Displays a text component.
 
@@ -181,7 +181,7 @@ Damage type tags control many aspects of how damage from different sources are i
 
 ### Commands
 
-#### `damage`
+**`damage`**
 
 New command to apply damage to entities.
 
@@ -202,7 +202,7 @@ Parameters:
 -   `location`: The location the damage originated at (when no entity caused the damage)
     -   For instance, `location` might represent the location of a Bed exploding in the Nether
 
-#### `execute summon`
+**`execute summon`**
 
 New `execute` sub-command for summoning new entity and binding context (`@s`) to it. Meant to simplify entity setup and reduce need for raw NBT editing.
 
@@ -210,7 +210,7 @@ New `execute` sub-command for summoning new entity and binding context (`@s`) to
 
 ### Predicates
 
-#### Damage Type Predicates
+**Damage Type Predicates**
 
 The following fields have been removed from damage type predicates: `is_projectile`, `is_explosion`, `bypasses_armor`, `bypasses_invulnerability`, `bypasses_magic`, `is_fire`, `is_magic`, `is_lightning`.
 

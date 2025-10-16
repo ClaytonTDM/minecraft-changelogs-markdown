@@ -46,18 +46,18 @@ Three new entities have been added for flexible display of items, blocks and tex
 -   Those entities, similarily to `marker`, don't tick and have no collisions or physics
 -   Models render at entity position, with normal rotation around X and Y axis (so it can be controlled by teleport commands), but also with additional arbitrary model transform
 
-#### Common data types
+**Common data types**
 
 Tag contents for those entities include some new data types with complex structure. Any form can be used for modifying data, but only one form is used for saving.
 
-##### `rotation`
+**`rotation`**
 
 -   Quaternion form (used for saving): array of 4 numbers, describing components (x, y, z, w)
 -   Axis-angle form: object with following fields:
     -   `axis` - 3d vector
     -   `angle` - in radians
 
-#### `transformation`
+**`transformation`**
 
 Arbitrary affine transform
 
@@ -68,7 +68,7 @@ Arbitrary affine transform
     -   `scale` - 3d vector
     -   Transforms are composed in order `translation`, `left_rotation`, `scale`, `right_rotation`
 
-#### Interpolation
+**Interpolation**
 
 Some properties of display entites can be interpolated. That means that clients will see gradual changes over time instead of instantenous jumps.
 
@@ -84,7 +84,7 @@ Display entities keep track of current and previous values of interpolated value
     -   Set to `-1` to load current game time instead)
 -   End of interpolation (entity fully in "current" state) is defined as `interpolation_start` + `interpolation_duration` (in ticks)
 
-#### Common properties
+**Common properties**
 
 Every entity in family has the following fields:
 
@@ -103,7 +103,7 @@ Every entity in family has the following fields:
 -   `width`, `height` - describe size of culling bounding box. Bounding box spans vertically `y` to `y+height` and horizontally `width/2` in all directions from entity position. If either field is set to 0, culling is disabled. Both default to 0
 -   `glow_color_override` - override glow border color. Defaults to 0 (use team color)
 
-#### `item_display`
+**`item_display`**
 
 Displays a single item stack.
 
@@ -115,7 +115,7 @@ Fields:
 -   `item_display` - describes item model transform applied to item (as defined in `display` section in model JSON)
     -   Values: `none` (default), `thirdperson_lefthand`, `thirdperson_righthand`, `firstperson_lefthand`, `firstperson_righthand`, `head`, `gui`, `ground`, `fixed`
 
-#### `block_display`
+**`block_display`**
 
 Displays a block state.
 
@@ -125,7 +125,7 @@ Fields:
 
 -   `block_state` - block state to display. Same format as item held by endermen (example `{Name:"minecraft:dirt"}`)
 
-#### `text_display`
+**`text_display`**
 
 Displays a text component.
 
@@ -181,7 +181,7 @@ Damage type tags control many aspects of how damage from different sources are i
 
 ### Commands
 
-#### `damage`
+**`damage`**
 
 New command to apply damage to entities.
 
@@ -202,7 +202,7 @@ Parameters:
 -   `location`: The location the damage originated at (when no entity caused the damage)
     -   For instance, `location` might represent the location of a Bed exploding in the Nether
 
-#### `execute summon`
+**`execute summon`**
 
 New `execute` sub-command for summoning new entity and binding context (`@s`) to it. Meant to simplify entity setup and reduce need for raw NBT editing.
 
@@ -210,7 +210,7 @@ New `execute` sub-command for summoning new entity and binding context (`@s`) to
 
 ### Predicates
 
-#### Damage Type Predicates
+**Damage Type Predicates**
 
 The following fields have been removed from damage type predicates: `is_projectile`, `is_explosion`, `bypasses_armor`, `bypasses_invulnerability`, `bypasses_magic`, `is_fire`, `is_magic`, `is_lightning`.
 
@@ -310,7 +310,7 @@ Happy world creating!
 
 ### Commands
 
-#### `effect`
+**`effect`**
 
 -   `infinite` is now a valid option for effect durations
     -   Infinite effect durations show up as "∞" in the player inventory view
@@ -574,7 +574,7 @@ Happy mining!
 -   Added a new "Notification Display Time" accessibility option
     -   Changes how long notifications such as unlocked recipes, advancements, subtitles and selected item names are visible for
 
-#### Arrow key navigation
+**Arrow key navigation**
 
 -   Menu screens can now be navigated by using the arrow keys
 -   When navigating with arrow keys, sliders need to be activated by pressing Enter or Space to start changing the value
@@ -593,7 +593,7 @@ Happy mining!
 
 -   Clients now reset their Secure Chat session state when receiving the login packet
 
-#### Packet bundles
+**Packet bundles**
 
 -   Added new delimiter packet to clientbound game protocol
 -   All packets between two delimiters are guaranteed to be processed within same tick
@@ -615,7 +615,7 @@ Happy mining!
 
 ### Commands
 
-#### `clone`
+**`clone`**
 
 The clone command now supports specifying the source and target dimensions. New syntax:
 
@@ -626,7 +626,7 @@ Parameters:
 -   `sourceDimension`: id of dimension to clone from
 -   `targetDimension`: id of dimension to clone to
 
-#### `data`
+**`data`**
 
 New source available:
 
@@ -637,9 +637,9 @@ New arguments:
 -   `start`: Index of first character to include at the start of the string
 -   `end`: Index of the first character to exclude at the end of the string
 
-#### `execute`
+**`execute`**
 
-##### `execute if|unless`
+**`execute if|unless`**
 
 New conditions available for the `execute if|unless` sub-command:
 
@@ -651,7 +651,7 @@ Parameters:
 -   `pos`: Block position to check
 -   `dimension`: A dimension id
 
-##### `execute on`
+**`execute on`**
 
 New `execute` sub-command for selecting entities based on relation to the current executing entity:
 
@@ -669,17 +669,17 @@ Relations:
 
 If the relation is not applicable to the executing entity or there are no entities matching it, selector returns zero elements.
 
-#### `title`
+**`title`**
 
 -   All time arguments to `title times` are now time durations and work with `t`, `s` and `d` suffixes
 
-#### `weather`
+**`weather`**
 
 -   The duration of the weather change now matches the game's regular weather cycle if not specified
 -   The `duration` parameter is now a time duration in ticks and works with `t`, `s` and `d` suffixes
     -   To retain existing functionality, you need to add an `s` suffix to pre-existing commands
 
-#### `ride`
+**`ride`**
 
 New command to allow entities to start or stop riding other entities
 
@@ -702,7 +702,7 @@ Syntax:
 
 ### Chat components
 
-#### Translation fallback
+**Translation fallback**
 
 Added an optional `fallback` field to `translate` text components.
 

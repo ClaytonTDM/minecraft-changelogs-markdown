@@ -28,11 +28,11 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Entity Data
 
-#### `tnt`
+**`tnt`**
 
 -   The entity that primed the TNT is now stored in an optional `owner` field (UUID of Living entity)
 
-#### `vex`
+**`vex`**
 
 -   The owner of a Vex is now stored in an optional `owner` field (UUID of Mob)
 
@@ -48,7 +48,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 
 ### Shaders & Post-process Effects
 
-#### Shader fog changes
+**Shader fog changes**
 
 -   The fog is now split into environmental and render-distance-based
 -   Previously both those concepts were mixed in the same uniforms
@@ -57,7 +57,7 @@ Take aim for this snapshot! It's a bit smaller this week, and you might want to 
 -   Environmental fog uses spherical distance to determine its intensity, render distance fog uses cylindrical distance
 -   The resulting fog value for any given vertex is the maximum of both
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FogStart` was renamed to `FogRenderDistanceStart` and now represents the render distance fog start
 -   `FogEnd` was renamed to `FogRenderDistanceEnd` and now represents the render distance fog end

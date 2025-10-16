@@ -48,19 +48,19 @@ Fields:
 -   `interaction`: Records the last interaction action on the entity
 -   `response`: Boolean specifying if interacting should trigger a response (arm swing, sound effects, etc - default `false`)
 
-#### Action Format
+**Action Format**
 
 When an action is stored, it always has two fields:
 
 -   `player`: The UUID (in standard integer array format) of the player performing the action
 -   `timestamp`: The timestamp of the game tick when the event happened (stored as a long)
 
-#### Advancement Triggers
+**Advancement Triggers**
 
 -   Interacting with an Interaction entity triggers `player_interacted_with_entity`
 -   Attacking an Interaction entity triggers `player_hurt_entity`
 
-#### `execute on` with Interactions
+**`execute on` with Interactions**
 
 The Interaction entity targets the player who last interacted with it. That makes the following possible:
 
@@ -90,31 +90,31 @@ The Interaction entity targets the player who last interacted with it. That make
 -   Added a new Cherry Grove biome, with pretty cherry blossom trees
 -   You can find it in the mountains, like Meadows
 
-#### Pink Petals block
+**Pink Petals block**
 
 -   Added a new Pink Petals block with lots of pink flowers on the ground
 
-#### Cherry Wood Set
+**Cherry Wood Set**
 
 -   Added a new Cherry wood set, with all the corresponding wooden things you can make from it. You need to have the Update 1.20 experimental features enabled to see it in game.
 
 ### Archaeology
 
-#### The brush
+**The brush**
 
 -   The brush is a craftable item you can use to brush things
 
-#### Suspicious Sand
+**Suspicious Sand**
 
 -   Desert Temples and Desert Wells now contain Suspicious Sand. This fragile block is hard to spot and easy to destroy, so be careful!
 -   Brushing the Suspicious Sand with a Brush will extract objects that were buried long ago
 
-#### Pottery Shards
+**Pottery Shards**
 
 -   Pottery Shards have pictures on them
 -   They cannot be crafted and are only found by brushing Suspicious Sand
 
-#### Decorated Pots
+**Decorated Pots**
 
 -   Crafting four Pottery Shards together will create a Decorated Pot with a picture on each side
 -   You can also use Brick items instead of Pottery Shards in the Decorated Pot recipe

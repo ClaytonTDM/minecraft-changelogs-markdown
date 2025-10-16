@@ -96,7 +96,7 @@ Happy Mining!
     -   For example, one Trial Chamber might only spawn Zombies, Cave Spiders and Strays, while another might only spawn Slimes, Silverfish and Skeletons
     -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
 
-#### Known issues
+**Known issues**
 
 -   The corridors sometimes end with a dead end
 -   Aquifers, Lush Caves, and Sculk Veins sometimes intersect with the Trial Chamber

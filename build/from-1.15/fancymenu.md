@@ -151,13 +151,13 @@ Things from other editions of Minecraft have arrived to Java Edition!
     -   `enchantments` now only matches enchantments on item itself - it can no longer be used for enchanted books
     -   to match contents enchanted book, use `stored_enchantments`
 
-#### Entity Predicate
+**Entity Predicate**
 
-##### `player`
+**`player`**
 
 Entity predicate now accepts `player` field, which checks player properties. Fails when entity is not player.
 
-###### Fields:
+**Fields:**
 
 -   `level` - range of allowed player levels
 -   `gamemode` - same values as `/gamemode` command
@@ -165,13 +165,13 @@ Entity predicate now accepts `player` field, which checks player properties. Fai
 -   `recipes` - map of recipe ids. Boolean value tells if it should or should not be known to player
 -   `advancements` - map of advancement ids. If value is boolean, checks if advancement is done. If value is object, checks completion of critera
 
-##### `team`
+**`team`**
 
 Entity predicate now accepts `team` field, which matches team name.
 
-#### Location predicate
+**Location predicate**
 
-##### `block` and `fluid`
+**`block` and `fluid`**
 
 Predicate also accepts `block` and `fluid` sub-predicate. Available fields:
 
@@ -180,50 +180,50 @@ Predicate also accepts `block` and `fluid` sub-predicate. Available fields:
 -   `nbt` - matcher for block entity NBT (only for blocks)
 -   `state` - map of name-value properties. Value can be integer, boolean or string or object with optional `min` and `max` properties
 
-##### `light`
+**`light`**
 
 Predicate now accepts `light` sub-predicate. Object has one integer range - `light` that matches visible light (`max(sky-darkening,block)`).
 
 ### Chat components
 
-#### Click action
+**Click action**
 
 -   Added `copy_to_clipboard` action to `clickEvent`
 
-#### NBT chat component
+**NBT chat component**
 
 -   Added variant for NBT storage: `{"nbt": <path>, "storage":"<resource id>"}`. NBT storage can be manipulated with commands like `/data merge storage <resource id> ...`
 
 ### Commands
 
-#### `data`
+**`data`**
 
 -   Data commands can now use `storage` as target. This is general-purpose, key-value storage
     -   Storage is shared between all dimensions in level
     -   Data in storage persist between reloads
 
-#### `execute if predicate`
+**`execute if predicate`**
 
 New subcommand evaluates custom predicates (defined in `predicates` directory of datapack).
 
-#### `schedule`
+**`schedule`**
 
 -   Added new syntax `/schedule ... [append|replace]` (`/schedule ...` defaults to `replace`)
 -   Added new syntax `/schedule clear <id>` to remove existing schedules (returns number of removed schedules)
 
-#### effect
+**effect**
 
 The `effect clear` command now defaults to `@s` if no target argument is given.
 
-#### Entity selectors
+**Entity selectors**
 
 New selector parameter `predicate` allows to apply custom custom predicate (defined in `predicates` directory of datapack).
 
-#### kill
+**kill**
 
 The `kill` command now defaults to `@s` if no target argument is given.
 
-#### Spectate
+**Spectate**
 
 New command that makes a player in spectator mode spectate an entity. Syntax: `spectate [target] [player]` Parameters:
 
@@ -236,34 +236,34 @@ Condition part of loot tables can now be defined as separate data pack resource 
 
 ### Loot tables
 
-#### `location_check`
+**`location_check`**
 
 New parameters added:
 
 -   `offsetX`, `offsetY`, `offsetZ` - optional offsets to location
 
-#### `time_check` condition
+**`time_check` condition**
 
 New condition that checks day time.
 
-##### Parameters
+**Parameters**
 
 -   `value` - range of accepted values
 -   `period` - if present, time will be modulo-divided by this value (for example, if set to 24000, `value` will operate on time of day)
 
-#### New conditions
+**New conditions**
 
-##### `reference`
+**`reference`**
 
 Includes condition defined in `predicates` directory of datapack, selected with `name` parameter.
 
-#### New functions
+**New functions**
 
-##### `copy_state`
+**`copy_state`**
 
 Copies state properties from dropped block to `BlockStateTag` in dropped item.
 
-###### Parameters
+**Parameters**
 
 -   `block` - source of properties (block id)
 -   `properties` - list of property names. All must be present on `block`
@@ -280,7 +280,7 @@ In an effort to help make modding the game easier, we have decided to publish ou
 
 ### Pistons
 
-#### Bug fix
+**Bug fix**
 
 -   Blocks that can be manually placed on farmland can now also be pushed onto it by a piston without destroying the farmland
 
@@ -301,7 +301,7 @@ Few advancements and loot table predicates that used block state properties (`lo
 -   Ender Dragon does not have separate texture for the bottom of the wing anymore
 -   Enchanted item glint texture is now like it looks in the game
 
-#### Command used to change the patterns
+**Command used to change the patterns**
 
 -   `for f in *.png; do convert "$f" -alpha copy tmp.png && composite tmp.png -compose copy-opacity ../shield_base.png tmp2.png && convert tmp2.png -fill "rgba(0,1,0,1)" -draw "rectangle 0,0 1,63" -draw "rectangle 2,0 63,1" -draw "rectangle 2,22 64,64" -draw "rectangle 12,2 64,64" -fill none -draw "matte 0,0 floodfill" tmp3.png && mv tmp3.png "$f" && rm tmp.png tmp2.png; done`
 

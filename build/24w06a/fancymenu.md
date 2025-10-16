@@ -84,7 +84,7 @@ With these changes the Armadillo work is done for now, and we are switching our 
 
 ### Tags
 
-#### Block Tags:
+**Block Tags:**
 
 -   Added 'minecraft:blocks;;_;;wind;;_;;charge;;_;;explosions' for blocks not impacted by the explosion when hit by Wind Charge.
 

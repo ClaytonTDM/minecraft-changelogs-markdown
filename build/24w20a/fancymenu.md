@@ -35,7 +35,7 @@ Happy mining!
 
 ### Predicates
 
-#### Entity Predicate
+**Entity Predicate**
 
 -   New option: `movement_affected_by` - optional Location Predicate
     -   When present, adds requirements on a block at most 0.5 blocks below the entity which can affect its movement

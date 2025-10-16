@@ -43,7 +43,7 @@ It is now possible to control at what range the server sends data about entities
 
 ​
 
-#### Extended entity checks
+**Extended entity checks**
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -94,7 +94,7 @@ is now equivalent to:
 
 ​
 
-#### Miscellaneous trigger changes
+**Miscellaneous trigger changes**
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 

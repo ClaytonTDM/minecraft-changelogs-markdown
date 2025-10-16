@@ -26,7 +26,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 
 ​
 
-#### F3 + N (Toggle Spectator)
+**F3 + N (Toggle Spectator)**
 
 A small change has been made to this debug combination. ​
 
@@ -71,7 +71,7 @@ A small change has been made to this debug combination. ​
 
 ### Advancements
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -80,7 +80,7 @@ Properties:
 
 ​
 
-#### `player_generates_container_loot` trigger type
+**`player_generates_container_loot` trigger type**
 
 Properties:
 
@@ -88,7 +88,7 @@ Properties:
 
 ​
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -228,7 +228,7 @@ It is now possible to control at what range the server sends data about entities
 
 ​
 
-#### Extended entity checks
+**Extended entity checks**
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -279,7 +279,7 @@ is now equivalent to:
 
 ​
 
-#### Miscellaneous trigger changes
+**Miscellaneous trigger changes**
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 
@@ -398,7 +398,7 @@ We also have a survey up so that you can tell us what you think about the Nether
 
 ### Commands
 
-#### `attribute`
+**`attribute`**
 
 Adds modifies attribute on single entity. Possible syntax: Parameters:
 
@@ -415,7 +415,7 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
 
 ### Chat components
 
-#### Hover event argument
+**Hover event argument**
 
 -   `style.hoverEvent` parameter now has parameter `contents`, with contents depending on type:
     -   For `show_text` - chat component
@@ -423,11 +423,11 @@ Adds modifies attribute on single entity. Possible syntax: Parameters:
     -   For `show_entity` - object with fields: `id` (UUID), `name` (chat component) and `type` (entity type resource location)
 -   Old style `value` argument is now deprecated (but still supported)
 
-#### Colors
+**Colors**
 
 `color` property can now contain RGB value prefixed by `#`. For example `#55ff55` will result in the same color as `green`.
 
-#### Custom fonts
+**Custom fonts**
 
 Chat component style now supports `font` property, which is resource location for font in resource pack. No entry is equivalent to `minecraft:default`.
 
@@ -520,7 +520,7 @@ It is now possible to monitor the server tick times though JMX. The rationale fo
 
 This enables server admins to hook alerts and graphing tools using ordinary JMX clients and dashboards.
 
-#### Enabling JMX Monitoring
+**Enabling JMX Monitoring**
 
 -   A new flag `enable-jmx-monitoring` has been added to the server.properties file which if set to `true` will expose an MBean with the Object name `net.minecraft.server:type=Server` and two attributes `averageTickTime` and `tickTimes` exposing the tick times in milliseconds.
 -   In order for enabling JMX on the Java runtime you also need to add a couple of JVM flags to the startup as documented [here](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html).

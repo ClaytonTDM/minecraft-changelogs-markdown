@@ -48,7 +48,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `spreadplayers`
+**`spreadplayers`**
 
 ​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
 
@@ -56,7 +56,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `locate`
+**`locate`**
 
 ​
 

@@ -11,7 +11,7 @@ Have fun exploring!
 
 ### Farm Animal variants
 
-#### Sheep wool color in warm and cold biomes
+**Sheep wool color in warm and cold biomes**
 
 -   Reverted the change from last week that allowed Blue, Light Blue, Cyan, Yellow, Orange and Red Sheep to spawn naturally in different biomes
 -   Black Sheep will still be the most common type to spawn in cold biomes, and Brown Sheep will be the most common type in warm biomes
@@ -65,11 +65,11 @@ Have fun exploring!
 
 ### Item Components
 
-#### `blocks_attacks` component
+**`blocks_attacks` component**
 
 -   If the blocked damage has no position, the compared angle will be assumed to be the maximum `180` for `horizontal_blocking_angle` field of `damage_reductions`
 
-#### Entity components
+**Entity components**
 
 -   New component
     -   `wolf/sound_variant` - namespaced id from `wolf_sound_variant` registry

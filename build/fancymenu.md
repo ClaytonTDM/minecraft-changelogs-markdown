@@ -38,7 +38,7 @@ Minecraft has entered The Copper Age! Express yourself in every shade of copper 
     -   The flower can be removed with Shears
     -   This flower is dropped when the Copper Golem turns into a Copper Golem Statue ![A trio of Copper Golems hanging out in a Taiga Village.](https://launchercontent.mojang.com/v2/images/1.21.9golempumpkin.jpg)
 
-#### Copper Golem Item Sorting
+**Copper Golem Item Sorting**
 
 -   If the Copper Golem is not holding an item, it will look for nearby Copper Chests to try to pick up an item
     -   The Copper Golem will look in any oxidized and waxed Copper Chest variant to pick up items
@@ -208,7 +208,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-#### Server Setup
+**Server Setup**
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for Code of Conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -358,14 +358,14 @@ Several server properties were removed in favor of making them into game rules, 
 -   When adding a new server to the server list, the server name is no longer prefilled
     -   When omitted, the default name "Minecraft Server" is used
 
-#### Mouse cursor
+**Mouse cursor**
 
 -   Some UI components will now change the shape of the mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
 -   Additionally, clickable parts of text labels (like links) will now change the cursor to the "hand" shape
 -   This feature can be disabled with the "Allow Cursor Changes" option in the Mouse Settings screen
 
-#### Debug Overlay
+**Debug Overlay**
 
 -   The debug overlay is accessible by pressing F3, as before
 -   The debug overlay can now be accessed from everywhere in the game, not only when in a game world
@@ -381,7 +381,7 @@ Several server properties were removed in favor of making them into game rules, 
 
 > **Developer's Note**: _Previously, gathering the information every frame to render the F3 screen had a significant performance cost. So opening the screen to check your FPS noticeably dropped the FPS. Now checking your FPS in the `Performance` profile should not affect game performance._
 
-#### Chat
+**Chat**
 
 -   It is now possible to start chatting while standing inside a Nether Portal
 -   The chat will now remain open and unchanged if the player was chatting before being transferred to another dimension
@@ -408,7 +408,7 @@ Several server properties were removed in favor of making them into game rules, 
     -   A minor version increment of the game's pack version is backwards-compatible, meaning all packs made for previous iterations of the same major version will keep working
 -   Packs can set compatibility requirements on minor versions in case they rely on resources introduced in a minor version
 
-#### Pack Metadata
+**Pack Metadata**
 
 The pack.mcmeta format has been updated:
 
@@ -482,7 +482,7 @@ Data Fields:
 
 ### Text Rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   New text component with type `object` has been added
 -   This component will display a non-character object as a part of text
@@ -494,7 +494,7 @@ Data Fields:
 -   Similarly to the `nbt` text component, the `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-##### `atlas` Object Type
+**`atlas` Object Type**
 
 -   Renders a single sprite from a sprite atlas as a character
 -   Format:
@@ -507,7 +507,7 @@ General note about atlas contents:
 -   The contents are controlled by files in the `assets/minecraft/atlases/` directory in a resource pack
 -   The current contents can be reviewed with the F3+S key combination
 
-##### `player` Object Type
+**`player` Object Type**
 
 -   Renders a player head
 -   If a partial profile is given, the skin is resolved in the same way as the `minecraft:profile` component on a player head
@@ -518,7 +518,7 @@ General note about atlas contents:
         -   `properties`: profile properties, optional map
     -   `hat`: controls rendering of a hat layer, boolean, default `true`
 
-#### `run_command` Click Event
+**`run_command` Click Event**
 
 -   Previously, if the `command` field contained a command that required a signed message (`/say`, `/me`, `/msg`, `/tell`, `/w`, `/teammsg`, `/tm`), it would be silently discarded
 -   Instead, a screen will be shown that lets the user insert the command into the chat window or copy the command to their clipboard if the chat window can't be opened
@@ -533,7 +533,7 @@ General note about atlas contents:
     -   This means players can respawn e.g. in the Nether when they have no Bed or Respawn Anchor
 -   Server commands now run from the respawn dimension by default instead of always running in the Overworld
 
-#### Added `fetchprofile`
+**Added `fetchprofile`**
 
 -   A new command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously while the game keeps running
@@ -551,9 +551,9 @@ Syntax:
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
-##### New Resolution Behavior
+**New Resolution Behavior**
 
 -   Previously the contents of this component would permanently change when the profile was resolved, i.e. downloaded from Minecraft services
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -574,7 +574,7 @@ Syntax:
 -   Items stack based on exact contents, so even if a dynamic component is eventually resolved to the same profile as a static one, they won't stack together
 -   Player heads in older maps that have not been loaded in newer versions yet will usually be converted to dynamic contents
 
-##### Player Skin Overrides
+**Player Skin Overrides**
 
 -   Profiles can now also have additional fields that can replace various values used for rendering
 -   If any of the fields are omitted, the value from the resolved profile is used, even if the profile resolves to the default skin
@@ -589,13 +589,13 @@ Syntax:
         -   If this value is not present either as an override or in a player profile, Mannequins using this profile will use the cape texture, or if that is also not present, the default Elytra texture when wearing an Elytra
     -   `model` - Optional model type, one of `wide` and `slim`
 
-#### `blocks_attacks` Item Component
+**`blocks_attacks` Item Component**
 
 -   If the damage reduced in an attack is `0`, for example by the `angle` threshold not matching, the item can no longer get disabled in the attack, nor cause knockback due to blocking
 
 ### Entity Data
 
-#### Modified `minecraft:player`
+**Modified `minecraft:player`**
 
 -   Changes to the `respawn` object
     -   `angle` has been renamed to `yaw` and is now a required field
@@ -604,7 +604,7 @@ Syntax:
 
 ### Block Entity Data
 
-#### Modified `minecraft:skull`
+**Modified `minecraft:skull`**
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary
@@ -638,32 +638,32 @@ Syntax:
 
 ### Loot Functions
 
-#### `minecraft:fill_player_head`
+**`minecraft:fill_player_head`**
 
 -   The `entity` field now accepts new entity context values:
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:set_lore`
+**`minecraft:set_lore`**
 
 -   The `entity` field now accepts new context values:
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:copy_custom_data`
+**`minecraft:copy_custom_data`**
 
 -   The `source` field now accepts new context values:
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:copy_name`
+**`minecraft:copy_name`**
 
 -   The `source` field now accepts new context values:
     -   `direct_attacker`
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:copy_components`
+**`minecraft:copy_components`**
 
 -   The `source` field now accepts new context values:
     -   `this`
@@ -676,13 +676,13 @@ Syntax:
 
 ### Predicates
 
-#### `minecraft:entity_scores`
+**`minecraft:entity_scores`**
 
 -   The `entity` field now accepts new entity context values:
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:entity_properties`
+**`minecraft:entity_properties`**
 
 -   The `entity` field now accepts new entity context values:
     -   `target_entity`
@@ -690,7 +690,7 @@ Syntax:
 
 ### Enchantments
 
-#### `explode` Effects
+**`explode` Effects**
 
 New field: `block_particles` - specifies per-block particles. Each block particle is randomly chosen according to weights. A set limit of block particles is spawned each tick from all explosions that tick.
 
@@ -708,9 +708,9 @@ Format: List of entries:
     -   `preliminary_surface_level` is a 2D density function that should produce the y-level of the approximate surface
     -   The `minecraft:find_top_surface` density function can be used to replicate the previous scanning
 
-#### Density Functions
+**Density Functions**
 
-##### Added `minecraft:find_top_surface`
+**Added `minecraft:find_top_surface`**
 
 -   Approximates the topmost surface of a given density function
 -   It scans from an upper bound to a lower bound to find the point at which the density changes from negative to positive
@@ -724,7 +724,7 @@ Fields:
 -   `lower_bound` - integer, lowest possible y-value
 -   `cell_height` - positive integer defining the grid resolution on which to scan
 
-##### Added `minecraft:invert`
+**Added `minecraft:invert`**
 
 -   Resolves to `1/argument`
 
@@ -732,7 +732,7 @@ Fields:
 
 -   `argument` - density function
 
-#### Jigsaw Structures
+**Jigsaw Structures**
 
 -   The `max_distance_from_center` field may now specify a different restriction on the vertical axis from horizontal
     -   This can be specified by an object with fields:
@@ -743,8 +743,8 @@ Fields:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#copper_chests` - all Copper Chest blocks
 -   Added `#copper` - all Copper blocks
--   Added `#incorrect_for_copper_tool` - all bloc
+-   Added `#incorrect_for_copper_tool` - all blocks which will not drop items with a 

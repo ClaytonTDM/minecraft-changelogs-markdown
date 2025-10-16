@@ -49,7 +49,7 @@ The Game Tests system is a new integrated system for testing aspects of the game
 
 Generally, the test framework expects to run tests in a separate superflat world.
 
-#### Test Instances
+**Test Instances**
 
 Test instances are defined in the registry `test_instance`. They're small assets defining a test to run.
 
@@ -69,7 +69,7 @@ Fields:
 -   `required_successes`: Number of attempts that must succeed for the test to be considered successful (default `1`)
 -   `type`: The type of test - one of `block_based` and `function`
 
-##### Function Tests
+**Function Tests**
 
 Function tests rely on built-in functions to run a test and indicate success or failure. They have one additional field:
 
@@ -77,11 +77,11 @@ Function tests rely on built-in functions to run a test and indicate success or 
 
 See the "Using the Game Test Framework from Code" changelog section for more information.
 
-##### Block Based Tests
+**Block Based Tests**
 
 Block based tests use Test Blocks in the test structure to run the test and indicate success or failure.
 
-#### Test Environments
+**Test Environments**
 
 Test Environments are a way to group up tests and give them the right preconditions to run. A Test Environment is an asset in the `test_environment` registry. Each Test Environment definition has a `type` field that determines its setup:
 
@@ -103,7 +103,7 @@ Test Environments are a way to group up tests and give them the right preconditi
 
 The game provides a single, empty Test Environment by default: `minecraft:default`.
 
-#### Test Blocks
+**Test Blocks**
 
 The Test Block is a block used for implementing a block-based tests. It has four modes:
 
@@ -114,7 +114,7 @@ The Test Block is a block used for implementing a block-based tests. It has four
 
 Block-based tests are required to have at least one `start` block and one `accept` block in the structure.
 
-#### The `test` Command
+**The `test` Command**
 
 The `test` command is a new command used to create and run tests.
 
@@ -166,27 +166,27 @@ Parameters:
 -   `rotationSteps`: Number of extra 90 degree steps to apply to the test - if omitted, `0` is used
 -   `testsPerRow`: Number of tests to place per row in a grid layout - if omitted, `8` is used
 
-##### `test clear*`
+**`test clear*`**
 
 These subcommands clear the structures and blocks associated with the selected tests.
 
-##### `test create`
+**`test create`**
 
 This subcommand creates a test setup in the current location for the given test, preparing for a structure of the given size. This gives a starting point for creating the structure for the test.
 
-##### `test locate`
+**`test locate`**
 
 Attempts to locate the given test. Note that only loaded chunks are searched.
 
-##### `test reset*`
+**`test reset*`**
 
 These subcommands reset the structures for the selected tests, removing any surrounding barriers and placing the structure in from scatch.
 
-##### `test pos`
+**`test pos`**
 
 Shows the local coordinates to the block pointed at in the test. If the optional variable name is specified, this variable name is used in a code fragment obtained by clicking on the coordinates in the output message.
 
-##### `test run*`
+**`test run*`**
 
 Runs one or more tests. If multiple tests are run at once, they are placed in a grid and run in parallel, although only up to a certain limit. Beyond that limit, tests are run in rounds where each round completes before any tests from the next round are started.
 
@@ -201,21 +201,21 @@ If a test fails, the error is shown on a lectern book and an overlay.
 
 Note that Game Tests are designed to run on standard superflat worlds. The area around each test is replaced with stone when it runs, and the running test is encased in barrier blocks.
 
-##### `test stop`
+**`test stop`**
 
 This stops all running tests. Note that gameplay events triggered by tests may still remain.
 
-##### `test verify*`
+**`test verify*`**
 
 Verifies one or more tests by running multiple instances of the same test.
 
-#### Test Instance Blocks
+**Test Instance Blocks**
 
 To run a test in a world, a Test Instance Block is used. This type of block represents the test as placed in the world and is used to interact with that test, to save the structure, reset or run the test.
 
 Using the `test` command to run or create a test will also place a Test Instance Block to control that test.
 
-#### Using the Game Test Framework from Code
+**Using the Game Test Framework from Code**
 
 The Game Test Framework can also be used from code in a more versatile manner than block-based tests. For this to work, you need to mod the game to add your test functions to the `test_function` registry (`Registries.TEST_FUNCTION`).
 
@@ -243,14 +243,14 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Text Component Data Format
 
-#### Hover Events
+**Hover Events**
 
 -   For the `show_text` action:
     -   `text` field has been renamed to `value`
 
 ### Tags
 
-#### Entity Tags
+**Entity Tags**
 
 -   Added `#can_equip_saddle` - entities that can be equipped with a Saddle
     -   Note: this does not mean that the Saddle will function, just that it can be equipped into the saddle slot
@@ -271,11 +271,11 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Item Components
 
-#### `weapon` component
+**`weapon` component**
 
 -   `damage_per_attack` field was renamed to `item_damage_per_attack`
 
-#### `equippable` Component
+**`equippable` Component**
 
 -   Can now apply to `saddle` slot
 -   Any mob can now have equipment added in the `body` slot as long as the component allows it (`allowed_entities`)
@@ -284,7 +284,7 @@ As opposed to block-based tests, function tests failing will often produce more 
     -   The item will not be equipped if the target already has an item in the relevant slot
     -   If not specified, defaults to `false`
 
-#### Entity variant components
+**Entity variant components**
 
 -   Entities now have a set of components for configuring variants and other aspects of apperance
 -   If those components are present on spawning item (like spawn eggs, mob buckets, `minecraft:painting`, `minecraft:item_frame`), they will be applied to new entity
@@ -316,7 +316,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Predicates
 
-#### Entity predicates
+**Entity predicates**
 
 -   New optional field has been added to entity predicate: `components`
     -   When present, predicate will match contents of entity components (similarily to field `components` on item predicate that works on item stacks)
@@ -368,7 +368,7 @@ As opposed to block-based tests, function tests failing will often produce more 
 
 ### Item Models
 
-#### `minecraft:component` Select Property
+**`minecraft:component` Select Property**
 
 -   New data source has been added to `select` item model: `component`
 -   Returns value of component on item, if any

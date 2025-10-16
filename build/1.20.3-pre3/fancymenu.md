@@ -8,11 +8,11 @@ Happy Mining!
 
 ### World resource packs
 
-#### Local storage
+**Local storage**
 
 -   Only up to 20 server resource packs are cached
 
-#### Packets
+**Packets**
 
 -   Client now sends additional updates about packs (like download success)
 

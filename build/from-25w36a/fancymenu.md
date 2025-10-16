@@ -88,7 +88,7 @@ Data Fields:
 
 ## Resource Pack Version 68.0
 
-#### Shaders
+**Shaders**
 
 -   The following unused shaders have been removed:
     -   `core/position_color_lightmap.vsh`
@@ -181,7 +181,7 @@ Happy mining!
 -   When adding a new server to the server list, the name is no longer prefilled. When left empty the default name is used.
 -   More text inputs now support selecting text by mouse dragging
 
-#### Mouse cursor
+**Mouse cursor**
 
 -   Some UI components will now change shape of mouse cursor
     -   Examples: text inputs, numeric sliders, buttons, scroll bars
@@ -263,7 +263,7 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 
 ### Text rendering
 
-#### `object` Text Component
+**`object` Text Component**
 
 -   This component has been updated to support displaying other non-character objects as a part of text
 -   New format:
@@ -272,12 +272,12 @@ Added a server management API (JSON-RPC over WebSocket) for dedicated servers
 -   Similarly to `nbt` text component `object` field can be omitted
     -   However, it's recommended to provide it for error checking
 
-##### `atlas` Object Type
+**`atlas` Object Type**
 
 -   Behaves the same way as the `object` component did previously, but is now a separate object type
 -   Uses the same format as before
 
-##### `player` Object Type
+**`player` Object Type**
 
 -   Renders player head
 -   If partial profile is given, skin is resolved in the same way as `minecraft:profile` component on player head
@@ -382,7 +382,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-#### Server Setup
+**Server Setup**
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for code of conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -431,7 +431,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 
 ### Commands
 
-#### Added `fetchprofile`
+**Added `fetchprofile`**
 
 -   New command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously
@@ -446,7 +446,7 @@ Syntax:
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
 -   Previously contents of this component would permanently change when profile was resolved, i.e. downloaded from Minecraft service
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -469,7 +469,7 @@ Syntax:
 
 ### Block Entity Data
 
-#### Modified `minecraft:skull`
+**Modified `minecraft:skull`**
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary

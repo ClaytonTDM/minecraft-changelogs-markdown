@@ -88,7 +88,7 @@ Data Fields:
 
 ## Resource Pack Version 68.0
 
-#### Shaders
+**Shaders**
 
 -   The following unused shaders have been removed:
     -   `core/position_color_lightmap.vsh`

@@ -89,7 +89,7 @@ Happy vibing!
     -   `comparator_output` - the redstone signal output by a comparator when played in a Jukebox, between 0 and 15
 -   Added `minecraft:jukebox_playable` item stack component
 
-#### `jukebox_playable` item component
+**`jukebox_playable` item component**
 
 -   If set, the item can be inserted into Jukeboxes to play a song
 -   Format: object with fields
@@ -109,17 +109,17 @@ Happy vibing!
 -   Existing built-in modifiers will be upgraded to new IDs
 -   Existing custom modifiers will be upgraded to the GUID as an ID in the `minecraft` namespace
 
-#### `attribute` command
+**`attribute` command**
 
 -   The `uuid` and `name` arguments have been replaced with a singular `id` argument
 
-#### Item Stack Attribute Modifiers
+**Item Stack Attribute Modifiers**
 
 -   The `uuid` and `name` fields have been removed.
 -   Attribute Modifiers now have an `id` (namespaced ID) field
     -   This is a unique identifier per attribute for the modifier
 
-#### Entity Attributes
+**Entity Attributes**
 
 -   Attributes are now stored as `attributes`
 -   Attribute format:
@@ -136,7 +136,7 @@ Happy vibing!
 
 ### Enchantments
 
-#### Attribute Effects
+**Attribute Effects**
 
 Fields:
 
@@ -145,27 +145,27 @@ Fields:
     -   This will be postfixed with the slot name when the enchanted item is equipped in a slot
     -   Must be unique to avoid different Enchantments (or other systems) interfering with each others
 
-#### Entity Effect Types
+**Entity Effect Types**
 
-##### `damage_item`
+**`damage_item`**
 
 The damage is not applied to items held by players in creative mode.
 
-##### Hit Block Parameters
+**Hit Block Parameters**
 
 -   Entities: `this`
 -   Enchantment Level
 -   Origin
 -   Block State
 
-#### Effect Components
+**Effect Components**
 
 -   `minecraft:hit_block`:
     -   Condition Context: changed to take a Hit Block Parameter - `this` is the entity hitting the Block
 
 ### Tags
 
-#### Directory renames
+**Directory renames**
 
 -   Some registry types that used legacy datapack directory names (based on plural name of element) have been renamed to match registry name
 -   Affected directories:
@@ -178,15 +178,15 @@ The damage is not applied to items held by players in creative mode.
     -   `functions` -> `function`
     -   `tags/functions` -> `tags/function`
 
-#### Item Tags
+**Item Tags**
 
 -   Removed `music_discs` item tag
 
-#### Block Tags
+**Block Tags**
 
 -   `air`: All blocks that resemble air
 
-#### Damage Type Tags
+**Damage Type Tags**
 
 -   Removed `breeze_immune_to` damage type tag
 -   Added `panic_environmental_causes`: Damage types that cause panic in aggressive animals that can panic, i.e. mobs that retaliate when attacked
@@ -194,7 +194,7 @@ The damage is not applied to items held by players in creative mode.
 
 ### Predicates
 
-#### Jukebox Playable Predicate
+**Jukebox Playable Predicate**
 
 New item sub-predicate available as `jukebox_playable`.
 
@@ -202,7 +202,7 @@ New item sub-predicate available as `jukebox_playable`.
 -   Fields:
     -   `song` - optional id, list of ids or tag for jukebox song to be matched
 
-#### Player Predicate
+**Player Predicate**
 
 -   The `gamemode` field has been changed to accept a list of gamemodes
 

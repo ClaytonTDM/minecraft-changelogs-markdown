@@ -36,7 +36,7 @@ Some changes have been made to how mobs decide to replace their equipped items w
     -   The new item is less damaged
     -   The new item has a custom name while the old one doesn't
 
-#### Preferred weapons
+**Preferred weapons**
 
 The following mobs now have a preferred weapon type to pick up:
 
@@ -81,19 +81,19 @@ The following mobs now have a preferred weapon type to pick up:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#bee_attractive` - denotes all blocks that Bees may pollinate
 -   Removed `#tall_flowers`
 
-#### Item Tags
+**Item Tags**
 
 -   Removed `#flowers` and `#tall_flowers`
 -   Added `skeleton_preferred_weapon`, `piglin_preferred_weapon`, `pillager_preferred_weapon` and `drowned_preferred_weapon` tags for specifying preferred weapons types for these mobs when picking up items
 
 ### Components
 
-#### `minecraft:custom_model_data`
+**`minecraft:custom_model_data`**
 
 -   Component has now more fields to accomodate new uses by various model property getters
 -   Fields:
@@ -104,7 +104,7 @@ The following mobs now have a preferred weapon type to pick up:
 
 ### Item Modifiers
 
-#### `minecraft:set_custom_model_data`
+**`minecraft:set_custom_model_data`**
 
 -   Component has now more fields to accomodate more complex component structure
 -   Fields:
@@ -136,7 +136,7 @@ The following mobs now have a preferred weapon type to pick up:
 -   Models in `models/item` that only redirect to a block model have been removed
     -   In such cases, the item model will refer to the `models/block` model directly
 
-#### `minecraft:model` item model type
+**`minecraft:model` item model type**
 
 -   Renders a plain model from `models` directory
 -   Fields:
@@ -146,19 +146,19 @@ The following mobs now have a preferred weapon type to pick up:
             -   `type`: type of tint source (see below)
             -   `<type-specific>` - additional fields depending on tint source type
 
-##### `minecraft:constant` tint source type
+**`minecraft:constant` tint source type**
 
 -   Returns a constant RGB color
 -   Fields:
     -   `value` - A packed integer RGB value (e.g. `-1`) or an array of RGB values (e.g. `[ 1, 1, 1 ]`)
 
-##### `minecraft:dye` tint source type
+**`minecraft:dye` tint source type**
 
 -   Returns value from `minecraft:dyed_color` component or default if not present
 -   Fields:
     -   `default` - RGB value
 
-##### `minecraft:grass` tint source type
+**`minecraft:grass` tint source type**
 
 -   Returns grass color at specific climate parameters, based on `textures/colormap/grass.png`
 -   Same colors as ones selected by `downfall` and `temperature` in biome configuration
@@ -166,13 +166,13 @@ The following mobs now have a preferred weapon type to pick up:
     -   `temperature` - float in `0..1` (inclusive) range
     -   `downfall` - float in `0..1` (inclusive) range
 
-##### `minecraft:firework` tint source type
+**`minecraft:firework` tint source type**
 
 -   Returns average of colors from `minecraft:firework_explosion` component or default color if there are none
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:potion` tint source type
+**`minecraft:potion` tint source type**
 
 -   Returns color from `minecraft:potion_contents` component:
     -   if component is present:
@@ -183,19 +183,19 @@ The following mobs now have a preferred weapon type to pick up:
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:map_color` tint source type
+**`minecraft:map_color` tint source type**
 
 -   Return value from `minecraft:map_color` component or default color if component is not present
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:custom_model_data` tint source type
+**`minecraft:custom_model_data` tint source type**
 
 -   Returns value from `colors` list in `minecraft:custom_model_data` component
 -   Fields:
     -   `index` - index for field in `colors`, default: 0
 
-#### `minecraft:special` item model type
+**`minecraft:special` item model type**
 
 -   Renders a special (not data-driven) model
 -   Fields:
@@ -205,38 +205,38 @@ The following mobs now have a preferred weapon type to pick up:
             -   `<type-specific>` - additional fields depending on tint source type
     -   `base`: namespaced ID of model in `models`, providing transformations, particle texture and GUI light
 
-##### `minecraft:bed` special model type
+**`minecraft:bed` special model type**
 
 -   Renders a whole bed
 -   Fields:
     -   `texture` - namespaced ID for texture, without `textures/entity/bed/` prefix and `.png` suffix
 
-##### `minecraft:banner` special model type
+**`minecraft:banner` special model type**
 
 -   Renders a banner with patterns from `minecraft:banner_patterns` component
 -   Fields:
     -   `color` - color of banner base, one of 16 predefined colors
 
-##### `minecraft:conduit` special model type
+**`minecraft:conduit` special model type**
 
 -   Renders conduit
 -   No fields
 
-##### `minecraft:chest` special model type
+**`minecraft:chest` special model type**
 
 -   Renders a single chest
 -   Fields:
     -   `texture` - namespaced ID for texture, without `textures/entity/chest/` prefix and `.png` suffix
     -   `openness` - float, `0.0` (default) - fully closed, `1.0` - fully open
 
-##### `minecraft:head` special model type
+**`minecraft:head` special model type**
 
 -   Renders a head
 -   Uses profile from `minecraft:profile` component when applicable
 -   Fields:
     -   `kind` - one of `skeleton`, `wither_skeleton`, `player`, `zombie`, `creeper`, `piglin`, `dragon`
 
-##### `minecraft:shulker_box` special model type
+**`minecraft:shulker_box` special model type**
 
 -   Renders a shulker box
 -   Fields:
@@ -244,31 +244,31 @@ The following mobs now have a preferred weapon type to pick up:
     -   `openness` - float, `0.0` (default) - fully closed, `1.0` - fully open
     -   `orientation` - orientation for rendering, default: `up`
 
-##### `minecraft:shield` special model type
+**`minecraft:shield` special model type**
 
 -   Renders a shield
 -   Uses patterns from `minecraft:banner_patterns` component and color from `minecraft:base_color` component
 -   No fields
 
-##### `minecraft:trident` special model type
+**`minecraft:trident` special model type**
 
 -   Renders a trident
 -   No fields
 
-##### `minecraft:decorated_pot` special model type
+**`minecraft:decorated_pot` special model type**
 
 -   Renders a decorated pot
 -   Uses values from `minecraft:pot_decorations` component
 -   No fields
 
-#### `minecraft:composite` item model type
+**`minecraft:composite` item model type**
 
 -   Renders multiple sub-models
 -   All models are rendered in the same space
 -   Fields:
     -   `models`: a list of item models to render
 
-#### `minecraft:condition` item model type
+**`minecraft:condition` item model type**
 
 -   Renders an item model depending on boolean property
 -   Fields:
@@ -277,64 +277,64 @@ The following mobs now have a preferred weapon type to pick up:
     -   `on_true` - item model to render when property is true
     -   `on_false` - item model to render when property is false
 
-##### `minecraft:using_item` boolean property
+**`minecraft:using_item` boolean property**
 
 -   Returns true if player is currently using this item
 -   No fields
 
-##### `minecraft:broken` boolean property
+**`minecraft:broken` boolean property**
 
 -   Returns true if the item is damageable and has only one use remaining before breaking
 -   No fields
 
-##### `minecraft:damaged` boolean property
+**`minecraft:damaged` boolean property**
 
 -   Returns true if the item is damageable and has been used at least once
 -   No fields
 
-##### `minecraft:has_component` boolean property
+**`minecraft:has_component` boolean property**
 
 -   Returns true if the given component is present on the item
 -   Fields:
     -   `component` - component type
 
-##### `minecraft:fishing_rod/cast` boolean property
+**`minecraft:fishing_rod/cast` boolean property**
 
 -   Returns true if there is a fishing bobber attached to currently used fishing rod
 -   No fields
 
-##### `minecraft:bundle/has_selected_item` boolean property
+**`minecraft:bundle/has_selected_item` boolean property**
 
 -   Returns true if bundle is "open", i.e. it has selected item visible in GUI
 -   No fields
 
-##### `minecraft:xmas` boolean property
+**`minecraft:xmas` boolean property**
 
 -   Returns true if current date is between December 24th and December 26th (inclusive)
 -   No fields
 
-##### `minecraft:selected` boolean property
+**`minecraft:selected` boolean property**
 
 -   Returns true if item is selected on a hotbar
 -   No fields
 
-##### `minecraft:carried` boolean property
+**`minecraft:carried` boolean property**
 
 -   Returns true if item is carried between slots in GUI
 -   No fields
 
-##### `minecraft:shift_down` boolean property
+**`minecraft:shift_down` boolean property**
 
 -   Returns true if player currently holding shift key down
 -   No fields
 
-##### `minecraft:custom_model_data` boolean property
+**`minecraft:custom_model_data` boolean property**
 
 -   Returns value from `flags` list in `minecraft:custom_model_data` component
 -   Fields:
     -   `index` - index for field in `flags`, default: 0
 
-#### `minecraft:select` item model type
+**`minecraft:select` item model type**
 
 -   Renders an item model based on discrete property
 -   Fields:
@@ -347,13 +347,13 @@ The following mobs now have a preferred weapon type to pick up:
     -   `fallback` - item model to render if none of the cases matched the value
         -   if not present, placeholder "missing" model will be rendered instead
 
-##### `minecraft:main_hand` property
+**`minecraft:main_hand` property**
 
 -   Returns main hand of holding player
 -   No fields
 -   Values: `left`, `right`
 
-##### `minecraft:charge_type` property
+**`minecraft:charge_type` property**
 
 -   Returns charge type stored in `minecraft:charged_projectiles` component
 -   No fields
@@ -362,20 +362,20 @@ The following mobs now have a preferred weapon type to pick up:
     -   `rocket` - if there is at least one firework rocket
     -   `arrow` - any other case
 
-##### `minecraft:trim_material` property
+**`minecraft:trim_material` property**
 
 -   Returns value of `material` field from `minecraft:trim` component, if present
 -   No fields
 -   Values: namespaced ID
 
-##### `minecraft:block_state` property
+**`minecraft:block_state` property**
 
 -   Returns value for some property from `minecraft:block_state` component
 -   Fields:
     -   `block_state_property` - string key to select from component
 -   Values: any string
 
-##### `minecraft:display_context` property
+**`minecraft:display_context` property**
 
 -   Returns context this item is rendered in
 -   No fields
@@ -390,14 +390,14 @@ The following mobs now have a preferred weapon type to pick up:
     -   `ground`
     -   `fixed`
 
-##### `minecraft:custom_model_data` property
+**`minecraft:custom_model_data` property**
 
 -   Returns value from `strings` list in `minecraft:custom_model_data` component
 -   Fields:
     -   `index` - index for field in `strings`, default: 0
 -   Values: any string
 
-#### `minecraft:range_dispatch` item model type
+**`minecraft:range_dispatch` item model type**
 
 -   Renders an item model based on numeric property
 -   Replacement for old `overrides` section from block models
@@ -413,18 +413,18 @@ The following mobs now have a preferred weapon type to pick up:
     -   `fallback` - item model to render if no entries were less or equal to property value
         -   if not present, placeholder "missing" model will be rendered instead
 
-##### `minecraft:custom_model_data` numeric property
+**`minecraft:custom_model_data` numeric property**
 
 -   Returns value from `floats` list in `minecraft:custom_model_data` component
 -   Fields:
     -   `index` - index for field in `floats`, default: 0
 
-##### `minecraft:bundle/fullness` numeric property
+**`minecraft:bundle/fullness` numeric property**
 
 -   Returns weight of `bundle_contents` component or 0 if not present
 -   No fields
 
-##### `minecraft:damage` numeric property
+**`minecraft:damage` numeric property**
 
 -   Returns value for `damage` component
 -   Fields:
@@ -432,7 +432,7 @@ The following mobs now have a preferred weapon type to pick up:
         -   if true, returns value of damage divided by `max_damage` component, clamped to `0..1`
         -   if false, returns value of damage, clamped to `0..max_damage`
 
-##### `minecraft:count` numeric property
+**`minecraft:count` numeric property**
 
 -   Returns stack size
 -   Fields:
@@ -440,19 +440,19 @@ The following mobs now have a preferred weapon type to pick up:
         -   if true, returns count divided by `max_stack_size` component, clamped to `0..1`
         -   if false, returns count clamped to `0..max_stack_size`
 
-##### `minecraft:cooldown` numeric property
+**`minecraft:cooldown` numeric property**
 
 -   Returns remaining cooldown for item, scaled to `0..1`
 -   No fields
 
-##### `minecraft:time` numeric property
+**`minecraft:time` numeric property**
 
 -   Returns value of day time (used for clock), scaled to `0..1`
 -   Fields:
     -   `wobble` - if true, value will oscillate for some time around target before settling, default: `true`
     -   `natural_only` - if true, value will be random in dimensions with `natural=false`, default: `true`
 
-##### `minecraft:compass` numeric property
+**`minecraft:compass` numeric property**
 
 -   Returns angle, scaled to `0..1` in x-z plane between holder position and target
 -   If target is not valid (not present, in other dimension or to close to holder position) random value will be returned
@@ -463,24 +463,24 @@ The following mobs now have a preferred weapon type to pick up:
         -   `recovery` - points at last player death location
     -   `wobble` - if true, value will oscillate for some time around target before settling, default: `true`
 
-##### `crossbow/pull` numeric property
+**`crossbow/pull` numeric property**
 
 -   Returns crossbow-specific use time
 -   No fields
 
-##### `use_duration` numeric property
+**`use_duration` numeric property**
 
 -   Returns item use ticks
 -   Fields:
     -   `remaining` - if `true`, returned value will be remaining use ticks, if `false` - ticks so far, default: `false`
 
-##### `use_cycle` numeric property
+**`use_cycle` numeric property**
 
 -   Returns remaining use ticks modulo `period`
 -   Fields:
     -   `period` - positive float, default `1.0`
 
-#### `minecraft:bundle/selected_item` item model type
+**`minecraft:bundle/selected_item` item model type**
 
 -   Renders selected stack in `minecraft:bundle_contents` component, if present, otherwise does nothing
 

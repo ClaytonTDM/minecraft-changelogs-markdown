@@ -42,9 +42,9 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `thrown_item_picked_up_by_player`
+**`thrown_item_picked_up_by_player`**
 
 -   Triggered when a player picks up an item that was thrown by an entity
 -   Conditions:
@@ -52,7 +52,7 @@ Let me tell you a little story about hubris. Well, not so much a story as a lame
     -   `entity` - a predicate for the entity that threw the item
     -   `item` - a predicate for the item
 
-##### `avoid_vibration`
+**`avoid_vibration`**
 
 -   Triggered when a vibration event is ignored because the source player is holding the sneak key
 -   Conditions:

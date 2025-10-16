@@ -273,7 +273,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `spreadplayers`
+**`spreadplayers`**
 
 ​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
 
@@ -281,7 +281,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `locate`
+**`locate`**
 
 ​
 
@@ -368,7 +368,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 
 ​
 
-#### F3 + N (Toggle Spectator)
+**F3 + N (Toggle Spectator)**
 
 A small change has been made to this debug combination. ​
 
@@ -413,7 +413,7 @@ A small change has been made to this debug combination. ​
 
 ### Advancements
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -422,7 +422,7 @@ Properties:
 
 ​
 
-#### `player_generates_container_loot` trigger type
+**`player_generates_container_loot` trigger type**
 
 Properties:
 
@@ -430,7 +430,7 @@ Properties:
 
 ​
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 

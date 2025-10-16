@@ -230,13 +230,13 @@ Crimson Forests can now be found in the Nether!
 
 -   A new high level material found in the Nether. Use it to upgrade your diamond gear!
 
-#### How to make Netherite
+**How to make Netherite**
 
 -   Mine Ancient Debris in the lower depths of the Nether. At own risk. No insurance coverage for that.
 -   Refine it into Netherite Scrap in a furnace (although that's kind of slow so you might want a Blast Furnace).
 -   Combine 4 Nether Scrap with 4 Gold Ingots in a crafting table to make a Netherite Ingot.
 
-#### Netherite effects
+**Netherite effects**
 
 -   Netherite items float in lava. So you don't lose all your gear after that unplanned lava bath.
 -   Netherite items have higher enchantment value than diamond (but not as high as gold).
@@ -283,7 +283,7 @@ Warped Forests can now be found in the Nether!
 
 ### Commands
 
-#### locatebiome
+**locatebiome**
 
 New command that locates a specified biome. Useful in creative mode when you're looking for a specific biome and don't want to fly around randomly searching for it. Syntax: `locatebiome <biome>` Parameters:
 
@@ -455,11 +455,11 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 -   Mannequins description text can now be configured
 -   Mannequins now accept `minecraft:profile` component from spawner items
 
-#### Modified Data Fields
+**Modified Data Fields**
 
 -   `profile` - now has the same format as a `minecraft:profile` component (which has been extended to allow overrides), defaults to `{}` (i.e. static profile with both `id` and `name` missing)
 
-#### New Data Fields
+**New Data Fields**
 
 -   `pose` - The pose of the Mannequin
     -   Valid entries: `standing`, `crouching`, `swimming`, `fall_flying`, `sleeping`
@@ -480,7 +480,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
 -   Profiles can now also have additional fields that can replace various values used for rendering
 -   If any of the fields are omitted, the value from the resolved profile is used, even if the profile resolved to the default skin
@@ -497,7 +497,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Entity Data
 
-#### Modified `minecraft:player`
+**Modified `minecraft:player`**
 
 -   Changes to the `respawn` object
     -   `angle` has been renamed to `yaw` and is now a required field
@@ -506,14 +506,14 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Loot Functions
 
-#### `minecraft:copy_name`
+**`minecraft:copy_name`**
 
 -   The `source` field now accepts new context values:
     -   `direct_attacker`
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:copy_components`
+**`minecraft:copy_components`**
 
 -   The `source` field now accepts new context values:
     -   `this`

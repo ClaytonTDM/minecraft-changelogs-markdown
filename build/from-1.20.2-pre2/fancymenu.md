@@ -74,7 +74,7 @@ This pre-release updates the Villager Trade Rebalance experiment. This experimen
 
 Thank you to everyone that has sent in their suggestions and feedback regarding the experimental trade change! We are trying out these changes to rebalance the villager trade system and make it more fair and fun for everyone. However, these changes are not yet final, and they will stay as experimental features while we continue to work on them. We appreciate your feedback on these changes. Visit [this link](https://aka.ms/VillagerTradingFeedback) to share your thoughts! We have been following the discussions about the previous Librarian and Wandering Trader updates and look forward to seeing the conversation continue.
 
-#### Cartographer
+**Cartographer**
 
 Before now, Cartographers only sold maps to the Ocean Monument and Woodland Mansion. In this experiment Cartographers can sell seven new maps as well. These new maps each point to a different village or structure and can be used to find seven different biomes. This will help players who want to quickly find a specific location without waiting until they come across it by chance.
 
@@ -82,7 +82,7 @@ Cartographers from different biomes will sell a different selection of maps. Sta
 
 Cartographers now sell 7 new maps: Desert Village Map, Jungle Explorer Map, Plains Village Map, Savanna Village Map, Snow Village Map, Swamp Explorer Map, and Taiga Village Map.
 
-#### Armorer
+**Armorer**
 
 The Armorer's trades have been updated with many changes.
 
@@ -97,7 +97,7 @@ Other changes include:
 -   The Savanna Armorer sells cursed diamond armor at reduced prices
 -   The Taiga Armorer can swap one piece of diamond armor for another
 
-#### Structure Loot
+**Structure Loot**
 
 Certain Enchanted Books now have a high chance of generating in some structures:
 
@@ -217,7 +217,7 @@ Happy mining!
 
 ### Loot tables
 
-#### Random sequences
+**Random sequences**
 
 The ID of the random sequence is now an optional field. If no sequence name is given, loot is drawn using a non-deterministic random source.
 

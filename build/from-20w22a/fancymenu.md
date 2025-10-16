@@ -203,7 +203,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `spreadplayers`
+**`spreadplayers`**
 
 ​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
 
@@ -211,7 +211,7 @@ In this snapshot, we're adding support for custom world settings and custom dime
 
 ​
 
-#### `locate`
+**`locate`**
 
 ​
 
@@ -298,7 +298,7 @@ New F3 debug feature which allows you to switch game modes with traditional "tab
 
 ​
 
-#### F3 + N (Toggle Spectator)
+**F3 + N (Toggle Spectator)**
 
 A small change has been made to this debug combination. ​
 
@@ -343,7 +343,7 @@ A small change has been made to this debug combination. ​
 
 ### Advancements
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -352,7 +352,7 @@ Properties:
 
 ​
 
-#### `player_generates_container_loot` trigger type
+**`player_generates_container_loot` trigger type**
 
 Properties:
 
@@ -360,7 +360,7 @@ Properties:
 
 ​
 
-#### `item_used_on_block` trigger type
+**`item_used_on_block` trigger type**
 
 Properties:
 
@@ -500,7 +500,7 @@ It is now possible to control at what range the server sends data about entities
 
 ​
 
-#### Extended entity checks
+**Extended entity checks**
 
 Entity checks in triggers can now use loot table condition syntax. Old notation:
 
@@ -551,7 +551,7 @@ is now equivalent to:
 
 ​
 
-#### Miscellaneous trigger changes
+**Miscellaneous trigger changes**
 
 -   Due to addition of `player`, existing contents of `location`, `slept_in_bed`, `hero_of_the_village`, `voluntary_exile` can now be placed in `location` field instead of top-level object. Old syntax is still supported, but depreciated.
 

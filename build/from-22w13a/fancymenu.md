@@ -26,7 +26,7 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 -   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
 -   Mobs cannot spawn in Ancient Cities
 
-#### Differences compared to the Experimental Deep Dark snapshot
+**Differences compared to the Experimental Deep Dark snapshot**
 
 -   Many adjustments have been made to Ancient Cities, with new and tweaked structures
 -   Loot tables have been adjusted for Ancient Cities, including a separate loot table for the "ice box" structures
@@ -45,9 +45,9 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `kill_mob_near_sculk_catalyst`
+**`kill_mob_near_sculk_catalyst`**
 
 -   Triggered when a player kills an entity next to Sculk Catalyst
 -   Conditions:

@@ -14,12 +14,12 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Copper Trapdoor
     -   Oxidized and waxed variants of all of the above
 
-#### Chiseled Copper
+**Chiseled Copper**
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-#### Copper Grate
+**Copper Grate**
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -30,7 +30,7 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   Cannot conduct redstone
     -   Hostile mobs cannot naturally spawn on them
 
-#### Copper Bulb
+**Copper Bulb**
 
 -   A light-emitting block that can toggle its light emission through redstone pulses
 -   Oxidizes like other Copper blocks, and emits less light the more oxidized they are
@@ -49,7 +49,7 @@ In this week's snapshot we're extending the Update 1.21 experiment with ALL the 
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-#### Copper Doors and Trapdoors
+**Copper Doors and Trapdoors**
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Works like wooden doors in that they can be opened and closed with interaction as well as redstone

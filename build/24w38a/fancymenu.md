@@ -23,7 +23,7 @@ Happy dyeing!
     -   Enables game rule customization
     -   Enables datapack customization
 
-#### Hardcore mode
+**Hardcore mode**
 
 Hardcore mode is now available in Realms and is accessible by creating a new world or recreating an existing one
 
@@ -39,7 +39,7 @@ Hardcore mode is now available in Realms and is accessible by creating a new wor
 
 ### New Recipe Type
 
-#### `crafting_transmute` recipe type
+**`crafting_transmute` recipe type**
 
 -   New crafting recipe type has been introduced: `crafting_transmute`
 -   When matched, output will copy the input item stack, changing the item type but preserving all stack components

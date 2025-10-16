@@ -16,7 +16,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 -   A checkbox is available for not showing the same Code of Conduct in the future
     -   If the Code of Conduct changes, it will be shown again
 
-#### Server Setup
+**Server Setup**
 
 -   A new boolean field has been added to `server.properties` called `enable-code-of-conduct`
     -   Setting it to `true` will make the server look for code of conduct files in the `codeofconduct` subfolder in the same folder as `server.properties`
@@ -65,7 +65,7 @@ When connecting to a server, a Code of Conduct screen can now be shown.
 
 ### Commands
 
-#### Added `fetchprofile`
+**Added `fetchprofile`**
 
 -   New command that has been added to fetch the contents of a player profile from Minecraft servers
 -   Since the operation might take some time, it works asynchronously
@@ -80,7 +80,7 @@ Syntax:
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
 -   Previously contents of this component would permanently change when profile was resolved, i.e. downloaded from Minecraft service
 -   To avoid issues with this unexpected change, the resolved value is no longer stored and contents of the profile will always remain unchanged
@@ -103,7 +103,7 @@ Syntax:
 
 ### Block Entity Data
 
-#### Modified `minecraft:skull`
+**Modified `minecraft:skull`**
 
 -   `profile` field has been changed to match `minecraft:profile` component
     -   That means that it also becomes immutable and is resolved only when necessary

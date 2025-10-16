@@ -159,12 +159,12 @@ Hello! This very technical snapshot contains vibration changes, data pack and re
 
 -   Changed mob effect storage on items, entities and block entities
 
-#### Mob effect storage changes
+**Mob effect storage changes**
 
 -   Game no longer uses numeric values when storing mob effects to world (so, for example, `4` becomes `minecraft:mining_fatigue`)
 -   Various mob effect fields have been renamed for consistency with new structures
 
-##### Mob Effect Instance
+**Mob Effect Instance**
 
 This structure is used in many places, so changes are described separately.
 
@@ -177,45 +177,45 @@ This structure is used in many places, so changes are described separately.
 -   `HiddenEffect` -> `hidden_effect`, also since it's mob effect instance, changes apply recursively
 -   `FactorCalculationData` -> `factor_calculation_data`
 
-##### Items
+**Items**
 
-###### `potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`
+**`potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-###### `suspicous_stew`
+**`suspicous_stew`**
 
 -   `Effects` -> `effects`, for each entry:
     -   `EffectId` -> `id`, also changed from number to string id
     -   `EffectDuration` -> `duration`
 
-##### Entities
+**Entities**
 
-###### `mooshroom`
+**`mooshroom`**
 
 -   Removed `EffectId` and `EffectDuration`
 -   Added `stew_effects` with the same format as `suspicious_stew.effects` tag (i.e. list of effect id and duration)
 
-###### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   `Effects` -> `effects`, contents tranformed as a list of mob effect instances
 
-###### `arrow`
+**`arrow`**
 
 -   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
 
-###### Players, Armor Stands and mobs
+**Players, Armor Stands and mobs**
 
 -   `ActiveEffects` -> `active_effects`, contents tranformed as a list of mob effect instances
 
-##### Block Entities
+**Block Entities**
 
-###### `beacon`
+**`beacon`**
 
 -   `Primary` -> `primary_effect`, also changed from number to string id
 -   `Secondary` -> `secondary_effect`, also changed from number to string id
 
-#### Loot Tables
+**Loot Tables**
 
 -   Added `sequence` loot function
     -   Contains 1 field:

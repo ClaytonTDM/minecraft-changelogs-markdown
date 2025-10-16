@@ -70,7 +70,7 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   It is no longer given to players that defeat a Raid Captain outside a Raid
         -   Instead, players can gain access to Bad Omen by consuming a new Ominous Bottle
 
-#### Ominous Bottle
+**Ominous Bottle**
 
 -   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
     -   Comes in 5 variations, one for each Bad Omen level
@@ -83,14 +83,14 @@ Note: some of the features below will only work in freshly generated Trial Chamb
 -   A new Ominous Event that can be accessed by exploring a Trial Chamber with Bad Omen
 -   This event will have players facing more powerful Trial Spawners if they dare!
 
-#### Trial Omen
+**Trial Omen**
 
 -   A variant that Bad Omen can transform into
     -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
     -   The Trial Omen has a duration of 15 minutes multiplied by the transformed Bad Omen's level
 -   Players that have Trial Omen are surrounded by ominous particles
 
-#### Ominous Trial Spawner
+**Ominous Trial Spawner**
 
 -   A more powerful active phase of the Trial Spawner with unique challenges and rewards
     -   Provides a more challenging experience that advanced players can opt into for better rewards
@@ -111,12 +111,12 @@ Note: some of the features below will only work in freshly generated Trial Chamb
     -   It will stay Ominous until it has been defeated and its cooldown has finished
 -   When defeated, it will eject a different set of loot to normal Trial Spawners
 
-#### Ominous Trial Key
+**Ominous Trial Key**
 
 -   A new variant of the Trial Key which can only be obtained by defeating an Ominous Trial Spawner
 -   They can be used to unlock Ominous Vaults
 
-#### Ominous Vault
+**Ominous Vault**
 
 -   A variant of Vaults that have a different texture and emit soul flames instead of normal flames
 -   These can be found throughout the Trial Chambers in harder to find places and require an Ominous Trial Key to unlock
@@ -237,7 +237,7 @@ Non-default components on item stacks containing block items are now stored on b
 
 ### New Item Stack Components
 
-#### `minecraft:item_name`
+**`minecraft:item_name`**
 
 -   When present, replaces default item name with contained chat component
 -   Differences from `custom_name`:
@@ -245,7 +245,7 @@ Non-default components on item stacks containing block items are now stored on b
     -   `item_name` is not styled with italics when displayed to player
     -   `item_name` does not show labels where applicable (for example: banner markers, names in item frames)
 
-#### `minecraft:ominous_bottle_amplifier`
+**`minecraft:ominous_bottle_amplifier`**
 
 -   Controls the amplifier amount for an Ominous Bottle's bad omen effect
 -   Format: integer between 0 and 4
@@ -253,7 +253,7 @@ Non-default components on item stacks containing block items are now stored on b
 
 ### Loot Functions
 
-#### `copy_components`
+**`copy_components`**
 
 Removed field `components` and replaced it with:
 
@@ -263,7 +263,7 @@ Removed field `components` and replaced it with:
     -   if omitted, defaults to empty
 -   Only components that are included (explicitly or implicitly) but not excluded will be copied
 
-#### `set_name`
+**`set_name`**
 
 Added optional field `target` to specify which name should be set
 
@@ -271,16 +271,16 @@ Added optional field `target` to specify which name should be set
     -   `custom_name` - sets `custom_name` component (default)
     -   `item_name` - sets `item_name` component
 
-#### Added `set_ominous_bottle_amplifier`
+**Added `set_ominous_bottle_amplifier`**
 
 Sets the `ominous_bottle_amplifier` component on the target item according to a number provider.
 
 -   `conditions`: list of conditions to filter this function
 -   `amplifier`: a number provider used to generate the `ominous_bottle_amplifier` component
 
-#### Entity sub-predicates
+**Entity sub-predicates**
 
-##### `raider`
+**`raider`**
 
 New `raider` sub-predicate has been added to match raiders Fields:
 
@@ -427,7 +427,7 @@ Trial Chambers now generate slightly more rarely and a bit more spaced out from 
 
 ### Commands
 
-#### Inline loot values
+**Inline loot values**
 
 Arguments in following commands that previously accepted namespaced ids of loot tables, modifiers and predicates can now also accept inline definitions:
 
@@ -437,7 +437,7 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 
 ### Loot tables
 
-#### `storage` number provider
+**`storage` number provider**
 
 -   This number provider is able to access numeric values from command storage directly
 -   If selected storage does not exist or tag selected by path is not numeric or does not exist, provider returns 0
@@ -445,16 +445,16 @@ Arguments in following commands that previously accepted namespaced ids of loot 
     -   `storage` - namespaced id of command storage
     -   `path` - NBT path to field
 
-#### `set_lore` function
+**`set_lore` function**
 
 -   The `replace` field has been removed
 -   Now has `mode` like `set_fireworks` and `set_written_book_pages`
 
-#### `set_written_book_pages` function
+**`set_written_book_pages` function**
 
 -   `pages` is now a JSON Object rather than a string containing JSON
 
-#### `toggle_tooltips` loot function
+**`toggle_tooltips` loot function**
 
 -   This function can be used to modify item component tooltip visiblity
 -   It works by setting fields like `show_in_tooltip` without changing other values
@@ -464,7 +464,7 @@ Arguments in following commands that previously accepted namespaced ids of loot 
 -   Example:
     -   `{function:"toggle_tooltips","toggles":{"enchantments":false}}` will hide enchantments tooltip
 
-#### Functions
+**Functions**
 
 -   Nested lists are no longer supported in function lists
 
@@ -498,27 +498,27 @@ The item predicate syntax (used in `execute if|unless items` and `clear` command
 
 ### Predicates
 
-#### Item sub-predicates
+**Item sub-predicates**
 
 -   Predicate `minecraft:custom_data` now accepts both SNBT data written as a string (existing format) and unflattened tags
     -   That means that `*[custom_data~{a:1}]` and `*[custom_data~"{a:1}"]` are equivalent
     -   Flattened string format has been kept since NBT type information can't be expressed in JSON
 
-#### Entity sub-predicates
+**Entity sub-predicates**
 
-##### `wolf`
+**`wolf`**
 
 New `wolf` sub-predicate has been added to match wolf variants Fields:
 
 -   `variant` - wolf variant to match (single entry, list of entries or tag)
 
-##### `cat`, `frog`, `painting`
+**`cat`, `frog`, `painting`**
 
 -   Field `variant` now accepts single entries, list of entries or tags
 
 ### New Item Stack Components
 
-#### `minecraft:food`
+**`minecraft:food`**
 
 -   When present, this item will behave as if a food (can be eaten)
 -   Format: object with fields
@@ -536,14 +536,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g: `food={nutrition:4,saturation_modifier:0.1}`
 -   On food items, has an implicit default value for that food type
 
-#### `minecraft:max_stack_size`
+**`minecraft:max_stack_size`**
 
 -   Controls the maximum stacking size of this item
 -   Format: integer between 1 and 99
     -   e.g. `max_stack_size=4`
 -   Has an implicit default value according to the item type (usually `64`)
 
-#### `minecraft:max_damage`
+**`minecraft:max_damage`**
 
 -   Controls the maximum amount of damage than an item can take
 -   If not present, the item cannot be damaged
@@ -551,14 +551,14 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `max_damage=123`
 -   Has an implicit default value for damageable items
 
-#### `minecraft:fire_resistant`
+**`minecraft:fire_resistant`**
 
 -   If present, this item will not burn in fire
 -   Format: empty object
     -   e.g. `fire_resistant={}`
 -   Has an implicit default value for fire-resistant items such as Netherite
 
-#### `minecraft:rarity`
+**`minecraft:rarity`**
 
 -   Controls the color of the item name
 -   Format: enumerated value, one of:
@@ -569,7 +569,7 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `rarity=rare`
 -   Special items such as Golden Apples have an implicit default value
 
-#### `minecraft:tool`
+**`minecraft:tool`**
 
 -   Controls the behavior of the item as a tool
 -   Format: object with fields
@@ -583,7 +583,7 @@ New `wolf` sub-predicate has been added to match wolf variants Fields:
     -   e.g. `tool={rules:[{blocks:"#mineable/pickaxe",speed:4.0,correct_for_drops:true}]}`
 -   Vanilla tool items will have an implicit default value based on their tier and tool type
 
-#### `hide_tooltip`
+**`hide_tooltip`**
 
 -   If present, it will completely hide whole item tooltip (that includes item name)
 -   Tooltip will be still visible and searchable in creative mode

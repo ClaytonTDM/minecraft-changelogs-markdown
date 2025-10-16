@@ -6,7 +6,7 @@ Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes
 
 ### Winter Drop
 
-#### Pale Moss
+**Pale Moss**
 
 -   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
 -   Pale Moss Carpet is now more efficient to destroy with Sword

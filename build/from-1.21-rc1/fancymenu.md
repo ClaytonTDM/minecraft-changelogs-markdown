@@ -186,31 +186,31 @@ Happy portaling! ;)
 
 ### Enchantments
 
-#### Level-Based Values
+**Level-Based Values**
 
-##### `lookup`
+**`lookup`**
 
 A Level-Based Value type that maps a list of values to specific levels, and applies a fallback if the level is greater than the number of values supplied. Fields:
 
 -   `values` - A list of values indexed by `level - 1` to apply, if present
 -   `fallback` - A fallback Level-Based Value to apply if the level is greater than the size of `values`
 
-#### Effect Conditions
+**Effect Conditions**
 
 Unlike with loot tables, all effect conditions need to be inline objects and cannot be references.
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   `fire_aspect_lightable` has been removed
     -   With this snapshot, we are temporarily removing the functionality of lighting blocks on fire using the Fire Aspect enchantment, as we want to refine it further. This functionality will be reintroduced in a later release.
 
 ### Loot tables
 
-#### Conditions
+**Conditions**
 
-##### `random_chance_with_enchanted_bonus`
+**`random_chance_with_enchanted_bonus`**
 
 -   `chance`: field has been removed
 -   `unenchanted_chance`: new field for the chance for an unenchanted item
@@ -439,7 +439,7 @@ Happy mining!
 
 ### Modified loot functions
 
-#### `set_fireworks`
+**`set_fireworks`**
 
 Fields `explosions` and `mode` have been grouped together as a sub-object
 

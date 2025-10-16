@@ -23,11 +23,11 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 -   Mannequins description text can now be configured
 -   Mannequins now accept `minecraft:profile` component from spawner items
 
-#### Modified Data Fields
+**Modified Data Fields**
 
 -   `profile` - now has the same format as a `minecraft:profile` component (which has been extended to allow overrides), defaults to `{}` (i.e. static profile with both `id` and `name` missing)
 
-#### New Data Fields
+**New Data Fields**
 
 -   `pose` - The pose of the Mannequin
     -   Valid entries: `standing`, `crouching`, `swimming`, `fall_flying`, `sleeping`
@@ -48,7 +48,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Data Components
 
-#### Modified `minecraft:profile`
+**Modified `minecraft:profile`**
 
 -   Profiles can now also have additional fields that can replace various values used for rendering
 -   If any of the fields are omitted, the value from the resolved profile is used, even if the profile resolved to the default skin
@@ -65,7 +65,7 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Entity Data
 
-#### Modified `minecraft:player`
+**Modified `minecraft:player`**
 
 -   Changes to the `respawn` object
     -   `angle` has been renamed to `yaw` and is now a required field
@@ -74,14 +74,14 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ### Loot Functions
 
-#### `minecraft:copy_name`
+**`minecraft:copy_name`**
 
 -   The `source` field now accepts new context values:
     -   `direct_attacker`
     -   `target_entity`
     -   `interacting_entity`
 
-#### `minecraft:copy_components`
+**`minecraft:copy_components`**
 
 -   The `source` field now accepts new context values:
     -   `this`

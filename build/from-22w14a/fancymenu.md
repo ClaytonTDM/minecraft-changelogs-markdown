@@ -54,7 +54,7 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 
 ### Predicates
 
-#### Entity predicate
+**Entity predicate**
 
 -   `player`, `fishing_hook`, `lightning_bolt` and `catType` fields have been replaced with `type_specific`
 -   `type_specific` has field `type` (one of `player`, `fishing_hook`, `lightning_bolt` or `cat`) and same fields as removed fields
@@ -98,15 +98,15 @@ A new Recovery Compass can be crafted with Echo Shards which can only be found a
 
 -   Removed field `location` from triggers `location`, `slept_in_bed`, `hero_of_the_village` and `voluntary_exile` - it was handled exactly the same as `player.location`
 
-#### New triggers
+**New triggers**
 
-##### `item_delivered_to_player`
+**`item_delivered_to_player`**
 
 -   Triggered when an allay delivers an item to a player
 -   Conditions:
     -   `player` - a player for which this trigger runs
 
-##### `allay_drop_item_on_block`
+**`allay_drop_item_on_block`**
 
 -   Triggered when an allay drops an item on a block
 -   Conditions:
@@ -196,7 +196,7 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 -   You can also find a new mysterious block called Reinforced Deepslate here, which cannot be obtained in Survival
 -   Mobs cannot spawn in Ancient Cities
 
-#### Differences compared to the Experimental Deep Dark snapshot
+**Differences compared to the Experimental Deep Dark snapshot**
 
 -   Many adjustments have been made to Ancient Cities, with new and tweaked structures
 -   Loot tables have been adjusted for Ancient Cities, including a separate loot table for the "ice box" structures
@@ -215,9 +215,9 @@ Wander the halls of these long-abandoned structures in the Deep Dark depths to u
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `kill_mob_near_sculk_catalyst`
+**`kill_mob_near_sculk_catalyst`**
 
 -   Triggered when a player kills an entity next to Sculk Catalyst
 -   Conditions:

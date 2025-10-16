@@ -83,11 +83,11 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#plays_ambient_desert_block_sounds` - blocks that will play ambient desert block sounds
 
-#### Damage Type Tags
+**Damage Type Tags**
 
 -   Renamed `#bypasses_blocking` back to `#bypasses_shield`
 
@@ -102,7 +102,7 @@ Happy snapshot Wednesday! (You didn't think we were done, did you?) Today's snap
 
 ### Item Components
 
-#### Changes to the `blocks_attacks` component
+**Changes to the `blocks_attacks` component**
 
 -   New `bypassed_by` field - hashtagged damage type tag (optional)
     -   If specified, blocking is bypassed by these damage types

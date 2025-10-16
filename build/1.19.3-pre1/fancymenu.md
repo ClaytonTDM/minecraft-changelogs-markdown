@@ -15,7 +15,7 @@ Happy mining!
 
 ### Loot tables and Advancements
 
-#### New entity sub-predicate types
+**New entity sub-predicate types**
 
 -   Added new entity sub-predicates for some entity types with variants:
 -   `axolotl`

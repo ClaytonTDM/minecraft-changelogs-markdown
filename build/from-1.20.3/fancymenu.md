@@ -50,7 +50,7 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
 
 ### Chat Components
 
-#### Serialization
+**Serialization**
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as strings instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network
@@ -72,19 +72,19 @@ The optional Update 1.21 Experiment also shows up in this version as a sneak pre
 
 Changes have been made to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
 
-#### User Interface
+**User Interface**
 
 -   The download screen has been replaced with a toast
 -   World resource pack application now starts together with chunk loading
 
-#### Local Storage
+**Local Storage**
 
 Downloaded packs are now stored in the `downloads` directory (with a different file organization than the old `server-resource-packs`)
 
 -   Only up to 20 files are cached
 -   Inside this directory there is also log file (`log.json`) that stores information about downloaded files for debug purposes
 
-#### Server Config
+**Server Config**
 
 Downloaded packs now have a unique id (GUID/UUID) that can be used to differentiate them
 
@@ -93,7 +93,7 @@ Downloaded packs now have a unique id (GUID/UUID) that can be used to differenti
 -   If the hash of a pack is not set, this pack will be redownloaded before every application
     -   Previously, if the hash was missing, the latest downloaded version of pack was applied
 
-#### Packets
+**Packets**
 
 Some additional options have been added for 3rd-party servers software:
 
@@ -121,7 +121,7 @@ Some additional options have been added for 3rd-party servers software:
 
 ### Commands
 
-#### Functions
+**Functions**
 
 (See further changes in Pack Version 23)
 
@@ -137,7 +137,7 @@ Some additional options have been added for 3rd-party servers software:
     -   A single call to `function` will now store at most once (zero times if `return` was not called)
     -   For function tags with multiple entries, function results will be accumulated, but partial results will be stored at the end of every function
 
-##### Limits
+**Limits**
 
 Existing limits for functions have been refined to accomodate new execution rules and prevent wider range of exploits:
 
@@ -151,7 +151,7 @@ Existing limits for functions have been refined to accomodate new execution rule
 -   A new limit with game rule called `maxCommandForkCount` now restricts the total amount of contexts that can be created by single state of functions like `execute`
     -   For example: if there are 5 entities in world, `execute as @e` creates 5 contexts, while `execute as @e at @e` creates 5;;*;;5 = 25 contexts
 
-#### `execute if function`
+**`execute if function`**
 
 An `execute` sub-command that runs a function or function tag and matches the return value(s). This is a reintroduction of functionality removed in a previous version. If a tag is given, all functions run regardless of the results of prior functions.
 
@@ -161,7 +161,7 @@ Parameters:
 
 -   `function`: The function or tag to run
 
-##### Matching
+**Matching**
 
 The matching of the result value of the function(s) that run:
 
@@ -171,7 +171,7 @@ The matching of the result value of the function(s) that run:
     -   The return value is not 0
 -   If no functions exited with `return`, neither `if` or `unless` will run
 
-#### `return run`
+**`return run`**
 
 A form of the `return` command is now available, `return run`. This is a reintroduction of functionality removed in a previous version.
 
@@ -259,7 +259,7 @@ Syntax:
 
 ### Commands
 
-#### `return`
+**`return`**
 
 -   `return run` will now always return
     -   If there are no valid results from the returned command, the function containing the `return run` will fail (i.e. `success=0` and `result=0`)
@@ -267,13 +267,13 @@ Syntax:
 -   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store the value and return it outside the function
 -   A new subcommand `return fail` has been added to make the whole function fail (i.e. return `success=0` and `result=0`)
 
-#### `function`
+**`function`**
 
 -   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
 -   A single call to the `function` command will always return when run with `return run`
     -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
 
-#### `execute if|unless function`
+**`execute if|unless function`**
 
 -   `execute if|unless function` no longer always fails if none of the functions had a `return`
     -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
@@ -290,9 +290,9 @@ Syntax:
 
 ### Commands
 
-#### `scoreboard`
+**`scoreboard`**
 
-##### Display Names
+**Display Names**
 
 Each entry in a scoreboard can now have a custom display name.
 
@@ -304,7 +304,7 @@ Each entry in a scoreboard can now have a custom display name.
     -   `scoreboard players display name <targets> <objective> <text component>` - set display name
     -   `scoreboard players display name <targets> <objective>` - clear display name
 
-##### Display Name Auto-Update
+**Display Name Auto-Update**
 
 To make display name management easier, objectives can also be configured to auto-update display names on every score update.
 
@@ -313,7 +313,7 @@ To make display name management easier, objectives can also be configured to aut
 -   Command to control auto-update for objective:
     -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
 
-##### Number Formatting
+**Number Formatting**
 
 Scores in numeric form can now be formatted.
 
@@ -398,7 +398,7 @@ Scores in numeric form can now be formatted.
 -   If the output result has multiple types of items, all the result items will be ejected together
 -   When placed, the front face of the Crafter will face towards the Player
 
-#### Crafter User Interface
+**Crafter User Interface**
 
 -   The Crafter has a 3x3 interactable crafting grid
 -   The Crafter’s crafting grid slots are toggleable, meaning that the player can change the behavior of a slot by interacting with it while not holding an item
@@ -407,7 +407,7 @@ Scores in numeric form can now be formatted.
 -   Unlike the Crafting Table, the Crafter displays a preview of the crafted item which will be crafted and ejected on the next Redstone pulse, but cannot be manually taken out by the player
 -   The Crafter User Interface is shared between all players interacting with it, meaning that multiple players can interact with the Crafter at the same time, similar to Chests and Hoppers
 
-#### Crafter Interaction with Other Blocks
+**Crafter Interaction with Other Blocks**
 
 -   The signal strength of a Comparator reading a Crafter is 0-9, where each non-empty or toggled slot adds 1 strength
 -   Hoppers and Minecarts with Hoppers can be used to both insert and extract items from the Crafter
@@ -432,12 +432,12 @@ The Copper family of blocks has been expanded, including:
 -   Copper Trapdoor
 -   Oxidized and waxed variants of all of the above
 
-#### Chiseled Copper
+**Chiseled Copper**
 
 -   Crafted with 2 Cut Copper Slabs of a shared oxidation level
 -   Can be crafted in the Stonecutter
 
-#### Copper Grate
+**Copper Grate**
 
 -   A new type of decorative block unique to the Copper family
 -   Crafted with 4 Copper Blocks of a shared oxidation level
@@ -449,7 +449,7 @@ The Copper family of blocks has been expanded, including:
     -   Hostile mobs cannot naturally spawn on them
     -   Can hold Water
 
-#### Copper Bulb
+**Copper Bulb**
 
 -   A light-emitting block that can toggle its light emission through Redstone pulses
 -   Oxidizes like other Copper blocks, and emits light based on oxidation level
@@ -468,7 +468,7 @@ The Copper family of blocks has been expanded, including:
     -   1 Blaze Rod
     -   1 Redstone Dust
 
-#### Copper Doors and Trapdoors
+**Copper Doors and Trapdoors**
 
 -   Copper variants of Doors and Trapdoors that can oxidize over time and be waxed
 -   Works like wooden doors in that they can be opened and closed with interaction, as well as Redstone
@@ -550,7 +550,7 @@ All Tuff variants can be crafted in the Stonecutter.
     -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
 -   Natural mob spawning does not occur within Trial Chambers
 
-#### Known Issues
+**Known Issues**
 
 -   The corridors sometimes end with a dead end
 -   Aquifers, Lush Caves, and Sculk Veins sometimes intersect with the Trial Chamber

@@ -165,9 +165,9 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
 
 ### Advancements
 
-#### New triggers
+**New triggers**
 
-##### `fall_from_height`
+**`fall_from_height`**
 
 -   Triggered when a player lands after falling
 -   Conditions:
@@ -175,7 +175,7 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
     -   `start_position` - location predicate for last position before falling started
     -   `distance` - predicate for distance between `start_position` and player
 
-##### `ride_entity_in_lava`
+**`ride_entity_in_lava`**
 
 -   Triggered for every tick when player rides in lava
 -   Conditions
@@ -183,22 +183,22 @@ Time for an Advanced snapshot! In this snapshot, you can also open worlds from p
     -   `start_position` - position where riding started (first tick on lava)
     -   `distance` - predicate for distance between `start_position` and player
 
-#### Changed triggers
+**Changed triggers**
 
-##### `nether_travel`
+**`nether_travel`**
 
 -   `entered` condition renamed to `start_position`
 -   `exited` has been removed, since it was identical to `player.location`
 
 ### Loot Tables
 
-#### New functions
+**New functions**
 
-##### `set_potion`
+**`set_potion`**
 
 Sets `Potion` tag on any item
 
-###### Parameters:
+**Parameters:**
 
 -   `id` - potion id
 
@@ -288,7 +288,7 @@ In practice, this can mean identifying technical pain points in the game, like h
 
 At this point the only implemented event is world load.
 
-#### World Load event
+**World Load event**
 
 -   Sent when loading singleplayer world or connecting to multiplayer server
 -   Contains following information:
@@ -489,14 +489,14 @@ Happy mining!
 
 ### JFR Profiling
 
-#### Custom events
+**Custom events**
 
 -   `minecraft.ServerTickTime`: sampling event exposing average server tick times at one second intervals
 -   `minecraft.ChunkGeneration`: time taken to generate individual chunk stages
 -   `minecraft.PacketRead | minecraft.PacketSent`: network traffic
 -   `minecraft.WorldLoadFinishedEvent`: initial world loading duration
 
-#### Ending a profiling run
+**Ending a profiling run**
 
 The run will then be stopped either by:
 
@@ -504,15 +504,15 @@ The run will then be stopped either by:
 -   `jfr stop` in-game command
 -   `jcmd` CLI tool
 
-#### Overview
+**Overview**
 
 Java Flight Recorder ([https://openjdk.java.net/jeps/328](https://openjdk.java.net/jeps/328)) is the internal JVM profiling tool bundled with the Java Runtime to analyze performance and runtime characteristics. It's a useful tool for exposing internal JVM performance metrics as well as custom metrics that can be monitored or analyzed using any stock Java profiler or monitoring agents.
 
-#### Reports
+**Reports**
 
 A summary JSON report is written both to the log file and in the debug folder accompanied by a `.jfr` recording ready to be analyzed in i.e JMC [https://github.com/openjdk/jmc](https://github.com/openjdk/jmc) or any other profiler tool supporting the format.
 
-#### Starting a profiling run
+**Starting a profiling run**
 
 A profiling run can be started using any of the following alternatives:
 
@@ -522,9 +522,9 @@ A profiling run can be started using any of the following alternatives:
 
 ### Loot tables
 
-#### Changed functions
+**Changed functions**
 
-##### `set_contents`, `set_loot_table`
+**`set_contents`, `set_loot_table`**
 
 Added new mandatory field `type`. This type will be written into `BlockEntityTag.id`, to make sure this tag can be correctly migrated between versions
 

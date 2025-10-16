@@ -12,7 +12,7 @@ Two new accessibility settings have been added to help with visual comfort
 -   At lower values, the nausea effect is replaced with a green overlay as an alternative visualization
 -   Field of view effects, shown after speed modifiers are applied, can now be reduced
 
-#### Chat Delay
+**Chat Delay**
 
 -   Chat delay has been added to the Chat Settings screen
 -   Pressing F3+D now clears the pending chat messages
@@ -47,7 +47,7 @@ Two new accessibility settings have been added to help with visual comfort
 -   Piglins now become angry with players who open or destroy a Chest Minecart
 -   Tweaked bartering loot
 
-#### Piglin Brute
+**Piglin Brute**
 
 -   Piglin Brutes are stronger versions of Piglins that live in bastions and protect the treasures there
 -   Unlike the their cowardly and greedy counterparts, the Piglin Brutes cannot be distracted by gold and aren't afraid of anything
@@ -76,11 +76,11 @@ Two new accessibility settings have been added to help with visual comfort
 
 ### Commands
 
-#### Execute
+**Execute**
 
 -   `execute in` now respects dimension scaling
 
-#### spawnpoint & setworldspawn
+**spawnpoint & setworldspawn**
 
 Added an angle parameter for setting the default facing angle of a respawning player Syntax: `spawnpoint [<targets>] [<pos>] [<angle>]`  
 Syntax: `setworldspawn [<pos>] [<angle>]` New parameters:
@@ -119,7 +119,7 @@ Syntax: `setworldspawn [<pos>] [<angle>]` New parameters:
 
 ### Tags
 
-#### Optional entries
+**Optional entries**
 
 Entries in tags can now be marked as optional. Failure to resolve optional entries does not prevent the whole tag from loading. Example:
 

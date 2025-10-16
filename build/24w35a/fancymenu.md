@@ -33,20 +33,20 @@ Happy mining!
 
 -   Special loot table `empty` has been removed and is no longer defined in vanilla data pack
 
-#### Sheep loot tables
+**Sheep loot tables**
 
 -   Sheep now always uses a single loot table `entities/sheep`
 -   Wool drops are still defined in sub-tables in `entities/sheep/<color>`, but they are now just dispatched from the main table
     -   Note: mutton drop is now controlled by the main table, while sub-tables are responsible only for wool drop
 -   Sheep shearing is now controlled by loot table found as `shearing/sheep`
 
-#### Mooshroom shearing loot table
+**Mooshroom shearing loot table**
 
 -   Mooshroom shearing is now controlled by loot table found as `shearing/mooshroom`
 
 ### New conditions
 
-#### `sheep` entity sub-predicate
+**`sheep` entity sub-predicate**
 
 New entity sub-predicate for testing sheep wool Fields:
 

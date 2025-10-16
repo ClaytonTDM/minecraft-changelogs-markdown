@@ -207,7 +207,7 @@ Some changes have been made to how mobs decide to replace their equipped items w
     -   The new item is less damaged
     -   The new item has a custom name while the old one doesn't
 
-#### Preferred Weapons
+**Preferred Weapons**
 
 The following mobs now have a preferred weapon type to pick up:
 
@@ -248,7 +248,7 @@ The following mobs now have a preferred weapon type to pick up:
 
 -   Suggestions will now be shown for attribute modifier IDs existing on the target in the `attribute` command
 
-#### `attribute` Command
+**`attribute` Command**
 
 New subcommand: `base reset` for resetting the base value of an attribute to its default value for the target entity. If the attribute does not exist on the entity, the command will fail.
 
@@ -264,12 +264,12 @@ Parameters:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#bee_attractive` - denotes all blocks that Bees may pollinate
 -   Removed `#tall_flowers`
 
-#### Item Tags
+**Item Tags**
 
 -   Removed `#flowers` and `#tall_flowers`
 -   Removed `trim_templates`
@@ -301,11 +301,11 @@ Added optional `shadow_color` style field to Text Components, which overrides th
 
 ### Item Components
 
-#### `minecraft:equippable`
+**`minecraft:equippable`**
 
 -   The `model` field has been renamed to `asset_id`
 
-#### `minecraft:custom_model_data`
+**`minecraft:custom_model_data`**
 
 -   Component now has more fields to accommodate new uses by various model property getters (see Resource Pack changes)
 -   Fields:
@@ -316,7 +316,7 @@ Added optional `shadow_color` style field to Text Components, which overrides th
 
 ### Item Modifiers
 
-#### `minecraft:set_custom_model_data`
+**`minecraft:set_custom_model_data`**
 
 Now has more fields to accommodate more complex component structure.
 
@@ -433,7 +433,7 @@ Now has more fields to accommodate more complex component structure.
 -   Models in `models/item` that only redirect to a block model have been removed
     -   In such cases, the item model will refer to the `models/block` model directly ![Steve blocks an Arrow shot by a Skeleton with a Shield that has been given the item model of an Iron Sword.](https://launchercontent.mojang.com/v2/images/1.21.4blocking.jpg)
 
-#### Top-level Client Item Info
+**Top-level Client Item Info**
 
 -   Contains information needed to render item
 -   Stored in `/assets/[namespace]/items/[path].json`
@@ -445,7 +445,7 @@ Now has more fields to accommodate more complex component structure.
         -   Only the value from the new item is taken into account
         -   Does not control "pop" animation in GUI when item is picked up or changes count
 
-#### `minecraft:model` Item Model Type
+**`minecraft:model` Item Model Type**
 
 -   Renders a plain model from the `models` directory
 -   Fields:
@@ -457,26 +457,26 @@ Now has more fields to accommodate more complex component structure.
             -   `type`: Type of tint source (see below)
             -   `<type-specific>` - Additional fields depending on tint source type
 
-##### `minecraft:constant` Tint Source Type
+**`minecraft:constant` Tint Source Type**
 
 -   Returns a constant RGB color
 -   Fields:
     -   `value` - RGB value
 
-##### `minecraft:custom_model_data` Tint Source Type
+**`minecraft:custom_model_data` Tint Source Type**
 
 -   Returns a value from the `colors` list in the `minecraft:custom_model_data` component, if present
 -   Fields:
     -   `index` - Index for field in `colors`, default: `0`
     -   `default`: RGB value
 
-##### `minecraft:dye` Tint Source Type
+**`minecraft:dye` Tint Source Type**
 
 -   Returns the value from the `minecraft:dyed_color` component, or a default value if not present
 -   Fields:
     -   `default` - RGB value
 
-##### `minecraft:grass` Tint Source Type
+**`minecraft:grass` Tint Source Type**
 
 -   Returns a grass color at specific climate parameters, based on `textures/colormap/grass.png`
 -   This yields the same colors as ones selected by `downfall` and `temperature` in biome configuration
@@ -484,19 +484,19 @@ Now has more fields to accommodate more complex component structure.
     -   `temperature` - Float in `0..1` (inclusive) range
     -   `downfall` - Float in `0..1` (inclusive) range
 
-##### `minecraft:firework` Tint Source Type
+**`minecraft:firework` Tint Source Type**
 
 -   Returns the average of colors from `minecraft:firework_explosion` component, or a default color if there are none
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:map_color` Tint Source Type
+**`minecraft:map_color` Tint Source Type**
 
 -   Return the color from the `minecraft:map_color` component, or the default color if the component is not present
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:potion` Tint Source Type
+**`minecraft:potion` Tint Source Type**
 
 -   Returns a color based on the `minecraft:potion_contents` component:
     -   If the component is present:
@@ -506,13 +506,13 @@ Now has more fields to accommodate more complex component structure.
 -   Fields:
     -   `default`: RGB value
 
-##### `minecraft:team` Tint Source Type
+**`minecraft:team` Tint Source Type**
 
 -   Returns the team color of the context entity, if any
 -   Fields:
     -   `default` - RGB value to return when there is no context entity, entity is not in a team or the team has no color
 
-#### `minecraft:special` Item Model Type
+**`minecraft:special` Item Model Type**
 
 -   Renders a special (not data-driven) model
 -   Fields:
@@ -522,37 +522,37 @@ Now has more fields to accommodate more complex component structure.
             -   `<type-specific>` - Additional fields depending on tint source type
     -   `base`: Namespaced ID of a model in `models` to provide transformations, particle texture and GUI light
 
-##### `minecraft:banner` Special Model Type
+**`minecraft:banner` Special Model Type**
 
 -   Renders a Banner with patterns from the `minecraft:banner_patterns` component
 -   Fields:
     -   `color` - Color of the Banner base, one of 16 predefined colors
 
-##### `minecraft:bed` Special Model Type
+**`minecraft:bed` Special Model Type**
 
 -   Renders a whole Bed
 -   Fields:
     -   `texture` - Namespaced ID for the texture to use, without `textures/entity/bed/` prefix and `.png` suffix
 
-##### `minecraft:chest` Special Model Type
+**`minecraft:chest` Special Model Type**
 
 -   Renders a single Chest
 -   Fields:
     -   `texture` - Namespaced ID for the texture to use, without `textures/entity/chest/` prefix and `.png` suffix
     -   `openness` - Float, `0.0` (default) - fully closed, `1.0` - fully open
 
-##### `minecraft:conduit` Special Model Type
+**`minecraft:conduit` Special Model Type**
 
 -   Renders a Conduit
 -   No fields
 
-##### `minecraft:decorated_pot` Special Model Type
+**`minecraft:decorated_pot` Special Model Type**
 
 -   Renders a Decorated Pot
 -   Uses values from `minecraft:pot_decorations` component
 -   No fields
 
-##### `minecraft:hanging_sign` Special Model Type
+**`minecraft:hanging_sign` Special Model Type**
 
 -   Renders a Hanging Sign
 -   Fields:
@@ -560,7 +560,7 @@ Now has more fields to accommodate more complex component structure.
     -   `texture` - Optional namespaced ID for the texture to use, without `textures/entity/signs/hanging/` prefix and `.png` suffix
         -   If not present, it will be derived from `wood_type`
 
-##### `minecraft:head` Special Model Type
+**`minecraft:head` Special Model Type**
 
 -   Renders a Head
 -   Uses profile from `minecraft:profile` component when applicable
@@ -571,13 +571,13 @@ Now has more fields to accommodate more complex component structure.
         -   Additionally, if present, `minecraft:profile` component is ignored
     -   `animation` - float controlling head animation (like Piglin ears or Ender Dragon jaw), default: `0.0`
 
-##### `minecraft:shield` Special Model Type
+**`minecraft:shield` Special Model Type**
 
 -   Renders a Shield
 -   Uses patterns from the `minecraft:banner_patterns` component and color from the `minecraft:base_color` component
 -   No fields
 
-##### `minecraft:shulker_box` Special Model Type
+**`minecraft:shulker_box` Special Model Type**
 
 -   Renders a Shulker Box
 -   Fields:
@@ -585,7 +585,7 @@ Now has more fields to accommodate more complex component structure.
     -   `openness` - Float, `0.0` (default) - fully closed, `1.0` - fully open
     -   `orientation` - Orientation for rendering, default: `up`
 
-##### `minecraft:standing_sign` Special Model Type
+**`minecraft:standing_sign` Special Model Type**
 
 -   Renders a Standing Sign
 -   Fields:
@@ -593,19 +593,19 @@ Now has more fields to accommodate more complex component structure.
     -   `texture` - Optional namespaced ID for the texture to use, without `textures/entity/signs/` prefix and `.png` suffix
         -   If not present, it will be derived from `wood_type`
 
-##### `minecraft:trident` Special Model Type
+**`minecraft:trident` Special Model Type**
 
 -   Renders a Trident
 -   No fields
 
-#### `minecraft:composite` Item Model Type
+**`minecraft:composite` Item Model Type**
 
 -   Renders multiple sub-models
 -   All models are rendered in the same space
 -   Fields:
     -   `models`: A list of item models to render
 
-#### `minecraft:condition` Item Model Type
+**`minecraft:condition` Item Model Type**
 
 -   Renders an item model depending on boolean property
 -   Fields:
@@ -614,53 +614,53 @@ Now has more fields to accommodate more complex component structure.
     -   `on_true` - Item model to render when property is `true`
     -   `on_false` - Item model to render when property is `false`
 
-##### `minecraft:broken` Boolean Property
+**`minecraft:broken` Boolean Property**
 
 -   Returns `true` if the item is damageable and has only one use remaining before breaking
 -   No fields
 
-##### `minecraft:bundle/has_selected_item` Boolean Property
+**`minecraft:bundle/has_selected_item` Boolean Property**
 
 -   Returns `true` if Bundle is "open", i.e. it has selected item visible in GUI
 -   No fields
 
-##### `minecraft:carried` Boolean Property
+**`minecraft:carried` Boolean Property**
 
 -   Returns `true` if item is carried between slots in GUI
 -   No fields
 
-##### `minecraft:custom_model_data` Boolean Property
+**`minecraft:custom_model_data` Boolean Property**
 
 -   Returns a value from the `flags` list in the `minecraft:custom_model_data` component, if present
 -   Returns `false` if the component is not present
 -   Fields:
     -   `index` - Index for the entry to use in `flags`, default: `0`
 
-##### `minecraft:damaged` Boolean Property
+**`minecraft:damaged` Boolean Property**
 
 -   Returns `true` if the item is damageable and has been used at least once
 -   No fields
 
-##### `minecraft:extended_view` Boolean Property
+**`minecraft:extended_view` Boolean Property**
 
 -   Returns `true` if the player has requested extended details by holding down the shift key
     -   Note: not a keybind, can't be rebound
 -   Only works when item is displayed in UI
 -   No fields
 
-##### `minecraft:fishing_rod/cast` Boolean Property
+**`minecraft:fishing_rod/cast` Boolean Property**
 
 -   Returns `true` if there is a Fishing Bobber attached to currently used Fishing Rod
 -   No fields
 
-##### `minecraft:has_component` Boolean Property
+**`minecraft:has_component` Boolean Property**
 
 -   Returns `true` if the given component is present on the item
 -   Fields:
     -   `component` - Component type to check for
     -   `ignore_default` - If the default component value for the item type should be treated as "no component", default: `false`
 
-##### `minecraft:keybind_down` Boolean Property
+**`minecraft:keybind_down` Boolean Property**
 
 -   Returns `true` if keybind is currently active
     -   Note: The keybind tested is the local one for the viewer, regardless of the context
@@ -668,24 +668,24 @@ Now has more fields to accommodate more complex component structure.
     -   `keybind` - Keybind ID, same as the value in a `keybind` text component
         -   Examples: `key.use`, `key.left`
 
-##### `minecraft:selected` Boolean Property
+**`minecraft:selected` Boolean Property**
 
 -   Returns `true` if item is selected on a hotbar
 -   No fields
 
-##### `minecraft:using_item` Boolean Property
+**`minecraft:using_item` Boolean Property**
 
 -   Returns `true` if the Player is currently using this item
 -   No fields
 
-##### `minecraft:view_entity` Boolean Property
+**`minecraft:view_entity` Boolean Property**
 
 -   When not spectating, returns `true` if the context entity is the local Player entity, i.e. one controlled by client
 -   When spectating, returns `true` if the context entity is the spectated entity
 -   If no context entity is present, will return `false`
 -   No fields
 
-#### `minecraft:select` Item Model Type
+**`minecraft:select` Item Model Type**
 
 -   Renders an item model based on matching a string property
 -   Fields:
@@ -698,14 +698,14 @@ Now has more fields to accommodate more complex component structure.
     -   `fallback` - Item model to render if none of the cases matched the value
         -   If not present, a placeholder "missing" model will be rendered instead
 
-##### `minecraft:block_state` String Property
+**`minecraft:block_state` String Property**
 
 -   Returns the value of some property from the `minecraft:block_state` component
 -   Fields:
     -   `block_state_property` - The string key to select from the component
 -   Possible values: Any string
 
-##### `minecraft:charge_type` String Property
+**`minecraft:charge_type` String Property**
 
 -   Returns the charge type stored in the `minecraft:charged_projectiles` component, if present
 -   No fields
@@ -714,13 +714,13 @@ Now has more fields to accommodate more complex component structure.
     -   `rocket` - If there is at least one firework rocket
     -   `arrow` - Any other case
 
-##### `minecraft:context_dimension` String Property
+**`minecraft:context_dimension` String Property**
 
 -   Returns the ID of the dimension in the context, if any
 -   No fields
 -   Possible values: Namespaced dimension IDs (like `minecraft:overworld`)
 
-##### `minecraft:context_entity_type` String Property
+**`minecraft:context_entity_type` String Property**
 
 -   Returns the type of entity present in the context, if any
 -   No fields
@@ -728,14 +728,14 @@ Now has more fields to accommodate more complex component structure.
 
 > **Developer's Note**: _Context entities were initially used only for Compasses and Clocks, which means that type is available only in rendering contexts where those items would show correct reading (see [MC-186797](https://bugs.mojang.com/browse/MC-186797) and related bugs)._
 
-##### `minecraft:custom_model_data` String Property
+**`minecraft:custom_model_data` String Property**
 
 -   Returns a value from `strings` list in the `minecraft:custom_model_data` component
 -   Fields:
     -   `index` - Index for the entry to use in `strings`, default: `0`
 -   Possible values: Any string
 
-##### `minecraft:display_context` String Property
+**`minecraft:display_context` String Property**
 
 -   Returns the context this item is being rendered in
 -   No fields
@@ -750,7 +750,7 @@ Now has more fields to accommodate more complex component structure.
     -   `ground`
     -   `fixed`
 
-##### `minecraft:local_time` String Property
+**`minecraft:local_time` String Property**
 
 -   Returns the current time, formatted according to a given pattern
 -   The value is updated every second
@@ -776,19 +776,19 @@ Now has more fields to accommodate more complex component structure.
 
 ![Steve is opening up gifts under a custom Christmas tree.](https://launchercontent.mojang.com/v2/images/1.21.4christmas.jpg)
 
-##### `minecraft:main_hand` String Property
+**`minecraft:main_hand` String Property**
 
 -   Returns the main hand of holding player
 -   No fields
 -   Possible values: `left`, `right`
 
-##### `minecraft:trim_material` String Property
+**`minecraft:trim_material` String Property**
 
 -   Returns the value of the `material` field from the `minecraft:trim` component, if present
 -   No fields
 -   Possible values: Namespaced IDs
 
-#### `minecraft:range_dispatch` Item Model Type
+**`minecraft:range_dispatch` Item Model Type**
 
 -   Renders an item model based on a numeric property
 -   This is a replacement for the old `overrides` section from block models
@@ -804,12 +804,12 @@ Now has more fields to accommodate more complex component structure.
     -   `fallback` - Item model to render if no entries were less than or equal to the property value
         -   If not present, a placeholder "missing" model will be rendered instead
 
-##### `minecraft:bundle/fullness` Numeric Property
+**`minecraft:bundle/fullness` Numeric Property**
 
 -   Returns the weight of the `minecraft:bundle_contents` component, or `0.0` if not present
 -   No fields
 
-##### `minecraft:compass` Numeric Property
+**`minecraft:compass` Numeric Property**
 
 -   Returns the angle in the X-Z plane between the holder position and the target, scaled to `0..1`
 -   If the target is not valid (not present, in another dimension or too close to holder position), a random value will be returned
@@ -821,17 +821,17 @@ Now has more fields to accommodate more complex component structure.
         -   `recovery` - Points at the last death location of the Player in the context
     -   `wobble` - If `true`, the value will oscillate for some time around target before settling, default: `true`
 
-##### `minecraft:cooldown` Numeric Property
+**`minecraft:cooldown` Numeric Property**
 
 -   Returns the remaining cooldown for the item, scaled to `0..1`
 -   No fields
 
-##### `minecraft:crossbow/pull` Numeric Property
+**`minecraft:crossbow/pull` Numeric Property**
 
 -   Returns Crossbow-specific use time
 -   No fields
 
-##### `minecraft:count` Numeric Property
+**`minecraft:count` Numeric Property**
 
 -   Returns stack size
 -   Fields:
@@ -839,14 +839,14 @@ Now has more fields to accommodate more complex component structure.
         -   If `true`, returns the count divided by the value of the `minecraft:max_stack_size` component, clamped to `0..1`
         -   If `false`, returns the count clamped to `0..max_stack_size`
 
-##### `minecraft:custom_model_data` Numeric Property
+**`minecraft:custom_model_data` Numeric Property**
 
 -   Returns a value from the `floats` list in the `minecraft:custom_model_data` component, if present
 -   If the component is not present, returns `0.0`
 -   Fields:
     -   `index` - Index for the entry in `floats` to use, default: `0`
 
-##### `minecraft:damage` Numeric Property
+**`minecraft:damage` Numeric Property**
 
 -   Returns the value of the `minecraft:damage` component, if present
 -   If the component is not present, returns `0.0`
@@ -855,7 +855,7 @@ Now has more fields to accommodate more complex component structure.
         -   If `true`, returns the damage divided by the value of the `minecraft:max_damage` component, clamped to `0..1`
         -   If `false`, returns the damage, clamped to `0..max_damage`
 
-##### `minecraft:time` Numeric Property
+**`minecraft:time` Numeric Property**
 
 -   Returns an aspect of day time (like used for Clocks), scaled to `0..1`
 -   Fields:
@@ -865,13 +865,13 @@ Now has more fields to accommodate more complex component structure.
         -   `moon_phase` - Moon phase
         -   `random` - Random value
 
-##### `minecraft:use_cycle` Numeric Property
+**`minecraft:use_cycle` Numeric Property**
 
 -   Returns the remaining use ticks, modulo `period`
 -   Fields:
     -   `period` - Positive float, default `1.0`
 
-##### `minecraft:use_duration` Numeric Property
+**`minecraft:use_duration` Numeric Property**
 
 -   Returns item use ticks
 -   Fields:
@@ -879,12 +879,12 @@ Now has more fields to accommodate more complex component structure.
         -   If `true`, the returned value is the remaining use ticks
         -   If `false`, the returned value is the ticks so far
 
-#### `minecraft:empty` Item Model Type
+**`minecraft:empty` Item Model Type**
 
 -   Does not render anything
 -   No fields
 
-#### `minecraft:bundle/selected_item` Item Model Type
+**`minecraft:bundle/selected_item` Item Model Type**
 
 -   Renders the selected stack in the `minecraft:bundle_contents` component, if present
 -   Renders nothing if the component is missing
@@ -907,4 +907,5 @@ Now has more fields to accommodate more complex component structure.
 -   [MC-73784](https://bugs.mojang.com/browse/MC-73784) Players cannot see through ice when stuck inside of it
 -   [MC-74408](https://bugs.mojang.com/browse/MC-74408) The brewing stand GUI does not have container sprites for the fuel and potion output slots
 -   [MC-86153](https://bugs.mojang.com/browse/MC-86153) Ctrl Pick Block gives new item even if picked item already exists in inventory
--   [MC-86455](https://bugs.mojang.com/browse/MC-86455) Pick-block creates ghost
+-   [MC-86455](https://bugs.mojang.com/browse/MC-86455) Pick-block creates ghost items in Creative when hotbar is full
+-   [MC-99848](https://bugs.mojang.com/browse/MC-99848) Sprinting isn't cance

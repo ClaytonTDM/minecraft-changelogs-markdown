@@ -127,7 +127,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Structure post-processors
 
-#### Capped post-processor
+**Capped post-processor**
 
 -   A `capped` post-processor has been added which can limit how many blocks a delegated post-processor randomly transform in a structure
 -   This can be used to configure a structure piece to have an exact amount of specific blocks, instead of using random distribution
@@ -137,7 +137,7 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
         -   The blocks inside a structure are all randomly passed to the delegated post-processor until it has transformed the limited amount
         -   Either constant or random number generator sampled during post-processing
 
-#### Rule post-processor block entity configuration
+**Rule post-processor block entity configuration**
 
 -   Previously a rule could specify an optional fixed `output_nbt` which would be added to the processed output block entity
 -   This field has now been changed to reference a `block_entity_modifier`
@@ -174,13 +174,13 @@ In preparation for the Calibrated Sculk Sensor, vibration frequencies have been 
 
 ### Tags
 
-#### Step Sounds
+**Step Sounds**
 
 -   The blocks that can produce a combination of step sounds is controlled by `combination_step_sound_blocks`
 
 ### Display entity
 
-#### Interpolation changes
+**Interpolation changes**
 
 -   Previous values are always discarded if `interpolation_duration` is `0`
 -   Made sure that render properties are applied at the same time (so `block_state` is applied at the same time as transformation, i.e. at next tick after receiving update)

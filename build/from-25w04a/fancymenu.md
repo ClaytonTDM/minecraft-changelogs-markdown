@@ -54,15 +54,15 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Tags
 
-#### Entity Tags
+**Entity Tags**
 
 -   Added `#can_wear_horse_armor` - entity that can hold horse armor in their body slot
 
-#### Damage Type Tags
+**Damage Type Tags**
 
 -   Renamed `#bypasses_shield` to `#bypasses_blocking`
 
-#### Cat Variant Tags
+**Cat Variant Tags**
 
 -   Removed `#default_spawns` and `#full_moon_spawns`
 
@@ -84,21 +84,21 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
             -   Additional fields dependent on `type`
         -   If field is not present, condition is always true
 
-#### Spawn conditions
+**Spawn conditions**
 
-##### `minecraft:biome`
+**`minecraft:biome`**
 
 -   Checks if entity is spawning in specific biomes
 -   Fields:
     -   `biomes` - single entry, list or a tag describing biomes
 
-##### `minecraft:moon_brightness`
+**`minecraft:moon_brightness`**
 
 -   Checks if current moon brightness is within certain range
 -   Fields:
     -   `range` - floating point range (a single number or an object like `{"min": 1, "max": 2}`)
 
-##### `minecraft:structures`
+**`minecraft:structures`**
 
 -   Checks if entity is spawning in specific structures
 -   Fields:
@@ -134,13 +134,13 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Item Components
 
-#### New `weapon` component
+**New `weapon` component**
 
 -   `can_disable_blocking` field is replaced with `disable_blocking_for_seconds`
     -   `disable_blocking_for_seconds` - non-negative float (default: `0`)
         -   If non-zero, will disable a blocking Shield on successful attack for the specified amount of seconds
 
-#### New `blocks_attacks` component
+**New `blocks_attacks` component**
 
 -   When present, this item can be used like a Shield to block attacks to the holding player
 -   Format: object with fields:
@@ -180,7 +180,7 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
     -   `disable_sound` - sound event (optional)
         -   If specified, this sound will be played when the item goes on its disabled cooldown due to an attack
 
-#### New `break_sound` component
+**New `break_sound` component**
 
 -   When present, this sound will be played when the item runs out of durability and breaks
 -   If not present, no sound will be played on break
@@ -188,13 +188,13 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 -   Format: sound event
     -   e.g. `break_sound='item.wolf_armor.break'`
 
-#### New `provides_banner_patterns` component
+**New `provides_banner_patterns` component**
 
 -   When present, this item can be placed in the pattern slot of a Loom
 -   Format: hash-prefixed banner pattern tag
     -   e.g. `provides_banner_patterns='#minecraft:pattern_item/globe'`
 
-#### New `provides_trim_material` component
+**New `provides_trim_material` component**
 
 -   When present, this item will provide the specified trim material when used in a trimming recipe
 -   Note that to be used in the built-in smithing recipes, the item must also be in the `#trim_material` tag
@@ -202,14 +202,14 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 -   Format: trim material id
     -   e.g. `provides_trim_material='minecraft:iron'`
 
-#### Entity components
+**Entity components**
 
 -   Some existing components are now also transferred from spawning item to spawned entity:
     -   `minecraft:custom_name` - any entity
     -   `minecraft:potion_contents` - Lingering Potion to Area Effect Cloud
     -   `minecraft:potion_duration_scale` - Lingering Potion to Area Effect Cloud
 
-#### New `tooltip_display` component
+**New `tooltip_display` component**
 
 -   This component allows the tooltips provided specifically by any given item component to be surpressed
 -   This replaces the previous `show_in_tooltip` fields, `hide_additional_tooltip` and `hide_tooltip` components
@@ -220,7 +220,7 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
         -   The tooltips provided by any component in this list will be hidden
         -   If that component provides no tooltip, it will have no effect
 
-#### Removed `hide_additional_tooltip` Component
+**Removed `hide_additional_tooltip` Component**
 
 -   Replaced by use of the `tooltip_display` component and `hidden_components` field
 -   The following components previously covered by the `hide_additional_tooltip` component may need to be hidden:
@@ -246,17 +246,17 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 -   This additionally means that tooltips from the above listed components are no longer restricted to specific item types
 -   Note: for existing items in a world with the `hide_additional_tooltip` component, any of the above listed components also present on the same item will be added to the list to hide in `tooltip_display`
 
-#### Removed `hide_tooltip` Component
+**Removed `hide_tooltip` Component**
 
 -   Replaced by use of the `tooltip_display` component and `hide_tooltip` field
 
-#### `attribute_modifiers` Component
+**`attribute_modifiers` Component**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   This component now always uses its simplified form, with the `modifiers` field inlined to top-level
     -   e.g. `attribute_modifiers={modifiers:[...]}` -> `attributes_modifiers=[...]`
 
-#### `dyed_color` Component
+**`dyed_color` Component**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   This component now always uses its simplified form, with the `rgb` field inlined to top-level
@@ -264,28 +264,28 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 -   The specified color now supports the RGB array format
     -   e.g. `dyed_color=[0.5, 1.0, 0.2]`
 
-#### `can_place_on` and `can_break` Components
+**`can_place_on` and `can_break` Components**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   The `predicates` field has been inlined to top-level, and supports either a single element or list
     -   e.g. `can_place_on={predicates:[{blocks:'stone'},{blocks:'dirt'}]}` -> `can_place_on=[{blocks:'stone'},{blocks:'dirt'}]`
     -   or: `can_place_on={predicates:[{blocks:'stone'}]}` -> `can_place_on={blocks:'stone'}`
 
-#### `enchantments` and `stored_enchantments` Components
+**`enchantments` and `stored_enchantments` Components**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 -   These components now always use their simplified form, with the `levels` field inlined to top-level
     -   e.g. `enchantments={levels:{sharpness:2}}` -> `enchantments={sharpness:2}`
 
-#### `jukebox_playable` Component
+**`jukebox_playable` Component**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
-#### `trim` Component
+**`trim` Component**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
-#### `unbreakable` Component
+**`unbreakable` Component**
 
 -   Removed `show_in_tooltip` field, replaced by `tooltip_display` component
 
@@ -296,12 +296,12 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Recipes
 
-#### `smithing_transform` Recipe Type
+**`smithing_transform` Recipe Type**
 
 -   The `base` ingredient field is no longer optional
     -   Previously, if no base ingredient was given, the recipe would parse but never be useable
 
-#### `smihing_trim` Recipe Type
+**`smihing_trim` Recipe Type**
 
 -   The `base`, `template`, and `addition` ingredient fields are no longer optional
     -   Previously, if these ingredients were not given, the recipe would parse but never be useable
@@ -317,7 +317,7 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Loot Functions
 
-#### `toggle_tooltips`
+**`toggle_tooltips`**
 
 -   Now supports any component id in the `toggles` map
 -   Any component specified will be toggled in the `tooltip_display` component
@@ -326,12 +326,12 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Item Models
 
-#### `minecraft:component` Select Property
+**`minecraft:component` Select Property**
 
 -   If the selected value comes from a registry and the current datapacks does not provide it, the entry will be silently ignored
 -   In previous snapshot, unrecognized elements caused the whole item model to be ignored
 
-#### `minecraft:component` Boolean Property
+**`minecraft:component` Boolean Property**
 
 -   New conditional model property has been added to `condition` item model: `component`
 -   Uses component predicates (like ones used in item predicates) to match item components
@@ -342,7 +342,7 @@ As always, we're keen to get your feedback on these new features at [feedback.mi
 
 ### Atlas
 
-#### `minecraft:paletted_permutations` sprite source
+**`minecraft:paletted_permutations` sprite source**
 
 -   New field:
     -   `separator` - optional string (default: `_`) - value to be used when joining texture and permutation names to produce sprite name

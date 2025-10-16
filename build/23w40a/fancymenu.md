@@ -13,7 +13,7 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ### Chat components
 
-#### Serialization
+**Serialization**
 
 -   Plain-text chat components (text, no sibilings, no stylings) are now always serialized as string instead of `{"text': "blah"}`
 -   Chat components now serialize to NBT when sent over network

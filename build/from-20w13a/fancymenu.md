@@ -129,11 +129,11 @@ If you find any bugs, please report them on the official [Minecraft Issue Tracke
 
 ### Commands
 
-#### spawnpoint
+**spawnpoint**
 
 The spawnpoint command now supports being run in any dimension.
 
-#### UUIDs in NBT
+**UUIDs in NBT**
 
 UUIDs stored in NBT are now represented as an array of four integers. Example: `{UUID:[I;1498693494,1027158888,1898994005,860320107]}` Along with that a couple of fields have been renamed:
 
@@ -143,15 +143,15 @@ UUIDs stored in NBT are now represented as an array of four integers. Example: `
 
 ### Loot Tables
 
-#### Entity Predicate
+**Entity Predicate**
 
 -   Added `fishing_hook` sub-predicate
 
-##### `fishing_hook`
+**`fishing_hook`**
 
 Check properties of the fishing hook
 
-###### Parameters
+**Parameters**
 
 to be open water if there are no blocks above water and no solid underwater blocks around, all water blocks are source blocks and there are no bubble columns.
 

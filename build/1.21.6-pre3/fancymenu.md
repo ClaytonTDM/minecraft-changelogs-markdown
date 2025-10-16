@@ -27,7 +27,7 @@ Added `minecraft:player_sheared_equipment`
 
 ### Commands
 
-#### Modified `playsound`
+**Modified `playsound`**
 
 -   Added new category `ui`
     -   Sounds in this category will continue playing when paused, similarly to `music`

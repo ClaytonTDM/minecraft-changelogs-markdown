@@ -25,12 +25,12 @@ If there are no other players in the world the experience bar will display as no
             -   eg: `/waypoint modify @s color red` to set an indicator to red
         -   Players on a team will override their default indicator color with their team color
 
-#### Player Changes
+**Player Changes**
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-#### Item Changes
+**Item Changes**
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -42,7 +42,7 @@ If there are no other players in the world the experience bar will display as no
     -   Dragon Head
     -   Piglin Head
 
-#### Potion Changes
+**Potion Changes**
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
@@ -71,7 +71,7 @@ If there are no other players in the world the experience bar will display as no
 
 ### Commands
 
-#### Added `waypoint`
+**Added `waypoint`**
 
 This is a new command for querying and modifying waypoints.
 
@@ -95,7 +95,7 @@ Arguments:
     -   `set <waypoint_style/resource>` changes the style to a specific asset under `waypoint_style/`
     -   `reset` will restore the default icon behavior of the Locator Bar
 
-##### Waypoint Styles
+**Waypoint Styles**
 
 These define custom icons to be displayed on the Locator Bar and are within the `waypoint_style/` asset directory.
 
@@ -119,13 +119,13 @@ The default implementation is as such:
 
 ### Game Rules
 
-#### Added `locatorBar`
+**Added `locatorBar`**
 
 -   Default is `true`: enabling the Locator Bar
 -   Changing to `false` will remove all existing Waypoints from all players
 -   The Game Rule has been renamed from `useLocatorBar` during the experiment. This may break minor command related features in worlds created in the previous snapshot.
 
-#### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
@@ -148,7 +148,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `happy_ghast_avoids` - blocks that happy ghasts avoid getting close to
 -   Added `triggers_ambient_dried_ghast_block_sounds` - blocks that can trigger ambient Dried Ghast sounds to play when a Dried Ghast block is placed on them
@@ -157,7 +157,7 @@ The Locator Bar works by a server-controlled Waypoint system. Waypoints are rece
 
 ### Shaders & Post-process Effects
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   `FOG_IS_SKY` has been removed in favour of splitting up the sky shader
 
@@ -244,7 +244,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 
 ### Data Components
 
-#### `painting/variant` Item Component
+**`painting/variant` Item Component**
 
 -   No longer accepts inline variants
 
@@ -266,7 +266,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
 -   Custom uniforms provided to post-process shaders are now uniform blocks
 -   Uniform definitions inside json files are now per-block
 
-#### Post-process Effect Definitions
+**Post-process Effect Definitions**
 
 -   Entries in the `targets` map have been expanded to support new properties
     -   New optional boolean field: `persistent` (default: `false`)
@@ -291,7 +291,7 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `"type": "matrix4x4"` needs `"value": [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0]` (four rows of four columns of floats)
 -   We do not validate that the uniform block is valid for a given shader, giving incorrect information will cause undefined and funky behavior
 
-#### Post-process Effect Shaders
+**Post-process Effect Shaders**
 
 -   Instead of every uniform being an individual opaque type, they are now grouped in uniform blocks
     -   They will be set according to the pass definition in the json file, and may be shared across both vertex and fragment shaders
@@ -301,42 +301,42 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   For most post chains this is just `OutSize` and `InSize` as before
     -   All sizes are `vec2`
 
-##### `post/bits.fsh`
+**`post/bits.fsh`**
 
 -   Expects a `BitsConfig` of `float Resolution` and `float MosaicSize`
 
-##### `post/blit.fsh`
+**`post/blit.fsh`**
 
 -   Expects a `BlitConfig` of `vec4 ColorModulate`
 
-##### `post/blur.vsh` and `post/box_blur.fsh`
+**`post/blur.vsh` and `post/box_blur.fsh`**
 
 -   Expects a `BlurConfig` of `vec2 BlurDir` and `float Radius`
 
-##### `post/color_convolve.fsh`
+**`post/color_convolve.fsh`**
 
 -   Expects a `ColorConfig` of `vec3 RedMatrix`, `vec3 GreenMatrix` and `vec3 BlueMatrix`
 
-##### `post/invert.fsh`
+**`post/invert.fsh`**
 
 -   Expects a `InvertConfig` of `float InverseAmount`
 
-##### `post/rotscale.vsh`
+**`post/rotscale.vsh`**
 
 -   Expects a `RotScaleConfig` of `vec2 InScale`, `vec2 InOffset` and `float InRotation`
 
-##### `post/spiderclip.fsh`
+**`post/spiderclip.fsh`**
 
 -   Expects a `SpiderConfig` of `vec4 Scissor` and `vec4 Vignette`
 
-#### `Globals` Uniform Block
+**`Globals` Uniform Block**
 
 -   Available through `#moj_import <minecraft:globals.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ScreenSize`, `GlintAlpha`, `GameTime` and `MenuBlurRadius` (new)
     -   `MenuBlurRadius` is the blur radius of the background when a menu is open
 
-#### `Fog` Uniform Block
+**`Fog` Uniform Block**
 
 -   Available through `#moj_import <minecraft:fog.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
@@ -346,13 +346,13 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   `FogEnd` is the "normal" fog cutoff as before
 -   `FOG_IS_SKY` is now available to the `position.vsh`/`position.fsh` shaders when they are rendering for the sky
 
-#### `Projection` Uniform Block
+**`Projection` Uniform Block**
 
 -   Available through `#moj_import <minecraft:projection.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
 -   Contains `ProjMat` with no changes
 
-#### `DynamicTransforms` Uniform Block
+**`DynamicTransforms` Uniform Block**
 
 -   Available through `#moj_import <minecraft:dynamictransforms.glsl>` for convenience
 -   Is no longer available to shaders that do not normally use it
@@ -360,20 +360,20 @@ In this week’s snapshot leads are getting new mechanics making it possible to 
     -   These are very likely to change in the near future
     -   The values of some of these are often hard coded and may not make sense for a given shader, ie `LineWidth` in any non-line based pipeline
 
-#### `Lighting` Uniform Block
+**`Lighting` Uniform Block**
 
 -   Available through `#moj_import <minecraft:light.glsl>` for convenience
 -   Most shaders are able to receive this uniform block, even if they don't normally use it
     -   The values may not make sense if the shader wouldn't normally expect it, however
 -   Contains `Light0_Direction` and `Light1_Direction`
 
-#### `CloudInfo` Uniform Block
+**`CloudInfo` Uniform Block**
 
 -   Only available to the clouds shaders (`rendertype_clouds.vsh`/`rendertype_clouds.fsh`)
     -   Contains `CloudColor`, `CloudOffset` and `CellSize` (new)
         -   `CellSize` contains the size of an individual cloud cell
 
-#### `LightmapInfo` Uniform Block
+**`LightmapInfo` Uniform Block**
 
 -   Only available to the lightmap shader (`lightmap.fsh`)
 -   Contains `AmbientLightFactor`, `SkyFactor`, `BlockFactor`, `UseBrightLightmap`, `NightVisionFactor`, `DarknessScale`, `DarkenWorldFactor`, `BrightnessFactor`, `SkyLightColor` with no change in behavior
@@ -450,7 +450,7 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 
 ### Happy Ghast mob
 
-#### Ghastling
+**Ghastling**
 
 -   Ghastling is a young version of the Happy Ghast mob
 -   Spawns from a Dried Ghast block that has continuously been waterlogged for about 20 minutes
@@ -462,7 +462,7 @@ Take your first test flight with the happy ghast, craft your own dried ghast –
 -   Can be tempted and fed using Snowballs
 -   Will grow up into a Happy Ghast after about 20 minutes (or faster if fed Snowballs)
 
-#### Happy Ghast
+**Happy Ghast**
 
 -   The adult Happy Ghast is a new flying mount that can carry up to four players
 -   Grows up from a Ghastling after about 20 minutes (or faster if the Ghastling is fed Snowballs)
@@ -523,12 +523,12 @@ The Locator Bar is an experimental new UI element for players that displays the 
 -   The Locator Bar will display colored indicators when the camera is facing within 120 degrees towards a Waypoint. If a Waypoint is above/below the camera's viewport (the screen) an up/down arrow will display
 -   Any Waypoint that is determined to be a Player or Mob that belongs to a Team then the color indicator will match the Team color
 
-#### Player Changes
+**Player Changes**
 
 -   Crouching will hide the player, preventing them from appearing on the Locator Bar of other players
 -   Spectators are only visible to other spectators on the Locator Bar
 
-#### Item Changes
+**Item Changes**
 
 -   The following items will hide players when worn in the head slot:
     -   Carved Pumpkin
@@ -540,27 +540,27 @@ The Locator Bar is an experimental new UI element for players that displays the 
     -   Dragon Head
     -   Piglin Head
 
-#### Potion Changes
+**Potion Changes**
 
 -   Using a Potion of Invisibility will also hide players from the Locator Bar
 
-#### Game Rules
+**Game Rules**
 
-##### Added `useLocatorBar`
+**Added `useLocatorBar`**
 
 -   Default is enabled for servers running the Locator Bar experiment
 -   Toggling to off will remove all existing Waypoints from all players
 
-#### Attributes
+**Attributes**
 
-##### Added `waypoint_transmit_range` and `waypoint_receive_range`
+**Added `waypoint_transmit_range` and `waypoint_receive_range`**
 
 -   Default: `0.0`, Minimum: `0.0`, Maximum: `60000000.0`
 -   Players have a default transmission and receive range of 60,000,000
 -   Mobs with a transmission range above zero will send waypoint packets to nearby receivers
 -   Similarly, receivers only receive with a range above zero, and cannot receive waypoints outside of this range
 
-#### `waypoint` command
+**`waypoint` command**
 
 This is a new command for querying and modifying waypoints.
 
@@ -620,13 +620,13 @@ Parameters:
 
 ### Commands
 
-#### Added `version`
+**Added `version`**
 
 -   No arguments
 -   Prints current version information on server side
 -   Available in singleplayer or for server operators
 
-#### Added `datapack create`
+**Added `datapack create`**
 
 -   Creates new empty directory data pack for current world
 -   Supported pack version is always equal to one supported by game
@@ -637,7 +637,7 @@ Parameters:
 
 ### Attributes
 
-#### Added `camera_distance`
+**Added `camera_distance`**
 
 -   Default value: `4.0`
 -   Modifies the distance at which the camera is placed away from the player or spectated entity when in a third-person view
@@ -646,7 +646,7 @@ Parameters:
 
 ### Data Components
 
-#### `attribute_modifiers` Item Component
+**`attribute_modifiers` Item Component**
 
 -   Added optional `display` field to `attributes_modifiers` entries
     -   There are 3 `display` types:
@@ -657,7 +657,7 @@ Parameters:
 
 ### Entity Data
 
-#### `area_effect_cloud`
+**`area_effect_cloud`**
 
 -   The `Particle` field has been renamed to `custom_particle`, and now always functions as an exact override for the default colored `entity_effect` particle
     -   The field will not be written if no override is specified
@@ -665,17 +665,17 @@ Parameters:
 
 ### Tags
 
-#### Block Tags
+**Block Tags**
 
 -   Added `#triggers_ambient_desert_dry_vegetation_block_sounds` - blocks that can trigger ambient desert dry vegetation sounds to play from blocks above
 -   `#plays_ambient_desert_block_sounds` has been renamed to `#triggers_ambient_desert_sand_block_sounds`
 
-#### Item Tags
+**Item Tags**
 
 -   Added `#happy_ghast_food` - items that can be used to feed Happy Ghasts
 -   Added `#happy_ghast_tempt_items` - items that can be used to tempt Happy Ghasts
 
-#### Entity Tags
+**Entity Tags**
 
 -   Added `#can_equip_harness` - entities that can equip the Harness items
 -   Added `#followable_friendly_mobs` - non-baby entities that will be followed by Baby Happy Ghasts

@@ -136,7 +136,7 @@ The following changes apply for naturally spawning Creaking:
 
 -   Suggestions will now be shown for attribute modifier IDs existing on the target in the `attribute` command
 
-#### `attribute` Command
+**`attribute` Command**
 
 New subcommand to reset the base value of an attribute to its default value for the target entity. If the attribute does not exist on the entity, the command will fail.
 

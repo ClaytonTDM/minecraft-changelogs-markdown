@@ -319,13 +319,13 @@ Have fun with Part I!
 -   Added Cave Vines and Glow Berries
 -   Added Azalea Bushes
 
-#### Azalea Bushes
+**Azalea Bushes**
 
 -   Added Azalea Bushes as well as Flowering Azaela Bushes
 -   Bees see Flowering Azalea (and Flowering Azalea Leaves) as flowers
 -   Bonemeal Azalea or Flowering Azalea to get an Azalea Tree
 
-#### Cave Vines and Glow Berries
+**Cave Vines and Glow Berries**
 
 -   Cave Vines grow down from the ceiling, like Weeping Vines
 -   When they grow they have a chance of producing Glow Berries
@@ -334,7 +334,7 @@ Have fun with Part I!
 -   Use Glow Berries to plant new Cave Vines
 -   Bonemealing a Cave Vine will create Glow Berries
 
-#### Drip Leaves
+**Drip Leaves**
 
 -   Small Dripleaf needs moisture, so it grows on Clay or underwater
 -   The facing direction of Small Dripleaf blocks is determined by which direction the player is facing when placing it
@@ -346,19 +346,19 @@ Have fun with Part I!
 -   A Big Dripleaf will tilt when hit by a projectile
 -   A Redstone powered Big Dripleaf will not tilt (except when hit by a projectile)
 
-#### Moss
+**Moss**
 
 -   Two new decorative blocks: Moss Block and Moss Carpet
 -   Moss Carpet can be crafted from Moss Blocks
 -   Moss Blocks can be crafted with Cobblestone or Stone Bricks to make the mossy versions of those blocks
 
-#### Roots
+**Roots**
 
 -   Added Rooted Dirt and Hanging Roots – decorative blocks that will appear in the upcoming Lush Caves biome
 -   Bonemealing Rooted Dirt grows Hanging Roots underneath
 -   Tilling Rooted Dirt with a Hoe will convert it into Dirt, and pop out a Hanging Roots item
 
-#### Spore Blossoms
+**Spore Blossoms**
 
 -   A beautiful large flower placed on ceilings
 -   Particles drip from it and will appear in the air around it
@@ -393,7 +393,7 @@ Snowier snow!
 -   Powder Snow is pushable by Pistons and Sticky Pistons
 -   Rabbits, Endermites, Silverfish, and Foxes can walk on top of Powder Snow without falling in
 
-#### Freezing
+**Freezing**
 
 -   Standing in Powder Snow will slowly freeze an entity
 -   Once frozen, freeze damage is done every few seconds to the frozen entity
@@ -520,31 +520,31 @@ Snowier snow!
 
 ### Advancements
 
-#### Changed predicates
+**Changed predicates**
 
-##### Block predicate
+**Block predicate**
 
 -   `block` field expended to `blocks`, which now accepts an array of block types
 
-##### Entity predicate
+**Entity predicate**
 
 -   `passenger` - a new sub-predicate for a passenger that is directly riding this vehicle (if present, must match one or more)
 -   `stepping_on` - a location predicate for a block that an entity is currently standing on
 -   `lightning_bolt` - a sub-predicate that is valid only for a lightning bolt entity
 
-##### Item predicate
+**Item predicate**
 
 -   `item` field expended to `items`, which now accepts an array of item types
 
-##### Player predicate
+**Player predicate**
 
 -   `looking_at` - an entity that is currently viewed by a player
     -   uses same the line-of-sight rules as attacking mobs
     -   actual detection radius might be changed in future
 
-#### Changed triggers
+**Changed triggers**
 
-##### `effects_changed`
+**`effects_changed`**
 
 -   Added `source` triggers that match an entity that triggered the change
 -   Might be empty when:
@@ -552,14 +552,14 @@ Snowier snow!
     -   the effect is self-applied
     -   an effect is removed
 
-#### Lightning Bolt
+**Lightning Bolt**
 
 -   `blocks_set_on_fire` - a range check for blocks set on fire by this entity
 -   `entity_struck` - a predicate for entities struck by this lightning bolt (if present, must match one or more)
 
-#### New triggers
+**New triggers**
 
-##### `lightning_strike`
+**`lightning_strike`**
 
 -   Triggered when a lightning strike finishes (i.e. entity disappears)
 -   Triggers for any player within a certain radius of a lightning strike
@@ -568,13 +568,13 @@ Snowier snow!
     -   `lightning` -a predicate for a lightning entity
     -   `bystander` - a predicate for one of the entities in a certain area around a strike that is not hurt by it
 
-##### `started_riding`
+**`started_riding`**
 
 -   Triggered when a player starts riding a vehicle or an entity starts riding a vehicle currently ridden by a player
 -   Conditions:
     -   `player` - either a player that has started riding or one of the boat passengers
 
-##### `using_item`
+**`using_item`**
 
 -   Triggered for every tick of using items (like Crossbows and Spyglasses)
 -   Conditions
@@ -591,7 +591,7 @@ Snowier snow!
 
 ### Commands
 
-#### `item`
+**`item`**
 
 Modifies the item or block inventory. This command has three forms: Possible sources and targets: For example, `/item replace block ~ ~ ~ container.0 from entity @s enderchest.0` will copy the first item from the player's Ender Chest to the first slot of a container that the player is currently standing on.
 
@@ -642,36 +642,36 @@ Minecraft now uses a more recent version of Java. If you are using a default set
 
 ### Loot tables
 
-#### Changed conditions
+**Changed conditions**
 
-#### Changed functions
+**Changed functions**
 
-##### `copy_nbt`
+**`copy_nbt`**
 
 -   `source` parameter can now accept an object with type and additional parameters
 -   The old syntax of just writing "target" is present and equivalent to `{"type": "context", "target": "<target>"}`
 -   New `storage` provider (example: `{"type": "storage", <namespaced id>}`) can be used to access command storage
 
-##### `set_count`
+**`set_count`**
 
 This function now has `add` parameter. If `true`, the change will be relative to the current item count. If `false`, item count will be replaced with current value (default behavior)
 
-##### `set_damage`
+**`set_damage`**
 
 This function now has an `add` parameter. If `true`, the change will be relative to the current damage. If `false`, the damage will be replaced with the current value (default behavior)
 
-#### New conditions
+**New conditions**
 
-##### `value_check`
+**`value_check`**
 
 Checks range of value. Parameters:
 
 -   `value` - see "New value providers" section (currently a combination of random generators and score)
 -   `range` - min/max range
 
-#### New functions
+**New functions**
 
-##### `set_banner_pattern`
+**`set_banner_pattern`**
 
 Sets tags needed for banner patterns. Parameters:
 
@@ -680,30 +680,30 @@ Sets tags needed for banner patterns. Parameters:
     -   `color` - the name of the color (`light_gray`, etc.)
 -   `append` - if `true`, the new elements will be appended to the existing ones instead of replacing them
 
-##### `set_enchantments`
+**`set_enchantments`**
 
 Modifies enchantments on an item.
 
-###### Parameters
+**Parameters**
 
 -   `enchantments` - map of enchantment id to level value (can be a score or a random number)
 -   `add` - if `true`, the change will be relative to the current level. If `false`, the level will be replaced with the current value (default behavior)
 
-#### New value providers
+**New value providers**
 
 Note: value providers can be used in same places as random number generators.
 
-##### `score`
+**`score`**
 
 Returns scaled scoreboard value.
 
-###### Parameters
+**Parameters**
 
 -   `score` - scoreboard name
 -   `target` - see below
 -   `scale` - scaling factor (float)
 
-###### Scoreboard provider targets
+**Scoreboard provider targets**
 
 -   `<target>` or `{"type": "context", "target": <target>}` where `<target>` can be one of `this`, `killer`, `direct_killer`, `killer_player` (not all may be available depending on context)
 -   `{"type": "fixed", "name": "<scoreboard name>"}` for fixed scoreboard name (may be fake player)
@@ -720,7 +720,7 @@ Markers are a new type of entity that is meant for custom use cases like map-mak
 
 Rendering is now using OpenGL 3.2 core profile. All fixed-function rendering has been replaced with shader-based rendering.
 
-#### Shaders
+**Shaders**
 
 Shaders are now included for all supported render states. Any shader, except for the `blit` shader, can also be replaced in resource packs. For now, replacing these shaders is **not officially supported**, and the way it works may change in the future. The current rendering engine uses a system similar to the post-processing shader pipeline. There are some differences between both systems that cater to the slightly different requirements.
 
@@ -732,11 +732,11 @@ Shaders are now included for all supported render states. Any shader, except for
 
 These will be saved to a zip file in `debug/profiling/<yyyy-MM-dd_HH.mm.ss-[levelname]-[version]>.zip` and could be used for performance regression analysis if included in bug reports. The exact metrics, output format, and names are susceptible to change between versions. Our plan is to continue iterating on which metrics to capture.
 
-#### Client F3+L shortcut
+**Client F3+L shortcut**
 
 Pressing F3+L while in the game will start a recording for 10 seconds, which captures metrics such as tick durations, used heap sizes, and other more detailed stats. Pressing F3+L before the 10-second limit will end the recording early. This shortcut is always available to clients, even on multi-player servers where it will record client-side performance.
 
-#### Dedicated Server perf start/stop command
+**Dedicated Server perf start/stop command**
 
 -   `perf start` will start a recording for 10 seconds, which captures metrics such as tick durations, used heap sizes, and other more detailed stats.
 -   `perf stop` before the 10-second limit will end the recording early.

@@ -14,11 +14,11 @@ We're kicking the week off with another pre-release, including some music and ha
 
 ### Dialogs
 
-#### Dialog Description Format
+**Dialog Description Format**
 
-##### Input Control Types
+**Input Control Types**
 
-###### `minecraft:text`
+**`minecraft:text`**
 
 -   Output values:
     

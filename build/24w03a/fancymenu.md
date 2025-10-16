@@ -22,7 +22,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 
 -   Armadillos now also spawn in Badlands
 
-#### Armadillo Rolling Up Behavior
+**Armadillo Rolling Up Behavior**
 
 -   Spiders and Cave Spiders will run away from Armadillos not in a rolled up state
 
@@ -78,7 +78,7 @@ Armadillo visual update! We gathered feedback from the first Armadillo snapshot,
 
 ### Tags
 
-#### Item Tags
+**Item Tags**
 
 New item tags controlling what enchantments can be added to what gear:
 
@@ -99,7 +99,7 @@ New item tags controlling what enchantments can be added to what gear:
 -   `minecraft:enchantable/crossbow`
 -   `minecraft:enchantable/vanishing`
 
-#### Entity Type Tags:
+**Entity Type Tags:**
 
 -   Added `minecraft:ignores_poison_and_regen` for entities that cannot be affected by Poison and Regeneration effects
 -   Added `minecraft:illager_friends` for entities that Illagers will consider allies (unless on a different team)
