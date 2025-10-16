@@ -685,3 +685,47 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ---
 
+# Minecraft 1.20.2 Release Candidate 2
+
+A second Release Candidate for 1.20.2 is now available in the Minecraft Launcher. If no further critical issues are found, we still aim to release 1.20.2 later this week.
+
+## Changes
+
+-   Fixed a problem with Villagers and Wandering Traders suffocating when travelling up slopes in Minecarts
+
+---
+
+# Minecraft 1.20.2 Release Candidate 1
+
+Here is the first (and hopefully last) release candidate for 1.20.2. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
+
+## Changes
+
+-   The positions that all entities ride on minecarts have been adjusted to make more sense
+
+## Fixed bugs in 1.20.2 Release Candidate 1
+
+-   [MC-265238](https://bugs.mojang.com/browse/MC-265238) trade;;_;;rebalance loot tables have a wrong type
+-   [MC-265388](https://bugs.mojang.com/browse/MC-265388) Mobs now sit too high in minecarts
+
+---
+
+# Minecraft 1.20.2 Pre-Release 4
+
+Here comes the fourth pre-release for 1.20.2. Much like the previous one, this pre-release contains some bug and crash fixes.
+
+Happy Mining!
+
+## Technical Changes
+
+### Data Pack Changes
+
+-   Added damage type tag `always_kills_armor_stands` for damage types that should always fully kill an Armor Stand
+
+## Fixed bugs in 1.20.2 Pre-Release 4
+
+-   [MC-265239](https://bugs.mojang.com/browse/MC-265239) Error in logs: java.lang.IllegalStateException: recursive call to sendBlockUpdated
+-   [MC-265289](https://bugs.mojang.com/browse/MC-265289) Error in log: java.lang.IllegalStateException: onTrackingStart called during navigation iteration
+
+---
+

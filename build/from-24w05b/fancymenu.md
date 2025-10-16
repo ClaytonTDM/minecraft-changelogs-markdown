@@ -566,86 +566,98 @@ Happy brushing!
 
 ---
 
-# Minecraft Snapshot 23w46a
+# Minecraft 1.20.4 Release Candidate 1
 
-This snapshot brings about a few redstone-focused changes. Notably, we’re tweaking the tick delay behavior of the crafter and the copper bulb while they’re still in experimental development.
+We're releasing a Release Candidate for Minecraft 1.20.4. This Release Candidate fixes a critical issue found after the release of Minecraft 1.20.3
 
-With these changes, we aim to make the crafter more consistent with other blocks that drop or eject items, and the copper bulb with other blocks that react or change state when a connected redstone signal changes. As a result of this, some contraptions built during the last few snapshots may no longer work properly.
+## Fixed bugs in 1.20.4 Release Candidate 1
 
-We're really excited about the tinkering opportunities both these new redstone blocks bring to the world. Please keep sending all your thoughts about them to Minecraft Feedback so we can keep building Minecraft together!
+-   [MC-267185](https://bugs.mojang.com/browse/MC-267185) Decorated pots can delete items when reloading the world
 
-Enjoy!
+---
 
-## Changes
+# Minecraft 1.20.3 Release Candidate 1
 
--   Updated Crafter textures
+We're now releasing the first (and hopefully last) release candidate for 1.20.3. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
+
+Happy Mining!
+
+## Fixed bugs in 1.20.3 Release Candidate 1
+
+-   [MC-266537](https://bugs.mojang.com/browse/MC-266537) Disparity between the read/write logic of the explosion packet
+
+---
+
+# Minecraft 1.20.3 Pre-Release 4
+
+We're now releasing Pre-release 4 for 1.20.3 with a few more bug fixes.
+
+Happy mining!
+
+## Fixed bugs in 1.20.3 Pre-Release 4
+
+-   [MC-266968](https://bugs.mojang.com/browse/MC-266968) /return executed within an advancement reward function globally discards all subsequent commands
+-   [MC-267062](https://bugs.mojang.com/browse/MC-267062) Server list ping icon doesn't display tooltip
+
+---
+
+# Minecraft 1.20.3 Pre-Release 3
+
+We are now releasing the third Pre-Release for Minecraft 1.20.3, containing mostly bug fixes, as well as changes to server resource pack handling.
+
+Happy Mining!
 
 ## Technical Changes
 
--   The Data Pack version is now 25
+### World resource packs
 
-## Data Pack Version 25
+**Local storage**
 
--   Added individual display names for scoreboard entries
+-   Only up to 20 server resource packs are cached
 
-### Commands
+**Packets**
 
-**`scoreboard`**
+-   Client now sends additional updates about packs (like download success)
 
-**Display names**
+## Fixed bugs in 1.20.3 Pre-Release 3
 
--   Each entry in a scoreboard can now have a custom display name
--   Those values are kept separate per objective and score holder
--   If the name is not present, the score holder name is used (i.e. the old behavior)
--   If the score is reset or the whole objective is removed, the name is not preserved
--   Team decorations will still be applied to names as normal
--   Subcommands for managing names:
-    -   `scoreboard players display name <targets> <objective> <text component>` - set display name
-    -   `scoreboard players display name <targets> <objective>` - clear display name
+-   [MC-265908](https://bugs.mojang.com/browse/MC-265908) Pool aliases don't redirect start pool
+-   [MC-266060](https://bugs.mojang.com/browse/MC-266060) The word "ignored" is misspelled as "ingored" within the "commands.tick.query.rate.sprinting" string
+-   [MC-266115](https://bugs.mojang.com/browse/MC-266115) Inconsistent Copper Door block drops when broken with tools weaker than stone
+-   [MC-266144](https://bugs.mojang.com/browse/MC-266144) Copper Doors are not part of the #doors item tag
+-   [MC-266145](https://bugs.mojang.com/browse/MC-266145) Copper Trapdoors are not part of the #trapdoors item tag
+-   [MC-266189](https://bugs.mojang.com/browse/MC-266189) Freezing the game during pick-up animation desyncs item position
+-   [MC-266210](https://bugs.mojang.com/browse/MC-266210) Dragon respawn is unable to be frozen with /tick freeze
+-   [MC-266335](https://bugs.mojang.com/browse/MC-266335) Copper Doors/Trapdoors have wrong Blast Resistance
+-   [MC-266903](https://bugs.mojang.com/browse/MC-266903) Incorrect part of copper door texture
+-   [MC-266920](https://bugs.mojang.com/browse/MC-266920) Server Resource Packs Setting disabled no longer overridden by require-resource-pack
+-   [MC-266948](https://bugs.mojang.com/browse/MC-266948) You can run "/summon wind;;_;;charge" without enabling the 1.21 datapack
 
-**Display name auto-update**
+---
 
--   To make display name management easier, objectives can also be configured to auto-update display names on every score update
--   This option is disabled by default
--   If a score holder has no display name (because it can't be attributed to any currently loaded entity), the current name is preserved
--   Command to control auto-update for objective:
-    -   `scoreboard objectives modify <scoreboard> displayautoupdate [true|false]`
+# Minecraft 1.20.3 Pre-Release 2
 
-**Number formatting**
+Hello again! The stabilization phase for 1.20.3 release continues. This Pre-Release brings more bug fixes.
 
--   Scores in numeric form can now be formatted
--   Formats can be set for both objectives and individual scores
--   Scores with set formats will render the same in all context (sidebar, under player name, etc.)
--   Subcommands for managing formats:
-    -   `scoreboard objectives modify <objective> numberformat <format>` - for setting default format for an objective
-    -   `scoreboard objectives modify <objective> numberformat` - for clearing default format for an objective
-    -   `scoreboard players display numberformat <targets> <score> <format>` - for setting format for a specific score holder
-    -   `scoreboard players display numberformat <targets> <score>` - for clearing format for a specific score holder
+## Changes
 
-Formats:
+-   Breeze wind charges now break decorated pots, chorus flowers, and pointed dripstone blocks upon collision
 
--   `styled <style>` - score will be displayed with selected style (like `{"bold":true}`)
--   `fixed <text component>` - score will be replaced with text
--   `blank` - score will not be displayed
+## Fixed bugs in 1.20.3 Pre-Release 2
 
-## Fixed bugs in Snapshot 23w46a
-
--   [MC-259321](https://bugs.mojang.com/browse/MC-259321) Spawner counts related entities against MaxNearbyEntities
--   [MC-265662](https://bugs.mojang.com/browse/MC-265662) "Cannot kick server owner in LAN game" message when trying to kick yourself from non-LAN singleplayer world
--   [MC-265873](https://bugs.mojang.com/browse/MC-265873) Narrator Hotkey description mentions the wrong modifier key on macOS
--   [MC-265910](https://bugs.mojang.com/browse/MC-265910) Crafter block has a one game tick cooldown
--   [MC-265950](https://bugs.mojang.com/browse/MC-265950) Crafters will stack items when outputting into chiseled bookshelf
--   [MC-266076](https://bugs.mojang.com/browse/MC-266076) Copper Grates can't be waterlogged
--   [MC-266099](https://bugs.mojang.com/browse/MC-266099) Spectating an entity that takes damage makes the camera shake
--   [MC-266120](https://bugs.mojang.com/browse/MC-266120) Some advancements for 1.21 block recipes are in the regular datapack
--   [MC-266148](https://bugs.mojang.com/browse/MC-266148) Some Crafting recipes for the new copper blocks appear when Experiment is disabled
--   [MC-266190](https://bugs.mojang.com/browse/MC-266190) Tuff blockset color palette is inconsistent with itself
--   [MC-266437](https://bugs.mojang.com/browse/MC-266437) Wind charge subtitles are improperly capitalized
--   [MC-266445](https://bugs.mojang.com/browse/MC-266445) Breeze mob doesn't count to Monster Hunter
--   [MC-266455](https://bugs.mojang.com/browse/MC-266455) Breeze spawn eggs are in the incorrect place in the creative inventory
--   [MC-266459](https://bugs.mojang.com/browse/MC-266459) The hitboxes and models of wind charges are misaligned
--   [MC-266538](https://bugs.mojang.com/browse/MC-266538) Trial spawners can be replaced by lava pools and other features
--   [MC-266622](https://bugs.mojang.com/browse/MC-266622) Wind Charges can't switch levers off
+-   [MC-265291](https://bugs.mojang.com/browse/MC-265291) Command suggestions within the command block interface don't disappear when the console command field is unselected
+-   [MC-265426](https://bugs.mojang.com/browse/MC-265426) Certain inputs pressed whilst in F3+Esc Pause will be carried out after game is unpaused
+-   [MC-265772](https://bugs.mojang.com/browse/MC-265772) A command with multiple redirect modifiers can ignore "maxCommandChainLength"
+-   [MC-265788](https://bugs.mojang.com/browse/MC-265788) The "Start free Snapshot Realm" element can be selected or remain selected causing its tooltip to erroneously be visible when other interfaces are open
+-   [MC-266075](https://bugs.mojang.com/browse/MC-266075) "Player teleports" not shown in subtitles when an ender pearl lands far from the thrower
+-   [MC-266206](https://bugs.mojang.com/browse/MC-266206) Renamed arrows are reffered as just "Arrow" in the death message
+-   [MC-266380](https://bugs.mojang.com/browse/MC-266380) Rain texture doesn't loop correctly
+-   [MC-266439](https://bugs.mojang.com/browse/MC-266439) Decorated pots with loot table desync item consumption if it cannot be inserted in the pot
+-   [MC-266496](https://bugs.mojang.com/browse/MC-266496) Wind Charge can not break Decorated Pots
+-   [MC-266516](https://bugs.mojang.com/browse/MC-266516) Arrows on fire set breezes on fire, despite being deflected
+-   [MC-266728](https://bugs.mojang.com/browse/MC-266728) The "styled" number format uses the resource location "result"
+-   [MC-266886](https://bugs.mojang.com/browse/MC-266886) Backspace in Anvil no longer works when renaming an item
+-   [MC-266890](https://bugs.mojang.com/browse/MC-266890) The minecraft:grass item does not get upgraded to minecraft:short;;_;;grass
 
 ---
 

@@ -100,545 +100,539 @@ Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you 
 
 ---
 
-# Minecraft 1.21.4 Release Candidate 3
+# Minecraft Snapshot 25w10a
 
-What's better than shipping on a Friday? How about shipping twice on a Friday?!
+It's time for a new Minecraft snapshot! We've got some more under-the-hood updates including a `tntExplodes` game rule previously found in Bedrock edition, new features in SNBT syntax, and allowing all entities to store custom data. We also have some more bug fixes coming your way.
 
-Here's Release Candidate 3 for Minecraft 1.21.4, fixing some critical issues, including several crashes.
-
-## Fixed bugs in 1.21.4 Release Candidate 3
-
--   [MC-276962](https://bugs.mojang.com/browse/MC-276962) JVM crash occurs when minimizing maximized window
--   [MC-277889](https://bugs.mojang.com/browse/MC-277889) Villagers' iron golem detection range is increased for villagers upgraded from 1.21.1 or earlier
-
----
-
-# 1.21.4 Release Candidate 2
-
-Today we are releasing 1.21.4 Release Candidate 2 to activate Blending around the Pale Garden Biome.
-
-If no further critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.4.
-
-Happy Mining!
-
-## Fixed bugs in 1.21.4 Release Candidate 2
-
--   [MC-278573](https://bugs.mojang.com/browse/MC-278573) Updating can cause straight biome borders with pale garden
-
----
-
-# Minecraft 1.21.4 Release Candidate 1
-
-After yesterday's [announcement](https://www.minecraft.net/en-us/article/the-garden-awakens-drop-date) that the The Garden Awakens drop comes out on December 3rd, today we're releasing the first release candidate!
-
-If no new critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.4.
-
-Happy Mining!
+You can now also enjoy a new main menu background, happy mining!
 
 ## Changes
 
--   Added language support for Popoloca
-
-## Fixed bugs in 1.21.4 Release Candidate 1
-
--   [MC-278494](https://bugs.mojang.com/browse/MC-278494) Resin Bricks appears twice in "mineable/pickaxe" block tag
--   [MC-278548](https://bugs.mojang.com/browse/MC-278548) Spyglass is held incorrectly when used from the off hand
-
----
-
-# 1.21.4 Pre-Release 3
-
-We are now releasing a third Pre-Release for Minecraft 1.21.4 to fix a crash and a few bugs. Watch your step before jumping!
-
-## Fixed bugs in 1.21.4 Pre-Release 3
-
--   [MC-277977](https://bugs.mojang.com/browse/MC-277977) Teleporting large distances whilst gliding prevents the world from loading and player model glitchiness
--   [MC-278444](https://bugs.mojang.com/browse/MC-278444) Waterlogged resin clumps do not drop when their supporting block is broken/moved
--   [MC-278518](https://bugs.mojang.com/browse/MC-278518) Player takes damage from jumping down from one block
-
----
-
-# 1.21.4 Pre-Release 2
-
-We are starting off this week with the second 1.21.4 Pre-Release, including even more bug fixes!
-
-Happy mining!
+-   The Sheep wool texture has been tweaked to remove the stark line at the back
+-   Blocks that are broken by a Piston now play their breaking sound
+-   Updated the menu panorama for the first Game Drop of the year
+-   The textures of Test Blocks and Test Instance Blocks have been updated
+-   Cactus Flowers can now be placed on Farmland
 
 ## Technical Changes
 
--   The Data Pack version is now 61
+-   The Data Pack version is now 70
+-   The Resource Pack version is now 54
 
-## Data Pack Version 61
+## Data Pack Version 70
 
-### Furnace, Smoker and Blast Furnace Data
+-   All entities can now store custom data
+-   Unified format and functionality of predicates for components on Entities and Block Entities
+-   New operations for SNBT
+-   Added new `tntExplodes` Game Rule
+-   Added `#flowers` item tag - corresponding item tag for the already existing `#flowers` block tag
 
--   Renamed `CookTime` to `cooking_time_spent`
--   Renamed `CookTimeTotal` to `cooking_total_time`
--   Renamed `BurnTime` to `lit_time_remaining`
--   Added field `lit_total_time` representing the total time the furnace should be lit
+### Entity Data
 
-## Fixed bugs in 1.21.4 Pre-Release 2
+-   Custom data (previously present only on Marker) is now available on all entities
+    -   It's exposed as a `minecraft:custom_data` component, so it can be set by spawning items and matched by predicates
+    -   The component is currently stored in a field called `data`, which will be changed in the future when more proper storage for entity components is introduced
+    -   It's stored only if it's non-empty
 
--   [MC-10025](https://bugs.mojang.com/browse/MC-10025) Burn time indicator of a furnace not working correctly after reloading the world
--   [MC-197857](https://bugs.mojang.com/browse/MC-197857) Villagers trying to claim claimed beds
--   [MC-275952](https://bugs.mojang.com/browse/MC-275952) Riding a minecart above the water with Frost Walker boots on will also give the Frost Walker effect
--   [MC-277169](https://bugs.mojang.com/browse/MC-277169) Creaking moves while a player is looking at it while moving a certain way and looking through pale moss
--   [MC-278256](https://bugs.mojang.com/browse/MC-278256) Horses jumping multiple times in a row take fall damage
--   [MC-278282](https://bugs.mojang.com/browse/MC-278282) "Tried to load a DUMMY block entity"/"Tried to load a block entity" errors at specific coordinates
--   [MC-278370](https://bugs.mojang.com/browse/MC-278370) Winter drop feature flag is not added to the removed features list
--   [MC-278430](https://bugs.mojang.com/browse/MC-278430) Trim materials item tag is not deterministic in data generation
--   [MC-278497](https://bugs.mojang.com/browse/MC-278497) Using items while sneaking slows down the player way less than in previous versions
+### Entity Predicates
 
----
+-   A new optional field has been added to entity predicates: `predicates`
+    -   Its functionality and format is identical to the field `predicates` on item predicates, but they operate on entity components
+        -   When present, `predicates` will match partial contents of entity components
 
-# Minecraft 1.21.4 Pre-Release 1
+### Block Predicates
 
-The first pre-release of Minecraft 1.21.4 is now available. Today's update and for the remainder of the 1.21.4 cycle, you will mostly see bug fixes and tweaks. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing only on Wednesdays, so keep an eye out for the next pre-release.
+-   New optional fields have been added to block predicates: `components` and `predicates`
+-   Their functionality and format are identical to the fields `components` and `predicates` on item predicates, but they operate on block entity components (when present)
+    -   When present, `components` will match exact contents of block entity components
+    -   When present, `predicates` will match partial contents of block entity components
 
-As always, a big thank you to the community for your feedback, bugs reported, and awesome ideas throughout the snapshot series. Let the pre-releases commence!
+### SNBT Format
 
-## Technical Changes
+-   To simplify input of data and macro use, SNBT now also supports following operations:
+    -   `bool(arg)` - converts argment to boolean
+        -   if argument is a boolean value, returns value directly
+        -   if argument is a number value, returns `true` if it is non-zero
+    -   `uuid(str)` - converts string representation of UUID to integer array
+-   Implicit infinite float values (like `1e1000`) are now rejected
 
--   The Resource Pack version is now 46
--   Similarly to block items, Spawn Eggs for entities that could execute operator-only commands now have a warning in tooltip
+### `tntExplodes` Game Rule
 
-## Resource Pack Version 46
+-   When `false`, TNT will not explode and cannot be primed
+-   Default value: `true`
 
--   Added a way of suppressing first-person hand animation on item change for specific models
--   Unifont has been updated to 16.0.01
+## Resource Pack Version 54
 
-### Item models
+-   "Global" uniforms may now be defined in any shader, and the game will attempt to fill it
+    -   Currently, these are: `ModelViewMat`, `ProjMat`, `TextureMat`, `ScreenSize`, `ColorModulator`, `Light0_Direction`, `Light1_Direction`, `GlintAlpha`, `FogStart`, `FogEnd`, `FogColor`, `FogShape`, `LineWidth`, `GameTime`, `ModelOffset`
+    -   The type of the uniform must match what it would normally be, or it'll be undefined behavior
 
--   A new field has been added to the client-side item info format (i.e. files in `/assets/*/items/*.json`)
-    -   `hand_animation_on_swap` - boolean field describing if down-and-up animation should be played in first-person view when item stack is changed (either type, count or components), default: `true`
-        -   only value from new item is taken into account
-        -   does not control "pop" animation in GUI when item is picked or changes count
+## Fixed bugs in 25w10a
 
-**`minecraft:model` item model type**
-
-**Added `minecraft:team` tint source type**
-
--   Returns team color of context entity, if any
--   Fields:
-    -   `default` - RGB value to return when there is no context entity, entity is not in a team or team has no color
-
-**Changed `minecraft:head` special model type**
-
--   Added field `animation` - float controlling head animation (like Piglin ears or Ender Dragon jaw), default: `0.0`
-
-**Added `minecraft:view_entity` boolean property**
-
--   When not spectating, returns `true` if context entity is the local player entity, i.e. one controlled by client
--   When spectating, returns `true` if context entity is the spectated entity
--   If context entity is not present, will return `false`
--   No fields
-
-**Renamed property `minecraft:holder_type` to `minecraft:context_entity_type`**
-
-**Developer's Note**: _Context entities were initially used only for compasses and clocks, which means that type is available only in rendering contexts where those items would show correct reading (see MC-186797 and related bugs). The name change has been made to better reflect that._
-
-**Added `minecraft:context_dimension` property**
-
--   Returns the ID of the dimension in context, if any
--   No fields
--   Values: namespaced dimension ID (like `minecraft:overworld`)
-
-**Changed `minecraft:time` numeric property**
-
--   Removed field `natural_only`
--   Added field `source` - time source, possible values:
-    -   `daytime` - time of day
-    -   `moon_phase` - moon phase
-    -   `random` - random value
-
-**Changed `minecraft:compass` numeric property**
-
--   Added value `none` to field `target` which always returns an invalid target
-
-**Added `minecraft:empty` item model type**
-
--   Does not render anything
--   No fields
-
-## Fixed bugs in 1.21.4 Pre-Release 1
-
--   [MC-128225](https://bugs.mojang.com/browse/MC-128225) '/data remove' can't remove the NBT "CustomName"
--   [MC-138100](https://bugs.mojang.com/browse/MC-138100) /data remove doesn't work for the Jukebox's RecordItem tag
--   [MC-179815](https://bugs.mojang.com/browse/MC-179815) Data command doesn't remove leash from a mob
--   [MC-207605](https://bugs.mojang.com/browse/MC-207605) /data remove entity ;;[;;tamed wolf;;];; Owner does not remove ownership of the wolf
--   [MC-265788](https://bugs.mojang.com/browse/MC-265788) The "Start free Snapshot Realm" element can be selected or remain selected causing its tooltip to erroneously be visible when other interfaces are open
--   [MC-278134](https://bugs.mojang.com/browse/MC-278134) The TAB key cannot be used to select messages to report after clicking the "X message(s) hidden" element
--   [MC-278193](https://bugs.mojang.com/browse/MC-278193) Baby piglins can't decide between crossbows and golden items
--   [MC-278257](https://bugs.mojang.com/browse/MC-278257) Oxygen bar animation can be interrupted by applying water breathing
--   [MC-278290](https://bugs.mojang.com/browse/MC-278290) Using items while swimming or walking underwater doesn't slow the player down
--   [MC-278300](https://bugs.mojang.com/browse/MC-278300) Creakings struck by lightning show visual fire
--   [MC-278302](https://bugs.mojang.com/browse/MC-278302) Bundle always takes out first item and ignores selected item
--   [MC-278311](https://bugs.mojang.com/browse/MC-278311) Respawned creakings from creaking hearts don't persist when the world is reloaded
--   [MC-278312](https://bugs.mojang.com/browse/MC-278312) Creakings spawned from a creaking heart can be name-tagged once again
--   [MC-278387](https://bugs.mojang.com/browse/MC-278387) Creaking respawns when going to the nether and back
--   [MC-278390](https://bugs.mojang.com/browse/MC-278390) Opening shulkers no longer trigger tripwire or pressure plates
+-   [MC-269386](https://bugs.mojang.com/browse/MC-269386) Flow Pottery Sherd is not in the correct spot in the creative inventory
+-   [MC-270043](https://bugs.mojang.com/browse/MC-270043) Reduced armor glint applies to tridents
+-   [MC-279920](https://bugs.mojang.com/browse/MC-279920) Beacons play the deactivation sound every game tick while on the death screen
+-   [MC-279967](https://bugs.mojang.com/browse/MC-279967) Temperate cows have strange mapping/harsh borders because of the leg texture becoming mirrored
+-   [MC-279993](https://bugs.mojang.com/browse/MC-279993) Baby cows' heads are incorrectly positioned
+-   [MC-280050](https://bugs.mojang.com/browse/MC-280050) The mule saddle texture is missing in the Programmer Art resource pack
+-   [MC-280061](https://bugs.mojang.com/browse/MC-280061) Test instance block has flipped lighting direction
+-   [MC-280063](https://bugs.mojang.com/browse/MC-280063) crafting;;_;;transmute recipes don't give an output if the output stack has the same count as the stack in the crafting grid
+-   [MC-280106](https://bugs.mojang.com/browse/MC-280106) Cactus flowers cannot be held by endermen
+-   [MC-280109](https://bugs.mojang.com/browse/MC-280109) Leash all frog variants advancement is not deterministic in data generation
+-   [MC-280113](https://bugs.mojang.com/browse/MC-280113) Shears no longer consume durability when used on insta-mined blocks
+-   [MC-280143](https://bugs.mojang.com/browse/MC-280143) Monster spawner and trial spawner tooltip no longer displays the "Interact with Spawn Egg" hint
+-   [MC-280159](https://bugs.mojang.com/browse/MC-280159) New cow model does not match Bedrock Edition
+-   [MC-280242](https://bugs.mojang.com/browse/MC-280242) Not all ambient sounds have been moved to the "Ambient/Environment" category
+-   [MC-280244](https://bugs.mojang.com/browse/MC-280244) Temperate cow model in Java does not have its new horn placement from Bedrock Edition
+-   [MC-280285](https://bugs.mojang.com/browse/MC-280285) Some game events can crash the game when attempting to create vibration resonance with an amethyst block
+-   [MC-280315](https://bugs.mojang.com/browse/MC-280315) Crash when listing suggestions with invalid Unicode escapes
+-   [MC-280325](https://bugs.mojang.com/browse/MC-280325) The player hand flickers in first-person mode
+-   [MC-280337](https://bugs.mojang.com/browse/MC-280337) Slimes freeze the game
+-   [MC-280360](https://bugs.mojang.com/browse/MC-280360) The game stops updating frames while loading chunks
+-   [MC-280379](https://bugs.mojang.com/browse/MC-280379) Frozen screen when entering any UI or after a few minutes of playing
+-   [MC-280383](https://bugs.mojang.com/browse/MC-280383) Items in inventories sometimes do not render
+-   [MC-280423](https://bugs.mojang.com/browse/MC-280423) Block textures flicker randomly
+-   [MC-280439](https://bugs.mojang.com/browse/MC-280439) Values out of bounds for float and double parse successfully in SNBT resulting in storing the value Infinity
 
 ---
 
-# Minecraft 1.21.2 Release Candidate 2
+# Minecraft Snapshot 25w09b
 
-We were so worried that you had forgotten all about us over the weekend, so we're kicking this week off with a surprise second Release Candidate for 1.21.2! Let's hope this is (fingers crossed) the last one before the full release of Bundles of Bravery.
-
-If no other critical issues are found, this will be the version for 1.21.2 that can be expected to be released later this week.
+Back so soon! We're releasing a second snapshot this week, following frequently occurring issues in yesterday's snapshot.
 
 Happy mining!
 
-## Fixed bugs in 1.21.2 Release Candidate 2
+## Fixed bugs in 25w09b
 
--   [MC-277625](https://bugs.mojang.com/browse/MC-277625) Player's OnGround tag doesn't update when riding a vehicle
--   [MC-277708](https://bugs.mojang.com/browse/MC-277708) The sound of breaking leaves on a riding mob is not played In survival
--   [MC-277718](https://bugs.mojang.com/browse/MC-277718) Minecart behaviour altered even with experiments disabled
--   [MC-277732](https://bugs.mojang.com/browse/MC-277732) Block break block updates can stop working in a chunk
-
----
-
-# Minecraft 1.21.2 Release Candidate 1
-
-We missed you so much since the previous pre-release so today we're releasing Release Candidate 1. If no critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.2, the Bundles of Bravery drop.
-
-## Fixed bugs in 1.21.2-rc1
-
--   [MC-273812](https://bugs.mojang.com/browse/MC-273812) Intersection chests in trial chambers not generating correctly
--   [MC-277636](https://bugs.mojang.com/browse/MC-277636) Projectiles visually fall when relogging
--   [MC-277638](https://bugs.mojang.com/browse/MC-277638) Client sometimes rejects a set passengers packet
+-   [MC-280302](https://bugs.mojang.com/browse/MC-280302) Text does not render in menus until entering a world
+-   [MC-280303](https://bugs.mojang.com/browse/MC-280303) Game crashes when trying to render a warden
+-   [MC-280305](https://bugs.mojang.com/browse/MC-280305) GUI elements incorrectly overlap on macOS
+-   [MC-280308](https://bugs.mojang.com/browse/MC-280308) Crash from GL error when opening world
+-   [MC-280310](https://bugs.mojang.com/browse/MC-280310) The game crashes near a Trial Chamber
+-   [MC-280322](https://bugs.mojang.com/browse/MC-280322) Game crashes when trying to render a breeze
+-   [MC-280324](https://bugs.mojang.com/browse/MC-280324) Game crashes when entering the end from the nether
+-   [MC-280329](https://bugs.mojang.com/browse/MC-280329) Game sometime crashes when saving world
+-   [MC-280334](https://bugs.mojang.com/browse/MC-280334) The Report Player screen is broken
+-   [MC-280346](https://bugs.mojang.com/browse/MC-280346) The loading screen initially appears black and only changes to red at the end
 
 ---
 
-# Minecraft 1.21.2 Pre-Release 5
+# Minecraft Snapshot 25w09a
 
-Did we have a Pre-Release yesterday? We don't remember. But here is one anyway, fixing more bugs.
+In this week's snapshot, we are bringing a long-awaited feature into parity as fallen trees are making their debut in Java Edition. Additionally, firefly bushes can now generate in mangrove swamps and rarely in badlands.
 
-Happy mining!
+On the technical side, SNBT syntax in commands has been expanded and improved, including fixing bugs related to SNBT text components preventing escapes from working.
 
-## Fixed bugs in 1.21.2 Pre-Release 5
+## New Features
 
--   [MC-277630](https://bugs.mojang.com/browse/MC-277630) Recipe book is not updated when one of the available recipes is used
--   [MC-277634](https://bugs.mojang.com/browse/MC-277634) Arrows shot at walls when facing south sometimes end up vertical instead of horizontal
+-   Added fallen trees to be in parity with Bedrock Edition
 
----
+### Fallen Trees
 
-# 1.21.2 Pre-Release 4
-
-Hello! Another day, another Pre-Release. We're releasing the fourth Pre-Release of 1.21.2, further stabilizing this version.
-
-Happy mining!
-
-## Fixed bugs in 1.21.2 Pre-Release 4
-
--   [MC-277496](https://bugs.mojang.com/browse/MC-277496) Text on maps that are in item frames render through blocks
--   [MC-277502](https://bugs.mojang.com/browse/MC-277502) Compasses do not point in correct direction when in left hand
--   [MC-277505](https://bugs.mojang.com/browse/MC-277505) Clocks are mirrored and spin in the wrong direction when in left hand
--   [MC-277513](https://bugs.mojang.com/browse/MC-277513) Item cooldowns of item stacks greater than 1 render in front of item tooltips
--   [MC-277517](https://bugs.mojang.com/browse/MC-277517) Arrows' landing points are lower than in previous versions
--   [MC-277518](https://bugs.mojang.com/browse/MC-277518) Crafting an item that has not yet been crafted removes all tabs in the recipe book other than the topmost one
--   [MC-277548](https://bugs.mojang.com/browse/MC-277548) Invisible block entities and items disappearing
--   [MC-277552](https://bugs.mojang.com/browse/MC-277552) Wandering traders look smaller than in previous versions
--   [MC-277559](https://bugs.mojang.com/browse/MC-277559) Sliding down honey blocks is still different from previous versions
-
----
-
-# 1.21.2 Pre-Release 3
-
-We are rounding off this week with the third 1.21.2 Pre-Release, including even more bug fixes!
-
-Happy mining and have a nice weekend!
+-   Fallen trees are a new decorative variant of trees
+-   Fallen trees come in four different wood type variants:
+    -   Oak
+    -   Birch
+    -   Jungle
+    -   Spruce
+-   Birch fallen trees can come in a shorter version or a longer version
+-   Some fallen trees can be decorated with mushroom or vines
+-   Fallen trees can be found in all biomes where their standing tree variant grow, except the following:
+    -   Meadow
+    -   Bamboo Jungle
+    -   River
+    -   Grove
+    -   Flower Forest has fallen birch trees but not fallen oak trees
 
 ## Changes
 
-### High Contrast Resource Pack
+### Leaf Litter
 
-Added the following high contrast textures:
+-   Leaf Litter is now replaceable by other blocks
 
--   Frame and background textures for tooltips
--   Slot background and highlight textures for the Bundle tooltip
+### Firefly Bush
+
+-   The Firefly Bush can now generate near water in Mangrove Swamps and Badlands (very rarely), like other biomes with water
 
 ## Technical Changes
 
--   Resource Pack version is now 42
+-   The Data Pack version is now 69
+-   New command line argument `--renderDebugLabels` is available for the client
+    -   Adds debug labels to relevant OpenGL objects, making debugging rendering easier for developers
 
-## Resource Pack Version 42
+## Data Pack Version 69
 
--   Added `container/bundle/slot_background` texture for bundle slot background
+-   Object notation used in commands for NBT, text components and inline predicates (a.k.a. SNBT) has been extended
 
-## Fixed bugs in 1.21.2 Pre-Release 3
+### Commands
 
--   [MC-277316](https://bugs.mojang.com/browse/MC-277316) Passengers dismount minecarts/boats when converting
--   [MC-277453](https://bugs.mojang.com/browse/MC-277453) Projectiles visually fall when shot in a wall with high tick rate
--   [MC-277488](https://bugs.mojang.com/browse/MC-277488) Mobs in their death animations produce the fire extinguishing sound every tick while being in lava while it's raining
--   [MC-277491](https://bugs.mojang.com/browse/MC-277491) Mobs in their death animations that are inside both water and lava produce the fire extinguishing sound every tick
+-   `/data` can now create and modify heterogeneous lists transparently
+
+### Entity Data
+
+-   The `FallFlying` field will no longer be preserved if removed
+-   The `Health` and `Air` fields now default to their respective maximum value if not specified
+
+**`area_effect_cloud`**
+
+-   The `Duration` field now defaults to `-1` if not specified
+-   If the `Duration` field is `-1`, the Area Effect Cloud will never run out
+-   This means that an Area Effect Cloud summoned with no duration specified will no longer immediately disappear
+
+**`creeper`**
+
+-   The `Fuse` field now defaults to `30` if not specified
+-   The `ExplosionRadius` field now defaults to `3` if not specified
+
+**`dolphin`**
+
+-   The `Moistness` field now defaults to `2400` if not specified
+
+**`ender_dragon`**
+
+-   The `DragonDeathTime` field now defaults to `0` if not specified
+
+**`falling_block`**
+
+-   The `BlockState` field can now be `air` (will despawn immediately) - if otherwise not specified or invalid, defaults to `sand`
+-   The `HurtEntities` field now defaults to `false` if not specified (or `true` if `BlockState` is `anvil`)
+-   The `FallHurtAmount` field now defaults to `0` if not specified
+-   The `FallHurtMax` field now defaults to `40` if not specified
+-   The `DropItem` field now defaults to `true` if not specified
+-   The `TileEntityData` field will no longer be preserved if removed
+
+**`firework_rocket`**
+
+-   The `ShotAtAngle` field now defaults to `false` if not specified
+
+**`fox`**
+
+-   The `Trusted` field now defaults to empty if not specified (and will no longer be merged with the previous state if modified by `/data`)
+
+**`ghast`**
+
+-   The `ExplosionPower` field now defaults to `1` if not specified
+
+**`goat`**
+
+-   The `HasLeftHorn` and `HasRightHorn` fields now default to `true` if not specified
+
+**`interaction`**
+
+-   The `width` and `height` fields now default to `1` if not specified
+
+**`item`**
+
+-   The `Health` field now defaults to `5` if not specified
+-   The `PickupDelay` field now defaults to `0` if not specified
+-   The `Age` field now defaults to `0` if not specified
+-   The `Owner` and `Thrower` fields will no longer be preserved when removed
+
+**`item_frame` and `glow_item_frame`**
+
+-   The `ItemDropChance` field now defaults to `1.0` if not specified
+
+**`primed_tnt`**
+
+-   The `fuse` field now defaults to `80` if not specified
+-   The `explosion_power` field now defaults to `4` if not specified
+
+**`shulker`**
+
+-   The `Color` field now defaults to `16` (no color) if not specified
+
+**`skeleton`**
+
+-   The `StrayConversionTime` field will no longer be preserved when removed
+
+**`spectral_arrow`**
+
+-   The `Duration` field now defaults to `200` if not specified
+
+**`snow_golem`**
+
+-   The `Pumpkin` field now defaults to `true` if not specified
+
+**`tnt_minecart`**
+
+-   The `fuse` field now defaults to `80` if not specified
+-   The `explosion_power` field now defaults to `4` if not specified
+-   The `explosion_speed_factor` field now defaults to `1` if not specified
+
+**`trader_llama`**
+
+-   The `DespawnDelay` field now defaults to `47999`
+
+**`villager`**
+
+-   The `FoodLevel` and `Xp` fields now default to `0` if not specified
+-   The `ConversionTime` field will no longer be preserved when removed
+
+**`wandering_trader`**
+
+-   The `DespawnDelay` field now defaults to `0` if not specified
+
+**`zombie`**
+
+-   The `DrownedConversionTime` field will no longer be preserved when removed
+
+**`zombie_villager`**
+
+-   The `Xp` field now defaults to `0` if not specified
+-   The `ConversionTime` field will no longer be preserved when removed
+
+**`arrow`, `spectral_arrow`, `trident`**
+
+-   The `damage` field now defaults to `2` if not specified
+
+**`dragon_fireball`, `wind_charge`, `breeze_wind_charge`, `wither_skull`, `small_fireball`, and `large_fireball`**
+
+-   The `acceleration_power` field now defaults to `0.1` if not specified
+
+**`small_fireball` and `large_fireball`**
+
+-   The `ExplosionPower` field now defaults to `1` if not specified
+
+**`block_display`, `item_display`, and `text_display`**
+
+-   The `interpolation_duration`, `teleport_duration`, and `start_interpolation` fields now default to `0` if not specified
+-   The `view_range` field now defaults to `1` if not specified
+-   The `shadow_radius` field now defaults to `0` if not specified
+-   The `shadow_strength` field now defaults to `1` if not specified
+-   The `width` and `height` fields now default to `0` if not specified
+
+### Block Entity Data
+
+**`campfire`**
+
+-   The `CookingTimes` and `CookingTotalTimes` fields will no longer be preserved when removed
+
+**`chiseled_bookshelf`**
+
+-   The `last_interacted_slot` field now defaults to `-1` if not specified
+
+**`hopper`**
+
+-   The `TransferCooldown` field now default to `-1` if not specified
+
+**`jigsaw`**
+
+-   The `name`, `target`, and `pool` fields now default to `minecraft:empty` if not specified
+-   The `final_state` field now defaults to `minecraft:air` if not specified
+
+**`sculk_shrieker`**
+
+-   The `warning_level` field now defaults to `0` if not specified
+
+**`structure_block`**
+
+-   The `ignoreEntities` and `showboundingbox` fields now default to `true` if not specified
+-   The `posY` field now defaults to `1` if not specified
+
+### NBT changes
+
+-   Any interface with NBT data within the game (SNBT representation, `/data`) now supports heterogeneous lists, i.e. ones where elements are not of the same type
+    -   Inserting or replacing into a list of a different type with `/data` will no longer give an error
+    -   Inserting into an array type (e.g. `[I;1,2,3]`) is still type-restricted
+    -   This means that the 'wrapper' objects previously used to represent heterogeneous lists will no longer be observable by in-game means
+-   `/data` can no longer traverse paths with an empty key (e.g. `/data get ... foo.''.bar`)
+-   The NBT file format is unchanged:
+    -   Heterogeneous lists are transformed before storage to bypass NBT constraints
+    -   Example transform: `['a', {'b':3}]` is stored as `[{'':'a'},{'b':3}]`
+    -   Existing external tools will still be able to read NBT files as before, but heterogeneous lists will be displayed in the transformed form
+-   No data produced by the game has changed: objects such as Text Components were already producing heterogeneous lists in this form
+-   Note: these wrapper objects may never be observed in-game, they are only relevant to developers working with the NBT file or network format directly
+
+### SNBT Changes
+
+-   The text format for describing object-like data in commands (like NBT, text components, predicates, etc.) has been extended
+
+**Number Format**
+
+-   Either whole or fraction parts of a float number can be omitted
+    -   Examples: `.1` and `1.` are valid now
+-   Float numbers now use E notation
+    -   Example: both `1.2e3` and `1.2E3`, `1.2E+3`, `12000e-1` are now a valid way to represent `1200.0`
+-   Integer numbers can now be prefixed with `0x` to represent hexadecimal numbers and `0b` to represent binary numbers
+    -   Example: `0xbad` (equal to `2989`), `0xCAFE` (equal to `51966`), `0b101` (equal to `5`)
+-   Integer numbers now can't start with `0`
+    -   Normally it would mean number is in base-8, but we are restricting it to avoid accidental use
+-   Numbers can now contain `_` character between sequences of digits (but not at the start or the end of sequence)
+    -   Example: `0b10_01`, `0xAB_CD`, `1_2.3_4__5f`, `1_2e3_4`
+-   `NaN`, `Inf` or hexadecimal float representation are NOT supported
+-   Type suffixes have been extended:
+    -   Integer type suffixes (`b` or `B` - byte, `s` or `S` - short, `i` or `I` - integer, `l` or `L`) can now be prefixed with `s` (signed) or `u` unsigned
+    -   New suffixes only affect valid range when parsing - values are still stored as signed
+        -   Example: `240ub` is equal to `-16sb`, while `240sb` does not parse
+    -   When a suffix is used without `u` or `s`, it defaults to signed for decimal numbers and unsigned for binary and hexadecimal numbers
+    -   Note: since `b` is also a valid hexadecimal digit, byte sized hexadecimal values can only be written with a signed suffix, like `0x11ub` or `0x11sb`
+
+**Strings**
+
+-   Quoted strings can now use escape sequences beyond `;;';;`, `;;";;` and `;;\;;`:
+    -   Unicode escapes:
+        -   `;;x;;` - two digit escape, like `;;x;;42`
+        -   `;;u;;` - four digit escape, like `;;u;;2603`
+        -   `;;U;;` - eight digit escape, like `;;U;;00002603`
+        -   `;;N;;{<name>}` - named Unicode character, like `;;N;;{Snowman}`
+    -   Built-in escape sequences:
+        -   `;;b;;` - backspace, Unicode `;;x;;08`
+        -   `;;s;;` - space, Unicode `;;x;;20`
+        -   `;;t;;` - horizontal tab, Unicode `;;x;;09`
+        -   `;;n;;` - linefeed, Unicode `;;u;;0a`
+        -   `;;f;;` - form feed, Unicode `;;u;;0c`
+        -   `;;r;;` - carriage return, Unicode `;;u;;0d`
+-   Unquoted strings now can't start with `0-9`, `.`, `+`, `-` to avoid accidental collision with numbers
+
+**Number arrays**
+
+-   Values in arrays (`[B;]`, `[I;]`, `[L;]`) without a suffix are now assumed to have suffix matching the type of the array
+    -   Example: `[B;1,2]` is equivalent to `[B; 1b, 2b]`
+-   Arrays can now also accept types smaller than the array type
+    -   Example: `[I;1b,2s,3]` is valid and equivalent to `[I;1i,2i,3i]`
+
+**Lists**
+
+-   Lists now accept trailing commas
+    -   Example: `[1,2,]` is valid and equivalent to `[1,2]`
+    -   Only one trailing comma is allowed, and it must come after a valid element - both `[,]` and `[1,,]` are invalid
+
+**Compounds**
+
+-   Compounds (maps) now accept trailing commas
+    -   Example: `{a:b,}`
+    -   Only one trailing comma is allowed, and it must come after a valid key-value pair - both `{,}` and `{a:b,,}` are invalid
+
+## Fixed bugs in 25w09a
+
+-   [MC-168262](https://bugs.mojang.com/browse/MC-168262) Dead bushes cannot be placed on farmland
+-   [MC-236100](https://bugs.mojang.com/browse/MC-236100) End crystal beam appears to be black
+-   [MC-276861](https://bugs.mojang.com/browse/MC-276861) The player can sometimes teleport through blocked end portals when moving very fast
+-   [MC-279229](https://bugs.mojang.com/browse/MC-279229) SNBT text components prevent ;;\;;n and ;;\;;t from working
+-   [MC-279236](https://bugs.mojang.com/browse/MC-279236) Flying into water with an elytra puts the player into an erroneous state
+-   [MC-279250](https://bugs.mojang.com/browse/MC-279250) SNBT text components prevent unicode escapes from working
+-   [MC-279252](https://bugs.mojang.com/browse/MC-279252) Changing a single line of a sign with /data is no longer possible in some situations
+-   [MC-279278](https://bugs.mojang.com/browse/MC-279278) Strafing twice in rapid succession while walking forward causes player to sprint
+-   [MC-279928](https://bugs.mojang.com/browse/MC-279928) Beacon beam clips into beacon block when far enough away
+-   [MC-279932](https://bugs.mojang.com/browse/MC-279932) Beacon beam disappears and reappears when approaching it
+-   [MC-279942](https://bugs.mojang.com/browse/MC-279942) Beacon beam can render over fog when outside render distance
+-   [MC-279947](https://bugs.mojang.com/browse/MC-279947) Snout of the new cow model is offset vertically by 0.1 pixels
+-   [MC-280022](https://bugs.mojang.com/browse/MC-280022) Players can be lit by lava while stepping onto solid blocks next to it
+-   [MC-280033](https://bugs.mojang.com/browse/MC-280033) Beacon beams render beyond client render distance
+-   [MC-280121](https://bugs.mojang.com/browse/MC-280121) Leaf litter can be placed on walls and fences
+-   [MC-280123](https://bugs.mojang.com/browse/MC-280123) Short dry grass and tall dry grass aren't randomly offset, unlike similar blocks
+-   [MC-280155](https://bugs.mojang.com/browse/MC-280155) Random ticks can cause entity build-up in lazy chunks
+-   [MC-280170](https://bugs.mojang.com/browse/MC-280170) Goats can no longer ram armor stands unless the game rule mobGriefing is set to false
+-   [MC-280211](https://bugs.mojang.com/browse/MC-280211) End crystal beams cause OpenGL errors with glDebugVerbosity set to 3
 
 ---
 
-# Minecraft 1.21.2 Pre-Release 2
+# Minecraft Snapshot 25w08a
 
-Today we are shipping the second Pre-Release for 1.21.2 with some more bug fixes and Pale Hanging Moss changes. During this stabilization phase before the full release of Minecraft Java Edition 1.21.2 we are focusing on fixing bugs and don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
+We're adding some new, fun and cute features in this week's snapshot. Spawn eggs just got cuter with new textures looking more like the mobs they spawn. Wolves are becoming even more unique with their own individual sounds. When a wolf spawns, it will get one of seven personalities, unrelated to their variant or biome. From cute to grumpy, each wolf will bark, growl, pant, whine, and express themselves in their own unique way. To top it all off, leaf litter will now look even better with new colors and we have made some tweaks to what color of sheep spawns in different biomes.
 
-## Experimental Features
+Have fun exploring!
 
-### Winter Drop
+## New Features
 
-**Pale Moss**
+-   Added new sound variants for Wolves
+-   Overhauled the visuals of each Spawn Egg to improve readability and accessibility
 
--   Pale Hanging Moss now only drops when cut with Shears or destroyed using tool with Silk Touch
--   Pale Moss Carpet is now more efficient to destroy with Sword
--   Pale Moss Carpet now plays the correct step sound when walking over it
+### Farm Animal variants
 
-## Fixed bugs in 1.21.2 Pre-Release 2
+**Sheep wool color in warm and cold biomes**
 
--   [MC-54532](https://bugs.mojang.com/browse/MC-54532) Sneaking while falling on Slime Blocks inflicts fall damage
--   [MC-160810](https://bugs.mojang.com/browse/MC-160810) Some items are held sideways in left hand
--   [MC-266480](https://bugs.mojang.com/browse/MC-266480) Breeze can jump on top of honey blocks
--   [MC-266494](https://bugs.mojang.com/browse/MC-266494) Jump Boost does not affect the breeze's jump
--   [MC-269851](https://bugs.mojang.com/browse/MC-269851) Breeze idle animations are different than Bedrock Edition
--   [MC-275834](https://bugs.mojang.com/browse/MC-275834) Jumping when falling onto a slime block no longer cancels the bounce effect
--   [MC-275941](https://bugs.mojang.com/browse/MC-275941) Consumable item components with inlined sound event definitions cause undefined behavior
--   [MC-276072](https://bugs.mojang.com/browse/MC-276072) Tridents enchanted with Loyalty fly around drowned upon returning to them
--   [MC-276605](https://bugs.mojang.com/browse/MC-276605) Throwing an ender pearl through a portal or gateway often results in the player being placed slightly too low
--   [MC-276624](https://bugs.mojang.com/browse/MC-276624) Nether portal can send you back when your ender pearl land in the portal
--   [MC-276716](https://bugs.mojang.com/browse/MC-276716) Thrown ender pearl teleport position is inconsistent
--   [MC-276813](https://bugs.mojang.com/browse/MC-276813) Minecraft no longer prints an error to the game log when trying to render a character without a defined glyph in the loaded fonts
--   [MC-276825](https://bugs.mojang.com/browse/MC-276825) Transmute recipes allow air as output
--   [MC-276906](https://bugs.mojang.com/browse/MC-276906) Specifying a block tag in an item's can;;_;;place;;_;;on or can;;_;;break component in a recipe or loot table causes validation error
--   [MC-276954](https://bugs.mojang.com/browse/MC-276954) Ender pearl interaction with bubble columns is still broken
--   [MC-276963](https://bugs.mojang.com/browse/MC-276963) Mobs standing inside both lava and water produce the fire extinguishing sound every tick
--   [MC-276978](https://bugs.mojang.com/browse/MC-276978) Mobs produce the fire extinguishing sound every tick while standing in lava in rain
--   [MC-277000](https://bugs.mojang.com/browse/MC-277000) Entities can be damaged by fire without being ignited
--   [MC-277073](https://bugs.mojang.com/browse/MC-277073) Pale moss and pale moss carpets cannot be broken faster using hoes
--   [MC-277091](https://bugs.mojang.com/browse/MC-277091) Pale oak boats are in the chest boats tag in place of pale oak chest boats
--   [MC-277096](https://bugs.mojang.com/browse/MC-277096) When selecting a biome in the single biome world type, there is no translation for the pale garden
--   [MC-277135](https://bugs.mojang.com/browse/MC-277135) Entity collision order is now locational
--   [MC-277165](https://bugs.mojang.com/browse/MC-277165) Particles produced upon creakings spawning are spawned one block too far to the east
--   [MC-277175](https://bugs.mojang.com/browse/MC-277175) #overworld;;_;;natural;;_;;logs block tag contains #pale;;_;;oak;;_;;logs instead of pale;;_;;oak;;_;;log
--   [MC-277212](https://bugs.mojang.com/browse/MC-277212) The "options.accessibility.high;;_;;contrast;;_;;block;;_;;outline.tooltip" string is missing an article before the word "targeted"
--   [MC-277309](https://bugs.mojang.com/browse/MC-277309) Missing translations for Pale Oak Wall (Hanging) Signs
--   [MC-277376](https://bugs.mojang.com/browse/MC-277376) Consumable block animation inherits shield behaviors
--   [MC-277389](https://bugs.mojang.com/browse/MC-277389) Armor stand in the smithing table interface no longer render armor when appropriate
--   [MC-277392](https://bugs.mojang.com/browse/MC-277392) The realms description text and the game mode text within the realms menu can intersect one another
--   [MC-277398](https://bugs.mojang.com/browse/MC-277398) The horse armor equipping sound is unusually loud
--   [MC-277402](https://bugs.mojang.com/browse/MC-277402) Horse armor doesn't render properly in horse inventory again
--   [MC-277404](https://bugs.mojang.com/browse/MC-277404) Entities' limbs are incorrectly positioned for a brief second when entities are damaged while riding entities
--   [MC-277405](https://bugs.mojang.com/browse/MC-277405) Mounts no longer receive damage when riding them through sweet berry bushes
--   [MC-277409](https://bugs.mojang.com/browse/MC-277409) Text on glowing signs no longer looks different to text on normal signs
--   [MC-277417](https://bugs.mojang.com/browse/MC-277417) /tp no longer works when run from a command block without context from "execute as"
--   [MC-277424](https://bugs.mojang.com/browse/MC-277424) The pale garden can prevent trial chambers from spawning
--   [MC-277438](https://bugs.mojang.com/browse/MC-277438) Wolf Armor no longer shows cracks when damaged
--   [MC-277452](https://bugs.mojang.com/browse/MC-277452) Player idle timeout does not kick players
+-   Reverted the change from last week that allowed Blue, Light Blue, Cyan, Yellow, Orange and Red Sheep to spawn naturally in different biomes
+-   Black Sheep will still be the most common type to spawn in cold biomes, and Brown Sheep will be the most common type in warm biomes
+-   Pink Sheep will still be very rare and able to spawn anywhere where Sheep can spawn
+-   Uncommon Sheep colors in Cold Biomes are gray, light gray, white and brown
+-   Uncommon Sheep colors in Warm Biomes are gray, light gray, white and black
 
----
+### Leaf Litter
 
-# Minecraft 1.21.2 Pre-Release 1
+-   Leaf Litter is tinted based on which biome it's in
 
-## Experimental Features
+### Spawn Egg visuals overhaul
 
-### Winter Drop
+-   Each Spawn Egg now has their own unique visual which captures the personality and character of the mob it spawns
+-   Each egg visual varies in shape to reflect the in-world size of the mob it spawns
+    -   For example, smaller mobs tend to have a smaller Spawn Egg
 
-**Creaking mob**
+### Wolf Sounds Variants
 
--   Creaking will not activate or freeze around players in Creative mode
--   Creaking summoned from the Creaking Heart cannot be named with a Nametag
-
-**Creaking Heart**
-
--   Comparators attached to the Creaking Heart block will output a signal strength dependent on the distance to the connected Creaking
+-   Added 6 new Wolf sound variants with unique ambient, hurt, death, growl, whine, and pant sounds
+    -   The new sounds are part of variants that are called `big`, `cute`, `puglin`, `angry`, `grumpy` and `sad`
+    -   The original Wolf sounds now are used for the variant called `classic`
+    -   Every Wolf will have a random sound variant assigned to it from the 6 new variants and the original one
+    -   The sound variant is not related to the texture variant
 
 ## Changes
 
--   Tweaked air bubbles UI
-    -   Added an empty state for air bubbles along with a wobble when the player is drowning
-    -   Added a popping sound when the bubbles pop in the UI
+-   Sheep's wool undercoat is now also colored when dyed, matching existing behaviour in Bedrock Edition
+-   Sheep can now eat Fern blocks to match Bedrock Edition
 
 ## Technical Changes
 
--   The Data Pack version is now 57
--   Resource Pack version is now 41
+-   The Data Pack version is now 68
+-   The Resource Pack version is now 53
 
-## Data Pack Version 57
+## Data Pack Version 68
 
--   Added `disablePlayerMovementCheck` game rule (default: false) that disables player movement speed restriction
-    -   This behaves the same as the `disableElytraMovementCheck` rule, but applies irrespective of flying with Elytra
+-   Added data driven sound variants for Wolves
+-   Biome effects has a new field `dry_foliage_color` that defines the color used for tinting blocks using dry foliage tinting
+
+### Wolf Sound Variants
+
+-   Wolf sound variants can be data-driven by adding entries to `data/<namespace>/wolf_sound_variant/<id>.json`
+-   The file contains the following fields which correspond to sound events to use for the specific behaviour:
+    -   `ambient_sound`
+    -   `death_sound`
+    -   `growl_sound`
+    -   `hurt_sound`
+    -   `pant_sound`
+    -   `whine_sound`
 
 ### Item Components
 
-**`minecraft:equippable`**
+**`blocks_attacks` component**
 
--   Added field `camera_overlay` (optional): namespaced ID of the overlay texture to use when equipped
-    -   If not specified, no overlay is used
-    -   The ID will address a texture under the `textures/` folder and automatically assumed to be `.png`
-        -   For instance, `misc/pumpkinblur` addresses `textures/misc/pumpkinblur.png`
+-   If the blocked damage has no position, the compared angle will be assumed to be the maximum `180` for `horizontal_blocking_angle` field of `damage_reductions`
 
-### Particles
+**Entity components**
 
--   Format of color fields in particle options is now more standardized:
-    -   RGB fields can always be encoded either as a vector of floats (order: `[R,G,B]`) or as a single packed integer (order: `RGB`)
-    -   ARGB fields can always be encoded either as a vector of floats (order: `[R,G,B,A]` or as a single packed integer (order: `ARGB`)
-    -   Changed fields:
-        -   `minecraft:trail.color` (previously accepted only integer)
-        -   `minecraft:dust.color` (previously accepted only vector of floats)
-        -   `minecraft:dust_color_transition.from_color` (previously accepted only vector of floats)
-        -   `minecraft:dust_color_transition.to_color` (previously accepted only vector of floats)
+-   New component
+    -   `wolf/sound_variant` - namespaced id from `wolf_sound_variant` registry
 
-## Resource Pack Version 41
+## Resource Pack Version 53
 
--   Added texture and sound for tweaked air bubble UI
-    -   New texture added for empty air bubble
-    -   Sound added for when air bubble pops
+-   Added possibility to tint blocks based on a dry foliage color map
+-   Updated textures for Spawn Eggs
+-   New and updated sounds for Wolf sound variants
+-   Added colormap texture for tinting dry foliage tinted blocks
+-   Name of `sheep_fur` texture has been renamed to `sheep_wool`
+-   Sheep now has a separate texture for its wool undercoat, which is dynamically recolored in-game
+    -   The name of this undercoat texture is `sheep_wool_undercoat`
 
-## Fixed bugs in 1.21.2 Pre-Release 1
+### Updated textures for Spawn Eggs
 
--   [MC-276360](https://bugs.mojang.com/browse/MC-276360) Repeating command block data is often lost when moving it around in inventory
--   [MC-276604](https://bugs.mojang.com/browse/MC-276604) Horse Armor no longer has enchantment glint
--   [MC-276815](https://bugs.mojang.com/browse/MC-276815) Dyed bundles are missing the "filled" predicate
--   [MC-276965](https://bugs.mojang.com/browse/MC-276965) Post shader ColorModulate uniform not reset properly after spectating spiders
--   [MC-276979](https://bugs.mojang.com/browse/MC-276979) Lock field on containers and minecraft:lock data component do not get datafixed correctly when a ;;\;; is present
--   [MC-277017](https://bugs.mojang.com/browse/MC-277017) Flaming arrows no longer extinguish when water or powder snow is placed in its location
--   [MC-277019](https://bugs.mojang.com/browse/MC-277019) Execute command teleporting across dimensions does not use correct relative coordinates
--   [MC-277027](https://bugs.mojang.com/browse/MC-277027) Shapeless recipes accept anything if one of their ingredients is an empty tag
--   [MC-277028](https://bugs.mojang.com/browse/MC-277028) Bundles do not empty smoothly
--   [MC-277067](https://bugs.mojang.com/browse/MC-277067) The high contrast and programmer art resource packs are displayed as being incompatible
--   [MC-277078](https://bugs.mojang.com/browse/MC-277078) Trim advancements use recipe registry key
--   [MC-277108](https://bugs.mojang.com/browse/MC-277108) The "below;;_;;name" scoreboard display mode renders with dark parts when custom colors are set
--   [MC-277111](https://bugs.mojang.com/browse/MC-277111) Wandering traders can sell pale oak saplings even when they're disabled
--   [MC-277118](https://bugs.mojang.com/browse/MC-277118) Creakings can spawn with doMobSpawning set to false
--   [MC-277131](https://bugs.mojang.com/browse/MC-277131) Pale garden missing from #minecraft:is;;_;;overworld biome tag
--   [MC-277141](https://bugs.mojang.com/browse/MC-277141) /rotate command is not restricted to permission level 2
--   [MC-277143](https://bugs.mojang.com/browse/MC-277143) Horse armor has damage-related components
--   [MC-277144](https://bugs.mojang.com/browse/MC-277144) Furnaces, blast furnaces, and smokers delete all of their contents inside them once reloaded after smelting items
--   [MC-277148](https://bugs.mojang.com/browse/MC-277148) Pack filters removing recipes that the player has unlocked causes data pack loading to fail
--   [MC-277160](https://bugs.mojang.com/browse/MC-277160) Pale hanging moss is often immediately destroyed when placed using the "/fill" command
--   [MC-277163](https://bugs.mojang.com/browse/MC-277163) Map color for pale oak saplings is incorrect
--   [MC-277176](https://bugs.mojang.com/browse/MC-277176) Team affixes have dark lines between them and the username in player name tags
--   [MC-277215](https://bugs.mojang.com/browse/MC-277215) The game crashes when attempting to accept or reject already accepted or rejected realm invitations
--   [MC-277301](https://bugs.mojang.com/browse/MC-277301) The enchantment glint isn't visible on thrown tridents that are enchanted or held in the hand in third person when using Fabulous graphics
--   [MC-277302](https://bugs.mojang.com/browse/MC-277302) The enchantment glint isn't visible on shields that are enchanted in third person when using Fabulous graphics
+-   New textures have been added for all Spawn Eggs
+-   Removed `spawn_egg.png` and `spawn_egg_overlay.png`
 
----
+### Equipment Assets
 
-# Minecraft 1.21.10 Release Candidate 1
+-   Equipment layers configured to be dyeable will now show if the `dyed_color` component is present on the item, even if the item is not in the `#dyeable` tag
 
-Today we are shipping Release Candidate 1 for 1.21.10, a hotfix release fixing a couple of issues that have bubbled up to the surface following the release of The Copper Age drop.
+### New and updated Wolf sound variants
 
-Happy mining!
+-   Sound files for the classic Wolf sounds have been moved into `classic` folder for the Wolf sound files
+-   Removed unused `howl` sound
+-   Added sounds for the new Wolf sound variants: `big`, `cute`, `puglin`, `angry`, `grumpy` and `sad`
 
-## Fixed bugs in 1.21.10 Release Candidate 1
+## Fixed bugs in 25w08a
 
--   [MC-211096](https://bugs.mojang.com/browse/MC-211096) Entities in cobwebs clip though pistons
--   [MC-278182](https://bugs.mojang.com/browse/MC-278182) Items glitch inside the piston head when pushed through powder snow or cobwebs
--   [MC-301916](https://bugs.mojang.com/browse/MC-301916) The behavior of wind charges when colliding with certain blocks is different
--   [MC-302321](https://bugs.mojang.com/browse/MC-302321) Chunks don't load while the player is being teleported
--   [MC-302383](https://bugs.mojang.com/browse/MC-302383) Rooms with carpet on the floor cannot have maps in item frames placed on walls touching the floor
--   [MC-302405](https://bugs.mojang.com/browse/MC-302405) Repeating(or chain) command block with any form of /tp ;;[;;player;;];; doesn't constantly tp player to one spot
--   Fixed an issue that caused entities on bubble columns to fly high up into the air
-
----
-
-# Minecraft 1.21.1 Release Candidate 1
-
-Before we get to new snapshots, today we are delivering Release Candidate 1 for Minecraft 1.21.1. This is a hotfix version fixing critical exploits. If no other critical issues are found, 1.21.1 can be expected to be released later this week.
-
-## Changes
-
--   Fixed critical exploits
--   Added language support for Tzotzil and Belarusian (Latin)
-
----
-
-# Minecraft 1.21 Release Candidate 1
-
-Here is the first Release Candidate for 1.21, addressing some critical issues. Apart from that we decided to revert the changes made in Pre-Release 4 to armor enchantments based on your feedback.
-
-Happy mining!
-
-## Changes
-
--   The changes to Burn Time reduction from Fire Protection and Knockback reduction from Blast Protection from pre-release 4 have been reverted
-    -   We have heard your feedback, and we expect to rebalance these two enchantments in the future to find a better place for them
-    -   Values are now the same as in 1.20.6
-    -   These effects still stack from wearing multiple pieces (changed from 1.20.6)
-
-## Fixed bugs in 1.21 Release Candidate 1
-
--   [MC-272888](https://bugs.mojang.com/browse/MC-272888) Zooming with riptide still applies mace wind burst if held in main hand
--   [MC-273007](https://bugs.mojang.com/browse/MC-273007) Projectiles have incorrect motion when shot from a vehicle which was entered with player velocity
--   [MC-273158](https://bugs.mojang.com/browse/MC-273158) Animals stay floating after getting on a boat
-
----
-
-# Minecraft 1.21 Pre-Release 4
-
-Frog day on a Friday? What could go wrong? We're back with 1.21 Pre-Release 4 today, with a couple more bug fixes, and some tweaks to the Blast Resistance and Fire Protection enchantments.
-
-## Changes
-
--   The "Burning Time" reduction effect of Fire Protection and "Knockback Resistance" effect of Blast Protection now stack from wearing several pieces
-    -   To get the maximum benefit of these effects, you now need to wear a full set of enchanted armor
-    -   Wearing a fully enchanted armor set still grants the same effect as in 1.20.6
-    -   Wearing only a single piece of enchanted armor now has reduced effect compared to before
--   After a Primed TNT has gone through a Nether Portal, it will no longer be able to destroy Nether Portal blocks
-
-## Fixed bugs in 1.21 Pre-Release 4
-
--   [MC-270540](https://bugs.mojang.com/browse/MC-270540) The prevention of fall damage from wind charges is not retained upon reloading the world
--   [MC-271971](https://bugs.mojang.com/browse/MC-271971) Wind Charges sometimes don't prevent fall damage
--   [MC-272933](https://bugs.mojang.com/browse/MC-272933) Fire protection burning time reduction now stacks for every piece of armor
--   [MC-272935](https://bugs.mojang.com/browse/MC-272935) Blast protection explosion knockback resistance now stacks for every piece of armor
--   [MC-272947](https://bugs.mojang.com/browse/MC-272947) Boat clutching after using a wind charge results in the player taking fall damage
--   [MC-272948](https://bugs.mojang.com/browse/MC-272948) Wind Burst damages the player twice on one use, even when using Wind Charges
--   [MC-272981](https://bugs.mojang.com/browse/MC-272981) Using a wind charge to stop the fall damage after using the wind burst enchantment doesn't correctly cancel the damage
--   [MC-272982](https://bugs.mojang.com/browse/MC-272982) Mace can have sharpness
-
----
-
-# Minecraft 1.21 Pre-Release 3
-
-The third pre-release for 1.21 is now available and it comes with even more bugfixes!
-
-Additionally, we introduced some intentional but undocumented changes to the Wind Burst Enchantment in Pre-Release 1 last week. To remedy this, we're including those changes in this changelog instead.
-
-Happy mining!
-
-## Changes
-
-### Wind Burst
-
--   Following changes were introduced in Pre-Release 1; The Wind Burst enchantment now bounces the player 7 blocks up per enchantment level
-    -   With great power comes great responsibility - and risk! At level 3, the enchantment will bounce the player 21 blocks up which _doing some quick maths_ will hurt quite a bit when hitting the ground again
-    -   In other words, make sure you have a target locked in (or other means of mitigating the fall damage) before making contact with the ground again
-
-## Technical Changes
-
--   Data Pack version is now 48
-
-## Data Pack Version 48
-
--   `replace_disc` entity effect type is renamed to `replace_disk`
-
-## Fixed bugs in 1.21 Pre-Release 3
-
--   [MC-252817](https://bugs.mojang.com/browse/MC-252817) Placing a map into an item frame and removing it does not remove the green player marker
--   [MC-267988](https://bugs.mojang.com/browse/MC-267988) Tamed entities ignore their "LookAtPlayerGoal" distance and look in the direction of their owners from any distance when being stood up
--   [MC-272194](https://bugs.mojang.com/browse/MC-272194) Empty Attribute Modifiers lost during upgrade
--   [MC-272565](https://bugs.mojang.com/browse/MC-272565) Hanging leashed boats gain excessive upward momentum
--   [MC-272577](https://bugs.mojang.com/browse/MC-272577) Summoning any entity with rotation causes it to be rotated incorrectly
--   [MC-272582](https://bugs.mojang.com/browse/MC-272582) Mip-mapping not properly applied to moss carpet
--   [MC-272661](https://bugs.mojang.com/browse/MC-272661) Entities have incorrect rotations after loading or reloading a world
--   [MC-272670](https://bugs.mojang.com/browse/MC-272670) Crash while saving entity NBT - Cannot encode empty ItemStack
--   [MC-272772](https://bugs.mojang.com/browse/MC-272772) Leashed Boats' leashes disappear upon rejoining world
--   [MC-272789](https://bugs.mojang.com/browse/MC-272789) Leashing a boat to a fence which already has a lead attached to it removes the existing lead rather than attaching the new one
--   [MC-272798](https://bugs.mojang.com/browse/MC-272798) Teleporting a leashed boat (with chest) or raft (with chest) to another dimension makes a ghost lead
--   [MC-272809](https://bugs.mojang.com/browse/MC-272809) Placed boats/rafts no longer face the same direction as the player
--   [MC-272814](https://bugs.mojang.com/browse/MC-272814) Entering an end gateway does not consistently grant the Remote Getaway advancement
--   [MC-272827](https://bugs.mojang.com/browse/MC-272827) Unleashing boats leashed to fences via Use Item/Place Block drops the lead in Creative mode
--   [MC-272843](https://bugs.mojang.com/browse/MC-272843) Stepping up blocks while falling on the side of them can sometimes allow players to climb to normally unreachable heights
--   [MC-272854](https://bugs.mojang.com/browse/MC-272854) Crash when entity is leashed by non-LivingEntity
--   [MC-272870](https://bugs.mojang.com/browse/MC-272870) /execute on leasher does not work for leashed boats
--   [MC-272879](https://bugs.mojang.com/browse/MC-272879) Entering an End portal makes you face the entering direction rather than always facing west
--   [MC-272886](https://bugs.mojang.com/browse/MC-272886) Maces incorrectly cause damage to the player
--   [MC-272901](https://bugs.mojang.com/browse/MC-272901) Boats & Rafts with Chests cannot be leashed if they have a passenger
+-   [MC-177522](https://bugs.mojang.com/browse/MC-177522) Wolf barking and whining sounds are subtitled as "Wolf pants"
+-   [MC-280182](https://bugs.mojang.com/browse/MC-280182) Shields can block some environmental damage sources
+-   [MC-280230](https://bugs.mojang.com/browse/MC-280230) DeathLootTable field is incorrectly named DeathLoothTable
 
 ---
 

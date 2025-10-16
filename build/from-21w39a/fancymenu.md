@@ -507,98 +507,235 @@ Example:
 
 ---
 
-# Minecraft Snapshot 21w20a
+# Minecraft 1.17.1 Release Candidate 2
 
-Another snapshot is now going out. This time around, we fixed quite a few bugs, and we also introduced some changes to some Caves & Cliffs features, and additionally, we added some extra context for the narrator.
+A second Release Candidate for Minecraft Java Edition 1.17.1 is now available in the launcher, fixing some critical issues. If nothing critical is found, we expect this to be released as the full version of 1.17.1 on Tuesday, July 6th.
 
-## Changes in 21w20a
+## The Caves & Cliffs Preview
 
--   Actually made geodes rarer this time
--   GUI narration now includes position and usage of hovered or focused element
--   Tilling rooted dirt with a hoe will now convert it into dirt, and pop out a hanging roots item
--   Axolotls will now only play dead when in water
--   Llamas no longer spit at players in peaceful mode
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
 
-## Changes to the Caves & Cliffs Preview
+---
 
-Download the [updated datapack](https://launcher.mojang.com/v1/objects/233aa01c6db99ffcf95594e384e72671ae279ced/CavesAndCliffsPreview.zip).
+# Minecraft 1.17.1 Release Candidate 1
 
-## Technical changes in 21w20a
+A first and hopefully only Release Candidate for Minecraft: Java Edition 1.17.1 is now available in the launcher, fixing a few more crashes and bugs. If nothing critical is found, we expect this to be released as the full version of 1.17.1 on Tuesday, July 6th.
 
--   Added a new NBT tag for entities - "HasVisualFire" - which will cause any entity with this flag to visually appear on fire, even if they are not actually on fire
+## The Caves & Cliffs Preview
 
-## Bugs fixed in 21w20a
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
 
--   [MC-610](https://bugs.mojang.com/browse/MC-610) Grass / Flowers / Snow are placed incorrectly in newly created chunks
--   [MC-102220](https://bugs.mojang.com/browse/MC-102220) Barrier Blocks are not shown when "Show Invisible Blocks" is selected in Save Structure Blocks
--   [MC-149777](https://bugs.mojang.com/browse/MC-149777) Crash when loading world: java.util.ConcurrentModificationException when using Java 11 or above
--   [MC-172304](https://bugs.mojang.com/browse/MC-172304) Piglins, piglin brutes, hoglins, zoglins and axolotls can attack their own teammates
--   [MC-189535](https://bugs.mojang.com/browse/MC-189535) Catching a fish in a bucket on creative mode doesn't give player new bucket
--   [MC-191338](https://bugs.mojang.com/browse/MC-191338) Name color for Minecart with Command Block is incorrect
--   [MC-192591](https://bugs.mojang.com/browse/MC-192591) Name color for Structure Void is incorrect
--   [MC-198200](https://bugs.mojang.com/browse/MC-198200) Crash when leaving out processors in a template pool: java.lang.IllegalArgumentException: bound must be positive
--   [MC-203712](https://bugs.mojang.com/browse/MC-203712) Amethyst Geodes cause floating water/lava to generate when intersecting water/lava caves/pools
--   [MC-203867](https://bugs.mojang.com/browse/MC-203867) Amethyst geodes can overwrite bedrock
--   [MC-204393](https://bugs.mojang.com/browse/MC-204393) Lava Cauldron emits redstone signal strength 1 instead of 3
--   [MC-204902](https://bugs.mojang.com/browse/MC-204902) Dirt paths are no longer compatible with the programmer art resource pack
--   [MC-205104](https://bugs.mojang.com/browse/MC-205104) Rideable mobs are not affected by powder snow's freezing effect while being ridden
--   [MC-205120](https://bugs.mojang.com/browse/MC-205120) Freezing hearts aren't displayed properly in Programmer Art resource pack
--   [MC-205250](https://bugs.mojang.com/browse/MC-205250) Amethyst geodes can generate in a stronghold and can potentially destroy the end portal frames
--   [MC-205680](https://bugs.mojang.com/browse/MC-205680) minecraft:location;;_;;check predicate floating point imprecision
--   [MC-206107](https://bugs.mojang.com/browse/MC-206107) Parrots sitting on shoulders do not freeze in powder snow
--   [MC-206131](https://bugs.mojang.com/browse/MC-206131) Amethyst blocks are transparent / don't conduct Redstone
--   [MC-206601](https://bugs.mojang.com/browse/MC-206601) Potion particles are showing when looking through spyglass
--   [MC-206839](https://bugs.mojang.com/browse/MC-206839) Pointed dripstones cause extreme durability damage to helmets
--   [MC-207324](https://bugs.mojang.com/browse/MC-207324) Mobs and particles sometimes don't fully render behind stained or tinted glass
--   [MC-207366](https://bugs.mojang.com/browse/MC-207366) Trying to modify the world height of a world after it's already been generated gives a null pointer exception
--   [MC-208586](https://bugs.mojang.com/browse/MC-208586) Axolotls get stuck and spin constantly on top of lily pads
--   [MC-208589](https://bugs.mojang.com/browse/MC-208589) Axolotls have a swimming animation (move their body up- and downwards) when on land
--   [MC-208601](https://bugs.mojang.com/browse/MC-208601) Axolotls do not avoid lava when pathfinding
--   [MC-208617](https://bugs.mojang.com/browse/MC-208617) Axolotls sometimes twitch rapidly when adjusting their rotation
--   [MC-208641](https://bugs.mojang.com/browse/MC-208641) Axolotl movement glitch on stairs
--   [MC-208649](https://bugs.mojang.com/browse/MC-208649) Breeding axolotl with a bucket of tropical gives back a bucket instead of a water bucket
--   [MC-208654](https://bugs.mojang.com/browse/MC-208654) Collecting an axolotl with a water bucket in creative mode replaces the original bucket
--   [MC-208675](https://bugs.mojang.com/browse/MC-208675) Axolotls sometimes use walking animation when in shallow water
--   [MC-208682](https://bugs.mojang.com/browse/MC-208682) Axolotls frequently get stuck inside of waterlogged blocks
--   [MC-208691](https://bugs.mojang.com/browse/MC-208691) Axolotls play dead even when they take damage without being attacked by an entity
--   [MC-208735](https://bugs.mojang.com/browse/MC-208735) Axolotls attempt to pathfind towards unreachable water, then start spinning, eventually drying out and dying
--   [MC-209324](https://bugs.mojang.com/browse/MC-209324) Pointed Dripstone can be broken with tridents in spawn protection
--   [MC-212125](https://bugs.mojang.com/browse/MC-212125) Only one glow lichen drops when using shears on multiple in a single block space
--   [MC-212531](https://bugs.mojang.com/browse/MC-212531) Shulkers can rotate their heads up and down
--   [MC-212931](https://bugs.mojang.com/browse/MC-212931) Fire extinguishing sound doesn't play when mobs are extinguished with rain/water
--   [MC-214041](https://bugs.mojang.com/browse/MC-214041) Mob can't properly or difficult walk on big dripleaf, when the big dripleaf is 4 blocks or more from the ground
--   [MC-214909](https://bugs.mojang.com/browse/MC-214909) Top half of a small dripleaf can turn into a ghost block when placing it in water while the water is being removed
--   [MC-215665](https://bugs.mojang.com/browse/MC-215665) Amethyst Geodes can overlap with dungeons
--   [MC-216214](https://bugs.mojang.com/browse/MC-216214) netherrack;;_;;replace;;_;;blobs with water as target crashes the game
--   [MC-216980](https://bugs.mojang.com/browse/MC-216980) Comma splices in two source strings (EN;;_;;US)
--   [MC-217113](https://bugs.mojang.com/browse/MC-217113) Foxes spawned inside of powder snow sleeps
--   [MC-217608](https://bugs.mojang.com/browse/MC-217608) The big dripleaf texture is not vertically centered
--   [MC-217742](https://bugs.mojang.com/browse/MC-217742) Campfires and TNT can be lit by players using arrows shot from flame bows in spawn protection
--   [MC-219856](https://bugs.mojang.com/browse/MC-219856) F3 + L isn't sorted alphabetically in the debug screen
--   [MC-219870](https://bugs.mojang.com/browse/MC-219870) The Mojang loading screen upon start up flashes black
--   [MC-220063](https://bugs.mojang.com/browse/MC-220063) Sweet berries and glow berries sound events are named extremely differently
--   [MC-220128](https://bugs.mojang.com/browse/MC-220128) Parity Issue: Rooted dirt won't turn into the dirt and drop roots item after tilling with hoe in Java
--   [MC-220694](https://bugs.mojang.com/browse/MC-220694) Name color for knowledge book is incorrect
--   [MC-220867](https://bugs.mojang.com/browse/MC-220867) Fossils can generate through bedrock
--   [MC-221566](https://bugs.mojang.com/browse/MC-221566) Name color for light is incorrect
--   [MC-221694](https://bugs.mojang.com/browse/MC-221694) Strays do not spawn in powder snow
--   [MC-221833](https://bugs.mojang.com/browse/MC-221833) Light blocks are not shown within structure block bounds with Show Invisible Blocks on
--   [MC-221863](https://bugs.mojang.com/browse/MC-221863) Powder Snow can be broken by players on fire in spawn protection
--   [MC-221984](https://bugs.mojang.com/browse/MC-221984) Collecting an axolotl in a bucket and then placing it resets its kill cooldown
--   [MC-222002](https://bugs.mojang.com/browse/MC-222002) Light item displays the wrong level number
--   [MC-222116](https://bugs.mojang.com/browse/MC-222116) Splash water bottles doesn't extinguish candle cakes
--   [MC-222797](https://bugs.mojang.com/browse/MC-222797) Axolotl can be bred with just tropical fish items, not just bucket ones
--   [MC-223322](https://bugs.mojang.com/browse/MC-223322) Chorus flowers can be broken with projectiles in spawn protection
--   [MC-223372](https://bugs.mojang.com/browse/MC-223372) You can decrease the level of a water or powder snow cauldron, through the use of an entity on fire in spawn protection
--   [MC-224320](https://bugs.mojang.com/browse/MC-224320) minecraft.used:minecraft.potion doesn't increase when filling a partially filled cauldron with a water bottle
--   [MC-224322](https://bugs.mojang.com/browse/MC-224322) Powder snow can create ghost blocks in creative mode
--   [MC-224480](https://bugs.mojang.com/browse/MC-224480) Powder snow doesn't melt into water in cauldrons
--   [MC-224482](https://bugs.mojang.com/browse/MC-224482) Superflat presets no longer generate with decorations
--   [MC-225078](https://bugs.mojang.com/browse/MC-225078) Upgrading from 1.12.2 and below will cause items to lose enchantments
--   [MC-225253](https://bugs.mojang.com/browse/MC-225253) Dying in a nether portal softlocks the player on the "You Died!" menu
--   [MC-225347](https://bugs.mojang.com/browse/MC-225347) cave;;_;;vines;;_;;plant isn't in #bee;;_;;growables
--   [MC-225352](https://bugs.mojang.com/browse/MC-225352) Geodes have not been made "significantly rarer"
--   [MC-225360](https://bugs.mojang.com/browse/MC-225360) Cannot resolve SRV records: unknown host
+## Fixed bugs in 1.17.1 Release Candidate 1
+
+-   [MC-230716](https://bugs.mojang.com/browse/MC-230716) "death.attack.dryout" and "death.attack.dryout.player" display raw translation strings (are untranslated)
+
+---
+
+# Minecraft 1.17.1 Pre-Release 3
+
+A third pre-release for 1.17.1 is now available in your launcher, fixing a few more crashes and bugs.
+
+## The Caves & Cliffs Preview
+
+​ Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip). ​
+
+## Fixed bugs in 1.17.1 Pre-release 3
+
+​
+
+-   [MC-222731](https://bugs.mojang.com/browse/MC-222731) Captured axolotl constantly tries to leave water
+-   [MC-224894](https://bugs.mojang.com/browse/MC-224894) Light tickets are released too early
+-   [MC-228802](https://bugs.mojang.com/browse/MC-228802) Chunks not loading on a server / Cannot invoke "cmq.a(int, int, int)" because "☃" is null
+-   [MC-228858](https://bugs.mojang.com/browse/MC-228858) Axolotls despawning though named and on leashes.
+-   [MC-229246](https://bugs.mojang.com/browse/MC-229246) Piglins and piglin brutes no longer call other piglins after attacking one of them behind walls
+-   [MC-229475](https://bugs.mojang.com/browse/MC-229475) Placing a small dripleaf results in the top half of water getting deleted
+-   [MC-229887](https://bugs.mojang.com/browse/MC-229887) "Unable to create a jar-filesystem" warning logged upon starting the game
+
+---
+
+# Minecraft 1.17.1 Pre-Release 2
+
+The second pre-release for 1.17.1 is now available in your launcher. This pre-release fixes a few more bugs.
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Technical Changes in 1.17.1 Pre-release 1
+
+-   Deaths of named mobs are now logged
+
+## Fixed Bugs in 1.17.1 Pre-Release 2
+
+-   [MC-219290](https://bugs.mojang.com/browse/MC-219290) Calcite is too quiet compared to other blocks
+-   [MC-221656](https://bugs.mojang.com/browse/MC-221656) Creative mode obtained Bucket of Axolotl/Tropical Fish only spawns one kind axolotl/tropical fish
+-   [MC-226926](https://bugs.mojang.com/browse/MC-226926) Emerald ore generates too often
+-   [MC-228599](https://bugs.mojang.com/browse/MC-228599) Attempting to walk through flowing water constantly switches the player from swimming into normal mode
+-   [MC-229191](https://bugs.mojang.com/browse/MC-229191) Diamond ore distribution changed between 1.16.5 and 1.17
+-   [MC-229441](https://bugs.mojang.com/browse/MC-229441) You can steal the item a villager is holding for trade by killing it
+-   [MC-229614](https://bugs.mojang.com/browse/MC-229614) Wandering Trader obtained tropical fish are only white kob
+-   [MC-229983](https://bugs.mojang.com/browse/MC-229983) /clear command doesn't clear certain stacks after dropping items from them
+
+---
+
+# Minecraft 1.17.1 Pre-Release 1
+
+Happy Friday! The first pre-release for 1.17.1 is now available for download. This pre-release introduces a few changes to some gameplay mechanics, and it also fixes a bunch of bugs.
+
+## Changes in 1.17.1 Pre-release 1
+
+-   Blue axolotls can now only be obtained through breeding
+-   Non-screaming goats now have a rare chance to produce a screaming goat when bred
+-   Status effects on goats now also apply when the goat is jumping or ramming
+-   Raised the drop rate for copper ingots from Drowned to 11% + 2% per level of looting
+-   Powder snow now fills cauldrons 2 times faster than before (still pretty slowly, though!)
+-   Zombies, Zombie Villagers, Husks and Drowned will no longer pick up glow ink sacs
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Technical Changes in 1.17.1 Pre-release 1
+
+-   In case of DNS-based redirection, the client will send the hostname actually used to connect (this restores the pre-1.17 behaviour)
+
+## Bugs fixed in 1.17.1 Pre-release 1
+
+-   [MC-123654](https://bugs.mojang.com/browse/MC-123654) Sun, moon, and/or clouds are not showing if render distance is below 4
+-   [MC-131290](https://bugs.mojang.com/browse/MC-131290) Enchantments are saved as shorts, but are loaded as and function with integer values
+-   [MC-156155](https://bugs.mojang.com/browse/MC-156155) Turkish lira sign (₺) appears as □ in the game
+-   [MC-194736](https://bugs.mojang.com/browse/MC-194736) Duplicate text mapping for U+00B7
+-   [MC-196999](https://bugs.mojang.com/browse/MC-196999) U+1FEC is wrong in Minecraft's font
+-   [MC-213986](https://bugs.mojang.com/browse/MC-213986) Pistons and dispensers can be used to create ghost blocks using powder snow
+-   [MC-219018](https://bugs.mojang.com/browse/MC-219018) Ghost items can be created using /item (server doesn't update client inventory correctly)
+-   [MC-223350](https://bugs.mojang.com/browse/MC-223350) Loaded chunks sometimes don't render until the player moves their head slightly
+-   [MC-225816](https://bugs.mojang.com/browse/MC-225816) Hanging Roots appear large when an item entity
+-   [MC-226461](https://bugs.mojang.com/browse/MC-226461) Logs can be replaced with stone near lava pools
+-   [MC-226948](https://bugs.mojang.com/browse/MC-226948) Withers are now affected by potion effects
+-   [MC-227387](https://bugs.mojang.com/browse/MC-227387) World gen datapacks will likely crash or softlock the game
+-   [MC-227435](https://bugs.mojang.com/browse/MC-227435) Lag when placing heads of non-existent players when on servers
+-   [MC-227483](https://bugs.mojang.com/browse/MC-227483) root;;_;;system feature config's codec uses a wrong field
+-   [MC-227520](https://bugs.mojang.com/browse/MC-227520) Overworld Fossils always generate at bedrock level
+-   [MC-227557](https://bugs.mojang.com/browse/MC-227557) End portal texture appears stretched after world conversion
+-   [MC-227618](https://bugs.mojang.com/browse/MC-227618) Small dripleaf is consumed without being placed when used on tall seagrass
+-   [MC-227651](https://bugs.mojang.com/browse/MC-227651) Group for lapis lazuli ore smelting and blasting recipes is misspelled
+-   [MC-227821](https://bugs.mojang.com/browse/MC-227821) Client crash when trying to create/edit realm immediately after deleting previous one
+-   [MC-227891](https://bugs.mojang.com/browse/MC-227891) Ender pearls despawn when player logs out of a server
+-   [MC-228219](https://bugs.mojang.com/browse/MC-228219) Thrown ender pearls disappear upon entering the exit end portal
+-   [MC-228343](https://bugs.mojang.com/browse/MC-228343) java.lang.NullPointerException when random;;_;;selector default feature isn't found
+-   [MC-228430](https://bugs.mojang.com/browse/MC-228430) Very long loading pause while booting the game ("Failed to add PDH Counter", caused by oshi)
+-   [MC-228828](https://bugs.mojang.com/browse/MC-228828) Specifying the --server parameter when starting the game, causes the game to crash
+-   [MC-229299](https://bugs.mojang.com/browse/MC-229299) Blue axolotls can spawn naturally
+
+---
+
+# Minecraft 1.17 Release Candidate 2
+
+## Fixed Bugs in 1.17 Release Candidate 2
+
+-   Fixed a few critical issues
+
+---
+
+# Minecraft 1.17 Release Candidate 1
+
+We're now releasing the first (and hopefully only) release candidate for Caves & Cliffs: Part I. If there are no major issues following this release, no further changes will be done before the full release.
+
+Happy mining!
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Fixed bugs in 1.17 Release Candidate 1
+
+-   [MC-227323](https://bugs.mojang.com/browse/MC-227323) Custom player heads sometimes flash when placed on armor stands
+-   Improved desync issues when exiting a boat over a high latency connection
+-   Fixed crashes
+
+---
+
+# Minecraft 1.17 Pre-Release 5
+
+The fifth pre-release for 1.17 is now available, fixing another round of bugs and crashes.
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Fixed bugs in 1.17 Pre-release 5
+
+-   [MC-225707](https://bugs.mojang.com/browse/MC-225707) - Caves and Cliffs Datapacks Server Error
+-   [MC-227065](https://bugs.mojang.com/browse/MC-227065) - Cannot Invoke "na.b(String, int)" because "â˜ƒ is null
+-   [MC-227207](https://bugs.mojang.com/browse/MC-227207) - Datafixer doesn't properly update certain scoreboard objectives from 1.16 to 1.17
+-   [MC-227208](https://bugs.mojang.com/browse/MC-227208) - Breaking bamboo is excessively laggy since the 1.17 pre-releases
+-   [MC-227232](https://bugs.mojang.com/browse/MC-227232) - Player head SkullOwner tag with username string no longer works
+
+---
+
+# Minecraft 1.17 Pre-Release 4
+
+The fourth pre-release for 1.17 is now available, and this one fixes a few additional bugs and crashes.
+
+## Changes in 1.17 Pre-Release 4
+
+-   Holding down control while holding down space now makes the credits scroll even faster
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Fixed bugs in 1.17 Pre-Release 4
+
+-   [MC-223552](https://bugs.mojang.com/browse/MC-223552) Credits not alphabetically ordered
+-   [MC-226690](https://bugs.mojang.com/browse/MC-226690) In the credits, "EXPERIS" is in all capital letters for two employees
+-   [MC-226692](https://bugs.mojang.com/browse/MC-226692) In the credits, a closing parenthesis is missing for Brian Canning
+-   [MC-226693](https://bugs.mojang.com/browse/MC-226693) The credits say "Wed Developers" instead of "Web Developers" in one place
+-   [MC-226696](https://bugs.mojang.com/browse/MC-226696) In the credits, "TEN GUN DESIGN INC" is in all capital letters for one employee
+-   [MC-226700](https://bugs.mojang.com/browse/MC-226700) Some people are listed twice in the credits
+-   [MC-226702](https://bugs.mojang.com/browse/MC-226702) The usage and punctuation of "Inc." and "LLC" are inconsistent in the credits
+-   [MC-226762](https://bugs.mojang.com/browse/MC-226762) Credits Text Wrapping
+-   [MC-226777](https://bugs.mojang.com/browse/MC-226777) When a crossbow is loaded in the offhand, you cannot see it or shoot with it if an item is held in the main hand
+-   [MC-227003](https://bugs.mojang.com/browse/MC-227003) Game crashed whilst debug profiling
+-   [MC-227058](https://bugs.mojang.com/browse/MC-227058) Any hostility between animals is removed in peaceful
+-   [MC-227092](https://bugs.mojang.com/browse/MC-227092) Experimental Settings confirmation prompt appears when creating any world in 1.17-pre3
+-   [MC-227107](https://bugs.mojang.com/browse/MC-227107) C418 is removed from ==Composers== in credits.json
+
+---
+
+# Minecraft 1.17 Pre-Release 3
+
+Time for another pre-release, this time with some final tweaks to candles and more fixes for bugs and crashes!
+
+Note that a bug has snuck into this pre-release making the game warn about every world as if it was experimental. This will be fixed in the next pre-release.
+
+## Changes in 1.17 Pre-release 3
+
+-   Tweaked the textures of lit candles
+-   Mobs rammed by goats will no longer retaliate
+-   Axolotls and Glow Squids now only spawn in total darkness and where there's a natural stone block less than 5 blocks below the spawning space
+
+## The Caves & Cliffs Preview
+
+Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
+
+## Fixed Bugs in 1.17 Pre-Release 3
+
+-   [MC-203773](https://bugs.mojang.com/browse/MC-203773) Lightning rod is floating when held in third-person
+-   [MC-215946](https://bugs.mojang.com/browse/MC-215946) Game fatally crashed while exploring chunks (IllegalStateException: Accessing PalettedContainer from multiple threads)
+-   [MC-222223](https://bugs.mojang.com/browse/MC-222223) Baby axolotls despawn
+-   [MC-223147](https://bugs.mojang.com/browse/MC-223147) Vines aren't rendered with /setblock
+-   [MC-223227](https://bugs.mojang.com/browse/MC-223227) Floating water caves in caves under the ocean
+-   [MC-224893](https://bugs.mojang.com/browse/MC-224893) Replacing Chunk Futures causes several issues
+-   [MC-225077](https://bugs.mojang.com/browse/MC-225077) Vines can spread upward to non-full blocks
+-   [MC-225344](https://bugs.mojang.com/browse/MC-225344) Cave generation seems to be broken at seemingly random chunk borders
+-   [MC-226441](https://bugs.mojang.com/browse/MC-226441) Lit candle texture doesn't change when on cake
+-   [MC-226514](https://bugs.mojang.com/browse/MC-226514) Crash trying to start a world: Error: java.lang.NullPointerException: Cannot read field "u" because "â˜ƒ" is null
+-   [MC-226660](https://bugs.mojang.com/browse/MC-226660) "Double closing program" warnings upon closing the game
+-   [MC-226874](https://bugs.mojang.com/browse/MC-226874) Player's owned player;;_;;head on mobs are flashing
+-   [MC-226956](https://bugs.mojang.com/browse/MC-226956) Gravity blocks do not break when doEntityDrops is set to false
+-   [MC-226970](https://bugs.mojang.com/browse/MC-226970) Stars are occluded by render fog
+-   [MC-227018](https://bugs.mojang.com/browse/MC-227018) Changing or reloading resource packs does not reload core shaders until reloading a second time
 
 ---
 

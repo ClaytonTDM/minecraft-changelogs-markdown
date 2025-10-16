@@ -28,42 +28,6 @@ We are now releasing Release Candidate 2 for Minecraft 1.19.1. If no critical is
 
 ---
 
-# Minecraft 1.19.1 Release Candidate 1
-
-We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.1. We have also now created a help article on chat reporting, available [here](https://help.minecraft.net/hc/articles/7149823936781).
-
-If there are no major issues following this release, no further changes will be done before the full release on Tuesday.
-
-Happy mining!
-
-## Changes in 1.19.1 Release Candidate 1
-
--   Updated the categories for chat reporting
-    -   The "Profanity", "Nudity or pornography" and "Extreme violence or gore" categories have been removed
-    -   The description for the "Drugs and alcohol" category has been updated to "Someone is encouraging others to partake in illegal drug related activities or encouraging underage drinking"
-    -   The description of the "Harassment and bullying" category has been extended with the following: or posting private personal information about you or someone else without consent ("doxing").
-
-## Technical changes in 1.19.1 Release Candidate 1
-
--   The `run_command` click event for text components no longer supports sending chat messages directly
-    -   Only commands are supported, so a command such as `/say` should be used instead
-    -   This means values now always need to be '/'-prefixed
--   Increased the amount of chat context sent with each chat report
-
-## Fixed bugs in 1.19 Release Candidate 1
-
--   [MC-250020](https://bugs.mojang.com/browse/MC-250020) Allay doesn't ignore items when mobGriefing is set to false
--   [MC-252511](https://bugs.mojang.com/browse/MC-252511) Bedrock not generating on the new blending border between old and new blending
--   [MC-252987](https://bugs.mojang.com/browse/MC-252987) Illegal character ';;\;;n' in text component clickEvent
--   [MC-253114](https://bugs.mojang.com/browse/MC-253114) Selection boxes within the "Select Chat Messages to Report" menu don't disappear when deselecting fields after reentering the menu
--   [MC-253188](https://bugs.mojang.com/browse/MC-253188) Selection boxes within the "Select Chat Messages to Report" menu differ in size ever so slightly depending on how they're selected
--   [MC-253225](https://bugs.mojang.com/browse/MC-253225) Selection boxes of fields within player reporting menu lists don't contain white outlines when selected using the TAB key
--   [MC-253227](https://bugs.mojang.com/browse/MC-253227) Players can only be reported using the reporting system if they're present within the world
--   [MC-253336](https://bugs.mojang.com/browse/MC-253336) Using the eye of ender "crashes" game in the seed: -3721742095548798177
--   [MC-253422](https://bugs.mojang.com/browse/MC-253422) The selection of the "Please report breaches of our Community Standards" text within the "Select Report Category" menu is slightly confusing due to the words "Community Standards" being underlined by default
-
----
-
 # Minecraft 1.19.1 Pre-Release 6
 
 We are now releasing pre-release 6 for Minecraft 1.19.1 with some small tweaks to sculk sensors and catalysts as well as bug fixes and improvements to the chat signing system.
@@ -239,6 +203,42 @@ We've added the ability to see the signing status of chat messages – this is s
 
 ---
 
+# Minecraft 1.19.1 Release Candidate 1
+
+We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.1. We have also now created a help article on chat reporting, available [here](https://help.minecraft.net/hc/articles/7149823936781).
+
+If there are no major issues following this release, no further changes will be done before the full release on Tuesday.
+
+Happy mining!
+
+## Changes in 1.19.1 Release Candidate 1
+
+-   Updated the categories for chat reporting
+    -   The "Profanity", "Nudity or pornography" and "Extreme violence or gore" categories have been removed
+    -   The description for the "Drugs and alcohol" category has been updated to "Someone is encouraging others to partake in illegal drug related activities or encouraging underage drinking"
+    -   The description of the "Harassment and bullying" category has been extended with the following: or posting private personal information about you or someone else without consent ("doxing").
+
+## Technical changes in 1.19.1 Release Candidate 1
+
+-   The `run_command` click event for text components no longer supports sending chat messages directly
+    -   Only commands are supported, so a command such as `/say` should be used instead
+    -   This means values now always need to be '/'-prefixed
+-   Increased the amount of chat context sent with each chat report
+
+## Fixed bugs in 1.19 Release Candidate 1
+
+-   [MC-250020](https://bugs.mojang.com/browse/MC-250020) Allay doesn't ignore items when mobGriefing is set to false
+-   [MC-252511](https://bugs.mojang.com/browse/MC-252511) Bedrock not generating on the new blending border between old and new blending
+-   [MC-252987](https://bugs.mojang.com/browse/MC-252987) Illegal character ';;\;;n' in text component clickEvent
+-   [MC-253114](https://bugs.mojang.com/browse/MC-253114) Selection boxes within the "Select Chat Messages to Report" menu don't disappear when deselecting fields after reentering the menu
+-   [MC-253188](https://bugs.mojang.com/browse/MC-253188) Selection boxes within the "Select Chat Messages to Report" menu differ in size ever so slightly depending on how they're selected
+-   [MC-253225](https://bugs.mojang.com/browse/MC-253225) Selection boxes of fields within player reporting menu lists don't contain white outlines when selected using the TAB key
+-   [MC-253227](https://bugs.mojang.com/browse/MC-253227) Players can only be reported using the reporting system if they're present within the world
+-   [MC-253336](https://bugs.mojang.com/browse/MC-253336) Using the eye of ender "crashes" game in the seed: -3721742095548798177
+-   [MC-253422](https://bugs.mojang.com/browse/MC-253422) The selection of the "Please report breaches of our Community Standards" text within the "Select Report Category" menu is slightly confusing due to the words "Community Standards" being underlined by default
+
+---
+
 # Minecraft 1.19.1 Pre-Release 1
 
 The first pre-release for 1.19.1 is now available. This release contains a few bugfixes, an increased cooldown for Allay duplication, and it also contains a new UI if you have been banned for violating the Minecraft [Community Standards](https://www.minecraft.net/community-standards). ​ On the topic of community standards and the recent introduction of the chat reporting feature, we’re working on creating a help article that aims to add some context surrounding the functionality. ​ All of this said, if everything goes as planned, we plan to release the update next Tuesday on June 28th.
@@ -274,6 +274,56 @@ The first pre-release for 1.19.1 is now available. This release contains a few b
 -   [MC-253183](https://bugs.mojang.com/browse/MC-253183) The word "Unrelated" within the "gui.chatSelection.fold" string is incorrectly capitalized
 -   [MC-253185](https://bugs.mojang.com/browse/MC-253185) The ESC key cannot be used to exit the "Sending your report" menu
 -   [MC-253191](https://bugs.mojang.com/browse/MC-253191) Particles produced from allays duplicating cannot be seen by other players
+
+---
+
+# Minecraft Snapshot 22w24a
+
+New snapshot! We're now heading towards 1.19.1, which will add Allay duplication, the ability to report chat, and, of course, fix a few bugs.
+
+On the topic of chat reporting, we want everyone to feel safe and welcome in Minecraft, which is why we have community guidelines in place. If you feel unsafe, uncomfortable, or concerned that someone is breaking our [Community Guidelines](https://www.minecraft.net/community-standards) or the [Xbox Community Standards](https://www.xbox.com/legal/community-standards), you can soon report this in-game. Of course, it will also be possible to report incidents over at the [Report a Concern](https://help.minecraft.net/hc/requests/new?ticket_form_id=4416074743565) page.
+
+We are looking for feedback regarding the Chat Reporting feature. For now, any reports made during the testing period may not be actioned on.
+
+Enjoy!
+
+## New Features in 22w24a
+
+-   Added Allay duplication
+-   Added Player Chat Reporting
+
+### Allay
+
+-   Allays will dance to a Record playing in a Jukebox
+-   If the Allay is handed an Amethyst Shard while dancing it will duplicate
+    -   Duplication has a 2.5 minute cooldown
+
+### Player Chat Reporting
+
+It is now possible to report a player for sending abusive messages in the game chat.
+
+A reporter is required to select the individual chat messages that contain the objectionable content, as well as the category of the report, this is to provide the best context for our moderation team to take action.
+
+Accessed via the social interactions screen (default keybind is P).
+
+-   The social interactions screen is now available via the Pause screen when in a multiplayer game
+-   Multiple chat messages can be selected for reporting
+-   The category of the chat report can be selected from a list of Chat Report Categories
+-   Additional comments can be entered to provide more details and information regarding the report
+
+## Fixed bugs in 22w24a
+
+-   [MC-144043](https://bugs.mojang.com/browse/MC-144043) Trader llamas continue to spit after their target died
+-   [MC-146891](https://bugs.mojang.com/browse/MC-146891) Nitwit villager can have a profession
+-   [MC-177505](https://bugs.mojang.com/browse/MC-177505) Cured Villager can work at wrong workstation
+-   [MC-249523](https://bugs.mojang.com/browse/MC-249523) Sky color is visible for a brief moment after applying Night Vision under Darkness effect
+-   [MC-250261](https://bugs.mojang.com/browse/MC-250261) Frogs can lay spawn on flowing water
+-   [MC-250267](https://bugs.mojang.com/browse/MC-250267) Frogs don't lay their spawn on waterlogged blocks
+-   [MC-252082](https://bugs.mojang.com/browse/MC-252082) Loading server resource packs reloads twice when one is already loaded
+-   [MC-252363](https://bugs.mojang.com/browse/MC-252363) Mobs that naturally spawn in with equipment will play the respective equipping noise
+-   [MC-252439](https://bugs.mojang.com/browse/MC-252439) Cured Villager trades are not refreshing
+-   [MC-252539](https://bugs.mojang.com/browse/MC-252539) Commands sending messages use formatting of regular chat in server logs
+-   [MC-252683](https://bugs.mojang.com/browse/MC-252683) Unexpected exception in the selector loop causing server lag
 
 ---
 
@@ -512,55 +562,6 @@ As always, a big thank you to the community for your feedback, bugs reported, an
 -   [MC-251736](https://bugs.mojang.com/browse/MC-251736) Reflected ghast fireball cannot hit the ghast
 -   [MC-251762](https://bugs.mojang.com/browse/MC-251762) You can run commands with double slash prefix
 -   [MC-251773](https://bugs.mojang.com/browse/MC-251773) The --dev argument for the data generators no longer converts NBT to SNBT properly
-
----
-
-# Minecraft 1.18.2 Release Candidate
-
-We’re now releasing the first (and hopefully only) release candidate for Minecraft 1.18.2. This release candidate fixes two world generation bugs that could cause a server to stop running. If there are no major issues following this release, no further changes will be done before the full release, which is planned for February 28th. ​ Happy mining!
-
-## Fixed Bugs in 1.18.2 Release Candidate 1
-
--   [MC-244682](https://bugs.mojang.com/browse/MC-244682) Some custom dimensions settings can cause the server to stop running, but not crash
--   [MC-248764](https://bugs.mojang.com/browse/MC-248764) Some worldgen datapacks can kill the internal server (possibly related to density functions)
-
----
-
-# Minecraft 1.18.2 Pre-Release 3
-
-The third pre-release for 1.18.2 is now out, fixing more bugs!
-
-Happy Crafting!
-
-## Fixed bugs in 1.18.2 Pre-release 3
-
--   [MC-218739](https://bugs.mojang.com/browse/MC-218739) Glow berries and glow lichen generation does not cause light updates across chunk borders
--   [MC-244772](https://bugs.mojang.com/browse/MC-244772) Can't double click to join a realm
--   [MC-248539](https://bugs.mojang.com/browse/MC-248539) /locate command not working properly in Flat Worlds
--   [MC-248636](https://bugs.mojang.com/browse/MC-248636) The game output and server console are logged and spammed with "Creating a MIN function between two non-overlapping inputs" when joining or creating a world
--   [MC-248637](https://bugs.mojang.com/browse/MC-248637) Crash when opening singleplayer screen due to StackOverflowError in net.minecraft.nbt.CompoundTag$1.skip
--   [MC-248680](https://bugs.mojang.com/browse/MC-248680) The world freezes on superflat when using the locate command to find a pillager outpost
--   [MC-248748](https://bugs.mojang.com/browse/MC-248748) Explorer maps leading to custom structures can cause the server to hang
-
----
-
-# Minecraft 1.18.2 Pre-Release 2
-
-The second pre-release for 1.18.2 is now out! This pre-release adds a spline density function and fixes a few bugs.
-
-Enjoy!
-
-## Technical Changes in 1.18.2 Pre-Release 2
-
--   Added [`spline` density](https://wikipedia.org/wiki/Spline_interpolation) function: general-purpose building block that allows you to express almost any function using a cubic spline
-
-## Fixed bugs in 1.18.2 Pre-Release 2
-
--   [MC-243766](https://bugs.mojang.com/browse/MC-243766) Unable to put focus on "Copyright Mojang AB. Do not distribute" using Tab key
--   [MC-248638](https://bugs.mojang.com/browse/MC-248638) Strongholds can generate in The Void biome
--   [MC-248681](https://bugs.mojang.com/browse/MC-248681) Superflat worlds cannot be created without using presets
--   [MC-248694](https://bugs.mojang.com/browse/MC-248694) An empty generator-settings string crashes the server when starting up
--   [MC-248717](https://bugs.mojang.com/browse/MC-248717) Fortress mobs can spawn outside of fortresses
 
 ---
 

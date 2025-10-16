@@ -483,126 +483,97 @@ We are now releasing Snapshot 23w40a, the first snapshot for 1.20.3! This snapsh
 
 ---
 
-# Minecraft Snapshot 23w35a
+# Minecraft 1.20.2 Release Candidate 2
 
-We are releasing a new snapshot that contains updates to support libraries, and a whole bundle of bug fixes!
-
-## Technical Changes
-
--   The `LWJGL` library has been upgraded to version 3.3.2
--   The default Java version shipped with the game has been upgraded to Microsoft OpenJDK 17.0.8
-
-## Fixed bugs in 23w35a
-
--   [MC-229121](https://bugs.mojang.com/browse/MC-229121) JVM crash in jdk.internal.loader.NativeLibraries.load
--   [MC-242385](https://bugs.mojang.com/browse/MC-242385) Inconsistency on the buffer size calculation in the chunk packet data
--   [MC-256549](https://bugs.mojang.com/browse/MC-256549) Baby camels that aren't moving face in the direction of their adults when pathfinding to players that are tempting them
--   [MC-256737](https://bugs.mojang.com/browse/MC-256737) Sniffers, frogs, goats, and camels prioritize pathfinding to their lover when fed over panicking when being damaged
--   [MC-259475](https://bugs.mojang.com/browse/MC-259475) The rotation of controlling passengers on sitting camels is sometimes restricted while adjusting your rotation slowly
--   [MC-259860](https://bugs.mojang.com/browse/MC-259860) Sitting camels that have passengers continuously look up and down for other players
--   [MC-261951](https://bugs.mojang.com/browse/MC-261951) Dragon/piglin head does not move when placed on a jukebox that is playing a record
--   [MC-264092](https://bugs.mojang.com/browse/MC-264092) Functions execute commands out of order when containing /say
--   [MC-264558](https://bugs.mojang.com/browse/MC-264558) The word "reconfiguring" is spelled as "reconfiging" within the "connect.reconfiging" translation key
--   [MC-264559](https://bugs.mojang.com/browse/MC-264559) Grammar error in "Added pack(s) contain symbolic links"
--   [MC-264561](https://bugs.mojang.com/browse/MC-264561) Some new strings introduced in 23w31a are missing articles
--   [MC-264566](https://bugs.mojang.com/browse/MC-264566) Force loaded chunks reset when changing versions
--   [MC-264619](https://bugs.mojang.com/browse/MC-264619) Strings for returning to menus and loading lists are inconsistently spelled and capitalized
--   [MC-264686](https://bugs.mojang.com/browse/MC-264686) Z-fighting occurs on the backs of bamboo chest rafts
--   [MC-264698](https://bugs.mojang.com/browse/MC-264698) The absorption effect is lost when reloading the world
--   [MC-264750](https://bugs.mojang.com/browse/MC-264750) Effects are lost when updating to 23w32a
--   [MC-264897](https://bugs.mojang.com/browse/MC-264897) Shift-clicking to unequip armor bypasses vibrations in survival
--   [MC-264899](https://bugs.mojang.com/browse/MC-264899) Narrator is not capitalized in the Narrator Hotkey tooltip
--   [MC-264915](https://bugs.mojang.com/browse/MC-264915) Some mobs can still attack you through blocks
--   [MC-264917](https://bugs.mojang.com/browse/MC-264917) Entry list gradients render below content
--   [MC-264920](https://bugs.mojang.com/browse/MC-264920) Some buttons within the "Report Player" menu are improperly capitalized
--   [MC-264947](https://bugs.mojang.com/browse/MC-264947) Torches generated on end fountain don't emit light
-
----
-
-# Minecraft Snapshot 23w33a
-
-We are making some important updates to our Player Reporting Tool in this Snapshot to better protect the online safety of our players.
-
-Playing Minecraft should be an inclusive and safe experience for everyone, which is why alongside in-game chat messages, you will now be able to report player skins and usernames that violate our Community Standards in Java Edition.
-
-Just like with chat reports, nothing is automated. Any reported skin or username will be reviewed manually by a team of trained Minecraft moderators, who will use the submitted evidence to decide whether the skin and/or username is in breach of our Community Standards. Skins that are in violation of these standards will be removed from Minecraft and will no longer be accessible for use by any player. Usernames that are in violation of these standards will need to be changed before that player can play online via a shared server or Realm; though single player mode will still be accessible. To find out more about this and other safety policies, including more detail on the suspension procedure, appeals process, and how we handle malicious or repeat reporting, please visit our dedicated FAQ page.
-
-## New Features
-
-### Player Skin & Name Reporting
-
--   Player Skins and Names can now be reported in the Social Interactions Screen
--   If a skin or name is reported, and found to be violating the [Community Standards](https://www.minecraft.net/community-standards), our team of human moderators can action in a few ways:
-    -   Ban the skin from being used by any player
-    -   Ban the name from being used by any player
-    -   Suspend the player from online play in the case of repeated offences
--   When a skin is banned, players with that skin:
-    -   Will have their skin removed
-    -   Will be notified when they launch the game
-    -   Will be automatically assigned one of the default skins
-    -   Can still play multiplayer and singleplayer
-    -   Can select a new custom skin at any time
--   When a player's name is banned, that player:
-    -   Will need to choose a new name
-    -   Will be notified when they launch the game
-    -   Will not be able to play online until they change their name
-    -   Can still play singleplayer
--   A skin or name that has been banned cannot be used by any player in the future
+A second Release Candidate for 1.20.2 is now available in the Minecraft Launcher. If no further critical issues are found, we still aim to release 1.20.2 later this week.
 
 ## Changes
 
--   Sponges and Wet Sponges now have their own custom sounds
--   The calculations to determine whether a mob can attack a player or other mobs have been changed
--   Added the "Narrator Hotkey" accessibility option
-    -   Allows the narrator to be toggled on and off with `Ctrl+B`
--   Added "I want to report them" Player Reporting category
--   A change has been reverted where armor trim patterns would be masked by the underlying armor texture
+-   Fixed a problem with Villagers and Wandering Traders suffocating when travelling up slopes in Minecarts
 
-### Mob attack reach changes
+---
 
-The calculations to determine whether a mob can attack a player or other mobs have been changed. Previously a mob's horizontal width was used to determine their attack reach and their height had no effect. The area where a mob can attack is now their bounding box extended in horizontal directions.
+# Minecraft 1.20.2 Release Candidate 1
 
-Here are some situations where the new rules will affect the reach of mobs:
+Here is the first (and hopefully last) release candidate for 1.20.2. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
 
--   If a mob is entirely below you, or entirely above you, it will not be able to reach you
--   While riding on a medium-sized mob, like a Horse, you will be protected from small mobs, like Baby Zombies
--   While riding on a tall mob, like a Camel, you will be protected from standard-size mobs, like Zombies
--   Also, Ravagers won't be able to attack you through a few block thick walls anymore
--   However, to escape from an Enderman, you need to be at least 3 blocks above the ground, not 1.5 as before
--   Mobs will be able to attack you with the bottom of their hitbox, assuming your head is in range
--   Builds that trap hostile mobs might need to be adjusted to be safe
+## Changes
 
-This change does not affect the reach of players, and mobs still need to see their target to attack it. We believe this new system will be more intuitive and will result in a more consistent behavior, and we welcome all feedback on this change.
+-   The positions that all entities ride on minecarts have been adjusted to make more sense
+
+## Fixed bugs in 1.20.2 Release Candidate 1
+
+-   [MC-265238](https://bugs.mojang.com/browse/MC-265238) trade;;_;;rebalance loot tables have a wrong type
+-   [MC-265388](https://bugs.mojang.com/browse/MC-265388) Mobs now sit too high in minecarts
+
+---
+
+# Minecraft 1.20.2 Pre-Release 4
+
+Here comes the fourth pre-release for 1.20.2. Much like the previous one, this pre-release contains some bug and crash fixes.
+
+Happy Mining!
 
 ## Technical Changes
 
--   The charts on the debug screen can now be toggled with F3+1 (pie chart), F3+2 (FPS and TPS) and F3+3 (bandwidth and ping) instead of holding Shift, Alt or Ctrl while opening the screen
-
 ### Data Pack Changes
 
--   Added `decal` field to armor trim patterns (default: `false`)
-    -   If `true`, the pattern texture will be masked based on the underlying armor
+-   Added damage type tag `always_kills_armor_stands` for damage types that should always fully kill an Armor Stand
 
-## Fixed bugs in 23w33a
+## Fixed bugs in 1.20.2 Pre-Release 4
 
--   [MC-2310](https://bugs.mojang.com/browse/MC-2310) Wrong attack radius calculation damages/kills entities through blocks and corners
--   [MC-112133](https://bugs.mojang.com/browse/MC-112133) Eating chorus fruit does not reset fall distance
--   [MC-118616](https://bugs.mojang.com/browse/MC-118616) The sounds of magma cubes and slimes aren't controlled by the "Hostile Creatures" sound slider
--   [MC-122645](https://bugs.mojang.com/browse/MC-122645) Narrator hotkey cannot be customized or disabled
--   [MC-125046](https://bugs.mojang.com/browse/MC-125046) "RepairCost" NBT tag is created on any renamed item using anvils which can cause items to not stack properly
--   [MC-181109](https://bugs.mojang.com/browse/MC-181109) Grindstone adds RepairCost: 0
--   [MC-182820](https://bugs.mojang.com/browse/MC-182820) Repeaters and comparators use wood sounds for placing/breaking despite being made mostly of stone
--   [MC-197473](https://bugs.mojang.com/browse/MC-197473) Renamed block entities don't stack properly
--   [MC-200484](https://bugs.mojang.com/browse/MC-200484) Jukeboxes use stone sounds despite being composed predominantly of wood
--   [MC-214126](https://bugs.mojang.com/browse/MC-214126) Bees don't pollinate themselves with spore blossoms or chorus flowers
--   [MC-217628](https://bugs.mojang.com/browse/MC-217628) Levers use wood sounds rather than stone
--   [MC-217629](https://bugs.mojang.com/browse/MC-217629) Tripwire hooks use stone sounds, rather than wood
--   [MC-257909](https://bugs.mojang.com/browse/MC-257909) Zoglins, hoglins, and pandas can still attack players riding camels
--   [MC-264741](https://bugs.mojang.com/browse/MC-264741) Unequip vibration only works in creative mode
--   [MC-264743](https://bugs.mojang.com/browse/MC-264743) The "Debug" line on the debug screen that shows which debug graphs are enabled doesn't mention the ping and network traffic chart
--   [MC-264746](https://bugs.mojang.com/browse/MC-264746) Armor trims no longer render their second layer
--   [MC-264753](https://bugs.mojang.com/browse/MC-264753) Eye armor trim on chainmail helmets now has absolutely no effect
--   [MC-264773](https://bugs.mojang.com/browse/MC-264773) There's a misplaced label in the network traffic graph, overlapping minimum B/s rate text
+-   [MC-265239](https://bugs.mojang.com/browse/MC-265239) Error in logs: java.lang.IllegalStateException: recursive call to sendBlockUpdated
+-   [MC-265289](https://bugs.mojang.com/browse/MC-265289) Error in log: java.lang.IllegalStateException: onTrackingStart called during navigation iteration
+
+---
+
+# Minecraft 1.20.2 Pre-Release 3
+
+We are now releasing the third pre-release for 1.20.2. As we are now on the final stabilisation stretch of 1.20.2, this pre-release contains some bug and crash fixes.
+
+Happy Mining!
+
+## Fixed bugs in 1.20.2 Pre-Release 3
+
+-   [MC-264564](https://bugs.mojang.com/browse/MC-264564) Record attribute is stripped from records with no components
+-   [MC-265296](https://bugs.mojang.com/browse/MC-265296) Player sits lower in minecarts
+-   [MC-265335](https://bugs.mojang.com/browse/MC-265335) Hoglins can't be bred
+
+---
+
+# Minecraft 1.20.2 Pre-Release 2
+
+Another pre-release this week with minor changes and some bug fixes.
+
+## Recipe book search revert
+
+We received a lot of great feedback on the changes to the Recipe Book search in the last pre-release, as well as a number of bugs. As we do not have time to address this feedback so close to release, we have reverted the change for now, but we may look into this again at a later time.
+
+## Technical Changes
+
+-   The resource pack version is now 18 accounting for the new icons in last pre-release
+
+## Fixed bugs in 1.20.2 Pre-release 2
+
+-   [MC-109346](https://bugs.mojang.com/browse/MC-109346) Newly rendered players always look south until they move their head
+-   [MC-206182](https://bugs.mojang.com/browse/MC-206182) Cannot tab out of console text field of command block
+-   [MC-235762](https://bugs.mojang.com/browse/MC-235762) Screenshots wider than 16384 pixels causes a crash / java.lang.OutOfMemoryError: Out of stack space
+-   [MC-249702](https://bugs.mojang.com/browse/MC-249702) Server crash: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonArray.iterator()" because "$$1" is null
+-   [MC-261119](https://bugs.mojang.com/browse/MC-261119) Accessibility button in the Welcome screen needs its own string
+-   [MC-262754](https://bugs.mojang.com/browse/MC-262754) Change in AbstractScrollWidget breaks MultiLineEditBox click-to-move-cursor behaviour
+-   [MC-264759](https://bugs.mojang.com/browse/MC-264759) Narrator narrates incorrect tab action in command block suggestions
+-   [MC-265237](https://bugs.mojang.com/browse/MC-265237) Recipe book search no longer finds anything containing non-English characters
+-   [MC-265241](https://bugs.mojang.com/browse/MC-265241) Recipe book search no longer finds relevant items in languages where compound words are not separated
+-   [MC-265243](https://bugs.mojang.com/browse/MC-265243) Uncraftable variants of a craftable recipe are shown as craftable now
+-   [MC-265244](https://bugs.mojang.com/browse/MC-265244) Macro arguments entered as floats are converted to scientific notation
+-   [MC-265245](https://bugs.mojang.com/browse/MC-265245) Crafting book search doesn't find anything when a space is included in the search
+-   [MC-265253](https://bugs.mojang.com/browse/MC-265253) Fullscreen Resolution value is untranslatable
+-   [MC-265260](https://bugs.mojang.com/browse/MC-265260) Boats and rafts when placed turn south
+-   [MC-265262](https://bugs.mojang.com/browse/MC-265262) Revoked recipes remain in the recipe book until relogging
+-   [MC-265263](https://bugs.mojang.com/browse/MC-265263) Ender Pearl vanishes client side when enderPearlsVanishOnDeath is false
+-   [MC-265264](https://bugs.mojang.com/browse/MC-265264) trade;;_;;rebalance tags are not in the trade;;_;;rebalance pack
+-   [MC-265276](https://bugs.mojang.com/browse/MC-265276) Fire under naturally generated end crystals does not always emit light correctly
+-   [MC-265280](https://bugs.mojang.com/browse/MC-265280) Mobs sometimes become invisible when you join a singleplayer world
 
 ---
 

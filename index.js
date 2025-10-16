@@ -208,8 +208,12 @@ async function main() {
 		console.log("Fetching Minecraft patch notes...");
 		const patchNotes = await fetchJSON(API_ENDPOINT);
 
-		const releases = patchNotes.entries.filter((e) => e.type === "release");
-		const snapshots = patchNotes.entries.filter((e) => e.type === "snapshot");
+		const releases = patchNotes.entries
+			.filter((e) => e.type === "release")
+			.sort((a, b) => new Date(b.date) - new Date(a.date));
+		const snapshots = patchNotes.entries
+			.filter((e) => e.type === "snapshot")
+			.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 		console.log(
 			`Found ${releases.length} releases and ${snapshots.length} snapshots`

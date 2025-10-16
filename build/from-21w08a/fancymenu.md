@@ -458,6 +458,14 @@ Glow squids have been added, but do not yet spawn naturally. You can find spawn 
 
 ---
 
+# Minecraft 1.16.5 Release Candidate 1
+
+We're now releasing 1.16.5 Release Candidate 1, which addresses two critical stability issues. If no further critical issues are found, we plan to release 1.16.5 on Friday. We hope to release another Caves & Cliffs snapshot next week.
+
+Happy mining!
+
+---
+
 # Minecraft Snapshot 20w51a
 
 Ready your screenshot buttons and start rehearsing your best "naaaaww"s. The final snapshot of the year enters Minecraft Java, and what better way to end the year than with something that has been on our bucket list for quite a while: the adorable **axolotl**?

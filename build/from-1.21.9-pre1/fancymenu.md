@@ -126,595 +126,352 @@ The copper age is approaching and it's time for this drop's first pre-release. T
 
 ---
 
-# 1.21.8 Release Candidate 1
+# Minecraft Snapshot 25w37a
 
-Hotfix coming in ho-... very cold? Today we're releasing 1.21.8 Release Candidate 1, addressing various graphical corruption and freeze issues on certain graphics devices.
-
-As always, if you encounter any graphical issues with this Release Candidate, reports on our [Bug Tracker](https://bugs.mojang.com/projects/MC/summary) are very much appreciated!
-
-Happy Crafting!
-
-## Fixed bugs in 1.21.8 Release Candidate 1
-
--   [MC-295947](https://bugs.mojang.com/browse/MC-295947) The game screen freezes after a while on some Intel integrated graphics
--   [MC-296107](https://bugs.mojang.com/browse/MC-296107) Entities and block entities become visually corrupted after a while on some Intel integrated graphics
--   [MC-296908](https://bugs.mojang.com/browse/MC-296908) Text and texture atlases become visually corrupted after a while on some Intel integrated graphics
--   [MC-297784](https://bugs.mojang.com/browse/MC-297784) Entities are shaded incorrectly after a while on Intel graphics of Gen11 architecture
--   [MC-298903](https://bugs.mojang.com/browse/MC-298903) Items in the inventory can turn into a solid color and then disappear and text can render colored while on some Intel integrated graphics
--   [MC-298908](https://bugs.mojang.com/browse/MC-298908) Items in the inventory are lit as if from the opposite direction on some Intel integrated graphics
--   [MC-299144](https://bugs.mojang.com/browse/MC-299144) Crash with AMD graphics card when loading Resource Pack with invalid shader
-
----
-
-# Minecraft 1.21.7 Release Candidate 2
-
-Hey! We had to fix some more bugs today! Here is Release Candidate 2 for Minecraft: Java Edition 1.21.7.
-
-## Technical Changes
-
--   The Data Pack version is now 81
--   The Resource Pack version is now 64
-
-## Fixed bugs in 1.21.7 Release Candidate 2
-
--   [MC-298879](https://bugs.mojang.com/browse/MC-298879) The game crashes upon startup on some AMD graphics
--   [MC-299110](https://bugs.mojang.com/browse/MC-299110) Force upgrading does not write new DataVersion to converted data
--   [MC-299126](https://bugs.mojang.com/browse/MC-299126) The server crashes when certain mobs ride a turtle
--   [MC-299130](https://bugs.mojang.com/browse/MC-299130) Pack formats were not incremented in 1.21.7 rc1 after breaking changes
-
----
-
-# Minecraft 1.21.7 Release Candidate 1
-
-Today we are shipping Release Candidate 1 for 1.21.7, a hotfix release that takes care of some critical issues that managed to sneak their way into the Chase the Skies drop (1.21.6). The hotfix also includes a new music disc and a painting of the good boy Dennis. If no other critical issues are found, this will be the version for 1.21.7 that can be expected to be released soon. Happy mining!
-
-## New Features
-
--   Added a painting of a good boy by artist Sarah Boeving
--   Added music disc "Lava Chicken" by Hyper Potions
-    -   Drops when defeating a Baby Zombie riding a Chicken (Chicken Jockey)
-
-## Fixed bugs in 1.21.7 Release Candidate 1
-
--   [MC-297748](https://bugs.mojang.com/browse/MC-297748) The moon is rendered incorrectly on some Qualcomm graphics
--   [MC-298448](https://bugs.mojang.com/browse/MC-298448) Filled maps are rendered incorrectly on some Qualcomm graphics
--   [MC-298681](https://bugs.mojang.com/browse/MC-298681) Text displays with the "shadow" tag enabled and the "see;;_;;through" tag disabled exhibit z-plane fighting at a close distance
--   [MC-298710](https://bugs.mojang.com/browse/MC-298710) TTF glyphs are incorrectly rendered over some elements
--   [MC-298832](https://bugs.mojang.com/browse/MC-298832) The breaking particles of droppers and dispensers facing up or down appear incorrect on some Qualcomm graphics
--   [MC-298856](https://bugs.mojang.com/browse/MC-298856) Blindness and darkness fog effects no longer work underwater
--   [MC-298898](https://bugs.mojang.com/browse/MC-298898) TextureAtlas leaks textures after resource reload
--   [MC-298919](https://bugs.mojang.com/browse/MC-298919) Sometimes you pass through the happy ghast when you get off while going forward
--   [MC-299017](https://bugs.mojang.com/browse/MC-299017) Text on glowing signs is not visible on some graphics
--   [MC-299071](https://bugs.mojang.com/browse/MC-299071) Memory Leak in ItemStackRenderState leads to OutOfMemoryError
-
----
-
-# Minecraft 1.21.6 Release Candidate 1
-
-As we get ready to Chase the Skies, here comes the first test flight of 1.21.6 - Release Candidate 1!
-
-Happy Ghast(-ing)!
-
-## Fixed bugs in 1.21.6 Release Candidate 1
-
--   [MC-298022](https://bugs.mojang.com/browse/MC-298022) Not signed Books and Quills with an overflowing new line at the bottom do not depict the pages' contents
--   [MC-298633](https://bugs.mojang.com/browse/MC-298633) Happy Ghast gets you stuck in blocks while riding and gets stuck in blocks upon dismount
--   [MC-298658](https://bugs.mojang.com/browse/MC-298658) Locator Bar shows inaccurate positions after respawn
-
----
-
-# Minecraft 1.21.6 Pre-Release 4
-
-We are now releasing Pre-Release 4 for Minecraft 1.21.6, with a few minor bug fixes.
-
-Happy crafting!
-
-## Fixed bugs in 1.21.6 Pre-Release 4
-
--   [MC-279417](https://bugs.mojang.com/browse/MC-279417) Luring mobs onto blocks at Y=-64 will instead make them pathfind to the highest elevation
--   [MC-298446](https://bugs.mojang.com/browse/MC-298446) The "Thunder roars" sound is no longer affected by the master volume
--   [MC-298510](https://bugs.mojang.com/browse/MC-298510) Happy ghasts stay still for a few seconds when you get off them
--   [MC-298653](https://bugs.mojang.com/browse/MC-298653) Master volume slider no longer affects /playsoud sounds with high volume
-
----
-
-# Minecraft 1.21.6 Pre-Release 3
-
-We've got another pre-release coming in hot! This time with a new advancement trigger and sound category but most importantly some much needed bug fixes.
-
-## New Features
-
-### Music and Sound
-
--   Added new sound volume category called "UI" for sounds played by UI elements, like button clicks
-
-## Technical Changes
-
--   The Data Pack version is now 80
-
-## Data Pack Version 80
-
--   Added `player_sheared_equipment` trigger
-
-### New Triggers
-
-Added `minecraft:player_sheared_equipment`
-
--   Can Trigger when a player shears off a shearable equipment from an Entity
--   Conditions:
-    -   `item` - Item that is sheared
-    -   `entity` - The entity that was sheared
-
-### Commands
-
-**Modified `playsound`**
-
--   Added new category `ui`
-    -   Sounds in this category will continue playing when paused, similarly to `music`
-
-## Fixed bugs in 1.21.6 Pre-Release 3
-
--   [MC-296371](https://bugs.mojang.com/browse/MC-296371) The entity shadows of happy ghasts are too small in relation to the size of their models
--   [MC-296374](https://bugs.mojang.com/browse/MC-296374) The entity shadows of ghastlings are too small in relation to the size of their models
--   [MC-296853](https://bugs.mojang.com/browse/MC-296853) The "Shear Brilliance" advancement is incorrectly given by shearing a lead off a wolf
--   [MC-297113](https://bugs.mojang.com/browse/MC-297113) Hotbar shown in loading terrain screen
--   [MC-297497](https://bugs.mojang.com/browse/MC-297497) The “Connection Lost” title isn’t displayed when being kicked from realms due to idle timeout
--   [MC-297972](https://bugs.mojang.com/browse/MC-297972) Dialog body content is misaligned
--   [MC-298353](https://bugs.mojang.com/browse/MC-298353) Ridden entities won't make the lead breaking sound when attached to a fence
--   [MC-298412](https://bugs.mojang.com/browse/MC-298412) Subtitles are no longer shown when the master volume is set to zero
--   [MC-298466](https://bugs.mojang.com/browse/MC-298466) When clicking the "yes" button to confirm command execution in a dialog, if the player is put into another dialog, the click sound from the "yes" button will not be played until it is closed
--   [MC-298492](https://bugs.mojang.com/browse/MC-298492) Disconnecting through dialog in configuration phase causes the client to crash.
--   [MC-298516](https://bugs.mojang.com/browse/MC-298516) While running /dialog clear and /dialog show every tick, pressing the warning button just after joining the world can crash the game
--   [MC-298520](https://bugs.mojang.com/browse/MC-298520) Items in slots now render behind the container title, mismatching 1.21.5 behavior
-
----
-
-# Minecraft 1.21.6 Pre-Release 2
-
-We're kicking the week off with another pre-release, including some music and happy ghast bug fixes. The Chase the Skies drop is getting closer and the pre-release schedule might include more than one pre-release per week.
-
-## Changes
-
-### Music and Sound
-
--   The following sound categories have been renamed:
-    -   Friendly Creatures -> Friendly Mobs
-    -   Hostile Creatures -> Hostile Mobs
-
-## Technical Changes
-
-### Dialogs
-
-**Dialog Description Format**
-
-**Input Control Types**
-
-**`minecraft:text`**
-
--   Output values:
-    
-    -   As template substitution: contents with special characters escaped to fit in a SNBT literal (note: both `'` and `"` are escaped)
--   For `multiline` field:
-    
-    -   If `height` field is omitted, but `max_lines` is present, the height that will be chosen to fit the maximum number of lines can't exceed `512`
-
-## Fixed bugs in 1.21.6 Pre-Release 2
-
--   [MC-217887](https://bugs.mojang.com/browse/MC-217887) Unsigned books written in 1.9-pre1 or earlier don't upgrade properly
--   [MC-297575](https://bugs.mojang.com/browse/MC-297575) Happy Ghast with nbt NoAI set to true can't be controlled by player
--   [MC-297591](https://bugs.mojang.com/browse/MC-297591) Ender pearls can unexpectedly come to a halt
--   [MC-298104](https://bugs.mojang.com/browse/MC-298104) The max;;_;;lines field of multiline text input control is unrestricted, lagging the game
--   [MC-298144](https://bugs.mojang.com/browse/MC-298144) The initial value of minecraft:text input type is limited to 32 characters, regardless of max;;_;;length field
--   [MC-298155](https://bugs.mojang.com/browse/MC-298155) Dialog command;;_;;template using a multiline text input causes player to be kicked out of the server due to illegal characters in chat (which is ;;\;;n)
--   [MC-298209](https://bugs.mojang.com/browse/MC-298209) Player cannot move while touching a happy ghast's body
--   [MC-298301](https://bugs.mojang.com/browse/MC-298301) Blinking the cursor shifts all characters to the right of a multilines text field input in Dialogs
--   [MC-298307](https://bugs.mojang.com/browse/MC-298307) Entering and exiting a pale garden while in Creative mode causes the current music track to remain silent
--   [MC-298358](https://bugs.mojang.com/browse/MC-298358) Riding a mob into powder snow no longer affects the player properly
--   [MC-298361](https://bugs.mojang.com/browse/MC-298361) Happy ghast with player riding, teleports back and forth when exiting nether portal
--   [MC-298368](https://bugs.mojang.com/browse/MC-298368) "music;;_;;notes.png.mcmeta" has an extra index that does not exist, causing a warning
--   [MC-298394](https://bugs.mojang.com/browse/MC-298394) Freezing in Powdered Snow is very inconsistent and jittery
--   [MC-298422](https://bugs.mojang.com/browse/MC-298422) Ghasts and happy ghasts do not take damage from harmful blocks under some circumstances
-
----
-
-# 1.21.6 Pre-Release 1
-
-Hey! This is the first pre-release of 1.21.6. From now on, you will mostly see us fixing bugs and the release schedule might include more than one pre-release per week. We are on the finish line for the second drop of the year!
-
-## Changes
-
--   The Dried Ghast Block now emits a vibration frequency of 11 when its block state changes
--   Shearing Saddles, Horse Armor, and Carpets now emits a vibration frequency of 6, along with the Unequip frequency of 4
--   The Ambient Dried Ghast sounds are now adjusted under the Blocks sound option instead of the Ambient/Environment option
--   A player riding a Happy Ghast can no longer completely fly through a Happy Ghast ridden by another player
-
-## Technical Changes
-
--   The Data Pack version is now 79
--   The Resource Pack version is now 63
-
-## Data Pack Version 79
-
--   Dialogs can now configure if they pause the game and if they close after an action is taken
--   Every dialog can now have inputs and can submit information
-    -   The definition of actions has been changed to accommodate that
-    -   The dedicated input dialog types have been removed, since they are redundant now
-    -   The order of elements is:
-        -   Body
-        -   Inputs
-        -   Actions
--   The `minecraft:custom` click event has been expanded to carry full a NBT tag
--   A new keybind called "Quick Actions" has been added to allow accessing content-configured dialogs
-
-### Quick Actions Keybind
-
--   A new keybind has been addded that allows users to access a set of dialogs
--   Default key: `G`
--   This feature is configured by `minecraft:quick_actions` dialog tag
-    -   If this tag is empty, the keybind does nothing
-    -   If this tag has a single element, the keybind will open this dialog
-    -   If this tag has multiple elements, the keybind will lead to `minecraft:quick_actions` dialog which (by default) lets user select one of the tag elements
-        -   If this dialog is removed, the keybind does nothing
--   This option is intended to be used in custom content and by servers, so this tag is empty by default
-
-### Common Dialog fields
-
-New fields:
-
--   `pause` - if the dialog screen should pause the game in single-player mode, default: `true`
--   `after_action` - an additional operation performed on the dialog after click or submit actions, default: `close`
-    -   `close` - closes the dialog and returns to the previous non-dialog screen (if any)
-    -   `none` - does nothing, i.e. keeps the current dialog screen open
-        -   only available if `pause` is `false` to avoid locking the game in single-player mode
-    -   `wait_for_response` - replace the current dialog with a "Waiting for Response" screen
-        -   this option is intended to prevent users from sending multiple actions on slow connections
-            -   servers are expected to eventually replace this screen with a new dialog
-        -   to avoid accidental locking, a "Back" button will become active after 5 seconds
-            -   clicking this button will continue as if the dialog was closed (i.e. the game returns to the previous non-dialog screen, if any)
-        -   The "Waiting for Response" screen will unpause the game in single-player mode to avoid locking the game
-
-### Dialog Types
-
-**Changed `minecraft:multi_action`, `minecraft:server_links`, `minecraft:dialog_list`**
-
--   Replaced field `on_cancel` with `exit_action`, holding an optional action
-    -   If `exit_action` is present, a button for it will appear in footer, otherwise the footer is not present
-    -   `exit_action` is also used for the Escape action
-
-**Removed `minecraft:simple_input_form`**
-
--   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:notice`
-
-**Removed `minecraft:multi_action_input_form`**
-
--   Since any dialog can now have inputs, this dialog can be replaced by `minecraft:multi_action` (without any specified `exit_action`)
-
-### Input Control Types
-
--   To accomodate the new `minecraft:custom` click event, all inputs will now return either a string or an NBT tag, depending on context
-
-**`minecraft:text`**
-
--   Output values:
-    -   As template substitution: contents without modification
-    -   As tag: a string tag with contents without modification
-
-**`minecraft:boolean`**
-
--   Output values:
-    -   As template substitution: `on_true` when checked, `on_false` when unchecked
-    -   As tag: `1b` when checked, `0b` when unchecked
-
-**`minecraft:number_range`**
-
--   Output values:
-    -   As template substitution: text representation of current value
-        -   Whole numbers will be sent without decimal point
-    -   As tag: a float tag with current value
-
-**Dialog Body Types**
-
-Hover and click events on text components within bodies now work as expected
-
--   Click events are handled by the dialog screen like any other action - that means it will also run the `after_action`
-
-### Actions
-
--   The format of actions has been changed due to the merging of plain and input dialogs
--   After every action the dialog will always evaluate the contents of the `after_action` field (see above)
-
-Fields:
-
--   Kept fields: `label`, `tooltip`, `width`
--   New field: `action` (replaces `on_click` and `on_submit`) - an action to perform when button is clicked, optional object with fields:
-    -   `type` - value from `minecraft:dialog_action_type` registry
-    -   `<type-specific>` - see below, depends on `type`
-
-**Static Dialog Action Types**
-
-All existing `click_event` actions (except for `open_file`) are included as dialog action types.
-
-Uses same format as `click_event` on text components (but with `action` replaced with `type`) For example, when using `show_dialog`, entry for action button will look like:
-
-    {
-        "label": "some label",
-        "action": {
-            "type": "show_dialog",
-            "dialog": "some:id"
-        }
-    }
-    
-
-**`minecraft:dynamic/run_command` Action Type**
-
--   This action will build a `run_command` event using a provided macro template
--   The macro will be expanded with string values from all inputs
-    -   For example, if the macro template is `some_command $(some_input)`, the string value from the input with `key` of `some_input` will be used for the template expansion
-    -   Inputs not used in macro will be ignored, while macro parameters not matching any inputs will be replaced with an empty string
-
-Fields:
-
--   `template` - a string with a macro template to be interpreted as a command
-
-**`minecraft:dynamic/custom` Action Type**
-
--   This method will build a `minecraft:custom` event using all input values
--   All input contents will be sent together inside a compound tag, with tag value of each input put under id from `key` field of that input
--   Additional static fields can be added to payload
-
-Fields:
-
--   `additions` - fields to be added to payload, optional compound tag
--   `id` - namespaced ID
-
-## Resource Pack version 63
-
--   Added `oversized_in_gui` item model field
--   Introduced new player head special model type
-
-### Item Models
-
--   Item model definitions now have a boolean field `oversized_in_gui` which is `false` by default
-    -   If `true`, the item model will be allowed to be bigger than its item slot
-    -   If `false`, the item model will be clipped to the item slot size when being rendered in gui
-    -   This ability of items being rendered outside their slots should not be considered officially supported, it was temporarily restored as an exception since many servers are relying on it
-    -   At some point in the future we hope to replace it with an officially supported way of achieving similar functionality
--   Introduced new item model `minecraft:player_head` to handle player profile texture loading and rendering
--   Removed support for `minecraft:profile` from `minecraft:head`
-
-**`minecraft:player_head` special model type**
-
--   Renders a player head
--   Uses profile from the `minecraft:profile` component to load a texture. Renders a default texture until the profile texture is fully loaded
--   No fields
-
-**`minecraft:head` special model type**
-
--   No longer supports profile from `minecraft:profile` component to load a player texture
--   Renders a default player texture when `kind` is `player` and no texture override is supplied
--   Fields remain unchanged
-
-## Fixed bugs in 1.21.6 Pre-Release 1
-
--   [MC-94800](https://bugs.mojang.com/browse/MC-94800) URL shown in open URL dialog is not shortened
--   [MC-140819](https://bugs.mojang.com/browse/MC-140819) Lectern model extends past inventory slot
--   [MC-200092](https://bugs.mojang.com/browse/MC-200092) /setworldspawn seems to ignore the 'angle' parameter
--   [MC-272825](https://bugs.mojang.com/browse/MC-272825) Custom filled maps from 23w31a and earlier do not upgrade properly in later versions
--   [MC-280276](https://bugs.mojang.com/browse/MC-280276) Some item models can still clip into the block below when hovering on the ground
--   [MC-296420](https://bugs.mojang.com/browse/MC-296420) '/datapack create' can create directories with illegal names
--   [MC-296431](https://bugs.mojang.com/browse/MC-296431) Clipping item sprites to stay in slot makes it impossible to hide the slot for resource packs
--   [MC-296458](https://bugs.mojang.com/browse/MC-296458) Player heads in the inventory don't show the right skin
--   [MC-297275](https://bugs.mojang.com/browse/MC-297275) Players can desync from their mounts when jumping on a happy ghast
--   [MC-297550](https://bugs.mojang.com/browse/MC-297550) Happy ghasts don’t remain stationary correctly when players dismount them while other players are still controlling them
--   [MC-297807](https://bugs.mojang.com/browse/MC-297807) Clicking "Save and Quit to Title" in the dialog warning menu takes you to the server list even if the world is singleplayer or locally-hosted LAN
--   [MC-297817](https://bugs.mojang.com/browse/MC-297817) Newly placed paintings sometimes appear at a different position
--   [MC-297848](https://bugs.mojang.com/browse/MC-297848) The menu background is not shown for a short amount of time when leaving a world from a dialog
--   [MC-297868](https://bugs.mojang.com/browse/MC-297868) Items in the armor.body and saddle slots are not kept when dying while the game rule keepInventory is set to true
--   [MC-297893](https://bugs.mojang.com/browse/MC-297893) prevent;;_;;equipment;;_;;drop enchantment effect does not work with armor.body and saddle slots
--   [MC-297894](https://bugs.mojang.com/browse/MC-297894) /clear command does not clear armor.body and saddle slots
--   [MC-297897](https://bugs.mojang.com/browse/MC-297897) Players can fall through happy ghasts
--   [MC-297899](https://bugs.mojang.com/browse/MC-297899) FPS drops due to clouds
--   [MC-297906](https://bugs.mojang.com/browse/MC-297906) Running a command with a large output whilst on a dedicated server causes a kick and no logged output
--   [MC-297915](https://bugs.mojang.com/browse/MC-297915) The name plates of entities with an empty custom name are now rendered incorrectly
--   [MC-298071](https://bugs.mojang.com/browse/MC-298071) All naturally spawned zombie villagers are professionless since 25w16a
--   [MC-298101](https://bugs.mojang.com/browse/MC-298101) Sniffers now show the digging animation instead of the walking animation
--   [MC-298116](https://bugs.mojang.com/browse/MC-298116) The warning text in the confirm link screen is no longer visible
--   [MC-298117](https://bugs.mojang.com/browse/MC-298117) All buttons at the bottom of the Realms screen are clickable when no realm is selected
--   [MC-298139](https://bugs.mojang.com/browse/MC-298139) Items bigger than the size of a slot incorrectly bleed over onto other items
--   [MC-298146](https://bugs.mojang.com/browse/MC-298146) GUI items disappear at high screen resolutions
-
----
-
-# Minecraft 1.21.5 Release Candidate 2
-
-Second time's the charm! We're shipping 1.21.5 Release Candidate 2, fixing some final issues before releasing the Spring To Life drop tomorrow!
-
-## Fixed bugs in 1.21.5 Release Candidate 2
-
--   [MC-295665](https://bugs.mojang.com/browse/MC-295665) There is no blending in new chunks
--   [MC-295688](https://bugs.mojang.com/browse/MC-295688) Piston movement is not applying block effects to entities
-
----
-
-# 1.21.5 Release Candidate 1
-
-With Minecraft Live just around the corner, we are getting closer to the release of the first drop of the year. Today we're shipping the first 1.21.5 Release Candidate with a few bug fixes, which means if no new critical issues surface, this is the version we are planning to release as Minecraft: Java Edition 1.21.5.
-
-## Fixed bugs in 1.21.5 Release Candidate 1
-
--   [MC-295383](https://bugs.mojang.com/browse/MC-295383) "Received missed or reordered chat message from server" string doesn't make logical sense
--   [MC-295412](https://bugs.mojang.com/browse/MC-295412) Lighting of magma block is incorrect
--   [MC-295416](https://bugs.mojang.com/browse/MC-295416) Beacon receives wrong shading from nearby blocks
-
----
-
-# Minecraft 1.21.5 Pre Release 3
-
-It's Tuesday, and today we're bringing you a third pre-release for Minecraft 1.21.5, with some fixes to recently introduced issues.
-
-## Fixed bugs in 1.21.5 Pre-Release 3
-
--   [MC-295387](https://bugs.mojang.com/browse/MC-295387) fireball and small;;_;;fireball can no longer have their Owner, HasBeenShot, or LeftOwner fields modified
--   [MC-297384](https://bugs.mojang.com/browse/MC-297384) The second horn in the cold cow texture is unused by the model
--   [MC-299223](https://bugs.mojang.com/browse/MC-299223) F3 debug crosshair lost its outline
--   [MC-299543](https://bugs.mojang.com/browse/MC-299543) Experience orbs follow players in Spectator mode
-
----
-
-# Minecraft 1.21.5 Pre Release 2
-
-We're shipping some crash fixes in today's pre-release.
-
-## Technical Changes
-
--   The Data Pack version is now 71 since this was missed in Pre-Release 1
-
-## Fixed bugs in 1.21.5 Pre-Release 2
-
--   [MC-280482](https://bugs.mojang.com/browse/MC-280482) Main menu is totally broken when using Mesa 25.0
--   [MC-296644](https://bugs.mojang.com/browse/MC-296644) Game crashes while rendering section / java.lang.NullPointerException: Cannot read field "b" because "$$3" is null
--   Additional crash fixes
-
----
-
-# Minecraft 1.21.5 Pre-Release 1
-
-Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you will mostly see bug fixes and technical tweaks until the start of the next snapshot cycle. As we enter the pre-release phase we will be releasing more frequently than our regular cadence on Wednesdays, so keep an eye out for the next pre-release!
-
-## Changes
-
--   Added Spawn Eggs textures for programmer art texture pack
-
-## Technical Changes
-
--   The Resource Pack version is now 55
--   Arguments in commands that accept inline values like loot tables, predicates, modifiers, data components, formatted text (`/loot`, `/give`, `/tellraw`, `/execute if predicate`, data components in `/execute if items`, etc.) have been reverted to accept numbers in place of booleans
-
-> **Developer's Note**: The original change happened because we moved away from using NBT as an intermediate format for parsing those values, which meant that booleans were separated from numbers (similar to handling in JSON). We've decided to temporarily revert that, since some functionality can't be achieved yet without using storage and macro functions. However, once that missing functionality is added (and data can be transferred without being converted to and from text), legacy boolean handling will be removed once again.
-
-### Network Protocol
-
--   The clientbound `player_chat` packet now contains an index increasing for every message sent to the client
-    -   The index starts at 0 when logging in (or is reset by configuration phase and the `login` packet)
-    -   For every message, the server should increment this value by 1
-    -   If this value updates in an unexpected way, the client will disconnect
-    -   As the protocol requires that every chat packet reaches the client in produced order, the goal is to enable faster detection of missed/reordered chat messages for custom server developers
--   The serverbound `chat` and `chat_command_signed` packets now contain a checksum byte along with the 'last seen' update
-    -   This is a simple hash of the 'last seen' signatures which should be reconstructed by the server, allowing quicker detection of desynchronized state
-    -   This can be passed as `0` to disable the check, for compatibility with protocol translation
-
-## Resource Pack Version 55
-
--   Tweaked Leaf Litter block models
-
-## Fixed bugs in 1.21.5 Pre-Release 1
-
--   [MC-170134](https://bugs.mojang.com/browse/MC-170134) Minecraft uses several times more VRAM than needed after exploring terrain for a while
--   [MC-279350](https://bugs.mojang.com/browse/MC-279350) Leaf litter multipart model system is unoptimized, causing render lag
--   [MC-280141](https://bugs.mojang.com/browse/MC-280141) Baby farm animals from spawn eggs with a variant differing from the parent flash the wrong variant initially
--   [MC-280241](https://bugs.mojang.com/browse/MC-280241) Cold Cows have improperly mirrored and incorrectly aligned ear textures
--   [MC-280249](https://bugs.mojang.com/browse/MC-280249) Spawn eggs don't use their old textures with the Programmer Art resource pack enabled
--   [MC-280278](https://bugs.mojang.com/browse/MC-280278) Sheep wool uses 1.14 texture with Programmer Art resource pack enabled
--   [MC-280326](https://bugs.mojang.com/browse/MC-280326) When teleporting across dimensions an error is often thrown
--   [MC-280361](https://bugs.mojang.com/browse/MC-280361) When a fallen tree replaces the bottom half of tall vegetation, the top part of the vegetation still generates
--   [MC-280474](https://bugs.mojang.com/browse/MC-280474) TNT minecarts explode regardless of tntExplodes gamerule
--   [MC-280477](https://bugs.mojang.com/browse/MC-280477) TNT still explodes when summoned or dispensed while tntExplodes gamerule is false
--   [MC-280479](https://bugs.mojang.com/browse/MC-280479) TNT is completely deleted when attempting to ignite it using redstone pulses when the “tntExplodes” gamerule is disabled
--   [MC-280480](https://bugs.mojang.com/browse/MC-280480) No flint and steel clicking sound when attempting to ignite TNT with a flint and steel when the "tntExplodes" gamerule is disabled
--   [MC-280493](https://bugs.mojang.com/browse/MC-280493) If the tntExplodes game rule is changed to false while primed TNT already exists in the world, the primed TNT explodes as normal
--   [MC-280501](https://bugs.mojang.com/browse/MC-280501) The "Fire extinguishes" sound plays every game tick while on fire in rain
--   [MC-280520](https://bugs.mojang.com/browse/MC-280520) ItemDropChance on an item frame is not serialized when there is no item anymore, leading to inconsistencies
-
----
-
-# Minecraft 1.21.4 Release Candidate 3
-
-What's better than shipping on a Friday? How about shipping twice on a Friday?!
-
-Here's Release Candidate 3 for Minecraft 1.21.4, fixing some critical issues, including several crashes.
-
-## Fixed bugs in 1.21.4 Release Candidate 3
-
--   [MC-276962](https://bugs.mojang.com/browse/MC-276962) JVM crash occurs when minimizing maximized window
--   [MC-277889](https://bugs.mojang.com/browse/MC-277889) Villagers' iron golem detection range is increased for villagers upgraded from 1.21.1 or earlier
-
----
-
-# 1.21.4 Release Candidate 2
-
-Today we are releasing 1.21.4 Release Candidate 2 to activate Blending around the Pale Garden Biome.
-
-If no further critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.4.
-
-Happy Mining!
-
-## Fixed bugs in 1.21.4 Release Candidate 2
-
--   [MC-278573](https://bugs.mojang.com/browse/MC-278573) Updating can cause straight biome borders with pale garden
-
----
-
-# Minecraft 1.21.4 Release Candidate 1
-
-After yesterday's [announcement](https://www.minecraft.net/en-us/article/the-garden-awakens-drop-date) that the The Garden Awakens drop comes out on December 3rd, today we're releasing the first release candidate!
-
-If no new critical issues surface, this is the version we are planning to ship as Minecraft: Java Edition 1.21.4.
-
-Happy Mining!
-
-## Changes
-
--   Added language support for Popoloca
-
-## Fixed bugs in 1.21.4 Release Candidate 1
-
--   [MC-278494](https://bugs.mojang.com/browse/MC-278494) Resin Bricks appears twice in "mineable/pickaxe" block tag
--   [MC-278548](https://bugs.mojang.com/browse/MC-278548) Spyglass is held incorrectly when used from the off hand
-
----
-
-# 1.21.4 Pre-Release 3
-
-We are now releasing a third Pre-Release for Minecraft 1.21.4 to fix a crash and a few bugs. Watch your step before jumping!
-
-## Fixed bugs in 1.21.4 Pre-Release 3
-
--   [MC-277977](https://bugs.mojang.com/browse/MC-277977) Teleporting large distances whilst gliding prevents the world from loading and player model glitchiness
--   [MC-278444](https://bugs.mojang.com/browse/MC-278444) Waterlogged resin clumps do not drop when their supporting block is broken/moved
--   [MC-278518](https://bugs.mojang.com/browse/MC-278518) Player takes damage from jumping down from one block
-
----
-
-# 1.21.4 Pre-Release 2
-
-We are starting off this week with the second 1.21.4 Pre-Release, including even more bug fixes!
+A new week, and a new snapshot. This one includes another big batch of bug fixes, copper golem polishing and our beloved friend can now open doors.
 
 Happy mining!
 
+## Changes
+
+-   OpenGL 3.3 is now required to play the game, up from 3.2. This does not change our posted Minimum Requirements
+
+> **Developer’s Note:** _We do not expect the update to OpenGL version to affect many people, if any at all. Our posted Minimum Requirements has been OpenGL 4.0 since 2017, and OpenGL 3.3 turned 15 years old recently._
+
+### Minor Tweaks to Blocks, Items and Entities
+
+-   Fixed a bug where breaking a Shelf while another player is interacting with it could lead to visual bugs in the player inventory
+-   Copper Golems hitbox has been tweaked
+    -   The hitbox is now 0.49 blocks in width to be able to pathfind through narrow spaces
+-   Copper Golems can now open doors
+-   Test Instance Blocks now preserve error markers between world reloads
+-   Ambient lighting on entities has been adjusted to be more visually in line with blocks and other parts of the game
+    -   The underside of flat surfaces will now be lit from that direction, instead of the opposite direction
+    -   This mainly affects models containing cubes that are either flat or "hollow" such as:
+        -   Worn armor
+        -   Worn Elytra
+        -   The outside layers on player skins
+        -   The ribcages of Skeletons or Skeleton Horses
+        -   The feet of Chickens or Frogs
+        -   The wings of Phantoms or the Ender Dragon
+        -   The fins on fish
+        -   And more!
+
+### Game Mode Switching
+
+-   Switching from Spectator Mode to Creative Mode no longer causes the player to stop flying
+    -   Instead, flight now only gets disabled when switching game modes if the player is near the ground
+        -   A player is considered to be near the ground if there is a collidable surface (i.e. blocks, Happy Ghasts, boats...) within 1 block below them
+    -   Flight will not get disabled if the player was inside a block or collidable entity
+        -   This is to prevent players from suddenly falling through the ground
+
+> **Developer's Note**: _This change is a partial revert of a bugfix from a previous snapshot. Even though the old behavior prior to the fix was unintended, the approach we took to fixing flight didn't quite **land** the way we wanted it to. In response to community feedback, we're trying this new approach as a less disruptive alternative._
+
+### Minecraft Server Management Protocol
+
+-   Clients must authenticate to access the API
+    -   Clients should supply an `Authorization` bearer token header with a server specific secret
+    -   The secret is configured in the server properties file
+        -   `management-server-secret=`
+        -   The secret should be exactly 40 alphanumeric characters (A-Z, a-z, 0-9)
+        -   The secret will be automatically generated if the server property is empty
+        -   Unauthorized requests are rejected with 401 Unauthorized
+-   TLS is enabled by default
+    -   Can be disabled in the server properties file
+        -   `management-server-tls-enabled=false`
+    -   Requires a keystore file to be set in the server properties file
+        -   `management-server-tls-keystore=path/to/keystore.p12`
+    -   The keystore file must be in PKCS12 format
+    -   Keystore password can be set in the following ways, in order of priority
+        -   Environment variable: `MINECRAFT_MANAGEMENT_TLS_KEYSTORE_PASSWORD`
+        -   JVM argument: `-Dmanagement.tls.keystore.password=`
+        -   Server property: `management-server-tls-keystore-password=`
+
+### Server Properties
+
+-   Default value of `management-server-port` was changed from `25585` to `0`, assigning an available port each time management server is started
+-   Added server property `management-server-tls-enabled` controlling whether the Minecraft Server Management Protocol uses TLS or not
+    -   Defaults to `true`
+-   Added server property `management-server-tls-keystore` controlling the path to the keystore file used for TLS
+    -   Defaults to an empty string
+    -   A dedicated server won't start when TLS is enabled and no keystore is provided
+-   Added server property `management-server-tls-keystore-password` controlling the password to the keystore file used for TLS
+    -   Defaults to an empty string
+
+### Game Rules
+
+-   Added `spawnerBlocksEnabled` game rule controlling if Spawner Blocks should be enabled or not
+    -   Defaults to `true`
+
+### Mob Spawning
+
+-   Logic for choosing type of equipment for mobs spawning with equipment has been tweaked to add Copper as a possibility
+    -   The initial roll to choose a type now chooses between Leather, Copper and Gold
+    -   The chance to increase an armor tier has increased from 9.5% to 10.87%
+
+### Sounds
+
+-   Some sound sliders in the Music & Sound Options now play a preview sound when adjusting the setting outside a world
+
+### UI
+
+-   The Resource Pack and Data Pack selection screens now have a search box
+
 ## Technical Changes
 
--   The Data Pack version is now 61
+-   The Data Pack version is now 87.0
+-   The Resource Pack version is now 69.0
+-   Some previously hidden debug features have been exposed to players
 
-## Data Pack Version 61
+### Debug features
 
-### Furnace, Smoker and Blast Furnace Data
+-   Some debug features that were previously removed during compilation are now preserved and can be used by players
+-   Individual values can be enabled with JVM properties:
+    -   First, a global debug flag must be enabled with `-DMC_DEBUG_ENABLED` or `-DMC_DEBUG_ENABLED=true`
+    -   Then, a specific feature can be enabled, for example `-DMC_DEBUG_BRAIN` or `-DMC_DEBUG_BRAIN=true`
+    -   To get the list of all available debug properties, add `-DMC_DEBUG_PRINT_PROPERTIES`
+-   Warning: this is debug code. Handle with extreme care!
+    -   This is an advanced feature, meant to help modders - it should not be used for normal play
+    -   Features not guaranteed to work as intended
+    -   It might crash your game or corrupt your worlds
+    -   Individual options might be added, changed or removed without a notice
 
--   Renamed `CookTime` to `cooking_time_spent`
--   Renamed `CookTimeTotal` to `cooking_total_time`
--   Renamed `BurnTime` to `lit_time_remaining`
--   Added field `lit_total_time` representing the total time the furnace should be lit
+## Data Pack Version 87.0
 
-## Fixed bugs in 1.21.4 Pre-Release 2
+-   Changed name of game rule `enableCommandBlocks` to `commandBlocksEnabled`
 
--   [MC-10025](https://bugs.mojang.com/browse/MC-10025) Burn time indicator of a furnace not working correctly after reloading the world
--   [MC-197857](https://bugs.mojang.com/browse/MC-197857) Villagers trying to claim claimed beds
--   [MC-275952](https://bugs.mojang.com/browse/MC-275952) Riding a minecart above the water with Frost Walker boots on will also give the Frost Walker effect
--   [MC-277169](https://bugs.mojang.com/browse/MC-277169) Creaking moves while a player is looking at it while moving a certain way and looking through pale moss
--   [MC-278256](https://bugs.mojang.com/browse/MC-278256) Horses jumping multiple times in a row take fall damage
--   [MC-278282](https://bugs.mojang.com/browse/MC-278282) "Tried to load a DUMMY block entity"/"Tried to load a block entity" errors at specific coordinates
--   [MC-278370](https://bugs.mojang.com/browse/MC-278370) Winter drop feature flag is not added to the removed features list
--   [MC-278430](https://bugs.mojang.com/browse/MC-278430) Trim materials item tag is not deterministic in data generation
--   [MC-278497](https://bugs.mojang.com/browse/MC-278497) Using items while sneaking slows down the player way less than in previous versions
+## Resource Pack Version 69.0
+
+### Textures
+
+-   Moved the result slot of `gui/container/villager.png` up by one pixel
+
+### Shaders & Post-process Effects
+
+**Shaders**
+
+-   A new `PER_FACE_LIGHTING` flag has been added to the following shaders:
+    -   `core/entity.vsh`
+    -   `core/entity.fsh`
+-   When set, cardinal lighting will be computed separately for front- and back-faces
+-   As we now require OpenGL 3.3, we have bumped the version of all shaders from `150` to `330`
+
+## Fixed bugs in 25w37a
+
+-   [MC-220913](https://bugs.mojang.com/browse/MC-220913) Parity issue: Adjusting slider in the sound settings when not being in a world does not play a sound of that category
+-   [MC-254052](https://bugs.mojang.com/browse/MC-254052) /locate doesn't work outside build limit
+-   [MC-295841](https://bugs.mojang.com/browse/MC-295841) Interactive collision check path is broken
+-   [MC-300076](https://bugs.mojang.com/browse/MC-300076) Copper golems remain completely stationary while searching chests, causing them to float and making them unable to receive knockback or be pushed
+-   [MC-300077](https://bugs.mojang.com/browse/MC-300077) Copper golems can interact with chests diagonally through solid blocks
+-   [MC-300299](https://bugs.mojang.com/browse/MC-300299) Copper Golems can open chests that are blocked
+-   [MC-300723](https://bugs.mojang.com/browse/MC-300723) Second armor layer is still not rendering properly on all pieces
+-   [MC-301294](https://bugs.mojang.com/browse/MC-301294) Higher tiers of mob armor are unreasonably less common than they were before 25w31a
+-   [MC-301494](https://bugs.mojang.com/browse/MC-301494) Falling particles no longer appear from floating sand or gravel
+-   [MC-301510](https://bugs.mojang.com/browse/MC-301510) GUI sprites nine slice performance regression
+-   [MC-301531](https://bugs.mojang.com/browse/MC-301531) Server Management Protocol returns wrong response for invalid method IDs
+-   [MC-301547](https://bugs.mojang.com/browse/MC-301547) Switching from Spectator mode to Creative mode now makes you fall out of the sky
+-   [MC-301554](https://bugs.mojang.com/browse/MC-301554) Management protocol doesn't support batched requests
+-   [MC-301558](https://bugs.mojang.com/browse/MC-301558) Copper golems can't pathfind through thin blocks
+-   [MC-301563](https://bugs.mojang.com/browse/MC-301563) When you have the darkness potion effect, the chat, letters and words in the pause menu, items, F3 will darken
+-   [MC-301564](https://bugs.mojang.com/browse/MC-301564) Management protocol doesn't support string-based request IDs
+-   [MC-301574](https://bugs.mojang.com/browse/MC-301574) The spawnMonsters game rule does not take effect when switched
+-   [MC-301593](https://bugs.mojang.com/browse/MC-301593) Monsters can spawn from spawners with the "spawnMonsters" game rule set to false
+-   [MC-301599](https://bugs.mojang.com/browse/MC-301599) Action key getting stuck on when entering an interface so you are unable to exit without it reopening instantly
+-   [MC-301620](https://bugs.mojang.com/browse/MC-301620) Banner animation is not independent when two banners are rendered
+-   [MC-301661](https://bugs.mojang.com/browse/MC-301661) Server Management Protocol prints some incorrectly formatted messages in the console
+-   [MC-301711](https://bugs.mojang.com/browse/MC-301711) The name of the "enableCommandBlocks" game rule is inconsistent with Bedrock Edition
+-   [MC-301748](https://bugs.mojang.com/browse/MC-301748) Striking a Lightning Rod with non-default oxidation level with Lightning keeps nearby redstone components powered
+-   [MC-301751](https://bugs.mojang.com/browse/MC-301751) The client crashes when in the vicinity of a mannequin spawner
+-   [MC-301752](https://bugs.mojang.com/browse/MC-301752) Mannequins with profile.model set to "wide" render as a Steve skin
+-   [MC-301754](https://bugs.mojang.com/browse/MC-301754) The hand animation plays when right-clicking shelves with nothing in your hand
+-   [MC-301758](https://bugs.mojang.com/browse/MC-301758) Shield model clips through shelves
+-   [MC-301759](https://bugs.mojang.com/browse/MC-301759) Elements within the realms “Worlds” tab are not selected in order when using the TAB key
+-   [MC-301766](https://bugs.mojang.com/browse/MC-301766) Heads and skulls appear too high when placed on shelf
+-   [MC-301768](https://bugs.mojang.com/browse/MC-301768) Structure blocks frame is not displayed when in spectator mode
+-   [MC-301785](https://bugs.mojang.com/browse/MC-301785) Squid ink particles are yellow
+-   [MC-301811](https://bugs.mojang.com/browse/MC-301811) Loot from suspicious blocks does not render while brushing
+-   [MC-301833](https://bugs.mojang.com/browse/MC-301833) Text of text;;_;;display entities is darker when "see;;_;;through" property is set to true
+-   [MC-301869](https://bugs.mojang.com/browse/MC-301869) The specification for the minecraft:ip;;_;;bans server management method says it returns an array of players even though it returns an array of ip;;_;;ban objects
+-   [MC-301870](https://bugs.mojang.com/browse/MC-301870) Command feedback for successful /ban and /ban-ip commands with no specified reason can't be sent to the client
+-   [MC-301889](https://bugs.mojang.com/browse/MC-301889) Documented return type does not match for clear methods in server managment protocol
+-   [MC-301891](https://bugs.mojang.com/browse/MC-301891) Server management method minecraft:bans/clear clears allowlist, not bans
+-   [MC-301899](https://bugs.mojang.com/browse/MC-301899) The output slot in the trading GUI is misaligned with other slots
+-   [MC-301903](https://bugs.mojang.com/browse/MC-301903) Dropped chests, including variants, are no longer translated upward
+-   [MC-301935](https://bugs.mojang.com/browse/MC-301935) Chest placed on bottom of shelf despite the rest of the items arent
+-   [MC-301952](https://bugs.mojang.com/browse/MC-301952) Conduit visual bug
+
+---
+
+# Minecraft Snapshot 25w36b
+
+Here is Snapshot 25w36b to fix some common crashes.
+
+## Fixed bugs in 25w36b
+
+-   [MC-301745](https://bugs.mojang.com/browse/MC-301745) Placing an ender chest in the world crashes the game
+-   [MC-301749](https://bugs.mojang.com/browse/MC-301749) Multiplayer Crash.
+
+---
+
+# Minecraft Snapshot 25w36a
+
+Snapshot 25w36a is out and it includes mannequins, a new technical entity that is spawned with commands and can be used as an NPC. Conflicting key binds will now function together allowing you to bind a key to multiple actions. And as always, this snapshot also includes technical tweaks and bug fixes.
+
+> > **Developer's Note**: _This snapshot brings a large change to how we collect and draw block entities and particles. We don't anticipate any change of behaviors so please keep an eye out and report anything suspicious as a bug, thank you!_
+
+## New Features
+
+-   World Borders can now be set per dimension
+
+### End Light Flashes
+
+-   While the Ender Dragon fog effect is active the flash source in the sky is not visible and the brightness of the light affecting the world is reduced
+
+### Accessibility
+
+-   Multiple key binds that have the same key assigned to them can now work together, while before only one would work
+    -   For example, you can now bind `D` to `Jump` and `Strafe Left` to jump and strafe left at the same time
+    -   The red warning for assigning the same key to multiple key binds is changed to yellow
+-   The spectator hotbar menu key can now be rebound
+    -   It is part of a new `Spectator` category in the Key Binds screen, alongside the pre-existing `Highlight Players` key bind
+
+## Changes
+
+-   Formatting codes are now stripped from Code of Conduct files
+
+### World Border
+
+-   The World Border is now dimension-specific
+    -   This means that each dimension can have its own World Border size, position, etc.
+
+### Minor Tweaks to Blocks, Items and Entities
+
+-   Copper Torch and Copper Lantern colors are adjusted to make them more discernible to color blind players
+
+### UI
+
+-   Double-clicking a word in edit box now selects it
+
+### Block States
+
+-   Powered Shelves can now only connect to other Powered Shelves facing the exact same direction
+
+### Performance Improvements
+
+-   Particles outside of players view are not rendered anymore, which provides a performance improvement in some cases
+
+## Technical Changes
+
+-   The Data Pack version is now 86.0
+
+## Data Pack Version 86.0
+
+-   Added Mannequin entities
+-   The World Border is now dimension-specific
+
+### Mannequins
+
+Added a new type of technical entity called `minecraft:mannequin` which can only be spawned with summon commands.
+
+-   A Mannequin is a Player Avatar without a connected Player
+-   Mannequins always show an "NPC" text where a Player's `below_score` score would show
+-   Mannequins function as Living Entities - they can hold and wear equipment, have attributes & effects, take damage, etc
+
+Data Fields:
+
+-   `profile` - Which profile to show on the entity. This is either a Player profile (same format as a `minecraft:profile` component) or a Mannequin profile with the following fields:
+    -   `texture` - Namespaced ID of the skin texture to use
+        -   The skin is specified relative to the `textures` folder and with a `.png` suffix
+        -   e.g. `entity/player/wide/steve` will use the default wide Steve skin
+    -   `cape` - Optional namespaced ID of the cape texture to use
+        -   When specified, uses the same format as the `texture` field
+        -   Omitting this field means the Mannequin has no cape
+    -   `elytra` - Optional namespaced ID of the elytra texture to use
+        -   When specified, uses the same format as the `texture` field
+        -   Omitting this field means the Mannequin uses the cape texture, or if that is also omitted, the default Elytra texture when wearing Elytra
+    -   `model` - Optional model type, one of `wide` and `slim`
+        -   If omitted, `wide` is used
+-   `hidden_layers` - List of outer skin layers to hide
+    -   Valid entries: `cape`, `jacket`, `left_sleeve`, `right_sleeve`, `left_pants_leg`, `right_pants_leg`, `hat`
+-   `main_hand` - Which hand is the main hand of the Mannequn - one of `left` and `right`
+
+### Particles
+
+-   `dragon_breath` now optionally takes a `power` parameter (float, default `1.0`), which is multiplied onto its initial velocity, after all randomness
+-   `instant_effect` and `effect` now optionally take `power` (float, default `1.0`) and `color` (rgb, default `0xFFFFFF`) parameters
+-   `flash` now requires a `color` parameter (argb)
+
+## Resource Pack Version 68.0
+
+**Shaders**
+
+-   The following unused shaders have been removed:
+    -   `core/position_color_lightmap.vsh`
+    -   `core/position_color_lightmap.fsh`
+    -   `core/position_color_tex_lightmap.vsh`
+    -   `core/position_color_tex_lightmap.fsh`
+
+## Fixed bugs in 25w36a
+
+-   [MC-223142](https://bugs.mojang.com/browse/MC-223142) Player can move while spectating a marker
+-   [MC-225088](https://bugs.mojang.com/browse/MC-225088) Overworld surface is darker than before on low brightness
+-   [MC-234737](https://bugs.mojang.com/browse/MC-234737) Typo in exception message: "EmtyPoolElement"
+-   [MC-236508](https://bugs.mojang.com/browse/MC-236508) The title within the "Add Server" menu is displayed as "Edit Server Info"
+-   [MC-237590](https://bugs.mojang.com/browse/MC-237590) The word "chunks" is improperly capitalized within the render and simulation distance sliders
+-   [MC-238273](https://bugs.mojang.com/browse/MC-238273) "Locked by another running instance of Minecraft" lacks punctuation
+-   [MC-249205](https://bugs.mojang.com/browse/MC-249205) "minecraft.used:minecraft.potion" increases by a value of two when using water bottles to create mud in creative mode
+-   [MC-250062](https://bugs.mojang.com/browse/MC-250062) Several strings throughout the game contain comma splices
+-   [MC-250193](https://bugs.mojang.com/browse/MC-250193) Server log does not use the string representation of a player's GameProfile on a disconnect during encryption
+-   [MC-254052](https://bugs.mojang.com/browse/MC-254052) /locate doesn't work outside build limit
+-   [MC-254668](https://bugs.mojang.com/browse/MC-254668) Pressing Escape on the death screen's title screen warning respawns the player
+-   [MC-257792](https://bugs.mojang.com/browse/MC-257792) Output slot for trading menu is off-center
+-   [MC-258191](https://bugs.mojang.com/browse/MC-258191) Root system feature allows hanging root vertical span of 0, causing error
+-   [MC-259347](https://bugs.mojang.com/browse/MC-259347) Height limit warning message is shown when right-clicking the top of a block at the build height limit with a bucket
+-   [MC-262370](https://bugs.mojang.com/browse/MC-262370) Some multiplayer strings are untranslatable
+-   [MC-264962](https://bugs.mojang.com/browse/MC-264962) Strings that contain two inputs for a given action have inconsistent spacing and apostrophes
+-   [MC-265807](https://bugs.mojang.com/browse/MC-265807) Mobs don't drown if their Air NBT is less than -19
+-   [MC-277975](https://bugs.mojang.com/browse/MC-277975) The first line of the command execution warning in an item's tooltip is missing punctuation
+-   [MC-278435](https://bugs.mojang.com/browse/MC-278435) Mushroom Fields biome doesn't generate pumpkin patches despite being specified in vanilla datapack
+-   [MC-279123](https://bugs.mojang.com/browse/MC-279123) Some strings that reference Minecraft Realms use inconsistent or missing verb forms
+-   [MC-279153](https://bugs.mojang.com/browse/MC-279153) Some strings that mention the base values of attributes are missing articles
+-   [MC-279173](https://bugs.mojang.com/browse/MC-279173) The "chat.disabled.invalid;;_;;command;;_;;signature" string is missing an article before the word "Command"
+-   [MC-279174](https://bugs.mojang.com/browse/MC-279174) The "gamerule.spawnChunkRadius.description" string is missing an article before the word "Amount"
+-   [MC-279175](https://bugs.mojang.com/browse/MC-279175) Some multiplayer disconnection strings are missing articles and demonstratives
+-   [MC-279176](https://bugs.mojang.com/browse/MC-279176) The "gamerule.commandModificationBlockLimit.description" string is missing an article before the word "Number"
+-   [MC-279212](https://bugs.mojang.com/browse/MC-279212) Some narration strings are missing articles and possessive determiners
+-   [MC-295829](https://bugs.mojang.com/browse/MC-295829) Test instance block GUI uses "Batch" instead of "Environment"
+-   [MC-298605](https://bugs.mojang.com/browse/MC-298605) When creating a Water World superflat world, the player spawns at the bottom of the sea
+-   [MC-299105](https://bugs.mojang.com/browse/MC-299105) Tears and Lava Chicken music disc 'desc' translations are unused
+-   [MC-300055](https://bugs.mojang.com/browse/MC-300055) You get the advancement Wax On for changing the pose of a Copper Golem Statue while holding Honeycomb
+-   [MC-300088](https://bugs.mojang.com/browse/MC-300088) Items placed by a copper golem in a double chest do not update redstone comparators reading the right side of the double chest
+-   [MC-300109](https://bugs.mojang.com/browse/MC-300109) Lightning bolt does not remove oxidation from the lightning rod
+-   [MC-300169](https://bugs.mojang.com/browse/MC-300169) The CustomName tag of a copper golem statue is not kept when mined
+-   [MC-300192](https://bugs.mojang.com/browse/MC-300192) No darker trim for copper
+-   [MC-300201](https://bugs.mojang.com/browse/MC-300201) Breaking a copper golem statue with a pose does not retain its pose
+-   [MC-300416](https://bugs.mojang.com/browse/MC-300416) Copper golems' pathfinding to chests is biased to northwest
+-   [MC-300558](https://bugs.mojang.com/browse/MC-300558) Copper golems can open locked chests without an appropriate key item
+-   [MC-300729](https://bugs.mojang.com/browse/MC-300729) Incorrect or unusually obvious pixels on the weathered and exposed copper bars
+-   [MC-300961](https://bugs.mojang.com/browse/MC-300961) The armor layer on husks no longer reflects their larger size compared to other humanoids
+-   [MC-301099](https://bugs.mojang.com/browse/MC-301099) Copper chests worn on copper golems' heads are not visible
+-   [MC-301250](https://bugs.mojang.com/browse/MC-301250) Upon exiting the gamemode switcher (F3+F4) while viewing the credits, the player still does not resume viewing the credits and instead remains in the end in a phantom state until they relog
+-   [MC-301258](https://bugs.mojang.com/browse/MC-301258) Copper golem statues in the walking pose have a bit of their necks poking through their arms
+-   [MC-301259](https://bugs.mojang.com/browse/MC-301259) Shelf align;;_;;items;;_;;to;;_;;bottom in block entity data doesn't work
+-   [MC-301261](https://bugs.mojang.com/browse/MC-301261) The right arm of the copper golem statue isn't connected to its body
+-   [MC-301276](https://bugs.mojang.com/browse/MC-301276) The hand animation no longer plays when shearing copper golems
+-   [MC-301277](https://bugs.mojang.com/browse/MC-301277) Item frames with maps and paintings cannot share a corner anymore
+-   [MC-301278](https://bugs.mojang.com/browse/MC-301278) The code of conduct screen renders carriage return characters
+-   [MC-301283](https://bugs.mojang.com/browse/MC-301283) Sprint and sneak input can get 'stuck' if a screen is opened right as the input is pressed
+-   [MC-301310](https://bugs.mojang.com/browse/MC-301310) The “Transfer Now” button in the realms menu renders outside the selection box
+-   [MC-301312](https://bugs.mojang.com/browse/MC-301312) You cannot begin to use items while looking at copper golems
+-   [MC-301324](https://bugs.mojang.com/browse/MC-301324) Sitting copper golem statue nose is rotated incorrectly
+-   [MC-301330](https://bugs.mojang.com/browse/MC-301330) Malicious server can force client to remain stuck on code of conduct screen
+-   [MC-301374](https://bugs.mojang.com/browse/MC-301374) Evokers can now spawn in Peaceful difficulty
+-   [MC-301519](https://bugs.mojang.com/browse/MC-301519) Trying to use a command block while the "enableCommandBlocks" gamerule is set to false says "Command blocks are not enabled on this server" even if you're not on a server
+-   [MC-301523](https://bugs.mojang.com/browse/MC-301523) Some gamerule description strings consist of inconsistent concluding punctuation, redundantly include “or not”, and are grammatically incorrect
+-   [MC-301524](https://bugs.mojang.com/browse/MC-301524) The block breaking animation on banners now amplifies with each pattern applied
+-   [MC-301546](https://bugs.mojang.com/browse/MC-301546) Bells do not display ringing animation when another bell is nearby
+-   [MC-301577](https://bugs.mojang.com/browse/MC-301577) Block light sources produce shadows around themselves under skylight
+-   [MC-301619](https://bugs.mojang.com/browse/MC-301619) Game mode translation key is used in the console message sent when a player tries to switch their game mode without permission
 
 ---
 

@@ -34,181 +34,6 @@ Happy mining!
 
 ---
 
-# Minecraft 1.19.1 Pre-Release 6
-
-We are now releasing pre-release 6 for Minecraft 1.19.1 with some small tweaks to sculk sensors and catalysts as well as bug fixes and improvements to the chat signing system.
-
-## Changes in 1.19.1 Pre-release 6
-
--   Sculk Catalysts will now drop 5 XP instead of 20 XP
--   Colors of the signing indicators for sending a message have been adjusted for improved accessiblity
-
-## Technical Changes in 1.19.1 Pre-release 6
-
--   The `run_command` click event for text components no longer supports any commands that send chat messages
-    -   `/tellraw` should be used instead
-
-## Bugs fixed in 1.19.1 Pre-release 6
-
--   [MC-148149](https://bugs.mojang.com/browse/MC-148149) Linux game crash when opening links
--   [MC-207077](https://bugs.mojang.com/browse/MC-207077) Crash on loading pre-1.13 world with noteblock + note NBT in inventory
--   [MC-235614](https://bugs.mojang.com/browse/MC-235614) Reference to unexisting predicate in a datapack causes java.lang.NullPointerException
--   [MC-252190](https://bugs.mojang.com/browse/MC-252190) Player-dropped items creating vibrations depends on you sneaking at the moment the item hits the ground, instead of when you threw the item
--   [MC-252258](https://bugs.mojang.com/browse/MC-252258) Wool block / carpet items generate vibrations, unless thrown by crouching players
--   [MC-252265](https://bugs.mojang.com/browse/MC-252265) --server argument causes java.lang.NullPointerException crash on some servers
--   [MC-253402](https://bugs.mojang.com/browse/MC-253402) Game crash when you shift right click on item in your hotbar to the chest at the same time as you die
--   [MC-254255](https://bugs.mojang.com/browse/MC-254255) Unable to text in chat with Chat Preview On send while sleeping
--   [MC-254261](https://bugs.mojang.com/browse/MC-254261) "The background opacity box of the chat preview field renders behind the ""Leave Bed"" button when sleeping in beds"
--   [MC-254284](https://bugs.mojang.com/browse/MC-254284) Sending chat packets with invalid message type id crashes the game
--   [MC-254349](https://bugs.mojang.com/browse/MC-254349) Crash when putting dye into a loom on a modded server
-
----
-
-# Minecraft 1.19.1 Pre-release 5
-
-We are now releasing pre-release 5 for Minecraft 1.19.1. This pre-release includes the remaining fixes for a known exploit regarding player report context. It also fixes some other crashes and bugs.
-
-## Changes in 1.19.1 Pre-release 5
-
-### Chat
-
--   When writing chat messages, the signing status of the displayed chat messages is shown with a colored indicator
-    -   The indicator will either appear to the left of the chat input field, or to the left of the chat preview if chat preview is being used
-    -   The indicator will be green when the displayed message is signed
-    -   The indicator will be orange when Chat Preview is enabled and a preview is waiting to be signed
--   The background of the chat preview will also display slightly faded when a preview is waiting to be signed
-
-### Chat Preview
-
--   Added "On Send" Chat Preview option for updating chat previews only when attempting to send a message
-    -   To confirm sending a message, a second hit of the Enter/Return key is required
-    -   The previous "ON" setting has been renamed to "On Modified"
--   The "On Modified" mode no longer displays previews if the message has not been modified by the server
--   Chat Preview is now enabled in singleplayer, and will display when using commands that have selector substitution such as `/say`
--   Previewed hover events and click events are now highlighted with a solid background
-
-## Technical Changes in 1.19.1 Pre-release 5
-
--   The `team_msg_command` chat type has been split apart into `team_msg_command_incoming` and `team_msg_command_outgoing`
-
-## Bugs fixed in 1.19.1 Pre-release 5
-
--   [MC-130243](https://bugs.mojang.com/browse/MC-130243) /debug stop message uses OS locale specific number formatting
--   [MC-149047](https://bugs.mojang.com/browse/MC-149047) Scroll Sensitivity slider label uses OS locale for number formatting
--   [MC-252546](https://bugs.mojang.com/browse/MC-252546) Poor audio quality compared to 1.18.2
--   [MC-252702](https://bugs.mojang.com/browse/MC-252702) Game crashes when trying to launch 1.19 when system is in Arabic, Persian, or adjacent formats
--   [MC-253223](https://bugs.mojang.com/browse/MC-253223) "A preposition is incorrectly used within the ""gui.abuseReport.reason.terrorism;;_;;or;;_;;violent;;_;;extremism.description"" string"
--   [MC-253888](https://bugs.mojang.com/browse/MC-253888) Messages that servers have tampered with through chat reporting are signed and reportable
--   [MC-253950](https://bugs.mojang.com/browse/MC-253950) Sending a chat message too fast after typing it fails to sign the eventual proper chat preview
--   [MC-253997](https://bugs.mojang.com/browse/MC-253997) "The current description of ""Imminent harm - Threat to harm others"" report category seems not matching its title"
--   [MC-254089](https://bugs.mojang.com/browse/MC-254089) "Chat Preview components allow server to ""hide"" content"
-
----
-
-# Minecraft 1.19.1 Pre-Release 4
-
-This pre-release fixes an exploit found regarding contextual chat evidence when creating a Player Report.
-
-## Technical changes in 1.19.1 Pre-Release 4
-
--   Custom servers can hide player chat messages from display via a new network packet
-    -   This does not delete player chat messages from chat logs
--   Insecure chat messages logged in the server are prefixed with a `[Not Secure]` tag
--   The order of chat messages are now cryptographically verified
-    -   This will be used for validating the context of chat messages for Player Reports
-
-## Fixed bugs in 1.19.1 Pre-Release 4
-
--   [MC-253743](https://bugs.mojang.com/browse/MC-253743) The server console doesn't state if chat messages aren't secure or have been modified
--   [MC-253813](https://bugs.mojang.com/browse/MC-253813) Chat commands with entity selectors often reported as "This message is not secure"
-
----
-
-# Minecraft 1.19.1 Pre-Release 3
-
-Hi everyone,
-
-Before we jump into today's pre-release, we would like to take a moment and dedicate some thoughts to a person who over the years has made an incredible impact on the Minecraft community and touched the lives of many. **Technoblade** became synonymous with a source of good – a positive force that time and time again made many, many people happy and someone we are proud to have as part of our giant family.
-
-Minecraft is its community, which is why it should come as no surprise that so many of us mourn the loss of him, with tributes and love pouring in from across the world.
-
-On behalf of the Java Team – thank you Technoblade for the memories, for all the fun and the laughter. You will be dearly missed. Our thoughts are with your family and friends.
-
-* * *
-
-Regarding 1.19.1: We still have a number of fixes in the pipeline, set for another pre-release in the near future. After that, once everything is tested and verified, we'll be aiming for a release candidate.
-
-## Changes in 1.19.1 Pre-Release 3
-
--   Moved the chat scrollbar to the right of the chat window
--   System messages (non-player chat, such as those outputted by commands) are displayed with a gray color indicator
-
-## Technical changes in 1.19.1 Pre-Release 3
-
--   Custom servers can set their own auto-completion options for regular chat via a new network packet
--   The list of players on the Social Interactions screen now places entries for players with recently seen messages at the top of the list
--   The `msg_command` chat type has been split apart into `msg_command_incoming` and `msg_command_outgoing`
--   The `team_name` chat type parameter has been renamed to `target`
-    -   This chat type parameter is now used by `msg_command_outgoing`
-
-## Fixed bugs in 1.19.1 Pre-Release 3
-
--   [MC-253182](https://bugs.mojang.com/browse/MC-253182) The second instance of a reflexive pronoun is used incorrectly within the "gui.abuseReport.reason.self;;_;;harm;;_;;or;;_;;suicide.description" string
--   [MC-253214](https://bugs.mojang.com/browse/MC-253214) Tooltips will become offset in certain cases
--   [MC-253223](https://bugs.mojang.com/browse/MC-253223) A preposition is incorrectly used within the "gui.abuseReport.reason.terrorism;;_;;or;;_;;violent;;_;;extremism.description" string
--   [MC-253496](https://bugs.mojang.com/browse/MC-253496) /execute as {player} run say counts to the report system
--   [MC-253742](https://bugs.mojang.com/browse/MC-253742) The chat scroll bar overlaps the colored indicators used to show the trust status of messages
--   [MC-253773](https://bugs.mojang.com/browse/MC-253773) Whispers appear as modified by the server
-
----
-
-# Minecraft 1.19.1 Pre-Release 2
-
-Hey everyone! As a few of you might have noticed, we’ve made the decision to postpone the release of 1.19.1 and we're now going back into pre-release mode. This is in order to address a few of our more noticeable issues. We've yet to fully decide on a new release date, but it won't be too far in the future.
-
-We’ve received a lot of feedback regarding the Player Chat Report feature, which is something we address specifically in a newly released post [here](https://www.minecraft.net/article/addressing-player-chat-reporting-tool), as well as in our [FAQ](https://aka.ms/chatreportingfaq) which hopefully answers all your questions!
-
-## Changes in 1.19.1 Pre-Release 2
-
-We've added the ability to see the signing status of chat messages – this is so you can easily tell when a server is tampering with, or removing the signing security of, their players' messages.
-
-### Chat Trust Status
-
--   Messages that are not signed with the Secure Chat system, or have been tampered with by the server will now be marked
-    -   Messages with missing or invalid signatures are marked as "Not Secure"
-    -   Messages that are detected as modified are marked as "Modified"
--   The trust status of messages are displayed with both a colored indicator and an icon
-    -   The colored indicator is always visible
-    -   The icon is only visible when the chat screen is open
--   Hovering over the icon will provide more information about the trust status
-    -   For modified messages, the original secure text will also be displayed in the tooltip
-
-## Technical changes in 1.19.1 Pre-Release 2
-
-### Chat Types
-
--   Chat types added to the `chat_types` registry are now only used for player chat, and not system messages
-    -   The `system` and `game_info` chat types have been removed
--   Chat types have been simplified and are now only required to define `chat` and `narration` decorations
-    -   Chat types no longer support overlays
-    -   A system message should instead be used to display overlays
-
-### server.properties
-
--   `enforce-secure-profile` is now defaulted to `true` for dedicated servers
-
-## Fixed Bugs in 1.19.1 Pre-Release 2
-
--   [MC-253112](https://bugs.mojang.com/browse/MC-253112) The game output console is logged with warnings regarding chat packets with invalid signatures when using entity selectors within commands
--   [MC-253121](https://bugs.mojang.com/browse/MC-253121) Entities and other non-player chat message sources appear as players on the Select Chat Messages to Report screen
--   [MC-253493](https://bugs.mojang.com/browse/MC-253493) The descriptions of report categories can once again overlap the "Description:" subtitle
--   [MC-253495](https://bugs.mojang.com/browse/MC-253495) Selection boxes of fields within the "Select Report Category" menu list don't contain white outlines when selected using the TAB key
--   [MC-253497](https://bugs.mojang.com/browse/MC-253497) Entities and other non-player chat message sources appear in the Social Interactions menu
--   [MC-253501](https://bugs.mojang.com/browse/MC-253501) Long messages within the "Select Chat Messages to Report" menu can extend beyond selection boxes and past the scroll bar
--   [MC-253517](https://bugs.mojang.com/browse/MC-253517) Online players cannot connect to offline server because "invalid profile public key signature"
-
----
-
 # Minecraft 1.19.1 Pre-Release 1
 
 The first pre-release for 1.19.1 is now available. This release contains a few bugfixes, an increased cooldown for Allay duplication, and it also contains a new UI if you have been banned for violating the Minecraft [Community Standards](https://www.minecraft.net/community-standards). ​ On the topic of community standards and the recent introduction of the chat reporting feature, we’re working on creating a help article that aims to add some context surrounding the functionality. ​ All of this said, if everything goes as planned, we plan to release the update next Tuesday on June 28th.
@@ -244,6 +69,56 @@ The first pre-release for 1.19.1 is now available. This release contains a few b
 -   [MC-253183](https://bugs.mojang.com/browse/MC-253183) The word "Unrelated" within the "gui.chatSelection.fold" string is incorrectly capitalized
 -   [MC-253185](https://bugs.mojang.com/browse/MC-253185) The ESC key cannot be used to exit the "Sending your report" menu
 -   [MC-253191](https://bugs.mojang.com/browse/MC-253191) Particles produced from allays duplicating cannot be seen by other players
+
+---
+
+# Minecraft Snapshot 22w24a
+
+New snapshot! We're now heading towards 1.19.1, which will add Allay duplication, the ability to report chat, and, of course, fix a few bugs.
+
+On the topic of chat reporting, we want everyone to feel safe and welcome in Minecraft, which is why we have community guidelines in place. If you feel unsafe, uncomfortable, or concerned that someone is breaking our [Community Guidelines](https://www.minecraft.net/community-standards) or the [Xbox Community Standards](https://www.xbox.com/legal/community-standards), you can soon report this in-game. Of course, it will also be possible to report incidents over at the [Report a Concern](https://help.minecraft.net/hc/requests/new?ticket_form_id=4416074743565) page.
+
+We are looking for feedback regarding the Chat Reporting feature. For now, any reports made during the testing period may not be actioned on.
+
+Enjoy!
+
+## New Features in 22w24a
+
+-   Added Allay duplication
+-   Added Player Chat Reporting
+
+### Allay
+
+-   Allays will dance to a Record playing in a Jukebox
+-   If the Allay is handed an Amethyst Shard while dancing it will duplicate
+    -   Duplication has a 2.5 minute cooldown
+
+### Player Chat Reporting
+
+It is now possible to report a player for sending abusive messages in the game chat.
+
+A reporter is required to select the individual chat messages that contain the objectionable content, as well as the category of the report, this is to provide the best context for our moderation team to take action.
+
+Accessed via the social interactions screen (default keybind is P).
+
+-   The social interactions screen is now available via the Pause screen when in a multiplayer game
+-   Multiple chat messages can be selected for reporting
+-   The category of the chat report can be selected from a list of Chat Report Categories
+-   Additional comments can be entered to provide more details and information regarding the report
+
+## Fixed bugs in 22w24a
+
+-   [MC-144043](https://bugs.mojang.com/browse/MC-144043) Trader llamas continue to spit after their target died
+-   [MC-146891](https://bugs.mojang.com/browse/MC-146891) Nitwit villager can have a profession
+-   [MC-177505](https://bugs.mojang.com/browse/MC-177505) Cured Villager can work at wrong workstation
+-   [MC-249523](https://bugs.mojang.com/browse/MC-249523) Sky color is visible for a brief moment after applying Night Vision under Darkness effect
+-   [MC-250261](https://bugs.mojang.com/browse/MC-250261) Frogs can lay spawn on flowing water
+-   [MC-250267](https://bugs.mojang.com/browse/MC-250267) Frogs don't lay their spawn on waterlogged blocks
+-   [MC-252082](https://bugs.mojang.com/browse/MC-252082) Loading server resource packs reloads twice when one is already loaded
+-   [MC-252363](https://bugs.mojang.com/browse/MC-252363) Mobs that naturally spawn in with equipment will play the respective equipping noise
+-   [MC-252439](https://bugs.mojang.com/browse/MC-252439) Cured Villager trades are not refreshing
+-   [MC-252539](https://bugs.mojang.com/browse/MC-252539) Commands sending messages use formatting of regular chat in server logs
+-   [MC-252683](https://bugs.mojang.com/browse/MC-252683) Unexpected exception in the selector loop causing server lag
 
 ---
 
@@ -485,52 +360,190 @@ As always, a big thank you to the community for your feedback, bugs reported, an
 
 ---
 
-# Minecraft 1.18.2 Release Candidate
+# Minecraft Snapshot 22w19a
 
-We’re now releasing the first (and hopefully only) release candidate for Minecraft 1.18.2. This release candidate fixes two world generation bugs that could cause a server to stop running. If there are no major issues following this release, no further changes will be done before the full release, which is planned for February 28th. ​ Happy mining!
-
-## Fixed Bugs in 1.18.2 Release Candidate 1
-
--   [MC-244682](https://bugs.mojang.com/browse/MC-244682) Some custom dimensions settings can cause the server to stop running, but not crash
--   [MC-248764](https://bugs.mojang.com/browse/MC-248764) Some worldgen datapacks can kill the internal server (possibly related to density functions)
-
----
-
-# Minecraft 1.18.2 Pre-Release 3
-
-The third pre-release for 1.18.2 is now out, fixing more bugs!
-
-Happy Crafting!
-
-## Fixed bugs in 1.18.2 Pre-release 3
-
--   [MC-218739](https://bugs.mojang.com/browse/MC-218739) Glow berries and glow lichen generation does not cause light updates across chunk borders
--   [MC-244772](https://bugs.mojang.com/browse/MC-244772) Can't double click to join a realm
--   [MC-248539](https://bugs.mojang.com/browse/MC-248539) /locate command not working properly in Flat Worlds
--   [MC-248636](https://bugs.mojang.com/browse/MC-248636) The game output and server console are logged and spammed with "Creating a MIN function between two non-overlapping inputs" when joining or creating a world
--   [MC-248637](https://bugs.mojang.com/browse/MC-248637) Crash when opening singleplayer screen due to StackOverflowError in net.minecraft.nbt.CompoundTag$1.skip
--   [MC-248680](https://bugs.mojang.com/browse/MC-248680) The world freezes on superflat when using the locate command to find a pillager outpost
--   [MC-248748](https://bugs.mojang.com/browse/MC-248748) Explorer maps leading to custom structures can cause the server to hang
-
----
-
-# Minecraft 1.18.2 Pre-Release 2
-
-The second pre-release for 1.18.2 is now out! This pre-release adds a spline density function and fixes a few bugs.
+Thursday snapshot! Apart from some bugfixes and some changes to fancy tags and commands, we're introducing "chat preview" as a way to cryptographically sign chat messages that have been dynamically styled by servers. And for this snapshot only, we've left in our testing option `test-rainbow-chat` in `server.properties`, which can be set to true together with the new `previews-chat` option for testing. If this is something that interests you, and especially if you run a server, we would love your feedback on it.
 
 Enjoy!
 
-## Technical Changes in 1.18.2 Pre-Release 2
+## Changes in 22w19a
 
--   Added [`spline` density](https://wikipedia.org/wiki/Spline_interpolation) function: general-purpose building block that allows you to express almost any function using a cubic spline
+-   Warden and Iron Golems now make sure to spawn above something solid
 
-## Fixed bugs in 1.18.2 Pre-Release 2
+## Technical Changes in 22w19a
 
--   [MC-243766](https://bugs.mojang.com/browse/MC-243766) Unable to put focus on "Copyright Mojang AB. Do not distribute" using Tab key
--   [MC-248638](https://bugs.mojang.com/browse/MC-248638) Strongholds can generate in The Void biome
--   [MC-248681](https://bugs.mojang.com/browse/MC-248681) Superflat worlds cannot be created without using presets
--   [MC-248694](https://bugs.mojang.com/browse/MC-248694) An empty generator-settings string crashes the server when starting up
--   [MC-248717](https://bugs.mojang.com/browse/MC-248717) Fortress mobs can spawn outside of fortresses
+-   Servers can now enable Chat Preview, which displays a server-controlled preview above the chat edit box
+-   Changes to the locate and place commands
+-   Point of Interest tags
+
+### Chat Preview
+
+-   Servers can enable Chat Preview by setting `previews-chat=true` in `server.properties`
+-   When enabled, a server-controlled preview appears above the chat edit box, showing how the message will look when sent
+-   This can be used by servers to preview messages with styling applied, such as emojis or chat coloring
+-   Chat Preview sends chat messages to the server as they are typed, even before they're sent
+    -   The server then sends back the styled preview in real time
+    -   This allows servers to apply dynamic message stylings while still allowing chat to be securely signed
+-   A warning screen is shown on the client when joining a server with Chat Preview, and it can be globally disabled in Chat Settings
+-   Dynamic chat styling can also be controlled by the server, although this is only signed when Chat Preview is enabled
+    -   Clients can prefer to always show the original, signed message by enabling "Only Show Signed Chat" in Chat Settings
+
+### Commands
+
+-   Added template sub-command to `place`;;-;;command
+-   `locate` command moved to `locate structure`, `locatebiome` moved to `locate biome`
+-   Added `locate poi <type: point_of_interest_type>`
+-   Servers will now also send an additional icon and MOTD packet after a player has connected
+    -   This allows servers with `enable-status=false` to set an icon and MOTD for players that successfully connect
+
+**Place template**
+
+The `place`;;-;;command can now also place templates at a given location. Syntax: `place template <template> [pos] [rotation] [mirror] [integrity] [seed]`
+
+-   `place template` works like using the load button in the UI for a structure block
+
+Parameters:
+
+-   `template`: The namespaced id of a template ("structure block file") to load and place
+-   `rotation`: The rotation to apply (if omitted, `none` is used)
+-   `mirror`: The mirroring to apply (if omitted, `none` is used)
+-   `integrity`: The structure integrity value between 0 and 1
+-   `seed`: The seed to use for the randomized degradation when integrity is less than 1
+
+### Point of Interest types
+
+-   Removed `unemployed` and `nitwit` `point_of_interest_type`s
+-   Added tag `point_of_interest_type/acquirable_job_site` for all job sites seeked by Villagers with `none` profession
+-   Added tag `point_of_interest_type/village` for PoI that are part of Village
+-   Added tag `point_of_interest_type/bee_home` for all PoI targeted by Bees
+
+## Fixed bugs in 22w19a
+
+-   [MC-197647](https://bugs.mojang.com/browse/MC-197647) Players cannot jump off the edge of blocks when sneaking if they have a block above
+-   [MC-231600](https://bugs.mojang.com/browse/MC-231600) Sculk sensor continuously receives vibrations when next to a powered big dripleaf
+-   [MC-249130](https://bugs.mojang.com/browse/MC-249130) Tadpoles hatch inside of adjacent blocks, causing them to suffocate and die
+-   [MC-249161](https://bugs.mojang.com/browse/MC-249161) Frogs frequently get stuck below lily pads
+-   [MC-249634](https://bugs.mojang.com/browse/MC-249634) Warden's sniffing behavior continues after being distracted
+-   [MC-249664](https://bugs.mojang.com/browse/MC-249664) Warden despawns when far away
+-   [MC-249801](https://bugs.mojang.com/browse/MC-249801) Mineshafts can intersect ancient cities
+-   [MC-249888](https://bugs.mojang.com/browse/MC-249888) Warden is not angered when hit by a blaze fireball
+-   [MC-249910](https://bugs.mojang.com/browse/MC-249910) Warden "Nearby Closest" sound is unused
+-   [MC-249966](https://bugs.mojang.com/browse/MC-249966) Warden can stop chasing a target it just roared at
+-   [MC-250172](https://bugs.mojang.com/browse/MC-250172) Warden doesn't turn towards the direction it is firing the Sonic Boom attack
+-   [MC-250233](https://bugs.mojang.com/browse/MC-250233) A warden summoned from a spawn egg suddenly losing its AI
+-   [MC-250255](https://bugs.mojang.com/browse/MC-250255) Warden's Sonic Boom cannot hurt Ender Dragon, it only pushes it back
+-   [MC-250272](https://bugs.mojang.com/browse/MC-250272) Warden spawns in blocks that have no collision
+-   [MC-250353](https://bugs.mojang.com/browse/MC-250353) Warden cannot spawn on a single snow layer like other mobs
+-   [MC-250357](https://bugs.mojang.com/browse/MC-250357) Sculk sensors and Wardens detect when a player holds up a shield
+-   [MC-250948](https://bugs.mojang.com/browse/MC-250948) Warden's ranged attack is no longer affected by the game's difficulty
+-   [MC-250966](https://bugs.mojang.com/browse/MC-250966) Dying to the warden's sonic boom doesn't count as the warden's kill
+-   [MC-251029](https://bugs.mojang.com/browse/MC-251029) Warden froze and stopped being hostile towards the player
+-   [MC-251263](https://bugs.mojang.com/browse/MC-251263) "Invalid signature for profile public key" when trying to open a singleplayer world
+-   [MC-251316](https://bugs.mojang.com/browse/MC-251316) The game crashes when loading chunks that consist of jigsaw blocks
+-   [MC-251321](https://bugs.mojang.com/browse/MC-251321) Warden can be pushed by explosions while emerging
+-   [MC-251350](https://bugs.mojang.com/browse/MC-251350) /give @s goat;;_;;horn gives an unregistered goat horn
+-   [MC-251396](https://bugs.mojang.com/browse/MC-251396) java.lang.IllegalArgumentException: Name and ID cannot both be blank
+-   [MC-251464](https://bugs.mojang.com/browse/MC-251464) When passive mobs take damage from warden's sonic boom, they won't flee in panic
+
+---
+
+# Minecraft Snapshot 22w18a
+
+Another snapshot is now available for Minecraft: Java Edition. This snapshot brings a few gameplay changes and some technical tidbits, such as the place command and cryptographically signed chat commands.
+
+Enjoy!
+
+## Changes in 22w18a
+
+-   Allays now follow their liked player even if they can't see them
+-   Allays will only lose track of a player if they are more than 64 blocks away
+-   The texture of the sonic boom particle has been updated
+-   Vibration listeners such as Sculk Sensors, Sculk Shriekers and Wardens now listen to the closest vibration instead of the first vibration in the tick
+
+## Technical Changes in 22w18a
+
+-   Banner patterns available in the Loom can now be controlled with tags (`banner_pattern/no_item_required` for no pattern item and `banner_pattern/pattern_item/*` for specific banner pattern items)
+-   Servers can now define different chat style formats for clients
+-   Removed the `placefeature` command
+-   Added the `place` command
+-   The bundled Java runtime has been upgraded to 17.0.3
+-   Removed loot table function `set_goat_horn_sound`
+-   Added loot table function `set_instrument`
+-   Chat from the `/say`, `/msg`, `/teammsg`, and `/me` commands are now all also cryptographically signed
+
+### Chat Types
+
+-   Different chat style formats can now be controlled by the server through the `chat_type` registry
+    -   These are synchronized to clients when they join the server
+    -   The translation key or translation format can be defined, like `chat.type.text` or `%s says: "%s"`
+        -   Chat can be similarly optionally narrated with a custom translation key or format
+    -   The entire message can have formatting applied, such as italics or a specific color (but currently not click or hover events)
+
+### Place Command
+
+New command that replaces `placefeature` and can place features, jigsaws and structures at a given location. Syntax:
+
+    place feature <feature> [pos]
+    place jigsaw <pool> <start> <depth> [pos]
+    place structure <structure> [pos]
+    
+
+Parameters:
+
+-   `feature`: The namespaced id of a feature to try to place
+-   `structure`: The namespaced id of a structure to try to generate
+-   `pool`: The namespaced id of a template pool to start generating
+-   `start`: The namespaced id name of a jigsaw to use as the starting anchor
+-   `depth`: The maximum number of jigsaw connections to traverse during placement
+-   `pos`: The position to use as the origin for the generation (if omitted, `~ ~ ~` is used)
+
+### Loot Tables
+
+**New functions**
+
+**`set_instrument`**
+
+Sets item tags needed for instrument items to a random value selected from a tag.
+
+Parameters:
+
+-   `options` - a tag reference specifying the instrument options to randomly pick from
+
+## Fixed bugs in 22w18a
+
+-   [MC-207935](https://bugs.mojang.com/browse/MC-207935) - Simultaneous vibrations don't trigger as expected
+-   [MC-232009](https://bugs.mojang.com/browse/MC-232009) - Minecraft does not resolve SRV records correctly
+-   [MC-249021](https://bugs.mojang.com/browse/MC-249021) - The invitation and news buttons aren't consistently displayed within the realms menu
+-   [MC-249129](https://bugs.mojang.com/browse/MC-249129) - The walking animation of frogs doesn't change in relation to their movement speed
+-   [MC-249175](https://bugs.mojang.com/browse/MC-249175) - Only one sculk vein drops when using a Silk Touch hoe on multiple in a single block space
+-   [MC-249454](https://bugs.mojang.com/browse/MC-249454) - Sculk Catalysts will spread sculk if a baby mob that does not drop experience dies around it
+-   [MC-249732](https://bugs.mojang.com/browse/MC-249732) - Allays lose picked up items on world restart
+-   [MC-249740](https://bugs.mojang.com/browse/MC-249740) - Allays leashed to a fence do not move and refuse to pick up items
+-   [MC-249784](https://bugs.mojang.com/browse/MC-249784) - Ancient Cities can be submerged in aquifers
+-   [MC-249857](https://bugs.mojang.com/browse/MC-249857) - Parity Issue: Allays don't follow the player / note blocks as closely on Java
+-   [MC-250139](https://bugs.mojang.com/browse/MC-250139) - Snow layers cannot be placed on top of mud
+-   [MC-250143](https://bugs.mojang.com/browse/MC-250143) - Improper advancement description for "Sneak 100"
+-   [MC-250144](https://bugs.mojang.com/browse/MC-250144) - "Sneak 100" advancement includes sculk shriekers as a block that can "hear" the player
+-   [MC-250145](https://bugs.mojang.com/browse/MC-250145) - Warden/frogs continue animations when the game is paused
+-   [MC-250163](https://bugs.mojang.com/browse/MC-250163) - Warden can still detect things after it dies
+-   [MC-250183](https://bugs.mojang.com/browse/MC-250183) - Warden continues to roar when angered by an ignited creeper
+-   [MC-250198](https://bugs.mojang.com/browse/MC-250198) - Warden continues to roar when the target of the enraged warden suffers an unnatural death
+-   [MC-250207](https://bugs.mojang.com/browse/MC-250207) - Warden continues to roar at disconnected players
+-   [MC-250216](https://bugs.mojang.com/browse/MC-250216) - Warden continues to roar at targets in unloaded chunks
+-   [MC-250218](https://bugs.mojang.com/browse/MC-250218) - Warden continues to roar at despawned target
+-   [MC-250244](https://bugs.mojang.com/browse/MC-250244) - Warden continues to roar when the target enters the nether portal, end portal or end gateway
+-   [MC-250245](https://bugs.mojang.com/browse/MC-250245) - Warden sonic boom attacks can hit player even if the player has entered another dimension
+-   [MC-250292](https://bugs.mojang.com/browse/MC-250292) - Wardens can sometimes freeze when overwhelmed with enemies/attacks/sounds
+-   [MC-250506](https://bugs.mojang.com/browse/MC-250506) - Mangrove leaves can appear at a higher altitude when grown below y = 0
+-   [MC-250557](https://bugs.mojang.com/browse/MC-250557) - Allay permanently stuck trying to pick up item stack if its slots contain stack of the same type with differing NBT (and vice versa)
+-   [MC-250864](https://bugs.mojang.com/browse/MC-250864) - Game fails to load worldgen settings when .DS;;_;;Store files are present in datapack
+-   [MC-250926](https://bugs.mojang.com/browse/MC-250926) - There is a goat horn in the creative Destroy Item slot / all tabs within the creative inventory contain goat horns
+-   [MC-250937](https://bugs.mojang.com/browse/MC-250937) - User skins don't load in singleplayer
+-   [MC-250939](https://bugs.mojang.com/browse/MC-250939) - Game crashes when a goat horn with an invalid sound variant is used / java.lang.ArrayIndexOutOfBoundsException: Index out of bounds for length 8
+    
+    -   [MC-250954](https://bugs.mojang.com/browse/MC-250954) - Player is assigned a new UUID in singleplayer
+    
+-   [MC-250974](https://bugs.mojang.com/browse/MC-250974) - MinecraftClientHttpException when opening/creating a world
 
 ---
 

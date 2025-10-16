@@ -295,6 +295,108 @@ Parameters:
 
 ---
 
+# Minecraft 1.21.5 Release Candidate 2
+
+Second time's the charm! We're shipping 1.21.5 Release Candidate 2, fixing some final issues before releasing the Spring To Life drop tomorrow!
+
+## Fixed bugs in 1.21.5 Release Candidate 2
+
+-   [MC-295665](https://bugs.mojang.com/browse/MC-295665) There is no blending in new chunks
+-   [MC-295688](https://bugs.mojang.com/browse/MC-295688) Piston movement is not applying block effects to entities
+
+---
+
+# 1.21.5 Release Candidate 1
+
+With Minecraft Live just around the corner, we are getting closer to the release of the first drop of the year. Today we're shipping the first 1.21.5 Release Candidate with a few bug fixes, which means if no new critical issues surface, this is the version we are planning to release as Minecraft: Java Edition 1.21.5.
+
+## Fixed bugs in 1.21.5 Release Candidate 1
+
+-   [MC-295383](https://bugs.mojang.com/browse/MC-295383) "Received missed or reordered chat message from server" string doesn't make logical sense
+-   [MC-295412](https://bugs.mojang.com/browse/MC-295412) Lighting of magma block is incorrect
+-   [MC-295416](https://bugs.mojang.com/browse/MC-295416) Beacon receives wrong shading from nearby blocks
+
+---
+
+# Minecraft 1.21.5 Pre Release 3
+
+It's Tuesday, and today we're bringing you a third pre-release for Minecraft 1.21.5, with some fixes to recently introduced issues.
+
+## Fixed bugs in 1.21.5 Pre-Release 3
+
+-   [MC-295387](https://bugs.mojang.com/browse/MC-295387) fireball and small;;_;;fireball can no longer have their Owner, HasBeenShot, or LeftOwner fields modified
+-   [MC-297384](https://bugs.mojang.com/browse/MC-297384) The second horn in the cold cow texture is unused by the model
+-   [MC-299223](https://bugs.mojang.com/browse/MC-299223) F3 debug crosshair lost its outline
+-   [MC-299543](https://bugs.mojang.com/browse/MC-299543) Experience orbs follow players in Spectator mode
+
+---
+
+# Minecraft 1.21.5 Pre Release 2
+
+We're shipping some crash fixes in today's pre-release.
+
+## Technical Changes
+
+-   The Data Pack version is now 71 since this was missed in Pre-Release 1
+
+## Fixed bugs in 1.21.5 Pre-Release 2
+
+-   [MC-280482](https://bugs.mojang.com/browse/MC-280482) Main menu is totally broken when using Mesa 25.0
+-   [MC-296644](https://bugs.mojang.com/browse/MC-296644) Game crashes while rendering section / java.lang.NullPointerException: Cannot read field "b" because "$$3" is null
+-   Additional crash fixes
+
+---
+
+# Minecraft 1.21.5 Pre-Release 1
+
+Today we're shipping the first pre-release of Minecraft 1.21.5. From now on you will mostly see bug fixes and technical tweaks until the start of the next snapshot cycle. As we enter the pre-release phase we will be releasing more frequently than our regular cadence on Wednesdays, so keep an eye out for the next pre-release!
+
+## Changes
+
+-   Added Spawn Eggs textures for programmer art texture pack
+
+## Technical Changes
+
+-   The Resource Pack version is now 55
+-   Arguments in commands that accept inline values like loot tables, predicates, modifiers, data components, formatted text (`/loot`, `/give`, `/tellraw`, `/execute if predicate`, data components in `/execute if items`, etc.) have been reverted to accept numbers in place of booleans
+
+> **Developer's Note**: The original change happened because we moved away from using NBT as an intermediate format for parsing those values, which meant that booleans were separated from numbers (similar to handling in JSON). We've decided to temporarily revert that, since some functionality can't be achieved yet without using storage and macro functions. However, once that missing functionality is added (and data can be transferred without being converted to and from text), legacy boolean handling will be removed once again.
+
+### Network Protocol
+
+-   The clientbound `player_chat` packet now contains an index increasing for every message sent to the client
+    -   The index starts at 0 when logging in (or is reset by configuration phase and the `login` packet)
+    -   For every message, the server should increment this value by 1
+    -   If this value updates in an unexpected way, the client will disconnect
+    -   As the protocol requires that every chat packet reaches the client in produced order, the goal is to enable faster detection of missed/reordered chat messages for custom server developers
+-   The serverbound `chat` and `chat_command_signed` packets now contain a checksum byte along with the 'last seen' update
+    -   This is a simple hash of the 'last seen' signatures which should be reconstructed by the server, allowing quicker detection of desynchronized state
+    -   This can be passed as `0` to disable the check, for compatibility with protocol translation
+
+## Resource Pack Version 55
+
+-   Tweaked Leaf Litter block models
+
+## Fixed bugs in 1.21.5 Pre-Release 1
+
+-   [MC-170134](https://bugs.mojang.com/browse/MC-170134) Minecraft uses several times more VRAM than needed after exploring terrain for a while
+-   [MC-279350](https://bugs.mojang.com/browse/MC-279350) Leaf litter multipart model system is unoptimized, causing render lag
+-   [MC-280141](https://bugs.mojang.com/browse/MC-280141) Baby farm animals from spawn eggs with a variant differing from the parent flash the wrong variant initially
+-   [MC-280241](https://bugs.mojang.com/browse/MC-280241) Cold Cows have improperly mirrored and incorrectly aligned ear textures
+-   [MC-280249](https://bugs.mojang.com/browse/MC-280249) Spawn eggs don't use their old textures with the Programmer Art resource pack enabled
+-   [MC-280278](https://bugs.mojang.com/browse/MC-280278) Sheep wool uses 1.14 texture with Programmer Art resource pack enabled
+-   [MC-280326](https://bugs.mojang.com/browse/MC-280326) When teleporting across dimensions an error is often thrown
+-   [MC-280361](https://bugs.mojang.com/browse/MC-280361) When a fallen tree replaces the bottom half of tall vegetation, the top part of the vegetation still generates
+-   [MC-280474](https://bugs.mojang.com/browse/MC-280474) TNT minecarts explode regardless of tntExplodes gamerule
+-   [MC-280477](https://bugs.mojang.com/browse/MC-280477) TNT still explodes when summoned or dispensed while tntExplodes gamerule is false
+-   [MC-280479](https://bugs.mojang.com/browse/MC-280479) TNT is completely deleted when attempting to ignite it using redstone pulses when the “tntExplodes” gamerule is disabled
+-   [MC-280480](https://bugs.mojang.com/browse/MC-280480) No flint and steel clicking sound when attempting to ignite TNT with a flint and steel when the "tntExplodes" gamerule is disabled
+-   [MC-280493](https://bugs.mojang.com/browse/MC-280493) If the tntExplodes game rule is changed to false while primed TNT already exists in the world, the primed TNT explodes as normal
+-   [MC-280501](https://bugs.mojang.com/browse/MC-280501) The "Fire extinguishes" sound plays every game tick while on fire in rain
+-   [MC-280520](https://bugs.mojang.com/browse/MC-280520) ItemDropChance on an item frame is not serialized when there is no item anymore, leading to inconsistencies
+
+---
+
 # Minecraft Snapshot 25w10a
 
 It's time for a new Minecraft snapshot! We've got some more under-the-hood updates including a `tntExplodes` game rule previously found in Bedrock edition, new features in SNBT syntax, and allowing all entities to store custom data. We also have some more bug fixes coming your way.
@@ -719,115 +821,6 @@ On the technical side, SNBT syntax in commands has been expanded and improved, i
 -   [MC-280155](https://bugs.mojang.com/browse/MC-280155) Random ticks can cause entity build-up in lazy chunks
 -   [MC-280170](https://bugs.mojang.com/browse/MC-280170) Goats can no longer ram armor stands unless the game rule mobGriefing is set to false
 -   [MC-280211](https://bugs.mojang.com/browse/MC-280211) End crystal beams cause OpenGL errors with glDebugVerbosity set to 3
-
----
-
-# Minecraft Snapshot 25w08a
-
-We're adding some new, fun and cute features in this week's snapshot. Spawn eggs just got cuter with new textures looking more like the mobs they spawn. Wolves are becoming even more unique with their own individual sounds. When a wolf spawns, it will get one of seven personalities, unrelated to their variant or biome. From cute to grumpy, each wolf will bark, growl, pant, whine, and express themselves in their own unique way. To top it all off, leaf litter will now look even better with new colors and we have made some tweaks to what color of sheep spawns in different biomes.
-
-Have fun exploring!
-
-## New Features
-
--   Added new sound variants for Wolves
--   Overhauled the visuals of each Spawn Egg to improve readability and accessibility
-
-### Farm Animal variants
-
-**Sheep wool color in warm and cold biomes**
-
--   Reverted the change from last week that allowed Blue, Light Blue, Cyan, Yellow, Orange and Red Sheep to spawn naturally in different biomes
--   Black Sheep will still be the most common type to spawn in cold biomes, and Brown Sheep will be the most common type in warm biomes
--   Pink Sheep will still be very rare and able to spawn anywhere where Sheep can spawn
--   Uncommon Sheep colors in Cold Biomes are gray, light gray, white and brown
--   Uncommon Sheep colors in Warm Biomes are gray, light gray, white and black
-
-### Leaf Litter
-
--   Leaf Litter is tinted based on which biome it's in
-
-### Spawn Egg visuals overhaul
-
--   Each Spawn Egg now has their own unique visual which captures the personality and character of the mob it spawns
--   Each egg visual varies in shape to reflect the in-world size of the mob it spawns
-    -   For example, smaller mobs tend to have a smaller Spawn Egg
-
-### Wolf Sounds Variants
-
--   Added 6 new Wolf sound variants with unique ambient, hurt, death, growl, whine, and pant sounds
-    -   The new sounds are part of variants that are called `big`, `cute`, `puglin`, `angry`, `grumpy` and `sad`
-    -   The original Wolf sounds now are used for the variant called `classic`
-    -   Every Wolf will have a random sound variant assigned to it from the 6 new variants and the original one
-    -   The sound variant is not related to the texture variant
-
-## Changes
-
--   Sheep's wool undercoat is now also colored when dyed, matching existing behaviour in Bedrock Edition
--   Sheep can now eat Fern blocks to match Bedrock Edition
-
-## Technical Changes
-
--   The Data Pack version is now 68
--   The Resource Pack version is now 53
-
-## Data Pack Version 68
-
--   Added data driven sound variants for Wolves
--   Biome effects has a new field `dry_foliage_color` that defines the color used for tinting blocks using dry foliage tinting
-
-### Wolf Sound Variants
-
--   Wolf sound variants can be data-driven by adding entries to `data/<namespace>/wolf_sound_variant/<id>.json`
--   The file contains the following fields which correspond to sound events to use for the specific behaviour:
-    -   `ambient_sound`
-    -   `death_sound`
-    -   `growl_sound`
-    -   `hurt_sound`
-    -   `pant_sound`
-    -   `whine_sound`
-
-### Item Components
-
-**`blocks_attacks` component**
-
--   If the blocked damage has no position, the compared angle will be assumed to be the maximum `180` for `horizontal_blocking_angle` field of `damage_reductions`
-
-**Entity components**
-
--   New component
-    -   `wolf/sound_variant` - namespaced id from `wolf_sound_variant` registry
-
-## Resource Pack Version 53
-
--   Added possibility to tint blocks based on a dry foliage color map
--   Updated textures for Spawn Eggs
--   New and updated sounds for Wolf sound variants
--   Added colormap texture for tinting dry foliage tinted blocks
--   Name of `sheep_fur` texture has been renamed to `sheep_wool`
--   Sheep now has a separate texture for its wool undercoat, which is dynamically recolored in-game
-    -   The name of this undercoat texture is `sheep_wool_undercoat`
-
-### Updated textures for Spawn Eggs
-
--   New textures have been added for all Spawn Eggs
--   Removed `spawn_egg.png` and `spawn_egg_overlay.png`
-
-### Equipment Assets
-
--   Equipment layers configured to be dyeable will now show if the `dyed_color` component is present on the item, even if the item is not in the `#dyeable` tag
-
-### New and updated Wolf sound variants
-
--   Sound files for the classic Wolf sounds have been moved into `classic` folder for the Wolf sound files
--   Removed unused `howl` sound
--   Added sounds for the new Wolf sound variants: `big`, `cute`, `puglin`, `angry`, `grumpy` and `sad`
-
-## Fixed bugs in 25w08a
-
--   [MC-177522](https://bugs.mojang.com/browse/MC-177522) Wolf barking and whining sounds are subtitled as "Wolf pants"
--   [MC-280182](https://bugs.mojang.com/browse/MC-280182) Shields can block some environmental damage sources
--   [MC-280230](https://bugs.mojang.com/browse/MC-280230) DeathLootTable field is incorrectly named DeathLoothTable
 
 ---
 

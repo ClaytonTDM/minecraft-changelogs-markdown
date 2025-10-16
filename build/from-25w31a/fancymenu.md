@@ -480,103 +480,194 @@ Fields:
 
 ---
 
-# Minecraft Snapshot 25w21a
+# 1.21.8 Release Candidate 1
 
-Summer is finally here in Stockholm on this fine Snapshot Tuesday - but it seems some of our developers missed those beautiful, gray, rainy skies far too much and absolutely insisted on giving the clouds in Minecraft a new look. What a de-light!
+Hotfix coming in ho-... very cold? Today we're releasing 1.21.8 Release Candidate 1, addressing various graphical corruption and freeze issues on certain graphics devices.
 
-## New Features
+As always, if you encounter any graphical issues with this Release Candidate, reports on our [Bug Tracker](https://bugs.mojang.com/projects/MC/summary) are very much appreciated!
 
--   Updated the pattern of clouds in the sky
--   Horses, Donkeys, and Mules can now be fed carrots to heal, grow, and improve their temper
+Happy Crafting!
 
-### Music and Sound
+## Fixed bugs in 1.21.8 Release Candidate 1
 
--   Added a new sound for when a Lead snaps
--   Added new custom sounds for shearing Saddles, Horse Armor, and Carpets from Llamas
+-   [MC-295947](https://bugs.mojang.com/browse/MC-295947) The game screen freezes after a while on some Intel integrated graphics
+-   [MC-296107](https://bugs.mojang.com/browse/MC-296107) Entities and block entities become visually corrupted after a while on some Intel integrated graphics
+-   [MC-296908](https://bugs.mojang.com/browse/MC-296908) Text and texture atlases become visually corrupted after a while on some Intel integrated graphics
+-   [MC-297784](https://bugs.mojang.com/browse/MC-297784) Entities are shaded incorrectly after a while on Intel graphics of Gen11 architecture
+-   [MC-298903](https://bugs.mojang.com/browse/MC-298903) Items in the inventory can turn into a solid color and then disappear and text can render colored while on some Intel integrated graphics
+-   [MC-298908](https://bugs.mojang.com/browse/MC-298908) Items in the inventory are lit as if from the opposite direction on some Intel integrated graphics
+-   [MC-299144](https://bugs.mojang.com/browse/MC-299144) Crash with AMD graphics card when loading Resource Pack with invalid shader
+
+---
+
+# Minecraft 1.21.7 Release Candidate 2
+
+Hey! We had to fix some more bugs today! Here is Release Candidate 2 for Minecraft: Java Edition 1.21.7.
 
 ## Technical Changes
 
--   The Data Pack version is now 78
--   The Resource Pack version is now 62
+-   The Data Pack version is now 81
+-   The Resource Pack version is now 64
 
-## Data Pack Version 78
+## Fixed bugs in 1.21.7 Release Candidate 2
+
+-   [MC-298879](https://bugs.mojang.com/browse/MC-298879) The game crashes upon startup on some AMD graphics
+-   [MC-299110](https://bugs.mojang.com/browse/MC-299110) Force upgrading does not write new DataVersion to converted data
+-   [MC-299126](https://bugs.mojang.com/browse/MC-299126) The server crashes when certain mobs ride a turtle
+-   [MC-299130](https://bugs.mojang.com/browse/MC-299130) Pack formats were not incremented in 1.21.7 rc1 after breaking changes
+
+---
+
+# Minecraft 1.21.7 Release Candidate 1
+
+Today we are shipping Release Candidate 1 for 1.21.7, a hotfix release that takes care of some critical issues that managed to sneak their way into the Chase the Skies drop (1.21.6). The hotfix also includes a new music disc and a painting of the good boy Dennis. If no other critical issues are found, this will be the version for 1.21.7 that can be expected to be released soon. Happy mining!
+
+## New Features
+
+-   Added a painting of a good boy by artist Sarah Boeving
+-   Added music disc "Lava Chicken" by Hyper Potions
+    -   Drops when defeating a Baby Zombie riding a Chicken (Chicken Jockey)
+
+## Fixed bugs in 1.21.7 Release Candidate 1
+
+-   [MC-297748](https://bugs.mojang.com/browse/MC-297748) The moon is rendered incorrectly on some Qualcomm graphics
+-   [MC-298448](https://bugs.mojang.com/browse/MC-298448) Filled maps are rendered incorrectly on some Qualcomm graphics
+-   [MC-298681](https://bugs.mojang.com/browse/MC-298681) Text displays with the "shadow" tag enabled and the "see;;_;;through" tag disabled exhibit z-plane fighting at a close distance
+-   [MC-298710](https://bugs.mojang.com/browse/MC-298710) TTF glyphs are incorrectly rendered over some elements
+-   [MC-298832](https://bugs.mojang.com/browse/MC-298832) The breaking particles of droppers and dispensers facing up or down appear incorrect on some Qualcomm graphics
+-   [MC-298856](https://bugs.mojang.com/browse/MC-298856) Blindness and darkness fog effects no longer work underwater
+-   [MC-298898](https://bugs.mojang.com/browse/MC-298898) TextureAtlas leaks textures after resource reload
+-   [MC-298919](https://bugs.mojang.com/browse/MC-298919) Sometimes you pass through the happy ghast when you get off while going forward
+-   [MC-299017](https://bugs.mojang.com/browse/MC-299017) Text on glowing signs is not visible on some graphics
+-   [MC-299071](https://bugs.mojang.com/browse/MC-299071) Memory Leak in ItemStackRenderState leads to OutOfMemoryError
+
+---
+
+# Minecraft 1.21.6 Release Candidate 1
+
+As we get ready to Chase the Skies, here comes the first test flight of 1.21.6 - Release Candidate 1!
+
+Happy Ghast(-ing)!
+
+## Fixed bugs in 1.21.6 Release Candidate 1
+
+-   [MC-298022](https://bugs.mojang.com/browse/MC-298022) Not signed Books and Quills with an overflowing new line at the bottom do not depict the pages' contents
+-   [MC-298633](https://bugs.mojang.com/browse/MC-298633) Happy Ghast gets you stuck in blocks while riding and gets stuck in blocks upon dismount
+-   [MC-298658](https://bugs.mojang.com/browse/MC-298658) Locator Bar shows inaccurate positions after respawn
+
+---
+
+# Minecraft 1.21.6 Pre-Release 4
+
+We are now releasing Pre-Release 4 for Minecraft 1.21.6, with a few minor bug fixes.
+
+Happy crafting!
+
+## Fixed bugs in 1.21.6 Pre-Release 4
+
+-   [MC-279417](https://bugs.mojang.com/browse/MC-279417) Luring mobs onto blocks at Y=-64 will instead make them pathfind to the highest elevation
+-   [MC-298446](https://bugs.mojang.com/browse/MC-298446) The "Thunder roars" sound is no longer affected by the master volume
+-   [MC-298510](https://bugs.mojang.com/browse/MC-298510) Happy ghasts stay still for a few seconds when you get off them
+-   [MC-298653](https://bugs.mojang.com/browse/MC-298653) Master volume slider no longer affects /playsoud sounds with high volume
+
+---
+
+# Minecraft 1.21.6 Pre-Release 3
+
+We've got another pre-release coming in hot! This time with a new advancement trigger and sound category but most importantly some much needed bug fixes.
+
+## New Features
+
+### Music and Sound
+
+-   Added new sound volume category called "UI" for sounds played by UI elements, like button clicks
+
+## Technical Changes
+
+-   The Data Pack version is now 80
+
+## Data Pack Version 80
+
+-   Added `player_sheared_equipment` trigger
+
+### New Triggers
+
+Added `minecraft:player_sheared_equipment`
+
+-   Can Trigger when a player shears off a shearable equipment from an Entity
+-   Conditions:
+    -   `item` - Item that is sheared
+    -   `entity` - The entity that was sheared
+
+### Commands
+
+**Modified `playsound`**
+
+-   Added new category `ui`
+    -   Sounds in this category will continue playing when paused, similarly to `music`
+
+## Fixed bugs in 1.21.6 Pre-Release 3
+
+-   [MC-296371](https://bugs.mojang.com/browse/MC-296371) The entity shadows of happy ghasts are too small in relation to the size of their models
+-   [MC-296374](https://bugs.mojang.com/browse/MC-296374) The entity shadows of ghastlings are too small in relation to the size of their models
+-   [MC-296853](https://bugs.mojang.com/browse/MC-296853) The "Shear Brilliance" advancement is incorrectly given by shearing a lead off a wolf
+-   [MC-297113](https://bugs.mojang.com/browse/MC-297113) Hotbar shown in loading terrain screen
+-   [MC-297497](https://bugs.mojang.com/browse/MC-297497) The “Connection Lost” title isn’t displayed when being kicked from realms due to idle timeout
+-   [MC-297972](https://bugs.mojang.com/browse/MC-297972) Dialog body content is misaligned
+-   [MC-298353](https://bugs.mojang.com/browse/MC-298353) Ridden entities won't make the lead breaking sound when attached to a fence
+-   [MC-298412](https://bugs.mojang.com/browse/MC-298412) Subtitles are no longer shown when the master volume is set to zero
+-   [MC-298466](https://bugs.mojang.com/browse/MC-298466) When clicking the "yes" button to confirm command execution in a dialog, if the player is put into another dialog, the click sound from the "yes" button will not be played until it is closed
+-   [MC-298492](https://bugs.mojang.com/browse/MC-298492) Disconnecting through dialog in configuration phase causes the client to crash.
+-   [MC-298516](https://bugs.mojang.com/browse/MC-298516) While running /dialog clear and /dialog show every tick, pressing the warning button just after joining the world can crash the game
+-   [MC-298520](https://bugs.mojang.com/browse/MC-298520) Items in slots now render behind the container title, mismatching 1.21.5 behavior
+
+---
+
+# Minecraft 1.21.6 Pre-Release 2
+
+We're kicking the week off with another pre-release, including some music and happy ghast bug fixes. The Chase the Skies drop is getting closer and the pre-release schedule might include more than one pre-release per week.
+
+## Changes
+
+### Music and Sound
+
+-   The following sound categories have been renamed:
+    -   Friendly Creatures -> Friendly Mobs
+    -   Hostile Creatures -> Hostile Mobs
+
+## Technical Changes
 
 ### Dialogs
 
--   `run_command` click actions will now correctly close dialogs and book screens even if the command does not require elevated permissions
--   Dialogs should now correctly return to the previous non-dialog screen on close in all cases
--   If a new dialog is received by the client while warning screen is visible, it will not replace it, but when user clicks the "Back" button, the new dialog will be restored instead
--   The sizes of elements in dialogs are now restricted:
-    -   buttons - between `1` and `1024` (inclusive)
-    -   `minecraft:plain_message` dialog body - between `1` and `1024` (inclusive)
-    -   `minecraft:item` dialog body
-        -   `width` of `description` - between `1` and `1024` (inclusive)
-        -   `width` - between `1` and `256` (inclusive)
-        -   `height` - between `1` and `256` (inclusive)
-    -   `minecraft:text` input control - between `1` and `1024` (inclusive)
-    -   `minecraft:single_option` input control - between `1` and `1024` (inclusive)
-    -   `minecraft:number_range` input control - between `1` and `1024` (inclusive)
+**Dialog Description Format**
 
-**`minecraft:text` Input Control**
+**Input Control Types**
 
--   `max_length` - maximum length of input, positive integer with default of 32
--   `multiline` - if present, allows users to input multiple lines, optional object with fields:
-    -   `max_lines` - if present, limits maximum lines, optional positive integer
-    -   `height` - height of input, optional integer in range `1` to `512`
-        -   If this field is omitted, but `max_lines` is present, the height will be chosen to fit the maximum number of lines
-        -   If this and `max_lines` are both omitted, it will default to a height that fits 4 lines
+**`minecraft:text`**
 
-**`minecraft:number_range` Input Control**
+-   Output values:
+    
+    -   As template substitution: contents with special characters escaped to fit in a SNBT literal (note: both `'` and `"` are escaped)
+-   For `multiline` field:
+    
+    -   If `height` field is omitted, but `max_lines` is present, the height that will be chosen to fit the maximum number of lines can't exceed `512`
 
--   The `steps` field has been replaced with a new field:
-    -   `step` - step size, optional positive float
-        -   If present, only values of `initial + <any integer> * step` will be allowed
-        -   If absent, any value from range the is allowed
--   `initial` - if not specified, now defaults to the middle of the range
+## Fixed bugs in 1.21.6 Pre-Release 2
 
-**`minecraft:multi_action_input_form` Dialog Type**
-
--   Added new field `columns` - positive integer describing number of columns, default: `2`
-
-## Resource Pack Version 62
-
-### Sounds
-
--   Added `entity/leashknot/break` for when a Lead snaps
--   The following sounds have been renamed:
-    -   `entity/leashknot/break1` -> `entity/leashknot/unleash1`
-    -   `entity/leashknot/break2` -> `entity/leashknot/unleash2`
-    -   `entity/leashknot/break3` -> `entity/leashknot/unleash3`
-    -   `entity/leashknot/place1` -> `entity/leashknot/leash1`
-    -   `entity/leashknot/place2` -> `entity/leashknot/leash2`
-    -   `entity/leashknot/place3` -> `entity/leashknot/leash3`
--   The following sounds have been added for shearing Saddles, Horse Armor, and Carpets from Llamas
-    -   `mob/horse/armor_unequip`
-    -   `mob/horse/saddle_unequip`
-    -   `mob/llama/unequip`
-
-## Fixed bugs in 25w21a
-
--   [MC-36696](https://bugs.mojang.com/browse/MC-36696) Clicking on the statistics button on the menu screen advances the game by 1 tick
--   [MC-112730](https://bugs.mojang.com/browse/MC-112730) Beacon beam and structure block render twice per frame
--   [MC-236464](https://bugs.mojang.com/browse/MC-236464) Beacon beams emitted from below the player are invisible after reloading chunks
--   [MC-258336](https://bugs.mojang.com/browse/MC-258336) Frost Walker causes frequent visual corruption near chunk borders on Threaded and Semi-Blocking Chunk Builder
--   [MC-296337](https://bugs.mojang.com/browse/MC-296337) Minecarts cause memory usage increases and crashes
--   [MC-297264](https://bugs.mojang.com/browse/MC-297264) Cat breeds are not seed based anymore
--   [MC-297336](https://bugs.mojang.com/browse/MC-297336) Experience orbs from thrown bottles o' enchanting are very prone to getting stuck inside blocks when thrown against a corner
--   [MC-297615](https://bugs.mojang.com/browse/MC-297615) Untranslatable error message when trying to join a closed Realm
--   [MC-297803](https://bugs.mojang.com/browse/MC-297803) The string "menu.custom;;_;;screen;;_;;info.contents" misspells "personal" as "pesonal"
--   [MC-297806](https://bugs.mojang.com/browse/MC-297806) music.game.swamp.labyrinthine misspells the song's title
--   [MC-297808](https://bugs.mojang.com/browse/MC-297808) music.game.oxygene is missing the grave accent sign
--   [MC-297812](https://bugs.mojang.com/browse/MC-297812) Bold text is rendered differently than in previous versions
--   [MC-297813](https://bugs.mojang.com/browse/MC-297813) Amos Roddy is not listed in the credits
--   [MC-297823](https://bugs.mojang.com/browse/MC-297823) music.game.mice;;_;;on;;_;;venus is using wrong capitalization
--   [MC-297845](https://bugs.mojang.com/browse/MC-297845) Clicking the Statistics button in Singleplayer does not play the button click sound until you resume playing
--   [MC-297846](https://bugs.mojang.com/browse/MC-297846) The music toast flashes in the pause menu when the Music slider is set to zero
--   [MC-297875](https://bugs.mojang.com/browse/MC-297875) Text shadow from underlined text overlaps the text below it in chat messages
--   [MC-297888](https://bugs.mojang.com/browse/MC-297888) Text no longer renders in a consistent order across different fonts
--   [MC-297917](https://bugs.mojang.com/browse/MC-297917) The client stops responding when showing a dialog with an extremely wide button
--   [MC-297977](https://bugs.mojang.com/browse/MC-297977) Dialog columns layout has extra spacing between the grid and the overflow linear layout
+-   [MC-217887](https://bugs.mojang.com/browse/MC-217887) Unsigned books written in 1.9-pre1 or earlier don't upgrade properly
+-   [MC-297575](https://bugs.mojang.com/browse/MC-297575) Happy Ghast with nbt NoAI set to true can't be controlled by player
+-   [MC-297591](https://bugs.mojang.com/browse/MC-297591) Ender pearls can unexpectedly come to a halt
+-   [MC-298104](https://bugs.mojang.com/browse/MC-298104) The max;;_;;lines field of multiline text input control is unrestricted, lagging the game
+-   [MC-298144](https://bugs.mojang.com/browse/MC-298144) The initial value of minecraft:text input type is limited to 32 characters, regardless of max;;_;;length field
+-   [MC-298155](https://bugs.mojang.com/browse/MC-298155) Dialog command;;_;;template using a multiline text input causes player to be kicked out of the server due to illegal characters in chat (which is ;;\;;n)
+-   [MC-298209](https://bugs.mojang.com/browse/MC-298209) Player cannot move while touching a happy ghast's body
+-   [MC-298301](https://bugs.mojang.com/browse/MC-298301) Blinking the cursor shifts all characters to the right of a multilines text field input in Dialogs
+-   [MC-298307](https://bugs.mojang.com/browse/MC-298307) Entering and exiting a pale garden while in Creative mode causes the current music track to remain silent
+-   [MC-298358](https://bugs.mojang.com/browse/MC-298358) Riding a mob into powder snow no longer affects the player properly
+-   [MC-298361](https://bugs.mojang.com/browse/MC-298361) Happy ghast with player riding, teleports back and forth when exiting nether portal
+-   [MC-298368](https://bugs.mojang.com/browse/MC-298368) "music;;_;;notes.png.mcmeta" has an extra index that does not exist, causing a warning
+-   [MC-298394](https://bugs.mojang.com/browse/MC-298394) Freezing in Powdered Snow is very inconsistent and jittery
+-   [MC-298422](https://bugs.mojang.com/browse/MC-298422) Ghasts and happy ghasts do not take damage from harmful blocks under some circumstances
 
 ---
 

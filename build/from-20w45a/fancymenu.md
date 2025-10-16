@@ -204,6 +204,259 @@ Sets tags needed for banner patterns. Parameters:
 
 ---
 
+# Minecraft 1.16.4 Release Candidate 1
+
+We have now released 1.16.4 Release Candidate 1. If no further critical issues are found, we expect this version to be the full release of 1.16.4 on Thursday.
+
+## Changes in 1.16.4 Release Candidate 1
+
+-   Added an option to hide matched names
+
+### Hide matched names
+
+-   Some servers send chat messages in non-standard formats. With this option on, the game will attempt to apply chat hiding anyway by matching the text in messages
+
+## Fixed bugs in 1.16.4 Release Candidate 1
+
+-   [MC-202614](https://bugs.mojang.com/browse/MC-202614) Search function in social interactions screen only finds names that begin with the letters that you typed in
+
+---
+
+# Minecraft 1.16.4 Pre-Release 2
+
+Time for another pre-release! This time around we've fixed some issues with the new social interactions screen and we've also fixed some crashes.
+
+In case you haven't heard, yesterday we announced that Mojang accounts will be migrating into Microsoft accounts. With this pre-release, we are preparing for that by having the game understand the settings and block-list of Microsoft accounts. You can read more about that over [here](https://www.minecraft.net/article/java-edition-moving-house), and you can find answers to questions you might have in the [FAQ](https://help.minecraft.net/hc/articles/360050865492). The FAQ will be continuously updated.
+
+We aim to release 1.16.4 sometime during next week.
+
+## Changes in 1.16.4 Pre-release 2
+
+-   Players blocked in your Microsoft account are now also blocked in the game
+-   A button to open a link to the Accessibility Guide can now be found in the Accessibility Options screen
+
+### Social Interactions
+
+-   The status of a player is now listed below their name on the Social Interactions screen
+-   A new tab is available to filter by Blocked players in the Social Interactions screen
+-   Chat from blocked players is always hidden
+-   Realms invites from blocked players are hidden
+
+## Fixed bugs in 1.16.4 Pre-release 2
+
+-   [MC-202150](https://bugs.mojang.com/browse/MC-202150) Slider bar on social menu appears broken
+-   [MC-202147](https://bugs.mojang.com/browse/MC-202147) Cursor in Social Interactions & Recipe Book & Anvil menu doesn’t blink
+-   [MC-202137](https://bugs.mojang.com/browse/MC-202137) Social Interaction Screen says players for 1 player
+-   [MC-202143](https://bugs.mojang.com/browse/MC-202143) Social Interactions search bar does not stay selected when switching tabs, although the cursor remains
+-   [MC-202145](https://bugs.mojang.com/browse/MC-202145) Opening the Social Interactions menu in a singleplayer world open to LAN after attempting to join an outdated multiplayer server displays the name of the outdated server instead of the name of the current world
+-   [MC-202156](https://bugs.mojang.com/browse/MC-202156) Social Interactions search box entries can go out of the box
+-   [MC-202155](https://bugs.mojang.com/browse/MC-202155) Outdated server warn text doesn't actually exist
+-   [MC-202136](https://bugs.mojang.com/browse/MC-202136) Social Interaction Toast icon doesn't render properly with Programmer Art resource pack
+-   [MC-201885](https://bugs.mojang.com/browse/MC-201885) Divide by zero error in the Ender dragon entity class can cause a server crash and infinite velocity
+
+---
+
+# Minecraft 1.16.4 Pre-Release 1
+
+The first pre-release for 1.16.4 is officially out! ​ If you’ve been on the Internet for some time, you’ve probably noticed that you occasionally run into other players that you don’t get along with. To alleviate some of that frustration, we’re introducing a UI element called the “social interactions screen”, which will let you disable chatting with certain players, thus hiding any messages you receive from them. Additionally, the 1.16.4 update will contain some fixes for critical bugs, but other than that, this will be it for this dot-release. ​ Please help us out by testing the new UI and reporting any bugs you find on the [Minecraft Issue Tracker](https://aka.ms/snapshotbugs?ref=launcher). ​
+
+## New Features in 1.16.4 Pre-release 1
+
+​
+
+-   New UI called Social Interactions Screen
+
+​
+
+### Social Interactions Screen
+
+A new screen available in Multiplayer which shows a list of all players on a server so you can can hide chat from any player. ​
+
+-   Opens with a configurable key binding, by default P
+-   Whether a player is hidden resets when re-joining a server
+
+​
+
+## Technical Changes in 1.16.4 Pre-release 1
+
+​
+
+-   New network protocol scheme, with a high bit (bit 30) set for snapshots. The protocol version will increase by 1 for each snapshot, but full releases may keep the same protocol version as the previous full release in cases where the network protocols are compatible
+-   More information is now added to the crash log in cases where poor performance causes the server to crash
+
+​
+
+## Fixed bugs in 1.16.4 Pre-release 1
+
+​
+
+-   [MC-192434](https://bugs.mojang.com/browse/MC-192434) Netherite Leggings are textured weirdly
+-   [MC-199487](https://bugs.mojang.com/browse/MC-199487) WorldGen Deadlock
+
+---
+
+# Minecraft 1.16.3 Release Candidate 1
+
+What better way to start the week than with a new release candidate that fixes two bugs? 1.16.3 addresses a duplication exploit, along with a pathfinding issue.
+
+## Fixed bugs in 1.16.3 Release Candidate 1
+
+-   [MC-198678](https://bugs.mojang.com/browse/MC-198678) Giving an item and a gold ingot to a baby piglin and killing it duplicates the item
+-   [MC-196449](https://bugs.mojang.com/browse/MC-196449) Piglins, Piglin Brutes, Hoglins and Zoglins have trouble pathfinding to the player when attacking
+
+---
+
+# Minecraft 1.16.2 Release Candidate 2
+
+We have now released 1.16.2 Release Candidate 2, fixing a few critical issues. If no further critical issues are found, we expect this version to be the full release of 1.16.2 tomorrow.
+
+## Fixed bugs in 1.16.2 Release Candidate 2
+
+-   [MC-197512](https://bugs.mojang.com/browse/MC-197512) Incompatible resource packs don't display their name and description anymore
+-   [MC-197362](https://bugs.mojang.com/browse/MC-197362) Cannot load 2 or more resource packs if the second one is incompatible
+-   [MC-197354](https://bugs.mojang.com/browse/MC-197354) Block event lag in 1.16.2-rc1 is still higher than in 1.15.2
+-   [MC-197348](https://bugs.mojang.com/browse/MC-197348) Piston heads occasionally appear twice in certain piston setups
+
+---
+
+# Minecraft 1.16.2 Release Candidate 1
+
+We have now released 1.16.2 Release Candidate 1, fixing even more stability issues. If no further critical issues are found, we expect this version to be the full release of 1.16.2 on Tuesday next week.
+
+## Technical Changes in 1.16.2 Release Candidate 1
+
+-   The Resource and Data pack version has been raised to 6
+
+## Fixed bugs in 1.16.2 Release Candidate 1
+
+-   [MC-197275](https://bugs.mojang.com/browse/MC-197275) Due to changes to walls, "pack;;_;;format: 5" is not cross-compatible between 1.15 and 1.16
+-   [MC-197263](https://bugs.mojang.com/browse/MC-197263) End sky and nether fog don't work on servers
+-   [MC-197258](https://bugs.mojang.com/browse/MC-197258) Certain dimensions can cause a game crash
+-   [MC-197225](https://bugs.mojang.com/browse/MC-197225) Crash: java.util.concurrent.CompletionException: u: Exception generating new chunk
+-   [MC-197197](https://bugs.mojang.com/browse/MC-197197) Game crashes/freezes after creating/entering a Superflat world without presets
+-   [MC-194933](https://bugs.mojang.com/browse/MC-194933) Game crashes when loading a custom biome / java.lang.UnsupportedOperationException: Trying to add tag of type 8 to list of 10
+-   [MC-190103](https://bugs.mojang.com/browse/MC-190103) Crash when using a nether portal: java.lang.IndexOutOfBoundsException: fromIndex < 0: -2368549
+
+---
+
+# Minecraft 1.16.2 Pre-Release 3
+
+We have now released 1.16.2 Pre-release 3, fixing some stability issues.
+
+## Fixed bugs in 1.16.2 Pre-release 3
+
+-   [MC-105248](https://bugs.mojang.com/browse/MC-105248) Wet wolves become nearly black in dark areas
+-   [MC-107529](https://bugs.mojang.com/browse/MC-107529) Marker:1 Armor Stands render themself and their equipment dark if inside solid blocks
+-   [MC-167756](https://bugs.mojang.com/browse/MC-167756) Wolf is rendered too dark when not directly affected by skylight
+-   [MC-191388](https://bugs.mojang.com/browse/MC-191388) "No key position;;_;;predicate in MapLike" console spam
+-   [MC-197053](https://bugs.mojang.com/browse/MC-197053) Pressing F3+D clears the pending lines message, but doesn't clear the pending messages
+-   [MC-197152](https://bugs.mojang.com/browse/MC-197152) Ghost Blocks can be generated in some piston setups
+-   [MC-197218](https://bugs.mojang.com/browse/MC-197218) Piston arm appears twice during retraction in some mechanisms
+
+---
+
+# Minecraft 1.16.2 Pre-Release 2
+
+We have now released the second pre-release for Minecraft 1.16.2, in which another round of bugs have been squished!
+
+## Changes in 1.16.2 Pre-release 2
+
+-   Crimson and Warped Roots no longer require shears when mined
+
+## Technical Changes in 1.16.2 Pre-release 2
+
+### Execute Command
+
+-   `execute in` now respects dimension scaling
+
+## Fixed bugs in 1.16.2 Pre-release 2
+
+-   [MC-69876](https://bugs.mojang.com/browse/MC-69876) Pistons at Y=1 do not push downwards / at Y=254 do not push upwards
+-   [MC-124320](https://bugs.mojang.com/browse/MC-124320) Endermen can pick up and place snowless snowy grass blocks
+-   [MC-130558](https://bugs.mojang.com/browse/MC-130558) Item frames cannot be emptied if gamerule doEntityDrops is set to false
+-   [MC-134084](https://bugs.mojang.com/browse/MC-134084) If gamerule sendCommandFeedback is disabled, /msg or /tell don't display the message to the sender
+-   [MC-136553](https://bugs.mojang.com/browse/MC-136553) Dyes in creative inventory are in reverse order
+-   [MC-152037](https://bugs.mojang.com/browse/MC-152037) Powered, activator and detector rails are deleted when pushed/pulled onto a block they cannot be placed on
+-   [MC-187357](https://bugs.mojang.com/browse/MC-187357) Strongholds will not generate in floating;;_;;islands or caves preset
+-   [MC-189736](https://bugs.mojang.com/browse/MC-189736) "distance" within predicate no longer works
+-   [MC-190552](https://bugs.mojang.com/browse/MC-190552) Demo mode resets position and inventory upon launch
+-   [MC-190859](https://bugs.mojang.com/browse/MC-190859) floating;;_;;islands or caves buffet worlds no longer generate strongholds and ender eyes do not locate previously generated strongholds after upgrading to 1.16
+-   [MC-192136](https://bugs.mojang.com/browse/MC-192136) Lava damage works differently than in previous versions
+-   [MC-192236](https://bugs.mojang.com/browse/MC-192236) Endermen can place blocks on top of item frames on the floor
+-   [MC-192371](https://bugs.mojang.com/browse/MC-192371) Paintings in the same block space pop off when chunk loads
+-   [MC-192845](https://bugs.mojang.com/browse/MC-192845) Block Event Lag in 1.16 is excessive
+-   [MC-194217](https://bugs.mojang.com/browse/MC-194217) Lava sets nether vegetation on fire despite it being fire resistant
+-   [MC-194867](https://bugs.mojang.com/browse/MC-194867) Minecarts come out the wrong side of a nether portal and lose momentum when coming back to overworld
+-   [MC-194953](https://bugs.mojang.com/browse/MC-194953) Custom Biomes are not useable in Predicates
+-   [MC-195803](https://bugs.mojang.com/browse/MC-195803) Mob kill statistics are formatted in reverse: "N killed you times"
+-   [MC-195851](https://bugs.mojang.com/browse/MC-195851) "Hat" layer on helmets detaches from Piglins' heads while bartering
+-   [MC-196245](https://bugs.mojang.com/browse/MC-196245) Charged creeper does not always drop skull if zombie variants are nearby
+-   [MC-196441](https://bugs.mojang.com/browse/MC-196441) Stonecutter/Smithing Table recipes are not given after crafting a stack of more than one
+-   [MC-196469](https://bugs.mojang.com/browse/MC-196469) F1 hides the nausea green tint
+-   [MC-196473](https://bugs.mojang.com/browse/MC-196473) Pufferfish gives Nausea II instead of the maximum of Nausea I
+-   [MC-196653](https://bugs.mojang.com/browse/MC-196653) Creating multiple datapack dimensions which reference the same dimension;;_;;type string causes "unregistered dimension" crash
+-   [MC-196743](https://bugs.mojang.com/browse/MC-196743) Custom/modified biomes don't work in the overworld
+
+---
+
+# Minecraft 1.16.2 Pre-Release 1
+
+It's time for pre-releases for Minecraft Java Edition 1.16.2!
+
+From now on you should mostly see bug fixes leading up to the full release of 1.16.2 which we expect to happen in a few weeks.
+
+## New Features in 1.16.2 Pre-release 1
+
+-   New accessibility settings have been added to help with visual comfort
+
+### Accessibility
+
+-   Distortion effects such as nausea and the Nether portal overlay can now be reduced
+-   At lower values, the nausea effect is replaced with a green overlay as an alternative visualization
+-   Field of view effects shown after speed modifiers are applied can now be reduced
+
+## Changes in 1.16.2 Pre-release 1
+
+-   Chains can now be placed in all orientations
+-   Endermen will no longer place their held blocks onto bedrock blocks
+-   Piglins now become angry with players who open or destroy a Chest Minecart
+-   Villagers now lose their job sites when changing dimension
+-   Chat delay has been added to the Chat Settings screen
+
+## Technical Changes in 1.16.2 Pre-release 1
+
+-   Custom world generation and dimension settings now use the same folder pattern in data packs as other resources (`namespace/<type>/resource.json`)
+
+## Fixed bugs in 1.16.2 Pre-release 1
+
+-   [MC-73884](https://bugs.mojang.com/browse/MC-73884) Throwable projectiles get destroyed at contact with non solid blocks
+-   [MC-125758](https://bugs.mojang.com/browse/MC-125758) Bubble column does not affect egg, snowball, ender pearl, splash potion, lingering potion, fireball and shulker bullet
+-   [MC-158987](https://bugs.mojang.com/browse/MC-158987) Raid still continues after a villager turns into a witch
+-   [MC-163767](https://bugs.mojang.com/browse/MC-163767) Villagers get ejected from a minecart when converted to a zombie villager
+-   [MC-167045](https://bugs.mojang.com/browse/MC-167045) Banners are rendered too dark in the inventory
+-   [MC-170900](https://bugs.mojang.com/browse/MC-170900) New Nether plants can be picked up without shears/silk touch
+-   [MC-174574](https://bugs.mojang.com/browse/MC-174574) Soul speed doesn't work when slabs and blocks of similar height are placed above the soul sand block
+-   [MC-176015](https://bugs.mojang.com/browse/MC-176015) Strider suffocates when player is saddled on and looking up with Warped Fungus on a Stick
+-   [MC-176034](https://bugs.mojang.com/browse/MC-176034) You can walk on striders
+-   [MC-177651](https://bugs.mojang.com/browse/MC-177651) Despite being cold outside of lava, striders don't care about staying in lava
+-   [MC-178061](https://bugs.mojang.com/browse/MC-178061) Chat Delay option doesn't exist in Chat settings
+-   [MC-182330](https://bugs.mojang.com/browse/MC-182330) Crossbow-wielding piglins behave weirdly when they try to pursue invisible players
+-   [MC-185490](https://bugs.mojang.com/browse/MC-185490) Separated Trader Lamas On Leads Cause TPS Hit
+-   [MC-187398](https://bugs.mojang.com/browse/MC-187398) Smithing table and stonecutter recipes are not unlocked when used
+-   [MC-187904](https://bugs.mojang.com/browse/MC-187904) Data packs cannot replace settings of vanilla dimensions during world creation
+-   [MC-189414](https://bugs.mojang.com/browse/MC-189414) Smithing table doesn't calculate amount of output items correctly
+-   [MC-189797](https://bugs.mojang.com/browse/MC-189797) Hoglins, Zoglins, melee Piglins, and Piglin Brutes do not properly attack invisible entities within normal range
+-   [MC-191168](https://bugs.mojang.com/browse/MC-191168) Piglins that convert into Zombified Piglins while sitting on a minecart sometimes sink into blocks
+-   [MC-192032](https://bugs.mojang.com/browse/MC-192032) Villagers don't always try to claim the closest workstation and are sometimes focussed on a non-existent one or one out of their reach
+-   [MC-193213](https://bugs.mojang.com/browse/MC-193213) Leads are positioned incorrectly on players and Wandering Traders
+-   [MC-194263](https://bugs.mojang.com/browse/MC-194263) Large End Cities do not generate correctly / get cut off
+-   [MC-194299](https://bugs.mojang.com/browse/MC-194299) Template pools fail to load via datapack
+-   [MC-194845](https://bugs.mojang.com/browse/MC-194845) Subspace Bubble advancement cannot be completed with 7 km distance
+-   [MC-195062](https://bugs.mojang.com/browse/MC-195062) Raids often will not end in defeat when all villagers are dead if there are job sites in the village
+-   [MC-195544](https://bugs.mojang.com/browse/MC-195544) Game crashes after killing a mob that is being ridden by a guardian while it is being ridden by a wither skeleton
+
+---
+
 # Minecraft Snapshot 20w30a
 
 Today we're releasing Snapshot 20w30a for Minecraft Java Edition in which we've tweaked Bastion Remnants, and given you the ability to have lanterns under water.
@@ -418,76 +671,6 @@ As always, make sure to make backups if you try a world in a snapshot.
 -   [MC-193073](https://bugs.mojang.com/browse/MC-193073) Game crashes when Piglins or Piglin Brutes convert to Zombified Piglins
 -   [MC-193089](https://bugs.mojang.com/browse/MC-193089) Mobs do not get damaged anymore if they're in lava and water at the same time
 -   [MC-193125](https://bugs.mojang.com/browse/MC-193125) Cannot use "Inventory" key to write in recipe book, it closes GUI instead (Default: "E")
-
----
-
-# Minecraft Snapshot 20w27a
-
-It's time for another snapshot cycle as we make our way towards 1.16.2! This snapshot introduces the Piglin Brutes, and you might have heard about them in a [Bedrock beta](https://feedback.minecraft.net/hc/en-us/articles/360045006632-Minecraft-Beta-1-16-20-50-Xbox-One-Windows-10-Android-) already.
-
-The Piglin Brutes will be the only feature addition of 1.16.2, the rest of these snapshots will be focused on fixing bugs.
-
-## New Features in 20w27a
-
--   Added Piglin Brutes!
-
-### Piglin Brute
-
--   Piglin Brutes are stronger versions of Piglins that live in bastions and protect the treasures there
--   Unlike their cowardly and greedy counterparts, the Piglin Brutes cannot be distracted by gold and aren't afraid of anything
--   Piglin Brutes attack players on sight, no matter how the player is dressed
--   Piglin Brutes wield axes and don't need any armor, because they're just that tough
-
-## Changes in 20w27a
-
--   Zoglins can now be leashed
--   Crimson and warped fungus can now be placed on mycelium
-
-## Technical Changes in 20w27a
-
--   Small improvements to data and resource pack selection screens
-
-### Pack selection screens
-
--   While screen is open, it will automatically update when pack directory contents change
--   Both pack selection screen will now display contents of `pack.png` as pack icon
-
-## Fixed bugs in 20w27a
-
--   [MC-1058](https://bugs.mojang.com/browse/MC-1058) A dragon head is invisible if the entity wearing it is not in view
--   [MC-2404](https://bugs.mojang.com/browse/MC-2404) Stepping down while sneaking allows falling off of blocks
--   [MC-49476](https://bugs.mojang.com/browse/MC-49476) NBT "HideFlags" does not hide "Dyed" on leather armor
--   [MC-68487](https://bugs.mojang.com/browse/MC-68487) Player heads of the same player always have the same skin texture, even if the saved texture data is different
--   [MC-97507](https://bugs.mojang.com/browse/MC-97507) Using item which modifies the held item shows "Gear equips" subtitle
--   [MC-145691](https://bugs.mojang.com/browse/MC-145691) Binding "Open/Close Inventory" to Tab only opens inventory
--   [MC-150417](https://bugs.mojang.com/browse/MC-150417) Some items get stuck in soul sand when there is liquid above the soul sand
--   [MC-167285](https://bugs.mojang.com/browse/MC-167285) Travelling into an end gateway with a platform on the other side while on a boat would instantly teleport you back
--   [MC-171739](https://bugs.mojang.com/browse/MC-171739) Weeping and twisting vines, bamboo, and kelp can be replaced by "saplings" by breaking and placing the block at the same time
--   [MC-173526](https://bugs.mojang.com/browse/MC-173526) All Minecarts can survive in lava
--   [MC-178729](https://bugs.mojang.com/browse/MC-178729) Inconsistency: Red and brown mushrooms can't be grown into huge mushrooms on nylium, while they can on all other "grass" blocks
--   [MC-182652](https://bugs.mojang.com/browse/MC-182652) Ruined portals don't always spawn with chest
--   [MC-183663](https://bugs.mojang.com/browse/MC-183663) Farmer villagers don't compost correctly
--   [MC-183743](https://bugs.mojang.com/browse/MC-183743) Iron golem overpopulation
--   [MC-185274](https://bugs.mojang.com/browse/MC-185274) Subtitles are still showing ''Gear equips'' when eating in snapshot 20w21a or newer.
--   [MC-188473](https://bugs.mojang.com/browse/MC-188473) Resource pack screen no longer updates when adding or removing resource packs
--   [MC-188969](https://bugs.mojang.com/browse/MC-188969) Having a suspicious stew in inventory prevents all types of suspicious stew from going into your inventory when milking brown mooshroom
--   [MC-189909](https://bugs.mojang.com/browse/MC-189909) player;;_;;interacted;;_;;with;;_;;entity does not trigger if there is only one item and the item gets consumed
--   [MC-190021](https://bugs.mojang.com/browse/MC-190021) Trying to mount a pig or strider while sneaking plays hand animation
--   [MC-190266](https://bugs.mojang.com/browse/MC-190266) Players and other entities can catch on fire after logging on while riding a Strider in lava
--   [MC-190274](https://bugs.mojang.com/browse/MC-190274) Collecting liquids in bottles on Creative mode is inconsistent with the new creative bucket mechanics
--   [MC-190849](https://bugs.mojang.com/browse/MC-190849) Slime blocks can only push entities 5 blocks high instead of 6 blocks high as in 1.15.2
--   [MC-191915](https://bugs.mojang.com/browse/MC-191915) While in a boat the elytra does not show as enchanted
--   [MC-192894](https://bugs.mojang.com/browse/MC-192894) Transparency layers lose their auxiliary depth buffer ID when resized
-
-## Get the Snapshot
-
-Snapshots are available for Minecraft Java Edition. To install the snapshot, open up the Minecraft Launcher and enable snapshots in the "Installations" tab.
-
-Testing versions can corrupt your world, please backup and/or run them in a different folder from your main worlds.
-
-Cross-platform server jar:
-
--   [Minecraft server jar](https://launcher.mojang.com/v1/objects/40efae0a2412154f44a99f158752b8417b384f06/server.jar)
 
 ---
 

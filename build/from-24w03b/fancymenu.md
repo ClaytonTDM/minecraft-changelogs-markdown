@@ -362,6 +362,172 @@ Happy brushing!
 
 ---
 
+# Minecraft 1.20.4 Release Candidate 1
+
+We're releasing a Release Candidate for Minecraft 1.20.4. This Release Candidate fixes a critical issue found after the release of Minecraft 1.20.3
+
+## Fixed bugs in 1.20.4 Release Candidate 1
+
+-   [MC-267185](https://bugs.mojang.com/browse/MC-267185) Decorated pots can delete items when reloading the world
+
+---
+
+# Minecraft 1.20.3 Release Candidate 1
+
+We're now releasing the first (and hopefully last) release candidate for 1.20.3. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
+
+Happy Mining!
+
+## Fixed bugs in 1.20.3 Release Candidate 1
+
+-   [MC-266537](https://bugs.mojang.com/browse/MC-266537) Disparity between the read/write logic of the explosion packet
+
+---
+
+# Minecraft 1.20.3 Pre-Release 4
+
+We're now releasing Pre-release 4 for 1.20.3 with a few more bug fixes.
+
+Happy mining!
+
+## Fixed bugs in 1.20.3 Pre-Release 4
+
+-   [MC-266968](https://bugs.mojang.com/browse/MC-266968) /return executed within an advancement reward function globally discards all subsequent commands
+-   [MC-267062](https://bugs.mojang.com/browse/MC-267062) Server list ping icon doesn't display tooltip
+
+---
+
+# Minecraft 1.20.3 Pre-Release 3
+
+We are now releasing the third Pre-Release for Minecraft 1.20.3, containing mostly bug fixes, as well as changes to server resource pack handling.
+
+Happy Mining!
+
+## Technical Changes
+
+### World resource packs
+
+**Local storage**
+
+-   Only up to 20 server resource packs are cached
+
+**Packets**
+
+-   Client now sends additional updates about packs (like download success)
+
+## Fixed bugs in 1.20.3 Pre-Release 3
+
+-   [MC-265908](https://bugs.mojang.com/browse/MC-265908) Pool aliases don't redirect start pool
+-   [MC-266060](https://bugs.mojang.com/browse/MC-266060) The word "ignored" is misspelled as "ingored" within the "commands.tick.query.rate.sprinting" string
+-   [MC-266115](https://bugs.mojang.com/browse/MC-266115) Inconsistent Copper Door block drops when broken with tools weaker than stone
+-   [MC-266144](https://bugs.mojang.com/browse/MC-266144) Copper Doors are not part of the #doors item tag
+-   [MC-266145](https://bugs.mojang.com/browse/MC-266145) Copper Trapdoors are not part of the #trapdoors item tag
+-   [MC-266189](https://bugs.mojang.com/browse/MC-266189) Freezing the game during pick-up animation desyncs item position
+-   [MC-266210](https://bugs.mojang.com/browse/MC-266210) Dragon respawn is unable to be frozen with /tick freeze
+-   [MC-266335](https://bugs.mojang.com/browse/MC-266335) Copper Doors/Trapdoors have wrong Blast Resistance
+-   [MC-266903](https://bugs.mojang.com/browse/MC-266903) Incorrect part of copper door texture
+-   [MC-266920](https://bugs.mojang.com/browse/MC-266920) Server Resource Packs Setting disabled no longer overridden by require-resource-pack
+-   [MC-266948](https://bugs.mojang.com/browse/MC-266948) You can run "/summon wind;;_;;charge" without enabling the 1.21 datapack
+
+---
+
+# Minecraft 1.20.3 Pre-Release 2
+
+Hello again! The stabilization phase for 1.20.3 release continues. This Pre-Release brings more bug fixes.
+
+## Changes
+
+-   Breeze wind charges now break decorated pots, chorus flowers, and pointed dripstone blocks upon collision
+
+## Fixed bugs in 1.20.3 Pre-Release 2
+
+-   [MC-265291](https://bugs.mojang.com/browse/MC-265291) Command suggestions within the command block interface don't disappear when the console command field is unselected
+-   [MC-265426](https://bugs.mojang.com/browse/MC-265426) Certain inputs pressed whilst in F3+Esc Pause will be carried out after game is unpaused
+-   [MC-265772](https://bugs.mojang.com/browse/MC-265772) A command with multiple redirect modifiers can ignore "maxCommandChainLength"
+-   [MC-265788](https://bugs.mojang.com/browse/MC-265788) The "Start free Snapshot Realm" element can be selected or remain selected causing its tooltip to erroneously be visible when other interfaces are open
+-   [MC-266075](https://bugs.mojang.com/browse/MC-266075) "Player teleports" not shown in subtitles when an ender pearl lands far from the thrower
+-   [MC-266206](https://bugs.mojang.com/browse/MC-266206) Renamed arrows are reffered as just "Arrow" in the death message
+-   [MC-266380](https://bugs.mojang.com/browse/MC-266380) Rain texture doesn't loop correctly
+-   [MC-266439](https://bugs.mojang.com/browse/MC-266439) Decorated pots with loot table desync item consumption if it cannot be inserted in the pot
+-   [MC-266496](https://bugs.mojang.com/browse/MC-266496) Wind Charge can not break Decorated Pots
+-   [MC-266516](https://bugs.mojang.com/browse/MC-266516) Arrows on fire set breezes on fire, despite being deflected
+-   [MC-266728](https://bugs.mojang.com/browse/MC-266728) The "styled" number format uses the resource location "result"
+-   [MC-266886](https://bugs.mojang.com/browse/MC-266886) Backspace in Anvil no longer works when renaming an item
+-   [MC-266890](https://bugs.mojang.com/browse/MC-266890) The minecraft:grass item does not get upgraded to minecraft:short;;_;;grass
+
+---
+
+# Minecraft 1.20.3 Pre-Release 1
+
+We're bringing you the first Pre-Release of 1.20.3 with updates to server resource pack handling and bug fixes!
+
+## Technical Changes
+
+-   The Data Pack version is now 26
+-   The Resource Pack version is now 22
+-   Changes to downloaded/world resource pack handling
+
+### World resource packs
+
+Changes apply to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
+
+**UI**
+
+-   Download screen has been replaced with a toast
+-   World resource pack application will start together with chunk loading
+
+**Local storage**
+
+Downloaded packs are now stored in `downloads` directory (with different file organization than old `server-resource-packs`)
+
+-   Files in this directory are no longer automatically cleaned (previously only up 10 packs were kept)
+-   Additionally, inside this directory there is also log file `log.json` that stores information about downloaded files for debug purposes
+
+**Server config**
+
+Downloaded packs now have unique id (GUID/UUID) that can be used to differentiate them
+
+-   This value for dedicated server pack can be configured with `resource-pack-id` option in `server.properties`
+-   If the value is missing, it will be generated based on URL
+-   If hash of a pack is not set, this pack will be redownloaded before every application
+    -   Previously, if hash was missing, latest downloaded version of pack was applied
+
+**Packets**
+
+Some additional options are added for 3rd-party servers software:
+
+-   Client can now accept multiple server resource packs
+-   New packet was added to un-apply server resource packs
+-   Resource packs are no longer cleaned when entering configuration phase
+
+## Data Pack Version 26
+
+-   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
+
+## Resource Pack Version 22
+
+-   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
+
+## Fixed bugs in 1.20.3 Pre-Release 1
+
+-   [MC-142160](https://bugs.mojang.com/browse/MC-142160) pausedTickDelta updated when the game is unpaused rather than paused
+-   [MC-164316](https://bugs.mojang.com/browse/MC-164316) Resource pack update by a hash doesn't work
+-   [MC-251126](https://bugs.mojang.com/browse/MC-251126) Server resource pack is not redownloaded when a hash mismatch is detected with the previously downloaded version
+-   [MC-265927](https://bugs.mojang.com/browse/MC-265927) Edit box length restrictions can result in unpaired surrogate characters
+-   [MC-265929](https://bugs.mojang.com/browse/MC-265929) Ctrl+Backspacing a word with non-BMP characters in an edit box deletes additional characters
+-   [MC-266456](https://bugs.mojang.com/browse/MC-266456) Breezes in minecarts or boats are passive
+-   [MC-266468](https://bugs.mojang.com/browse/MC-266468) Breeze cannot attack in deep water
+-   [MC-266472](https://bugs.mojang.com/browse/MC-266472) Charged creeper / wither armor is rendered incorrectly
+-   [MC-266507](https://bugs.mojang.com/browse/MC-266507) Number of block drops from TNT explosions is capped to 16
+-   [MC-266563](https://bugs.mojang.com/browse/MC-266563) End Crystals and TNT Minecarts that explode without a source entity deal no damage at all
+-   [MC-266571](https://bugs.mojang.com/browse/MC-266571) Breezes won't attack while under the effects of levitation status
+-   [MC-266656](https://bugs.mojang.com/browse/MC-266656) The interpolation of particle, entity and block entity transforms is disrupted when pausing the game in singleplayer
+-   [MC-266723](https://bugs.mojang.com/browse/MC-266723) Monsters Hunted advancement requires killing a Breeze even when they're disabled
+-   [MC-266724](https://bugs.mojang.com/browse/MC-266724) scoreboard players reset no longer works
+-   [MC-266729](https://bugs.mojang.com/browse/MC-266729) Unformatted objects in scoreboard error messages
+
+---
+
 # Minecraft Snapshot 23w46a
 
 This snapshot brings about a few redstone-focused changes. Notably, we’re tweaking the tick delay behavior of the crafter and the copper bulb while they’re still in experimental development.
@@ -442,208 +608,6 @@ Formats:
 -   [MC-266459](https://bugs.mojang.com/browse/MC-266459) The hitboxes and models of wind charges are misaligned
 -   [MC-266538](https://bugs.mojang.com/browse/MC-266538) Trial spawners can be replaced by lava pools and other features
 -   [MC-266622](https://bugs.mojang.com/browse/MC-266622) Wind Charges can't switch levers off
-
----
-
-# Minecraft Snapshot 23w45a
-
-We're happy to share another snapshot, this time offering an early look at some exciting new adventures waiting for you underground in the form of Trial Chambers!
-
-Trial Chambers are designed to be challenging moments of combat and exploration hidden medium-deep below the surface of the Overworld. Trial Chambers bring new decorative and lighting blocks, new Trial Spawners to deliver a different style of multi-mob fights, and the bushy-browed Breeze, a new mob specific to Trial Chambers which will add quite a bit of chaos to your combats.
-
-Happy Mining!
-
-## Changes
-
--   Monster Spawner now renders their inner faces when looking inside
-
-## Technical Changes
-
--   The Data Pack version is now 24
--   The Resource Pack version is now 21
-
-## Data Pack Version 24
-
--   Added experimental Breeze mob
--   Added experimental Trial Spawner block
--   Increased maximum value of Jigsaw structure variable `size` from 7 to 20
--   Added `trial_chambers_copper_bulb_degradation` structure processor list
-
-## Resource Pack Version 21
-
--   `uniform` font has been updated to use Unifont 15.1.04 (from 15.0.06)
--   The only supported texture format is now .png
-
-### Breeze Mob
-
--   Added entity models and textures for experimental Breeze mob:
-    -   `breeze`, `wind_charge`
--   Added shader:
-    -   `breeze_wind`
-
-## Experimental Features
-
-### Added Breeze mob
-
--   The Breeze is a cunning, hostile mob that can spawn via Trial Spawner in some rooms within the Trial Chambers
--   The Breeze moves primarily by leaping around the target, sometimes jumping quite long distances
--   An aggressive adversary, the Breeze shoots volatile wind energy in the form of wind charge projectiles at its target
--   Wind charges deal a small amount of damage when colliding directly with an entity
--   After colliding with an entity or a block, wind charge projectiles produce a wind burst, which knocks back entities in the area by several blocks
--   Wind bursts also have the effect of 'activating' certain blocks:
-    -   Non-Iron Doors and Trapdoors are flipped
-    -   Fence Gates are flipped
-    -   Buttons are pressed
-    -   Levers are flipped
-    -   Bells are rung and swung
-    -   Lit Candles (both standalone and on cake) are extinguished
--   Wind bursts do not have any effect on Iron Doors, Iron Trapdoors, or any block being held in its position by a Redstone signal
-
-### Trial Spawner
-
--   Trial Spawner is a new variant of Monster Spawners that ejects rewards upon completion and can have variable levels of challenge in multiplayer
--   The challenge level will increase for each new player a Trial Spawner notices nearby
-    -   Challenge level will not decrease until it is reset during a Trial Spawner's cooldown
--   Unlike normal spawners, a Trial Spawner will spawn a limited number of mobs proportional to its current challenge level
-    -   It can only spawn a mob at positions that are within line of sight
-    -   It can spawn a mob regardless of any light level requirement the mob has
-    -   Spawned mobs are persistent
--   Once all mobs are defeated, the Trial Spawner will eject a set of rewards proportional to the current challenge level
-    -   After the rewards have been ejected, the Trial Spawner goes into cooldown for 30 minutes during which it will no longer spawn mobs
--   Trial Spawners cannot be crafted nor obtained by players in Survival - instead, they can be found naturally placed throughout Trial Chambers
--   Trial Spawners are extremely slow to mine and resistant to explosions, and will not drop even with Silk Touch
--   When placed in Creative, Trial Spawners have no mob type set by default
-    -   The mob type can be set by interacting with it while holding a Spawn Egg
--   Creative and Spectator players cannot be detected or noticed by Trial Spawners
-
-### Trial Chambers
-
--   Trial Chambers are a new structure in the Overworld where players can explore and take on combat challenges during the mid-game
-    -   Trial Chambers are made out of a variety of Copper and Tuff blocks and can be found in different sizes from large to small
-    -   Trial Chambers are a relatively common find throughout the Deepslate layer of the underground
--   The layout of each Trial Chamber is procedurally generated, and can include traps, reward chests and a variety of combat spaces
-    -   Supply chests can be found between different rooms, and give you blocks and items which help you navigate your trials
-    -   Reward chests are guarded by challenges in each room, and can be a source of many high level enchanted books and equipment
-    -   The loot found in reward chests are still being iterated, and are absolutely not final
--   Each Trial Chamber will include Trial Spawners with a melee, small melee, or ranged category:
-    -   Melee
-        -   Zombie
-        -   Husk
-        -   Slime
-    -   Small Melee
-        -   Spider
-        -   Cave Spider
-        -   Baby Zombie
-        -   Silverfish
-    -   Ranged
-        -   Skeleton
-        -   Stray
-        -   Skeleton with Poison Tipped Arrows
--   Each Trial Spawner category will only use one mob for the entire structure when generated, and these mobs are randomized for each Trial Chamber
-    -   For example, one Trial Chamber might only spawn Zombies, Cave Spiders and Strays, while another might only spawn Slimes, Silverfish and Skeletons
-    -   The exceptions to this are some Trial Spawners in unique rooms which always spawn Breezes
-
-**Known issues**
-
--   The corridors sometimes end with a dead end
--   Aquifers, Lush Caves, and Sculk Veins sometimes intersect with the Trial Chamber
-
-### Trial Key
-
--   An item that can only be obtained from Trial Spawners
--   Trial Keys do not currently have any functionality
-
-## Fixed bugs in Snapshot 23w45a
-
--   [MC-131646](https://bugs.mojang.com/browse/MC-131646) Drowned spawners only work in biomes where drowned spawn
--   [MC-177446](https://bugs.mojang.com/browse/MC-177446) "RootVehicle" tag in playerdata entry is not upgraded
--   [MC-186797](https://bugs.mojang.com/browse/MC-186797) Functioning clock and compasses in crafting output slot
--   [MC-255244](https://bugs.mojang.com/browse/MC-255244) NBT link/reference when using /fill
--   [MC-265702](https://bugs.mojang.com/browse/MC-265702) Text components in commands accept malformed JSON
--   [MC-265747](https://bugs.mojang.com/browse/MC-265747) Punching a TNT Minecart in creative mode drops the minecart
--   [MC-265875](https://bugs.mojang.com/browse/MC-265875) Compasses, Clocks and Recovery Compasses work normally within the output slot of the crafter
--   [MC-266054](https://bugs.mojang.com/browse/MC-266054) Side Water texture on Copper bulbs
--   [MC-266056](https://bugs.mojang.com/browse/MC-266056) Mobs suffocate inside most copper grate block variants
--   [MC-266063](https://bugs.mojang.com/browse/MC-266063) Copper Doors and Trapdoors make generic metal sounds when placing
--   [MC-266090](https://bugs.mojang.com/browse/MC-266090) Light can pass through copper bulbs
--   [MC-266091](https://bugs.mojang.com/browse/MC-266091) Copper Bulbs do not cull faces correctly
--   [MC-266096](https://bugs.mojang.com/browse/MC-266096) Mobs can spawn on oxidized or waxed copper grates
--   [MC-266248](https://bugs.mojang.com/browse/MC-266248) No error message when granting/revoking an advancement that is already granted/revoked
--   [MC-266256](https://bugs.mojang.com/browse/MC-266256) Accessibility button in the Welcome screen still needs its own string
--   [MC-266287](https://bugs.mojang.com/browse/MC-266287) Can't load .dat and .nbt files (server list & saved hotbar)
--   [MC-266289](https://bugs.mojang.com/browse/MC-266289) Could not save data raids.dat and random;;_;;sequences.dat
-
----
-
-# Minecraft Snapshot 23w44a
-
-In this week's Snapshot we're taking a break from new features to improve ones we've already added, including fixes to Commands and the ability to use Loot Tables with Decorated Pots.
-
-## Changes
-
--   Copper Doors & Copper Trapdoors has updated textures
-
-## Technical Changes
-
--   The Data Pack version is now 23
-
-## Data Pack Version 23
-
--   Decorated Pots can now utilize loot tables and will read from the `LootTable` tag key
--   Additional changes to command functions
-
-### Commands
-
-**`tick`**
-
--   The `<time>` parameter in the `tick step` command is now optional. The default value is 1
-
-**`return`**
-
--   `return run` will now always return
-    -   If there are no valid results from returned command, function containing `return run` will fail (i.e. `success=0` and `result=0`)
--   `return run` will now propagate success value together with results value (previously it always set success to `1`)
--   `return run` now also allows storing values - that means `execute store ... run return run some_command` will both store value and return it outside function
--   New subcommand `return fail` is added to make whole function fail (i.e. return `success=0` and `result=0`)
-
-**`function`**
-
--   If `function <function tag>` runs multiple functions in combination with `return run`, execution will stop after first `return` in any of the functions
--   A single call to the `function` command will always have return when run with `return run`
-    -   For example, `return run execute [split context] run function <some function with conditional return>` will always return after processing the first context
-
-**`execute if|unless function`**
-
--   `execute if|unless function` will no longer always fail if all functions had no return
-    -   If there were no `returns` in called functions, `if` will fail and `unless` will pass
-    -   First `return` in any of called functions will return (for a single context)
-
-## Fixed bugs in Snapshot 23w44a
-
--   [MC-219293](https://bugs.mojang.com/browse/MC-219293) When teleporting via Chorus Fruit, the burping and teleporting sounds play at the wrong location
--   [MC-265805](https://bugs.mojang.com/browse/MC-265805) Executing a tail-recursive function consumes memory resources linearly with recursion depth
--   [MC-266052](https://bugs.mojang.com/browse/MC-266052) Subtitles for turning copper bulb on or off display raw translation string
--   [MC-266053](https://bugs.mojang.com/browse/MC-266053) Subtitles for opening or closing a copper trapdoor display raw translation string
--   [MC-266064](https://bugs.mojang.com/browse/MC-266064) Footsteps on Polished Tuff create missing subtitle
--   [MC-266084](https://bugs.mojang.com/browse/MC-266084) Top of copper doors include an open part of the window
--   [MC-266086](https://bugs.mojang.com/browse/MC-266086) Tuff bricks do not properly align with other bricks
--   [MC-266105](https://bugs.mojang.com/browse/MC-266105) Bat head upside down when spawned while ticks are frozen
--   [MC-266112](https://bugs.mojang.com/browse/MC-266112) New Bat's ears are lower than the official render and Bedrock's
--   [MC-266117](https://bugs.mojang.com/browse/MC-266117) Chiseled copper cannot be stonecut from cut copper blocks
--   [MC-266147](https://bugs.mojang.com/browse/MC-266147) Copper Door item texture is inconsistent with the block
--   [MC-266197](https://bugs.mojang.com/browse/MC-266197) The "Transfer Now" button in the realms menu cannot be selected via keyboard navigation
--   [MC-266215](https://bugs.mojang.com/browse/MC-266215) The pivot point of the head of the new bats is different from that of Bedrock's
-
----
-
-# Minecraft Snapshot 23w43b
-
-We're now releasing a second snapshot for the week to fix some crashes.
-
-## Bug Fixes
-
--   Fixed a crash on server startup
--   Fixed a crash when leaving the "Configure Realm" screen
 
 ---
 

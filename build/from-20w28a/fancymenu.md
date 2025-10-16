@@ -163,460 +163,199 @@ Cross-platform server jar:
 
 ---
 
-# Minecraft Snapshot 20w22a
+# Minecraft 1.16 Release Candidate
 
-It has been a busy week for us but we still wanted to squeeze out a snapshot as we've been busy squashing a bunch of bugs.
+Out with the old, and in with the new! Today we're introducing a new naming convention (well, it's been a while) for Minecraft Java Edition. Previously, the last pre-release was, in fact, the release candidate, but we're now making that more clear by changing the name to be "release candidate". This means that if there are no major issues following this release, no further changes will be done before the full release.
 
-## Experimental Rendering Changes
+Speaking of the full release: In case you've been living under a rock (it's Minecraft, so that's OK), [we're releasing the Nether Update on Tuesday, June 23](https://www.minecraft.net/article/the-nether-update-has-date-). That's next week!
 
-We've included some experimental changes to graphics rendering in this snapshot, which might reveal some issues on a small number of older graphics cards.
+## Fixed Bugs in 1.16 Release Candidate 1
 
-If do you find any new graphical bugs then please report them to the bug tracker with the make and model of your graphics card as well as which operating system you are using ​
-
-## New Features in 20w22a
-
-​
-
--   Piglins now sometimes dance in celebration of a completed hunt
-
-​
-
-## Changes in 20w22a
-
-​
-
--   Villager workstation logic changes
--   Bells can be hung from the underside of more blocks
--   When a villager that was traded with is struck by lightning, the witch it is converted to will no longer despawn
--   Players can no longer mount another entity when the crouch key is held down
-
-​
-
-### Villager Workstation Logic
-
-​
-
--   Villagers no longer try to work at the same workstation
--   The most experienced nearby villager for the profession corresponding to the workstation you add will get the workstation
--   Villagers now have to walk to and reach the workstation before they can acquire the profession / work there
--   Villagers can no longer claim workstations / professions during raids or night time.
--   Villagers will check and make sure their workstation is valid at all times of day as long as they are within 16 blocks of their workstation.
-
-​
-
-## Technical Changes in 20w22a
-
-​
-
--   Slightly changed datapack loading to prevent custom datapacks from crashing
--   Cached repeated block type lookups and collisions during pathfinding for increased performance
--   Minor optimizations in collision detection
--   Top level element in predicate file can now be array (all contents will be ANDed)
--   Added shader support for accessing depth buffer.
--   Renderer now uses per-pixel blending layers for some transparent elements.
-
-​
-
-### Datapack loading
-
-​
-
--   If datapack reload fails, changes will not be applied and game will continue using previous data
--   If existing datapacks prevent world from loading, game will give option to load world in safe mode, which loads only vanilla datapack
--   Changes to datapack list are stored only after successful reload
--   Added `--safeMode` option to server to load only with vanilla datapack
--   Game will now detect critical datapack issues, like missing required tags and prevent world from being loaded
-
-​
-
-## Fixed bugs in 20w22a
-
--   [MC-667](https://bugs.mojang.com/browse/MC-667) Lily pads can be placed intersecting entities
--   [MC-4065](https://bugs.mojang.com/browse/MC-4065) Messages/commands sent while in a bed won't be remembered in sent history
--   [MC-112131](https://bugs.mojang.com/browse/MC-112131) Intersecting dungeons: spawner replaced by cobblestone
--   [MC-118594](https://bugs.mojang.com/browse/MC-118594) Removal of Log4J2Plugins.dat causing a slowdown of 3 secs on startup while it has to rescan all classes
--   [MC-120805](https://bugs.mojang.com/browse/MC-120805) Pig rotation is wrong when you see a player riding them with carrot on a stick
--   [MC-124812](https://bugs.mojang.com/browse/MC-124812) Endermen holding a block can despawn
--   [MC-125006](https://bugs.mojang.com/browse/MC-125006) Stronghold and dungeon generate over each other
--   [MC-134755](https://bugs.mojang.com/browse/MC-134755) All short mobs drown just below the surface of water
--   [MC-143443](https://bugs.mojang.com/browse/MC-143443) Redstone dust block states don't update properly if the wire is broken by a piston
--   [MC-148893](https://bugs.mojang.com/browse/MC-148893) Fox spawners do not render the fox inside of the block
--   [MC-150806](https://bugs.mojang.com/browse/MC-150806) Multiple villagers are attached to the same profession block
--   [MC-153787](https://bugs.mojang.com/browse/MC-153787) Zombie Reinforcements can spawn on glass
--   [MC-156161](https://bugs.mojang.com/browse/MC-156161) Some chest loot is randomized across the same seed, unlike before 1.14
--   [MC-156866](https://bugs.mojang.com/browse/MC-156866) Villagers level from Apprentice to Journeyman with less experience than shown by XP bar
--   [MC-157303](https://bugs.mojang.com/browse/MC-157303) Villagers wake up and seek a new "home" (bed) while living in a 2 high house
--   [MC-157436](https://bugs.mojang.com/browse/MC-157436) Player position is constantly reset when clicking with a sword or a trident onto the ground in creative mode
--   [MC-162340](https://bugs.mojang.com/browse/MC-162340) World border is rendered behind transparent blocks
--   [MC-162665](https://bugs.mojang.com/browse/MC-162665) Food does not drop from a campfire when it is put out with a shovel/water bottle
--   [MC-163910](https://bugs.mojang.com/browse/MC-163910) Hand animation sometimes plays for a second time with high ping
--   [MC-164233](https://bugs.mojang.com/browse/MC-164233) "Skilled" villagers without job site do not get precedence over unemployed villagers
--   [MC-165549](https://bugs.mojang.com/browse/MC-165549) Arm swing animation is still played when drinking an item
--   [MC-166135](https://bugs.mojang.com/browse/MC-166135) Bees inside a nest/hive don't grow up or get their breeding timer reset
--   [MC-167039](https://bugs.mojang.com/browse/MC-167039) Right-clicking on a spawner with the same mob spawn egg as in spawner plays hand animation
--   [MC-169891](https://bugs.mojang.com/browse/MC-169891) Zombie Reinforcements can spawn in regardless if light level is higher than 9 in nether (hard difficulty)
--   [MC-171515](https://bugs.mojang.com/browse/MC-171515) Semi-transparent items don't render properly in front of semi-transparent blocks
--   [MC-171553](https://bugs.mojang.com/browse/MC-171553) Basalt can generate inside Nether fortresses
--   [MC-172079](https://bugs.mojang.com/browse/MC-172079) The /clear command output doesn't count items in the inventory crafting grid
--   [MC-172142](https://bugs.mojang.com/browse/MC-172142) Items are invisible while being picked up
--   [MC-172197](https://bugs.mojang.com/browse/MC-172197) Nylium is not dropping netherrack when it is broken by pickaxe
--   [MC-172272](https://bugs.mojang.com/browse/MC-172272) /clear removes all items from crafting grid regardless of item type
--   [MC-172479](https://bugs.mojang.com/browse/MC-172479) Hoglins immediately attack invisible players
--   [MC-172980](https://bugs.mojang.com/browse/MC-172980) Light does not propagate across chunk borders properly
--   [MC-173032](https://bugs.mojang.com/browse/MC-173032) Fossils can overwrite the stronghold end portal
--   [MC-173063](https://bugs.mojang.com/browse/MC-173063) Redstone wire doesn't update connections going up or down when being placed by commands
--   [MC-173197](https://bugs.mojang.com/browse/MC-173197) Zombified Piglin does not hold its arms upwards like a zombie
--   [MC-173404](https://bugs.mojang.com/browse/MC-173404) Desync when mounting an entity while sneaking
--   [MC-173552](https://bugs.mojang.com/browse/MC-173552) Nether Fossil support islands are sometimes cut off at chunk borders
--   [MC-174307](https://bugs.mojang.com/browse/MC-174307) Nether fossil stops basalt pillar
--   [MC-174325](https://bugs.mojang.com/browse/MC-174325) Mushrooms or Nether fungi can replace the stem of large nether fungi (trees)
--   [MC-174692](https://bugs.mojang.com/browse/MC-174692) Shroomlights, wart blocks and vines can overwrite the stem of large Nether fungi
--   [MC-174932](https://bugs.mojang.com/browse/MC-174932) Right-to-left text appears left-to-right after game start until language is changed
--   [MC-175553](https://bugs.mojang.com/browse/MC-175553) Piglins don't drop their inventories when converted to zombified piglins
--   [MC-176020](https://bugs.mojang.com/browse/MC-176020) If a player is riding a strider, other players can not see the animation of the strider
--   [MC-176051](https://bugs.mojang.com/browse/MC-176051) Glowstone in the offhand sets spawn point and charges respawn anchor at the same time
--   [MC-176147](https://bugs.mojang.com/browse/MC-176147) Basalt randomly gets cut off
--   [MC-176628](https://bugs.mojang.com/browse/MC-176628) Frost Walker protects player from fire
--   [MC-177150](https://bugs.mojang.com/browse/MC-177150) Ticking entity java.lang.IllegalStateException: Tag minecraft:fire used before it was bound
--   [MC-177265](https://bugs.mojang.com/browse/MC-177265) Piglin and Zombified Piglin right arm/leg/loincloth textures are identical to the left ones
--   [MC-177626](https://bugs.mojang.com/browse/MC-177626) Spruce generation is broken
--   [MC-177870](https://bugs.mojang.com/browse/MC-177870) Soul campfire doesn’t deal twice the amount of damage as normal campfire
--   [MC-177888](https://bugs.mojang.com/browse/MC-177888) Blackstone can’t be used to repair stone tools and weapons using an anvil
--   [MC-177962](https://bugs.mojang.com/browse/MC-177962) Giant fungi can replace waterlogged blocks when growing
--   [MC-177970](https://bugs.mojang.com/browse/MC-177970) Player can occasionally be forced into crawling in one block tall spaces
--   [MC-178003](https://bugs.mojang.com/browse/MC-178003) Fossils can generate inside of desert temples
--   [MC-178441](https://bugs.mojang.com/browse/MC-178441) Endermen don't avoid the wither's skull projectiles
--   [MC-179020](https://bugs.mojang.com/browse/MC-179020) Jigsaw blocks do not disappear post-gen when structure is spawned using the 'Generate' action from an initial jigsaw
--   [MC-179890](https://bugs.mojang.com/browse/MC-179890) Fire stops ticking forever if gamerule doFireTick is set to false once
--   [MC-179909](https://bugs.mojang.com/browse/MC-179909) 2x2 trees sometimes fail to grow, but if they grow, they always grow on the surface
--   [MC-180098](https://bugs.mojang.com/browse/MC-180098) Farmer villagers' farming behavior is broken
--   [MC-180771](https://bugs.mojang.com/browse/MC-180771) Observer not updating when tree grows leaves in front of it
--   [MC-180877](https://bugs.mojang.com/browse/MC-180877) Fire does not spread from netherack to other blocks
--   [MC-181108](https://bugs.mojang.com/browse/MC-181108) Right-to-left text is displayed left-to-right at all times
--   [MC-181464](https://bugs.mojang.com/browse/MC-181464) When a piglin picks up a shield the gear equip sound is infinitely spammed
--   [MC-181529](https://bugs.mojang.com/browse/MC-181529) Ctrl + Pick Block no longer copies skull / head NBT data properly
--   [MC-181555](https://bugs.mojang.com/browse/MC-181555) When replacing a snow layer with a grass block, podzol or mycelium, the block has the "snowy=true" blockstate
--   [MC-182666](https://bugs.mojang.com/browse/MC-182666) Parity issue: Piglins do not have a dancing animation when celebrating their victory
--   [MC-182888](https://bugs.mojang.com/browse/MC-182888) Compasses and clocks work like normal in villager trading GUI
--   [MC-182919](https://bugs.mojang.com/browse/MC-182919) Horse armour stops rendering if you equip the horse with a saddle by right-clicking
--   [MC-182967](https://bugs.mojang.com/browse/MC-182967) Throwing ender pearl whilst mounted doesn't teleport you
--   [MC-183275](https://bugs.mojang.com/browse/MC-183275) Basalt pillars end above the lava in Java Edition but inside of the lava in Bedrock Edition
--   [MC-183374](https://bugs.mojang.com/browse/MC-183374) Text on signs stops rendering while still in view
--   [MC-183496](https://bugs.mojang.com/browse/MC-183496) Enchantment glint doesn't render in boat interior
--   [MC-183718](https://bugs.mojang.com/browse/MC-183718) Stronghold end portal can be overwritten by ocean ruins
--   [MC-183808](https://bugs.mojang.com/browse/MC-183808) "Bee Our Guest" advancement does not trigger when harvesting honey from bee nests
--   [MC-183860](https://bugs.mojang.com/browse/MC-183860) Zombie villager converted from villager gets PersistenceRequired depending on whether attacking zombie had it
--   [MC-184482](https://bugs.mojang.com/browse/MC-184482) End Gateways don't generate after defeating the ender dragon
--   [MC-184609](https://bugs.mojang.com/browse/MC-184609) Text renders in the wrong order
--   [MC-184619](https://bugs.mojang.com/browse/MC-184619) Piglins riding on other entities float
--   [MC-184629](https://bugs.mojang.com/browse/MC-184629) Piglins riding on hoglins or other piglins automatically dismount them
--   [MC-184730](https://bugs.mojang.com/browse/MC-184730) ;;[;;Crash;;];; "java.lang.NullPointerException: mouseClicked event handler" Some Superflat presets crash immediately when trying to generate them
--   [MC-184740](https://bugs.mojang.com/browse/MC-184740) Structures generated in previous versions are not recognised as valid structures, causing mobs not to spawn
--   [MC-184778](https://bugs.mojang.com/browse/MC-184778) Redstone dust can be toggled between cross and dot in adventure mode
--   [MC-184936](https://bugs.mojang.com/browse/MC-184936) Old Minecraft logo in the end poem/credits
--   [MC-185156](https://bugs.mojang.com/browse/MC-185156) Worldgen settings are not validated and can cause crashes
+-   Fixed issues with the Nether surface generation, causing issues like floating lava and crimson forests without nylium
+-   [MC-150543](https://bugs.mojang.com/browse/MC-150543) Using a stonecutter can sometimes crash the game in certain circumstances
+-   [MC-174790](https://bugs.mojang.com/browse/MC-174790) Mob on turtle eggs causes the game to crash
+-   [MC-181833](https://bugs.mojang.com/browse/MC-181833) Crash on world startup after playing world in 20w18a
 
 ---
 
-# Minecraft Snapshot 20w21a
+# Minecraft 1.16 Pre-Release 8
 
-In this snapshot, we're adding support for custom world settings and custom dimensions. This is an early release to hear your feedback about this feature - do note that this support is considered experimental and unsupported. Any custom world settings may change from one snapshot to the next, and worlds using custom settings will be clearly marked as experimental in your worlds list. ​
+Squish, squash is the sound bugs make when you squish them. Or was it squash them? Anyway, here's pre-release 8 with more bug fixes.
 
-## New Features in 20w21a
+## Fixed Bugs in 1.16 Pre-Release 8
 
-​
-
--   Added the ability to toggle redstone wire between a cross and a dot
--   Added import/export world settings functionality
--   Added a new disableMultiplayer command line option - when used, the Multiplayer button is disabled
--   Added a new disableChat command line option - when used, receiving and sending online chat is disabled
-
-​
-
-### Redstone Toggle
-
-​
-
--   When right clicking a single piece of redstone, it toggles between a the cross and the dot
--   A dot of redstone will not power its surrounding blocks
-
-​
-
-## Changes in 20w21a
-
-​
-
--   Piglins no longer walk around when admiring gold
--   If you hurt a piglin while it is admiring an ingot, the ingot will now disappear
--   Increased the chance of ores to generate in the Basalt Deltas to balance against the reduced amount of Netherrack in this biome
--   Lily pads are now considered junk fishing loot rather than treasure
--   Updated logos for Mojang Studios and Minecraft
--   Temporarily removed structure settings from flat level preset strings (workaround: use import/export settings functionality)
-
-​
-
-## Technical Changes in 20w21a
-
-​
-
--   Added the ability to control the height of the `spreadplayers` command
--   Added custom worlds and custom dimensions
-
-​
-
-### Commands
-
-​
-
-**`spreadplayers`**
-
-​ Added an optional argument to specify maximum height. New syntax: `spreadplayers <center> <spreadDistance> <maxRange> [under <maxHeight>] <respectTeams> <targets>` ​
-
--   `maxHeight` - Specifies the maximum height for resulting positions
-
-​
-
-**`locate`**
-
-​
-
--   Structure names are now specified as lowercase
-
-​
-
-### Custom Worlds
-
-​
-
--   Added experimental support for new custom worlds
--   Edit world screen now has an option to export world settings to a JSON file
--   During world creation you can import previously exported world settings
--   A bunch of new parameters are exposed, but marked as experimental, meaning you can play with them, but there is no guarantee that any of them will continue working (even in the next snapshot!)
--   Flat level preset string lost structure settings (they are now stored in a common format for all worlds), we will restore some form of this functionality soon
--   Buffet world can no longer be created from server.properties, flat level settings changed a bit; better support for custom world creation on the server is coming soon
-
-​
-
-## Fixed bugs in 20w21a
-
--   [MC-97247](https://bugs.mojang.com/browse/MC-97247) Map making sound uses equipment sound subtitle
--   [MC-97507](https://bugs.mojang.com/browse/MC-97507) Using item which modifies the held item shows "Gear equips" subtitle
--   [MC-107103](https://bugs.mojang.com/browse/MC-107103) Trying to interact with entity 3 or more blocks away without seeing its eyes only interacts client-side
--   [MC-113068](https://bugs.mojang.com/browse/MC-113068) Zombie banging on door subtitle is called "Block broken"
--   [MC-123155](https://bugs.mojang.com/browse/MC-123155) When any non-player entity enters an End portal the obsidian platform is not regenerated and the entity can fall into the void
--   [MC-147516](https://bugs.mojang.com/browse/MC-147516) Hostile mobs will sometimes stop attacking/following their target when directly next to it
--   [MC-166292](https://bugs.mojang.com/browse/MC-166292) Subtitle from foxes eating chorus fruit: "Player teleports"
--   [MC-169764](https://bugs.mojang.com/browse/MC-169764) Fish flopping sound shows 'Footsteps' subtitles
--   [MC-170930](https://bugs.mojang.com/browse/MC-170930) Nether Sprouts item not visible when held in the hand in first person
--   [MC-172090](https://bugs.mojang.com/browse/MC-172090) Piglins would rather hold a golden item instead of a crossbow
--   [MC-172207](https://bugs.mojang.com/browse/MC-172207) Parrots don't imitate hoglins, zoglins and piglins
--   [MC-172255](https://bugs.mojang.com/browse/MC-172255) Piglins immediately dismount any entity that they are riding
--   [MC-177075](https://bugs.mojang.com/browse/MC-177075) Taking product out of stonecutter produces no subtitle
--   [MC-177088](https://bugs.mojang.com/browse/MC-177088) Polar bear step sound does not have subtitles
--   [MC-177438](https://bugs.mojang.com/browse/MC-177438) Turtle egg's name inconsistently capitalized across different subtitles
--   [MC-177830](https://bugs.mojang.com/browse/MC-177830) Blackstone and basalt prevent Ancient Debris and other Nether ores from generating
--   [MC-178130](https://bugs.mojang.com/browse/MC-178130) Zombie Villagers are called "Zombie" in some subtitles
--   [MC-178212](https://bugs.mojang.com/browse/MC-178212) Nether planks, their variants, and hyphae are harder than stems
--   [MC-178298](https://bugs.mojang.com/browse/MC-178298) Ancient debris and nether gold ore can't generate in Basalt Deltas
--   [MC-180257](https://bugs.mojang.com/browse/MC-180257) Crash when setting LodestonePos of compass to something other than NBT compound
--   [MC-180852](https://bugs.mojang.com/browse/MC-180852) There is no space on the beacon's secondary power effects in the UI
--   [MC-181270](https://bugs.mojang.com/browse/MC-181270) Trying to open old worlds (in Region format?) without version information in snapshots does not show warning screen
--   [MC-181298](https://bugs.mojang.com/browse/MC-181298) Game crashes when trying to generate a nether biome superflat world with ruined portals
--   [MC-181463](https://bugs.mojang.com/browse/MC-181463) The buttons are not selected in the right order using Tab in the new world creation menus
--   [MC-181499](https://bugs.mojang.com/browse/MC-181499) Buckets cannot be emptied into a source block, but still produce a sound when trying
--   [MC-181511](https://bugs.mojang.com/browse/MC-181511) Chunks with redstone are removed
--   [MC-181522](https://bugs.mojang.com/browse/MC-181522) Chunks that haven't been explored since 1.13 are resetting
--   [MC-181611](https://bugs.mojang.com/browse/MC-181611) Vindicators stop attacking you when they are standing really close to you
--   [MC-182514](https://bugs.mojang.com/browse/MC-182514) 15 Block States per SubChunk Limit during World Upgrade
--   [MC-182743](https://bugs.mojang.com/browse/MC-182743) Wither skeletons don't spawn inside of wither roses
--   [MC-182912](https://bugs.mojang.com/browse/MC-182912) Piglins still do not change their current crossbow for a new enchanted one
--   [MC-183249](https://bugs.mojang.com/browse/MC-183249) Carving Mask BitSets created for lower chunk statuses
--   [MC-183786](https://bugs.mojang.com/browse/MC-183786) Named seeds that are not numbers are not being recognized
+-   [MC-114030](https://bugs.mojang.com/browse/MC-114030) Structure blocks take and apply NBT data of entities and tile entities directly instead of a copy when loading and saving structures
+-   [MC-127971](https://bugs.mojang.com/browse/MC-127971) Trying to throw a trident while having a shield or bow equipped will make the trident appear backwards in your hand
+-   [MC-153483](https://bugs.mojang.com/browse/MC-153483) When Swapping Tridents between hands the trident being held doesnt swap visually, it just flips backwards
+-   [MC-159820](https://bugs.mojang.com/browse/MC-159820) 3rd person reverse trident bug
+-   [MC-179309](https://bugs.mojang.com/browse/MC-179309) Trident animates backwards while eating
+-   [MC-187953](https://bugs.mojang.com/browse/MC-187953) Adding items to #minecraft:small;;_;;flowers item tag and feeding them to brown mooshrooms crashes the game
+-   [MC-188746](https://bugs.mojang.com/browse/MC-188746) Not selecting a biome for "Floating Islands" world type spawns an empty world
+-   [MC-188859](https://bugs.mojang.com/browse/MC-188859) Incorrect throwing animation for tridents
+-   [MC-189007](https://bugs.mojang.com/browse/MC-189007) When entering or leaving swimming mode both arms now move parallel instead of symmetrical
+-   [MC-189782](https://bugs.mojang.com/browse/MC-189782) Large ferns only drop one small fern when harvested
+-   [MC-189858](https://bugs.mojang.com/browse/MC-189858) Leads can disappear when transporting a mob through a nether portal
+-   [MC-189937](https://bugs.mojang.com/browse/MC-189937) Saddled pigs accumulate speed when ridden in water
+-   [MC-189970](https://bugs.mojang.com/browse/MC-189970) Selected worlds using keyboard nav does not enable world-specific options such as Play, Edit, Delete, and Re-Create
+-   [MC-189973](https://bugs.mojang.com/browse/MC-189973) ClassCastException when bee with passenger flies through village at night
+-   [MC-190005](https://bugs.mojang.com/browse/MC-190005) Piglins can spawn with gear with too many enchantments, including multiple enchantments of the same type
+-   [MC-190036](https://bugs.mojang.com/browse/MC-190036) Passive mobs do not spawn in floating island world type
+-   [MC-190124](https://bugs.mojang.com/browse/MC-190124) Grass decays too quickly when covered in water
+-   [MC-190166](https://bugs.mojang.com/browse/MC-190166) Game crashes when burning a tree in a custom dimension: java.lang.NullPointerException: Exception while ticking
 
 ---
 
-# Minecraft Snapshot 20w20b
+# Minecraft 1.16 Pre-Release 7
 
-This week we are releasing a bit of a smaller snapshot. However, if you're into switching game modes and completing advancements, this is right up your alley!
+We've now released pre-release 7 to fix a few more bugs.
 
-**Edit:** We've now released 20w20b to fix a bug
+## Fixed Bugs in 1.16 Pre-Release 7
 
-## Fixed Bug in 20w20b
-
--   [MC-183769](https://bugs.mojang.com/browse/MC-183769) NPE in server initialization
-
-## New Features in 20w20a
-
--   Added new Game Mode Switcher debug menu
--   Added new Nether Advancements
-
-​
-
-### Game Mode Switcher
-
-New F3 debug feature which allows you to switch game modes with traditional "tabbing" functionality. ​
-
--   Hold F3 and tap F4 to open the menu
--   Tapping F4 will cycle the game mode, or you can use the mouse
--   Release F3 to apply
--   Your last game mode is remembered and will be the first selected option, so you can quickly toggle between two game modes with a single press of F3 + F4!
-
-​
-
-**F3 + N (Toggle Spectator)**
-
-A small change has been made to this debug combination. ​
-
--   By default, using this key would return to Creative after toggling from Spectator. It now will toggle back to the previous game mode you had.
--   As an example, if you were in Survival, then toggled to Spectator and back, you would be set back to Survival.
-
-​
-
-### New Advancements
-
--   `Hidden in the Depths` unlocks when obtaining Ancient Debris
--   `Cover Me in Debris` unlocks when obtaining full Netherite armor
--   `Country Lode, Take Me Home` unlocks when using a Compass on a Lodestone
--   `Who Is Cutting Onions?` unlocks when obtaining Crying Obsidian
--   `Not Quite "Nine" Lives` unlocks when setting a Respawn Anchor to the maximum
--   `This Boat Has Legs` unlocks when riding a Strider with a Fungus on a Stick
--   `Hot Tourist Destinations` unlocks when visiting all Biomes in the Nether
--   `Those Were the Days` unlocks when entering a Bastion
--   `War Pigs` unlocks when looting a chest in a Bastion
--   `Oh Shiny` unlocks when distracting an angry Piglin with gold
-
-​
-
-## Changes in 20w20a
-
--   The `Bullseye` advancement now unlocks when hitting the bullseye of a target block from at least 30 meters away
--   The `Serious Dedication` advancement is now awarded for obtaining a Netherite Hoe
--   Obtaining Blackstone now also counts for the `Stone Age` advancement
--   Breeding Striders now counts for `The Parrots and the Bats` and is now required for `Two by Two`
-
-​
-
-## Technical Changes in 20w20a
-
--   Shulkers with "NoAI" can now be summoned with rotation.
--   Added `thrown_item_picked_up_by_entity` advancement trigger
--   Added `player_generates_container_loot` advancement trigger
--   Added `item_used_on_block` advancement trigger
--   Removed `safely_harvest_honey` advancement trigger
-
-​
-
-### Advancements
-
-**`item_used_on_block` trigger type**
-
-Properties:
-
--   `item` matches the thrown item which was picked up
--   `entity` matches the entity which picked up the item
-
-​
-
-**`player_generates_container_loot` trigger type**
-
-Properties:
-
--   `loot_table` matches the resource location of the generated loot table
-
-​
-
-**`item_used_on_block` trigger type**
-
-Properties:
-
--   `location` matches the location at the center of the block the item was used on
--   `item` matches the item used on the block
-
-​
-
-### Miscellaneous trigger changes
-
--   `location` got a new property `smokey` which checks if the location is closely above a campfire
--   `entity_properties` got new properties `vehicle` and `targetedEntity` which match the vehicle or the entity targeted by a mob
-
-​
-
-## Fixed bugs in 20w20a
-
--   [MC-182967](https://bugs.mojang.com/browse/MC-182967) Throwing ender pearl whilst mounted doesn't teleport you
--   [MC-179481](https://bugs.mojang.com/browse/MC-179481) Structure block offset can't be bigger than 32
--   [MC-175992](https://bugs.mojang.com/browse/MC-175992) Striders are not part of the "Two by Two" advancement challenge
--   [MC-173756](https://bugs.mojang.com/browse/MC-173756) Ice Bucket Challenge advancement can be obtained by collecting obsidian from bartering
--   [MC-173207](https://bugs.mojang.com/browse/MC-173207) Bullseye advancement can be made when using a non-arrow projectile, even though the description explicitly mentions arrows
--   [MC-118234](https://bugs.mojang.com/browse/MC-118234) Advancement 'Not Today, Thank You' can be triggered by non-arrow projectiles
+-   [MC-176447](https://bugs.mojang.com/browse/MC-176447) Striders left/right leg uses the same texture
+-   [MC-180467](https://bugs.mojang.com/browse/MC-180467) World Border is no longer fully solid
+-   [MC-183673](https://bugs.mojang.com/browse/MC-183673) Skeletons not spawning frequently in Soul Sand Valley
+-   [MC-185126](https://bugs.mojang.com/browse/MC-185126) Unable to jump one block high from flowing lava that has level 3 or lower
+-   [MC-186228](https://bugs.mojang.com/browse/MC-186228) Zombified piglins' sleeve layers are not held upwards like their arms
+-   [MC-188552](https://bugs.mojang.com/browse/MC-188552) Zombified Piglins drop less XP than before
+-   [MC-188838](https://bugs.mojang.com/browse/MC-188838) Heads and skulls on a wall cause z-fighting
+-   [MC-189824](https://bugs.mojang.com/browse/MC-189824) Overworld/general gameplay music can play in the nether in creative mode
+-   [MC-189846](https://bugs.mojang.com/browse/MC-189846) Turtle eggs hatching broken, game checking for sand one block too deep
+-   [MC-189856](https://bugs.mojang.com/browse/MC-189856) Unable to set nether portal block with /setblock or /fill
+-   [MC-189867](https://bugs.mojang.com/browse/MC-189867) Cannot use /setblock and /fill to place blocks in positions they cannot normally be in
+-   [MC-189868](https://bugs.mojang.com/browse/MC-189868) Player gets set on fire and extinguished continuously when standing in fire in Creative mode
+-   [MC-189895](https://bugs.mojang.com/browse/MC-189895) Redstone in jungle temple / pyramid no longer connects to blocks and redstone components properly
+-   [MC-189905](https://bugs.mojang.com/browse/MC-189905) The player can get stuck inside of the world border
+-   [MC-189971](https://bugs.mojang.com/browse/MC-189971) Clicking the "Take me back" button causes translucent blocks to stop rendering
 
 ---
 
-# Minecraft Snapshot 20w19a
+# Minecraft 1.16 Pre-Release 6
 
-This snapshot contains another round of tweaks and bugfixes, but also quality of life features such as **strider distancing**. It might not be as important as social distancing, but we hope you'll like it. Stay safe and wash your hands!
+Start your new week by not slipping and sliding on blocks that should not be slippy or slidey - we've now released pre-release 6 for Minecraft Java Edition 1.16.
 
-## New Features in 20w19a
+## Changes in 1.16 Pre-Release 6
 
--   Added "distance by strider" statistic
--   Patches of blackstone and gravel now generate in all Nether biomes, and patches of soul sand now generate in Soul Sand Valleys
+-   Tweaked map colours of crimson and warped materials
+-   There is now a text that says "Search..." in the recipe book that higlights that you can... search...
+-   Opening the game mode switcher now has a default selection if you have not entered a different game mode before in that world.
+    -   In this scenario, by default, you will now select Creative if currently in any other game mode, and Survival if currently in Creative
 
-​
+## Technical Changes in 1.16 Pre-release 6
 
-## Changes in 20w19a
+​ Added `player_interacted_with_entity` advancement trigger
 
--   Villagers can now spawn iron golems regardless of their profession status or latest working time
--   Bastions are now a bit less common
--   Lowered the amount that Weeping and Twisting vines grow when bonemealed
--   You now need to use shears to get an item when breaking Nether Sprouts
--   Tweaked spawning of mobs to more closely adhere to mob caps
--   Biome distribution in the Nether has been tweaked
+-   `item` matches the item which was in the player's hand during interaction
+-   `entity` matches the entity which was interacted with
 
-## Technical Changes in 20w19a
+## Fixed Bugs in 1.16 Pre-Release 6
 
--   Fish now have their own mob category and mob cap
+-   [MC-45749](https://bugs.mojang.com/browse/MC-45749) Potion particles spread always from the north-west corner of a block, regardless of impact
+-   [MC-163333](https://bugs.mojang.com/browse/MC-163333) Plains houses and decorations can generate in taiga villages
+-   [MC-166593](https://bugs.mojang.com/browse/MC-166593) Zombie villagers in zombie villages aren't persistent
+-   [MC-167386](https://bugs.mojang.com/browse/MC-167386) binding hotbar hotkeys to mouse thumb button won't interact the way it should
+-   [MC-167554](https://bugs.mojang.com/browse/MC-167554) Enchantment glint on shields is rendered incorrectly
+-   [MC-171543](https://bugs.mojang.com/browse/MC-171543) Ravagers can easily be knocked back with the knockback enchantment
+-   [MC-172027](https://bugs.mojang.com/browse/MC-172027) Datafixer for minecraft:recipes/misc/composter advancement is missing
+-   [MC-172442](https://bugs.mojang.com/browse/MC-172442) Piglins don't spawn with enchanted gear
+-   [MC-172592](https://bugs.mojang.com/browse/MC-172592) Breaking a larger than normally possible Nether portal makes the game crash with a java.lang.StackOverflowError
+-   [MC-174279](https://bugs.mojang.com/browse/MC-174279) Baby piglins don't run from wither skeletons
+-   [MC-175993](https://bugs.mojang.com/browse/MC-175993) Enchantment glint of lodestone compass or enchanted compass/clock jumps when compass/clock rotates
+-   [MC-177929](https://bugs.mojang.com/browse/MC-177929) End gateways don't always teleport the player when throwing an ender pearl into it
+-   [MC-178573](https://bugs.mojang.com/browse/MC-178573) Piglins are afraid of extinguished soul campfires
+-   [MC-178947](https://bugs.mojang.com/browse/MC-178947) Explosion damage can be blocked by fire
+-   [MC-181465](https://bugs.mojang.com/browse/MC-181465) Bartering with a piglin with an equipped shield using right click deletes the shield instead of dropping it on the ground
+-   [MC-182309](https://bugs.mojang.com/browse/MC-182309) Command autocomplete doesn't sort strings that start with the given word to the top
+-   [MC-182325](https://bugs.mojang.com/browse/MC-182325) Iron golem causes lag when it can't attack its enemies
+-   [MC-183759](https://bugs.mojang.com/browse/MC-183759) Oh Shiny advancement doesn't activate when right clicking
+-   [MC-184277](https://bugs.mojang.com/browse/MC-184277) Last game mode for game mode switcher and F3 + N is always survival after relogging
+-   [MC-184813](https://bugs.mojang.com/browse/MC-184813) Superflat world corruption when converting the world
+-   [MC-186614](https://bugs.mojang.com/browse/MC-186614) New Nether mobs make too many noises under certain circumstances
+-   [MC-186617](https://bugs.mojang.com/browse/MC-186617) Zombified piglins sound angry too many times when hit constantly
+-   [MC-187031](https://bugs.mojang.com/browse/MC-187031) Piglin swinging animation does not match attacking or targeting animation
+-   [MC-187420](https://bugs.mojang.com/browse/MC-187420) Zombified piglins make angry sounds too frequently
+-   [MC-187490](https://bugs.mojang.com/browse/MC-187490) Piglins that pick up gold while pathfinding will continue pathfinding
+-   [MC-187522](https://bugs.mojang.com/browse/MC-187522) Server doesn't generate amplified / large biome worlds
+-   [MC-187622](https://bugs.mojang.com/browse/MC-187622) Piglins can still remove curse of binding enchanted helmets / carved pumpkins after they've inspected a golden helmet
+-   [MC-187853](https://bugs.mojang.com/browse/MC-187853) Water / Lava doesnt move entities unless they move first
+-   [MC-188581](https://bugs.mojang.com/browse/MC-188581) Glass placed in item frame isn't rendered properly
+-   [MC-188659](https://bugs.mojang.com/browse/MC-188659) New "swap items with offhand" feature doesn't work if the control is bound to the 4th or 5th mouse button
+-   [MC-188702](https://bugs.mojang.com/browse/MC-188702) When loading in a redstone dot via a structure block, the dot gets set to a redstone cross
+-   [MC-188987](https://bugs.mojang.com/browse/MC-188987) When standing on certain non-full blocks, the player gets pushed off if there is a lower area next to the block
+-   [MC-189081](https://bugs.mojang.com/browse/MC-189081) Chains create water sources
+-   [MC-189256](https://bugs.mojang.com/browse/MC-189256) Hoglin and zoglin tusks textures are not separate
+-   [MC-189326](https://bugs.mojang.com/browse/MC-189326) Lecterns don't stack with other lecterns after being placed down and broken
 
-​
+---
 
-## Fixed bugs in 20w19a
+# Minecraft 1.16 Pre-Release 5
 
--   [MC-87949](https://bugs.mojang.com/browse/MC-87949) The shield use statistic is not working
--   [MC-89956](https://bugs.mojang.com/browse/MC-89956) Levitation has no effect if gliding with elytra
--   [MC-116293](https://bugs.mojang.com/browse/MC-116293) Functioning clock and compass in recipe book
--   [MC-125613](https://bugs.mojang.com/browse/MC-125613) Datapack tag "stairs" does not use #wooden;;_;;stairs
--   [MC-145862](https://bugs.mojang.com/browse/MC-145862) Villagers try to sleep in occupied beds
--   [MC-152084](https://bugs.mojang.com/browse/MC-152084) Villagers occasionally stand up out of beds at night, then can never sleep in that bed again
--   [MC-152170](https://bugs.mojang.com/browse/MC-152170) When a villager takes the bed of another villager then the bed's previous owner will not look for a new bed
--   [MC-157077](https://bugs.mojang.com/browse/MC-157077) Villagers will not sleep in beds at night
--   [MC-158542](https://bugs.mojang.com/browse/MC-158542) Iron Golems don't stop spawning
--   [MC-160250](https://bugs.mojang.com/browse/MC-160250) Naturally generated villagers are not pathfinding towards their POI; POI detection range is too small
--   [MC-166764](https://bugs.mojang.com/browse/MC-166764) Villagers spawned on world generation have a lower follow range than villagers spawned by other means
--   [MC-170612](https://bugs.mojang.com/browse/MC-170612) Villagers spawned by meeting points have frozen AI and do not move when that chunk is freshly generated
--   [MC-172107](https://bugs.mojang.com/browse/MC-172107) Piglins and Hoglins don't get zombified in the end
--   [MC-172524](https://bugs.mojang.com/browse/MC-172524) Letters of name tag render inconsistently when sneaking (within the same name tag)
--   [MC-172899](https://bugs.mojang.com/browse/MC-172899) Piglins with blocks (pumpkins) equipped on their heads show z-fighting
--   [MC-173015](https://bugs.mojang.com/browse/MC-173015) Crimson roots, Warped roots, and Nether sprouts are not randomly offset
--   [MC-173115](https://bugs.mojang.com/browse/MC-173115) Mobs can spawn inside of wither roses
--   [MC-174568](https://bugs.mojang.com/browse/MC-174568) Rail updates are 3-4x times laggier since 1.13
--   [MC-174909](https://bugs.mojang.com/browse/MC-174909) Endermen don't teleport when on magma blocks
--   [MC-175251](https://bugs.mojang.com/browse/MC-175251) Fish are spawning in with extremely high numbers. Over 200 different entities of cod every five minutes
--   [MC-177839](https://bugs.mojang.com/browse/MC-177839) Blackstone and blackstone walls use the blackstone side face on the bottom, while blackstone stairs and slabs use the blackstone top face on the bottom
--   [MC-178487](https://bugs.mojang.com/browse/MC-178487) Saddles on untamed horses no longer render
--   [MC-179989](https://bugs.mojang.com/browse/MC-179989) Smithing Table and Anvil UI does not have "Inventory" title above player inventory
--   [MC-180064](https://bugs.mojang.com/browse/MC-180064) Piglins would rather use an unenchanted crossbow instead of an enchanted crossbow
--   [MC-180297](https://bugs.mojang.com/browse/MC-180297) Player name color in list appears too dark
--   [MC-180407](https://bugs.mojang.com/browse/MC-180407) Piglin bartering is limited to dropping a single item stack from the loot table
--   [MC-180410](https://bugs.mojang.com/browse/MC-180410) Enderman spawn rate seems very low on upgraded worlds
--   [MC-180575](https://bugs.mojang.com/browse/MC-180575) Dispensers now always plays "dispenser failed" when dispensing glowstone
--   [MC-181353](https://bugs.mojang.com/browse/MC-181353) Warped and Crimson Doors have no hinges
--   [MC-181418](https://bugs.mojang.com/browse/MC-181418) Entity names can no longer be colored
--   [MC-181424](https://bugs.mojang.com/browse/MC-181424) Fish (and other items from fishing) cannot be caught with a fishing rod
--   [MC-181461](https://bugs.mojang.com/browse/MC-181461) Enchantement glint doesn't render on shields, tridents and elytra
--   [MC-181479](https://bugs.mojang.com/browse/MC-181479) Map marker labels do not render properly
--   [MC-181524](https://bugs.mojang.com/browse/MC-181524) Redstone does not visually connect when going up soul sand
--   [MC-181566](https://bugs.mojang.com/browse/MC-181566) Powered redstone dust only generates particles at the center of the block
--   [MC-181944](https://bugs.mojang.com/browse/MC-181944) Font of category/section text in creative mode item selection screen is much thicker than in 1.15.2
--   [MC-182595](https://bugs.mojang.com/browse/MC-182595) Parity issue: Blackstone doesn't generate in ore veins in nether wastes
+Spend your weekend with this brand new fifth pre-release for Minecraft Java Edition 1.16 - it has a check to warn you not to try to run with too high graphics settings for your system and a bunch of bug fixes.
+
+## Changes in 1.16 Pre-Release 5
+
+-   Added a GPU warn list for graphics drivers that are known to have rendering issues with Fabulous graphics
+-   If your GPU driver is detected as problematic then a warning message will be displayed with details of the detected problem
+-   This warning message can be ignored, but support cannot be provided for graphics drivers on the warn list running Fabulous
+
+## Fixed Bugs in 1.16 Pre-Release 5
+
+-   [MC-141934](https://bugs.mojang.com/browse/MC-141934) Ctrl + Pick block on a lectern does not display its book despite being saved to NBT
+-   [MC-148955](https://bugs.mojang.com/browse/MC-148955) Iron golems can spawn inside of non-full blocks
+-   [MC-149308](https://bugs.mojang.com/browse/MC-149308) Thrown items appear right in front of head for a frame
+-   [MC-166276](https://bugs.mojang.com/browse/MC-166276) Thrown items and blocks sometimes appear black for an instant
+-   [MC-166413](https://bugs.mojang.com/browse/MC-166413) Item frame turns black for an instant when being placed
+-   [MC-166718](https://bugs.mojang.com/browse/MC-166718) Mobs no longer suffocate inside of soul sand, farmland or grass paths
+-   [MC-167359](https://bugs.mojang.com/browse/MC-167359) Items are bright for a brief moment after being broken
+-   [MC-167362](https://bugs.mojang.com/browse/MC-167362) Item frames are bright for a brief moment when placed
+-   [MC-177361](https://bugs.mojang.com/browse/MC-177361) Villagers/wandering traders don't flee away from zoglins
+-   [MC-180867](https://bugs.mojang.com/browse/MC-180867) Jukeboxes grabbed with an NBT+ picker do not release discs on right click.
+-   [MC-181605](https://bugs.mojang.com/browse/MC-181605) Right-clicking a Respawn Anchor with an item in off-hand uses that item
+-   [MC-182119](https://bugs.mojang.com/browse/MC-182119) Game mode description text is no longer centered and now extends off the screen in some languages
+-   [MC-183469](https://bugs.mojang.com/browse/MC-183469) Mobs do not pathfind around holes or lava
+-   [MC-185777](https://bugs.mojang.com/browse/MC-185777) Shift-clicking a netherite ingot in a smithing table moves the ingot to gear slot
+-   [MC-186206](https://bugs.mojang.com/browse/MC-186206) Water tinted rendered differently behind glass top versus sides
+-   [MC-188468](https://bugs.mojang.com/browse/MC-188468) User Control for "Swap Item with Offhand" gets reset when upgrading from 1.16pre-2 to 3
+-   [MC-188489](https://bugs.mojang.com/browse/MC-188489) "Switch item with offhand" inventory keyboard shortcut still works in Search Items creative tab, overriding text input
+-   [MC-188505](https://bugs.mojang.com/browse/MC-188505) Attacking an entity while sneaking cancels sneaking for a moment, then desyncs client and server about player's height
+-   [MC-188509](https://bugs.mojang.com/browse/MC-188509) Zombified Piglins drop experience but not gold ingots when they die while aggressive
+-   [MC-188542](https://bugs.mojang.com/browse/MC-188542) Custom world gen settings causes minecraft to crash upon import
+-   [MC-188633](https://bugs.mojang.com/browse/MC-188633) Small mobs drown while in boat
+-   [MC-188652](https://bugs.mojang.com/browse/MC-188652) Gamerules doMobLoot and doTileDrops have the same description in gamerule menu
+-   [MC-188655](https://bugs.mojang.com/browse/MC-188655) Number keys in Creative search override typing in the search bar, resulting in unintentional hotbar item switching
+-   [MC-188675](https://bugs.mojang.com/browse/MC-188675) Bed heads, tall flowers and bottom doors drop two items
+-   [MC-188678](https://bugs.mojang.com/browse/MC-188678) Milking a cow/mooshroom for milk or mushroom stew consumes the item without giving anything back
+-   [MC-188691](https://bugs.mojang.com/browse/MC-188691) Can no longer light Nether Portal using Fire Charge on the side of Obsidian
+
+---
+
+# Minecraft 1.16 Pre-Release 4
+
+We've now released Minecraft 1.16 Pre-release 4, with tweaked spawn rates and another round of bug fixes.
+
+## Changes in 1.16 Pre-Release 4
+
+-   Tweaked hostile spawn rates in Warped Forests and Soulsand Valleys
+
+## Fixed Bugs in 1.16 Pre-Release 4
+
+-   [MC-136085](https://bugs.mojang.com/browse/MC-136085) Blocks attached to multi-block blocks are deleted when breaking the other half of the block
+-   [MC-177463](https://bugs.mojang.com/browse/MC-177463) Crash report "Connection:" field contains unuseful value (Object.toString())
+-   [MC-179851](https://bugs.mojang.com/browse/MC-179851) Attribute generic.movement;;_;;speed does not work in /attribute
+-   [MC-180967](https://bugs.mojang.com/browse/MC-180967) Advancement description JSON can ignore the first specified color
+-   [MC-181498](https://bugs.mojang.com/browse/MC-181498) Using a fire charge on top of fire briefly creates another fire on top of it
+-   [MC-181556](https://bugs.mojang.com/browse/MC-181556) Baby Zombified Piglins float while riding striders
+-   [MC-181576](https://bugs.mojang.com/browse/MC-181576) Worlds which are already open in another instance of Minecraft can be selected with arrow keys and tab
+-   [MC-184613](https://bugs.mojang.com/browse/MC-184613) End Stone generates in Floating Islands setting
+-   [MC-184644](https://bugs.mojang.com/browse/MC-184644) Cave buffet generator generates with netherrack, even if using a non-nether biome
+-   [MC-186468](https://bugs.mojang.com/browse/MC-186468) Although reload failed, the game will also tell you "Disabled data pack ;;[;;XXX;;];;"
+-   [MC-187419](https://bugs.mojang.com/browse/MC-187419) Hand animation is not played when feeding horses or donkeys with golden carrots
+-   [MC-188352](https://bugs.mojang.com/browse/MC-188352) Creative mode cow milking / mushroom stewing inconsistent with picking up placed fluids
+-   [MC-188451](https://bugs.mojang.com/browse/MC-188451) Game crashes when dispensing a shulker box from a dispenser "java.lang.NullPointerException: Exception while ticking"
+-   [MC-188463](https://bugs.mojang.com/browse/MC-188463) Transparent dropped items render in wrong order when behind entities when graphics setting is set to fabulous
+-   [MC-188467](https://bugs.mojang.com/browse/MC-188467) "Sound Director" in credits is too light compared to the rest of the text, and is missing an "S"
+-   [MC-188517](https://bugs.mojang.com/browse/MC-188517) Cannot create multiple empty tags in a datapack
+-   [MC-188519](https://bugs.mojang.com/browse/MC-188519) Clouds render on top of blocks
+-   [MC-188528](https://bugs.mojang.com/browse/MC-188528) Particles render on top of stained glass
 
 ---
 

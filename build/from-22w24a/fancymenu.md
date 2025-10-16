@@ -48,6 +48,244 @@ Accessed via the social interactions screen (default keybind is P).
 
 ---
 
+# Minecraft 1.19 Release Candidate 2
+
+1.19 release candidate 2 is now available which fixes a crash.
+
+---
+
+# Minecraft 1.19 Release Candidate 1
+
+We're now releasing the first (and hopefully only) release candidate for The Wild Update. If there are no major issues following this release, no further changes will be done before the full release.
+
+Happy mining!
+
+## Fixed Bugs in 1.19 Release Candidate 1
+
+-   [MC-252398](https://bugs.mojang.com/browse/MC-252398) Darkness effect fading in death screen causes subtle flashing
+
+---
+
+# Minecraft 1.19 Pre-Release 5
+
+The fifth pre-release for 1.19 is now available with more bug fixes.
+
+## Fixed bugs in 1.19 Pre-release 5
+
+-   [MC-249121](https://bugs.mojang.com/browse/MC-249121) Sculk is missing subtitles for some sounds
+-   [MC-249323](https://bugs.mojang.com/browse/MC-249323) Modifying a world preset to not include overworld settings will not give a datapack error, but selecting the world type will instantly crash your game
+-   [MC-250034](https://bugs.mojang.com/browse/MC-250034) Standing on top of mud as it converts to clay causes the player to fall through or be pushed out of the block
+-   [MC-250295](https://bugs.mojang.com/browse/MC-250295) Allay's head does not rotate to where it looks
+-   [MC-251030](https://bugs.mojang.com/browse/MC-251030) Standing on top of soul sand or mud that converts to sculk will cause entities to fall through it
+-   [MC-251323](https://bugs.mojang.com/browse/MC-251323) Mobs target emerging warden/ warden faces attacking mob while emerging if dealt melee damage
+-   [MC-251594](https://bugs.mojang.com/browse/MC-251594) Leads are leashed too high on allays
+-   [MC-252038](https://bugs.mojang.com/browse/MC-252038) Warden attacks immediately if hit during emerging animation
+-   [MC-252108](https://bugs.mojang.com/browse/MC-252108) Eating a food item no longer opens the piston doors in city;;_;;center;;_;;2
+-   [MC-252157](https://bugs.mojang.com/browse/MC-252157) 'CustomName' NBT tag still prevents wardens from digging down
+-   [MC-252352](https://bugs.mojang.com/browse/MC-252352) URL in eula.txt (dedicated server) points to the wrong location
+
+---
+
+# Minecraft 1.19 Pre-Release 4
+
+The fourth pre-release for 1.19 is now available with a few bugfixes.
+
+In case you missed it, we just announced the release date for the Wild Update (June 7th). You can read more about that [here](https://www.minecraft.net/article/the-wild-update-coming?ref=launcher).
+
+## Fixed bugs in 1.19 Pre-release 4
+
+-   [MC-220067](https://bugs.mojang.com/browse/MC-220067) - Chunk corruption with command block full of certain Unicode characters
+-   [MC-245504](https://bugs.mojang.com/browse/MC-245504) - Touchscreen mode crash // java.lang.ClassCastException: class eec$a cannot be cast to class eec$c (eec$a and eec$c are in unnamed module of loader 'app')
+-   [MC-249831](https://bugs.mojang.com/browse/MC-249831) - Aquifers can cut themselves off at chunk borders
+-   [MC-251840](https://bugs.mojang.com/browse/MC-251840) - Game crash whilst getting block state: cwj: Missing Palette entry for index 8
+-   [MC-251859](https://bugs.mojang.com/browse/MC-251859) - Gear equipping sound plays every time armor/elytra durability changes while equipped
+-   [MC-251989](https://bugs.mojang.com/browse/MC-251989) - Cannot send chats or use commands in multiplayer since 1.19 Pre-release 1
+
+---
+
+# Minecraft 1.19 Pre-Release 3
+
+It is now time for pre-release 3 for Minecraft 1.19, which will be our last pre-release for this week. In this pre-release we've tweaked the sonic boom attack and fixed more bugs.
+
+Enjoy!
+
+## Changes in 1.19 Pre-release 3
+
+-   Wardens' sonic boom attack now bypasses the damage reduction by armor enchantments such as Protection
+
+## Technical Changes in 1.19 Pre-release 3
+
+-   `item_interact_start` is no longer detectable as a vibration to allow more specific actions be detected, like `drink` or `eat`, but `item_interact_finish` still is
+
+## Fixed Bugs in 1.19 Pre-Release 3
+
+-   [MC-209932](https://bugs.mojang.com/browse/MC-209932) Sculk sensors only detect the last turtle egg being broken when being stepped on
+-   [MC-210277](https://bugs.mojang.com/browse/MC-210277) Sculk sensors are not activated upon chickens laying eggs
+-   [MC-210278](https://bugs.mojang.com/browse/MC-210278) Sculk sensors are not activated upon bees entering or leaving their hive or nest
+-   [MC-214622](https://bugs.mojang.com/browse/MC-214622) Sculk sensors do not detect daylight detector mode switching
+-   [MC-249094](https://bugs.mojang.com/browse/MC-249094) Unexpected culling of inner sculk shrieker faces
+-   [MC-249230](https://bugs.mojang.com/browse/MC-249230) Frogs prioritize eating entities over panicking when being damaged
+-   [MC-250162](https://bugs.mojang.com/browse/MC-250162) Placing a map in an item frame will break any intersecting paintings and item frames with a map inside
+-   [MC-250238](https://bugs.mojang.com/browse/MC-250238) Frogs attempt to pathfind to entities outside of their reach causing them to spin and twitch constantly
+-   [MC-250983](https://bugs.mojang.com/browse/MC-250983) Allays can get stuck and freeze inside non-full blocks
+-   [MC-251220](https://bugs.mojang.com/browse/MC-251220) Block lighting on extended parts are a lot darker in 22w17a compared to 1.18.2
+-   [MC-251420](https://bugs.mojang.com/browse/MC-251420) Demo Mode: The "Purchase Now!" link's destination is incorrect
+-   [MC-251858](https://bugs.mojang.com/browse/MC-251858) Subtitles are higher than in previous versions
+-   [MC-251872](https://bugs.mojang.com/browse/MC-251872) The game output and server console are logged with warnings regarding chat packets with invalid signatures when using entity selectors within commands
+-   [MC-251878](https://bugs.mojang.com/browse/MC-251878) Sculk sensors hearing items being dropped on the ground doesn't alert shriekers even if a player drops it
+-   [MC-251968](https://bugs.mojang.com/browse/MC-251968) /execute running chat related commands logs "Received chat packet without valid signature" warning
+-   [MC-252071](https://bugs.mojang.com/browse/MC-252071) Warden still detects after death if signal is traveling before death
+-   [MC-252078](https://bugs.mojang.com/browse/MC-252078) Allays no longer flee or panic when taking damage
+
+---
+
+# Minecraft 1.19 Pre-Release 2
+
+A recent change made it possible for more types of mobs to spawn inside Nether Portals, which caused them to instantly change dimensions after spawning. We will not be making any further changes to this before the release of 1.19, but our intent for the future is to prevent most mobs from spawning in Nether Portals and the ones that do will not immediately travel through the portal. Expect to see these changes in a coming version.
+
+## Changes in 1.19 Pre-release 2
+
+​
+
+-   If the Warden is stuck in a liquid, it will angrily despawn instead of digging
+-   Reverted using `generic equip` sound when equipping blocks in the head slot
+
+## Technical Changes in 1.19 Pre-release 2
+
+-   Added game event `teleport` with a vibration frequency of 5
+
+## Fixed bugs in 1.19 Pre-release 2
+
+-   [MC-186148](https://bugs.mojang.com/browse/MC-186148) "death.attack.witherSkull.item" displays raw translation string (is untranslated)
+-   [MC-186851](https://bugs.mojang.com/browse/MC-186851) "death.attack.sting.item" displays raw translation string (is untranslated)
+-   [MC-207268](https://bugs.mojang.com/browse/MC-207268) Sculk sensors don't detect stripping logs, tilling dirt, or pathing grass
+-   [MC-208759](https://bugs.mojang.com/browse/MC-208759) Sculk Sensor's 'block placed' doesn't trigger with villagers placing crops
+-   [MC-208760](https://bugs.mojang.com/browse/MC-208760) Sculk Sensor's 'block placed' doesn't trigger when snow golems place snow layers
+-   [MC-208761](https://bugs.mojang.com/browse/MC-208761) Sculk Sensor's 'block destroyed' doesn't trigger when blocks are destroyed by pistons
+-   [MC-209701](https://bugs.mojang.com/browse/MC-209701) Sculk sensors are not activated upon placing food onto campfires
+-   [MC-209900](https://bugs.mojang.com/browse/MC-209900) Sculk sensors are not activated upon inserting or retrieving music discs from jukeboxes
+-   [MC-210330](https://bugs.mojang.com/browse/MC-210330) Sculk sensors are not activated upon throwing eyes of ender
+-   [MC-210489](https://bugs.mojang.com/browse/MC-210489) Sculk sensors are not activated upon pointed dripstone filling partially filled cauldrons
+-   [MC-210496](https://bugs.mojang.com/browse/MC-210496) Sculk sensors are not activated upon harvesting sweet berry bushes
+-   [MC-210801](https://bugs.mojang.com/browse/MC-210801) Wool incorrectly occludes the vibration of item frames being placed
+-   [MC-212430](https://bugs.mojang.com/browse/MC-212430) Sculk sensors are not activated upon rain or snow filling partially filled cauldrons
+-   [MC-213387](https://bugs.mojang.com/browse/MC-213387) Sculk sensors don't detect endermen/shulkers teleporting from a place to another
+-   [MC-220086](https://bugs.mojang.com/browse/MC-220086) Sculk sensors do not detect using an axe to clear the wax/weathering of a copper block
+-   [MC-220087](https://bugs.mojang.com/browse/MC-220087) Sculk sensors do not detect using a honeycomb to wax copper
+-   [MC-249696](https://bugs.mojang.com/browse/MC-249696) Certain void worlds fail to spawn the player on the stone platform
+-   [MC-250259](https://bugs.mojang.com/browse/MC-250259) Warden AI doesn't function properly when it rides on entities
+-   [MC-250941](https://bugs.mojang.com/browse/MC-250941) Goats' horns don't snap on copper ore
+-   [MC-250956](https://bugs.mojang.com/browse/MC-250956) Baby goats with horns lose their horns when fed
+-   [MC-251314](https://bugs.mojang.com/browse/MC-251314) Goats loaded from older worlds lose their horns
+-   [MC-251336](https://bugs.mojang.com/browse/MC-251336) Darkness fog flashes at high duration values
+-   [MC-251412](https://bugs.mojang.com/browse/MC-251412) Warden afflicting Darkness to players in the same team
+-   [MC-251500](https://bugs.mojang.com/browse/MC-251500) Wardens ignore PersistenceRequired and dig away
+-   [MC-251601](https://bugs.mojang.com/browse/MC-251601) Darkness rendering incorrectly when reloading the game
+-   [MC-251639](https://bugs.mojang.com/browse/MC-251639) Warden emerging particles don't match up with block they emerge on the entire way
+-   [MC-251646](https://bugs.mojang.com/browse/MC-251646) "death.attack.sonic;;_;;boom.item" displays raw translation string (is untranslated)
+-   [MC-251670](https://bugs.mojang.com/browse/MC-251670) Villager sometimes won't refill their stock
+-   [MC-251675](https://bugs.mojang.com/browse/MC-251675) Mesa Mineshafts no longer generate with /place command outside of badlands biomes despite saying the structure has been generated successfully
+-   [MC-251736](https://bugs.mojang.com/browse/MC-251736) Reflected ghast fireball cannot hit the ghast
+-   [MC-251824](https://bugs.mojang.com/browse/MC-251824) Wardens aren't angered by being hit with damageless projectiles
+-   [MC-251854](https://bugs.mojang.com/browse/MC-251854) "It Spreads" advancement can be granted when killing a mob that does not give experience
+-   [MC-251859](https://bugs.mojang.com/browse/MC-251859) Gear equipping sound plays every time armor/elytra durability changes while equipped
+-   [MC-251860](https://bugs.mojang.com/browse/MC-251860) The minecraft:item.armor.equip;;_;;generic sound is produced when giving items to allays
+-   [MC-251862](https://bugs.mojang.com/browse/MC-251862) Shift clicking the destroy item button in the creative inventory creates a vibration when there is nothing in your equipment slots
+-   [MC-251864](https://bugs.mojang.com/browse/MC-251864) The minecraft:item.armor.equip;;_;;generic sound is produced when filling water buckets with fish, axolotls, or tadpoles
+-   [MC-251871](https://bugs.mojang.com/browse/MC-251871) The minecraft:item.armor.equip;;_;;generic sound is produced and can only be heard by other players when switching items between hands
+-   [MC-251876](https://bugs.mojang.com/browse/MC-251876) Villagers produce armor equipping sound when previewing armor
+-   [MC-251889](https://bugs.mojang.com/browse/MC-251889) io.netty.handler.codec.EncoderException when evaluating too many entity selectors in chat preview
+-   [MC-251890](https://bugs.mojang.com/browse/MC-251890) run;;_;;command click events send value as command instead of chat message
+-   [MC-251915](https://bugs.mojang.com/browse/MC-251915) Milking cows, mooshrooms and goats plays gear equipping sound
+-   [MC-251916](https://bugs.mojang.com/browse/MC-251916) Eating food items that return empty containers plays gear equipping sound
+-   [MC-251919](https://bugs.mojang.com/browse/MC-251919) Equipping a player head, skull or carved pumpkin displays the generic "Gear equips" subtitle
+-   [MC-251920](https://bugs.mojang.com/browse/MC-251920) Taking a plant from a pot plays the gear equipping sound and subtitle
+-   [MC-251921](https://bugs.mojang.com/browse/MC-251921) Equipping horse armor onto a horse plays the "Gear equips" sound
+-   [MC-251922](https://bugs.mojang.com/browse/MC-251922) "Gear equips" sound plays when equipping or removing a saddle from a horse wearing horse armor
+-   [MC-251924](https://bugs.mojang.com/browse/MC-251924) Gear equipping sounds and subtitles are played when foxes pick up any item
+-   [MC-251925](https://bugs.mojang.com/browse/MC-251925) Gear equipping sounds and subtitles are played when dolphins throw around items
+-   [MC-251927](https://bugs.mojang.com/browse/MC-251927) Gear equipping sounds and subtitles are played when CanPickUpLoot mobs pick up items
+-   [MC-251928](https://bugs.mojang.com/browse/MC-251928) Gear equips sound plays when filling a single bottle with honey
+-   [MC-251929](https://bugs.mojang.com/browse/MC-251929) Gear equips sound plays when filling a single bottle with water from a water source
+
+---
+
+# Minecraft 1.19 Pre-release 1
+
+Presenting the first pre-release of 1.19: The Wild Update!
+
+From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release ;)
+
+As always, a big thank you to the community for your feedback, bugs reported, and awesome ideas throughout the snapshot series. Let the pre-releases commence!
+
+## Changes in 1.19 Pre-release 1
+
+-   Slightly reduced the number of Mangrove trees in Mangrove Swamps
+-   Endermen, Skeletons, Wither Skeletons and Piglins now spawn in a wider range of light levels in the Nether (from light level 0 to 11)
+-   Item interaction vibrations are now emitted when you start or finish "using" an item with a start and finish state (such as Bows, Crossbows, Goat Horns, Shields, Food)
+-   Item interaction vibrations are now ignored when sneaking
+-   Placing items that aren't armor (such as Pumpkins and Skulls) in your headwear slot now plays a generic equip sound
+
+## Technical Changes in 1.19 Pre-release 1
+
+-   Auto-completion is now available for the template argument to `place template`
+-   Custom servers can now enable or disable chat preview for certain clients by sending a new network packet
+-   Now, a chat preview is also shown for chat-related commands, such as `/say` and `/msg`
+-   `test-rainbow-chat` has been removed from `server.properties`
+
+### Added Game Events
+
+-   `note_block_play` with a vibration frequency of 6
+-   `instrument_play` with a vibration frequency of 15
+
+## Fixed bugs in 1.19 Pre-release 1
+
+-   [MC-94060](https://bugs.mojang.com/browse/MC-94060) Equipping armor/elytra through inventory or dispenser doesn't play sounds
+-   [MC-134892](https://bugs.mojang.com/browse/MC-134892) PacketBuffer.writeString's max length is in bytes, while readString is in characters
+-   [MC-209222](https://bugs.mojang.com/browse/MC-209222) Attempting to open the Minecraft Realms menu claims that the client is outdated, even if the snapshot may be newer than the release
+-   [MC-210279](https://bugs.mojang.com/browse/MC-210279) Sculk sensors are not activated upon entities being summoned by a spawner
+-   [MC-213915](https://bugs.mojang.com/browse/MC-213915) Equipping armor through the inventory does not count as a vibration
+-   [MC-218222](https://bugs.mojang.com/browse/MC-218222) Distance value for Sculk Sensors is limited to integers
+-   [MC-225195](https://bugs.mojang.com/browse/MC-225195) Goats don't panic when tempted with their favorite food
+-   [MC-230735](https://bugs.mojang.com/browse/MC-230735) "FOV Effects" setting description is innacurate
+-   [MC-249141](https://bugs.mojang.com/browse/MC-249141) No subtitles are produced upon frogs stepping
+-   [MC-249164](https://bugs.mojang.com/browse/MC-249164) The entity.frog.tounge sound is misspelled
+-   [MC-249209](https://bugs.mojang.com/browse/MC-249209) Frogs don't panic when tempted with their favorite food
+-   [MC-249260](https://bugs.mojang.com/browse/MC-249260) Tadpoles are not tempted by slime balls
+-   [MC-249328](https://bugs.mojang.com/browse/MC-249328) Frogs can jump around while being tempted with slimeballs
+-   [MC-249456](https://bugs.mojang.com/browse/MC-249456) Tadpoles drop experience, unlike other baby mobs
+-   [MC-249619](https://bugs.mojang.com/browse/MC-249619) The comparator frequency of sculk sensors when you are stepping on it is the last frequency it heard
+-   [MC-249711](https://bugs.mojang.com/browse/MC-249711) Items collected off the ground by allays travel too high above their hitboxes
+-   [MC-249757](https://bugs.mojang.com/browse/MC-249757) 'It Spreads' advancement is not a child of 'Monster Hunter'
+-   [MC-249834](https://bugs.mojang.com/browse/MC-249834) Swapping items to the player's off-hand can generate vibrations
+-   [MC-249980](https://bugs.mojang.com/browse/MC-249980) The Birthday Song advancement description doesn't capitalise the word Cake
+-   [MC-250006](https://bugs.mojang.com/browse/MC-250006) ID of the british cat doesn't match texture name
+-   [MC-250019](https://bugs.mojang.com/browse/MC-250019) Sculk catalyst triggers when a villager converts into zombie villager by a zombie
+-   [MC-250317](https://bugs.mojang.com/browse/MC-250317) The subtitle for picking up a Tadpole with a bucket is the generic "Bucket fills" subtitle
+-   [MC-250351](https://bugs.mojang.com/browse/MC-250351) /tp "argument" duplicated on the tab options
+-   [MC-250919](https://bugs.mojang.com/browse/MC-250919) The server crashes when attempting to load chunks that contain command blocks that consist of large numbers of characters within the previous output field
+-   [MC-250932](https://bugs.mojang.com/browse/MC-250932) Goat horn subtitles are improperly capitalized
+-   [MC-250940](https://bugs.mojang.com/browse/MC-250940) Goat horn playing isn't detected as a vibration
+-   [MC-251132](https://bugs.mojang.com/browse/MC-251132) Server logs "Game test server" messages
+-   [MC-251312](https://bugs.mojang.com/browse/MC-251312) Entity selectors in /say commands are no longer evaluated
+-   [MC-251355](https://bugs.mojang.com/browse/MC-251355) Potted mangrove propagule model is incorrect
+-   [MC-251405](https://bugs.mojang.com/browse/MC-251405) Structure Block messages are formatted as chat
+-   [MC-251479](https://bugs.mojang.com/browse/MC-251479) Duplicate object key ;;[;;lang file;;];;
+-   [MC-251550](https://bugs.mojang.com/browse/MC-251550) Failed to launch the game on 32-bit operating system
+-   [MC-251640](https://bugs.mojang.com/browse/MC-251640) io.netty.handler.codec.EncoderException when using special characters in chat message
+-   [MC-251641](https://bugs.mojang.com/browse/MC-251641) Game crash regarding warden anger
+-   [MC-251647](https://bugs.mojang.com/browse/MC-251647) Chat closes itself if the control for Open Chat is set to Enter
+-   [MC-251649](https://bugs.mojang.com/browse/MC-251649) Clicking "incomplete command" message removes / in chat
+-   [MC-251650](https://bugs.mojang.com/browse/MC-251650) Iron golems can spawn on non spawnable blocks such as leaves, glass, sea lanterns, etc
+-   [MC-251652](https://bugs.mojang.com/browse/MC-251652) Warden emerge/roar/sonic charge/dig animation (and possibly other similar animations) don't start unless the player looks at the Warden first
+-   [MC-251656](https://bugs.mojang.com/browse/MC-251656) /say command fails to apply server message styling when sent from a command block, server console, or RCON, unlike /msg
+-   [MC-251690](https://bugs.mojang.com/browse/MC-251690) Wardens can spawn on any non-full block, as long as it's solid
+-   [MC-251736](https://bugs.mojang.com/browse/MC-251736) Reflected ghast fireball cannot hit the ghast
+-   [MC-251762](https://bugs.mojang.com/browse/MC-251762) You can run commands with double slash prefix
+-   [MC-251773](https://bugs.mojang.com/browse/MC-251773) The --dev argument for the data generators no longer converts NBT to SNBT properly
+
+---
+
 # Minecraft Snapshot 22w19a
 
 Thursday snapshot! Apart from some bugfixes and some changes to fancy tags and commands, we're introducing "chat preview" as a way to cryptographically sign chat messages that have been dynamically styled by servers. And for this snapshot only, we've left in our testing option `test-rainbow-chat` in `server.properties`, which can be set to true together with the new `previews-chat` option for testing. If this is something that interests you, and especially if you run a server, we would love your feedback on it.
@@ -232,343 +470,6 @@ Parameters:
     -   [MC-250954](https://bugs.mojang.com/browse/MC-250954) - Player is assigned a new UUID in singleplayer
     
 -   [MC-250974](https://bugs.mojang.com/browse/MC-250974) - MinecraftClientHttpException when opening/creating a world
-
----
-
-# Minecraft Snapshot 22w17a
-
-Prepare to drop some sick bleats in the latest Minecraft: Java Edition snapshot! We're bringing in the sweet sounds of the goat horn. There are also some changes to the warden and the allay.
-
-If the technical aspects of chatting is where it's at for you, make sure to check out the changes to chat signing.
-
-Enjoy!
-
-## New Features in 22w17a
-
--   Added Goat Horn!
-
-### Goat Horn
-
--   A Goat Horn drops when a Goat rams a tree or any other hard block that occurs naturally where Goats spawn (Logs, Stone, Packed Ice, Iron Ore, copper Ore, or Emerald Ore)
-    -   Other solid blocks are unfamiliar to the Goat, so it won't ram them
--   Use the horn to play a loud sound that can be heard from afar
--   Each horn has its own sound based on the Goat it originated from
--   There are 8 Goat Horn variants, 4 of them exclusive to screaming Goats
--   Goat Horns can sometimes be found in Pillager Outposts
-
-## Changes in 22w17a
-
--   The Allay connecting with Note Blocks is now better visualized by the vibration particle
--   The Allay connecting with Note Blocks can now be blocked by Wool Blocks again
--   Replaced realms subtle selected world highlight with a clear green checkmark
--   Updated the Brewing Stand's base UVs and texture to match a graphical fix in Bedrock Edition
--   Explosions caused by player-ignited TNT now cause experience to drop from broken blocks (such as ore blocks and sculk)
-    -   We will be keeping an eye on feedback for this change, it might change in a future update
--   Sculk blocks now have very low blast resistance
--   Warden balancing
-
-### Warden
-
--   Their ranged attack will now:
-    -   Bypass shields and armor
-    -   Deal 10 damage instead of 30 damage, and the cooldown has been reduced from 5 seconds to 2 seconds
-    -   Display a custom death message
--   Wardens now drop a single Sculk Catalyst upon death
-
-## Technical Changes in 22w17a
-
--   Signed Chat
--   Removed `dampenable_vibrations` game event tag
-
-### Multiplayer Secure Chat Signing
-
-This is the first step in a process to provide more security and player safety features for in-game chat. We'd love to hear your thoughts, but keep in mind that many features such as server-driven styling of chat messages are still missing.
-
--   Chat messages between players are now cryptographically signed
--   Players are given a Mojang provided key-pair on startup
--   Servers can require players to have a Mojang-signed public key by setting `enforce-secure-profile=true` in `server.properties`
-    -   Enforcing secure profiles will prevent players without a Mojang-signed public key from connecting
-    -   By default this is set to `false`, allowing players to connect without a Mojang-signed public key
--   Chat styling is now handled via server resource packs with the translation key `chat.type.text`
-
-## Fixed bugs in 22w17a
-
--   [MC-13103](https://bugs.mojang.com/browse/MC-13103) Texture Z-Fighting at Wolf/Dog/Cat snout
--   [MC-53312](https://bugs.mojang.com/browse/MC-53312) Illager/(zombie) villager/witch robes don't render the last two rows of pixels
--   [MC-106627](https://bugs.mojang.com/browse/MC-106627) Leather cap texture overlay doesn't align correctly
--   [MC-141064](https://bugs.mojang.com/browse/MC-141064) Cleric collar z-fighting
--   [MC-176840](https://bugs.mojang.com/browse/MC-176840) Ores no longer drop experience when blown up
--   [MC-207309](https://bugs.mojang.com/browse/MC-207309) Landing entities such as minecarts and armor stands trigger sculk sensors but boats do not
--   [MC-208597](https://bugs.mojang.com/browse/MC-208597) Boats ridden over wool are detected by sculk sensor
--   [MC-208771](https://bugs.mojang.com/browse/MC-208771) Projectiles landing on wool trigger sculk sensors
--   [MC-210712](https://bugs.mojang.com/browse/MC-210712) Sculk sensors are not activated upon backwards movement in a boat
--   [MC-210901](https://bugs.mojang.com/browse/MC-210901) Sculk sensors are not activated upon entities sliding on ice
--   [MC-248161](https://bugs.mojang.com/browse/MC-248161) Weaponsmith zombie villager texture has leftover pixels from the regular weaponsmith texture
--   [MC-248292](https://bugs.mojang.com/browse/MC-248292) Llama uses pre-1.14 chest texture
--   [MC-248555](https://bugs.mojang.com/browse/MC-248555) Mismatches within (zombie) villager textures
--   [MC-248556](https://bugs.mojang.com/browse/MC-248556) Savanna Zombie Villager missing a body texture
--   [MC-248557](https://bugs.mojang.com/browse/MC-248557) Savanna villager body defines pixels identical to base villager texture
--   [MC-248561](https://bugs.mojang.com/browse/MC-248561) Vindicator's crossed arms element has miscolored pixels on the faces touching the other arm elements
--   [MC-248562](https://bugs.mojang.com/browse/MC-248562) Iron golem has unused pixels in the texture
--   [MC-249032](https://bugs.mojang.com/browse/MC-249032) Fence item model's bars inconsistent with placed block
--   [MC-249039](https://bugs.mojang.com/browse/MC-249039) "Half" armor bar icon texture is incorrect
--   [MC-249190](https://bugs.mojang.com/browse/MC-249190) Sculk blocks don't drop experience orbs when blown up
--   [MC-249262](https://bugs.mojang.com/browse/MC-249262) Sculk cannot replace soul sand or mud when mobs die on top of them
--   [MC-249669](https://bugs.mojang.com/browse/MC-249669) tadpole.png has unused frog egg texture
--   [MC-249745](https://bugs.mojang.com/browse/MC-249745) If allay is holding an item, it can be equipped with armor using a dispenser
--   [MC-249780](https://bugs.mojang.com/browse/MC-249780) Blocks that require support can generate floating in ancient cities
--   [MC-249919](https://bugs.mojang.com/browse/MC-249919) Pillar in Ancient City can generate with waterlogged stairs
--   [MC-250000](https://bugs.mojang.com/browse/MC-250000) Allays and villagers create ghost items when they take items from a stack and cannot fit the whole stack in their inventory
--   [MC-250027](https://bugs.mojang.com/browse/MC-250027) Allays ignore the dimension when checking for liked note blocks
--   [MC-250075](https://bugs.mojang.com/browse/MC-250075) The inner two planes in mangrove roots are smaller than they should be
--   [MC-250076](https://bugs.mojang.com/browse/MC-250076) Shading is disabled for the two inner planes in mangrove roots, even though it isn't for all the other planes
--   [MC-250165](https://bugs.mojang.com/browse/MC-250165) Doing /locate stronghold in some single biomes causes an unexpected error
--   [MC-250240](https://bugs.mojang.com/browse/MC-250240) Z-fighting can be seen around the backs of frogs when they open their mouths
--   [MC-250288](https://bugs.mojang.com/browse/MC-250288) Some blocks in Ancient City structures can only be covered by sculk veins and can't be converted into a sculk block
--   [MC-250321](https://bugs.mojang.com/browse/MC-250321) Flying and aquatic mobs pathfinding in certain blocks cause crash || The game crashed whilst ticking entity Error: java.lang.NullPointerException: Cannot invoke "dnm.a()" because "$$1" is null
--   [MC-250331](https://bugs.mojang.com/browse/MC-250331) Chunk rendering is glitchy / incorrect when redrawing
--   [MC-250339](https://bugs.mojang.com/browse/MC-250339) Paintings are off-centered in multiplayer servers
--   [MC-250379](https://bugs.mojang.com/browse/MC-250379) Teleporting armor stands results in visual desync and abnormal behavior
--   [MC-250400](https://bugs.mojang.com/browse/MC-250400) Blocks and items can cause the world to render invisibly
--   [MC-250411](https://bugs.mojang.com/browse/MC-250411) Sculk can spread in ancient city structures and replace soul sand with fire on top, extinguishing fires
--   [MC-250429](https://bugs.mojang.com/browse/MC-250429) Narrator improperly narrates chat
--   [MC-250460](https://bugs.mojang.com/browse/MC-250460) The rendering of players is delayed for others
-
----
-
-# Minecraft Snapshot 22w16b
-
-We've now released snapshot 22w16b to fix a crash.
-
-## Fixed Bugs in 22w16b
-
--   [MC-250312](https://bugs.mojang.com/browse/MC-250312) - Game crashing when clicking singleplayer || java.lang.NullPointerException: Cannot invoke "java.lang.Comparable.compareTo(Object)" because "pivot" is null
-
----
-
-# Minecraft Snapshot 22w16a
-
-A chance to re-live the good old times appears in snapshot 22w16a with the ability to de-fragment a Disc - a new Music Disc, to be precise! This snapshot also comes with even more new music, tweaks to the Allay and to top it off it makes some random gameplay events slightly more predictable.
-
-Enjoy!
-
-## New Features in 22w16a
-
--   Added new music
--   Added Disc Fragment 5 and Music Disc 5
-
-### Four new music tracks
-
--   The new music tracks are called Ancestry, Aerie, Firebugs and Labyrinthine
--   They play in certain biomes and in the main menu
-
-### Music Disc 5
-
-A new music disc has been added to the game.
-
--   Unlike other discs, it can only be obtained by finding and crafting 9 Disc Fragments together
--   These Disc Fragments can be found rarely in Ancient City chests
-
-## Changes in 22w16a
-
--   Allay tweaks
--   Improved the predictability a number of gameplay elements
--   Frogs can now spawn on Grass, Mud, Moss Carpet, Mangrove Roots and Muddy Mangrove Roots
--   Froglights are now movable by pistons
-
-### Allay tweaks
-
--   Allay health raised from 10 to 20
--   Delay after item throw lowered from 5 secs to 3 secs
--   Item search range raised from 9 to 32
--   Movement speed changes:
-    -   Allay is now slower when just wandering
-    -   Allay is now faster when collecting items, going to the player or going to a noteblock
--   Throw arc has changed following community feedback
-
-### Predictability of randomized events
-
-Some randomized events are now more predictable and no longer have a possibility of extreme behaviors.
-
--   Placement and velocity of things dropped from Droppers/Dispensers
--   Placement and velocity of items spawned from containers upon destroy
--   Randomized `follow_range` component attribute for mobs
--   Velocity of Horses spawned from skeleton traps
--   Blaze random position and randomized speed of Blaze projectiles
--   Randomized portion of damage and velocity of Arrows
--   Randomized flight pattern of Fireworks
--   Bobbing patterns and time until a fish for Fishing Rods
-
-## Technical Changes in 22w16a
-
--   `LWJGL` library has been updated to version 3.3.1
--   Added a heap memory allocation metric to the F3 debug screen
--   Added doWardenSpawning game rule
--   Updates to paintings
-
-### Painting
-
--   Paintings that are placeable in survival can now be controlled with the `painting_variant/placeable` tag
--   Added unused paintings from Bedrock edition (`earth`, `wind`, `fire`, `water`)
-    -   These paintings are not placeable by default, but can be added through a datapack
-
-## Fixed bugs in 22w16a
-
--   [MC-81870](https://bugs.mojang.com/browse/MC-81870) Editing entitydata of Painting does not reflect ingame until chunk reload
--   [MC-111809](https://bugs.mojang.com/browse/MC-111809) Paintings unrender when entity data is updated rapidly
--   [MC-187188](https://bugs.mojang.com/browse/MC-187188) Painting NBT and registry contain a typo: "Motive" instead of "Motif"
--   [MC-226184](https://bugs.mojang.com/browse/MC-226184) Axolotls pathfinding to water can sometimes fall in wide holes
--   [MC-228049](https://bugs.mojang.com/browse/MC-228049) Axolotl can't pathfind through open doors
--   [MC-228174](https://bugs.mojang.com/browse/MC-228174) Axolotls try to pathfind through 2 tall walls
--   [MC-244957](https://bugs.mojang.com/browse/MC-244957) "Search" Option in Social Interactions Screen is not labeled in the right order when using Tab
--   [MC-245001](https://bugs.mojang.com/browse/MC-245001) "Manage with Microsoft account" button in Social Interactions menu is not centered
--   [MC-249084](https://bugs.mojang.com/browse/MC-249084) No sound is present for placing a Bucket of Tadpole
--   [MC-249092](https://bugs.mojang.com/browse/MC-249092) Mangrove Stripped Log, Stripped Wood and Wood are in the incorrect order in the creative inventory
--   [MC-249176](https://bugs.mojang.com/browse/MC-249176) Froglights are not visible on maps
--   [MC-249193](https://bugs.mojang.com/browse/MC-249193) Frog can't pathfind through open doors
--   [MC-249217](https://bugs.mojang.com/browse/MC-249217) Fluid level next to froglights is too low
--   [MC-249245](https://bugs.mojang.com/browse/MC-249245) Turtle can't pathfind through open doors
--   [MC-249246](https://bugs.mojang.com/browse/MC-249246) Strider can't pathfind through open doors
--   [MC-249265](https://bugs.mojang.com/browse/MC-249265) Some blocks cannot be placed on froglights
--   [MC-249459](https://bugs.mojang.com/browse/MC-249459) Cactus is not destroyed by froglights
--   [MC-249663](https://bugs.mojang.com/browse/MC-249663) The subtitles of some parrot imitation sounds are inconsistent with the original sounds' subtitles
--   [MC-249679](https://bugs.mojang.com/browse/MC-249679) Incorrect activation of warden's sniffing animations and behavior
--   [MC-249715](https://bugs.mojang.com/browse/MC-249715) Allays don't drop their held items upon death
--   [MC-249766](https://bugs.mojang.com/browse/MC-249766) Allays can despawn after being given an item if they haven't picked up any items yet
--   [MC-249790](https://bugs.mojang.com/browse/MC-249790) Allay follows and drops items for players in spectator mode
--   [MC-249838](https://bugs.mojang.com/browse/MC-249838) Allays lose their idle animation once they start moving
--   [MC-249855](https://bugs.mojang.com/browse/MC-249855) Parity Issue: Allays don't have a flying animation in Java
--   [MC-249912](https://bugs.mojang.com/browse/MC-249912) minecraft:ancient;;_;;city/city;;_;;center;;_;;3 is one block shorter compared than the other ancient city centers
--   [MC-249928](https://bugs.mojang.com/browse/MC-249928) Mangrove tree roots do not update blocks around them when generating
--   [MC-250039](https://bugs.mojang.com/browse/MC-250039) Wardens can get angry at mobs outside world border
--   [MC-250040](https://bugs.mojang.com/browse/MC-250040) Wardens can hear mobs beyond the world border
--   [MC-250041](https://bugs.mojang.com/browse/MC-250041) Wardens can spawn outside of world border
--   [MC-250044](https://bugs.mojang.com/browse/MC-250044) Observers don't detect mangrove roots when tree grows
--   [MC-250094](https://bugs.mojang.com/browse/MC-250094) Wardens ignore /kill execution whilst they're emerging or digging
--   [MC-250095](https://bugs.mojang.com/browse/MC-250095) Wardens can spawn in very narrow places, causing them to suffocate
--   [MC-250293](https://bugs.mojang.com/browse/MC-250293) The "allay;;_;;dust" particle is unused
--   [MC-250294](https://bugs.mojang.com/browse/MC-250294) Parity Issue: Allays item detection range is significantly smaller than in Bedrock
-
----
-
-# Minecraft Snapshot 22w15a
-
-Let me tell you a little story about hubris. Well, not so much a story as a lament. Because some of you have been thinking that the warden was a little too easy. I won’t name names, but I know you’re out there. Why else would we be adding ranged attacks for this already terrifying mob? Was the sniffing not enough? When will it end? Not today, apparently. Enjoy a new terrifying warden along with more advancements and technical changes.
-
-## New Features in 22w15a
-
--   Added advancement "When the Squad Hops into Town" for getting each Frog variant on a Lead
--   Added advancement "Sneak 100" for sneaking near a Sculk Sensor or Warden to prevent it hearing you
--   Added a new ranged attack to the Warden.
-
-### Warden Ranged Attack
-
--   Building up high, hiding behind walls or being out of range of their powerful melee attack will cause Wardens to switch to their ranged attack
-    -   Their rib cages will open up to shriek a sonically charged ranged attack that can penetrate walls
-
-## Changes in 22w15a
-
--   Added Darkness effect to "How Did We Get Here?" advancement
--   Allays have a natural health regen of 2 health per second
--   The main menu background now shows a Wild Update panorama
--   Mud generates all the way from the surface down to stone in Mangrove Swamps
--   Tall Mangroves are far more common than Short Mangroves in Mangrove Swamps
--   Moss Carpet generates on top of Mangrove Tree's roots
--   The Wandering Trader will now sometimes offer Propagules for sale
--   A previous change to Noteblocks that only Wool and Wool Carpets would block the sounds has been reverted
--   Wardens can now sniff you from further away
--   The vertical range Wardens get angry at a target while sniffing is now 20 blocks instead of 6 blocks
-
-### Changes to vibrations
-
--   Carpets, like Wool blocks, will now dampen the vibrations caused by their placing, breaking or dropping as items
--   Carpets now also dampen the vibrations caused by running and jumping over them
-
-## Technical Changes in 22w15a
-
--   Removed `item_delivered_to_player` advancement trigger
--   Added `thrown_item_picked_up_by_player` advancement trigger
-
-​- Added `avoid_vibration` advancement trigger
-
--   Added `sonic_explosion` particle
-
-### Advancements
-
-**New triggers**
-
-**`thrown_item_picked_up_by_player`**
-
--   Triggered when a player picks up an item that was thrown by an entity
--   Conditions:
-    -   `player` - a predicate for the player picking up the item
-    -   `entity` - a predicate for the entity that threw the item
-    -   `item` - a predicate for the item
-
-**`avoid_vibration`**
-
--   Triggered when a vibration event is ignored because the source player is holding the sneak key
--   Conditions:
-    -   `player` - a player for which this trigger runs
-
-### Game Events
-
--   Renamed game event tag `ignore_vibrations_on_occluding_block` to `dampenable_vibrations`
--   Added block tag `dampens_vibrations` to indicate blocks which will not trigger vibrations when placed, broken or stepped on
--   Renamed item tag `occludes_vibration_signals` to `dampens_vibrations` item tag as well
-
-## Fixed bugs in 22w15a
-
--   [MC-36783](https://bugs.mojang.com/browse/MC-36783) Item frames/Glow item frames don't change their hitbox if they contain a map
--   [MC-147686](https://bugs.mojang.com/browse/MC-147686) Joining a world that uses custom resources shows default resources until fully loaded
--   [MC-183520](https://bugs.mojang.com/browse/MC-183520) Phantoms with NoAI can go through blocks
--   [MC-212610](https://bugs.mojang.com/browse/MC-212610) Glow lichens cannot be put on soul sand
--   [MC-212629](https://bugs.mojang.com/browse/MC-212629) Leashes from two or more invisible entities connect to each other
--   [MC-216567](https://bugs.mojang.com/browse/MC-216567) Vines cannot be placed on the sides of 8 layers of snow
--   [MC-216569](https://bugs.mojang.com/browse/MC-216569) Glow lichen cannot be placed on the side of 8 layers of snow
--   [MC-219642](https://bugs.mojang.com/browse/MC-219642) Vines cannot be placed on the sides of soul sand
--   [MC-231458](https://bugs.mojang.com/browse/MC-231458) The word "ingot" within the "Serious Dedication" advancement description is improperly capitalized
--   [MC-235035](https://bugs.mojang.com/browse/MC-235035) Sleeping in a custom dimension with "natural" set to false causes crash
--   [MC-237924](https://bugs.mojang.com/browse/MC-237924) The word "villager" within the "Star Trader" advancement description is improperly capitalized
--   [MC-249072](https://bugs.mojang.com/browse/MC-249072) Sculk shriekers replace water blocks
--   [MC-249087](https://bugs.mojang.com/browse/MC-249087) The inside texture of mangrove roots darkens when solid blocks are placed adjacent to them
--   [MC-249094](https://bugs.mojang.com/browse/MC-249094) Unexpected culling of inner sculk shrieker faces
--   [MC-249111](https://bugs.mojang.com/browse/MC-249111) sculk;;_;;charge cannot be used in /particle command
--   [MC-249208](https://bugs.mojang.com/browse/MC-249208) Vines, glow lichens, and sculk veins cannot be placed on the side or top faces of mud
--   [MC-249315](https://bugs.mojang.com/browse/MC-249315) Mangrove Roots cannot be composted
--   [MC-249347](https://bugs.mojang.com/browse/MC-249347) Map color for mangrove sign and mangrove wall sign is incorrect
--   [MC-249423](https://bugs.mojang.com/browse/MC-249423) You can't open the boat with chests without a shift, even when you can't get into the boat
--   [MC-249445](https://bugs.mojang.com/browse/MC-249445) Activated sculk shriekers fail to summon the warden when broken
--   [MC-249488](https://bugs.mojang.com/browse/MC-249488) Darkness pulsing option is not saved
--   [MC-249495](https://bugs.mojang.com/browse/MC-249495) Inconsistent shading in boat item sprites
--   [MC-249664](https://bugs.mojang.com/browse/MC-249664) Warden despawns when far away
--   [MC-249688](https://bugs.mojang.com/browse/MC-249688) Mangrove stairs come after nether wood stairs in the Building Blocks tab
--   [MC-249737](https://bugs.mojang.com/browse/MC-249737) Allay can be pushed around with {NoAI:1b}
--   [MC-249741](https://bugs.mojang.com/browse/MC-249741) New advancement names are not properly capitalized
--   [MC-249785](https://bugs.mojang.com/browse/MC-249785) Warden can be pushed when emerging and digging
--   [MC-249917](https://bugs.mojang.com/browse/MC-249917) Mangrove trees don't replace certain blocks with roots
--   [MC-249923](https://bugs.mojang.com/browse/MC-249923) Recovery compass isn't sorted with regular compass in creative inventory
--   [MC-249927](https://bugs.mojang.com/browse/MC-249927) You can use a Recovery Compass on a Lodestone
--   [MC-249931](https://bugs.mojang.com/browse/MC-249931) Growing a Mangrove Tree with bone meal creates a ghost block
--   [MC-249933](https://bugs.mojang.com/browse/MC-249933) Game crash related to the frog occurred (Accessing LegacyRandomSource from multiple threads)
--   [MC-249934](https://bugs.mojang.com/browse/MC-249934) Mangrove roots sometimes don't generate waterlogged when generating within water
--   [MC-249936](https://bugs.mojang.com/browse/MC-249936) Cave carvers don't cut through mud
--   [MC-249938](https://bugs.mojang.com/browse/MC-249938) Mangrove Leaves do not drop from Silk Touch tools
--   [MC-249942](https://bugs.mojang.com/browse/MC-249942) Water got removed after waterlogged Mangrove Propagule grows
--   [MC-249947](https://bugs.mojang.com/browse/MC-249947) Top of Sculk Shrieker model is vertically squished
--   [MC-249966](https://bugs.mojang.com/browse/MC-249966) Warden can forget a target it just roared at
--   [MC-249968](https://bugs.mojang.com/browse/MC-249968) Powering a beacon disconnects player from server
--   [MC-249977](https://bugs.mojang.com/browse/MC-249977) Harsh chunk borders appear when upgrading a 1.18.2 world
--   [MC-249979](https://bugs.mojang.com/browse/MC-249979) Chance to have mangrove roots not waterlogged when growing from a sapling while underwater
--   [MC-249980](https://bugs.mojang.com/browse/MC-249980) The Birthday Song advancement description is incorrectly capitalized
--   [MC-249984](https://bugs.mojang.com/browse/MC-249984) note;;_;;block is inconsistently spelled as noteblock in the allay;;_;;deliver;;_;;cake;;_;;to;;_;;noteblock advancement
--   [MC-250017](https://bugs.mojang.com/browse/MC-250017) UUID launch argument required
--   [MC-250025](https://bugs.mojang.com/browse/MC-250025) The "You Got a Friend in Me" advancement is incorrectly presented in the past tense
--   [MC-250099](https://bugs.mojang.com/browse/MC-250099) Mangrove Log and Mangrove Planks don't spawn in bonus chest
--   [MC-250101](https://bugs.mojang.com/browse/MC-250101) Can't plant sugar cane on mud
--   [MC-250103](https://bugs.mojang.com/browse/MC-250103) Can't plant bamboo on mud
--   [MC-250104](https://bugs.mojang.com/browse/MC-250104) Can't plant big dripleaf on mud
--   [MC-250106](https://bugs.mojang.com/browse/MC-250106) Overworld vegetation cannot be placed on muddy mangrove roots
 
 ---
 

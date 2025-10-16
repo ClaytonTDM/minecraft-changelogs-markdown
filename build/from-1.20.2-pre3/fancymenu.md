@@ -164,391 +164,242 @@ Certain Enchanted Books now have a high chance of generating in some structures:
 
 ---
 
-# Minecraft 1.20.1 Release Candidate 1
+# Minecraft Snapshot 23w35a
 
-We're now releasing a Release Candidate for a first minor update for Minecraft 1.20. This minor update will be a stability issue to fix some critical issues found after the release of Minecraft 1.20.
-
-## Fixed bugs in 1.20.1 Release Candidate 1
-
--   Fixed a disk permissions-related crash
--   [MC-263244](https://bugs.mojang.com/browse/MC-263244) The realms invitation icon that appears on the realms button in the main menu is displayed incorrectly
--   [MC-263245](https://bugs.mojang.com/browse/MC-263245) Buttons in the "Add Realm" interface within the realms menu no longer render
--   [MC-263296](https://bugs.mojang.com/browse/MC-263296) Game softlocks after cancelling joining a server
--   [MC-263340](https://bugs.mojang.com/browse/MC-263340) Incorrect Protochunk#setStatus call on chunk generate
-
----
-
-# Minecraft 1.20 Release Candidate 1
-
-We are now releasing the first, and hopefully only, release-candidate for 1.20, containing two bug fixes. If all goes well, no further changes will be made before the full release of Minecraft 1.20 on Wednesday next week.
-
-Happy crafting!
-
-## Fixed bugs in 1.20 Release Candidate 1
-
--   [MC-256477](https://bugs.mojang.com/browse/MC-256477) Knowledge books can't be placed in chiseled bookshelves
--   [MC-262853](https://bugs.mojang.com/browse/MC-262853) Pitcher plant breaks and floats when growing without enough light
-
----
-
-# Minecraft 1.20 Pre-release 7
-
-Pre-release 7 for Minecraft 1.20 is now available in the Minecraft Launcher. This pre-release adds validation of symbolic links and fixes a bug.
-
-### Changes
-
-To improve safety, the game will now detect symbolic links used inside world directory. For a detailed explanation, check our [help article](https://aka.ms/MinecraftSymLinks).
-
--   If the target of a symbolic link is not on the user-configured allow-list, the game will not proceed with loading the world
-    -   Note: world directory itself can still be linked
--   The list of allowed symbolic link targets is stored in file `allowed_symlinks.txt` in client or server top directory
--   The file consists of entries (one per line) with following formats allowed:
-    -   Lines starting with `#` are comments and are ignored
-    -   `[type]pattern`, where `type` can be `glob`, `regex` or `prefix`
-        -   `prefix` matches start of path with given pattern (so for `/test` paths `/test`, `/test/` and `/test/foo.txt` would match)
-        -   `regex` matches regular expression against whole path
-        -   `glob` uses OS-specific path matching mechanism (for example `*.txt` would usually match files with `txt` extension)
-        -   Note: paths will use OS-specific separators
-    -   `pattern`, which uses default `prefix` type
-
-## Fixed bug in 1.20 Pre-release 7
-
--   [MC-257778](https://bugs.mojang.com/browse/MC-257778) Bamboo Mosaic Slabs and Stairs are not in the #slabs and #stairs block and item tags
-
----
-
-# Minecraft 1.20 Pre-Release 6
-
-The sixth pre-release of the 1.20 update is here, yet again containing more bug fixes.
-
-Happy mining!
+We are releasing a new snapshot that contains updates to support libraries, and a whole bundle of bug fixes!
 
 ## Technical Changes
 
--   `"item": "minecraft:air"` can no longer be used in datapack recipes
--   Ingredients in array form are now also allowed in `smithing_trim` and `smithing_transform` recipes on fields `template`, `base` and `addition`
-    -   Those fields also allow empty arrays, which signalize that slot needs to be left empty
+-   The `LWJGL` library has been upgraded to version 3.3.2
+-   The default Java version shipped with the game has been upgraded to Microsoft OpenJDK 17.0.8
 
-### Loot tables
+## Fixed bugs in 23w35a
 
-**Random sequences**
-
-The ID of the random sequence is now an optional field. If no sequence name is given, loot is drawn using a non-deterministic random source.
-
-## Fixed bugs in 1.20 Pre-Release 6
-
--   [MC-237042](https://bugs.mojang.com/browse/MC-237042) Killing players in the sneaking state that have their sneak option set to "Toggle" in their accessibility settings, results in other players not being able to see them in this state when they respawn
--   [MC-241326](https://bugs.mojang.com/browse/MC-241326) Thomas Guimbretière's name is listed twice and misspelt in the credits
--   [MC-260411](https://bugs.mojang.com/browse/MC-260411) Re-summoned dragons don't spawn end gateways when exiting the world before killing the dragon
--   [MC-262340](https://bugs.mojang.com/browse/MC-262340) Iron Golems can spawn on transparent blocks
--   [MC-262575](https://bugs.mojang.com/browse/MC-262575) Company names are still inconsistent in the credits
-
----
-
-# Minecraft 1.20 Pre-Release 5
-
-Summer is around the corner here at the office, and what better time to stay inside and try out the new pre-release?!
-
-Happy crafting, you wonderful people!
-
-## Library version updates
-
--   `uniform` font has been updated to use Unifont 15.0.03 (was 15.0.01 last pre-release)
-
-## Fixed bugs in 1.20 Pre-release 5
-
--   [MC-120158](https://bugs.mojang.com/browse/MC-120158) Anvils and other falling;;_;;blocks with HurtEntities set to true kill items and xp orbs
--   [MC-261294](https://bugs.mojang.com/browse/MC-261294) Jack o'lantern can be placed on the player or armor stand head without commands and without appearing the blur
--   [MC-262334](https://bugs.mojang.com/browse/MC-262334) Item display entities have wrong lighting when they're rotated
--   [MC-262504](https://bugs.mojang.com/browse/MC-262504) Recipes for colored wool, carpets, and beds in the recipe book are not grouped
--   [MC-262513](https://bugs.mojang.com/browse/MC-262513) Blocks placed in the spot of a previously broken block will display the first frame of the breaking animation until updated
--   [MC-262514](https://bugs.mojang.com/browse/MC-262514) Unbreakable blocks display the first breaking animation frame when attempting to mine them
--   [MC-262690](https://bugs.mojang.com/browse/MC-262690) The player can still jump from the edge of the honey block
--   [MC-262730](https://bugs.mojang.com/browse/MC-262730) Biomes being partially overwritten / regenerated in 1.20pre2 inside old world
--   [MC-262773](https://bugs.mojang.com/browse/MC-262773) Markers, interaction, and display entities prevent weighted pressure plates from deactivating
--   [MC-262778](https://bugs.mojang.com/browse/MC-262778) Losing control of a ridden mob with levitation and then re-gaining control causes levitation to persist indefinitely
--   [MC-262797](https://bugs.mojang.com/browse/MC-262797) Book model not rendering in Enchanting Table GUI
--   [MC-262801](https://bugs.mojang.com/browse/MC-262801) Z-fighting occurs on trimmed enchanted armor in the inventory
+-   [MC-229121](https://bugs.mojang.com/browse/MC-229121) JVM crash in jdk.internal.loader.NativeLibraries.load
+-   [MC-242385](https://bugs.mojang.com/browse/MC-242385) Inconsistency on the buffer size calculation in the chunk packet data
+-   [MC-256549](https://bugs.mojang.com/browse/MC-256549) Baby camels that aren't moving face in the direction of their adults when pathfinding to players that are tempting them
+-   [MC-256737](https://bugs.mojang.com/browse/MC-256737) Sniffers, frogs, goats, and camels prioritize pathfinding to their lover when fed over panicking when being damaged
+-   [MC-259475](https://bugs.mojang.com/browse/MC-259475) The rotation of controlling passengers on sitting camels is sometimes restricted while adjusting your rotation slowly
+-   [MC-259860](https://bugs.mojang.com/browse/MC-259860) Sitting camels that have passengers continuously look up and down for other players
+-   [MC-261951](https://bugs.mojang.com/browse/MC-261951) Dragon/piglin head does not move when placed on a jukebox that is playing a record
+-   [MC-264092](https://bugs.mojang.com/browse/MC-264092) Functions execute commands out of order when containing /say
+-   [MC-264558](https://bugs.mojang.com/browse/MC-264558) The word "reconfiguring" is spelled as "reconfiging" within the "connect.reconfiging" translation key
+-   [MC-264559](https://bugs.mojang.com/browse/MC-264559) Grammar error in "Added pack(s) contain symbolic links"
+-   [MC-264561](https://bugs.mojang.com/browse/MC-264561) Some new strings introduced in 23w31a are missing articles
+-   [MC-264566](https://bugs.mojang.com/browse/MC-264566) Force loaded chunks reset when changing versions
+-   [MC-264619](https://bugs.mojang.com/browse/MC-264619) Strings for returning to menus and loading lists are inconsistently spelled and capitalized
+-   [MC-264686](https://bugs.mojang.com/browse/MC-264686) Z-fighting occurs on the backs of bamboo chest rafts
+-   [MC-264698](https://bugs.mojang.com/browse/MC-264698) The absorption effect is lost when reloading the world
+-   [MC-264750](https://bugs.mojang.com/browse/MC-264750) Effects are lost when updating to 23w32a
+-   [MC-264897](https://bugs.mojang.com/browse/MC-264897) Shift-clicking to unequip armor bypasses vibrations in survival
+-   [MC-264899](https://bugs.mojang.com/browse/MC-264899) Narrator is not capitalized in the Narrator Hotkey tooltip
+-   [MC-264915](https://bugs.mojang.com/browse/MC-264915) Some mobs can still attack you through blocks
+-   [MC-264917](https://bugs.mojang.com/browse/MC-264917) Entry list gradients render below content
+-   [MC-264920](https://bugs.mojang.com/browse/MC-264920) Some buttons within the "Report Player" menu are improperly capitalized
+-   [MC-264947](https://bugs.mojang.com/browse/MC-264947) Torches generated on end fountain don't emit light
 
 ---
 
-# Minecraft 1.20 Pre-Release 4
+# Minecraft Snapshot 23w33a
 
-We've now released 1.20 Pre-release 4, resolving a crash in the Multiplayer screen introduced in the last pre-release.
+We are making some important updates to our Player Reporting Tool in this Snapshot to better protect the online safety of our players.
 
----
+Playing Minecraft should be an inclusive and safe experience for everyone, which is why alongside in-game chat messages, you will now be able to report player skins and usernames that violate our Community Standards in Java Edition.
 
-# Minecraft 1.20 Pre-Release 3
+Just like with chat reports, nothing is automated. Any reported skin or username will be reviewed manually by a team of trained Minecraft moderators, who will use the submitted evidence to decide whether the skin and/or username is in breach of our Community Standards. Skins that are in violation of these standards will be removed from Minecraft and will no longer be accessible for use by any player. Usernames that are in violation of these standards will need to be changed before that player can play online via a shared server or Realm; though single player mode will still be accessible. To find out more about this and other safety policies, including more detail on the suspension procedure, appeals process, and how we handle malicious or repeat reporting, please visit our dedicated FAQ page.
 
-We are now releasing 1.20 Pre-release 3, containing even more bug fixes.
+## New Features
 
-Happy crafting!
+### Player Skin & Name Reporting
 
-## Fixed bugs in 1.20 Pre-release 3
-
--   [MC-121788](https://bugs.mojang.com/browse/MC-121788) Jump boost, slow falling and levitation don't apply to ridden horses, pigs or striders until after a relog
--   [MC-152258](https://bugs.mojang.com/browse/MC-152258) Riding an entity with slow falling will not stop fall damage
--   [MC-181280](https://bugs.mojang.com/browse/MC-181280) Incorrect textures can sometimes be displayed
--   [MC-259912](https://bugs.mojang.com/browse/MC-259912) Saddled horses can infinitely retain Levitation effect
--   [MC-260653](https://bugs.mojang.com/browse/MC-260653) Markers, interaction, and display entities can prevent pressure plates from deactivating
--   [MC-260903](https://bugs.mojang.com/browse/MC-260903) Less recent attacker can be credited for kill
--   [MC-261202](https://bugs.mojang.com/browse/MC-261202) Teleporting a display entity jitters the player riding on the stack
--   [MC-262324](https://bugs.mojang.com/browse/MC-262324) Teleporting a mob while riding it doesn't work well
--   [MC-262505](https://bugs.mojang.com/browse/MC-262505) Iron golems can produce particles for blocks they're not colliding with
--   [MC-262593](https://bugs.mojang.com/browse/MC-262593) The word "occurred" is misspelled as "occured" within two realms strings
--   [MC-262684](https://bugs.mojang.com/browse/MC-262684) Game icon has low resolution
--   [MC-262709](https://bugs.mojang.com/browse/MC-262709) Dispensers do not dispense boats at the correct height
--   [MC-262712](https://bugs.mojang.com/browse/MC-262712) Alternative recipes in recipe book do not appear on right-click
--   [MC-262714](https://bugs.mojang.com/browse/MC-262714) The "key.keyboard.unknown" string displayed within the key binds menu is improperly capitalized
-
----
-
-# Minecraft 1.20 Pre-Release 2
-
-We are now releasing the second pre-release for Minecraft 1.20. This pre-release contains bug fixes.
-
-Happy Mining!
-
-## Technical Changes
-
--   Game will now display message box on startup if user enabled text-to-speech functionality, but it is not available
--   `"item": "minecraft:air"` can now be used in datapack recipes to denote an ingredient that will match an empty slot.
-    -   The following recipe types, however, do not allow for an empty ingredient:
-        -   `minecraft:crafting_shaped`
-        -   `minecraft:crafting_shapeless`
-        -   `minecraft:smelting`
-        -   `minecraft:blasting`
-        -   `minecraft:smoking`
-        -   `minecraft:campfire_cooking`
-        -   `minecraft:stonecutting`
-
-## Fixed bugs in 1.20 Pre-release 2
-
--   [MC-1310](https://bugs.mojang.com/browse/MC-1310) Dispensed boats and rafts get stuck inside of dispensers used to place them
--   [MC-124327](https://bugs.mojang.com/browse/MC-124327) Changing the name of an item and then emptying the text field in an anvil doesn't make the rename unavailable, keeps last non-empty name on output item
--   [MC-132076](https://bugs.mojang.com/browse/MC-132076) Lowercase Letters in controls menu + "Not Bound" is missing
--   [MC-159633](https://bugs.mojang.com/browse/MC-159633) Command feedback messages are unnecessarily created during function execution
--   [MC-165562](https://bugs.mojang.com/browse/MC-165562) Command suggestion report "incorrect argument" when cursor is at the start of a node without suggestions
--   [MC-175504](https://bugs.mojang.com/browse/MC-175504) Single quotation marks are not supported in NBT paths
--   [MC-220096](https://bugs.mojang.com/browse/MC-220096) Graphics warning button(s) improperly capitalized
--   [MC-224976](https://bugs.mojang.com/browse/MC-224976) NativeImage.setPixelRGBA throws exception with message getPixelRGBA
--   [MC-226344](https://bugs.mojang.com/browse/MC-226344) Changing the "Owner" tag of a projectile doesn't affect the outcome of the projectile unless the world is reloaded
--   [MC-237960](https://bugs.mojang.com/browse/MC-237960) New potion effect GUI doesn't work when using Programmer Art
--   [MC-250197](https://bugs.mojang.com/browse/MC-250197) Glass bottles are inconsistently referred to throughout some advancement description strings
--   [MC-252216](https://bugs.mojang.com/browse/MC-252216) 65540: Invalid scancode -1 logged in key bind menu when an option is unbound
--   [MC-252408](https://bugs.mojang.com/browse/MC-252408) Chat restriction strings consist of inconsistent concluding punctuation
--   [MC-256833](https://bugs.mojang.com/browse/MC-256833) Ridable entities that can be steered build up fall damage when on climbable blocks
--   [MC-257052](https://bugs.mojang.com/browse/MC-257052) You cannot double-click on languages within the "Language" menu to select them
--   [MC-257370](https://bugs.mojang.com/browse/MC-257370) Buckets of fish are not sorted in the same order as the fish items
--   [MC-257512](https://bugs.mojang.com/browse/MC-257512) Dead tube coral in creative inventory is in wrong order
--   [MC-258360](https://bugs.mojang.com/browse/MC-258360) Horse armor loses its NBT data when equipped on horses via right-clicking
--   [MC-258461](https://bugs.mojang.com/browse/MC-258461) The "Detect structure size and position:" string displayed within the structure block GUI is improperly capitalized
--   [MC-260468](https://bugs.mojang.com/browse/MC-260468) Wither rose is not grouped with other small flowers in the creative inventory
--   [MC-260602](https://bugs.mojang.com/browse/MC-260602) 'data modify from string' index failure does not return 0 for 'execute store success'
--   [MC-260711](https://bugs.mojang.com/browse/MC-260711) Some words within "/datapack list" command feedback messages are always pluralized
--   [MC-260712](https://bugs.mojang.com/browse/MC-260712) Some words within "/scoreboard" command feedback messages are always pluralized
--   [MC-260713](https://bugs.mojang.com/browse/MC-260713) Some words within "/team" command feedback messages are always pluralized
--   [MC-260715](https://bugs.mojang.com/browse/MC-260715) Some words within "/bossbar" command feedback messages are always pluralized
--   [MC-260716](https://bugs.mojang.com/browse/MC-260716) Some words within "/fill", "/fillbiome", and "/clone" command feedback messages are always pluralized
--   [MC-261024](https://bugs.mojang.com/browse/MC-261024) /execute if loaded does not guarantee entities are loaded
--   [MC-261080](https://bugs.mojang.com/browse/MC-261080) Player can fall through scaffolding when loading a world
--   [MC-261233](https://bugs.mojang.com/browse/MC-261233) Minecart movement is not reliably detected by sculk sensors
--   [MC-261349](https://bugs.mojang.com/browse/MC-261349) Chiseled Bookshelf won't rotate when placed as part of a structure
--   [MC-261433](https://bugs.mojang.com/browse/MC-261433) Shield doesn't block TNT explosion
--   [MC-261816](https://bugs.mojang.com/browse/MC-261816) Most two block tall flowers do not block enchanting tables / are part of #minecraft:replaceable
--   [MC-261988](https://bugs.mojang.com/browse/MC-261988) Inconsistency with Mangrove Roots and Leaves in the Creative Tab
--   [MC-262033](https://bugs.mojang.com/browse/MC-262033) The command block GUI remains open when the said command block is destroyed
--   [MC-262106](https://bugs.mojang.com/browse/MC-262106) Smithing recipe must have template to work
--   [MC-262135](https://bugs.mojang.com/browse/MC-262135) Recipe book GUI is positioned incorrectly
--   [MC-262181](https://bugs.mojang.com/browse/MC-262181) NBSP is a valid invisible character that can be used to rename items to have blank names
--   [MC-262213](https://bugs.mojang.com/browse/MC-262213) Baby sniffer's head is smaller on the first frame of existing
--   [MC-262310](https://bugs.mojang.com/browse/MC-262310) Telemetry description strings consist of inconsistent concluding punctuation
--   [MC-262311](https://bugs.mojang.com/browse/MC-262311) The "telemetry.event.game;;_;;load;;_;;times.description" string is missing an article before the word "execution"
--   [MC-262355](https://bugs.mojang.com/browse/MC-262355) Death messages for falling from climbable blocks do not work
--   [MC-262440](https://bugs.mojang.com/browse/MC-262440) Sniffers can sniff while in love and pathfinding to their lover
--   [MC-262441](https://bugs.mojang.com/browse/MC-262441) Baby sniffers stand a bit too far away from players that are tempting them
--   [MC-262445](https://bugs.mojang.com/browse/MC-262445) The text cursor no longer renders above text
--   [MC-262446](https://bugs.mojang.com/browse/MC-262446) Text within buttons renders above the semi-transparent black lines at the edges of menus
--   [MC-262471](https://bugs.mojang.com/browse/MC-262471) Random skylight underwater where it shouldn't be, that cuts off at the chunk border
--   [MC-262506](https://bugs.mojang.com/browse/MC-262506) Parts of beds render through the alternative recipe GUI in the recipe book
--   [MC-262508](https://bugs.mojang.com/browse/MC-262508) Torchflower;;_;;crop causes the game to crash and locks the world when pollinated by bees
--   [MC-262518](https://bugs.mojang.com/browse/MC-262518) The "mco.configure.world.uninvite.player" string contains an unnecessary space before the question mark
--   [MC-262531](https://bugs.mojang.com/browse/MC-262531) "death.attack.genericKill.player" displays raw translation string (is untranslated)
-
----
-
-# Minecraft 1.20 Pre-release 1 
-
-It is now time for the first Pre-release for Minecraft 1.20: The Trails and Tales update!
-
-From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out for the next pre-release.
-
-As always, a big thank you to the community for your feedback, bugs reported, and awesome ideas throughout the snapshot series. Let the pre-releases commence!
+-   Player Skins and Names can now be reported in the Social Interactions Screen
+-   If a skin or name is reported, and found to be violating the [Community Standards](https://www.minecraft.net/community-standards), our team of human moderators can action in a few ways:
+    -   Ban the skin from being used by any player
+    -   Ban the name from being used by any player
+    -   Suspend the player from online play in the case of repeated offences
+-   When a skin is banned, players with that skin:
+    -   Will have their skin removed
+    -   Will be notified when they launch the game
+    -   Will be automatically assigned one of the default skins
+    -   Can still play multiplayer and singleplayer
+    -   Can select a new custom skin at any time
+-   When a player's name is banned, that player:
+    -   Will need to choose a new name
+    -   Will be notified when they launch the game
+    -   Will not be able to play online until they change their name
+    -   Can still play singleplayer
+-   A skin or name that has been banned cannot be used by any player in the future
 
 ## Changes
 
--   Colored Wool, Carpets and Beds can now be dyed to any other color
+-   Sponges and Wet Sponges now have their own custom sounds
+-   The calculations to determine whether a mob can attack a player or other mobs have been changed
+-   Added the "Narrator Hotkey" accessibility option
+    -   Allows the narrator to be toggled on and off with `Ctrl+B`
+-   Added "I want to report them" Player Reporting category
+-   A change has been reverted where armor trim patterns would be masked by the underlying armor texture
+
+### Mob attack reach changes
+
+The calculations to determine whether a mob can attack a player or other mobs have been changed. Previously a mob's horizontal width was used to determine their attack reach and their height had no effect. The area where a mob can attack is now their bounding box extended in horizontal directions.
+
+Here are some situations where the new rules will affect the reach of mobs:
+
+-   If a mob is entirely below you, or entirely above you, it will not be able to reach you
+-   While riding on a medium-sized mob, like a Horse, you will be protected from small mobs, like Baby Zombies
+-   While riding on a tall mob, like a Camel, you will be protected from standard-size mobs, like Zombies
+-   Also, Ravagers won't be able to attack you through a few block thick walls anymore
+-   However, to escape from an Enderman, you need to be at least 3 blocks above the ground, not 1.5 as before
+-   Mobs will be able to attack you with the bottom of their hitbox, assuming your head is in range
+-   Builds that trap hostile mobs might need to be adjusted to be safe
+
+This change does not affect the reach of players, and mobs still need to see their target to attack it. We believe this new system will be more intuitive and will result in a more consistent behavior, and we welcome all feedback on this change.
 
 ## Technical Changes
 
--   Added new damage types: `outside_border` and `generic_kill`
--   Random sequences for loot tables are now deterministic
--   Changes in `server.properties` encoding
--   `string` data sources for the `data` command now accept negative boundaries, which are interpreted as index counted from the end of the string
+-   The charts on the debug screen can now be toggled with F3+1 (pie chart), F3+2 (FPS and TPS) and F3+3 (bandwidth and ping) instead of holding Shift, Alt or Ctrl while opening the screen
 
-### Damage Types
+### Data Pack Changes
 
--   Players outside the world border are now hurt by the damage type `outside_border` instead of `in_wall`
--   Forcibly removing an entity using i.e. the `/kill` command now uses damage type `generic_kill` instead of `out_of_world`
+-   Added `decal` field to armor trim patterns (default: `false`)
+    -   If `true`, the pattern texture will be masked based on the underlying armor
 
-### Loot Table Random Sequences
+## Fixed bugs in 23w33a
 
-The game now uses named random sequences to deterministically produce loot for loot tables. Each random sequence produces a unique sequence based on the world seed and sequence ID, which means a loot table will produce the same results when ran with the same parameters in the same world.
-
-The ID of the random sequence to use for a loot table is specified in a new field called `random_sequence`.
-
-### `server.properties`
-
--   File is now read in UTF-8 initially, with previous encoding (ISO 8859-1/Latin 1) as a fallback
--   File is now written with UTF-8 encoding
-
-## Fixed bugs in 1.20 Pre-release 1
-
--   [MC-180](https://bugs.mojang.com/browse/MC-180) When reaching the other side of a nether portal the animation plays forever until stepped out of
--   [MC-2215](https://bugs.mojang.com/browse/MC-2215) Encoding errors in server.properties
--   [MC-18060](https://bugs.mojang.com/browse/MC-18060) Several realms strings are untranslatable
--   [MC-35078](https://bugs.mojang.com/browse/MC-35078) Breaking animation is one frame off
--   [MC-123081](https://bugs.mojang.com/browse/MC-123081) Placing an end crystal when entering The End prevents Ender Dragon from spawning
--   [MC-146582](https://bugs.mojang.com/browse/MC-146582) When entering spectator mode while standing on the ground, the player moves down by 0.19051 blocks, which makes you fall down
--   [MC-195781](https://bugs.mojang.com/browse/MC-195781) The "Include entities:" string displayed within the structure block GUI is improperly capitalized
--   [MC-195825](https://bugs.mojang.com/browse/MC-195825) "datapacks" string is inconsistent with "data pack" string in "datapackFailure.title" text
--   [MC-198202](https://bugs.mojang.com/browse/MC-198202) Options background texture does not match dirt texture
--   [MC-203039](https://bugs.mojang.com/browse/MC-203039) Incorrect use of colon in options.hideMatchedNames.tooltip
--   [MC-206548](https://bugs.mojang.com/browse/MC-206548) Leash knot subtitles are not properly capitalized
--   [MC-226454](https://bugs.mojang.com/browse/MC-226454) The "Light as a Rabbit" advancement description has no space after the ellipsis
--   [MC-236606](https://bugs.mojang.com/browse/MC-236606) Lightning bolt related string lacks capitalization
--   [MC-241736](https://bugs.mojang.com/browse/MC-241736) Company names are still inconsistent and partly misspelled in the credits
--   [MC-250571](https://bugs.mojang.com/browse/MC-250571) Gamerule description strings within the world creation menu consist of inconsistent concluding punctuation
--   [MC-256424](https://bugs.mojang.com/browse/MC-256424) Game mode is sometimes referred to as "gamemode"
--   [MC-257336](https://bugs.mojang.com/browse/MC-257336) Some chiseled bookshelf interaction subtitles are improperly capitalized
--   [MC-262006](https://bugs.mojang.com/browse/MC-262006) Melon and Pumpkin are in the default '#maintains;;_;;farmland' tag despite not maintain farmland
--   [MC-262208](https://bugs.mojang.com/browse/MC-262208) In the credits, "Lionbridge" is misspelt in one place (no "g")
--   [MC-262253](https://bugs.mojang.com/browse/MC-262253) Music composers not listed in credits
--   [MC-262265](https://bugs.mojang.com/browse/MC-262265) Changing resource pack that overrides a font crashes JVM
--   [MC-262296](https://bugs.mojang.com/browse/MC-262296) Rabbits are no longer affected by jump boost
--   [MC-262300](https://bugs.mojang.com/browse/MC-262300) Menu text is now rendered in front of the Mojang Studios loading screen fade animation
--   [MC-262304](https://bugs.mojang.com/browse/MC-262304) The stepping;;_;;on predicate condition does not correctly succeed on trapdoors
--   [MC-262308](https://bugs.mojang.com/browse/MC-262308) Entities do not stick to honey blocks pushed by pistons if their center isn't over the honey block
--   [MC-262313](https://bugs.mojang.com/browse/MC-262313) Nether won't load in upgraded worlds
--   [MC-262317](https://bugs.mojang.com/browse/MC-262317) Items don't respect properties of the block they are supported on
--   [MC-262351](https://bugs.mojang.com/browse/MC-262351) Worldgen deadlock caused by supporting block checks
--   [MC-262363](https://bugs.mojang.com/browse/MC-262363) Player can still gain a normal jump off of a honey block with precise timing
--   [MC-262424](https://bugs.mojang.com/browse/MC-262424) Sprinting particles on the edges of blocks are still incorrect
+-   [MC-2310](https://bugs.mojang.com/browse/MC-2310) Wrong attack radius calculation damages/kills entities through blocks and corners
+-   [MC-112133](https://bugs.mojang.com/browse/MC-112133) Eating chorus fruit does not reset fall distance
+-   [MC-118616](https://bugs.mojang.com/browse/MC-118616) The sounds of magma cubes and slimes aren't controlled by the "Hostile Creatures" sound slider
+-   [MC-122645](https://bugs.mojang.com/browse/MC-122645) Narrator hotkey cannot be customized or disabled
+-   [MC-125046](https://bugs.mojang.com/browse/MC-125046) "RepairCost" NBT tag is created on any renamed item using anvils which can cause items to not stack properly
+-   [MC-181109](https://bugs.mojang.com/browse/MC-181109) Grindstone adds RepairCost: 0
+-   [MC-182820](https://bugs.mojang.com/browse/MC-182820) Repeaters and comparators use wood sounds for placing/breaking despite being made mostly of stone
+-   [MC-197473](https://bugs.mojang.com/browse/MC-197473) Renamed block entities don't stack properly
+-   [MC-200484](https://bugs.mojang.com/browse/MC-200484) Jukeboxes use stone sounds despite being composed predominantly of wood
+-   [MC-214126](https://bugs.mojang.com/browse/MC-214126) Bees don't pollinate themselves with spore blossoms or chorus flowers
+-   [MC-217628](https://bugs.mojang.com/browse/MC-217628) Levers use wood sounds rather than stone
+-   [MC-217629](https://bugs.mojang.com/browse/MC-217629) Tripwire hooks use stone sounds, rather than wood
+-   [MC-257909](https://bugs.mojang.com/browse/MC-257909) Zoglins, hoglins, and pandas can still attack players riding camels
+-   [MC-264741](https://bugs.mojang.com/browse/MC-264741) Unequip vibration only works in creative mode
+-   [MC-264743](https://bugs.mojang.com/browse/MC-264743) The "Debug" line on the debug screen that shows which debug graphs are enabled doesn't mention the ping and network traffic chart
+-   [MC-264746](https://bugs.mojang.com/browse/MC-264746) Armor trims no longer render their second layer
+-   [MC-264753](https://bugs.mojang.com/browse/MC-264753) Eye armor trim on chainmail helmets now has absolutely no effect
+-   [MC-264773](https://bugs.mojang.com/browse/MC-264773) There's a misplaced label in the network traffic graph, overlapping minimum B/s rate text
 
 ---
 
-# Minecraft 1.19.4 Release Candidate 3
+# Minecraft Snapshot 23w32a
 
-A third Release Candidate is now available for Minecraft 1.19.4, fixing one issue in preparation for the full release of Minecraft 1.19.4 tomorrow.
-
-Happy Crafting!
-
-## Fixed bug in 1.19.4 Release Candidate 3
-
--   [MC-260901](https://bugs.mojang.com/browse/MC-260901) Guardians deal thorns damage even while their spikes are retracted
-
----
-
-# Minecraft 1.19.4 Release Candidate 2
-
-We are releasing a second Release Candidate for 1.19.4 to fix a few critical issues.
-
-## Fixed bugs in 1.19.4 Release Candidate 2
-
--   [MC-260677](https://bugs.mojang.com/browse/MC-260677) Advancement icons handle translucent textures wrong
--   [MC-260878](https://bugs.mojang.com/browse/MC-260878) Guardians apply Thorns damage when hit by projectiles
--   [MC-260881](https://bugs.mojang.com/browse/MC-260881) Transparent 3D models dont render properly in the GUI/Hotbar
-
----
-
-# Minecraft 1.19.4 Release Candidate 1
-
-Here is the first (and hopefully last) release candidate for 1.19.4. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
-
-Happy mining!
-
-## Technical Changes
-
-Changes to display entity interpolation:
-
--   interpolation always starts at the beginning on client tick
--   field `interpolation_start` is replaced with `start_interpolation`, with a different meaning
--   `start_interpolation` describes amount of ticks from the start of next client tick after receiving an update to start of interpolation
-    -   for example value `0` means that interpolation will start at the beginning of next client tick after receiving the update
--   `start_interpolation` is not stored in entity data
-    -   when using data commands, if interpolated value is updated, but `start_interpolation` is not present in modified tag, interpolation will continue from the time of previous update, but with new values
-
-## Fixed bugs in 1.19.4-rc1
-
--   [MC-260857](https://bugs.mojang.com/browse/MC-260857) Display entities summoned with initial transformation interpolate incorrectly from default transformation during next transformation
-
----
-
-# Minecraft 1.19.4 Pre-Release 4
-
-We are now releasing the fourth pre-release for Minecraft 1.19.4. This pre-release contains bug fixes, some cherry texture tweaks, and a button in the options menu to view the game credits.
-
-Happy mining!
+Hello! This very technical snapshot contains vibration changes, data pack and resource pack changes, some network optimizations, new debug tools, and a some bug fixes. Enjoy!
 
 ## Changes
 
--   Added "Credits & Attribution" button in the Options menu
+-   Changes to vibration mechanic
+
+### Vibrations
+
+-   Vibrations no longer risk being lost on simulation distance limit
+-   Unequipping items emits a new `unequip` vibration of frequency 4
+-   Chiseled Bookshelves emit a `block_change` vibration of frequency 11 when receiving books from Hoppers
+-   Turtle Eggs cracking emit a `block_change` vibration of frequency 11
+-   Turtle Eggs hatching emit a `block_destroy` vibration of frequency 12
+-   Using Bone Meal emits an `item_interact_finish` vibration of frequency 3
+-   Fire being doused by Water Potion emits a `block_destroy` vibration of frequency 12
+-   Evokers evoking Vexes or Fangs emit an `entity_place` vibration of frequency 14
+-   Carrots being eaten by Rabbits emit a `block_change` vibration of frequency 11
+-   Sweet Berries being eaten by Foxes emit a `block_change` vibration of frequency 11
+-   Camels eating Cactus emit an `eat` vibration of frequency 8
 
 ## Technical Changes
 
-### Display entities
+-   The resource pack version is now 17
+-   A bug involving hunger icons was fixed in the slicer tool released with last snapshot. Here is [the new version](https://github.com/Mojang/slicer/releases/tag/v1.1.1)
+-   The data pack version is now 17
+-   Optimized networking to improve the experience on low bandwidth connections
 
--   When a new interpolation is started, it now starts from the current state instead of the final state
+### Resource Pack Version 17
 
-## Changes to Experimental Features
+-   The text field background is now a nine-sliced sprite at `widget/text_field` and `widget/text_field_highlighted`
+-   The scroll bar in lists and text fields is now a nine-sliced sprite at `widget/scroller`
 
--   The textures for the Cherry Tree Leaves and Cherry Sign have been updated
+### Data Pack Version 17
 
-## Fixed bugs in 1.19.4 Pre-release 4
+-   Changed mob effect storage on items, entities and block entities
 
--   [MC-172305](https://bugs.mojang.com/browse/MC-172305) Some words within "/clear" command feedback messages are always pluralized
--   [MC-193497](https://bugs.mojang.com/browse/MC-193497) Tall Grass & Large Fern are rendered incorrectly when an Enderman is holding them
--   [MC-210816](https://bugs.mojang.com/browse/MC-210816) Sculk sensors are not activated upon breaking shulker bullets
--   [MC-211071](https://bugs.mojang.com/browse/MC-211071) Some words within "/spreadplayers" command feedback messages are always pluralized
--   [MC-255060](https://bugs.mojang.com/browse/MC-255060) Some words within "/function" and "/schedule" command feedback messages are always pluralized
--   [MC-255087](https://bugs.mojang.com/browse/MC-255087) Some words within "/worldborder" command feedback messages are always pluralized
--   [MC-256270](https://bugs.mojang.com/browse/MC-256270) Some words within some multiplayer command feedback messages are always pluralized
--   [MC-257784](https://bugs.mojang.com/browse/MC-257784) Some words within some realms strings are always pluralized
--   [MC-259259](https://bugs.mojang.com/browse/MC-259259) Hostile mobs can't replace armor they're wearing with better armor
--   [MC-259603](https://bugs.mojang.com/browse/MC-259603) The "selectWorld.gameMode.hardcore.info" string displayed within the create new world GUI is improperly capitalized
--   [MC-259610](https://bugs.mojang.com/browse/MC-259610) Gamemode information strings consist of inconsistent concluding punctuation
--   [MC-259637](https://bugs.mojang.com/browse/MC-259637) Natural spider potion effects still last max int instead of infinity
--   [MC-259702](https://bugs.mojang.com/browse/MC-259702) The "death.attack.hotFloor.player" string is missing an article before the word "danger"
--   [MC-259714](https://bugs.mojang.com/browse/MC-259714) Death messages relating to dragons' breath aren't possessive
--   [MC-259715](https://bugs.mojang.com/browse/MC-259715) The "death.attack.message;;_;;too;;_;;long" string is missing an article before the word "message"
--   [MC-259792](https://bugs.mojang.com/browse/MC-259792) The "selectWorld.experimental.message" string is missing a serial comma
--   [MC-259853](https://bugs.mojang.com/browse/MC-259853) block;;_;;display transform breaks when shearing
--   [MC-259896](https://bugs.mojang.com/browse/MC-259896) item;;_;;display has a wrong default value
--   [MC-260068](https://bugs.mojang.com/browse/MC-260068) The sounds of using brushes don't show any subtitles
--   [MC-260196](https://bugs.mojang.com/browse/MC-260196) Entities don't recognize decorated pots as obstacles when pathfinding
--   [MC-260214](https://bugs.mojang.com/browse/MC-260214) Entities will often spin while pathfinding on top of decorated pots
--   [MC-260215](https://bugs.mojang.com/browse/MC-260215) Water within waterlogged decorated pots doesn't flow
--   [MC-260265](https://bugs.mojang.com/browse/MC-260265) Lighting does not transform with display entities
--   [MC-260285](https://bugs.mojang.com/browse/MC-260285) Applying an identical transformation will result in the previous interpolation repeating instead of having no effect
--   [MC-260321](https://bugs.mojang.com/browse/MC-260321) Sniffers in the distance have lots of Z-fighting on their body
--   [MC-260429](https://bugs.mojang.com/browse/MC-260429) The texture of the Cherry Sign post has an inconsistency with the other Signs
--   [MC-260497](https://bugs.mojang.com/browse/MC-260497) Villager trade button interferes with the slider
--   [MC-260642](https://bugs.mojang.com/browse/MC-260642) tall;;_;;grass and large;;_;;fern display gray as block;;_;;display entities
--   [MC-260681](https://bugs.mojang.com/browse/MC-260681) UI click sounds in Create New World menu tabs are louder than they should be
--   [MC-260735](https://bugs.mojang.com/browse/MC-260735) You can block falling anvils and dripstone with a shield
--   [MC-260764](https://bugs.mojang.com/browse/MC-260764) Right-clicking will focus text fields
--   [MC-260765](https://bugs.mojang.com/browse/MC-260765) Right-clicking will move packs in the pack edit screen
--   [MC-260774](https://bugs.mojang.com/browse/MC-260774) Players are kicked from server environments due to chat message validation failures when attempting to type in chat after having previously altered chat settings
+**Mob effect storage changes**
+
+-   Game no longer uses numeric values when storing mob effects to world (so, for example, `4` becomes `minecraft:mining_fatigue`)
+-   Various mob effect fields have been renamed for consistency with new structures
+
+**Mob Effect Instance**
+
+This structure is used in many places, so changes are described separately.
+
+-   `Id` -> `id`, also changed from number to string id
+-   `Ambient` -> `ambient`
+-   `Amplifier` -> `amplifier`
+-   `Duration` -> `duration`
+-   `ShowParticles` -> `show_particles`
+-   `ShowIcon` -> `show_icon`
+-   `HiddenEffect` -> `hidden_effect`, also since it's mob effect instance, changes apply recursively
+-   `FactorCalculationData` -> `factor_calculation_data`
+
+**Items**
+
+**`potion`, `lingering_potion`, `splash_potion`, `tipped_arrow`**
+
+-   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
+
+**`suspicous_stew`**
+
+-   `Effects` -> `effects`, for each entry:
+    -   `EffectId` -> `id`, also changed from number to string id
+    -   `EffectDuration` -> `duration`
+
+**Entities**
+
+**`mooshroom`**
+
+-   Removed `EffectId` and `EffectDuration`
+-   Added `stew_effects` with the same format as `suspicious_stew.effects` tag (i.e. list of effect id and duration)
+
+**`area_effect_cloud`**
+
+-   `Effects` -> `effects`, contents tranformed as a list of mob effect instances
+
+**`arrow`**
+
+-   `CustomPotionEffects` -> `custom_potion_effects`, contents tranformed as a list of mob effect instances
+
+**Players, Armor Stands and mobs**
+
+-   `ActiveEffects` -> `active_effects`, contents tranformed as a list of mob effect instances
+
+**Block Entities**
+
+**`beacon`**
+
+-   `Primary` -> `primary_effect`, also changed from number to string id
+-   `Secondary` -> `secondary_effect`, also changed from number to string id
+
+**Loot Tables**
+
+-   Added `sequence` loot function
+    -   Contains 1 field:
+        -   `functions`: an array of sub-functions to run in sequence
+    -   Can also be declared as an inline array with out a type
+        -   This matches the existing behavior where loot function JSON files can be declared as an array of composite functions
+-   `all_of` predicates in loot tables can now be declared implicitly as an inline array without a type
+    -   This similarly matches the existing behavior where loot predicate JSON files can be declared as an array of sub-predicates
+
+### Network optimizations
+
+-   Gameplay packets are now packed into bigger TCP-packets to reduce overhead from TCP-headers, significantly reducing network usage
+-   Opening the debug screen with CTRL + F3 will now show charts for ping and received network traffic
+
+### Secure Chat
+
+-   Clients will no longer disconnect themselves when receiving an invalid chat message
+    -   A placeholder message will instead be shown in chat
 
 ---
 

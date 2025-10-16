@@ -72,6 +72,185 @@ Some gameplay oddities have been affected by this change.
 
 ---
 
+# Minecraft Snapshot 22w07a
+
+Another snapshot is now available for Minecraft: Java Edition. If you're into custom worlds, you might want to try out biome tags.
+
+Enjoy!
+
+## Technical Changes in 22w07a
+
+-   Biome tags are now used to determine which biomes a structure can generate in
+
+## Fixed bugs in 22w07a
+
+-   [MC-237110](https://bugs.mojang.com/browse/MC-237110) Grass blocks can generate underwater
+-   [MC-238977](https://bugs.mojang.com/browse/MC-238977) Glow squids spawn in villager farms and wells in superflat worlds
+-   [MC-243190](https://bugs.mojang.com/browse/MC-243190) Rooted dirt can replace cave vines
+-   [MC-244683](https://bugs.mojang.com/browse/MC-244683) Tropical Fish in lush caves spawn in bubble columns
+-   [MC-245857](https://bugs.mojang.com/browse/MC-245857) Enchanting table registers block diagonally above the bookshelves as blocking said bookshelf
+-   [MC-245925](https://bugs.mojang.com/browse/MC-245925) Falling block visual glitch when dying with doImmediateRespawn
+-   [MC-246465](https://bugs.mojang.com/browse/MC-246465) Lava can burn, damage, and destroy entities client-side and lead to de-sync
+-   [MC-248095](https://bugs.mojang.com/browse/MC-248095) Active repeating command blocks stop running after world conversion to 1.18
+-   [MC-248523](https://bugs.mojang.com/browse/MC-248523) The game crashes when attempting to open the beacon GUI
+
+---
+
+# Minecraft Snapshot 22w06a
+
+Today we're happy to share snapshot 22w06a with you. It contains compliance updates for South Korean players and is Totally Teeming with Technical Tag Tastiness.
+
+Happy Mining (in moderation)!
+
+## Changes in 22w06a
+
+If you’re playing in South Korea, we added gameplay timers and notices in compliance with gaming laws to help remind players to take occasional breaks from gameplay. For more information, please see [the FAQ](https://help.minecraft.net/hc/articles/360052763631).
+
+## Technical Changes in 22w06a
+
+-   Any type present in registries (blocks, items, biomes, etc.) can now have tags
+
+### Universal tags
+
+-   Tags can now be defined for any registry (blocks, items, biomes, etc. - see `registries.json` in report)
+-   New tags are stored in datapacks under `tags` directory (same as old ones)
+    -   Names of new tag directories are the same as registry names (so `/data/[namespace]/tags/potion` and `/data/[namespace]/tags/worldgen/biome`)
+    -   Existing tags (`blocks`, `items`, `fluids`, `entity_types`, `game_events` and `functions`) keep their name (for now)
+-   Some fields in worldgen structures that previously only lists of element ids now accept tags
+    -   Those entries now accept `[id, ...]`, `id` (shortcut for `[id]`) and `#tag`
+    -   Changed fields are:
+        -   `feature.glow_lichen` configuration: `can_be_placed_on`
+        -   `feature.spring_feature` configuration: `valid_blocks`
+        -   `feature.simple_random_selector` configuration: `features`
+        -   `block_predicate_type.matching_blocks`: `blocks`
+        -   `block_predicate_type.matching_fluids`: `fluids`
+        -   `biome`: inner list in `features`, map value in `carvers`
+        -   `biome_source.checkerboard`: `biomes`
+-   Some tag fields now require id to be prepended with `#` (however they are not yet accepting element list)
+    -   `dimension_type`: `infiniburn`
+    -   `feature.geode` configration: `blocks.cannot_replace`, `blocks.invalid_blocks`
+    -   `feature.vegetation_patch`, `feature.waterlogged_vegetation_patch` configuration: `replaceable`
+    -   `feature.root_system` configuration: `root_replaceable`
+    -   `structure_processor.protected_blocks`: `value`
+
+## Fixed bugs in 22w06a
+
+-   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
+-   [MC-239708](https://bugs.mojang.com/browse/MC-239708) Superflat world "Water World" preset settings are obsolete for the 1.18 update
+-   [MC-245937](https://bugs.mojang.com/browse/MC-245937) Flashing particles when boosting upwards with firework rockets
+-   [MC-248106](https://bugs.mojang.com/browse/MC-248106) Parrot dying while using Riptide enchantment
+
+---
+
+# Minecraft Snapshot 22w05a
+
+While we work on some larger changes that aren't quite ready yet, here's snapshot 22w05a which contains a small squishing (that's a word, right?) of bugs.
+
+Happy mining!
+
+## Changes in 22w05a
+
+-   A change in 22w03a that re-arranged Badlands biome layouts has been reverted to avoid causing generation changes and chunk borders. This change will be re-introduced later.
+
+## Fixed bugs in 22w05a
+
+-   [MC-4533](https://bugs.mojang.com/browse/MC-4533) Water graphical glitch when connecting diagonally
+-   [MC-70848](https://bugs.mojang.com/browse/MC-70848) Water looks like it flows up
+-   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
+-   [MC-214289](https://bugs.mojang.com/browse/MC-214289) Pointed dripstone can replace blocks when generating
+-   [MC-216004](https://bugs.mojang.com/browse/MC-216004) Wood pillars from mineshafts are generating on pointed dripstones
+-   [MC-216589](https://bugs.mojang.com/browse/MC-216589) Abandoned Mineshafts don't delete dripstone in certain situations
+-   [MC-232290](https://bugs.mojang.com/browse/MC-232290) Foxes will lay down in powder snow and not try to escape even when taking damage
+-   [MC-236775](https://bugs.mojang.com/browse/MC-236775) Biome Selector is disordered in other languages
+-   [MC-243152](https://bugs.mojang.com/browse/MC-243152) Slimes spawn in "Redstone Ready" superflat worlds
+-   [MC-245772](https://bugs.mojang.com/browse/MC-245772) Outdated chests' loot tables get deleted when updating to 1.18.1
+-   [MC-245910](https://bugs.mojang.com/browse/MC-245910) Campfires and hoppers cause constant chunk saving
+-   [MC-247636](https://bugs.mojang.com/browse/MC-247636) Deleting a world no longer logs that a world is being deleted
+-   [MC-248181](https://bugs.mojang.com/browse/MC-248181) The player disappears at certain heights
+-   [MC-248189](https://bugs.mojang.com/browse/MC-248189) Teleporting below level 0 from the overworld to another dimension freezes the game on the loading screen until player dies
+-   [MC-248195](https://bugs.mojang.com/browse/MC-248195) Typing /placefeature crashes client when connected to a server
+-   [MC-248210](https://bugs.mojang.com/browse/MC-248210) Harsh chunk borders appear when upgrading to 22w03a
+-   [MC-248225](https://bugs.mojang.com/browse/MC-248225) Incorrect BlockPos getSquaredDistance() calculation
+-   [MC-248230](https://bugs.mojang.com/browse/MC-248230) Players get stuck on the "Loading terrain..." screen after rejoining the world whilst above or below the build limit
+
+---
+
+# Minecraft Snapshot 22w03a
+
+Happy New Year! It's time for the first snapshot of 2022 to hit the shelves. This snapshot series will be leading up to the release of 1.18.2. With this release we aim to address a few issues before moving on and starting with the Wild Update snapshots.
+
+This snapshot contains tweaks to the world seed input and adds a new `placefeature` command. On top of that, it also fixes a bunch of bugs.
+
+Happy mining!
+
+## Changes in 22w03a
+
+-   A seed of the number zero is no longer handled as a special case
+-   Any spaces before/after an inputted seed will now be trimmed
+-   Ender chests are no longer gift wrapped around Christmas
+
+## Technical Changes in 22w03a
+
+-   The `locate` command now uses a namespaced id parameter
+-   Added command: `placefeature`
+
+### `placefeature`
+
+New command that places a configured feature at a given location. Syntax: `placefeature <id> [pos]`
+
+Parameters:
+
+-   `id`: The namespaced id of a configured feature to place
+-   `pos`: The position to use as the origin for the feature placement (if omitted, `~ ~ ~` is used)
+
+## Fixed bugs in 22w03a
+
+-   [MC-83938](https://bugs.mojang.com/browse/MC-83938) Standing on entities with solid collision boxes (shulkers, boats) kicks you for flying
+-   [MC-98727](https://bugs.mojang.com/browse/MC-98727) Server: Entering a boat/minecart/horse while going upwards from jumping causes a kick for flying
+-   [MC-111082](https://bugs.mojang.com/browse/MC-111082) Riding a boat with NoGravity on a server without flight enabled causes kick for flying
+-   [MC-126772](https://bugs.mojang.com/browse/MC-126772) Underwater fog doesn't hide edge of chunks correctly at low render distances
+-   [MC-135989](https://bugs.mojang.com/browse/MC-135989) Kicked for flying using trident with Riptide enchantment
+-   [MC-167763](https://bugs.mojang.com/browse/MC-167763) Blindness does not work underwater for certain graphics cards
+-   [MC-185545](https://bugs.mojang.com/browse/MC-185545) Knockback Resistance on players is still affected by chance
+-   [MC-185695](https://bugs.mojang.com/browse/MC-185695) Twisting vines don't reliably protect the player from fall damage
+-   [MC-205232](https://bugs.mojang.com/browse/MC-205232) Player can see farther in powder snow with blindness effect
+-   [MC-223834](https://bugs.mojang.com/browse/MC-223834) Pointed dripstone can form below some non-full (non-solid) blocks
+-   [MC-226359](https://bugs.mojang.com/browse/MC-226359) The Zero-Width Non-Joiner shows as a "ZWNJ" box
+-   [MC-229313](https://bugs.mojang.com/browse/MC-229313) Some blocks that negate fall damage don't reliably protect mobs at certain heights
+-   [MC-230905](https://bugs.mojang.com/browse/MC-230905) Sky background is visible on certain reduced fog situations
+-   [MC-233599](https://bugs.mojang.com/browse/MC-233599) /spreadplayers command does not allow for negative "under" values
+-   [MC-235574](https://bugs.mojang.com/browse/MC-235574) Game crashes when replacing a block with a wall with blockstate up:false
+-   [MC-236693](https://bugs.mojang.com/browse/MC-236693) "Done" button in controls submenu is very low
+-   [MC-237262](https://bugs.mojang.com/browse/MC-237262) Crash report and tick profiling causes "Failed to find module info for ;;_;;" spam to log
+-   [MC-238114](https://bugs.mojang.com/browse/MC-238114) Meadow trees can spawn without bee nests
+-   [MC-238866](https://bugs.mojang.com/browse/MC-238866) Snow / powder snow can generate underwater
+-   [MC-239031](https://bugs.mojang.com/browse/MC-239031) Glitchy chunk rendering persists since 21w41a
+-   [MC-239436](https://bugs.mojang.com/browse/MC-239436) Broken culling in very long caves
+-   [MC-240559](https://bugs.mojang.com/browse/MC-240559) JFR JSON report's bytesPerSecond is incorrectly calculated
+-   [MC-241152](https://bugs.mojang.com/browse/MC-241152) Powder snow is part of #goat;;_;;spawnable;;_;;on block tag / Goats can spawn on powder snow
+-   [MC-241205](https://bugs.mojang.com/browse/MC-241205) Sandstone generates 2-5 layers instead of 3-8 layers
+-   [MC-242010](https://bugs.mojang.com/browse/MC-242010) Snow Blocks, Powder Snow aren't a part of #azalea;;_;;root;;_;;replaceable / Rooted dirt can't replace Snow Blocks & Powder Snow
+-   [MC-242331](https://bugs.mojang.com/browse/MC-242331) Entities are displayed faster than chunks
+-   [MC-242543](https://bugs.mojang.com/browse/MC-242543) Suffocation always uses the entity head center position for predicate and collision box
+-   [MC-242709](https://bugs.mojang.com/browse/MC-242709) Pointed dripstone clusters create holes in the ground when generating in aquifers
+-   [MC-243015](https://bugs.mojang.com/browse/MC-243015) Falling blocks at chunk generation cause tons of entities and (client-side) lag
+-   [MC-243196](https://bugs.mojang.com/browse/MC-243196) Driver view angle resets when another player enters or exits boat
+-   [MC-243245](https://bugs.mojang.com/browse/MC-243245) Unable to select "What is Realms?" button using Tab
+-   [MC-243489](https://bugs.mojang.com/browse/MC-243489) Console spam: Skipping update for removed player
+-   [MC-243619](https://bugs.mojang.com/browse/MC-243619) Raid waves can spawn outside of simulation distance
+-   [MC-244164](https://bugs.mojang.com/browse/MC-244164) Upgrade to 1.18 makes chests invisible and empty
+-   [MC-244174](https://bugs.mojang.com/browse/MC-244174) Fog effect for void, blindness, water, lava & powder snow is cylindrical
+-   [MC-245345](https://bugs.mojang.com/browse/MC-245345) Crash when reloading chunks
+-   [MC-245347](https://bugs.mojang.com/browse/MC-245347) Flying with an elytra and colliding with floating flowing water sometimes doesn't reset fall damage
+-   [MC-245406](https://bugs.mojang.com/browse/MC-245406) Memory leak leading to crashes when loading pre-1.18 chunks
+-   [MC-245416](https://bugs.mojang.com/browse/MC-245416) Baby turtles suffocate on soul sand
+-   [MC-246445](https://bugs.mojang.com/browse/MC-246445) Game crashes when dispenser with shears is used on non-beehive block in #beehives tag
+-   [MC-246449](https://bugs.mojang.com/browse/MC-246449) Game crashes when villager tries to open non-door in #wooden;;_;;doors tag
+-   [MC-246464](https://bugs.mojang.com/browse/MC-246464) Game crashes when dispensing a bone meal in a warm ocean and there is a block with no facing block state in #wall;;_;;corals
+-   [MC-247415](https://bugs.mojang.com/browse/MC-247415) Game crashes if coral related block tags are empty during coral reef generation
+
+---
+
 # Minecraft 1.18.1 Release Candidate 3
 
 We're now releasing a third release candidate for Minecraft 1.18.1 to fix a critical security issue. If there are no major issues following this release, no further changes will be done before the full release.
@@ -405,242 +584,6 @@ Minecraft now uses Java version 17. If you are using a default setup the Launche
 -   [MC-241208](https://bugs.mojang.com/browse/MC-241208) Powered buttons, pressure plates, and tripwire hooks remain powered forever after upgrading old worlds
 -   [MC-241234](https://bugs.mojang.com/browse/MC-241234) Fossils get cut off at chunk borders
 -   [MC-241413](https://bugs.mojang.com/browse/MC-241413) Floating water generates around ravines
-
----
-
-# Minecraft 1.18 Pre-Release 1
-
-The first 1.18 pre-release is here!
-
-From now on, you should mostly see bugs being fixed. In addition to that, pre-releases don't follow the regular snapshot cadence of releasing on Wednesdays, so keep an eye out!
-
-That being said, this pre-release introduces biome blending, which means that you should no longer find harsh borders between new and old terrain. On top of that, we've also reintroduced the Amplified and Large Biome world types.
-
-Happy mining!
-
-## Changes in 1.18 Pre-Release 1
-
--   Amplified and Large biome worlds have been adapted to the new terrain and are now once again available in the Create World screen
--   Removed world types "Caves" and "Floating islands" from the world creation screen
--   The transition between new and old terrain is less "cliffy"
-    -   Will surface height blend? Yes
-    -   Will biomes blend? Yes
-    -   Will caves blend? Your mileage may vary
-
-## Technical changes in 1.18 Pre-Release 1
-
--   `--report` option in data generator now creates full worldgen reference files instead of just biomes
-
-## Fixed bugs in 1.18 Pre-Release 1
-
--   [MC-46584](https://bugs.mojang.com/browse/MC-46584) Clicking and dragging MOUSE3 (Mouse wheel) over item slots incorrectly attempts to place full stacks in survival
--   [MC-53444](https://bugs.mojang.com/browse/MC-53444) You can get outside of the worldborder by mounting a rideable entity (boat, pig, etc.) outside of it
--   [MC-54119](https://bugs.mojang.com/browse/MC-54119) Can place/take water/lava/lilypads outside worldborder and inside spawn protection
--   [MC-62550](https://bugs.mojang.com/browse/MC-62550) Worldborder not correctly initialized for the End and Nether
--   [MC-96535](https://bugs.mojang.com/browse/MC-96535) Ambient property of potion effects with ShowParticles:0b is not disregarded
--   [MC-113425](https://bugs.mojang.com/browse/MC-113425) Player can interact with entities outside the worldborder
--   [MC-117800](https://bugs.mojang.com/browse/MC-117800) Half bed can be placed outside the worldborder
--   [MC-121997](https://bugs.mojang.com/browse/MC-121997) Every dimension's world border is operating independently, and doesn't appear where it actually is
--   [MC-131808](https://bugs.mojang.com/browse/MC-131808) Forests don't spawn trees near the positive edges, but overstretch bounds on the negative edges
--   [MC-136523](https://bugs.mojang.com/browse/MC-136523) Invisible world border in the end dimension
--   [MC-187174](https://bugs.mojang.com/browse/MC-187174) Worldborder does not take nether coordinates into account
--   [MC-206660](https://bugs.mojang.com/browse/MC-206660) Stalactites don't fall properly if there are blocks directly below it
--   [MC-215139](https://bugs.mojang.com/browse/MC-215139) Some water in caves will not start flowing
--   [MC-219035](https://bugs.mojang.com/browse/MC-219035) Fossil structures can't generate in far east and south blocks of a chunk
--   [MC-222388](https://bugs.mojang.com/browse/MC-222388) Acacia trees under y=0 often grow with bare branches
--   [MC-229013](https://bugs.mojang.com/browse/MC-229013) Lava lake decorator config is unused
--   [MC-229517](https://bugs.mojang.com/browse/MC-229517) Conversion sounds for strays & drowned is controlled by Friendly Creatures mixer, not Hostile Creatures
--   [MC-231666](https://bugs.mojang.com/browse/MC-231666) Dragon egg can teleport to outside the world border
--   [MC-236610](https://bugs.mojang.com/browse/MC-236610) Lava lakes generate without stone around
--   [MC-236628](https://bugs.mojang.com/browse/MC-236628) Lava pools cause sand to fall now instead of putting sandstone beneath it
--   [MC-236652](https://bugs.mojang.com/browse/MC-236652) Weather can sometimes be incorrect within a biome
--   [MC-236803](https://bugs.mojang.com/browse/MC-236803) Extremely low amount of pillager spawns in outpost on jagged peaks, groves, snowy slopes & frozen peaks
--   [MC-237040](https://bugs.mojang.com/browse/MC-237040) Falling blocks still sometimes disappear for a moment when landing
--   [MC-237598](https://bugs.mojang.com/browse/MC-237598) Projectiles glitch around in the air when exiting simulation distance
--   [MC-237621](https://bugs.mojang.com/browse/MC-237621) Missing biome definitions in some peak grid cells causes unintended ocean placement
--   [MC-237791](https://bugs.mojang.com/browse/MC-237791) Villager spawn eggs used on grove, frozen peaks, snowy slopes and jagged peaks don't spawn snowy plains villagers
--   [MC-237954](https://bugs.mojang.com/browse/MC-237954) The "Sound of Music" and "Feels like home" advancements are internally located in the incorrect tab folder
--   [MC-238038](https://bugs.mojang.com/browse/MC-238038) Newly added advancements' namespace IDs do not match their translation keys
--   [MC-238972](https://bugs.mojang.com/browse/MC-238972) Deserts generate with little or no sandstone
--   [MC-239714](https://bugs.mojang.com/browse/MC-239714) Doing /locate desert;;_;;pryamid in a desert superflat world freezes the world
--   [MC-239851](https://bugs.mojang.com/browse/MC-239851) Upgrading old worlds causes leaves to change to surface builder blocks
--   [MC-239852](https://bugs.mojang.com/browse/MC-239852) Lava pools intersecting strongholds can cause end portal frames to be deleted
--   [MC-240021](https://bugs.mojang.com/browse/MC-240021) Cullface arguments in cauldrons are excessive
--   [MC-240481](https://bugs.mojang.com/browse/MC-240481) Deepslate doesn't generate in the new cave generation under old chunks
--   [MC-240482](https://bugs.mojang.com/browse/MC-240482) There is no bedrock in the overworld in old chunks
--   [MC-240495](https://bugs.mojang.com/browse/MC-240495) Deepslate does not generate below Y=0 in Badlands or Wooded Badlands Biomes
--   [MC-240503](https://bugs.mojang.com/browse/MC-240503) Bedrock doesn;;`;;t generate in Badlands or Wooded Badlands
--   [MC-240516](https://bugs.mojang.com/browse/MC-240516) Noise cave carvers don't generate below old chunks
--   [MC-240531](https://bugs.mojang.com/browse/MC-240531) Block simulation distance is always 8 chunks regardless of the slider's value
--   [MC-240534](https://bugs.mojang.com/browse/MC-240534) Clicking a JFR link copies full server-side path to clipboard
--   [MC-240631](https://bugs.mojang.com/browse/MC-240631) Extremely slow End terrain generation
--   [MC-240998](https://bugs.mojang.com/browse/MC-240998) Portals no longer load chunks as non entity processing
-
----
-
-# Minecraft 1.17.1 Release Candidate 2
-
-A second Release Candidate for Minecraft Java Edition 1.17.1 is now available in the launcher, fixing some critical issues. If nothing critical is found, we expect this to be released as the full version of 1.17.1 on Tuesday, July 6th.
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
----
-
-# Minecraft 1.17.1 Release Candidate 1
-
-A first and hopefully only Release Candidate for Minecraft: Java Edition 1.17.1 is now available in the launcher, fixing a few more crashes and bugs. If nothing critical is found, we expect this to be released as the full version of 1.17.1 on Tuesday, July 6th.
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
-## Fixed bugs in 1.17.1 Release Candidate 1
-
--   [MC-230716](https://bugs.mojang.com/browse/MC-230716) "death.attack.dryout" and "death.attack.dryout.player" display raw translation strings (are untranslated)
-
----
-
-# Minecraft 1.17.1 Pre-Release 3
-
-A third pre-release for 1.17.1 is now available in your launcher, fixing a few more crashes and bugs.
-
-## The Caves & Cliffs Preview
-
-​ Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip). ​
-
-## Fixed bugs in 1.17.1 Pre-release 3
-
-​
-
--   [MC-222731](https://bugs.mojang.com/browse/MC-222731) Captured axolotl constantly tries to leave water
--   [MC-224894](https://bugs.mojang.com/browse/MC-224894) Light tickets are released too early
--   [MC-228802](https://bugs.mojang.com/browse/MC-228802) Chunks not loading on a server / Cannot invoke "cmq.a(int, int, int)" because "☃" is null
--   [MC-228858](https://bugs.mojang.com/browse/MC-228858) Axolotls despawning though named and on leashes.
--   [MC-229246](https://bugs.mojang.com/browse/MC-229246) Piglins and piglin brutes no longer call other piglins after attacking one of them behind walls
--   [MC-229475](https://bugs.mojang.com/browse/MC-229475) Placing a small dripleaf results in the top half of water getting deleted
--   [MC-229887](https://bugs.mojang.com/browse/MC-229887) "Unable to create a jar-filesystem" warning logged upon starting the game
-
----
-
-# Minecraft 1.17.1 Pre-Release 2
-
-The second pre-release for 1.17.1 is now available in your launcher. This pre-release fixes a few more bugs.
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
-## Technical Changes in 1.17.1 Pre-release 1
-
--   Deaths of named mobs are now logged
-
-## Fixed Bugs in 1.17.1 Pre-Release 2
-
--   [MC-219290](https://bugs.mojang.com/browse/MC-219290) Calcite is too quiet compared to other blocks
--   [MC-221656](https://bugs.mojang.com/browse/MC-221656) Creative mode obtained Bucket of Axolotl/Tropical Fish only spawns one kind axolotl/tropical fish
--   [MC-226926](https://bugs.mojang.com/browse/MC-226926) Emerald ore generates too often
--   [MC-228599](https://bugs.mojang.com/browse/MC-228599) Attempting to walk through flowing water constantly switches the player from swimming into normal mode
--   [MC-229191](https://bugs.mojang.com/browse/MC-229191) Diamond ore distribution changed between 1.16.5 and 1.17
--   [MC-229441](https://bugs.mojang.com/browse/MC-229441) You can steal the item a villager is holding for trade by killing it
--   [MC-229614](https://bugs.mojang.com/browse/MC-229614) Wandering Trader obtained tropical fish are only white kob
--   [MC-229983](https://bugs.mojang.com/browse/MC-229983) /clear command doesn't clear certain stacks after dropping items from them
-
----
-
-# Minecraft 1.17.1 Pre-Release 1
-
-Happy Friday! The first pre-release for 1.17.1 is now available for download. This pre-release introduces a few changes to some gameplay mechanics, and it also fixes a bunch of bugs.
-
-## Changes in 1.17.1 Pre-release 1
-
--   Blue axolotls can now only be obtained through breeding
--   Non-screaming goats now have a rare chance to produce a screaming goat when bred
--   Status effects on goats now also apply when the goat is jumping or ramming
--   Raised the drop rate for copper ingots from Drowned to 11% + 2% per level of looting
--   Powder snow now fills cauldrons 2 times faster than before (still pretty slowly, though!)
--   Zombies, Zombie Villagers, Husks and Drowned will no longer pick up glow ink sacs
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
-## Technical Changes in 1.17.1 Pre-release 1
-
--   In case of DNS-based redirection, the client will send the hostname actually used to connect (this restores the pre-1.17 behaviour)
-
-## Bugs fixed in 1.17.1 Pre-release 1
-
--   [MC-123654](https://bugs.mojang.com/browse/MC-123654) Sun, moon, and/or clouds are not showing if render distance is below 4
--   [MC-131290](https://bugs.mojang.com/browse/MC-131290) Enchantments are saved as shorts, but are loaded as and function with integer values
--   [MC-156155](https://bugs.mojang.com/browse/MC-156155) Turkish lira sign (₺) appears as □ in the game
--   [MC-194736](https://bugs.mojang.com/browse/MC-194736) Duplicate text mapping for U+00B7
--   [MC-196999](https://bugs.mojang.com/browse/MC-196999) U+1FEC is wrong in Minecraft's font
--   [MC-213986](https://bugs.mojang.com/browse/MC-213986) Pistons and dispensers can be used to create ghost blocks using powder snow
--   [MC-219018](https://bugs.mojang.com/browse/MC-219018) Ghost items can be created using /item (server doesn't update client inventory correctly)
--   [MC-223350](https://bugs.mojang.com/browse/MC-223350) Loaded chunks sometimes don't render until the player moves their head slightly
--   [MC-225816](https://bugs.mojang.com/browse/MC-225816) Hanging Roots appear large when an item entity
--   [MC-226461](https://bugs.mojang.com/browse/MC-226461) Logs can be replaced with stone near lava pools
--   [MC-226948](https://bugs.mojang.com/browse/MC-226948) Withers are now affected by potion effects
--   [MC-227387](https://bugs.mojang.com/browse/MC-227387) World gen datapacks will likely crash or softlock the game
--   [MC-227435](https://bugs.mojang.com/browse/MC-227435) Lag when placing heads of non-existent players when on servers
--   [MC-227483](https://bugs.mojang.com/browse/MC-227483) root;;_;;system feature config's codec uses a wrong field
--   [MC-227520](https://bugs.mojang.com/browse/MC-227520) Overworld Fossils always generate at bedrock level
--   [MC-227557](https://bugs.mojang.com/browse/MC-227557) End portal texture appears stretched after world conversion
--   [MC-227618](https://bugs.mojang.com/browse/MC-227618) Small dripleaf is consumed without being placed when used on tall seagrass
--   [MC-227651](https://bugs.mojang.com/browse/MC-227651) Group for lapis lazuli ore smelting and blasting recipes is misspelled
--   [MC-227821](https://bugs.mojang.com/browse/MC-227821) Client crash when trying to create/edit realm immediately after deleting previous one
--   [MC-227891](https://bugs.mojang.com/browse/MC-227891) Ender pearls despawn when player logs out of a server
--   [MC-228219](https://bugs.mojang.com/browse/MC-228219) Thrown ender pearls disappear upon entering the exit end portal
--   [MC-228343](https://bugs.mojang.com/browse/MC-228343) java.lang.NullPointerException when random;;_;;selector default feature isn't found
--   [MC-228430](https://bugs.mojang.com/browse/MC-228430) Very long loading pause while booting the game ("Failed to add PDH Counter", caused by oshi)
--   [MC-228828](https://bugs.mojang.com/browse/MC-228828) Specifying the --server parameter when starting the game, causes the game to crash
--   [MC-229299](https://bugs.mojang.com/browse/MC-229299) Blue axolotls can spawn naturally
-
----
-
-# Minecraft 1.17 Release Candidate 2
-
-## Fixed Bugs in 1.17 Release Candidate 2
-
--   Fixed a few critical issues
-
----
-
-# Minecraft 1.17 Release Candidate 1
-
-We're now releasing the first (and hopefully only) release candidate for Caves & Cliffs: Part I. If there are no major issues following this release, no further changes will be done before the full release.
-
-Happy mining!
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
-## Fixed bugs in 1.17 Release Candidate 1
-
--   [MC-227323](https://bugs.mojang.com/browse/MC-227323) Custom player heads sometimes flash when placed on armor stands
--   Improved desync issues when exiting a boat over a high latency connection
--   Fixed crashes
-
----
-
-# Minecraft 1.17 Pre-Release 5
-
-The fifth pre-release for 1.17 is now available, fixing another round of bugs and crashes.
-
-## The Caves & Cliffs Preview
-
-Download the [latest datapack](https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip).
-
-## Fixed bugs in 1.17 Pre-release 5
-
--   [MC-225707](https://bugs.mojang.com/browse/MC-225707) - Caves and Cliffs Datapacks Server Error
--   [MC-227065](https://bugs.mojang.com/browse/MC-227065) - Cannot Invoke "na.b(String, int)" because "â˜ƒ is null
--   [MC-227207](https://bugs.mojang.com/browse/MC-227207) - Datafixer doesn't properly update certain scoreboard objectives from 1.16 to 1.17
--   [MC-227208](https://bugs.mojang.com/browse/MC-227208) - Breaking bamboo is excessively laggy since the 1.17 pre-releases
--   [MC-227232](https://bugs.mojang.com/browse/MC-227232) - Player head SkullOwner tag with username string no longer works
 
 ---
 

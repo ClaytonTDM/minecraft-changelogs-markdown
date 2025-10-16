@@ -537,80 +537,61 @@ New command that locates a specified biome. Useful in creative mode when you're 
 
 ---
 
-# Minecraft 1.21.9 Release Candidate 1
+# Minecraft: Java Edition 1.15.2 Pre-release 2
 
-We are now releasing the first, and hopefully only, release-candidate for 1.21.9. If all goes well, no further changes will be made before the full release. Happy mining!
+## CHANGES IN 1.15.2 PRE-RELEASE 2
 
-## Fixed bugs in 1.21.9 Release Candidate 1
+-   Fixed bugs
 
--   [MC-302243](https://bugs.mojang.com/browse/MC-302243) Creakings can spawn with the "spawnMonsters" game rule set to false
--   [MC-302278](https://bugs.mojang.com/browse/MC-302278) The texture in the middle of conduits is upside down
+## FIXED BUGS IN 1.15.2 PRE-RELEASE 2
 
----
-
-# Minecraft 1.21.9 Pre-Release 4
-
-Here is another Pre-Release for 1.21.9 with more bugfixes!
-
-## Changes
-
-### UI
-
--   Debug Options screen is now accessible using F3 + F6, instead of the previous F3 + F5
-
-## Fixed bugs in 1.21.9 Pre-Release 4
-
--   [MC-300216](https://bugs.mojang.com/browse/MC-300216) The new F3 + F5 debug settings menu does not open on Mac keyboards
--   [MC-301735](https://bugs.mojang.com/browse/MC-301735) Server Management Protocol Kick command parameter mis match
--   [MC-302039](https://bugs.mojang.com/browse/MC-302039) Conduits don't have the block-breaking animation.
--   [MC-302119](https://bugs.mojang.com/browse/MC-302119) Shield with patterns has no enchantment glint when enchanted
--   [MC-302130](https://bugs.mojang.com/browse/MC-302130) Mobs have visual glitches all over them
--   [MC-302170](https://bugs.mojang.com/browse/MC-302170) Player Heads do not Glow
--   [MC-302240](https://bugs.mojang.com/browse/MC-302240) Bugs on ranged weapons
+-   [MC-169825](https://bugs.mojang.com/browse/MC-169825) - “Multiplayer (3rd party)” shows in window title when disconnecting from a singleplayer world
+-   [MC-169839](https://bugs.mojang.com/browse/MC-169839) - Certain potion effects that override lower level effects don’t get removed after their duration ends
+-   [MC-169840](https://bugs.mojang.com/browse/MC-169840) - Drinking a level 1 potion under a level 2 beacon and leaving results in the effect being lost
+-   [MC-169848](https://bugs.mojang.com/browse/MC-169848) - Crashes when trying to create Beehive From planted tree
+-   [MC-169886](https://bugs.mojang.com/browse/MC-169886) - No older world protection in 1.15.2 PR 1
 
 ---
 
-# Minecraft 1.21.9 Pre-Release 3
+# Minecraft: Java Edition 1.15.2 Pre-release 1
 
-We'll kick the week off with a third pre-release for the Copper Age Drop. This pre-release includes a performance update and bug fix for the copper golem.
+## CHANGES IN 1.15.2 PRE-RELEASE 1
 
-## Fixed bugs in 1.21.9 Pre-Release 3
+-   Bees no longer anger when a nearby nest/hive is destroyed using a silk touch tool
+-   Added `doPatrolSpawning` and `doTraderSpawning` game rules that control spawning of patrols and wandering traders, respectively
+-   Added `gui_light` option in block models to allow controlling light when rendering model as item in GUI
+-   Controls light when rendering block model inside slot. If set to `side`, model will be rendered like block. If set to `front`, model is shaded like flat item
+-   Any birch or oak sapling grown near a flower within 2 blocks distance on the same y-level has a 5% chance of having a bee nest
+-   Bee Nests now have a 2% chance of spawning in Flower Forests
+-   Bee Nests now have a 0.2% chance of spawning in Forest, Wooded Hills, Birch Forest, Tall Birch Forest, Birch Forest Hills, and Tall Birch Hills biomes
+-   Fixed bugs
 
--   [MC-301963](https://bugs.mojang.com/browse/MC-301963) Copper golems cause huge lag spikes when checking chests
--   [MC-301990](https://bugs.mojang.com/browse/MC-301990) Copper golem statues cause culling issues when placed above certain blocks
+## FIXED BUGS IN 1.15.2 PRE-RELEASE 1
 
----
-
-# Minecraft 1.21.9 Pre-Release 2
-
-We heard Friday would be a Pre-tty cool day to release the second Pre-Release for Minecraft: Java Edition 1.21.9, so here we are! This pre-release contains fixes to various issues introduced in previous snapshots, as well as a missed bump to the Data Pack major version.
-
-Happy Crafting!
-
-## Changes
-
--   Copper Golems will now oxidize even when the game rule `doDaylightCycle` is disabled
--   The Copper Golem's behavior for turning into a statue has been tweaked to match Bedrock
-    -   Copper Golems no longer need to be close to the center of an empty block position in order to turn into a statue
-    -   Copper Golems now have the possibility to turn into a statue as soon as they become fully oxidized
-
-## Technical Changes
-
--   The Data Pack version is now 88.0, to match the breaking change to `/setworldspawn` and `/spawnpoint` in the 1.21.9-pre1
-
-## Fixed bugs in 1.21.9 Pre-Release 2
-
--   [MC-300362](https://bugs.mojang.com/browse/MC-300362) Copper golems do not oxidize when doDaylightCycle is disabled
--   [MC-301566](https://bugs.mojang.com/browse/MC-301566) Occasional sound crash on resource pack reload
--   [MC-301706](https://bugs.mojang.com/browse/MC-301706) Server Management Protocol does not support parameters as object (by-name)
--   [MC-301770](https://bugs.mojang.com/browse/MC-301770) The `below_name` plate is not displayed higher for players and mannequins named “deadmau5”
--   [MC-301963](https://bugs.mojang.com/browse/MC-301963) Copper golems cause huge lag spikes when checking chests
--   [MC-302088](https://bugs.mojang.com/browse/MC-302088) Oxidized Copper Golems take an extremely long time to turn into a statue
--   [MC-302112](https://bugs.mojang.com/browse/MC-302112) Posed mannequins don't use the correct hitbox
--   [MC-302117](https://bugs.mojang.com/browse/MC-302117) Text display billboarding is broken
--   [MC-302120](https://bugs.mojang.com/browse/MC-302120) Dimension-specific world spawn point causes mob spawning in other dimensions to fail
--   [MC-302148](https://bugs.mojang.com/browse/MC-302148) Copper Golem does not get close enough to search the chest, getting permanently stuck
--   [MC-302164](https://bugs.mojang.com/browse/MC-302164) Breaking change to /setworldspawn and /spawnpoint in minor datapack version
+-   [MC-862](https://bugs.mojang.com/browse/MC-862) - Spawn protection doesn’t work for item frames, paintings and armor stands
+-   [MC-1541](https://bugs.mojang.com/browse/MC-1541) - Beacon effect removes potion effect of the same type
+-   [MC-51053](https://bugs.mojang.com/browse/MC-51053) - Furnace minecarts lose power after navigating corners
+-   [MC-150575](https://bugs.mojang.com/browse/MC-150575) - Concrete powder does not turn into concrete when letting it fall beside water
+-   [MC-153987](https://bugs.mojang.com/browse/MC-153987) - Falling down ladders while wearing elytra
+-   [MC-165695](https://bugs.mojang.com/browse/MC-165695) - Hoppers harvesting honeycomb from bee hives and bee nests only pick up one honeycomb
+-   [MC-166312](https://bugs.mojang.com/browse/MC-166312) - Loom UI pattern icons are too dark
+-   [MC-166319](https://bugs.mojang.com/browse/MC-166319) - B on “Open in browser” is lowercase in link confirmation GUI
+-   [MC-166324](https://bugs.mojang.com/browse/MC-166324) - “Raw input” button has lowercase “i”
+-   [MC-166722](https://bugs.mojang.com/browse/MC-166722) - Some custom item models appear dark in the inventory
+-   [MC-167018](https://bugs.mojang.com/browse/MC-167018) - Misplaced pixel in critical hit particle texture
+-   [MC-167079](https://bugs.mojang.com/browse/MC-167079) - Horse Armor texture is off
+-   [MC-167201](https://bugs.mojang.com/browse/MC-167201) - Invisible glowing entities do not respect their team color
+-   [MC-167219](https://bugs.mojang.com/browse/MC-167219) - Reloading a resource pack enough times will cause intense lag
+-   [MC-167220](https://bugs.mojang.com/browse/MC-167220) - Items on marker armor stands no longer glow
+-   [MC-167235](https://bugs.mojang.com/browse/MC-167235) - Distance from where you can enter a bed is off center
+-   [MC-167344](https://bugs.mojang.com/browse/MC-167344) - com.mojang.blaze3d.platform.ClipboardManager leaks direct buffers
+-   [MC-167416](https://bugs.mojang.com/browse/MC-167416) - Distance from where a monster will stop you from sleeping is off center
+-   [MC-167444](https://bugs.mojang.com/browse/MC-167444) - iron;;_;;golem;;_;;crackiness;;_;;;;*;; textures show up on invisible iron golems that are damaged
+-   [MC-167709](https://bugs.mojang.com/browse/MC-167709) - Bees that ride a boat, minecart or other entities when entering their hive or nest can’t leave the hive or nest ever again
+-   [MC-168091](https://bugs.mojang.com/browse/MC-168091) - Concrete powder doesn’t convert into concrete when dropped into deep water
+-   [MC-168230](https://bugs.mojang.com/browse/MC-168230) - End crystal beam is dark / desaturated
+-   [MC-168467](https://bugs.mojang.com/browse/MC-168467) - Bees do not remember how many crops they’ve pollinated
+-   [MC-169157](https://bugs.mojang.com/browse/MC-169157) - Breaking a hive with obstructed front makes bees vanish
 
 ---
 

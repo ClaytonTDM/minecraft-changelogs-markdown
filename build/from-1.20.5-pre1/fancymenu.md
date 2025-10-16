@@ -317,379 +317,408 @@ Collection matcher is a shared part of predicate used for matching collections. 
 
 ---
 
-# Minecraft 1.20.4 Release Candidate 1
+# Minecraft Snapshot 24w14a
 
-We're releasing a Release Candidate for Minecraft 1.20.4. This Release Candidate fixes a critical issue found after the release of Minecraft 1.20.3
+Hello Minecraft players! Today we have a Snapshot with some technical changes and bug fixes for you.
 
-## Fixed bugs in 1.20.4 Release Candidate 1
+## Technical Changes
 
--   [MC-267185](https://bugs.mojang.com/browse/MC-267185) Decorated pots can delete items when reloading the world
+-   The Data Pack version is now 38
+-   The game now requires Java 21
+-   The game now requires a 64-bit Operating System
+-   The included Java distribution is now the Microsoft build of OpenJDK 21.0.2
+
+## Data Pack Version 38
+
+-   Added `replace` field to the `set_attributes` loot function (default: `true`)
+    -   When `false`, attributes will be appended
+-   The `text` field within filterable entries in book components has been renamed to `raw` to avoid ambiguity
+-   The `profile` component and fields on player head items and blocks respectively now support resolving from a UUID
+    -   By specifying the `id` field without a `name`, the `name` and textures will be looked up
+
+## Fixed bugs in Snapshot 24w14a
+
+-   [MC-80142](https://bugs.mojang.com/browse/MC-80142) Power tag for wither skulls, small/dragon fireballs and wind charges is not synced correctly, leading to stuttering during flight
+-   [MC-266467](https://bugs.mojang.com/browse/MC-266467) Wind charges stutter when flying through the air
+-   [MC-268563](https://bugs.mojang.com/browse/MC-268563) Snowballs, eggs, experience bottles, and ender pearls are destroyed instead of being deflected when hitting breezes
+-   [MC-268597](https://bugs.mojang.com/browse/MC-268597) Hitting a breeze with a player reflected/dispensed wind charge causes it to become trapped within the breeze until it moves
+-   [MC-268727](https://bugs.mojang.com/browse/MC-268727) Server disconnects the client when sending a keepalive packet while transitioning out of configuration phase
+-   [MC-268877](https://bugs.mojang.com/browse/MC-268877) Beehives/bee nests in inventory lose honey level after converting to newer world version
+-   [MC-268945](https://bugs.mojang.com/browse/MC-268945) Some interfaces instantly close when opened from long distances when players have their "minecraft:player.block;;_;;interaction;;_;;range" attribute set to high values
+-   [MC-269355](https://bugs.mojang.com/browse/MC-269355) Heavy Core has no required tool
+-   [MC-269446](https://bugs.mojang.com/browse/MC-269446) "Are you sure you want to quit?" screen uses background blur
+-   [MC-269482](https://bugs.mojang.com/browse/MC-269482) The set;;_;;attributes function in loot tables no longer replaces default attribute modifiers
+-   [MC-269503](https://bugs.mojang.com/browse/MC-269503) Goat horn default instrument is missing when using /give
+-   [MC-269553](https://bugs.mojang.com/browse/MC-269553) Items with empty enchantments NBT tag do not upgrade as expected
+-   [MC-269596](https://bugs.mojang.com/browse/MC-269596) EntityTag of existing items is not upgraded to entity;;_;;data component
+-   [MC-269677](https://bugs.mojang.com/browse/MC-269677) Filterable "text" field conflicts with text components
+-   [MC-269684](https://bugs.mojang.com/browse/MC-269684) Commands accepting stack sizes are restricted to a maximum of 64
+-   [MC-269700](https://bugs.mojang.com/browse/MC-269700) Item count in "/item replace" is restricted to the default stack size
+-   [MC-269716](https://bugs.mojang.com/browse/MC-269716) Unable to craft the maximum possible allowed items using shift-click in the recipe book
+-   [MC-269960](https://bugs.mojang.com/browse/MC-269960) Ctrl + Pick block is not copying container data correctly
+-   [MC-269983](https://bugs.mojang.com/browse/MC-269983) Player Head Data is not evaluated when id is present
+-   [MC-269991](https://bugs.mojang.com/browse/MC-269991) Dragon breath particles look wrong
+-   [MC-270003](https://bugs.mojang.com/browse/MC-270003) Ominous banners are not "pick block"-ed properly
+-   [MC-270061](https://bugs.mojang.com/browse/MC-270061) Ctrl + Pick Block does not copy Trial Spawner data correctly
+-   [MC-270162](https://bugs.mojang.com/browse/MC-270162) The game crashes when attempting to upgrade a world from version 1.12.2 and below
+-   [MC-270187](https://bugs.mojang.com/browse/MC-270187) Command block's nbt cannot copy before second save
 
 ---
 
-# Minecraft 1.20.3 Release Candidate 1
+# Minecraft Snapshot 24w13a
 
-We're now releasing the first (and hopefully last) release candidate for 1.20.3. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
+This fine Wednesday brings 24w13a, a snapshot containing changes to the Mace, Trial Chambers, and introduces the new Ominous Trials!
 
-Happy Mining!
-
-## Fixed bugs in 1.20.3 Release Candidate 1
-
--   [MC-266537](https://bugs.mojang.com/browse/MC-266537) Disparity between the read/write logic of the explosion packet
-
----
-
-# Minecraft 1.20.3 Pre-Release 4
-
-We're now releasing Pre-release 4 for 1.20.3 with a few more bug fixes.
+You might just be inclined to try out the ominous new features of this snapshot. ...or else? Did I do that right?
 
 Happy mining!
 
-## Fixed bugs in 1.20.3 Pre-Release 4
-
--   [MC-266968](https://bugs.mojang.com/browse/MC-266968) /return executed within an advancement reward function globally discards all subsequent commands
--   [MC-267062](https://bugs.mojang.com/browse/MC-267062) Server list ping icon doesn't display tooltip
-
----
-
-# Minecraft 1.20.3 Pre-Release 3
-
-We are now releasing the third Pre-Release for Minecraft 1.20.3, containing mostly bug fixes, as well as changes to server resource pack handling.
-
-Happy Mining!
-
-## Technical Changes
-
-### World resource packs
-
-**Local storage**
-
--   Only up to 20 server resource packs are cached
-
-**Packets**
-
--   Client now sends additional updates about packs (like download success)
-
-## Fixed bugs in 1.20.3 Pre-Release 3
-
--   [MC-265908](https://bugs.mojang.com/browse/MC-265908) Pool aliases don't redirect start pool
--   [MC-266060](https://bugs.mojang.com/browse/MC-266060) The word "ignored" is misspelled as "ingored" within the "commands.tick.query.rate.sprinting" string
--   [MC-266115](https://bugs.mojang.com/browse/MC-266115) Inconsistent Copper Door block drops when broken with tools weaker than stone
--   [MC-266144](https://bugs.mojang.com/browse/MC-266144) Copper Doors are not part of the #doors item tag
--   [MC-266145](https://bugs.mojang.com/browse/MC-266145) Copper Trapdoors are not part of the #trapdoors item tag
--   [MC-266189](https://bugs.mojang.com/browse/MC-266189) Freezing the game during pick-up animation desyncs item position
--   [MC-266210](https://bugs.mojang.com/browse/MC-266210) Dragon respawn is unable to be frozen with /tick freeze
--   [MC-266335](https://bugs.mojang.com/browse/MC-266335) Copper Doors/Trapdoors have wrong Blast Resistance
--   [MC-266903](https://bugs.mojang.com/browse/MC-266903) Incorrect part of copper door texture
--   [MC-266920](https://bugs.mojang.com/browse/MC-266920) Server Resource Packs Setting disabled no longer overridden by require-resource-pack
--   [MC-266948](https://bugs.mojang.com/browse/MC-266948) You can run "/summon wind;;_;;charge" without enabling the 1.21 datapack
-
----
-
-# Minecraft 1.20.3 Pre-Release 2
-
-Hello again! The stabilization phase for 1.20.3 release continues. This Pre-Release brings more bug fixes.
-
-## Changes
-
--   Breeze wind charges now break decorated pots, chorus flowers, and pointed dripstone blocks upon collision
-
-## Fixed bugs in 1.20.3 Pre-Release 2
-
--   [MC-265291](https://bugs.mojang.com/browse/MC-265291) Command suggestions within the command block interface don't disappear when the console command field is unselected
--   [MC-265426](https://bugs.mojang.com/browse/MC-265426) Certain inputs pressed whilst in F3+Esc Pause will be carried out after game is unpaused
--   [MC-265772](https://bugs.mojang.com/browse/MC-265772) A command with multiple redirect modifiers can ignore "maxCommandChainLength"
--   [MC-265788](https://bugs.mojang.com/browse/MC-265788) The "Start free Snapshot Realm" element can be selected or remain selected causing its tooltip to erroneously be visible when other interfaces are open
--   [MC-266075](https://bugs.mojang.com/browse/MC-266075) "Player teleports" not shown in subtitles when an ender pearl lands far from the thrower
--   [MC-266206](https://bugs.mojang.com/browse/MC-266206) Renamed arrows are reffered as just "Arrow" in the death message
--   [MC-266380](https://bugs.mojang.com/browse/MC-266380) Rain texture doesn't loop correctly
--   [MC-266439](https://bugs.mojang.com/browse/MC-266439) Decorated pots with loot table desync item consumption if it cannot be inserted in the pot
--   [MC-266496](https://bugs.mojang.com/browse/MC-266496) Wind Charge can not break Decorated Pots
--   [MC-266516](https://bugs.mojang.com/browse/MC-266516) Arrows on fire set breezes on fire, despite being deflected
--   [MC-266728](https://bugs.mojang.com/browse/MC-266728) The "styled" number format uses the resource location "result"
--   [MC-266886](https://bugs.mojang.com/browse/MC-266886) Backspace in Anvil no longer works when renaming an item
--   [MC-266890](https://bugs.mojang.com/browse/MC-266890) The minecraft:grass item does not get upgraded to minecraft:short;;_;;grass
-
----
-
-# Minecraft 1.20.3 Pre-Release 1
-
-We're bringing you the first Pre-Release of 1.20.3 with updates to server resource pack handling and bug fixes!
-
-## Technical Changes
-
--   The Data Pack version is now 26
--   The Resource Pack version is now 22
--   Changes to downloaded/world resource pack handling
-
-### World resource packs
-
-Changes apply to world resource packs (`resources.zip`), Realms resource packs and resource packs controlled by dedicated servers.
-
-**UI**
-
--   Download screen has been replaced with a toast
--   World resource pack application will start together with chunk loading
-
-**Local storage**
-
-Downloaded packs are now stored in `downloads` directory (with different file organization than old `server-resource-packs`)
-
--   Files in this directory are no longer automatically cleaned (previously only up 10 packs were kept)
--   Additionally, inside this directory there is also log file `log.json` that stores information about downloaded files for debug purposes
-
-**Server config**
-
-Downloaded packs now have unique id (GUID/UUID) that can be used to differentiate them
-
--   This value for dedicated server pack can be configured with `resource-pack-id` option in `server.properties`
--   If the value is missing, it will be generated based on URL
--   If hash of a pack is not set, this pack will be redownloaded before every application
-    -   Previously, if hash was missing, latest downloaded version of pack was applied
-
-**Packets**
-
-Some additional options are added for 3rd-party servers software:
-
--   Client can now accept multiple server resource packs
--   New packet was added to un-apply server resource packs
--   Resource packs are no longer cleaned when entering configuration phase
-
-## Data Pack Version 26
-
--   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
-
-## Resource Pack Version 22
-
--   Renamed `minecraft:grass` block and item to `minecraft:short_grass`
-
-## Fixed bugs in 1.20.3 Pre-Release 1
-
--   [MC-142160](https://bugs.mojang.com/browse/MC-142160) pausedTickDelta updated when the game is unpaused rather than paused
--   [MC-164316](https://bugs.mojang.com/browse/MC-164316) Resource pack update by a hash doesn't work
--   [MC-251126](https://bugs.mojang.com/browse/MC-251126) Server resource pack is not redownloaded when a hash mismatch is detected with the previously downloaded version
--   [MC-265927](https://bugs.mojang.com/browse/MC-265927) Edit box length restrictions can result in unpaired surrogate characters
--   [MC-265929](https://bugs.mojang.com/browse/MC-265929) Ctrl+Backspacing a word with non-BMP characters in an edit box deletes additional characters
--   [MC-266456](https://bugs.mojang.com/browse/MC-266456) Breezes in minecarts or boats are passive
--   [MC-266468](https://bugs.mojang.com/browse/MC-266468) Breeze cannot attack in deep water
--   [MC-266472](https://bugs.mojang.com/browse/MC-266472) Charged creeper / wither armor is rendered incorrectly
--   [MC-266507](https://bugs.mojang.com/browse/MC-266507) Number of block drops from TNT explosions is capped to 16
--   [MC-266563](https://bugs.mojang.com/browse/MC-266563) End Crystals and TNT Minecarts that explode without a source entity deal no damage at all
--   [MC-266571](https://bugs.mojang.com/browse/MC-266571) Breezes won't attack while under the effects of levitation status
--   [MC-266656](https://bugs.mojang.com/browse/MC-266656) The interpolation of particle, entity and block entity transforms is disrupted when pausing the game in singleplayer
--   [MC-266723](https://bugs.mojang.com/browse/MC-266723) Monsters Hunted advancement requires killing a Breeze even when they're disabled
--   [MC-266724](https://bugs.mojang.com/browse/MC-266724) scoreboard players reset no longer works
--   [MC-266729](https://bugs.mojang.com/browse/MC-266729) Unformatted objects in scoreboard error messages
-
----
-
-# Minecraft 1.20.2 Release Candidate 2
-
-A second Release Candidate for 1.20.2 is now available in the Minecraft Launcher. If no further critical issues are found, we still aim to release 1.20.2 later this week.
-
-## Changes
-
--   Fixed a problem with Villagers and Wandering Traders suffocating when travelling up slopes in Minecarts
-
----
-
-# Minecraft 1.20.2 Release Candidate 1
-
-Here is the first (and hopefully last) release candidate for 1.20.2. Unless something critical pops up, no further changes will be made for the full release, which is planned for next week.
-
-## Changes
-
--   The positions that all entities ride on minecarts have been adjusted to make more sense
-
-## Fixed bugs in 1.20.2 Release Candidate 1
-
--   [MC-265238](https://bugs.mojang.com/browse/MC-265238) trade;;_;;rebalance loot tables have a wrong type
--   [MC-265388](https://bugs.mojang.com/browse/MC-265388) Mobs now sit too high in minecarts
-
----
-
-# Minecraft 1.20.2 Pre-Release 4
-
-Here comes the fourth pre-release for 1.20.2. Much like the previous one, this pre-release contains some bug and crash fixes.
-
-Happy Mining!
-
-## Technical Changes
-
-### Data Pack Changes
-
--   Added damage type tag `always_kills_armor_stands` for damage types that should always fully kill an Armor Stand
-
-## Fixed bugs in 1.20.2 Pre-Release 4
-
--   [MC-265239](https://bugs.mojang.com/browse/MC-265239) Error in logs: java.lang.IllegalStateException: recursive call to sendBlockUpdated
--   [MC-265289](https://bugs.mojang.com/browse/MC-265289) Error in log: java.lang.IllegalStateException: onTrackingStart called during navigation iteration
-
----
-
-# Minecraft 1.20.2 Pre-Release 3
-
-We are now releasing the third pre-release for 1.20.2. As we are now on the final stabilisation stretch of 1.20.2, this pre-release contains some bug and crash fixes.
-
-Happy Mining!
-
-## Fixed bugs in 1.20.2 Pre-Release 3
-
--   [MC-264564](https://bugs.mojang.com/browse/MC-264564) Record attribute is stripped from records with no components
--   [MC-265296](https://bugs.mojang.com/browse/MC-265296) Player sits lower in minecarts
--   [MC-265335](https://bugs.mojang.com/browse/MC-265335) Hoglins can't be bred
-
----
-
-# Minecraft 1.20.2 Pre-Release 2
-
-Another pre-release this week with minor changes and some bug fixes.
-
-## Recipe book search revert
-
-We received a lot of great feedback on the changes to the Recipe Book search in the last pre-release, as well as a number of bugs. As we do not have time to address this feedback so close to release, we have reverted the change for now, but we may look into this again at a later time.
-
-## Technical Changes
-
--   The resource pack version is now 18 accounting for the new icons in last pre-release
-
-## Fixed bugs in 1.20.2 Pre-release 2
-
--   [MC-109346](https://bugs.mojang.com/browse/MC-109346) Newly rendered players always look south until they move their head
--   [MC-206182](https://bugs.mojang.com/browse/MC-206182) Cannot tab out of console text field of command block
--   [MC-235762](https://bugs.mojang.com/browse/MC-235762) Screenshots wider than 16384 pixels causes a crash / java.lang.OutOfMemoryError: Out of stack space
--   [MC-249702](https://bugs.mojang.com/browse/MC-249702) Server crash: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonArray.iterator()" because "$$1" is null
--   [MC-261119](https://bugs.mojang.com/browse/MC-261119) Accessibility button in the Welcome screen needs its own string
--   [MC-262754](https://bugs.mojang.com/browse/MC-262754) Change in AbstractScrollWidget breaks MultiLineEditBox click-to-move-cursor behaviour
--   [MC-264759](https://bugs.mojang.com/browse/MC-264759) Narrator narrates incorrect tab action in command block suggestions
--   [MC-265237](https://bugs.mojang.com/browse/MC-265237) Recipe book search no longer finds anything containing non-English characters
--   [MC-265241](https://bugs.mojang.com/browse/MC-265241) Recipe book search no longer finds relevant items in languages where compound words are not separated
--   [MC-265243](https://bugs.mojang.com/browse/MC-265243) Uncraftable variants of a craftable recipe are shown as craftable now
--   [MC-265244](https://bugs.mojang.com/browse/MC-265244) Macro arguments entered as floats are converted to scientific notation
--   [MC-265245](https://bugs.mojang.com/browse/MC-265245) Crafting book search doesn't find anything when a space is included in the search
--   [MC-265253](https://bugs.mojang.com/browse/MC-265253) Fullscreen Resolution value is untranslatable
--   [MC-265260](https://bugs.mojang.com/browse/MC-265260) Boats and rafts when placed turn south
--   [MC-265262](https://bugs.mojang.com/browse/MC-265262) Revoked recipes remain in the recipe book until relogging
--   [MC-265263](https://bugs.mojang.com/browse/MC-265263) Ender Pearl vanishes client side when enderPearlsVanishOnDeath is false
--   [MC-265264](https://bugs.mojang.com/browse/MC-265264) trade;;_;;rebalance tags are not in the trade;;_;;rebalance pack
--   [MC-265276](https://bugs.mojang.com/browse/MC-265276) Fire under naturally generated end crystals does not always emit light correctly
--   [MC-265280](https://bugs.mojang.com/browse/MC-265280) Mobs sometimes become invisible when you join a singleplayer world
-
----
-
-# Minecraft 1.20.2 Pre-Release 1
-
-Are you pre-pared for Pre-release 1 of 1.20.2? Moving into pre-releases means that, moving forward, you won't see any significant changes besides bug fixes and tweaks until the next snapshot cycle. It also means that we will be releasing more frequently than just Wednesdays, so keep your eyes peeled! However, Pre-release 1 brings new changes to the 'Villager Trade Rebalance' experiment, updates to Recipe Book search, command changes, and a new game rule!
-
-Happy crafting!
-
-## Changes
-
--   The Recipe Book search has been updated with the following changes:
-    -   The search will only match the beginning of any word in the item's name
-        -   For example, searching for "tor" will still show Torch and Redstone Torch but not Daylight Detector anymore
-    -   All recipes, including those that have not been unlocked, will now show up in search results
-    -   This will enable experienced players to find the recipes they are looking for (even if it hasn't been unlocked yet) without overwhelming new players
--   Updated structure icons on explorer maps sold by Cartographers
--   When villagers unlock new trades, the order of those trades in the UI is now always random instead of sometimes being deterministic
-
-## Technical Changes
-
--   The data pack version is now 18
--   Client options are now sent during the configuration network phase when joining a server
-
-### Data Pack Version 18
-
-This data pack version removes the recently introduced `execute if function` and `return run` functionality. Flaws with those commands (see bugs [MC-264595](https://bugs.mojang.com/browse/MC-264595), [MC-264699](https://bugs.mojang.com/browse/MC-264699) and [MC-264710](https://bugs.mojang.com/browse/MC-264710)) require some substantial changes to fix, which we do not want to make close to a release.
-
-These commands will instead be reintroduced early in the next snapshot series when we can take the time to iterate on and test them together with pack makers.
-
--   Removed `execute if|unless function` command form
--   Removed `return run` command form
--   Numbers used as macro arguments are now always inserted without suffixes, regardless of numeric type
--   Added game rule `enderPearlsVanishOnDeath`, controlling whether thrown ender pearls vanish when the player that threw them dies (default `true`)
+Note: some of the features below will only work in freshly generated Trial Chambers.
 
 ## Experimental Features
 
-### Villager Trade Rebalance Part 2
+-   Changes to the Mace
+-   Tweaks to the Breeze and Wind Charges
+-   Redesigned Bad Omen
+-   Added Ominous Bottle
+-   Added 6 new mob effects
+-   Added Ominous Trial Spawner
+-   Added Ominous Vault
+-   Added Ominous Trial Key
 
-This pre-release updates the Villager Trade Rebalance experiment. This experiment has no effect on normal worlds. If you want to try these changes, you must turn on the Feature Toggle in the Experiments Menu when creating a new world. You can find more information about Feature Toggles [here](https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition).
+### Mace
 
-Thank you to everyone that has sent in their suggestions and feedback regarding the experimental trade change! We are trying out these changes to rebalance the villager trade system and make it more fair and fun for everyone. However, these changes are not yet final, and they will stay as experimental features while we continue to work on them. We appreciate your feedback on these changes. Visit [this link](https://aka.ms/VillagerTradingFeedback) to share your thoughts! We have been following the discussions about the previous Librarian and Wandering Trader updates and look forward to seeing the conversation continue.
+-   Added a new explosive particle effect when executing a smash attack with the Mace to really show the player's power
+-   Increased the power and range of the knockback effect from a smash attack
+-   Introduced an even stronger knockback when falling for more than 5 blocks before attacking
+-   When successfully striking a target, all vertical momentum will be reset in addition to negating any accumulated fall distance
+-   The baseline additional damage dealt by the Mace smash attack has been slightly reduced to 3 (1.5 hearts) per fallen block
+-   These existing enchantments can now be applied to the Mace:
+    -   Mending
+    -   Unbreaking
+    -   Smite
+    -   Bane of Arthropods
+    -   Fire Aspect
+    -   Curse of Vanishing
+-   Three new enchantments have been introduced that are unique to the Mace:
+    -   Density:
+        -   Common Enchantment, accessible in the Enchanting Table and on Enchanted Books in loot
+        -   Has 5 levels
+        -   Maces enchanted with Density do more damage per fallen block per Density level
+            -   Damage dealt per fallen block is increased by 1 per level of Density
+    -   Breach:
+        -   Rare Enchantment, accessible in the Enchanting Table and on Enchanted Books in loot
+        -   Has 4 levels
+        -   Maces enchanted with Breach reduce the effectiveness of armor on the target
+            -   The effectiveness of the armor is reduced by 15% per Breach level
+    -   Wind Burst:
+        -   Unique enchantment which can only be found in Ominous Vaults
+        -   Has 3 levels
+        -   Maces enchanted with Wind Burst will emit a Wind Burst upon hitting an enemy, launching the attacker upward and enabling the linking of smash attacks one after the other
+        -   Each level will bounce the attacker higher up in the air
 
-**Cartographer**
+### Breeze & Wind Charges
 
-Before now, Cartographers only sold maps to the Ocean Monument and Woodland Mansion. In this experiment Cartographers can sell seven new maps as well. These new maps each point to a different village or structure and can be used to find seven different biomes. This will help players who want to quickly find a specific location without waiting until they come across it by chance.
+-   The Breeze now avoids jumping into dangerous blocks or air
+-   Wind Charges no longer collide with End Crystals
 
-Cartographers from different biomes will sell a different selection of maps. Starting from one village, it will be possible to find every other village type by following maps from village to village.
+### Ominous Events
 
-Cartographers now sell 7 new maps: Desert Village Map, Jungle Explorer Map, Plains Village Map, Savanna Village Map, Snow Village Map, Swamp Explorer Map, and Taiga Village Map.
+-   Bad Omen has been expanded to give access to an optional experience in Trial Chambers
+-   These optional experiences accessed through Bad Omen are now known as Ominous Events
+    -   They are more challenging than usual, and are designed to shake up the experience in unique ways
+    -   Illager Raids are an example of an existing Ominous Event
+-   Bad Omen is getting some changes with this redesign:
+    -   It has a new, shadowy icon and a sound for being applied to the player
+    -   It no longer triggers a Raid directly when entering a village
+        -   Instead, it will transform into a Raid Omen variant with a duration of 30 seconds
+        -   Once the Raid Omen expires, a Raid will start at the location the player gained the Raid Omen
+        -   Like any other effect, players can drink a Bucket of Milk to clear the Raid Omen to prevent the Raid from starting
+    -   It is no longer given to players that defeat a Raid Captain outside a Raid
+        -   Instead, players can gain access to Bad Omen by consuming a new Ominous Bottle
 
-**Armorer**
+**Ominous Bottle**
 
-The Armorer's trades have been updated with many changes.
+-   An item which can be consumed by players to receive the Bad Omen effect for 1 hour and 40 minutes
+    -   Comes in 5 variations, one for each Bad Omen level
+    -   The bottle breaks when consumed
+    -   Can be stacked to 64
+-   Can be found uncommonly in any Vaults that are unlocked with Trial Keys, and is dropped by Raid Captains when defeated outside a Raid
 
-The biggest change is that buying diamond armor now requires paying a small amount of Diamonds as well as Emeralds. This is meant to make the Armorer's diamond armor trades less useful at the start of the game when players don't have any Diamonds, while still giving a powerful advantage to advanced players who have spent some time collecting Diamonds.
+### Ominous Trials
 
-Early-game players will find Armorers useful as a great source of iron armor, Shields and Emeralds.
+-   A new Ominous Event that can be accessed by exploring a Trial Chamber with Bad Omen
+-   This event will have players facing more powerful Trial Spawners if they dare!
 
-Other changes include:
+**Trial Omen**
 
--   Most master-level Armorers buy Iron Blocks (and pay very well for them)
--   Chainmail armor is exclusively sold by the secret Jungle and Swamp Armorers
--   The Savanna Armorer sells cursed diamond armor at reduced prices
--   The Taiga Armorer can swap one piece of diamond armor for another
+-   A variant that Bad Omen can transform into
+    -   This occurs when the player is within detection range of a Trial Spawner that is not Ominous
+    -   The Trial Omen has a duration of 15 minutes multiplied by the transformed Bad Omen's level
+-   Players that have Trial Omen are surrounded by ominous particles
 
-**Structure Loot**
+**Ominous Trial Spawner**
 
-Certain Enchanted Books now have a high chance of generating in some structures:
+-   A more powerful active phase of the Trial Spawner with unique challenges and rewards
+    -   Provides a more challenging experience that advanced players can opt into for better rewards
+-   If a Trial Spawner detects a player that has the Trial Omen effect, the spawner will become Ominous if:
+    -   It is not in cooldown
+    -   Or, it is in cooldown but was not Ominous during its last activation
+        -   Making it Ominous this way will bypass the cooldown
+-   While active, it will:
+    -   Glow blue instead of orange
+    -   Emit soul flames instead of normal flames
+    -   Very commonly spawns mobs with equipment if they can wear it
+        -   The equipment these mobs wear have armor trims applied from the Trial Chambers
+        -   Known issue: these mobs can currently drop their equipment on death, but they will not in the future
+    -   Periodically spawn potions and projectiles on top of unsuspecting players and mobs
+        -   Based on their location, spawners in an area will select a random set of projectiles to spawn
+        -   These projectiles will always include a single type of Lingering Potion from a set of possible effects
+-   Becoming Ominous will despawn any existing mobs it spawned and reset its challenge
+    -   It will stay Ominous until it has been defeated and its cooldown has finished
+-   When defeated, it will eject a different set of loot to normal Trial Spawners
 
--   Ancient Cities: Mending
--   Mineshafts: Efficiency (I to V)
--   Pillager Outposts: Quick Charge (I to III)
--   Desert Temples: Unbreaking (I to III)
--   Jungle Temples: Unbreaking (I to III)
+**Ominous Trial Key**
 
-## Fixed bugs in 1.20.2 Pre-release 1
+-   A new variant of the Trial Key which can only be obtained by defeating an Ominous Trial Spawner
+-   They can be used to unlock Ominous Vaults
 
--   [MC-70127](https://bugs.mojang.com/browse/MC-70127) Some block state changes aren't communicated to clients
--   [MC-72721](https://bugs.mojang.com/browse/MC-72721) Chat messages show after death independent of chat setting
--   [MC-103800](https://bugs.mojang.com/browse/MC-103800) Sometimes armor stands won't update their visual rotation
--   [MC-119873](https://bugs.mojang.com/browse/MC-119873) The text used for the credits button within the title screen is untranslatable
--   [MC-154827](https://bugs.mojang.com/browse/MC-154827) Typo in splash text "Verlet intregration!"
--   [MC-177172](https://bugs.mojang.com/browse/MC-177172) Dash in villager/trader UI is hardcoded / untranslatable
--   [MC-248778](https://bugs.mojang.com/browse/MC-248778) The item count symbol within shulker box tooltips is untranslatable
--   [MC-248833](https://bugs.mojang.com/browse/MC-248833) The parentheses used before and after the warning label within the language menu are untranslatable
--   [MC-248844](https://bugs.mojang.com/browse/MC-248844) The page indicator symbol within the recipe book GUI is untranslatable
--   [MC-248846](https://bugs.mojang.com/browse/MC-248846) The colon used within the death screen to show the player's score is untranslatable
--   [MC-249355](https://bugs.mojang.com/browse/MC-249355) The hyphen used within the statistics menu to show a null value is untranslatable
--   [MC-252295](https://bugs.mojang.com/browse/MC-252295) The word "whilst" within several death messages isn't spelled in American English
--   [MC-252298](https://bugs.mojang.com/browse/MC-252298) Death messages relating to the Thorns enchantment don't contain conjunctions where appropriate
--   [MC-252316](https://bugs.mojang.com/browse/MC-252316) The word "burnt" within some death messages isn't spelled in American English
--   [MC-253241](https://bugs.mojang.com/browse/MC-253241) The player count indicator symbol within the multiplayer menu is untranslatable
--   [MC-253269](https://bugs.mojang.com/browse/MC-253269) The advancement progress indicator symbol within the advancements menu is untranslatable
--   [MC-253270](https://bugs.mojang.com/browse/MC-253270) The hyphen used within boss bars for raids is untranslatable
--   [MC-253278](https://bugs.mojang.com/browse/MC-253278) The percentage symbol used within the level loading screen to show the loading progress of the world is untranslatable
--   [MC-253281](https://bugs.mojang.com/browse/MC-253281) Text within filled map tooltips when advanced tooltips are hidden is untranslatable
--   [MC-253283](https://bugs.mojang.com/browse/MC-253283) The percentage and chunk indicator symbols used within the optimize world menu are untranslatable
--   [MC-253638](https://bugs.mojang.com/browse/MC-253638) The symbols used within shulker box tooltips to show random loot table contents are untranslatable
--   [MC-255418](https://bugs.mojang.com/browse/MC-255418) Vertical redstone dust placed against dropper/dispenser/hopper doesn't visually disappear when the dust above is removed
--   [MC-256777](https://bugs.mojang.com/browse/MC-256777) The two characters used within the tab list to show players' health are untranslatable
--   [MC-260819](https://bugs.mojang.com/browse/MC-260819) The "death.attack.message;;_;;too;;_;;long" string is missing an article before the word "stripped"
--   [MC-263133](https://bugs.mojang.com/browse/MC-263133) Inconsistent word usage in Out of Memory screen
--   [MC-264233](https://bugs.mojang.com/browse/MC-264233) Player is shown as Anonymous after dying and respawning
--   [MC-264574](https://bugs.mojang.com/browse/MC-264574) symlink does not work for root world folder
--   [MC-264615](https://bugs.mojang.com/browse/MC-264615) It takes several seconds for the absorption effect icon to display after obtaining the effect
--   [MC-264656](https://bugs.mojang.com/browse/MC-264656) Regular golden apples don't increase the number of gold hearts if you previously ate an enchanted golden apple and then took damage
--   [MC-264657](https://bugs.mojang.com/browse/MC-264657) Absorption gold heart refilling is determined by whether the low level and the high level have the same hideParticles parameter
--   [MC-264658](https://bugs.mojang.com/browse/MC-264658) Only integer numeric data type can be used in macro
--   [MC-264809](https://bugs.mojang.com/browse/MC-264809) Redstone comparators cause redstone dust connection issue
--   [MC-265053](https://bugs.mojang.com/browse/MC-265053) Programmer Art lapis lazuli outline texture in enchanting table UI incorrectly uses the old formatting
--   [MC-265060](https://bugs.mojang.com/browse/MC-265060) Missing sprite for error in Loom GUI (loom.png)
--   [MC-265126](https://bugs.mojang.com/browse/MC-265126) 'requirements' field can no longer be skipped in advancements
--   [MC-265151](https://bugs.mojang.com/browse/MC-265151) The "(Unknown)" string that's displayed when being banned from a server for an unknown reason is untranslatable
--   [MC-265209](https://bugs.mojang.com/browse/MC-265209) Switching to protocol "CONFIGURATION" causes race condition
--   [MC-265213](https://bugs.mojang.com/browse/MC-265213) The chat message from the /random command says "between 1 and 6" instead of "1 to 6"
+**Ominous Vault**
+
+-   A variant of Vaults that have a different texture and emit soul flames instead of normal flames
+-   These can be found throughout the Trial Chambers in harder to find places and require an Ominous Trial Key to unlock
+    -   These Vaults hold a more valuable set of rewards than the standard Vaults unlocked by Trial Keys
+
+### Mob Effects
+
+-   The following effects have been added:
+    -   Wind Charged
+        -   Affected entities will emit a wind burst upon death
+        -   Brewed with an Awkward Potion and a Breeze Rod
+    -   Weaving
+        -   Affected entities will spread Cobweb blocks upon death
+        -   Non-player entities with this effect can walk through Cobweb at normal speeds
+        -   Brewed with an Awkward Potion and a Cobweb block
+    -   Oozing
+        -   Affected entities will spawn two Slimes upon death
+        -   Brewed with an Awkward Potion and a Slime Block
+    -   Infested
+        -   Affected entities have a 5% chance to spawn 1-2 Silverfish when hurt
+        -   Brewed with an Awkward Potion and a Stone block
+-   These effects can be encountered while taking on an Ominous Trial Spawner
+-   Some mobs are immune to these effects
+    -   Slimes are immune to Oozing
+    -   Silverfish are immune to Infested
+
+### Trial Chambers Loot
+
+-   The loot found within Trial Chamber Vaults has been adjusted
+-   Standard Vaults will give slightly less items of high quality, but also include the following changes:
+    -   Ominous Bottle I - II can be found
+    -   Flow Banner Pattern, Flow Armor Trim Smithing Template, and Heavy Core can no longer be obtained
+        -   Guster Banner Pattern and Bolt Armor Trim Smithing Template remain exclusive to standard Vaults
+        -   In Heavy Core's place, standard Vaults will instead have a very rare chance of providing a Trident
+-   Ominous Vaults can provide some particularly valuable items, to mention a few:
+    -   Ominous Bottle III - V
+    -   Enchanted Golden Apple
+    -   Flow Banner Pattern and Flow Armor Trim Smithing Template
+    -   Wind Burst, Breach and Density Enchantments for the Mace
+    -   Heavy Core
+-   The loot ejected from Trial Spawners have been adjusted
+    -   It now has a focus on providing higher quality food more often to make replenishing between fights more safe
+-   Ominous Trial Keys have a 30% chance of ejecting from a defeated Ominous Trial Spawner, replacing the usual 50% chance to eject Trial Keys
+
+### Trial Spawner
+
+-   All spawners now increase the amount of mobs present at once by 0.5 for each additional player, down from 2
+-   Baby Zombie spawners now only have 2 mobs present at once for its baseline, down from 3 mobs
+-   Can now only activate when a player is in line of sight
+
+### Trial Chambers
+
+-   Remade `chamber_5` with variations, and renamed it to `eruption`
+-   Reduced amount of Trial Spawners in corridors
+-   Updated layout and placements of Vaults
+-   Placed Ominous Vaults in chambers, intersections, at the ends of corridors
+-   Corridors will no longer generate endlessly
+-   Added an atrium to the corridors
+-   Made various layout changes in intersections and corridors
+
+Known issues:
+
+-   Corner quadrants in slanted may still fail to generate correctly
+
+## Changes in 24w13a
+
+-   Added unique sounds for Cobwebs
+
+## Technical Changes in 24w13a
+
+-   The Data Pack version is now 37
+-   The Resource Pack version is now 31
+-   Client chat state is now preserved by default when entering configuration phase
+-   Changes to chat network protocol
+
+### Chat
+
+-   Client chat state (on-screen messages and chat input history) is now preserved by client when entering and exiting configuration phase
+-   Message signature chain handling remains unchanged - going into configuration phase starts new session
+-   If client has message delay configured, pending messages will be delivered immediately before leaving world
+-   Server can clear chat state by sending `reset_chat` packet in configuration phase
+
+### Network Protocol
+
+-   The `minecraft:chat_command_signed` packet has been split from `minecraft:chat_command`
+    -   Commands that do not accept any signed arguments will use the unsigned packet, and will not pass any 'last seen' chat updates
+
+## Data Pack Version 37
+
+-   Added new loot table type `minecraft:equipment`
+    -   Has required parameters of `this_entity` and `origin`
+        -   `this_entity` : the mob that is about to be given equipment
+        -   `origin` : the position of the mob
+-   Added optional `equipment_loot_table` to the spawn data present in the `SpawnPotentials` of Monster Spawners and `spawn_potentials` of Trial Spawner configs
+    -   If present, rolled items from the specified loot table will be equipped to the mob that spawns
+-   Modified `copy_components` and `set_name` loot function arguments
+-   Added new `set_ominous_bottle_amplifier` loot function
+-   Added new item components
+-   Non-default components on item stacks are now stored when block entity is placed
+-   Int and float providers used in worldgen definitions are no longer wrapped in an extra `value` field next to `type`
+    -   For example, `{"type":"minecraft:uniform","value":{"min_inclusive":0.0,"max_inclusive":1.0}}` becomes `{"type":"minecraft:uniform","min_inclusive":0.0,"max_inclusive":1.0}`
+-   New Damage Type Tag: `minecraft:is_player_attack` for attacks performed by the player
+-   New Entity Type Tags:
+    -   `immune_to_oozing` For entities that cannot receive the Oozing mob effect
+    -   `immune_to_infested` For entities that cannot receive the Infested mob effect
+-   Added `raider` sub entity predicate
+
+### Block entities
+
+Non-default components on item stacks containing block items are now stored on block entities when placed
+
+-   Component removals from defaults are currently not preserved
+-   Placing and breaking non-block entity blocks remains unchanged - nothing is preserved
+-   Does not automatically cause preserved components to be restored on drops - this requires addition of `copy_components` function to loot table
+-   Components are stored in field called `components`
+    -   Some components (like `custom_name`) are still handled by legacy serialization, which means they might not be present in there
+    -   Contains map of component id to component value
+
+### New Item Stack Components
+
+**`minecraft:item_name`**
+
+-   When present, replaces default item name with contained chat component
+-   Differences from `custom_name`:
+    -   `item_name` can't be changed or removed in anvil
+    -   `item_name` is not styled with italics when displayed to player
+    -   `item_name` does not show labels where applicable (for example: banner markers, names in item frames)
+
+**`minecraft:ominous_bottle_amplifier`**
+
+-   Controls the amplifier amount for an Ominous Bottle's bad omen effect
+-   Format: integer between 0 and 4
+    -   e.g. `ominous_bottle_amplifier=3`
+
+### Loot Functions
+
+**`copy_components`**
+
+Removed field `components` and replaced it with:
+
+-   `include` - optional list of data components to be copied from source
+    -   if omitted, all components present are included
+-   `exclude` - optional list of data components to be excluded from copying
+    -   if omitted, defaults to empty
+-   Only components that are included (explicitly or implicitly) but not excluded will be copied
+
+**`set_name`**
+
+Added optional field `target` to specify which name should be set
+
+-   Values:
+    -   `custom_name` - sets `custom_name` component (default)
+    -   `item_name` - sets `item_name` component
+
+**Added `set_ominous_bottle_amplifier`**
+
+Sets the `ominous_bottle_amplifier` component on the target item according to a number provider.
+
+-   `conditions`: list of conditions to filter this function
+-   `amplifier`: a number provider used to generate the `ominous_bottle_amplifier` component
+
+**Entity sub-predicates**
+
+**`raider`**
+
+New `raider` sub-predicate has been added to match raiders Fields:
+
+-   `has_raid` - Match whether the raider is in an active raid
+-   `is_captain` - Match whether the raider is a captain
+
+## Resource Pack Version 31
+
+-   Added the following particle types:
+    -   `infested`
+    -   `item_cobweb`
+    -   `small_gust`
+    -   `raid_omen`
+    -   `trial_omen`
+    -   `trial_spawner_detection_ominous`
+    -   `ominous_spawning`
+-   Added the following sound events:
+    -   `block.cobweb.break`
+    -   `block.cobweb.step`
+    -   `block.cobweb.place`
+    -   `block.cobweb.hit`
+    -   `block.cobweb.fall`
+    -   `block.trial_spawner.about_to_spawn_item`
+    -   `block.trial_spawner.spawn_item`
+    -   `block.trial_spawner.spawn_item_begin`
+    -   `block.trial_spawner.charge_activate`
+    -   `block.trial_spawner.ambient_charged`
+    -   `item.ominous_bottle.dispose`
+    -   `event.mob_effect.bad_omen`
+    -   `event.mob_effect.trial_omen`
+    -   `event.mob_effect.raid_omen`
+-   Added textures for the following blocks and items:
+    -   Ominous Vault
+    -   Ominous Trial Spawner
+    -   Ominous Bottle
+-   Updated textures for normal Vault block
+-   Added the following mob effect icon textures:
+    -   `infested`
+    -   `oozing`
+    -   `weaving`
+    -   `wind_charged`
+    -   `raid_omen`
+    -   `trial_omen`
+    -   `bad_omen_121`
+-   Added new models for Ominous state of Vault block
+
+## Fixed bugs in 24w13a
+
+-   [MC-123804](https://bugs.mojang.com/browse/MC-123804) Explorer map and Ominous banner names appear in item frames, draw in italics, and can be removed with an anvil
+-   [MC-148057](https://bugs.mojang.com/browse/MC-148057) Ominous banners generated in outposts show the pattern list
+-   [MC-166361](https://bugs.mojang.com/browse/MC-166361) GUI scale does not visually update when the option is changed using the keyboard and without the mouse
+-   [MC-178410](https://bugs.mojang.com/browse/MC-178410) Banners don't support the HideFlags tag when placed down as blocks
+-   [MC-268578](https://bugs.mojang.com/browse/MC-268578) Bogged mob sits wrong in boats
+-   [MC-268627](https://bugs.mojang.com/browse/MC-268627) Slime spawns are incorrect
+-   [MC-268716](https://bugs.mojang.com/browse/MC-268716) Magma Cubes spawn even if there's only 2 blocks in height
+-   [MC-268882](https://bugs.mojang.com/browse/MC-268882) Same Enchantments in an item components crashes the game
+-   [MC-268893](https://bugs.mojang.com/browse/MC-268893) Comparators require a block update to function properly, and droppers/observers receive false state changes
+-   [MC-269015](https://bugs.mojang.com/browse/MC-269015) Wind charges can destroy end crystals
+-   [MC-269143](https://bugs.mojang.com/browse/MC-269143) Attribute modifiers cannot exclusively target the "body" slot
+-   [MC-269342](https://bugs.mojang.com/browse/MC-269342) The experimental features details menu is rendered incorrectly after resizing the game window
+-   [MC-269371](https://bugs.mojang.com/browse/MC-269371) If the 'GUI Scale' option is on 'Auto', and if you try to scale it down using CTRL + mouse wheel, it shows as '-1'
+-   [MC-269387](https://bugs.mojang.com/browse/MC-269387) Mace sounds use the neutral sound category
+-   [MC-269388](https://bugs.mojang.com/browse/MC-269388) Mace falling damage increase is applied while using an elytra
+-   [MC-269427](https://bugs.mojang.com/browse/MC-269427) Lingering potion particles are tinted black instead of the potion's color
+-   [MC-269628](https://bugs.mojang.com/browse/MC-269628) Heavy cores delete water when placed into it
+-   [MC-269635](https://bugs.mojang.com/browse/MC-269635) The game crashes when attempting to eat lily pads or frogspawn
+-   [MC-269643](https://bugs.mojang.com/browse/MC-269643) Waterlogged heavy core does not update water flow correctly
+-   [MC-269649](https://bugs.mojang.com/browse/MC-269649) Who Needs Rockets advancement is granted after launching yourself up 8 blocks instead of 7 blocks
+-   [MC-269656](https://bugs.mojang.com/browse/MC-269656) Feeding parrots poison while holding mace grants Over-Overkill challenge
+-   [MC-269659](https://bugs.mojang.com/browse/MC-269659) Parrots can now be fed carrots to kill them instead of cookies
+-   [MC-269670](https://bugs.mojang.com/browse/MC-269670) Game crash when giving bundle with hide tooltip
 
 ---
 

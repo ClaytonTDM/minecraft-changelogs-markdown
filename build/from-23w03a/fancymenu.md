@@ -198,6 +198,205 @@ Added an optional `fallback` field to `translate` text components.
 
 ---
 
+# Minecraft 1.19.3 Release Candidate 3
+
+In order to secure the quality of the Minecraft 1.19.3 release, we have decided to fix a few more critical issues and to delay the release until tomorrow. To that end we are now releasing Minecraft 1.19.3 Release Candidate 3.
+
+Happy mining!
+
+## Fixed bugs in 1.19.3 Release Candidate 3
+
+-   [MC-108707](https://bugs.mojang.com/browse/MC-108707) Potion effects, particles, and fire animations persist client-side after death in server environments
+-   [MC-258258](https://bugs.mojang.com/browse/MC-258258) The "EntityTag" NBT data on armor stands is no longer applied upon placement
+-   [MC-258279](https://bugs.mojang.com/browse/MC-258279) Particle groups aren't cleared on resource reload
+
+---
+
+# Minecraft 1.19.3 Release Candidate 2
+
+We're now releasing the second (and hopefully last) release candidate for Minecraft 1.19.3, fixing a few critical bugs. If there are no major issues following this release candidate, no further changes will be done before the full release.
+
+With this release candidate, we are reverting a behavior change for translation strings due to a prevalent but unsupported use case. Expect this behavior to be changed in the future to provide a supported alternative.
+
+Happy mining!
+
+## Fixed bugs in 1.19.3 Release Candidate 2
+
+-   [MC-258256](https://bugs.mojang.com/browse/MC-258256) Cannot join a LAN world while offline
+-   [MC-258251](https://bugs.mojang.com/browse/MC-258251) Slots (like %s) in translations no longer ignore missing elements in "with"
+
+---
+
+# Minecraft 1.19.3 Release Candidate 1
+
+We're now releasing the first (and hopefully only) release candidate for Minecraft 1.19.3. If there are no major issues following this release candidate, no further changes will be done before the full release.
+
+Happy mining!
+
+## Fixed bugs in 1.19.3 Release Candidate 1
+
+-   [MC-58668](https://bugs.mojang.com/browse/MC-58668): Smooth Lighting Minimum and Maximum levels no longer differ
+-   [MC-185279](https://bugs.mojang.com/browse/MC-185279): "Done" and "Cancel" buttons in the game rules screen are not selected in the right order when navigating using Tab
+-   [MC-187812](https://bugs.mojang.com/browse/MC-187812): The buttons are not selected in the right order using Tab in the new datapacks and resource packs menus
+-   [MC-187816](https://bugs.mojang.com/browse/MC-187816): Using Tab multiple times to select a datapack / resource pack from the list does not deselect it
+-   [MC-227250](https://bugs.mojang.com/browse/MC-227250): Mobs continue converting after the conversion process starts and the block causing the conversion is removed
+-   [MC-240724](https://bugs.mojang.com/browse/MC-240724): There are no shadows on text displayed within the subtitles overlay
+-   [MC-248589](https://bugs.mojang.com/browse/MC-248589): World border texture jumps back and forth between two positions as the player's y level changes
+-   [MC-254809](https://bugs.mojang.com/browse/MC-254809): You cannot get water bottles from water in creative mode if there's a potion in your inventory
+-   [MC-258159](https://bugs.mojang.com/browse/MC-258159): Pick block doesn't work on Ender Dragon
+-   [MC-258190](https://bugs.mojang.com/browse/MC-258190): Bubble columns let skylight through
+-   [MC-258195](https://bugs.mojang.com/browse/MC-258195): Performance degradation of NBT modification
+-   [MC-258196](https://bugs.mojang.com/browse/MC-258196): Stray pixel in gui/toasts.png
+-   [MC-258203](https://bugs.mojang.com/browse/MC-258203): /data modify thinks NBT is too large, but /data merge doesn't
+-   [MC-258209](https://bugs.mojang.com/browse/MC-258209): Storage data is broken
+
+---
+
+# Minecraft 1.19.3 Pre-release 3
+
+We're now releasing pre-release 3 for Minecraft 1.19.3 with more bug fixes. Happy mining!
+
+## Fixed bugs in 1.19.3 Pre-release 3
+
+-   [MC-108597](https://bugs.mojang.com/browse/MC-108597): Shulker box still plays the close sound, even if it is destroyed or replaced
+-   [MC-165686](https://bugs.mojang.com/browse/MC-165686): Knowledge book texture in the crafting UI hasn't been updated
+-   [MC-177141](https://bugs.mojang.com/browse/MC-177141): Cleric working subtitle is "Brewing Stand bubbles" instead of "Cleric works"
+-   [MC-194501](https://bugs.mojang.com/browse/MC-194501): IllegalArgumentException (Cannot set property) when using a block without the "axis" property in fancy;;_;;tree;;_;;placer
+-   [MC-201769](https://bugs.mojang.com/browse/MC-201769): Copying deeply nested NBT causes StackOverflowError
+-   [MC-208051](https://bugs.mojang.com/browse/MC-208051): Chests/trapped chests/barrels do not 'open' after respawning
+-   [MC-228976](https://bugs.mojang.com/browse/MC-228976): Entity collision is run on render thread
+-   [MC-233051](https://bugs.mojang.com/browse/MC-233051): Server crashes as player logs in
+-   [MC-250428](https://bugs.mojang.com/browse/MC-250428): Narrator does not narrate the death screen
+-   [MC-256706](https://bugs.mojang.com/browse/MC-256706): Carpet texture is cut off in the recipe book
+-   [MC-257121](https://bugs.mojang.com/browse/MC-257121): Players' capes and outer skin layers don't render client-side in server environments when joining worlds while dead
+-   [MC-257340](https://bugs.mojang.com/browse/MC-257340): Vexes' hitboxes aren't vertically centered with their models
+-   [MC-257350](https://bugs.mojang.com/browse/MC-257350): Top and bottom texture of block of bamboo rotated incorrectly
+-   [MC-257392](https://bugs.mojang.com/browse/MC-257392): Vex's new model's head does not rotate to where it looks
+-   [MC-257411](https://bugs.mojang.com/browse/MC-257411): Vex Renders Offhand Items Incorrectly
+-   [MC-257495](https://bugs.mojang.com/browse/MC-257495): Dying whilst in the Shulker Box GUI will spam "Shulker Closes" sound
+-   [MC-257530](https://bugs.mojang.com/browse/MC-257530): When Chat is set to Hidden, the Chat Hidden Warning appears in chat instead of the actionbar when attempting to send a message whilst sleeping or switching gamemode
+-   [MC-257817](https://bugs.mojang.com/browse/MC-257817): Player heads with a custom skin lose their noteblock sound data when using Ctrl+Pick block
+-   [MC-257839](https://bugs.mojang.com/browse/MC-257839): NullPointerException when attempting to render a tooltip in the Game Rules menu
+-   [MC-257843](https://bugs.mojang.com/browse/MC-257843): note;;_;;block;;_;;sound data is lost when breaking a player head
+-   [MC-257861](https://bugs.mojang.com/browse/MC-257861): Villagers and Piglin no longer seek out Items
+
+---
+
+# Minecraft 1.19.3 Pre-Release 2
+
+We're now releasing 1.19.3 pre-release 2 which fixes a few bugs.
+
+## Changes in 1.19.3 Pre-release 2
+
+​
+
+-   When tabbing through buttons, tooltips are displayed above or below them
+-   Tooltips displayed when hovering are displayed next to the cursor
+-   Tooltips from focused buttons (focused by pressing tab) take priority over tooltips from hovered buttons
+-   Optimized some exceptionally slow cases of structure lookup
+
+​
+
+## Fixed bugs in 1.19.3 Pre-release 2
+
+​
+
+-   [MC-185618](https://bugs.mojang.com/browse/MC-185618) Creepers can't be ignited with a fire charge
+-   [MC-187744](https://bugs.mojang.com/browse/MC-187744) "Place pack files here" hover text on pack selection screen shows everywhere when "Open pack folder" button has focus
+-   [MC-189111](https://bugs.mojang.com/browse/MC-189111) Bees get stuck on non-full blocks
+-   [MC-256655](https://bugs.mojang.com/browse/MC-256655) Some shorter mobs can attack Players on a Camel
+-   [MC-257616](https://bugs.mojang.com/browse/MC-257616) The "Data Collection" button in the telemetry menu displays its hover text regardless of the position of the cursor
+-   [MC-257636](https://bugs.mojang.com/browse/MC-257636) Villagers rarely close doors after going through them
+-   [MC-257664](https://bugs.mojang.com/browse/MC-257664) Buttons within the list in the social interactions menu display their hover text regardless of the position of the cursor
+-   [MC-257668](https://bugs.mojang.com/browse/MC-257668) The draft report icon isn't present on any of the "Title Screen" buttons within the death screen when attempting to disconnect from worlds while having saved draft reports
+
+---
+
+# Minecraft 1.19.3 Pre-Release 1
+
+We’re now releasing the first pre-release for Minecraft 1.19.3. This pre-release fixes a few bugs, contains a few tweaks, and it has some technical changes.
+
+If everything goes as expected, we aim to release this version on December 6th.
+
+Happy mining!
+
+## Technical Changes in 1.19.3 Pre-release 1
+
+-   Added new entity sub-predicate types: `axolotl`, `boat`, `fox`, `mushroom`, `painting`, `rabbit`, `horse`, `llama`, `villager`, `parrot`, `tropical_fish`
+-   `fillbiome` command now supports a filtered mode
+-   Player Heads can now contain a `note_block_sound` field
+    -   When present, this determines the sound a note block makes when the head is placed on top of it
+
+### Loot tables and Advancements
+
+**New entity sub-predicate types**
+
+-   Added new entity sub-predicates for some entity types with variants:
+-   `axolotl`
+    -   `variant` - values: `lucy`, `wild`, `gold`, `cyan`, `blue`
+-   `boat`
+    -   Works for boats, chest boats and rafts
+    -   `variant` - values: `oak`, `spruce`, `birch`, `jungle`, `acacia`, `dark_oak`, `mangrove`, `bamboo`
+-   `fox`
+    -   `variant` - values: `red`, `snow`
+-   `mooshroom`
+    -   `variant` - values: `red`, `brown`
+-   `painting`
+    -   `variant` - values: see `painting_variant` registry
+-   `rabbit`
+    -   `variant` - values: `brown`, `white`, `black`, `white_splotched`, `gold`, `salt`, `evil`
+-   `horse`
+    -   `variant` - values: `white`, `creamy`, `chestnut`, `brown`, `black`, `gray`, `dark_brown`
+    -   Markings are separate value and not matched
+-   `llama`
+    -   `variant` - values: `creamy`, `white`, `brown`, `gray`
+-   `villager`
+    -   `variant` - values: see `villager_type` registry
+    -   Also works for Zombie Villagers
+    -   Profession and level are separate values and not matched
+-   `parrot`
+    -   `variant` - values: `red_blue`, `blue`, `green`, `yellow_blue`, `gray`
+-   `tropical_fish`
+    -   `variant` - values: `kob`, `sunstreak`, `snooper`, `dasher`, `brinely`, `spotty`, `flopper`, `stripey`, `glitter`, `blockfish`, `betty`, `clayfish`
+
+### `fillbiome` command
+
+Now supports a filtered form. New syntax:
+
+`fillbiome <from> <to> <biome> [replace <filter>]`
+
+New parameter:
+
+-   `filter`: A biome or biome tag to replace
+
+## Fixed bugs in 1.19.3 Pre-release 1
+
+-   [MC-156663](https://bugs.mojang.com/browse/MC-156663) Villager pathfinding broken in water
+-   [MC-177596](https://bugs.mojang.com/browse/MC-177596) Weaponsmith working subtitle is "Grindstone used" instead of "Weaponsmith works"
+-   [MC-177676](https://bugs.mojang.com/browse/MC-177676) Armorer working subtitle is "Blast Furnace crackles" instead of "Armorer works"
+-   [MC-245697](https://bugs.mojang.com/browse/MC-245697) Certain mobs can't get out of water that is at least two blocks deep
+-   [MC-255133](https://bugs.mojang.com/browse/MC-255133) Extra copper ore generates in deep dark
+-   [MC-256481](https://bugs.mojang.com/browse/MC-256481) minecraft.used:minecraft.BOOK;;_;;TYPE doesn't increase when placing books onto chiseled bookshelves
+-   [MC-256679](https://bugs.mojang.com/browse/MC-256679) Axolotls commonly hesitate when avoiding danger and occasionally start pathfinding in dangerous directions
+-   [MC-256883](https://bugs.mojang.com/browse/MC-256883) Elements within the game menu are now positioned slightly lower than they were in previous versions
+-   [MC-257341](https://bugs.mojang.com/browse/MC-257341) Vex texture does not utilize translucency
+-   [MC-257349](https://bugs.mojang.com/browse/MC-257349) Vex does not sit in boats and minecarts properly anymore
+-   [MC-257368](https://bugs.mojang.com/browse/MC-257368) Not a valid port error in Open to LAN doesn't show if port is <1024
+-   [MC-257373](https://bugs.mojang.com/browse/MC-257373) The cursor in the port number text box doesn't blink
+-   [MC-257374](https://bugs.mojang.com/browse/MC-257374) The word "number" isn't capitalized in "Port number"
+-   [MC-257386](https://bugs.mojang.com/browse/MC-257386) Inventory menu has broken textures with Programmer Art enabled
+-   [MC-257506](https://bugs.mojang.com/browse/MC-257506) Top and bottom texture of chiseled bookshelf rotates depending on placement
+-   [MC-257525](https://bugs.mojang.com/browse/MC-257525) Allay movement AI is broken in 22w42a+ causing them to sometimes spin mid-air
+-   [MC-257617](https://bugs.mojang.com/browse/MC-257617) You cannot scroll with the mouse wheel on the telemetry screen after clicking the "Open my data" or "Data collection" button
+-   [MC-257618](https://bugs.mojang.com/browse/MC-257618) The word "pair" uses the incorrect verb form within the "telemetry.event.world;;_;;loaded.description" string
+-   [MC-257619](https://bugs.mojang.com/browse/MC-257619) Baby piglins and zombified piglins take damage when they hit their head on a block
+-   [MC-257625](https://bugs.mojang.com/browse/MC-257625) Piglin Head placed on noteblock play the piglin angry sound instead of the piglin ambient sound
+-   [MC-257648](https://bugs.mojang.com/browse/MC-257648) The fillbiome command can result in flickering biome colors
+-   [MC-257658](https://bugs.mojang.com/browse/MC-257658) Sculk sensors are not activated upon taking books from chiseled bookshelves
+-   [MC-257663](https://bugs.mojang.com/browse/MC-257663) The "Hide messages" button in the social interactions menu can now no longer be toggled due to it being executed twice upon being pressed
+
+---
+
 # Minecraft Snapshot 22w46a
 
 We are now releasing snapshot 22w46a for Minecraft 1.19.3 with [playable mob sounds](https://www.minecraft.net/article/playable-mob-sounds-coming-minecraft-1-20) added as an experimental feature, improvements for telemetry data and several technical improvements.
@@ -406,242 +605,6 @@ Syntax:
 -   [MC-257386](https://bugs.mojang.com/browse/MC-257386) Inventory menu has broken textures with Programmer Art enabled
 -   [MC-257401](https://bugs.mojang.com/browse/MC-257401) Frog walk animation speeds up greatly when tempted by food or chasing slimes
 -   [MC-257410](https://bugs.mojang.com/browse/MC-257410) "Game Menu" on the pause menu is clickable
-
----
-
-# Minecraft Snapshot 22w45a
-
-Minecraft Snapshot 22w45a is now out and about. This snapshot introduces the [new default skins](https://www.minecraft.net/article/introducing-new-default-skins) for offline players, bamboo blocks, and a visual refresh for the Vex. On top of that, there’s some additional creative inventory tweaks.
-
-Happy mining!
-
-## New Features in 22w45a
-
--   Added new default skins for offline players
--   Added Block of Bamboo and Stripped Block of Bamboo
-    -   Block of Bamboo can be crafted from 9 Bamboo and can be stripped like other wood logs
-    -   Bamboo Planks crafted from Block of Bamboo yield only 2 planks compared to 4 for wood logs
-
-## Changes in 22w45a
-
--   The Vex now has a new look
--   The Wild update music has been tweaked to be slightly less loud
--   When opening, Shulker Boxes will pop off blocks which are attached to opened faces (such as Torches)
-    -   Blocks that require support cannot be placed on these open faces while the Shulker Box is open
--   "Teleport to Team Member" option in spectator menu now only shows up for teams with viable target players
--   Added Operator Items Tab option in the Controls menu which is off by default
--   Creative Inventory changes
-
-### Vex
-
--   Changes to Vex model and textures
-    -   The Vex retains a slightly oversized hitbox to make it easier to fight
-
-### Creative Inventory changes
-
--   Operator-only items now appear in a new Operator Utilities tab if you have both:
-    -   Operator Items Tab option in Controls menu set to `ON`
-    -   The required operator permissions
-    -   The tab is hidden if operator permissions are lost while inventory is open
-    -   Now also includes Structure Blocks and all light levels of Light Blocks
--   Added a Colored Blocks tab
-    -   Contains all blocks with 16 color variants
-    -   Moved all colored blocks from Building Blocks tab to this tab instead to make that tab less sizeable
--   Consumables tab has been renamed to Food & Drinks tab to have a more straightforward name
--   Crafting tab has been renamed to Ingredients tab since not all items are used in crafting
--   Reordered
-    -   Natural Blocks
-        -   More consistency between types for the top section
-        -   Moved eggs to be between seeds and single-block plants
-        -   Placed climbable plants above double-block plants
-    -   Food & Drinks
-        -   Cooked versions of raw food are now right next to each other
-    -   Redstone Blocks
-        -   Less cluttered
-        -   Higher importance items up the top
-        -   Removed variants of Doors, Trapdoors, Buttons and Boats that don't have any functional difference
-    -   Ingredients
-        -   Placed Lapis in the same order as ore blocks
--   Moved
-    -   Bottle o' Experience from the Tools & Utilities tab to the Ingredients tab next to enchanting books
--   Added
-    -   All axes to the Combat tab (they still remain in the Tools & Utilities tab as well)
-    -   All possible Suspicious Stews to the Consumables tab
-        -   The tooltip will show the effect of a stew before it's picked up from the Creative Inventory
-        -   Only stews with effects available via crafting or Mooshrooms are listed
-    -   Pressure Plates and Buttons of each type to the Building Blocks tab
-    -   Almost all lighting blocks to the top of the Functional Blocks tab
-    -   All 3 flight durations of Fireworks to Tools & Utilities tab, and the Combat tab next to Crossbow
-    -   Eye of Ender next to End Portal Frame block in Functional tab for better ease of use
--   Tooltips for all items in Creative Menu outside single-category tabs will show categories where this item can be found
-    -   Previously this only happened on the search tab
-
-## Technical Changes in 22w45a
-
--   The `/publish` command has new arguments to enable commands and set the default gamemode
-    -   New syntax: `/publish [allowCommands] [gamemode] [port]`
--   Changes to the Open to LAN screen
-    -   The screen now allows selecting the port on which to host the LAN world
-    -   The game mode and allow cheats buttons are now initialized with the default values of the world
--   The Resource Pack version is now 12
-
-## Fixed bugs in 22w45a
-
--   [MC-80032](https://bugs.mojang.com/browse/MC-80032) Horses can suffocate when going through nether portals
--   [MC-118140](https://bugs.mojang.com/browse/MC-118140) Result map tooltip when zooming out a map shows previous zoom value instead of new one
--   [MC-127110](https://bugs.mojang.com/browse/MC-127110) You can't empty water buckets into waterlogged blocks
--   [MC-177523](https://bugs.mojang.com/browse/MC-177523) Enderman angry/screaming sound event subtitled identically to idle sound
--   [MC-193360](https://bugs.mojang.com/browse/MC-193360) Inconsistent eye level between piglins or zombified piglins and piglin brutes
--   [MC-200000](https://bugs.mojang.com/browse/MC-200000) Merchant trade select packet (C2S) does not check for negative indices
--   [MC-235414](https://bugs.mojang.com/browse/MC-235414) Player desynchronization with Nether Portals
--   [MC-244550](https://bugs.mojang.com/browse/MC-244550) Empty Tags match Empty Slots in Shaped Recipes
--   [MC-255370](https://bugs.mojang.com/browse/MC-255370) Chat hover & click events are offset if "Line Spacing" chat setting is used
--   [MC-255743](https://bugs.mojang.com/browse/MC-255743) Bees' path finding system may cause performance issues
--   [MC-256461](https://bugs.mojang.com/browse/MC-256461) Camel's back of neck is visible during the sit down animation
--   [MC-256511](https://bugs.mojang.com/browse/MC-256511) Non-controlling passengers can make camels dash
--   [MC-256516](https://bugs.mojang.com/browse/MC-256516) Inconsistent textures with jungle hanging signs
--   [MC-256532](https://bugs.mojang.com/browse/MC-256532) Sounds for Bamboo, Crimson and Warped hanging signs use the generic wood sound
--   [MC-256616](https://bugs.mojang.com/browse/MC-256616) Weighted pressure plates make incorrect sounds
--   [MC-256674](https://bugs.mojang.com/browse/MC-256674) FileAlreadyExistsException if the resourcepacks directory is a symbolic link
--   [MC-256765](https://bugs.mojang.com/browse/MC-256765) References to chat reporting in singleplayer
--   [MC-256854](https://bugs.mojang.com/browse/MC-256854) Error in any model file causes resource reload fail now
--   [MC-256884](https://bugs.mojang.com/browse/MC-256884) Mobs don't shoot correctly from crossbows
--   [MC-256885](https://bugs.mojang.com/browse/MC-256885) The word "messages" within the "gui.chatSelection.fold" string is always pluralized
--   [MC-256888](https://bugs.mojang.com/browse/MC-256888) New network protocols prevent logging into offline servers
--   [MC-256903](https://bugs.mojang.com/browse/MC-256903) Lodestone compass's enchantment glint is scaled incorrectly
--   [MC-256917](https://bugs.mojang.com/browse/MC-256917) Death message from explosions by TNT and TNT minecarts that are not the cause of a player or another mob has changed
--   [MC-256951](https://bugs.mojang.com/browse/MC-256951) TNT Minecarts don't record what caused its explosion
--   [MC-256961](https://bugs.mojang.com/browse/MC-256961) Multishot shoots projectiles backwards
--   [MC-256990](https://bugs.mojang.com/browse/MC-256990) Superflat Worlds can use Disabled Blocks as part of their layers
--   [MC-257102](https://bugs.mojang.com/browse/MC-257102) Missing Structure Block in creative tab
--   [MC-257104](https://bugs.mojang.com/browse/MC-257104) "Lava" in gamerule.lavaSourceConversion is misspelled as "Lave"
--   [MC-257118](https://bugs.mojang.com/browse/MC-257118) Buttons are placed different than pressure plates in Creative Inventory
--   [MC-257234](https://bugs.mojang.com/browse/MC-257234) Applying bone meal to warped or crimson fungus crashes client on multiplayer
-
----
-
-# Minecraft Snapshot 22w44a
-
-Another Wednesday, another snapshot. This week's snapshot introduces a few new game rules and a few gameplay changes which include another round of inventory tweaks. As usual, there are a few bugfixes as well.
-
-Happy Mining!
-
-## Changes in 22w44a
-
--   Bamboo Mosaic can now be used as fuel
--   Chiseled Bookshelves now works with Hoppers
--   More changes to the Creative Inventory
--   Monster Spawner changes
--   Spawn Egg changes
--   Step sound changes
-
-### Creative Inventory changes
-
-A (hopefully) final round of changes have been made to the Creative Tab orderings to address feedback:
-
--   Operator-only blocks and items can now be found in the Redstone Blocks tab if you have the required permissions
--   Functional Blocks
-    -   Added:
-        -   Tinted Glass
-        -   Bee Nest
-    -   Moved Respawn Anchor before Beds
-    -   Reordered Pressure Plates by functionality
-    -   Moved End Portal Frame & Infested blocks into this tab from Natural Blocks tab
--   Redstone Blocks
-    -   Added:
-        -   Chest
-        -   Barrel
-        -   Cauldron
-        -   Furnace
-        -   Composter
--   Building Blocks
-    -   Added:
-        -   Chain
-        -   Block of Amethyst
-    -   Moved Block of Redstone and Block of Coal into this tab from Natural Blocks tab
--   Crafting
-    -   Added:
-        -   Ancient Debris
--   Reordered the following tabs for better consistency
-    -   Building Blocks
-    -   Natural Blocks
-    -   Consumables
--   Reordered ore materials and blocks to be more consistent across tabs
-
-### Monster Spawners
-
--   Spawners no longer have a default mob spawn type when placed by a player (previously was the Pig)
--   Will not emit fire particles when a mob spawn type has not been defined
--   Renamed to Monster Spawner to match Bedrock, and removed purple text color
--   Pick-block now works for Spawner blocks
--   The mob type is now displayed in the hover description of a Spawner item stack
-    -   If a mob type has not been defined yet, the hover description will describe how to set it
-
-### Spawn Eggs
-
--   Added new Spawn Egg items for Ender Dragon, Iron Golem, Snow Golem and Wither mobs to Creative mode
-    -   Ender Dragon and Wither Spawn Eggs will only be available through commands to prevent accidental destruction of player builds
--   Polar Bear Spawn Egg colors have changed to distinguish it from the Ghast Spawn Egg
-
-### Sounds
-
--   Step sounds can now be heard when walking on:
-    -   Carpets
-    -   Lily Pads
-    -   Small Amethyst Buds
--   Step sounds can now be heard when walking through:
-    -   Nether Sprouts
-    -   Glow Lichen
-    -   Crimson Roots
-    -   Warped Roots
-
-## Technical Changes in 22w44a
-
--   Added new game rules
-
-### Game Rules
-
--   Added `blockExplosionDropDecay`, `mobExplosionDropDecay` and `tntExplosionDropDecay` game rules
-    -   When set to `false`, all blocks drop loot
-    -   When set to `true`, blocks drop loot randomly depending on how far from the explosion center
-    -   Defaults to `false` for TNT, `true` for block and mob
--   Added `snowAccumulationHeight` game rule
-    -   When it is snowing, this game rule determines the maximum number of Sniow Layers that can be accumulated in each block
-    -   Defaults to `1`
-    -   Set to `0` makes no Snow form at all
-    -   Set to `8` or above lets Snow form up to the level of a full block
--   Added `waterSourceConversion` and `lavaSourceConversion` game rules
-    -   When set to `true`, allows new sources of that fluid to form
-    -   Defaults to `true` for Water and `false` for lava
--   Added `globalSoundEvents` game rule, controlling whether certain gameplay moments are heard by all players regardless of location
-    -   Defaults to `true`
-
-## Fixed bugs in 22w44
-
--   [MC-30403](https://bugs.mojang.com/browse/MC-30403) Sprinting isn't canceled when dismounting rideable entities while sprinting
--   [MC-137136](https://bugs.mojang.com/browse/MC-137136) Lily Pads use incorrect sound
--   [MC-137306](https://bugs.mojang.com/browse/MC-137306) Turtles don't have breeding delay
--   [MC-191790](https://bugs.mojang.com/browse/MC-191790) Re-creating a world doesn't allow a blank seed and uses recreated world's seed instead of random
--   [MC-195780](https://bugs.mojang.com/browse/MC-195780) "Data mode" and "Load mode" aren't capitalized while "Save Mode" and "Corner Mode" are
--   [MC-244721](https://bugs.mojang.com/browse/MC-244721) "Erase cached data" is not capitalized
--   [MC-253387](https://bugs.mojang.com/browse/MC-253387) Frog walking animation is slowed down when applied with slow falling
--   [MC-254435](https://bugs.mojang.com/browse/MC-254435) Neither the secure chat warning toast nor the chat preview warning screen is presented to the player when joining a server using the --server argument
--   [MC-255115](https://bugs.mojang.com/browse/MC-255115) Lily pads do not produce sounds when walking on them
--   [MC-256463](https://bugs.mojang.com/browse/MC-256463) Camels will not pathfind over 1.5 high blocks
--   [MC-256480](https://bugs.mojang.com/browse/MC-256480) Non Flammable Wood Item tag contains 1.20 content even when disabled
--   [MC-256526](https://bugs.mojang.com/browse/MC-256526) Bamboo Fence Gate has missing textures / culling issues
--   [MC-256606](https://bugs.mojang.com/browse/MC-256606) Camel walking animation is slowed down when applied with slow falling
--   [MC-256623](https://bugs.mojang.com/browse/MC-256623) Bamboo mosaic slabs aren't flammable
--   [MC-256637](https://bugs.mojang.com/browse/MC-256637) Some bamboo blocks can't be used as furnace fuel
--   [MC-256647](https://bugs.mojang.com/browse/MC-256647) Mobs face south even with a given rotation value
--   [MC-256768](https://bugs.mojang.com/browse/MC-256768) Entities no longer have random rotations upon being summoned from spawn eggs
--   [MC-256879](https://bugs.mojang.com/browse/MC-256879) Weighted pressure plates are placed wrong in creative inventory
--   [MC-256881](https://bugs.mojang.com/browse/MC-256881) The game crashes when pressing the ESC key while having draft chat reports saved
--   [MC-256887](https://bugs.mojang.com/browse/MC-256887) Tinted glass is not considered a 'Functional Block'
--   [MC-256934](https://bugs.mojang.com/browse/MC-256934) You aren't prompted to save your chat reports as drafts while only having report categories inputted
--   [MC-257058](https://bugs.mojang.com/browse/MC-257058) Cactus is not grouped with sugar cane in Creative inventory
--   [MC-257059](https://bugs.mojang.com/browse/MC-257059) Mushroom stem comes after nether fungus stems in Creative inventory, but mushroom blocks come before wart blocks
--   [MC-257060](https://bugs.mojang.com/browse/MC-257060) Bee nest is absent from Functional Blocks
 
 ---
 

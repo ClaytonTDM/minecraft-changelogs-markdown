@@ -576,6 +576,109 @@ they find a valid substrate they can feed of off - The charge from souls in the 
 
 ---
 
+# Minecraft 1.18.2 Release Candidate
+
+We’re now releasing the first (and hopefully only) release candidate for Minecraft 1.18.2. This release candidate fixes two world generation bugs that could cause a server to stop running. If there are no major issues following this release, no further changes will be done before the full release, which is planned for February 28th. ​ Happy mining!
+
+## Fixed Bugs in 1.18.2 Release Candidate 1
+
+-   [MC-244682](https://bugs.mojang.com/browse/MC-244682) Some custom dimensions settings can cause the server to stop running, but not crash
+-   [MC-248764](https://bugs.mojang.com/browse/MC-248764) Some worldgen datapacks can kill the internal server (possibly related to density functions)
+
+---
+
+# Minecraft 1.18.2 Pre-Release 3
+
+The third pre-release for 1.18.2 is now out, fixing more bugs!
+
+Happy Crafting!
+
+## Fixed bugs in 1.18.2 Pre-release 3
+
+-   [MC-218739](https://bugs.mojang.com/browse/MC-218739) Glow berries and glow lichen generation does not cause light updates across chunk borders
+-   [MC-244772](https://bugs.mojang.com/browse/MC-244772) Can't double click to join a realm
+-   [MC-248539](https://bugs.mojang.com/browse/MC-248539) /locate command not working properly in Flat Worlds
+-   [MC-248636](https://bugs.mojang.com/browse/MC-248636) The game output and server console are logged and spammed with "Creating a MIN function between two non-overlapping inputs" when joining or creating a world
+-   [MC-248637](https://bugs.mojang.com/browse/MC-248637) Crash when opening singleplayer screen due to StackOverflowError in net.minecraft.nbt.CompoundTag$1.skip
+-   [MC-248680](https://bugs.mojang.com/browse/MC-248680) The world freezes on superflat when using the locate command to find a pillager outpost
+-   [MC-248748](https://bugs.mojang.com/browse/MC-248748) Explorer maps leading to custom structures can cause the server to hang
+
+---
+
+# Minecraft 1.18.2 Pre-Release 2
+
+The second pre-release for 1.18.2 is now out! This pre-release adds a spline density function and fixes a few bugs.
+
+Enjoy!
+
+## Technical Changes in 1.18.2 Pre-Release 2
+
+-   Added [`spline` density](https://wikipedia.org/wiki/Spline_interpolation) function: general-purpose building block that allows you to express almost any function using a cubic spline
+
+## Fixed bugs in 1.18.2 Pre-Release 2
+
+-   [MC-243766](https://bugs.mojang.com/browse/MC-243766) Unable to put focus on "Copyright Mojang AB. Do not distribute" using Tab key
+-   [MC-248638](https://bugs.mojang.com/browse/MC-248638) Strongholds can generate in The Void biome
+-   [MC-248681](https://bugs.mojang.com/browse/MC-248681) Superflat worlds cannot be created without using presets
+-   [MC-248694](https://bugs.mojang.com/browse/MC-248694) An empty generator-settings string crashes the server when starting up
+-   [MC-248717](https://bugs.mojang.com/browse/MC-248717) Fortress mobs can spawn outside of fortresses
+
+---
+
+# Minecraft 1.18.2 Pre-Release 1
+
+We're now releasing the first pre-release for Minecraft 1.18.2. This pre-release introduces the possibility for data packs to customize cave generation and to add new custom structures to worlds.
+
+If everything goes as expected, we aim to release this version on February 28th.
+
+Happy mining!
+
+## Changes in 1.18.2 Pre-release 1
+
+-   Users running Minecraft in a 32-bit environment will receive a warning in the main menu about the upcoming end of 32-bit environment support
+
+## Technical Changes in 1.18.2 Pre-release 1
+
+-   The data pack version is now 9
+-   It is now possible to add custom structures in experimental datapacks
+-   `locate` and `locatebiome` commands now support tags (prefix with `#` to distinguish from normal ids)
+-   The `locate` command parameter is now a configured structure rather than a structure type. For instance, you can now use `/locate village_desert` or `/locate shipwreck_beached`
+-   A lot of the cave generation is now configurable through data packs
+
+### Configurable caves
+
+-   A new registry was added for Density functions (caves are created by combining those together)
+-   Noise settings got a new field `noise_router` (and lost a couple of flags), see `worldgen/noise_settings` folder in the worldgen report
+-   Noise router wires data-driven parts of the cave generation with the rest of the code
+
+### Configured Structures and Structure Sets
+
+The game now generates and stores data-driven configured structures.
+
+-   Experimental datapacks can add new structure sets
+-   The `feature` field in location predicates now references a configured feature
+-   The `exploration_map` loot table function `destination` field is now a configured feature tag id
+-   The `exploration_map` loot table function no longer automatically sets the display name of the map
+
+**Side effects**
+
+Some gameplay oddities have been affected by this change.
+
+-   Dolphins will now more accurately pick the closest structure regardless of type
+-   Bastion Remnant bounding boxes are now slightly more accurate to the shape of the structure
+
+## Fixed bugs in 1.18.2 Pre-release 1
+
+-   [MC-3524](https://bugs.mojang.com/browse/MC-3524) Structure related mobs do not spawn in flat type world generation
+-   [MC-146854](https://bugs.mojang.com/browse/MC-146854) Player movement favors x axis when in a corner
+-   [MC-179315](https://bugs.mojang.com/browse/MC-179315) Ruined portals never generate in superflat worlds by default
+-   [MC-210612](https://bugs.mojang.com/browse/MC-210612) Strongholds do not generate in certain customized worlds despite /locate saying otherwise
+-   [MC-241288](https://bugs.mojang.com/browse/MC-241288) Support for custom structures has been removed
+-   [MC-244137](https://bugs.mojang.com/browse/MC-244137) The option "level-seed" is not present in server.properties by default
+-   [MC-248532](https://bugs.mojang.com/browse/MC-248532) Elytra firework particle spawns on the wrong hand when dual wielding fireworks
+
+---
+
 # Minecraft Snapshot 22w07a
 
 Another snapshot is now available for Minecraft: Java Edition. If you're into custom worlds, you might want to try out biome tags.
@@ -643,39 +746,6 @@ If you’re playing in South Korea, we added gameplay timers and notices in comp
 -   [MC-239708](https://bugs.mojang.com/browse/MC-239708) Superflat world "Water World" preset settings are obsolete for the 1.18 update
 -   [MC-245937](https://bugs.mojang.com/browse/MC-245937) Flashing particles when boosting upwards with firework rockets
 -   [MC-248106](https://bugs.mojang.com/browse/MC-248106) Parrot dying while using Riptide enchantment
-
----
-
-# Minecraft Snapshot 22w05a
-
-While we work on some larger changes that aren't quite ready yet, here's snapshot 22w05a which contains a small squishing (that's a word, right?) of bugs.
-
-Happy mining!
-
-## Changes in 22w05a
-
--   A change in 22w03a that re-arranged Badlands biome layouts has been reverted to avoid causing generation changes and chunk borders. This change will be re-introduced later.
-
-## Fixed bugs in 22w05a
-
--   [MC-4533](https://bugs.mojang.com/browse/MC-4533) Water graphical glitch when connecting diagonally
--   [MC-70848](https://bugs.mojang.com/browse/MC-70848) Water looks like it flows up
--   [MC-105317](https://bugs.mojang.com/browse/MC-105317) Structure blocks do not rotate entities correctly when loading
--   [MC-214289](https://bugs.mojang.com/browse/MC-214289) Pointed dripstone can replace blocks when generating
--   [MC-216004](https://bugs.mojang.com/browse/MC-216004) Wood pillars from mineshafts are generating on pointed dripstones
--   [MC-216589](https://bugs.mojang.com/browse/MC-216589) Abandoned Mineshafts don't delete dripstone in certain situations
--   [MC-232290](https://bugs.mojang.com/browse/MC-232290) Foxes will lay down in powder snow and not try to escape even when taking damage
--   [MC-236775](https://bugs.mojang.com/browse/MC-236775) Biome Selector is disordered in other languages
--   [MC-243152](https://bugs.mojang.com/browse/MC-243152) Slimes spawn in "Redstone Ready" superflat worlds
--   [MC-245772](https://bugs.mojang.com/browse/MC-245772) Outdated chests' loot tables get deleted when updating to 1.18.1
--   [MC-245910](https://bugs.mojang.com/browse/MC-245910) Campfires and hoppers cause constant chunk saving
--   [MC-247636](https://bugs.mojang.com/browse/MC-247636) Deleting a world no longer logs that a world is being deleted
--   [MC-248181](https://bugs.mojang.com/browse/MC-248181) The player disappears at certain heights
--   [MC-248189](https://bugs.mojang.com/browse/MC-248189) Teleporting below level 0 from the overworld to another dimension freezes the game on the loading screen until player dies
--   [MC-248195](https://bugs.mojang.com/browse/MC-248195) Typing /placefeature crashes client when connected to a server
--   [MC-248210](https://bugs.mojang.com/browse/MC-248210) Harsh chunk borders appear when upgrading to 22w03a
--   [MC-248225](https://bugs.mojang.com/browse/MC-248225) Incorrect BlockPos getSquaredDistance() calculation
--   [MC-248230](https://bugs.mojang.com/browse/MC-248230) Players get stuck on the "Loading terrain..." screen after rejoining the world whilst above or below the build limit
 
 ---
 

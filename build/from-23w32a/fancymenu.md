@@ -548,153 +548,117 @@ This makes repeated calls with the same parameter set cheaper than new calls wit
 
 ---
 
-# Minecraft Snapshot 23w18a
+# Minecraft 1.20.1 Release Candidate 1
 
-In this snapshot we're bringing you an additional advancement, updates to telemetry, as well as a fix for an 11 year old bug!
+We're now releasing a Release Candidate for a first minor update for Minecraft 1.20. This minor update will be a stability issue to fix some critical issues found after the release of Minecraft 1.20.
 
-Happy stepping!
+## Fixed bugs in 1.20.1 Release Candidate 1
 
-## New Features
+-   Fixed a disk permissions-related crash
+-   [MC-263244](https://bugs.mojang.com/browse/MC-263244) The realms invitation icon that appears on the realms button in the main menu is displayed incorrectly
+-   [MC-263245](https://bugs.mojang.com/browse/MC-263245) Buttons in the "Add Realm" interface within the realms menu no longer render
+-   [MC-263296](https://bugs.mojang.com/browse/MC-263296) Game softlocks after cancelling joining a server
+-   [MC-263340](https://bugs.mojang.com/browse/MC-263340) Incorrect Protochunk#setStatus call on chunk generate
 
-### New advancements
+---
 
-**Adventure advancements**
+# Minecraft 1.20 Release Candidate 1
 
--   `The Power of Books` : Read the power signal of a Chiseled Bookshelf using a Comparator
+We are now releasing the first, and hopefully only, release-candidate for 1.20, containing two bug fixes. If all goes well, no further changes will be made before the full release of Minecraft 1.20 on Wednesday next week.
 
-## Changes
+Happy crafting!
 
--   For ease of use, the Smithing Table no longer requires a Smithing Template to be in the template slot before placing an itemstack into the other slots
--   Jukebox has been added to the Redstone Blocks creative tab
+## Fixed bugs in 1.20 Release Candidate 1
 
-### Step Sounds
+-   [MC-256477](https://bugs.mojang.com/browse/MC-256477) Knowledge books can't be placed in chiseled bookshelves
+-   [MC-262853](https://bugs.mojang.com/browse/MC-262853) Pitcher plant breaks and floats when growing without enough light
 
--   Walking on a block will now always play a step sound
-    -   It was previously not the case if you were walking along the edge of a block with air or fluid besides it
--   Walking on the ocean floor will produce a step sound for the block you are walking on at a lower volume and pitch
+---
+
+# Minecraft 1.20 Pre-release 7
+
+Pre-release 7 for Minecraft 1.20 is now available in the Minecraft Launcher. This pre-release adds validation of symbolic links and fixes a bug.
+
+### Changes
+
+To improve safety, the game will now detect symbolic links used inside world directory. For a detailed explanation, check our [help article](https://aka.ms/MinecraftSymLinks).
+
+-   If the target of a symbolic link is not on the user-configured allow-list, the game will not proceed with loading the world
+    -   Note: world directory itself can still be linked
+-   The list of allowed symbolic link targets is stored in file `allowed_symlinks.txt` in client or server top directory
+-   The file consists of entries (one per line) with following formats allowed:
+    -   Lines starting with `#` are comments and are ignored
+    -   `[type]pattern`, where `type` can be `glob`, `regex` or `prefix`
+        -   `prefix` matches start of path with given pattern (so for `/test` paths `/test`, `/test/` and `/test/foo.txt` would match)
+        -   `regex` matches regular expression against whole path
+        -   `glob` uses OS-specific path matching mechanism (for example `*.txt` would usually match files with `txt` extension)
+        -   Note: paths will use OS-specific separators
+    -   `pattern`, which uses default `prefix` type
+
+## Fixed bug in 1.20 Pre-release 7
+
+-   [MC-257778](https://bugs.mojang.com/browse/MC-257778) Bamboo Mosaic Slabs and Stairs are not in the #slabs and #stairs block and item tags
+
+---
+
+# Minecraft 1.20 Pre-Release 6
+
+The sixth pre-release of the 1.20 update is here, yet again containing more bug fixes.
+
+Happy mining!
 
 ## Technical Changes
 
--   The data pack version is now 15, accounting for sign data format, item display orientation and advancement changes
--   Advancement trigger changes:
-    -   Added `recipe_crafted`
-    -   Changed format of `placed_block`, `item_used_on_block` and `allay_drop_item_on_block` triggers
--   Loot table condition/predicate changes:
-    -   Renamed `alternative` to `any_of`
-    -   Added `all_of`
--   Updates to telemetry
-    -   A new property has been added to every event: `launcher_name`
-    -   The `world_loaded` event now has a new property: `realms_map_content`
-    -   Added two new opt-in telemetry events: `game_load_times` and `advancement_made`
-
-### Advancements
-
-**Changed triggers**
-
--   All fields in `placed_block`, `item_used_on_block` and `allay_drop_item_on_block` have been collapsed to a single `location` field
--   New `location` is similar to `player` field - it's a list of loot conditions/predicates
--   All conditions in this list must match for a trigger to run
--   Conditions are evaluated in a new loot context called `advancement_location`. It has access to:
-    -   Player as `this` entity
-    -   Position of placed block
-    -   Block state of placed/interacted block
-    -   Held/used item as "tool"
--   Migration guide:
-    -   Contents of old `location` field should be migrated to `location_check` condition
-    -   Contents of `item` field should be migrated to `match_tool` condition
-    -   Contents of `block` + `state` fields should be migrated to `block_state_property` condition
-
-**Example** (from `make_a_sign_glow` advancement):
-
-Before:
-
-    {
-        "conditions": {
-            "item": {
-                "items": [
-                    "minecraft:glow_ink_sac"
-                ]
-            },
-            "location": {
-                "block": {
-                    "tag": "minecraft:all_signs"
-                }
-            }
-        },
-        "trigger": "minecraft:item_used_on_block"
-    }
-    
-
-After:
-
-    {
-        "conditions": {
-            "location": [
-                {
-                    "condition": "minecraft:match_tool",
-                    "predicate": {
-                        "items": [
-                            "minecraft:glow_ink_sac"
-                        ]
-                    }
-                },
-                {
-                    "condition": "minecraft:location_check",
-                    "predicate": {
-                        "block": {
-                            "tag": "minecraft:all_signs"
-                        }
-                    }
-                }
-            ]
-        },
-        "trigger": "minecraft:item_used_on_block"
-    }
-    
+-   `"item": "minecraft:air"` can no longer be used in datapack recipes
+-   Ingredients in array form are now also allowed in `smithing_trim` and `smithing_transform` recipes on fields `template`, `base` and `addition`
+    -   Those fields also allow empty arrays, which signalize that slot needs to be left empty
 
 ### Loot tables
 
-**`any_of`/`all_of`**
+**Random sequences**
 
--   Loot condition `alternative` has been renamed to `any_of`
--   Added new loot condition `all_of` that passes only when all sub-conditions pass. It has the same syntax as `any_of`
+The ID of the random sequence is now an optional field. If no sequence name is given, loot is drawn using a non-deterministic random source.
 
-### Telemetry
+## Fixed bugs in 1.20 Pre-Release 6
 
-This release includes a new global property sent with every event, a new property in the required WorldLoaded event, as well as two new opt-in events. The updated required events will help us troubleshoot launcher bugs more efficiently, and understand how Java Realms content is interacted with. The updated optional events will help inform game design decisions, and allow us to track and improve game load speeds.
+-   [MC-237042](https://bugs.mojang.com/browse/MC-237042) Killing players in the sneaking state that have their sneak option set to "Toggle" in their accessibility settings, results in other players not being able to see them in this state when they respawn
+-   [MC-241326](https://bugs.mojang.com/browse/MC-241326) Thomas Guimbretière's name is listed twice and misspelt in the credits
+-   [MC-260411](https://bugs.mojang.com/browse/MC-260411) Re-summoned dragons don't spawn end gateways when exiting the world before killing the dragon
+-   [MC-262340](https://bugs.mojang.com/browse/MC-262340) Iron Golems can spawn on transparent blocks
+-   [MC-262575](https://bugs.mojang.com/browse/MC-262575) Company names are still inconsistent in the credits
 
-**All events**
+---
 
--   Added new property: `launcher_name`
-    -   This is set based on the `minecraft.launcher.brand` system property. This will help us troubleshoot game launch related bugs more effectively, as we will be able to see whether the issue originated in the Minecraft launcher or a third-party program.
+# Minecraft 1.20 Pre-Release 5
 
-**Updated required events**
+Summer is around the corner here at the office, and what better time to stay inside and try out the new pre-release?!
 
--   `world_loaded`
-    -   Added new property: `realms_map_content`
-        -   When loading into a Realms Map Content world (Minigame), the `world_loaded` event will receive the name of that map. This is to help us understand how Java Realms users interact with Java Realms adventure or minimap content.
+Happy crafting, you wonderful people!
 
-**New optional events**
+## Library version updates
 
--   `advancement_made`
-    -   This event is triggered when a player completes an advancement, and allows us to see the advancement ID and the time when the advancement was completed. This helps us as a studio understand player progress and limits, which informs our game design.
--   `game_load_times`
-    -   An event that is triggered when the game client is loaded and includes the time it took for the client to load. This is so that we can work on improving and reducing the time it takes to load the game client.
+-   `uniform` font has been updated to use Unifont 15.0.03 (was 15.0.01 last pre-release)
 
-## Fixed bugs in Snapshot 23w18a
+## Fixed bugs in 1.20 Pre-release 5
 
--   [MC-1133](https://bugs.mojang.com/browse/MC-1133) Whether or not a player experiences some effect is calculated based on the block under the center of the player
--   [MC-48923](https://bugs.mojang.com/browse/MC-48923) Slime/magma cubes not affected by jump boost potion effect
--   [MC-257269](https://bugs.mojang.com/browse/MC-257269) Sculk sensor detects player walking between carpet and wool
--   [MC-261417](https://bugs.mojang.com/browse/MC-261417) The hitboxes of sniffers are not adjusted when they lay down
--   [MC-261952](https://bugs.mojang.com/browse/MC-261952) Clocks flicker rapidly when enchanted and in an unnatural dimension
--   [MC-262003](https://bugs.mojang.com/browse/MC-262003) Bundle tooltip does not show its interface
--   [MC-262067](https://bugs.mojang.com/browse/MC-262067) The type of sniffer digging particles that are produced is determined by the block that sniffers are located on instead of the block that sniffers are digging
--   [MC-262069](https://bugs.mojang.com/browse/MC-262069) Sniffers continue digging after their target block is destroyed
--   [MC-262104](https://bugs.mojang.com/browse/MC-262104) Rendering of FPS graph seems to be performing worse than before
--   [MC-262123](https://bugs.mojang.com/browse/MC-262123) Advancement titles of new advancements introduced in 23w17a are improperly capitalized
--   [MC-262133](https://bugs.mojang.com/browse/MC-262133) Strong lag spikes when moving above a cleared area with exposed void
--   [MC-262218](https://bugs.mojang.com/browse/MC-262218) Block light updates don't cross chunk borders properly in 23w17a
+-   [MC-120158](https://bugs.mojang.com/browse/MC-120158) Anvils and other falling;;_;;blocks with HurtEntities set to true kill items and xp orbs
+-   [MC-261294](https://bugs.mojang.com/browse/MC-261294) Jack o'lantern can be placed on the player or armor stand head without commands and without appearing the blur
+-   [MC-262334](https://bugs.mojang.com/browse/MC-262334) Item display entities have wrong lighting when they're rotated
+-   [MC-262504](https://bugs.mojang.com/browse/MC-262504) Recipes for colored wool, carpets, and beds in the recipe book are not grouped
+-   [MC-262513](https://bugs.mojang.com/browse/MC-262513) Blocks placed in the spot of a previously broken block will display the first frame of the breaking animation until updated
+-   [MC-262514](https://bugs.mojang.com/browse/MC-262514) Unbreakable blocks display the first breaking animation frame when attempting to mine them
+-   [MC-262690](https://bugs.mojang.com/browse/MC-262690) The player can still jump from the edge of the honey block
+-   [MC-262730](https://bugs.mojang.com/browse/MC-262730) Biomes being partially overwritten / regenerated in 1.20pre2 inside old world
+-   [MC-262773](https://bugs.mojang.com/browse/MC-262773) Markers, interaction, and display entities prevent weighted pressure plates from deactivating
+-   [MC-262778](https://bugs.mojang.com/browse/MC-262778) Losing control of a ridden mob with levitation and then re-gaining control causes levitation to persist indefinitely
+-   [MC-262797](https://bugs.mojang.com/browse/MC-262797) Book model not rendering in Enchanting Table GUI
+-   [MC-262801](https://bugs.mojang.com/browse/MC-262801) Z-fighting occurs on trimmed enchanted armor in the inventory
+
+---
+
+# Minecraft 1.20 Pre-Release 4
+
+We've now released 1.20 Pre-release 4, resolving a crash in the Multiplayer screen introduced in the last pre-release.
 
 ---
 

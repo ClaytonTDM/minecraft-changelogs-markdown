@@ -211,195 +211,379 @@ Unlike with loot tables, all effect conditions need to be inline objects and can
 
 ---
 
-# Minecraft 1.20.6 Release Candidate 1
+# Minecraft Snapshot 24w21b
 
-We missed release day so much, we made Friday a release day! Here is Release Candidate 1 for 1.20.6, a hotfix release intended to fix a few critical issues. If nothing further critical is found, we expect to release this hotfix early next week. Happy mining!
+We are now releasing snapshot 24w21b to fix a frequent crash which happened when Zombies spawned in areas of high local difficulty.
 
-## Fixed bugs in 1.20.6 Release Candidate 1
+## Fixed bugs in 24w21b
 
--   [MC-271109](https://bugs.mojang.com/browse/MC-271109) Trader llama inventory shifted, partially lost during upgrade
-
----
-
-# Minecraft: 1.20.5 Release Candidate 3
-
-Oh look, it's finally Monday! Since we haven't shipped something for several hours, we thought we'd kick the week off with a third and (fingers crossed!) final Release Candidate for Minecraft: Java Edition 1.20.5.
-
-Happy mining!
-
-## Fixed bugs in 1.20.5 Release Candidate 3
-
--   [MC-270964](https://bugs.mojang.com/browse/MC-270964) Race condition in can;;_;;break/can;;_;;place;;_;;on item stack components
+-   [MC-272321](https://bugs.mojang.com/browse/MC-272321) Crash after upgrading snapshot world to 24w21a
 
 ---
 
-# Minecraft 1.20.5 Release Candidate 2
+# Minecraft Snapshot 24w21a
 
-We're honestly starting to lose count at this point. Anyways! Here's 1.20.5 Release Candidate 2 coming in clutch with some bona fide bug fixes to round off the week.
+This week we're bringing a Snapshot you can vibe out to! This time around we're bringing data-driven jukeboxes, a new gamerule, and a bunch of fixes.
 
-Happy weekend mining!
-
-## Fixed bugs in 1.20.5 Release Candidate 2
-
--   [MC-270862](https://bugs.mojang.com/browse/MC-270862) Firework Star item displays have inconsistent color updates
--   [MC-270902](https://bugs.mojang.com/browse/MC-270902) Game unpauses when credits are played via pause menu
--   [MC-270916](https://bugs.mojang.com/browse/MC-270916) Villagers can sell experimental enchantments without the 1.21 experiment enabled
-
----
-
-# Minecraft 1.20.5 Release Candidate 1
-
-This week's shipping frenzy continues with our very first Release Candidate for 1.20.5! Barring any significant or critical issues found within it, this is the version we are planning to ship as Minecraft: Java Edition 1.20.5 next week.
-
-## Technical Changes
-
--   Changed the approach to game client disconnecting on invalid data in packets sent from a server
-    -   To ease the transition period, modded servers can opt out by setting the appropriate field in the `handshake/game_profile` packet
-    -   This option will be removed in the next release
-
-## Fixed bugs in 1.20.5 Release Candidate 1
-
--   [MC-270867](https://bugs.mojang.com/browse/MC-270867) Severe lag when upgrading 1.20.4 worlds
--   [MC-270871](https://bugs.mojang.com/browse/MC-270871) Upgrading a world with horses wearing leather horse armor makes the horse immune to freezing forever
-
----
-
-# Minecraft 1.20.5 Pre-Release 4
-
-And back again! Here comes the fourth Pre-Release of 1.20.5. Similar story this time around, fixing some important issues.
-
-Happy crafting!
-
-## Technical Changes
-
--   The Resource Pack version is now 32
-
-## Resource Pack Version 32
-
--   The `shift` in TTF glyph providers is now restricted to the range `[-512; 512]`
-
-## Fixed bugs in 1.20.5 Pre-Release 4
-
--   [MC-270666](https://bugs.mojang.com/browse/MC-270666) The game tries to spawn bogged without experimental feature "update 1.21" active (but failed)
--   [MC-270825](https://bugs.mojang.com/browse/MC-270825) Certain simulation distance values cannot be saved visually
--   [MC-270838](https://bugs.mojang.com/browse/MC-270838) Stationary fireballs can no longer be redirected
--   [MC-270845](https://bugs.mojang.com/browse/MC-270845) Summoned wind charges can no longer be redirected
-
----
-
-# Minecraft 1.20.5 Pre-Release 3
-
-Back-to-back! Releasing yesterday was so much fun that we decided to ship another Pre-Release for Minecraft: Java Edition 1.20.5 today as well. This one is coming in hot with important bug & crash fixes.
-
-Happy mining!
-
-## Technical Changes
-
--   The Data Pack version is now 41
-
-## Data Pack Version 41
-
--   Replaced Entity Type tag `minecraft:punchable_projectiles` with tag `minecraft:redirectable_projectile` for projectiles which can be redirected by player attacks and projectiles
-
-## Fixed bugs in 1.20.5 Pre-Release 3
-
--   [MC-269384](https://bugs.mojang.com/browse/MC-269384) Panorama sometimes spins quickly when exiting world
--   [MC-270097](https://bugs.mojang.com/browse/MC-270097) Crash when set;;_;;ominous;;_;;bottle;;_;;amplifier item modifier sets out-of-range amplifier
--   [MC-270375](https://bugs.mojang.com/browse/MC-270375) The screen repetitively flashes when changing the render distance and biome blend settings
--   [MC-270608](https://bugs.mojang.com/browse/MC-270608) Projectiles can no longer deflect ghast fireballs
--   [MC-270609](https://bugs.mojang.com/browse/MC-270609) Client requires a tick between StoreCookiePacket and TransferPacket for cookie to be stored
--   [MC-270634](https://bugs.mojang.com/browse/MC-270634) Fireworks shot from Dispensers go much higher than before
--   [MC-270668](https://bugs.mojang.com/browse/MC-270668) Item data serialization is significantly slower than before
--   [MC-270799](https://bugs.mojang.com/browse/MC-270799) Player can no longer sprint/walk across one block gaps since 1.20.5 Pre-Release 2
-
----
-
-# Minecraft 1.20.5 Pre-Release 2
-
-It's the start of a new week and we're coming right out of the gate with another pre-release for Minecraft: Java Edition 1.20.5! Apart from upping our pun-game in the Advancements department, this pre-release also fixes a slew of bugs and crashes.
-
-Happy mining!
-
-## New Features
-
-### Advancements
-
--   `Snip it!` advancement is renamed to `Shear Brilliance`
+Happy vibing!
 
 ## Changes
 
--   Using ctrl+pick block no longer lists "(+NBT)" in the item tooltip
+-   It seems we cooked a bit too hard with the new Piston sounds last week, which is why we're reverting back to the old sounds again
+-   Lowered volume of original sounds to address initial feedback of Pistons being too loud
+-   Pause menu now can include a list of links provided by server
+-   Improvements to the disconnection screen
+-   Any member of a Realm can now upgrade a world
+-   In the Realms main screen, all online players of a Realm are displayed
+    -   When hovered, a tooltip is shown with each player's head and name
 
-### UI
+### Vault
 
--   The animated Nether Portal texture is displayed when changing dimension to or from The Nether
--   The animated End Portal effect is displayed when changing dimension to or from The End
+-   Added sound effect to help players understand they've already looted a vault
+
+### Trial Chambers
+
+-   Trial Chambers are less likely to generate in the Deep Dark
+
+### Animal Panic
+
+-   Animals now panic based on the damage caused by predefined Damage Source Types
+-   The panic lasts for 2 seconds after the damage is dealt. The following damage type tags are used by vanilla animals:
+    -   `panic_environmental_causes`: Used by Wolves, Polar Bears (adults) and Pandas
+    -   `panic_causes`: Used by all other animals and baby Polar Bears
+
+### Server links
+
+-   Servers can now provide a list of links to clients
+-   If client has received any links, a new button called "Server Links..." will show up in pause game screen
+    -   To make space for that button, "Report Bugs" and "Give Feedback" buttons might be moved into a sub-screen if necessary
+
+### Disconnection screen improvements
+
+-   In some cases client will now store detailed information about disconnection (similar to crash reports)
+-   When that happens, new "Open Disconnection Report Directory" button will be added to the disconnection screen
+-   When server provides link for bug reporting, it will be also be added as a button to the disconnection screen
 
 ## Technical Changes
 
--   The Data Pack version is now 40
--   Invalid data in packets sent from a server will now cause the game client to disconnect
+-   Resource Pack version is now 34
+-   Data Pack version is now 45
+-   Server can now provide list of links to client
+-   Servers can add custom details to crash and disconnection reports
 
-## Data Pack Version 40
+### Gamerules
 
-### Modified loot functions
+-   Added new `entitiesWithPassengersCanUsePortals` gamerule
+    -   When `true`, entities with passengers can use Nether Portals, End Portals and End Gateways
+    -   Defaults to `false`
 
-**`set_fireworks`**
+### Server links
 
-Fields `explosions` and `mode` have been grouped together as a sub-object
+-   New clientbound packet `server_links` is available in `configuration` and `game` protocols
+-   On receival, client will make links available from pause menu
+-   Link labels can be built-in or custom (i.e. any text)
+-   Some built-ins also have special fuctionality:
+    -   `report_bug`:
+        -   link will be displayed on disconnection screen, if disconnection was caused by packet handling error
+        -   link will be included as a comment in disconnection report
+-   Added `bug-report-link` to `server.properties` to allow vanilla server to configure `report_bug` links
+    -   If this field is non-empty, server will send that link to clients
+    -   This field should contain well-formed URL
 
--   `{ "explosions": <list>, "mode": <mode>, <mode-dependent fields>}` becomes `{"explosions": {"values": <list>, "mode": <mode>, <mode-dependent fields>}}`
--   New `explosions` field is now optional, while `values` field inside it is now mandatory
+### Custom server crash report details
 
-## Fixed bugs in 1.20.5 Pre-Release 2
+-   New clientbound packet `custom_report_details` is available in `configuration` and `game` protocols
+-   This packet contains a list of key-value text entries
+-   If received, contents of this packet will be added in a separate section to any crash or disconnection report generated during connection to this server
 
--   [MC-199973](https://bugs.mojang.com/browse/MC-199973) Wet wolf is rendered too dark compared to past versions
--   [MC-259355](https://bugs.mojang.com/browse/MC-259355) Game crashes because /place sometimes does not check whether position is loaded and out of world
--   [MC-265585](https://bugs.mojang.com/browse/MC-265585) Waterlogged barriers do not diffuse sky light
--   [MC-265709](https://bugs.mojang.com/browse/MC-265709) Stonecutter outputs are broken past the 32nd row in the GUI (server only)
--   [MC-265741](https://bugs.mojang.com/browse/MC-265741) Waterlogged barriers don't show up on maps
--   [MC-266997](https://bugs.mojang.com/browse/MC-266997) Sky light doesn't update when breaking a shulker box while its (closing) animation is playing
--   [MC-267352](https://bugs.mojang.com/browse/MC-267352) Singleplayer worlds don't load the player.dat when the "Player" tag is absent from level.dat
--   [MC-267381](https://bugs.mojang.com/browse/MC-267381) Moving while sneaking is impossible with high generic.step;;_;;height attribute
--   [MC-267414](https://bugs.mojang.com/browse/MC-267414) Scale attribute causes extreme TPS loss with the ender dragon
--   [MC-267441](https://bugs.mojang.com/browse/MC-267441) When a player's generic.step;;_;;height attribute is set to more than two, attempting to step atop of more than two blocks may fail if there are blocks higher up
--   [MC-268015](https://bugs.mojang.com/browse/MC-268015) Shulker bullets shot from shulkers don't account for the scale attribute
--   [MC-268035](https://bugs.mojang.com/browse/MC-268035) True Type Font when changing Language causes error with Rendering overlay
--   [MC-268064](https://bugs.mojang.com/browse/MC-268064) Armadillos that aren't rolled up can roll up during their death animation
--   [MC-268257](https://bugs.mojang.com/browse/MC-268257) Equipping a carpet on a Llama doesn't play a sound
--   [MC-268347](https://bugs.mojang.com/browse/MC-268347) Setting gravity higher than 0.84 allows you to jump up a block
--   [MC-268804](https://bugs.mojang.com/browse/MC-268804) Wolves attacked while wearing wolf armor resets eating timer despite being at full health
--   [MC-268810](https://bugs.mojang.com/browse/MC-268810) Ctrl+Picking chests still says (+NBT) even though NBT is replaced by components
--   [MC-268854](https://bugs.mojang.com/browse/MC-268854) Firework explosions in items without a `Type` field are not correctly upgraded
--   [MC-268858](https://bugs.mojang.com/browse/MC-268858) Buttons to enchant become enabled when placing wolf armor in an enchanting table
--   [MC-268984](https://bugs.mojang.com/browse/MC-268984) Running /give command throws EncoderException
--   [MC-269123](https://bugs.mojang.com/browse/MC-269123) Enabling or disabling a resource pack that changes a shader will not affect that shader until the resource pack is reloaded
--   [MC-269161](https://bugs.mojang.com/browse/MC-269161) Stonecutter does not support multiple recipes with the same result item type
--   [MC-269171](https://bugs.mojang.com/browse/MC-269171) The client is disconnected when receiving the system;;_;;chat packet containing deeply nested NBT data
--   [MC-269173](https://bugs.mojang.com/browse/MC-269173) The server cannot send the client the system;;_;;chat packet containing deeply nested NBT data
--   [MC-269300](https://bugs.mojang.com/browse/MC-269300) The "Alternatively, here's some we made earlier!" text is positioned too close to the header separator
--   [MC-269304](https://bugs.mojang.com/browse/MC-269304) Horse armor renders incorrectly when worn by wolves
--   [MC-269415](https://bugs.mojang.com/browse/MC-269415) set;;_;;fireworks "mode" is required even when "explosions" is optional
--   [MC-269472](https://bugs.mojang.com/browse/MC-269472) Crash when table;;_;;bonus loot condition has empty chances list
--   [MC-269619](https://bugs.mojang.com/browse/MC-269619) Scroller in Telemetry Data screen renders translucent pixels as opaque, unlike elsewhere
--   [MC-269660](https://bugs.mojang.com/browse/MC-269660) arguments.item.predicate.unknown quotes are different
--   [MC-269802](https://bugs.mojang.com/browse/MC-269802) Selecting a villager trade merges items with different components
--   [MC-269932](https://bugs.mojang.com/browse/MC-269932) Item disappears when trying to trade using items with lower max stack count
--   [MC-270003](https://bugs.mojang.com/browse/MC-270003) Ominous banners are not "pick block"-ed properly
--   [MC-270049](https://bugs.mojang.com/browse/MC-270049) Enchanting table buttons and level icons render translucent pixels as opaque
--   [MC-270116](https://bugs.mojang.com/browse/MC-270116) The minecraft:generic.fall;;_;;damage;;_;;multiplier attribute does not function for many mobs with nonstandard fall damage behaviour
--   [MC-270117](https://bugs.mojang.com/browse/MC-270117) The calculation of fall damage for horses, donkeys, mules, zombie horses, skeleton horses, camels, llamas, trader llamas, and foxes disregards the minecraft:generic.safe;;_;;fall;;_;;distance
--   [MC-270262](https://bugs.mojang.com/browse/MC-270262) You can see the world loading while in the process of entering it
--   [MC-270265](https://bugs.mojang.com/browse/MC-270265) Blur slider does not say "OFF" when set to 0%
--   [MC-270413](https://bugs.mojang.com/browse/MC-270413) A nbt copy of a block is ABSOLUTELY the same as the first nbt copy of the original and n (+nbt) display for tooltip of (a copy of)×n a block have an "Items" block data
--   [MC-270559](https://bugs.mojang.com/browse/MC-270559) FreeType error: Unrecognized error: 0x62 (Loading glyph)
--   [MC-270590](https://bugs.mojang.com/browse/MC-270590) Dropped items from creative mode get deleted when inventory is open
--   [MC-270603](https://bugs.mojang.com/browse/MC-270603) Crash updating world: ClassCastException: RegularImmutableList cannot be cast to class com.mojang.datafixers.util.Pair
--   [MC-270610](https://bugs.mojang.com/browse/MC-270610) Some new advancement titles are incorrectly capitalized
--   [MC-270648](https://bugs.mojang.com/browse/MC-270648) Wolf armor with the curse of binding enchantment cannot be removed from wolves using shears in creative mode
--   [MC-270679](https://bugs.mojang.com/browse/MC-270679) Clicking on text with run;;_;;command can cause EncoderException and will exit to multiplayer menu
--   [MC-270712](https://bugs.mojang.com/browse/MC-270712) Cannot move while sneaking if attribute generic.step;;_;;height is set to 0
--   [MC-270767](https://bugs.mojang.com/browse/MC-270767) Leather horse armor no longer prevents horses from freezing in powder snow
+## Data Pack Version 45
+
+-   Jukebox songs are now data-driven
+-   Added new command syntax
+
+### Jukebox Songs
+
+-   Added a jukebox song registry which is loaded from data packs
+-   Path to jukebox song definition is `data/<namespace>/jukebox_song/<id>.json`
+-   Fields in definition:
+    -   `sound_event` - sound event that is streamed when played by a Jukebox
+    -   `description` - the name of the song that will be displayed in the hover tooltip represented as a Text Component
+    -   `length_in_seconds` - length of the song in seconds as a positive float
+    -   `comparator_output` - the redstone signal output by a comparator when played in a Jukebox, between 0 and 15
+-   Added `minecraft:jukebox_playable` item stack component
+
+**`jukebox_playable` item component**
+
+-   If set, the item can be inserted into Jukeboxes to play a song
+-   Format: object with fields
+    -   `song`: jukebox song id
+        -   The song that will be played by the Jukebox when this item stack is inserted
+    -   `show_in_tooltip`: boolean (default: true)
+        -   If false, the name of the song will not be shown in the tooltip
+        -   This was formerly controlled by the `hide_additional_tooltip` component on Music Discs
+    -   e.g. `jukebox_playable={song:'minecraft:precipice'}`, `jukebox_playable={song:'minecraft:precipice', show_in_tooltip:false}`
+
+### Attributes
+
+-   Attribute modifiers no longer have a UUID and name combination
+-   Instead, attribute modifiers are now uniquely identified by a namespaced ID, similar to other resources
+-   The ID of a modifier uniquely identifies it in the set of modifiers for a single attribute
+    -   Using the same ID for different modifiers is allowed as long as the modifiers are for different attributes
+-   Existing built-in modifiers will be upgraded to new IDs
+-   Existing custom modifiers will be upgraded to the GUID as an ID in the `minecraft` namespace
+
+**`attribute` command**
+
+-   The `uuid` and `name` arguments have been replaced with a singular `id` argument
+
+**Item Stack Attribute Modifiers**
+
+-   The `uuid` and `name` fields have been removed.
+-   Attribute Modifiers now have an `id` (namespaced ID) field
+    -   This is a unique identifier per attribute for the modifier
+
+**Entity Attributes**
+
+-   Attributes are now stored as `attributes`
+-   Attribute format:
+    -   `id`, renamed from `Name`
+    -   `base`, renamed from `Base`
+    -   `modifiers`, renamed from `Modifiers`
+        -   Now stores modifiers in the same format as modifiers in `attribute_modifiers` item stack components:
+            -   `id`, replaces `UUID` and `Name`
+            -   `amount`, renamed from `Amount`
+            -   `operation`, renamed from `Operation`, now a named constant instead of an int:
+                -   `add_value` - previously `0`
+                -   `add_multiplied_base` - previously `1`
+                -   `add_multiplied_total` - previously `2`
+
+### Enchantments
+
+**Attribute Effects**
+
+Fields:
+
+-   `name` & `uuid` have been removed, replaced by `id`
+-   `id`: The namespaced ID of the Attribute Modifier to add
+    -   This will be postfixed with the slot name when the enchanted item is equipped in a slot
+    -   Must be unique to avoid different Enchantments (or other systems) interfering with each others
+
+**Entity Effect Types**
+
+**`damage_item`**
+
+The damage is not applied to items held by players in creative mode.
+
+**Hit Block Parameters**
+
+-   Entities: `this`
+-   Enchantment Level
+-   Origin
+-   Block State
+
+**Effect Components**
+
+-   `minecraft:hit_block`:
+    -   Condition Context: changed to take a Hit Block Parameter - `this` is the entity hitting the Block
+
+### Tags
+
+**Directory renames**
+
+-   Some registry types that used legacy datapack directory names (based on plural name of element) have been renamed to match registry name
+-   Affected directories:
+    -   `structures` -> `structure`
+    -   `advancements` -> `advancement`
+    -   `recipes` -> `recipe`
+    -   `loot_tables` -> `loot_table`
+    -   `predicates` -> `predicate`
+    -   `item_modifiers` -> `item_modifier`
+    -   `functions` -> `function`
+    -   `tags/functions` -> `tags/function`
+
+**Item Tags**
+
+-   Removed `music_discs` item tag
+
+**Block Tags**
+
+-   `air`: All blocks that resemble air
+
+**Damage Type Tags**
+
+-   Removed `breeze_immune_to` damage type tag
+-   Added `panic_environmental_causes`: Damage types that cause panic in aggressive animals that can panic, i.e. mobs that retaliate when attacked
+-   Added `panic_causes`: Damage types that cause panic in passive animals, i.e. mobs that run away when attacked
+
+### Predicates
+
+**Jukebox Playable Predicate**
+
+New item sub-predicate available as `jukebox_playable`.
+
+-   Matcher for `jukebox_playable` component (like Music Discs)
+-   Fields:
+    -   `song` - optional id, list of ids or tag for jukebox song to be matched
+
+**Player Predicate**
+
+-   The `gamemode` field has been changed to accept a list of gamemodes
+
+### Commands
+
+-   Added `@n` entity selector, selecting the nearest entity
+    -   This functions as `@e[sort=nearest,limit=1]`
+    -   Additional requirements may still be provided; for example: `@n[type=pig]` will select the closest Pig
+
+## Resource Pack Version 34
+
+-   Added the `block.vault.reject_rewarded_player` sound event
+-   Changes to Shaders
+
+### Shaders
+
+-   The `blend` block in core shader definitions has been removed, as it was not used
+-   The `position_color_tex` shader has been removed, replaced with the pre-existing `position_tex_color`
+-   The `glint_direct` shader has been removed, replaced with the pre-existing `glint` shader
+-   The `armor_glint` shader has been removed, as it was unused
+
+## Fixed bugs in 24w21a
+
+-   [MC-67](https://bugs.mojang.com/browse/MC-67) Entities with passengers cannot travel through portals
+-   [MC-31819](https://bugs.mojang.com/browse/MC-31819) Hunger saturation depletes on peaceful difficulty
+-   [MC-116279](https://bugs.mojang.com/browse/MC-116279) Non-player entities going through Nether portal do not generate portal in Nether if none exists
+-   [MC-151648](https://bugs.mojang.com/browse/MC-151648) Non-player entities cannot travel through unlinked nether portals
+-   [MC-170103](https://bugs.mojang.com/browse/MC-170103) Untamed wolves only beg for food while being angry and jumping
+-   [MC-260346](https://bugs.mojang.com/browse/MC-260346) Custom music discs cut off when vanilla disc would normally end
+-   [MC-266290](https://bugs.mojang.com/browse/MC-266290) Double doors do not automatically form between waxed and unwaxed copper doors, even of the same variant
+-   [MC-266586](https://bugs.mojang.com/browse/MC-266586) Trial chambers can spawn directly inside the deep dark biome
+-   [MC-266626](https://bugs.mojang.com/browse/MC-266626) Breeze doesn't stop attacking the player when it enters on the same team
+-   [MC-267967](https://bugs.mojang.com/browse/MC-267967) Breezes ignore the deflects;;_;;projectiles entity type tag
+-   [MC-268438](https://bugs.mojang.com/browse/MC-268438) Baby armadillos can still eat while rolled up
+-   [MC-269034](https://bugs.mojang.com/browse/MC-269034) Wolves no longer teleport while trying to pathfind out of Lava
+-   [MC-269351](https://bugs.mojang.com/browse/MC-269351) The Bolt Armor Trim cannot be duplicated with Waxed Copper Block
+-   [MC-269370](https://bugs.mojang.com/browse/MC-269370) Sharp lag spike caused by incorrect upper limit on particles created by mace smash attack
+-   [MC-269460](https://bugs.mojang.com/browse/MC-269460) Thorns enchantment doesn't work when entities are hit by wind charges
+-   [MC-269964](https://bugs.mojang.com/browse/MC-269964) Ominous item spawners are missing an NBT load for spawn;;_;;item;;_;;after;;_;;ticks
+-   [MC-269988](https://bugs.mojang.com/browse/MC-269988) New potion effects don't apply their respective behaviors when creeper explodes
+-   [MC-270024](https://bugs.mojang.com/browse/MC-270024) When drinking ominous bottles, bad omen of higher levels can be overriden by lower amplifiers
+-   [MC-270377](https://bugs.mojang.com/browse/MC-270377) Wind charges can be hit and redirected the moment they are thrown
+-   [MC-270573](https://bugs.mojang.com/browse/MC-270573) Mounted entities are immune to wind charge damage
+-   [MC-270808](https://bugs.mojang.com/browse/MC-270808) Any item in the armor.body slot protects wolves from taking damage
+-   [MC-271458](https://bugs.mojang.com/browse/MC-271458) Channeling tridents no longer summon lightning bolt every time hitting lightning rod under thunderstorm
+-   [MC-271573](https://bugs.mojang.com/browse/MC-271573) Attribute Enchantments Don't Behave Properly on Armor
+-   [MC-271634](https://bugs.mojang.com/browse/MC-271634) Custom enchantments don't appear in the creative menu
+-   [MC-271718](https://bugs.mojang.com/browse/MC-271718) Crash when randomized;;_;;int;;_;;state;;_;;provider is applied to blocks lacking the property
+-   [MC-271753](https://bugs.mojang.com/browse/MC-271753) Crash due to overflow inside cost calculation in by;;_;;cost;;_;;with;;_;;difficulty
+-   [MC-271856](https://bugs.mojang.com/browse/MC-271856) Crossbows enchanted with Quick Charge do not benefit from its effects when used in the offhand
+-   [MC-271868](https://bugs.mojang.com/browse/MC-271868) Frost walker replaces flowing water now
+-   [MC-271901](https://bugs.mojang.com/browse/MC-271901) Entity effect "play;;_;;sound" Field "pitch" value upper limit is 1.0 instead of 2.0
+-   [MC-271911](https://bugs.mojang.com/browse/MC-271911) Frost walker no longer works with void or cave air
+-   [MC-271914](https://bugs.mojang.com/browse/MC-271914) Soul speed enchantment doesn't emit particles when the entity is controlled by a player
+-   [MC-272039](https://bugs.mojang.com/browse/MC-272039) Soul Speed uses durability in creative mode
+-   [MC-272042](https://bugs.mojang.com/browse/MC-272042) If players have max health over 20 and die, when they respawn they will have 20 health instead of their max health
+-   [MC-272043](https://bugs.mojang.com/browse/MC-272043) The game crashes when entities die while having the oozing effect
+-   [MC-272075](https://bugs.mojang.com/browse/MC-272075) Attempting to step up while controlling entity and moving fast often glitches
+-   [MC-272084](https://bugs.mojang.com/browse/MC-272084) Creepers with potion effects no longer create area effect clouds upon exploding
+-   [MC-272182](https://bugs.mojang.com/browse/MC-272182) Knowledge Books no longer function properly with a stack size of 1 in survival/adventure mode
+
+---
+
+# Minecraft Snapshot 24w20a
+
+After some recent irregularities in our Snapshot schedule (public holidays, we're looking at you!) we're back to shipping on a Wednesday! Among other things, 24w20a includes a buff to the amount of Redstone Dust dropped by Witches, as well as a long requested change to make Piston sounds a tad more pleasing to the ear. We're also throwing 41 new bug fixes into the mix, because we like squashing bugs.
+
+Happy mining!
+
+## Changes
+
+-   Witches now always drop 4-8 redstone dust on death
+    -   This is to improve the viability of farms that utilize Witch Huts to obtain Redstone Dust
+-   Improved player attribute and effect handling
+    -   Custom set base attributes are now kept when respawning
+    -   Active effects and modifiers are kept when changing dimension or winning the game
+-   Updated credits
+
+### Sounds
+
+-   Updated Piston sounds to lower volume and attenuation
+    -   This was done to address the long-received feedback on the old sounds being too harsh and loud, creating very noisy redstone builds
+
+## Technical Changes
+
+-   Data Pack version is now 44
+
+## Data Pack Version 44
+
+-   `dimension_padding` jigsaw structure NBT tag was changed
+    -   Now it is an object with fields:
+        -   `bottom` the vertical padding at the bottom of the dimension, non-negative integer
+        -   `top` the vertical padding at the top of the dimension, non-negative integer
+    -   Can be written as a single non-negative integer instead to be applied to both top and bottom fields
+        -   e.g. both `dimension_padding: 10` or `dimension_padding: { bottom: 10, top: 5 }` are valid
+-   Data-driven enchantment field `weight` now has an upper bound of 1024
+-   Data-driven enchantment field `max_level` now has an upper bound of 255
+
+### Predicates
+
+**Entity Predicate**
+
+-   New option: `movement_affected_by` - optional Location Predicate
+    -   When present, adds requirements on a block at most 0.5 blocks below the entity which can affect its movement
+
+## Fixed bugs in 24w20a
+
+-   [MC-6431](https://bugs.mojang.com/browse/MC-6431) Status effects are lost when returning to the overworld from the exit end portal
+-   [MC-83590](https://bugs.mojang.com/browse/MC-83590) Armor attributes list can be too long
+-   [MC-137719](https://bugs.mojang.com/browse/MC-137719) The player's horizontal motion doesn't affect fired projectiles in certain situations
+-   [MC-179940](https://bugs.mojang.com/browse/MC-179940) Player's attributes reset back to default values upon respawning
+-   [MC-181604](https://bugs.mojang.com/browse/MC-181604) Exiting the end portal resets player attributes to their default values
+-   [MC-267230](https://bugs.mojang.com/browse/MC-267230) Hangul fonts are rendered with missing pixels
+-   [MC-268113](https://bugs.mojang.com/browse/MC-268113) the minecraft:generic.scale attribute is desynchronized when the player leaves the End dimension via an End portal
+-   [MC-268370](https://bugs.mojang.com/browse/MC-268370) Japanese CJK variants use the same diacritic
+-   [MC-268598](https://bugs.mojang.com/browse/MC-268598) The "weight" of skeletons in swamp biomes is too high causing less bogged spawns
+-   [MC-269036](https://bugs.mojang.com/browse/MC-269036) Bogged do not drop mushrooms when sheared with doMobLoot false
+-   [MC-269147](https://bugs.mojang.com/browse/MC-269147) Shearing a bogged spawns mushrooms at the bogged's feet
+-   [MC-269951](https://bugs.mojang.com/browse/MC-269951) When the gamerule "doImmediateRespawn" is set to true, the Wind Charged, Oozing or Weaving effects don't function for players
+-   [MC-270052](https://bugs.mojang.com/browse/MC-270052) Blur levels below 10% do not appear to actually work
+-   [MC-270301](https://bugs.mojang.com/browse/MC-270301) The fire protection enchantment applied to horse armor no longer decreases the duration of time the horse remains ablaze
+-   [MC-270539](https://bugs.mojang.com/browse/MC-270539) The blast protection enchantment, when applied to horse armor, no longer diminishes the knockback effect from explosions on horse
+-   [MC-270637](https://bugs.mojang.com/browse/MC-270637) maxentityCramming set to 0 prevents slime spawning from oozing effect
+-   [MC-271034](https://bugs.mojang.com/browse/MC-271034) List entries in the Social interaction menu are rendered over the background
+-   [MC-271168](https://bugs.mojang.com/browse/MC-271168) Demo timer does not respect "Text Background" setting
+-   [MC-271244](https://bugs.mojang.com/browse/MC-271244) Auto-save text does not respect "Text Background" setting in accessibility settings
+-   [MC-271360](https://bugs.mojang.com/browse/MC-271360) Horse armor and wolf armor are deleted when used on an armor stand
+-   [MC-271414](https://bugs.mojang.com/browse/MC-271414) Damage command at position applies knockback in random direction
+-   [MC-271462](https://bugs.mojang.com/browse/MC-271462) Buttons make the deactivation sound when pressed
+-   [MC-271468](https://bugs.mojang.com/browse/MC-271468) Game crashes with custom enchantment's "rotated;;_;;block;;_;;provider"
+-   [MC-271532](https://bugs.mojang.com/browse/MC-271532) Mace only loses durability during smash attacks
+-   [MC-271547](https://bugs.mojang.com/browse/MC-271547) Can't immediately sprint jump into a 2 block ceiling when standing next to it since 24w18a
+-   [MC-271566](https://bugs.mojang.com/browse/MC-271566) Game crash on insufficient "ammo;;_;;use" amount
+-   [MC-271574](https://bugs.mojang.com/browse/MC-271574) Inlining a painting variant causes players to disconnect when receiving entity data
+-   [MC-271583](https://bugs.mojang.com/browse/MC-271583) Soul speed no longer works through partial blocks
+-   [MC-271629](https://bugs.mojang.com/browse/MC-271629) Channeling doesn't work / "post;;_;;attack" effect requires enchanted item to be in the mainhand
+-   [MC-271636](https://bugs.mojang.com/browse/MC-271636) Attempting to modify NBT of killer rabbit throws unexpected error
+-   [MC-271678](https://bugs.mojang.com/browse/MC-271678) damage;;_;;item enchantment entity effect doesn't break items
+-   [MC-271715](https://bugs.mojang.com/browse/MC-271715) Crash when the sum of enchantments' weights overflow
+-   [MC-271716](https://bugs.mojang.com/browse/MC-271716) Fraction value provider allows division by zero
+-   [MC-271803](https://bugs.mojang.com/browse/MC-271803) Custom enchantment with very large max level causes game to hang after opening Creative inventory
+-   [MC-271853](https://bugs.mojang.com/browse/MC-271853) Random "Failed to store chunk" error
+-   [MC-271854](https://bugs.mojang.com/browse/MC-271854) Trying to generate new chunks crashes the server
+-   [MC-271863](https://bugs.mojang.com/browse/MC-271863) Crafter recipe gets stuck on an item with a similar recipe
+-   [MC-271881](https://bugs.mojang.com/browse/MC-271881) Soul speed doesn't soul make particles.
+-   [MC-271896](https://bugs.mojang.com/browse/MC-271896) Using Shift+F3+I on a villager crashes the game
+-   [MC-271937](https://bugs.mojang.com/browse/MC-271937) Strike a villager with channeling trident in thunder doesn't obtain the advancement "Very Very Frightening"
+-   [MC-271948](https://bugs.mojang.com/browse/MC-271948) Entering the Nether breaks the game
+
+---
+
+# Minecraft Snapshot 24w19b
+
+Oh wow, we never could have guessed you all were so violent! Here's a 24w19b, fixing a crash when a Villager died.
+
+## Fixed bugs in 24w19b
+
+-   [MC-271843](https://bugs.mojang.com/browse/MC-271843) Crash when a villager dies
 
 ---
 
