@@ -1,7 +1,7 @@
-const axios = require("axios");
-const fs = require("fs").promises;
-const path = require("path");
-const TurndownService = require("turndown");
+import axios from "axios";
+import fs from "fs/promises";
+import path from "path";
+import TurndownService from "turndown";
 
 const API_ENDPOINT =
 	"https://launchercontent.mojang.com/v2/javaPatchNotes.json";

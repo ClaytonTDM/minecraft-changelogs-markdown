@@ -11,9 +11,6 @@ importers:
       axios:
         specifier: ^1.12.2
         version: 1.12.2
-      html-to-markdown:
-        specifier: ^1.0.0
-        version: 1.0.0
       turndown:
         specifier: ^7.2.1
         version: 7.2.1
@@ -100,9 +97,6 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
-
-  html-to-markdown@1.0.0:
-    resolution: {integrity: sha512-QWHVycyZXQyotyyh5Zdh65L0mUvlAtcoi6R7Fqz4W+CbcWKt2TekVXZbFG5RUh2XBkNmSWechMyQSxvJOwXrHw==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -209,8 +203,6 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
-
-  html-to-markdown@1.0.0: {}
 
   math-intrinsics@1.1.0: {}
 
