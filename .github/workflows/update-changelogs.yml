@@ -49,3 +49,7 @@ jobs:
           git add -A
           git commit -m "chore: update minecraft changelogs"
           git push
+
+      - name: Fail if no changes (prevents pages push)
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: exit 1
